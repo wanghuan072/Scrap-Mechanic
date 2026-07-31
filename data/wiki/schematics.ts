@@ -1,0 +1,316 @@
+import type { WikiEntry } from "@/data/types";
+
+export const schematicEntries: WikiEntry[] = [
+  {
+    slug: "schematic-box",
+    category: "schematics",
+    name: "Schematic Box",
+    description:
+      "A stackable consumable scanned at the Schematicbot to unlock one random eligible Craftbot or Saw Table recipe.",
+    image: "/images/wiki/schematic-box.webp",
+    imageAlt: "schematic box image from Scrap Mechanic",
+    gameVersion: "1.0.2",
+    lastTested: "July 2026",
+    featured: true,
+    facts: [
+      { label: "Type", value: "Consumable recipe unlock" },
+      { label: "Use at", value: "Schematicbot" },
+      { label: "Per scan", value: "1 box consumed" },
+      { label: "Result", value: "1 random eligible recipe" },
+      { label: "Fresh-save pool", value: "356 recipes" },
+      { label: "Direct trade", value: "1 Broccoli Crate → 5 boxes" },
+      { label: "Stack size", value: "10" },
+      { label: "Dimensions", value: "2 × 3 × 1" },
+    ],
+    properties: [
+      { label: "Dimensions", value: "2 × 3 × 1" },
+      { label: "Material", value: "Glass" },
+      { label: "Color", value: "#17ABF4" },
+      { label: "Flammable", value: "Yes" },
+      { label: "Durability", value: "2" },
+      { label: "Friction", value: "4" },
+      { label: "Buoyancy", value: "7" },
+      { label: "Density", value: "2" },
+      { label: "Maximum stack", value: "10" },
+    ],
+    tables: [
+      {
+        caption: "Farmers Hideout exchange",
+        headers: ["Receive", "Trade in", "Location", "Stack result"],
+        rows: [
+          [
+            "5 Schematic Boxes",
+            "1 Broccoli Crate",
+            "Farmers Hideout",
+            "Half of a 10-box stack",
+          ],
+        ],
+        note:
+          "Two exchanges cost 2 Broccoli Crates and fill one complete stack of 10 boxes.",
+      },
+      {
+        caption: "Craftbot and Saw Table recipe access",
+        headers: ["Recipe group", "Distinct outputs", "Schematic Box result"],
+        rows: [
+          ["Schematicbot pool", "356", "Can be selected while still locked"],
+          ["Dedicated progression routes", "120", "Excluded"],
+          ["Available from the start", "73", "Already open"],
+          ["Craftbot core set", "24", "Excluded"],
+        ],
+        note:
+          "The 356-item pool includes 30 Saw Table outputs. Trader, quest, Growlab, treasure, and Warehouse unlocks are counted inside the 120 dedicated routes.",
+      },
+      {
+        caption: "Schematic Box drop chances",
+        headers: ["Encounter or container", "Chance", "Quantity"],
+        rows: [
+          ["Standard or Red Tapebot", "25%", "1"],
+          ["Common crate — surface or underground", "13.33%", "Usually 1; rare 2–3 result"],
+          ["Common crate — Warehouse", "16.67%", "1 or 2–3 by reward tier"],
+          ["Epic or Legendary crate", "16.67%", "Reward tier determines quantity"],
+          ["Minidungeon Interior 03 layout", "2 placed boxes", "Fixed objects in that layout"],
+        ],
+        note:
+          "Container percentages are the combined chance that the selected reward group contains a box. A particular world can reuse or omit procedural layouts.",
+      },
+    ],
+    sections: [
+      {
+        heading: "What One Box Actually Does",
+        paragraphs: [
+          "Putting a Schematic Box into the Schematicbot and completing the scan consumes one box. The reward is one randomly selected recipe from the eligible recipes that are still locked in that save.",
+          "The box is not tied to the picture of one specific part and does not produce a finished item. After the unlock registers, the newly available recipe must still be crafted at its normal station with its normal ingredients.",
+        ],
+      },
+      {
+        heading: "How to Scan a Box",
+        steps: [
+          "Carry at least one Schematic Box to the fixed Schematicbot station.",
+          "Interact with the station and select the box from the available inputs.",
+          "Press Scan and wait for the roughly two-second scan to finish.",
+          "Confirm the finished scan to register the randomly selected recipe.",
+          "Open the Craftbot or Saw Table list and find the newly available recipe.",
+        ],
+      },
+      {
+        heading: "Plan the Broccoli Trade",
+        paragraphs: [
+          "The Farmers Hideout exchange gives 5 Schematic Boxes for 1 Broccoli Crate. Because boxes stack to 10, two exchanges convert 2 Broccoli Crates into one full inventory stack.",
+          "A full stack represents up to 10 random unlock attempts, but only while eligible recipes remain. Trading for more boxes after the random pool is exhausted does not create new trader, quest, Growlab, or treasure rewards.",
+        ],
+      },
+      {
+        heading: "Use Combat and Crates to Build a Supply",
+        paragraphs: [
+          "Standard Tapebots and Red Tapebots each have a separate 25% chance to drop one Schematic Box. Common surface and underground crates have a 13.33% combined box chance, while Common Warehouse and Epic or Legendary crates reach 16.67%.",
+          "The higher crate tiers can award 2–3 boxes instead of one. A specific Minidungeon Interior 03 layout also contains two placed boxes, but procedural generation does not guarantee that exact interior on every route.",
+        ],
+        bullets: [
+          "Use Warehouse combat preparation before treating Tapebots as a repeatable supply route.",
+          "Check high-value crates even when the Broccoli trade remains the most predictable bulk option.",
+          "Keep the 10-item stack limit in mind before opening several crates.",
+        ],
+      },
+      {
+        heading: "Random Boxes and Exact Unlocks Are Different",
+        paragraphs: [
+          "A Schematic Box chooses one eligible recipe at random. An eligible part marked with the blue schematic icon can instead be scanned at the Schematicbot to unlock that exact part's recipe without consuming the part.",
+          "Trader offers marked as recipe unlocks are a third route: paying the listed cost unlocks the pictured recipe immediately. Those trades do not award the pictured part and do not require a Schematicbot scan.",
+        ],
+        bullets: [
+          "Use a blue-icon part when the exact recipe matters.",
+          "Use a Schematic Box when any remaining random-pool recipe is useful.",
+          "Use the Farmers Hideout or Mining Hub recipe offers for their listed exact unlocks.",
+        ],
+      },
+      {
+        heading: "When a Box Is Not Offered for Scanning",
+        paragraphs: [
+          "The Schematicbot only presents a Schematic Box as a usable input while the save still has a recipe in the eligible random pool. If the box is in the inventory but missing from the station, first check whether those random unlocks have already been exhausted.",
+        ],
+        bullets: [
+          "Confirm that the box is in the inventory of the player using the station.",
+          "Check the Craftbot and Saw Table for recipes already unlocked on this save.",
+          "Remember that direct trader and quest recipes are deliberately outside the box pool.",
+          "In multiplayer, let the host finish the scan and verify the recipe list if the interface appears out of sync.",
+        ],
+      },
+      {
+        heading: "The Empty-Unlock Fix",
+        paragraphs: [
+          "Patch 1.0.1 corrected cases where a Schematic Box completed without unlocking anything. The same update also addressed stale schematic icons on already unlocked items and recipe-unlock problems in larger multiplayer sessions.",
+        ],
+      },
+    ],
+    relatedSlugs: ["schematicbot", "crafting-bots", "component-kit", "controller"],
+    seo: {
+      title: "Scrap Mechanic Schematic Box - Uses and Guide",
+      description:
+        "Learn how Scrap Mechanic Schematic Boxes work, where to trade for them, what one scan consumes, and which recipes are excluded. Verify it in-game.",
+      keywords: [
+        "Scrap Mechanic Schematic Box",
+        "Scrap Mechanic Schematicbot",
+        "Scrap Mechanic unlock recipe",
+      ],
+    },
+  },
+  {
+    slug: "schematicbot",
+    category: "schematics",
+    name: "Schematicbot",
+    description:
+      "A fixed Survival station that scans blue-icon parts for an exact recipe or consumes a Schematic Box for one random eligible recipe.",
+    image: "/images/wiki/schematicbot.webp",
+    imageAlt: "schematicbot image from Scrap Mechanic",
+    gameVersion: "1.0.2",
+    lastTested: "July 2026",
+    featured: true,
+    facts: [
+      { label: "Type", value: "Fixed Survival station" },
+      { label: "Inputs", value: "Blue-icon part or Schematic Box" },
+      { label: "Part scan", value: "Exact matching recipe" },
+      { label: "Box scan", value: "Random eligible recipe" },
+      { label: "Eligible pool", value: "356 distinct outputs" },
+      { label: "Scan time", value: "About 2 seconds" },
+      { label: "Visible choices", value: "3 at a time" },
+      { label: "World locations", value: "Kiosk layouts and Mining Hub" },
+      { label: "Unlock scope", value: "Shared by the save" },
+      { label: "Footprint", value: "5 × 11 × 3" },
+      { label: "Inventory item", value: "No" },
+    ],
+    properties: [
+      { label: "Material", value: "Metal" },
+      { label: "Color", value: "#4A4A4A" },
+      { label: "Flammable", value: "No" },
+      { label: "Durability", value: "10" },
+      { label: "Friction", value: "5" },
+      { label: "Buoyancy", value: "5" },
+      { label: "Density", value: "5" },
+      { label: "Buildable", value: "No" },
+      { label: "Liftable", value: "No" },
+      { label: "Paintable", value: "No" },
+      { label: "Connectable", value: "No" },
+      { label: "Destructible", value: "No" },
+      { label: "Convertible", value: "No" },
+    ],
+    tables: [
+      {
+        caption: "Schematicbot input behavior",
+        headers: ["Input", "Recipe selected", "Input consumed?", "When it appears"],
+        rows: [
+          [
+            "Eligible blue-icon part",
+            "That part's exact recipe",
+            "No",
+            "The part is eligible and its recipe is still locked",
+          ],
+          [
+            "Schematic Box",
+            "One random eligible recipe",
+            "Yes — 1 box",
+            "At least one random-pool recipe remains locked",
+          ],
+        ],
+        note:
+          "Both routes unlock a recipe. Neither route gives a crafted copy of the newly unlocked part.",
+      },
+      {
+        caption: "Unlock routes compared",
+        headers: ["Route", "Player chooses the recipe?", "Uses Schematicbot?", "Finished item received?"],
+        rows: [
+          ["Blue-icon part scan", "Yes — the scanned part", "Yes", "No"],
+          ["Schematic Box scan", "No — random result", "Yes", "No"],
+          ["Trader recipe offer", "Yes — the listed offer", "No", "No"],
+          ["Quest schematic reward", "Fixed by the quest", "No", "No"],
+        ],
+      },
+      {
+        caption: "Recipe state in multiplayer",
+        headers: ["State", "Shared or personal?", "What changes"],
+        rows: [
+          ["Unlocked recipes", "Shared by the save", "Every player can use the registered recipe"],
+          ["Remaining Schematicbot pool", "Shared by the save", "A completed scan removes that recipe from the locked pool"],
+          ["New-recipe marker", "Tracked per player", "Each player can clear their own newly unlocked indicator"],
+          ["Recipes disabled in world rules", "Shared by the save", "All recipes are treated as available; random scans stop"],
+        ],
+      },
+    ],
+    sections: [
+      {
+        heading: "The Two Inputs Do Different Jobs",
+        paragraphs: [
+          "The station accepts an eligible part marked with the blue schematic icon or a Schematic Box. Scanning the part targets its matching recipe; scanning the box spends one consumable for a random eligible recipe.",
+          "An exact part scan does not remove that part from the player's inventory. Once its recipe is unlocked, the part stops appearing as an available Schematicbot input.",
+        ],
+      },
+      {
+        heading: "Complete a Scan",
+        steps: [
+          "Interact with the Schematicbot and review the available inputs.",
+          "Drag the intended part or Schematic Box into the scan slot.",
+          "Press Scan to begin the roughly two-second process.",
+          "When scanning finishes, press the final unlock control to register the recipe.",
+          "Check the relevant Craftbot or Saw Table list; the unlock is a recipe, not a free finished part.",
+        ],
+      },
+      {
+        heading: "Where to Find a Schematicbot",
+        paragraphs: [
+          "Placed Schematicbots appear in the two surface Kiosk layouts and in the Mining Hub main area. Kiosk layouts can be used by procedural world generation, so these are placement types rather than a promise of only three stations in an entire world.",
+          "The station is fixed in place. Bring the blue-icon part or Schematic Box in the operating player's inventory instead of trying to move the machine to a base.",
+        ],
+      },
+      {
+        heading: "Read the Input Carousel",
+        paragraphs: [
+          "The station shows three available inputs at a time. Use the left and right arrows when more eligible parts or boxes are available than fit on the first view.",
+          "The displayed schematic count combines eligible blue-icon parts with usable Schematic Boxes. Boxes only count up to the number of random recipes still available, so carrying a large stack does not imply that every box can still be used.",
+        ],
+      },
+      {
+        heading: "Why a Part Is Missing",
+        bullets: [
+          "The item does not have the blue schematic icon and is not eligible for exact scanning.",
+          "The matching recipe has already been unlocked on this save.",
+          "The recipe belongs to a trader, quest, Growlab, treasure, or another dedicated reward route.",
+          "The item is not in the inventory of the player currently operating the station.",
+        ],
+      },
+      {
+        heading: "What the Save Remembers",
+        paragraphs: [
+          "A completed recipe unlock belongs to the save, not only to the player who pressed the final button. In multiplayer, everyone on that save can use the newly registered recipe after the state updates.",
+          "The newly unlocked marker is tracked separately for each player. One mechanic clearing that marker does not mean the shared recipe became locked again.",
+        ],
+      },
+      {
+        heading: "The Station Is Not Workshop Furniture",
+        paragraphs: [
+          "The Schematicbot is a fixed world station rather than a machine the player crafts and installs at a base. It is usable, but it is not buildable, liftable, paintable, connectable, erasable, or shown as a normal inventory part.",
+          "Its 5 × 11 × 3 physical size describes the placed station model; it is not a clearance plan for a player-built machine.",
+        ],
+      },
+      {
+        heading: "If the Recipe List Does Not Change",
+        bullets: [
+          "Finish the scan with the final unlock control instead of leaving when the timer ends.",
+          "Check the correct crafting station: the random pool can include Craftbot and Saw Table recipes.",
+          "Confirm that the recipe was not already available before the scan.",
+          "On multiplayer saves, let the host complete one scan and recheck the recipe list.",
+          "Use a current patched build; patch 1.0.1 addressed empty unlocks and large-session recipe issues.",
+        ],
+      },
+    ],
+    relatedSlugs: ["schematic-box", "crafting-bots", "controller", "component-kit"],
+    seo: {
+      title: "Scrap Mechanic Schematicbot - Uses and Guide",
+      description:
+        "Use the Scrap Mechanic Schematicbot: compare part and box scans, follow the two-second scan flow, and troubleshoot missing inputs. Verify it in-game.",
+      keywords: [
+        "Scrap Mechanic Schematicbot",
+        "Scrap Mechanic blue schematic icon",
+        "Scrap Mechanic unlock recipe",
+      ],
+    },
+  },
+];

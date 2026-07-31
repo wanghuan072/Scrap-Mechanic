@@ -1,0 +1,1222 @@
+.page {
+  --workshop-paper: #d8d7cb;
+  --workshop-ink: #132027;
+  --workshop-blue: #86c9d5;
+  overflow: clip;
+}
+
+.hero {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border-bottom: 1px solid #52646a;
+  background: #061015;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 52%;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(3 10 13 / 98%) 0%, rgb(3 10 13 / 88%) 47%, rgb(3 10 13 / 25%) 78%),
+    linear-gradient(0deg, rgb(3 10 13 / 96%), transparent 58%);
+}
+
+.heroInner {
+  position: relative;
+  padding-block: 20px 24px;
+}
+
+.heroGrid {
+  display: grid;
+  min-height: 220px;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: center;
+  gap: 24px;
+}
+
+.heroCopy {
+  max-width: 890px;
+}
+
+.eyebrow,
+.sectionIntro > span,
+.wideHeading span,
+.relatedHeading span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  max-width: 960px;
+  margin: 12px 0 18px;
+  font-family: var(--display);
+  font-size: var(--text-h1);
+  line-height: 0.93;
+  text-transform: uppercase;
+}
+
+.heroCopy > p {
+  max-width: 790px;
+  margin: 0;
+  color: #d2dddc;
+  font-size: var(--text-body);
+  line-height: 1.55;
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.heroMeta span {
+  padding: 6px 10px;
+  border-left: 2px solid var(--orange);
+  color: #c0cdcf;
+  background: rgb(4 17 22 / 72%);
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.heroDocket {
+  border: 1px solid #637980;
+  background: rgb(7 22 28 / 95%);
+}
+
+.heroDocket > span {
+  display: block;
+  padding: 10px 14px;
+  border-bottom: 1px solid #637980;
+  color: var(--workshop-blue);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heroDocket > strong {
+  display: block;
+  padding: 19px 14px 15px;
+  color: #f4b43b;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 1;
+}
+
+.heroDocket dl {
+  margin: 0;
+}
+
+.heroDocket dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 9px 14px;
+  border-top: 1px solid #334950;
+}
+
+.heroDocket dt {
+  color: #85999f;
+  font-size: 12px;
+}
+
+.heroDocket dd {
+  margin: 0;
+  color: #e8eeed;
+  font-family: var(--display);
+  font-weight: 900;
+}
+
+.jumpBar {
+  position: sticky;
+  top: 66px;
+  z-index: 20;
+  border-bottom: 1px solid #455b62;
+  background: rgb(7 19 24 / 96%);
+  backdrop-filter: blur(10px);
+}
+
+.jumpBar > div {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.jumpBar > div::-webkit-scrollbar {
+  display: none;
+}
+
+.jumpBar a {
+  flex: 0 0 auto;
+  padding: 12px 17px;
+  border-right: 1px solid #33484f;
+  color: #9fb1b4;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.jumpBar a:hover {
+  color: #fff;
+  background: #17303a;
+}
+
+.decisionSection {
+  padding-block: 34px;
+  background: #0b1b21;
+}
+
+.decisionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border: 1px solid #40555c;
+  background: #40555c;
+}
+
+.decisionGrid article {
+  padding: 24px 28px;
+  background: #0a1a20;
+}
+
+.decisionGrid article > span {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.decisionYes > span {
+  color: #b0d471;
+}
+
+.decisionNo > span {
+  color: #ef987f;
+}
+
+.decisionGrid ul {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+
+.decisionGrid li {
+  position: relative;
+  padding-left: 22px;
+  color: #c4d0d1;
+}
+
+.decisionGrid li::before {
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  content: "—";
+}
+
+.blueprintSection,
+.costSection,
+.systemSection,
+.variantsSection {
+  padding-block: 66px;
+}
+
+.blueprintSection,
+.systemSection {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgb(102 167 181 / 6%) 31px 32px),
+    #07171d;
+}
+
+.blueprintGrid,
+.costGrid,
+.variantsGrid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.62fr) minmax(0, 1.38fr);
+  align-items: start;
+  gap: 66px;
+}
+
+.sectionIntro h2,
+.wideHeading h2,
+.relatedHeading h2 {
+  margin: 8px 0 13px;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.sectionIntro p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.sectionIntro > a {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.baselineSheet {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid #58717a;
+  border-left: 1px solid #58717a;
+}
+
+.baselineSheet > div {
+  min-height: 108px;
+  padding: 19px 21px;
+  border-right: 1px solid #58717a;
+  border-bottom: 1px solid #58717a;
+  background: rgb(9 29 36 / 76%);
+}
+
+.baselineSheet dt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8da3a8;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.baselineSheet dt span {
+  color: var(--workshop-blue);
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.baselineSheet dd {
+  margin: 13px 0 0;
+  color: #f0f4f2;
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.partsSection,
+.stagesSection,
+.testSection,
+.relatedSection {
+  padding-block: 66px;
+}
+
+.partsSection,
+.testSection {
+  border-block: 1px solid #334b53;
+  background: #0b1b21;
+}
+
+.wideHeading {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(300px, 0.78fr);
+  align-items: end;
+  gap: 60px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #52666d;
+}
+
+.wideHeading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.partTable {
+  border-left: 1px solid #3c5158;
+}
+
+.partHead,
+.partRow {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) 90px minmax(270px, 1.3fr) 110px;
+  align-items: center;
+}
+
+.partHead {
+  min-height: 42px;
+  color: #76959d;
+  background: #10272f;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.partHead > span,
+.partRow > * {
+  height: 100%;
+  padding: 12px 17px;
+  border-right: 1px solid #3c5158;
+  border-bottom: 1px solid #3c5158;
+}
+
+.partIdentity {
+  display: flex;
+  min-height: 86px;
+  align-items: center;
+  gap: 16px;
+}
+
+.partIdentity img,
+.material img,
+.recipeOutput img,
+.toolRow img {
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.partIdentity strong {
+  font-family: var(--display);
+  font-size: 18px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.partIdentity:hover strong {
+  color: var(--orange-bright);
+}
+
+.partQuantity {
+  display: flex;
+  align-items: center;
+  color: var(--workshop-blue);
+  font-family: var(--display);
+  font-size: 19px;
+}
+
+.partRow > p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #b6c5c7;
+  font-size: 14px;
+}
+
+.essential,
+.optional {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.essential {
+  color: #b6dc75;
+}
+
+.optional {
+  color: #8ca2a7;
+}
+
+.itemFallback {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #49616a;
+  color: var(--workshop-blue);
+  background: #0a2027;
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.costSection {
+  background: #d7d6ca;
+  color: var(--workshop-ink);
+}
+
+.costSection .sectionIntro > span {
+  color: #8b5613;
+}
+
+.costSection .sectionIntro p {
+  color: #4d5c61;
+}
+
+.costSection .sectionIntro > a {
+  color: #74450d;
+}
+
+.costSummary {
+  margin: 25px 0 0;
+  border-top: 1px solid #7d8988;
+}
+
+.costSummary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 9px 0;
+  border-bottom: 1px solid #a7afab;
+}
+
+.costSummary dt {
+  color: #566569;
+}
+
+.costSummary dd {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.materialPanel {
+  border: 1px solid #758182;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgb(44 66 73 / 7%) 27px 28px),
+    #e4e2d5;
+}
+
+.materialTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 17px;
+  border-bottom: 1px solid #758182;
+  color: #26373c;
+  font-family: var(--display);
+  text-transform: uppercase;
+}
+
+.materialTitle span {
+  color: #8c5717;
+  font-weight: 900;
+}
+
+.materialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.material {
+  display: grid;
+  min-height: 116px;
+  grid-template-columns: 50px 1fr;
+  align-content: center;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 14px;
+  border-right: 1px solid #a3aba8;
+  border-bottom: 1px solid #a3aba8;
+}
+
+.material span {
+  color: #435257;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.material strong {
+  grid-column: 2;
+  font-family: var(--display);
+  font-size: 21px;
+}
+
+.material:hover {
+  background: #f0eee1;
+}
+
+.recipeRows {
+  margin-top: 42px;
+  border-top: 1px solid #768383;
+  border-left: 1px solid #768383;
+}
+
+.recipeRow {
+  display: grid;
+  min-height: 96px;
+  grid-template-columns: minmax(230px, 0.85fr) minmax(220px, 0.7fr) minmax(320px, 1.25fr);
+}
+
+.recipeRow > * {
+  padding: 15px 17px;
+  border-right: 1px solid #768383;
+  border-bottom: 1px solid #768383;
+}
+
+.recipeOutput {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.recipeOutput span,
+.recipeStation span {
+  display: block;
+  color: #6b7779;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.recipeOutput strong,
+.recipeStation strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 17px;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.recipeStation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recipeStation small {
+  margin-top: 5px;
+  color: #6f5835;
+}
+
+.recipeInputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 6px;
+}
+
+.recipeInputs span {
+  padding: 4px 7px;
+  border: 1px solid #9da6a4;
+  color: #455357;
+  background: rgb(255 255 255 / 30%);
+  font-size: 12px;
+}
+
+.recipeInputs b {
+  color: #18282e;
+}
+
+.recipeUnavailable {
+  display: flex;
+  grid-column: span 2;
+  align-items: center;
+  color: #6a5538;
+  font-size: 13px;
+}
+
+.stagesSection {
+  background: #07151a;
+}
+
+.stageList {
+  border-left: 1px solid #3e555c;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 90px minmax(230px, 0.72fr) minmax(320px, 1.15fr) minmax(240px, 0.78fr);
+  min-height: 230px;
+}
+
+.stage > * {
+  padding: 25px;
+  border-right: 1px solid #3e555c;
+  border-bottom: 1px solid #3e555c;
+}
+
+.stageNumber {
+  display: grid;
+  place-items: center;
+  color: var(--orange-bright);
+  background: #10262e;
+  font-family: var(--display);
+  font-size: var(--text-h3);
+  font-weight: 900;
+}
+
+.stage header span,
+.stage aside span {
+  color: #78939a;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stage h3 {
+  margin: 7px 0 11px;
+  font-family: var(--display);
+  font-size: 27px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.stage header p,
+.stage aside p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.stage ol {
+  margin: 0;
+  padding-left: 45px;
+  color: #c9d4d4;
+}
+
+.stage li + li {
+  margin-top: 9px;
+}
+
+.stage li::marker {
+  color: var(--orange);
+  font-family: var(--display);
+  font-weight: 900;
+}
+
+.stage aside {
+  background: #0e2229;
+}
+
+.stage aside span {
+  color: #9dc565;
+}
+
+.stage aside p {
+  margin-top: 13px;
+  color: #d6dfdc;
+}
+
+.systemGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 58px;
+}
+
+.toolList,
+.connectionList {
+  margin-top: 28px;
+  border-top: 1px solid #415961;
+}
+
+.toolRow {
+  display: grid;
+  min-height: 116px;
+  grid-template-columns: 66px 1fr 24px;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 12px;
+  border-bottom: 1px solid #415961;
+}
+
+.toolRow:hover {
+  background: #102932;
+}
+
+.toolRow span {
+  color: #82999e;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.toolRow h3 {
+  margin: 2px 0;
+  font-family: var(--display);
+  font-size: 23px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.toolRow p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.toolRow > b {
+  color: var(--workshop-blue);
+}
+
+.connection {
+  display: grid;
+  min-height: 102px;
+  grid-template-columns: 36px minmax(120px, 1fr) 34px minmax(150px, 1fr);
+  align-items: center;
+  gap: 9px;
+  padding: 14px 8px;
+  border-bottom: 1px solid #415961;
+}
+
+.connection > span,
+.connection > b {
+  color: var(--workshop-blue);
+  font-family: var(--display);
+  font-weight: 900;
+  text-align: center;
+}
+
+.connection div {
+  min-width: 0;
+}
+
+.connection strong,
+.connection small {
+  display: block;
+}
+
+.connection strong {
+  font-family: var(--display);
+  font-size: 17px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.connection small {
+  margin-top: 5px;
+  color: #8fa1a5;
+  line-height: 1.3;
+}
+
+.testTable {
+  border-left: 1px solid #455b62;
+}
+
+.testHead,
+.testRow {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.58fr) minmax(260px, 1fr) minmax(260px, 1fr);
+}
+
+.testHead {
+  color: #7e9aa1;
+  background: #112831;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.testHead > span,
+.testRow > * {
+  padding: 14px 18px;
+  border-right: 1px solid #455b62;
+  border-bottom: 1px solid #455b62;
+}
+
+.testRow strong {
+  font-family: var(--display);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.testRow p {
+  margin: 0;
+  color: #bdc9cb;
+  font-size: 14px;
+}
+
+.testRow p:last-child {
+  color: #efb09f;
+}
+
+.variantsSection {
+  background:
+    repeating-linear-gradient(90deg, transparent 0 34px, rgb(120 97 49 / 5%) 34px 35px),
+    #151a19;
+}
+
+.variantList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #596260;
+  border-left: 1px solid #596260;
+}
+
+.variantList article {
+  min-height: 220px;
+  padding: 23px;
+  border-right: 1px solid #596260;
+  border-bottom: 1px solid #596260;
+}
+
+.variantList span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.variantList h3 {
+  margin: 34px 0 10px;
+  font-family: var(--display);
+  font-size: 22px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.variantList p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.relatedSection {
+  background: #07151a;
+}
+
+.relatedHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.relatedHeading a {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.relatedGrid > a {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border: 1px solid #40555c;
+}
+
+.relatedGrid img {
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+
+.relatedGrid > a::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(4 13 17 / 97%) 5%, transparent 82%);
+  content: "";
+}
+
+.relatedGrid > a:hover img {
+  transform: scale(1.035);
+}
+
+.relatedGrid > a > div {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 22px;
+}
+
+.relatedGrid span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.relatedGrid h3 {
+  margin: 5px 0 8px;
+  font-family: var(--display);
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.relatedGrid p {
+  margin: 0;
+  color: #b4c2c4;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+@media (max-width: 1024px) {
+  .blueprintGrid,
+  .costGrid,
+  .variantsGrid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .stage {
+    grid-template-columns: 72px minmax(220px, 0.85fr) minmax(320px, 1.15fr);
+  }
+
+  .stage aside {
+    grid-column: 2 / -1;
+  }
+
+  .systemGrid {
+    gap: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroGrid,
+  .systemGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroGrid {
+    gap: 28px;
+  }
+
+  .heroDocket {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 2fr;
+  }
+
+  .heroDocket > span,
+  .heroDocket > strong {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #637980;
+    border-bottom: 0;
+  }
+
+  .heroDocket > strong {
+    font-size: var(--text-h3);
+  }
+
+  .partHead,
+  .partRow {
+    grid-template-columns: minmax(230px, 0.9fr) 80px minmax(260px, 1.1fr);
+  }
+
+  .partHead > span:last-child,
+  .partRow > span:last-child {
+    display: none;
+  }
+
+  .recipeRow {
+    grid-template-columns: minmax(210px, 0.8fr) minmax(220px, 1fr);
+  }
+
+  .recipeInputs {
+    grid-column: 1 / -1;
+  }
+
+  .recipeUnavailable {
+    grid-column: auto;
+  }
+
+  .variantList {
+    grid-template-columns: 1fr;
+  }
+
+  .variantList article {
+    min-height: auto;
+  }
+
+  .variantList h3 {
+    margin-top: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 690px;
+  }
+
+  .heroShade {
+    background:
+      linear-gradient(90deg, rgb(3 10 13 / 82%), rgb(3 10 13 / 35%)),
+      linear-gradient(0deg, rgb(3 10 13 / 99%) 7%, rgb(3 10 13 / 72%) 58%, transparent 95%);
+  }
+
+  .heroInner {
+    padding-block: 26px 32px;
+  }
+
+  .heroGrid {
+    min-height: 300px;
+  }
+
+  .heroCopy h1 {
+    font-size: var(--text-h1);
+  }
+
+  .heroCopy > p {
+    font-size: 16px;
+  }
+
+  .heroDocket {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroDocket > span,
+  .heroDocket > strong {
+    min-height: 62px;
+  }
+
+  .heroDocket dl {
+    grid-column: 1 / -1;
+  }
+
+  .jumpBar {
+    top: 72px;
+  }
+
+  .decisionGrid,
+  .wideHeading {
+    grid-template-columns: 1fr;
+  }
+
+  .decisionGrid article {
+    padding: 22px 19px;
+  }
+
+  .blueprintSection,
+  .partsSection,
+  .costSection,
+  .stagesSection,
+  .systemSection,
+  .testSection,
+  .variantsSection,
+  .relatedSection {
+    padding-block: 22px;
+  }
+
+  .baselineSheet,
+  .materialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .baselineSheet > div {
+    min-height: 92px;
+  }
+
+  .wideHeading {
+    gap: 10px;
+  }
+
+  .partHead {
+    display: none;
+  }
+
+  .partRow {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: stretch;
+  }
+
+  .partIdentity {
+    min-width: 0;
+  }
+
+  .partQuantity {
+    justify-content: center;
+  }
+
+  .partRow > p {
+    grid-column: 1 / -1;
+    min-height: 58px;
+  }
+
+  .recipeRow {
+    grid-template-columns: 1fr;
+  }
+
+  .recipeInputs,
+  .recipeUnavailable {
+    grid-column: auto;
+  }
+
+  .stage {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+
+  .stage > * {
+    padding: 20px;
+  }
+
+  .stage ol,
+  .stage aside {
+    grid-column: 1 / -1;
+  }
+
+  .stage ol {
+    padding-left: 43px;
+  }
+
+  .connection {
+    grid-template-columns: 28px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .connection > b {
+    display: none;
+  }
+
+  .connection div:last-child {
+    grid-column: 2;
+    padding-top: 8px;
+    border-top: 1px dashed #40555c;
+  }
+
+  .testHead {
+    display: none;
+  }
+
+  .testRow {
+    grid-template-columns: 1fr;
+  }
+
+  .testRow strong {
+    background: #112831;
+  }
+
+  .relatedHeading {
+    display: block;
+  }
+
+  .relatedHeading a {
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .relatedGrid > a {
+    min-height: 300px;
+  }
+}

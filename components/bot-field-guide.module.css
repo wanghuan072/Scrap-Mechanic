@@ -1,0 +1,401 @@
+.guide {
+  display: grid;
+  gap: 48px;
+  margin: 22px 0 44px;
+}
+
+.jumpBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  border-block: 1px solid #47636b;
+  background: #07161b;
+}
+
+.jumpBar > * {
+  min-height: 46px;
+  padding: 14px 18px;
+  border-right: 1px solid #31484f;
+  font-family: var(--display);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.jumpBar > span {
+  color: #061217;
+  background: var(--orange-bright);
+}
+
+.jumpBar a {
+  color: #c7d7d9;
+}
+
+.jumpBar a:hover {
+  color: var(--cyan);
+  background: #102932;
+}
+
+.intro,
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  align-items: end;
+  gap: 16px;
+}
+
+.intro header > span,
+.sectionHeading span,
+.groupHeader small {
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro h2,
+.sectionHeading h2 {
+  max-width: 760px;
+  margin: 6px 0 0;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.intro > p,
+.sectionHeading > p {
+  max-width: 58ch;
+  margin: 0;
+  color: #aebfc2;
+  line-height: 1.7;
+}
+
+.groupList {
+  display: grid;
+  gap: 58px;
+}
+
+.group {
+  scroll-margin-top: 100px;
+}
+
+.groupHeader {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.groupHeader > span {
+  color: #203b43;
+  font-family: var(--display);
+  font-size: 3.7rem;
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+.groupHeader h3 {
+  margin: 4px 0 7px;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.groupHeader p {
+  max-width: 76ch;
+  margin: 0;
+  color: #97aaae;
+  line-height: 1.65;
+}
+
+.table,
+.cropTable {
+  border-top: 1px solid #5c747b;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns:
+    minmax(150px, 0.76fr)
+    minmax(170px, 1fr)
+    minmax(170px, 1fr)
+    minmax(170px, 1fr)
+    minmax(220px, 1.3fr);
+}
+
+.tableHead,
+.cropHead {
+  min-height: 40px;
+  align-items: center;
+  color: #6f8d94;
+  background: #0a1b21;
+  font-family: var(--display);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tableHead span,
+.cropHead span {
+  padding: 10px 13px;
+  border-right: 1px solid #273d43;
+}
+
+.tableRow {
+  min-height: 92px;
+  border-bottom: 1px solid #30484f;
+}
+
+.tableRow > * {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  margin: 0;
+  padding: 14px 13px;
+  border-right: 1px solid #273d43;
+  line-height: 1.45;
+}
+
+.tableRow strong {
+  color: #ecf5f3;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.tableRow strong a {
+  color: var(--orange-bright);
+}
+
+.tableRow p {
+  color: #aebfc2;
+  font-size: 0.86rem;
+}
+
+.tableRow:hover {
+  background: #0b2129;
+}
+
+.cropSection,
+.questions {
+  scroll-margin-top: 100px;
+}
+
+.cropSection {
+  display: grid;
+  gap: 24px;
+  padding-top: 46px;
+  border-top: 1px solid #5c747b;
+}
+
+.cropHead,
+.cropRow {
+  display: grid;
+  grid-template-columns:
+    minmax(160px, 0.8fr)
+    minmax(165px, 0.9fr)
+    minmax(190px, 1fr)
+    minmax(210px, 1.1fr)
+    minmax(240px, 1.25fr);
+}
+
+.cropRow {
+  min-height: 92px;
+  border-bottom: 1px solid #30484f;
+}
+
+.cropRow > * {
+  min-width: 0;
+  margin: 0;
+  padding: 13px;
+  border-right: 1px solid #273d43;
+}
+
+.cropIdentity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0a1d23;
+}
+
+.cropIdentity img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.cropIdentity strong {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.cropIdentity a {
+  color: var(--orange-bright);
+}
+
+.cropRow p {
+  display: flex;
+  align-items: center;
+  color: #aebfc2;
+  font-size: 0.84rem;
+  line-height: 1.48;
+}
+
+.cropActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.cropActions a {
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.questions {
+  display: grid;
+  gap: 24px;
+  padding-top: 46px;
+  border-top: 1px solid #5c747b;
+}
+
+.questionList {
+  border-top: 1px solid #425d64;
+}
+
+.questionList details {
+  border-bottom: 1px solid #30484f;
+}
+
+.questionList summary {
+  display: grid;
+  min-height: 62px;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  padding: 10px 0;
+  color: #e6efee;
+  cursor: pointer;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  text-transform: uppercase;
+}
+
+.questionList summary::marker {
+  color: var(--orange-bright);
+}
+
+.questionList summary span {
+  color: #668087;
+  font-size: 0.7rem;
+}
+
+.questionList details p {
+  max-width: 85ch;
+  margin: 0;
+  padding: 0 0 22px 44px;
+  color: #aebfc2;
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .table,
+  .cropTable {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    border-top: 0;
+  }
+
+  .tableHead,
+  .cropHead {
+    display: none;
+  }
+
+  .tableRow,
+  .cropRow {
+    display: grid;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    align-content: start;
+    border: 1px solid #385159;
+  }
+
+  .tableRow > *,
+  .cropRow > * {
+    display: block;
+    padding: 11px 14px;
+    border-right: 0;
+    border-bottom: 1px solid #263d44;
+  }
+
+  .tableRow p::before,
+  .cropRow p::before {
+    display: block;
+    margin-bottom: 3px;
+    color: #6f8d94;
+    content: attr(data-label);
+    font-family: var(--display);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cropIdentity {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .guide {
+    gap: 38px;
+  }
+
+  .jumpBar > span {
+    width: 100%;
+  }
+
+  .jumpBar a {
+    flex: 1 1 50%;
+  }
+
+  .intro,
+  .sectionHeading {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .groupHeader {
+    grid-template-columns: 48px 1fr;
+    gap: 12px;
+  }
+
+  .groupHeader > span {
+    font-size: 2.55rem;
+  }
+
+  .table,
+  .cropTable {
+    grid-template-columns: 1fr;
+  }
+
+  .questionList summary {
+    grid-template-columns: 34px 1fr;
+  }
+
+  .questionList details p {
+    padding-left: 34px;
+  }
+}

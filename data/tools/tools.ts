@@ -1,0 +1,48 @@
+import type { ToolEntry } from "@/data/types";
+
+export const tools: ToolEntry[] = [
+  {
+    slug: "raid-calculator",
+    name: "Scrap Mechanic Raid Calculator",
+    description:
+      "Calculate current 1.0 crop value, raid level, exact bot budget, multiplayer scaling, weighted enemy odds, and one possible drop timeline.",
+    status: "available",
+    symbol: "RC",
+    image: "/images/scrap-mechanic/screenshot-01.jpg",
+    imageAlt: "Players preparing for a bot attack in Scrap Mechanic",
+    seo: {
+      title: "Scrap Mechanic Raid Calculator - 1.0 Crop Raid Tool",
+      description:
+        "Use the Scrap Mechanic Raid Calculator for crop values, exact raid budget, player scaling, weighted bot probabilities, and a simulated drop timeline.",
+      keywords: [
+        "Scrap Mechanic raid calculator",
+        "Scrap Mechanic raid level",
+        "Scrap Mechanic crop value",
+        "Scrap Mechanic crop raid",
+        "Scrap Mechanic raid wave calculator",
+        "Scrap Mechanic raid bot forecast",
+      ],
+    },
+  },
+  {
+    slug: "crafting-planner",
+    name: "Crafting Planner",
+    description:
+      "Calculate full batches, direct materials, finished output, extra pieces, station time, and schematic requirements across 614 recipes.",
+    status: "available",
+    symbol: "CP",
+    image: "/images/game-items/craftbot-b63c6440.webp",
+    imageAlt: "Craftbot item icon in Scrap Mechanic",
+    seo: {
+      title: "Scrap Mechanic Crafting Planner - Material Calculator",
+      description:
+        "Use the Scrap Mechanic Crafting Planner to calculate recipe batches, exact direct materials, output, extra pieces, station time, and schematic requirements.",
+      keywords: [
+        "Scrap Mechanic crafting planner",
+        "Scrap Mechanic recipe calculator",
+        "Scrap Mechanic material calculator",
+        "Scrap Mechanic Craftbot recipes",
+      ],
+    },
+  },
+];

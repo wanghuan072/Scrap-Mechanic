@@ -1,0 +1,2562 @@
+{
+  "checkedVersion": "1.0.1.869",
+  "tradeCount": 127,
+  "venues": [
+    {
+      "slug": "farmers-hideout",
+      "name": "Farmers Hideout",
+      "currency": "Packed produce and rescued Farmers",
+      "description": "Trade crop crates and rescued Farmers for seeds, supplies, parts, and progression equipment.",
+      "tradeCount": 44
+    },
+    {
+      "slug": "mining-hub",
+      "name": "Mining Hub",
+      "currency": "Wonk Stacks",
+      "description": "Spend Wonk Stacks on mining equipment, heavy-duty parts, weapons, blocks, and outfit pieces.",
+      "tradeCount": 83
+    }
+  ],
+  "trades": [
+    {
+      "id": "hideout-json-8f7fd0e7-542",
+      "output": {
+        "uuid": "8f7fd0e7-c46e-4944-a414-7ce2437bb30f",
+        "name": "Timer",
+        "quantity": 1,
+        "image": "/images/game-items/timer-8f7fd0e7.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-1d4793af-543",
+      "output": {
+        "uuid": "1d4793af-cb66-4628-804a-9d7404712643",
+        "name": "Sensor Level 1",
+        "quantity": 1,
+        "image": "/images/game-items/sensor-level-1-1d4793af.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-9f0f56e8-544",
+      "output": {
+        "uuid": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+        "name": "Logic Gate",
+        "quantity": 1,
+        "image": "/images/game-items/logic-gate-9f0f56e8.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-d6ce5127-545",
+      "output": {
+        "uuid": "d6ce5127-c5be-42e3-a55f-0261bf1ac145",
+        "name": "Ladder",
+        "quantity": 1,
+        "image": "/images/game-items/ladder-d6ce5127.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-7d601a5a-546",
+      "output": {
+        "uuid": "7d601a5a-796d-4cae-be88-b47479d38d11",
+        "name": "Driver's Saddle Level 1",
+        "quantity": 1,
+        "image": "/images/game-items/driver-s-saddle-level-1-7d601a5a.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-2d3016f7-547",
+      "output": {
+        "uuid": "2d3016f7-febe-416e-93bc-41d80ca3910d",
+        "name": "Saddle Level 1",
+        "quantity": 1,
+        "image": "/images/game-items/saddle-level-1-2d3016f7.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-3cdbbefe-548",
+      "output": {
+        "uuid": "3cdbbefe-43b4-4ad7-af47-af0b2e7563c9",
+        "name": "Sport Suspension With Bearing Level 1",
+        "quantity": 1,
+        "image": "/images/game-items/sport-suspension-with-bearing-level-1-3cdbbefe.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-fdfcdb68-549",
+      "output": {
+        "uuid": "fdfcdb68-af22-4bb3-87d6-bd44b3c8b671",
+        "name": "Off-Road Suspension With Bearing Level 1",
+        "quantity": 1,
+        "image": "/images/game-items/off-road-suspension-with-bearing-level-1-fdfcdb68.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-febce8a6-550",
+      "output": {
+        "uuid": "febce8a6-6c05-4e5d-803b-dfa930286944",
+        "name": "Carpet Block",
+        "quantity": 1,
+        "image": "/images/game-items/carpet-block-febce8a6.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-073f92af-551",
+      "output": {
+        "uuid": "073f92af-f37e-4aff-96b3-d66284d5081c",
+        "name": "Path Light Block",
+        "quantity": 1,
+        "image": "/images/game-items/path-light-block-073f92af.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-b5ee5539-552",
+      "output": {
+        "uuid": "b5ee5539-75a2-4fef-873b-ef7c9398b3f5",
+        "name": "Armored Glass Block",
+        "quantity": 1,
+        "image": "/images/game-items/armored-glass-block-b5ee5539.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 3,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-d6f0de5e-553",
+      "output": {
+        "uuid": "d6f0de5e-8ba9-42e6-9dac-bfe5fc4606be",
+        "name": "Concrete Big Foundation",
+        "quantity": 1,
+        "image": "/images/game-items/concrete-big-foundation-d6f0de5e.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-8bc24c12-554",
+      "output": {
+        "uuid": "8bc24c12-e4a9-414b-8467-33736e455cb0",
+        "name": "Concrete Small Foundation",
+        "quantity": 1,
+        "image": "/images/game-items/concrete-small-foundation-8bc24c12.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-2870f2dd-555",
+      "output": {
+        "uuid": "2870f2dd-ea17-44dd-8c00-8f71e8d2764c",
+        "name": "Concrete Pillar",
+        "quantity": 1,
+        "image": "/images/game-items/concrete-pillar-2870f2dd.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-e69e0466-556",
+      "output": {
+        "uuid": "e69e0466-8783-4cfd-8a0a-8794af743094",
+        "name": "Concrete Big Barrier",
+        "quantity": 1,
+        "image": "/images/game-items/concrete-big-barrier-e69e0466.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-0cd81a8e-557",
+      "output": {
+        "uuid": "0cd81a8e-a4b3-4743-b507-600fe35c93ee",
+        "name": "Concrete Small Barrier",
+        "quantity": 1,
+        "image": "/images/game-items/concrete-small-barrier-0cd81a8e.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 2,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-9baebeb4-558",
+      "output": {
+        "uuid": "9baebeb4-95dc-4ee6-a1fd-c44cc67ced04",
+        "name": "Farmer Hat",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 10,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-f2c0c91f-559",
+      "output": {
+        "uuid": "f2c0c91f-4547-416e-b037-f56a8f04368c",
+        "name": "Farmer Jacket",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 5,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-7b0295df-560",
+      "output": {
+        "uuid": "7b0295df-7178-4ccb-a44d-f34d6b792c57",
+        "name": "Farmer Gloves",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 3,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-4ed054a2-561",
+      "output": {
+        "uuid": "4ed054a2-e354-4624-acd6-686b33d414a7",
+        "name": "Farmer Pants",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 5,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-78062d2a-562",
+      "output": {
+        "uuid": "78062d2a-1600-4144-80b6-435560cc0df6",
+        "name": "Farmer Shoes",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 3,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-94f1f243-563",
+      "output": {
+        "uuid": "94f1f243-6f36-4cd7-9098-52849655a45d",
+        "name": "Farmer Backpack",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 5,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-cb7305b2-564",
+      "output": {
+        "uuid": "cb7305b2-d8b5-4302-aff3-6cdd9212ca64",
+        "name": "Sunshake",
+        "quantity": 5,
+        "image": "/images/game-items/sunshake-cb7305b2.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 3,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-9a3e478c-565",
+      "output": {
+        "uuid": "9a3e478c-2224-44fa-887c-239965bd05ad",
+        "name": "Soil Bag",
+        "quantity": 10,
+        "image": "/images/game-items/soil-bag-9a3e478c.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+          "name": "Caged Farmer",
+          "quantity": 1,
+          "image": "/images/game-items/caged-farmer-8d601982.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-d2fab7ef-566",
+      "output": {
+        "uuid": "d2fab7ef-21db-4681-a22a-cd4f278fc355",
+        "name": "Fire Extinguisher",
+        "quantity": 50,
+        "image": "/images/game-items/fire-extinguisher-d2fab7ef.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "1dcd74ca-39ba-4b00-a36a-3381b25055f4",
+          "name": "Tomato Crate",
+          "quantity": 1,
+          "image": "/images/game-items/tomato-crate-1dcd74ca.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-3e10ef67-567",
+      "output": {
+        "uuid": "3e10ef67-383a-4b60-aa5b-b1173134e437",
+        "name": "Saw Blade",
+        "quantity": 1,
+        "image": "/images/game-items/saw-blade-3e10ef67.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "1dcd74ca-39ba-4b00-a36a-3381b25055f4",
+          "name": "Tomato Crate",
+          "quantity": 1,
+          "image": "/images/game-items/tomato-crate-1dcd74ca.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-276fd55b-568",
+      "output": {
+        "uuid": "276fd55b-ae54-4a7a-ace6-fddd2d3370a5",
+        "name": "Drill",
+        "quantity": 1,
+        "image": "/images/game-items/drill-276fd55b.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "9cd8288c-5a19-479f-af47-9eb55230ade2",
+          "name": "Carrot Crate",
+          "quantity": 1,
+          "image": "/images/game-items/carrot-crate-9cd8288c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-ac0b5b0a-569",
+      "output": {
+        "uuid": "ac0b5b0a-14e1-4b31-8944-0a351fbfcc67",
+        "name": "Fertilizer",
+        "quantity": 20,
+        "image": "/images/game-items/fertilizer-ac0b5b0a.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "9cd8288c-5a19-479f-af47-9eb55230ade2",
+          "name": "Carrot Crate",
+          "quantity": 1,
+          "image": "/images/game-items/carrot-crate-9cd8288c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-3a3280e4-570",
+      "output": {
+        "uuid": "3a3280e4-03b6-4a4d-9e02-e348478213c9",
+        "name": "Glowstick",
+        "quantity": 20,
+        "image": "/images/game-items/glowstick-3a3280e4.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "628fd350-577d-413f-82a8-7f08a83de3d8",
+          "name": "Redbeet Crate",
+          "quantity": 1,
+          "image": "/images/game-items/redbeet-crate-628fd350.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-c56700d9-571",
+      "output": {
+        "uuid": "c56700d9-bbe5-4b17-95ed-cef05bd8be1b",
+        "name": "Sand Block",
+        "quantity": 500,
+        "image": "/images/game-items/sand-block-c56700d9.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "628fd350-577d-413f-82a8-7f08a83de3d8",
+          "name": "Redbeet Crate",
+          "quantity": 1,
+          "image": "/images/game-items/redbeet-crate-628fd350.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-f152e4df-572",
+      "output": {
+        "uuid": "f152e4df-bc40-44fb-8d20-3b3ff70cdfe3",
+        "name": "Circuit Board",
+        "quantity": 10,
+        "image": "/images/game-items/circuit-board-f152e4df.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "0bc74539-df8a-47c7-aad8-d55d809a01e4",
+          "name": "Banana Crate",
+          "quantity": 1,
+          "image": "/images/game-items/banana-crate-0bc74539.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-1f7ac0bb-573",
+      "output": {
+        "uuid": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39",
+        "name": "Scrap Metal Block",
+        "quantity": 250,
+        "image": "/images/game-items/scrap-metal-block-1f7ac0bb.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "e77d9577-589a-446b-96c1-f6d0d7495489",
+          "name": "Blueberry Crate",
+          "quantity": 1,
+          "image": "/images/game-items/blueberry-crate-e77d9577.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-e28c88fc-574",
+      "output": {
+        "uuid": "e28c88fc-bd6d-4b03-a799-c0d39f0a799e",
+        "name": "Mud",
+        "quantity": 100,
+        "image": "/images/game-items/mud-e28c88fc.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "c10a77d5-3357-4cb4-8113-a2cbe69c7ff2",
+          "name": "Orange Crate",
+          "quantity": 1,
+          "image": "/images/game-items/orange-crate-c10a77d5.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-a3046bed-575",
+      "output": {
+        "uuid": "a3046bed-5cea-4bbb-a164-4b46448f87b3",
+        "name": "Schematic box",
+        "quantity": 5,
+        "image": "/images/game-items/schematic-box-a3046bed.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "99477093-e819-4199-b62a-fda6143aae89",
+          "name": "Broccoli Crate",
+          "quantity": 1,
+          "image": "/images/game-items/broccoli-crate-99477093.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-5530e6a0-576",
+      "output": {
+        "uuid": "5530e6a0-4748-4926-b134-50ca9ecb9dcf",
+        "name": "Component Kit",
+        "quantity": 20,
+        "image": "/images/game-items/component-kit-5530e6a0.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "bc69cb3b-7e0c-4c36-805d-f8d89fcfced3",
+          "name": "Pineapple Crate",
+          "quantity": 1,
+          "image": "/images/game-items/pineapple-crate-bc69cb3b.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-8883e0ee-577",
+      "output": {
+        "uuid": "8883e0ee-8a6e-423a-a4e0-583d9bf105bd",
+        "name": "Chili Seed",
+        "quantity": 20,
+        "image": "/images/game-items/chili-seed-8883e0ee.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "e77d9577-589a-446b-96c1-f6d0d7495489",
+          "name": "Blueberry Crate",
+          "quantity": 1,
+          "image": "/images/game-items/blueberry-crate-e77d9577.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-38e41fb5-578",
+      "output": {
+        "uuid": "38e41fb5-dd50-4294-829d-a517f0282fed",
+        "name": "Tomato Seed",
+        "quantity": 40,
+        "image": "/images/game-items/tomato-seed-38e41fb5.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "1dcd74ca-39ba-4b00-a36a-3381b25055f4",
+          "name": "Tomato Crate",
+          "quantity": 1,
+          "image": "/images/game-items/tomato-crate-1dcd74ca.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-9c82a525-579",
+      "output": {
+        "uuid": "9c82a525-8a8b-4483-9595-505aaa042486",
+        "name": "Carrot Seed",
+        "quantity": 40,
+        "image": "/images/game-items/carrot-seed-9c82a525.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "9cd8288c-5a19-479f-af47-9eb55230ade2",
+          "name": "Carrot Crate",
+          "quantity": 1,
+          "image": "/images/game-items/carrot-crate-9cd8288c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-64051718-580",
+      "output": {
+        "uuid": "64051718-a3f1-422b-bda3-277efa0c4545",
+        "name": "Redbeet Seed",
+        "quantity": 40,
+        "image": "/images/game-items/redbeet-seed-64051718.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "628fd350-577d-413f-82a8-7f08a83de3d8",
+          "name": "Redbeet Crate",
+          "quantity": 1,
+          "image": "/images/game-items/redbeet-crate-628fd350.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-22beade5-581",
+      "output": {
+        "uuid": "22beade5-38ca-47b4-a2ee-32403f58a862",
+        "name": "Banana Seed",
+        "quantity": 40,
+        "image": "/images/game-items/banana-seed-22beade5.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "0bc74539-df8a-47c7-aad8-d55d809a01e4",
+          "name": "Banana Crate",
+          "quantity": 1,
+          "image": "/images/game-items/banana-crate-0bc74539.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-4b6d2bee-582",
+      "output": {
+        "uuid": "4b6d2bee-d0f1-4e56-96f0-d2596388cad2",
+        "name": "Blueberry Seed",
+        "quantity": 40,
+        "image": "/images/game-items/blueberry-seed-4b6d2bee.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "e77d9577-589a-446b-96c1-f6d0d7495489",
+          "name": "Blueberry Crate",
+          "quantity": 1,
+          "image": "/images/game-items/blueberry-crate-e77d9577.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-bee966b0-583",
+      "output": {
+        "uuid": "bee966b0-b5e5-41da-b992-5d363ab85ae4",
+        "name": "Orange Seed",
+        "quantity": 40,
+        "image": "/images/game-items/orange-seed-bee966b0.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "c10a77d5-3357-4cb4-8113-a2cbe69c7ff2",
+          "name": "Orange Crate",
+          "quantity": 1,
+          "image": "/images/game-items/orange-crate-c10a77d5.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-1c6756ca-584",
+      "output": {
+        "uuid": "1c6756ca-3a60-4dcb-a5d1-353edf818308",
+        "name": "Broccoli Seed",
+        "quantity": 40,
+        "image": "/images/game-items/broccoli-seed-1c6756ca.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "99477093-e819-4199-b62a-fda6143aae89",
+          "name": "Broccoli Crate",
+          "quantity": 1,
+          "image": "/images/game-items/broccoli-crate-99477093.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "hideout-json-9edb6f7c-585",
+      "output": {
+        "uuid": "9edb6f7c-fb44-4348-a1c4-8afb41b92d8a",
+        "name": "Pineapple Seed",
+        "quantity": 40,
+        "image": "/images/game-items/pineapple-seed-9edb6f7c.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "bc69cb3b-7e0c-4c36-805d-f8d89fcfced3",
+          "name": "Pineapple Crate",
+          "quantity": 1,
+          "image": "/images/game-items/pineapple-crate-bc69cb3b.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "farmers-hideout"
+    },
+    {
+      "id": "mininghubtrader-json-b41de15e-590",
+      "output": {
+        "uuid": "b41de15e-a136-425a-a730-889b58cf4466",
+        "name": "Multi Component Kit",
+        "quantity": 1,
+        "image": "/images/game-items/multi-component-kit-b41de15e.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 1000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-8883e0ee-591",
+      "output": {
+        "uuid": "8883e0ee-8a6e-423a-a4e0-583d9bf105bd",
+        "name": "Chili Seed",
+        "quantity": 20,
+        "image": "/images/game-items/chili-seed-8883e0ee.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-b8f9c227-592",
+      "output": {
+        "uuid": "b8f9c227-ab51-4d38-b425-dfc208cc4dd6",
+        "name": "Turret Seat Level 1",
+        "quantity": 1,
+        "image": "/images/game-items/turret-seat-level-1-b8f9c227.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-8a87566d-593",
+      "output": {
+        "uuid": "8a87566d-f540-49b6-909d-4dcfbfa007c0",
+        "name": "Sticky Wheel",
+        "quantity": 1,
+        "image": "/images/game-items/sticky-wheel-8a87566d.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 5000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-be29592a-594",
+      "output": {
+        "uuid": "be29592a-ef58-4b1d-b18c-895023abd27f",
+        "name": "Chemical Container",
+        "quantity": 1,
+        "image": "/images/game-items/chemical-container-be29592a.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 10000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-6395a2f1-595",
+      "output": {
+        "uuid": "6395a2f1-4169-4a7e-be15-a9864cb6ce7e",
+        "name": "Clay",
+        "quantity": 1,
+        "image": "/images/game-items/clay-6395a2f1.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 10000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-3a3280e4-596",
+      "output": {
+        "uuid": "3a3280e4-03b6-4a4d-9e02-e348478213c9",
+        "name": "Glowstick",
+        "quantity": 1,
+        "image": "/images/game-items/glowstick-3a3280e4.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 10000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-f152e4df-597",
+      "output": {
+        "uuid": "f152e4df-bc40-44fb-8d20-3b3ff70cdfe3",
+        "name": "Circuit Board",
+        "quantity": 1,
+        "image": "/images/game-items/circuit-board-f152e4df.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 10000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-8d3b98de-598",
+      "output": {
+        "uuid": "8d3b98de-c981-4f05-abfe-d22ee4781d33",
+        "name": "Small Explosive Canister",
+        "quantity": 1,
+        "image": "/images/game-items/small-explosive-canister-8d3b98de.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 10000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-24001201-599",
+      "output": {
+        "uuid": "24001201-40dd-4950-b99f-17d878a9e07b",
+        "name": "Large Explosive Canister",
+        "quantity": 1,
+        "image": "/images/game-items/large-explosive-canister-24001201.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 25000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-9fde0601-600",
+      "output": {
+        "uuid": "9fde0601-c2ba-4c70-8d5c-2a7a9fdd122b",
+        "name": "Spudling Gun",
+        "quantity": 1,
+        "image": "/images/game-items/spudling-gun-9fde0601.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 50000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-6993e5df-601",
+      "output": {
+        "uuid": "6993e5df-6852-4e84-88ae-df49f765e784",
+        "name": "Clay Gun",
+        "quantity": 1,
+        "image": "/images/game-items/clay-gun-6993e5df.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-7143326d-602",
+      "output": {
+        "uuid": "7143326d-e0b6-498b-a25b-45cda8958a0f",
+        "name": "Mountable Glow Gun",
+        "quantity": 1,
+        "image": "/images/game-items/mountable-glow-gun-7143326d.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 25000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-cb7305b2-603",
+      "output": {
+        "uuid": "cb7305b2-d8b5-4302-aff3-6cdd9212ca64",
+        "name": "Sunshake",
+        "quantity": 1,
+        "image": "/images/game-items/sunshake-cb7305b2.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 25000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-6620ceb4-604",
+      "output": {
+        "uuid": "6620ceb4-3c35-4a61-9d98-f923d2277395",
+        "name": "Range Light",
+        "quantity": 1,
+        "image": "/images/game-items/range-light-6620ceb4.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 10000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-13ce3374-605",
+      "output": {
+        "uuid": "13ce3374-841a-4ad2-a6c3-ad0dabc1963d",
+        "name": "Range Light Large",
+        "quantity": 1,
+        "image": "/images/game-items/range-light-large-13ce3374.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 15000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-b973b537-606",
+      "output": {
+        "uuid": "b973b537-1a2c-4569-b323-1abcecca385f",
+        "name": "Fancy Bed",
+        "quantity": 1,
+        "image": "/images/game-items/fancy-bed-b973b537.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 5000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-061b5d4b-607",
+      "output": {
+        "uuid": "061b5d4b-0a6a-4212-b0ae-9e9681f1cbfb",
+        "name": "Wood Block Level 3",
+        "quantity": 1,
+        "image": "/images/game-items/wood-block-level-3-061b5d4b.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 1000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-e281599c-608",
+      "output": {
+        "uuid": "e281599c-2343-4c86-886e-b2c1444e8810",
+        "name": "Concrete Block Level 3",
+        "quantity": 1,
+        "image": "/images/game-items/concrete-block-level-3-e281599c.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 1000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-c0dfdea5-609",
+      "output": {
+        "uuid": "c0dfdea5-a39d-433a-b94a-299345a5df46",
+        "name": "Metal Block Level 3",
+        "quantity": 1,
+        "image": "/images/game-items/metal-block-level-3-c0dfdea5.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 100000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-4ae689b2-610",
+      "output": {
+        "uuid": "4ae689b2-b785-4cb9-94e6-6bbe10adf926",
+        "name": "Fancy Carpet Block",
+        "quantity": 1,
+        "image": "/images/game-items/fancy-carpet-block-4ae689b2.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 20000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-5d2f2d3f-611",
+      "output": {
+        "uuid": "5d2f2d3f-cd6b-4d84-8320-7844b672b192",
+        "name": "Scrap Canister Frame",
+        "quantity": 1,
+        "image": "/images/game-items/scrap-canister-frame-5d2f2d3f.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-f4107fbf-612",
+      "output": {
+        "uuid": "f4107fbf-2c39-455c-9aaf-2bb94d915ae8",
+        "name": "Scrap Barrier",
+        "quantity": 1,
+        "image": "/images/game-items/scrap-barrier-f4107fbf.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-5b8d77d3-613",
+      "output": {
+        "uuid": "5b8d77d3-b129-4d5c-b4c6-1d4f86b22058",
+        "name": "Scrap Beam",
+        "quantity": 1,
+        "image": "/images/game-items/scrap-beam-5b8d77d3.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-69fffafa-614",
+      "output": {
+        "uuid": "69fffafa-8084-4de0-9368-e7954d8e1686",
+        "name": "Scrap Stair",
+        "quantity": 1,
+        "image": "/images/game-items/scrap-stair-69fffafa.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-202b1841-615",
+      "output": {
+        "uuid": "202b1841-fd43-4993-9720-e181df634077",
+        "name": "Scrap Cube",
+        "quantity": 1,
+        "image": "/images/game-items/scrap-cube-202b1841.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-4d974692-616",
+      "output": {
+        "uuid": "4d974692-e011-4556-952c-d50da68dd961",
+        "name": "Monster Wheel",
+        "quantity": 1,
+        "image": "/images/game-items/monster-wheel-4d974692.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 10000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-79f63a7c-617",
+      "output": {
+        "uuid": "79f63a7c-276e-4488-88d4-af7b0390a35f",
+        "name": "Monster Wheel Big",
+        "quantity": 1,
+        "image": "/images/game-items/monster-wheel-big-79f63a7c.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 15000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": true,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-92c83e5b-618",
+      "output": {
+        "uuid": "92c83e5b-d277-46b7-9e62-e5e3d0abba5b",
+        "name": "Miner Helmet",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 75000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-0c377cef-619",
+      "output": {
+        "uuid": "0c377cef-8c93-421a-8715-7366229830ab",
+        "name": "Miner Jacket",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 50000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-5810f6aa-620",
+      "output": {
+        "uuid": "5810f6aa-d20d-40a2-9d78-878e32e237b0",
+        "name": "Miner Gloves",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 25000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-d6a28ec6-621",
+      "output": {
+        "uuid": "d6a28ec6-d044-41dd-880c-6edd00d18cc3",
+        "name": "Miner Pants",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 50000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-5d334138-622",
+      "output": {
+        "uuid": "5d334138-ecf9-46f2-aaf3-202cbe6fb8b2",
+        "name": "Miner Shoes",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 25000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-3ea882a5-623",
+      "output": {
+        "uuid": "3ea882a5-2f64-4a50-9829-21e810876023",
+        "name": "Miner Backpack",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 75000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-142ee54a-624",
+      "output": {
+        "uuid": "142ee54a-d0d9-42ff-b738-c8e22c7433c5",
+        "name": "Dekotora Hat",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-ab442ca9-625",
+      "output": {
+        "uuid": "ab442ca9-b6e8-4d7c-9044-9e9e6062a3ac",
+        "name": "Dekotora Jacket",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 150000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-d2d22576-626",
+      "output": {
+        "uuid": "d2d22576-7aa9-481d-8ae7-6a98f2673e74",
+        "name": "Dekotora Gloves",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 75000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-f866cbdb-627",
+      "output": {
+        "uuid": "f866cbdb-d469-4a8e-8b83-d9c94bd27e5e",
+        "name": "Dekotora Pants",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 150000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-dc772b19-628",
+      "output": {
+        "uuid": "dc772b19-77a6-4cab-862e-d04fad56b50e",
+        "name": "Dekotora Shoes",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 50000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-87908d87-629",
+      "output": {
+        "uuid": "87908d87-d384-40e0-bc60-bdcc0092d480",
+        "name": "Dekotora Backpack",
+        "quantity": 1,
+        "image": null
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 200000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-03bdd942-630",
+      "output": {
+        "uuid": "03bdd942-c808-4795-aa0b-554fa98c3c74",
+        "name": "Boombox",
+        "quantity": 1,
+        "image": "/images/game-items/boombox-03bdd942.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 5000,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-d8766548-631",
+      "output": {
+        "uuid": "d8766548-a54d-436b-b086-c6b546a01b3b",
+        "name": "Dekotora Block",
+        "quantity": 500,
+        "image": "/images/game-items/dekotora-block-d8766548.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-0f6cb8bb-632",
+      "output": {
+        "uuid": "0f6cb8bb-b905-4636-8acf-614515adcae5",
+        "name": "Dekotora Starlight Sign",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-starlight-sign-0f6cb8bb.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-95365a45-633",
+      "output": {
+        "uuid": "95365a45-83aa-4858-b792-c182be676524",
+        "name": "Dekotora Centerpiece",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-centerpiece-95365a45.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-967b042a-634",
+      "output": {
+        "uuid": "967b042a-2f92-4fa1-9d7a-801b7faf4a6e",
+        "name": "Dekotora LED horn",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-led-horn-967b042a.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-eb0b62d6-635",
+      "output": {
+        "uuid": "eb0b62d6-3557-428b-a6e2-a98ff25e16c8",
+        "name": "Dekotora Wheel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-wheel-eb0b62d6.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-6873a5b8-636",
+      "output": {
+        "uuid": "6873a5b8-c874-4424-8422-920d467140e9",
+        "name": "Dekotora Big Wheel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-big-wheel-6873a5b8.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-89e040f6-637",
+      "output": {
+        "uuid": "89e040f6-6e30-41b0-9d7b-97e6bb2cc0b0",
+        "name": "Dekotora Bearing Hubcap",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-bearing-hubcap-89e040f6.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-70a7042e-638",
+      "output": {
+        "uuid": "70a7042e-6865-4341-a481-214786653046",
+        "name": "Dekotora Star Hubcap",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-star-hubcap-70a7042e.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-1506a3ab-639",
+      "output": {
+        "uuid": "1506a3ab-b545-424a-92a0-7395be9e76f6",
+        "name": "Dekotora Large Arrow Frame",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-large-arrow-frame-1506a3ab.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-807f2819-640",
+      "output": {
+        "uuid": "807f2819-b2f2-4db6-bd71-04add4b69634",
+        "name": "Dekotora Truck Fender",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-truck-fender-807f2819.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 2500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-d84d768a-641",
+      "output": {
+        "uuid": "d84d768a-774e-491e-8a95-da1d4afa6df7",
+        "name": "Dekotora Side Light",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-side-light-d84d768a.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-cdd6762b-642",
+      "output": {
+        "uuid": "cdd6762b-263f-4dbc-b859-bceb56dbe92d",
+        "name": "Dekotora Headlight",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-headlight-cdd6762b.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-7dad8565-643",
+      "output": {
+        "uuid": "7dad8565-b3c3-4ffb-aec2-6df8eb82f06e",
+        "name": "Dekotora Top Light Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-top-light-panel-7dad8565.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-67900105-644",
+      "output": {
+        "uuid": "67900105-8c85-45b4-a35c-038b69f5eacf",
+        "name": "Dekotora Side Light Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-side-light-panel-67900105.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-c844468a-645",
+      "output": {
+        "uuid": "c844468a-8a31-4306-8af2-43e3f8cf0c13",
+        "name": "Dekotora Wave Railing",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-wave-railing-c844468a.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-eb5ba645-646",
+      "output": {
+        "uuid": "eb5ba645-ef8c-430c-a037-d15d752bbcd3",
+        "name": "Dekotora Star Headlight",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-star-headlight-eb5ba645.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-23bdcd57-647",
+      "output": {
+        "uuid": "23bdcd57-88d1-4626-a57a-a9cca055e3d1",
+        "name": "Dekotora Side Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-side-panel-23bdcd57.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-3e2ed3ed-648",
+      "output": {
+        "uuid": "3e2ed3ed-d1a5-4f51-8d43-e65230168f9a",
+        "name": "Dekotora Scrolling Star Sign",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-scrolling-star-sign-3e2ed3ed.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-382924d1-649",
+      "output": {
+        "uuid": "382924d1-66f5-49e2-949c-aa5aa319ad72",
+        "name": "Dekotora Dot Array Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-dot-array-panel-382924d1.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-8eb4f8d7-650",
+      "output": {
+        "uuid": "8eb4f8d7-16fe-49c6-be8e-8c0f4350de9c",
+        "name": "Dekotora Exhaust Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-exhaust-panel-8eb4f8d7.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-1b3eb4f7-651",
+      "output": {
+        "uuid": "1b3eb4f7-080a-4d98-adab-f29f0444b147",
+        "name": "Dekotora Beam",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-beam-1b3eb4f7.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-8836fff8-652",
+      "output": {
+        "uuid": "8836fff8-11fc-4596-bb8b-4bf50e79a8bf",
+        "name": "Dekotora Pyramid",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-pyramid-8836fff8.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-b12d7023-653",
+      "output": {
+        "uuid": "b12d7023-e9ee-4f8a-960e-2993f2dba03d",
+        "name": "Dekotora Cube",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-cube-b12d7023.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-64a83163-654",
+      "output": {
+        "uuid": "64a83163-23f6-4f10-bb6b-97c43c43f601",
+        "name": "Dekotora Rounded Light Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-rounded-light-panel-64a83163.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-7b57beb6-655",
+      "output": {
+        "uuid": "7b57beb6-26c2-42e1-b252-33a5441924fe",
+        "name": "Dekotora Arrow Frame",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-arrow-frame-7b57beb6.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-e94095bb-656",
+      "output": {
+        "uuid": "e94095bb-e1aa-4ad1-bfae-85d5f7d0915a",
+        "name": "Dekotora Light Floor Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-light-floor-panel-e94095bb.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 500,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-ddc45a73-657",
+      "output": {
+        "uuid": "ddc45a73-e871-4e4d-a0e6-a10f2bed6ea9",
+        "name": "Dekotora Spinning Pole Light",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-spinning-pole-light-ddc45a73.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-85a5f261-658",
+      "output": {
+        "uuid": "85a5f261-dd80-42db-9386-cb8606382d9c",
+        "name": "Dekotora Stripe Light Ending",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-stripe-light-ending-85a5f261.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-aba65407-659",
+      "output": {
+        "uuid": "aba65407-60a8-4640-881f-a67cb58b5956",
+        "name": "Dekotora Stripe Light Straight",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-stripe-light-straight-aba65407.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-e392d6d0-660",
+      "output": {
+        "uuid": "e392d6d0-cfc3-48b5-8617-d5c9a7c624aa",
+        "name": "Dekotora Stripe Light Bend",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-stripe-light-bend-e392d6d0.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-b31b7203-661",
+      "output": {
+        "uuid": "b31b7203-44d0-4aab-93d0-843e5493ff15",
+        "name": "Dekotora Stripe Light Inward Bend",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-stripe-light-inward-bend-b31b7203.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-3408bc45-662",
+      "output": {
+        "uuid": "3408bc45-4556-4c7e-9a89-40d520559963",
+        "name": "Dekotora Stripe Light Rounded Ending",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-stripe-light-rounded-ending-3408bc45.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-c10fd31c-663",
+      "output": {
+        "uuid": "c10fd31c-6f89-4739-ae7b-23581c1c0c36",
+        "name": "Dekotora Diamond Floor Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-diamond-floor-panel-c10fd31c.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 250,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-cfeaa663-664",
+      "output": {
+        "uuid": "cfeaa663-afeb-4ebb-bd3d-057b6f792382",
+        "name": "Dekotora Scrolling Bearings",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-scrolling-bearings-cfeaa663.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 200,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-b8f17d3c-665",
+      "output": {
+        "uuid": "b8f17d3c-e07d-438d-8295-39fda96fb86b",
+        "name": "Dekotora Star",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-star-b8f17d3c.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 200,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-fc0d73fa-666",
+      "output": {
+        "uuid": "fc0d73fa-d01f-407d-b5e2-2318a61d27df",
+        "name": "Dekotora Pill Light Panel",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-pill-light-panel-fc0d73fa.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 200,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-5b684cc5-667",
+      "output": {
+        "uuid": "5b684cc5-0af4-4dfc-a6fd-e3c441d3557a",
+        "name": "Dekotora Railing Extension",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-railing-extension-5b684cc5.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 200,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-127b9b84-668",
+      "output": {
+        "uuid": "127b9b84-74b8-4e41-a53a-b7f163287479",
+        "name": "Dekotora Quarter Circle Railing",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-quarter-circle-railing-127b9b84.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 200,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-a3fd668d-669",
+      "output": {
+        "uuid": "a3fd668d-7590-4ce2-bbda-7154caae6b25",
+        "name": "Dekotora Bulb Framing Straight",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-bulb-framing-straight-a3fd668d.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 100,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-eb8554ae-670",
+      "output": {
+        "uuid": "eb8554ae-46de-4217-9906-3aa2d402429f",
+        "name": "Dekotora Bulb Framing Intersection",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-bulb-framing-intersection-eb8554ae.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 100,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-6e3bcef9-671",
+      "output": {
+        "uuid": "6e3bcef9-ce1e-427e-8c43-a14f466d63dc",
+        "name": "Dekotora Bulb Framing Bend",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-bulb-framing-bend-6e3bcef9.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 100,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    },
+    {
+      "id": "mininghubtrader-json-9c65d5da-672",
+      "output": {
+        "uuid": "9c65d5da-453d-46a1-86f6-9c2ada653e98",
+        "name": "Dekotora Bulb Framing Inward Bend",
+        "quantity": 1,
+        "image": "/images/game-items/dekotora-bulb-framing-inward-bend-9c65d5da.webp"
+      },
+      "ingredients": [
+        {
+          "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+          "name": "Wonk Stack",
+          "quantity": 100,
+          "image": "/images/game-items/wonk-stack-efb2837c.webp"
+        }
+      ],
+      "craftTime": 0,
+      "schematic": false,
+      "venueSlug": "mining-hub"
+    }
+  ]
+}

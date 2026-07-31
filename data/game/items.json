@@ -1,0 +1,4565 @@
+{
+  "checkedVersion": "1.0.1.869",
+  "items": [
+    {
+      "uuid": "614e5a34-f7f5-43e0-afe1-3b561063d093",
+      "name": "1/2 Mustache",
+      "description": "",
+      "image": "/images/game-items/1-2-mustache-614e5a34.webp"
+    },
+    {
+      "uuid": "1325d152-3dd1-41a1-9027-5823c5cb55c4",
+      "name": "Air Conditioner",
+      "description": "",
+      "image": "/images/game-items/air-conditioner-1325d152.webp"
+    },
+    {
+      "uuid": "d9509ce7-5a2e-4d4d-b39c-1332447cef41",
+      "name": "Alarm Clock",
+      "description": "Use to set an alarm sound. Can also be used as a timer-based trigger when connected to other interactive parts. Comes with selectable alarm sounds.",
+      "image": "/images/game-items/alarm-clock-d9509ce7.webp"
+    },
+    {
+      "uuid": "3e3242e4-1791-4f70-8d1d-0ae9ba3ee94c",
+      "name": "Aluminum Block",
+      "description": "",
+      "image": "/images/game-items/aluminum-block-3e3242e4.webp"
+    },
+    {
+      "uuid": "27e9d236-14c4-11ed-861d-0242ac120002",
+      "name": "Aluminum Wedge",
+      "description": "",
+      "image": "/images/game-items/aluminum-wedge-27e9d236.webp"
+    },
+    {
+      "uuid": "e585bcd6-5828-4a37-8ec7-dffb561f0956",
+      "name": "Antenna",
+      "description": "",
+      "image": "/images/game-items/antenna-e585bcd6.webp"
+    },
+    {
+      "uuid": "17c301ae-1d51-445c-9c72-6f40ec386dba",
+      "name": "Anvil",
+      "description": "",
+      "image": "/images/game-items/anvil-17c301ae.webp"
+    },
+    {
+      "uuid": "b5ee5539-75a2-4fef-873b-ef7c9398b3f5",
+      "name": "Armored Glass Block",
+      "description": "",
+      "image": "/images/game-items/armored-glass-block-b5ee5539.webp"
+    },
+    {
+      "uuid": "32053708-14c7-11ed-861d-0242ac120002",
+      "name": "Armored Glass Wedge",
+      "description": "",
+      "image": "/images/game-items/armored-glass-wedge-32053708.webp"
+    },
+    {
+      "uuid": "3878d965-de4a-4e7b-a15a-73cc032158b6",
+      "name": "Arrow Sign",
+      "description": "",
+      "image": "/images/game-items/arrow-sign-3878d965.webp"
+    },
+    {
+      "uuid": "e1e8551d-7787-4ab2-b620-09d2cf110bba",
+      "name": "Aurumite",
+      "description": "Can be smelted into bars in the mining hub.",
+      "image": "/images/game-items/aurumite-e1e8551d.webp"
+    },
+    {
+      "uuid": "80bc2b9f-98a9-44e4-9cb8-d4ec7e95b40f",
+      "name": "Baby Duck Statuette",
+      "description": "",
+      "image": "/images/game-items/baby-duck-statuette-80bc2b9f.webp"
+    },
+    {
+      "uuid": "ea42ac82-47cc-4e13-889c-de38f8478b91",
+      "name": "Back Mirror",
+      "description": "",
+      "image": "/images/game-items/back-mirror-ea42ac82.webp"
+    },
+    {
+      "uuid": "aa4c9c5e-7fc6-4c27-967f-c550e551c872",
+      "name": "Banana",
+      "description": "A fresh Banana.",
+      "image": "/images/game-items/banana-aa4c9c5e.webp"
+    },
+    {
+      "uuid": "18a38c8e-18ec-46c5-be00-cee7724401e2",
+      "name": "Banana Box",
+      "description": "",
+      "image": "/images/game-items/banana-box-18a38c8e.webp"
+    },
+    {
+      "uuid": "0bc74539-df8a-47c7-aad8-d55d809a01e4",
+      "name": "Banana Crate",
+      "description": "",
+      "image": "/images/game-items/banana-crate-0bc74539.webp"
+    },
+    {
+      "uuid": "22beade5-38ca-47b4-a2ee-32403f58a862",
+      "name": "Banana Seed",
+      "description": "",
+      "image": "/images/game-items/banana-seed-22beade5.webp"
+    },
+    {
+      "uuid": "efd779ef-ce99-4507-bafb-9e2c7ff8a46c",
+      "name": "Banner",
+      "description": "",
+      "image": "/images/game-items/banner-efd779ef.webp"
+    },
+    {
+      "uuid": "6cb18801-8284-4f27-9f2e-b9955861b605",
+      "name": "Banner Holder",
+      "description": "",
+      "image": "/images/game-items/banner-holder-6cb18801.webp"
+    },
+    {
+      "uuid": "09ca2713-28ee-4119-9622-e85490034758",
+      "name": "Barrier Block",
+      "description": "",
+      "image": "/images/game-items/barrier-block-09ca2713.webp"
+    },
+    {
+      "uuid": "c2078bfe-fa3d-4c2b-8d97-6b5308ff624b",
+      "name": "Barrier Stand",
+      "description": "",
+      "image": "/images/game-items/barrier-stand-c2078bfe.webp"
+    },
+    {
+      "uuid": "56b4d3fc-14bc-11ed-861d-0242ac120002",
+      "name": "Barrier Wedge",
+      "description": "",
+      "image": "/images/game-items/barrier-wedge-56b4d3fc.webp"
+    },
+    {
+      "uuid": "fff76292-79aa-4f0d-814f-72e51159d6d7",
+      "name": "Base Extension",
+      "description": "",
+      "image": "/images/game-items/base-extension-fff76292.webp"
+    },
+    {
+      "uuid": "4c17571c-89b5-40f3-b13f-e9399591d0b4",
+      "name": "Bathroom Stall Door",
+      "description": "",
+      "image": "/images/game-items/bathroom-stall-door-4c17571c.webp"
+    },
+    {
+      "uuid": "3efe715f-8745-475f-a609-5e7cbe09a8ef",
+      "name": "Bathtub",
+      "description": "Used for maximum relaxation. Sit down and relax or add it to your vehicle to stay nice and clean on the go. Can be connected to triggers which can activate other interactive parts from the bathtub.",
+      "image": "/images/game-items/bathtub-3efe715f.webp"
+    },
+    {
+      "uuid": "910a7f2c-52b0-46eb-8873-ad13255539af",
+      "name": "Battery",
+      "description": "Used to power electric parts.",
+      "image": "/images/game-items/battery-910a7f2c.webp"
+    },
+    {
+      "uuid": "da4833fd-f981-4e08-a9f7-48e630a7c146",
+      "name": "Battery Container",
+      "description": "Can Store more batteries and loads batteries in to Electric Engines and other interactive parts that require batteries when connected.",
+      "image": "/images/game-items/battery-container-da4833fd.webp"
+    },
+    {
+      "uuid": "e8d88e1f-7025-4911-8d8a-d77574343632",
+      "name": "Beach Ball",
+      "description": "",
+      "image": "/images/game-items/beach-ball-e8d88e1f.webp"
+    },
+    {
+      "uuid": "a5985971-1f95-4373-a5d9-4ce0a3e74851",
+      "name": "Beacon",
+      "description": "Emits a tracking signal that can be toggled in the Logbook.",
+      "image": "/images/game-items/beacon-a5985971.webp"
+    },
+    {
+      "uuid": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
+      "name": "Bearing",
+      "description": "Everything you place on the bearing will revolve. Bearings can also be connected to an engine or the driver's seat to be controlled in different ways.",
+      "image": "/images/game-items/bearing-4a1b886b.webp"
+    },
+    {
+      "uuid": "75d70a67-5193-48e7-a811-902d1faac0e3",
+      "name": "Bearing",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "98a85002-3b45-4fe8-b2fb-390a9953e877",
+      "name": "Beehive",
+      "description": "Add pigment flower to beehive to produce beeswax.",
+      "image": "/images/game-items/beehive-98a85002.webp"
+    },
+    {
+      "uuid": "fcf0958c-084d-4854-9b1b-b06594b4262a",
+      "name": "Beeswax",
+      "description": "",
+      "image": "/images/game-items/beeswax-fcf0958c.webp"
+    },
+    {
+      "uuid": "7ece2c9b-bc74-45b7-b5f1-4c6f41a03a7a",
+      "name": "Beetroot Box",
+      "description": "",
+      "image": "/images/game-items/beetroot-box-7ece2c9b.webp"
+    },
+    {
+      "uuid": "080ef1dd-07a7-4d31-86b8-ac907e1468bf",
+      "name": "Berry Billboard",
+      "description": "",
+      "image": "/images/game-items/berry-billboard-080ef1dd.webp"
+    },
+    {
+      "uuid": "14e8f5d0-7d6a-41ab-96a1-fc34588de868",
+      "name": "Beware Farmbots Sign",
+      "description": "",
+      "image": "/images/game-items/beware-farmbots-sign-14e8f5d0.webp"
+    },
+    {
+      "uuid": "7826f497-426b-42cb-a857-0d784f3ab2f3",
+      "name": "Big Pot",
+      "description": "",
+      "image": "/images/game-items/big-pot-7826f497.webp"
+    },
+    {
+      "uuid": "db66f0b1-0c50-4b74-bdc7-771374204b1f",
+      "name": "Big Wheel",
+      "description": "",
+      "image": "/images/game-items/big-wheel-db66f0b1.webp"
+    },
+    {
+      "uuid": "85771e42-fbb3-49f5-ab99-85167623deeb",
+      "name": "Blue Totebot Statue",
+      "description": "",
+      "image": "/images/game-items/blue-totebot-statue-85771e42.webp"
+    },
+    {
+      "uuid": "6a43fff2-8c6d-4460-9f44-e5483b5267dd",
+      "name": "Blueberry",
+      "description": "A sweet Blueberry.",
+      "image": "/images/game-items/blueberry-6a43fff2.webp"
+    },
+    {
+      "uuid": "e77d9577-589a-446b-96c1-f6d0d7495489",
+      "name": "Blueberry Crate",
+      "description": "",
+      "image": "/images/game-items/blueberry-crate-e77d9577.webp"
+    },
+    {
+      "uuid": "7e2b1dcb-4853-43ed-a7c5-0eb1a24b49d0",
+      "name": "Blueberry Juice Cylinder",
+      "description": "",
+      "image": "/images/game-items/blueberry-juice-cylinder-7e2b1dcb.webp"
+    },
+    {
+      "uuid": "4b6d2bee-d0f1-4e56-96f0-d2596388cad2",
+      "name": "Blueberry Seed",
+      "description": "",
+      "image": "/images/game-items/blueberry-seed-4b6d2bee.webp"
+    },
+    {
+      "uuid": "e96e15d9-0997-4ed6-8c75-751848fb8edd",
+      "name": "Bonsai Tree",
+      "description": "",
+      "image": "/images/game-items/bonsai-tree-e96e15d9.webp"
+    },
+    {
+      "uuid": "03bdd942-c808-4795-aa0b-554fa98c3c74",
+      "name": "Boombox",
+      "description": "Plays Lorenzos favorite music from way back home",
+      "image": "/images/game-items/boombox-03bdd942.webp"
+    },
+    {
+      "uuid": "72045c19-fa44-4ce9-9f99-e9541e5a4d46",
+      "name": "Bottle Garden",
+      "description": "",
+      "image": "/images/game-items/bottle-garden-72045c19.webp"
+    },
+    {
+      "uuid": "c2e6c7f6-6519-4e79-813d-354cc63080a8",
+      "name": "Bowl",
+      "description": "",
+      "image": "/images/game-items/bowl-c2e6c7f6.webp"
+    },
+    {
+      "uuid": "cd5cf990-a08e-4e0b-9824-334fe13bf379",
+      "name": "Bowling Ball",
+      "description": "",
+      "image": "/images/game-items/bowling-ball-cd5cf990.webp"
+    },
+    {
+      "uuid": "0603b36e-0bdb-4828-b90c-ff19abcdfe34",
+      "name": "Brick Block",
+      "description": "",
+      "image": "/images/game-items/brick-block-0603b36e.webp"
+    },
+    {
+      "uuid": "c01fbc1c-14bc-11ed-861d-0242ac120002",
+      "name": "Brick Wedge",
+      "description": "",
+      "image": "/images/game-items/brick-wedge-c01fbc1c.webp"
+    },
+    {
+      "uuid": "b5cdd503-fe1c-482b-86ab-6a5d2cc4fc8f",
+      "name": "Broccoli",
+      "description": "A nutritious Broccoli.",
+      "image": "/images/game-items/broccoli-b5cdd503.webp"
+    },
+    {
+      "uuid": "99477093-e819-4199-b62a-fda6143aae89",
+      "name": "Broccoli Crate",
+      "description": "",
+      "image": "/images/game-items/broccoli-crate-99477093.webp"
+    },
+    {
+      "uuid": "1c6756ca-3a60-4dcb-a5d1-353edf818308",
+      "name": "Broccoli Seed",
+      "description": "",
+      "image": "/images/game-items/broccoli-seed-1c6756ca.webp"
+    },
+    {
+      "uuid": "7c6e88a7-21a4-4e97-856f-b937264e0d7d",
+      "name": "Broken Clock",
+      "description": "",
+      "image": "/images/game-items/broken-clock-7c6e88a7.webp"
+    },
+    {
+      "uuid": "0f638bd7-0c0d-4ba3-9ba2-af0b523ddff4",
+      "name": "Broken Concrete Large",
+      "description": "",
+      "image": "/images/game-items/broken-concrete-large-0f638bd7.webp"
+    },
+    {
+      "uuid": "ac59ef69-95a7-4907-a8ba-e5c83ef83112",
+      "name": "Broken Concrete Medium",
+      "description": "",
+      "image": "/images/game-items/broken-concrete-medium-ac59ef69.webp"
+    },
+    {
+      "uuid": "c3a520b3-8d0e-435c-8070-e0ef58d028be",
+      "name": "Broken Concrete Small",
+      "description": "",
+      "image": "/images/game-items/broken-concrete-small-c3a520b3.webp"
+    },
+    {
+      "uuid": "d4e6c84c-a493-44b1-81aa-4f4741ea3ed8",
+      "name": "Broken Microwave",
+      "description": "It's busted. Maybe it can be used as a secret storage instead?",
+      "image": "/images/game-items/broken-microwave-d4e6c84c.webp"
+    },
+    {
+      "uuid": "f406bf6e-9fd5-4aa0-97c1-0b3c2118198e",
+      "name": "Bubble Plastic Block",
+      "description": "",
+      "image": "/images/game-items/bubble-plastic-block-f406bf6e.webp"
+    },
+    {
+      "uuid": "5115b997-5d8c-4815-8e07-f487cc1c029f",
+      "name": "Bubble Plastic Wedge",
+      "description": "",
+      "image": "/images/game-items/bubble-plastic-wedge-5115b997.webp"
+    },
+    {
+      "uuid": "1e8d93a4-506b-470d-9ada-9c0a321e2db5",
+      "name": "Button",
+      "description": "Activates stuff. The button activates as long as it remains pressed.",
+      "image": "/images/game-items/button-1e8d93a4.webp"
+    },
+    {
+      "uuid": "48f39ccd-1013-4d54-b8ad-e0aebeb88867",
+      "name": "Cable Roll",
+      "description": "Some useful cables",
+      "image": "/images/game-items/cable-roll-48f39ccd.webp"
+    },
+    {
+      "uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+      "name": "Caged Farmer",
+      "description": "",
+      "image": "/images/game-items/caged-farmer-8d601982.webp"
+    },
+    {
+      "uuid": "5b628f22-ec0d-448f-a6be-3453950120a4",
+      "name": "Calendar",
+      "description": "",
+      "image": "/images/game-items/calendar-5b628f22.webp"
+    },
+    {
+      "uuid": "02e1af8e-090f-432f-9ad4-1bb41add0d4b",
+      "name": "Car Back Panel",
+      "description": "",
+      "image": "/images/game-items/car-back-panel-02e1af8e.webp"
+    },
+    {
+      "uuid": "6b19e80c-dbc3-4a84-be37-54646f39f23d",
+      "name": "Car Bumper",
+      "description": "",
+      "image": "/images/game-items/car-bumper-6b19e80c.webp"
+    },
+    {
+      "uuid": "eb3d3125-d022-4624-a8bc-55b085ef8bd2",
+      "name": "Car Front Panel",
+      "description": "",
+      "image": "/images/game-items/car-front-panel-eb3d3125.webp"
+    },
+    {
+      "uuid": "f0cba95b-2dc4-4492-8fd9-36546a4cb5aa",
+      "name": "Cardboard Block",
+      "description": "",
+      "image": "/images/game-items/cardboard-block-f0cba95b.webp"
+    },
+    {
+      "uuid": "5d5144be-14be-11ed-861d-0242ac120002",
+      "name": "Cardboard Wedge",
+      "description": "",
+      "image": "/images/game-items/cardboard-wedge-5d5144be.webp"
+    },
+    {
+      "uuid": "febce8a6-6c05-4e5d-803b-dfa930286944",
+      "name": "Carpet Block",
+      "description": "",
+      "image": "/images/game-items/carpet-block-febce8a6.webp"
+    },
+    {
+      "uuid": "0e695319-afd0-405b-85c8-289df8614c52",
+      "name": "Carpet Roll",
+      "description": "",
+      "image": "/images/game-items/carpet-roll-0e695319.webp"
+    },
+    {
+      "uuid": "9f909330-869e-468b-822a-204876118c0a",
+      "name": "Carpet Spool Holder",
+      "description": "",
+      "image": "/images/game-items/carpet-spool-holder-9f909330.webp"
+    },
+    {
+      "uuid": "9acecbec-14c1-11ed-861d-0242ac120002",
+      "name": "Carpet Wedge",
+      "description": "",
+      "image": "/images/game-items/carpet-wedge-9acecbec.webp"
+    },
+    {
+      "uuid": "47ece75a-bfca-4e8a-b618-4f609fcea0da",
+      "name": "Carrot",
+      "description": "A nutritious Carrot.",
+      "image": "/images/game-items/carrot-47ece75a.webp"
+    },
+    {
+      "uuid": "f6687d52-efc1-4f00-b573-bee4363ee14f",
+      "name": "Carrot Box",
+      "description": "",
+      "image": "/images/game-items/carrot-box-f6687d52.webp"
+    },
+    {
+      "uuid": "9cd8288c-5a19-479f-af47-9eb55230ade2",
+      "name": "Carrot Crate",
+      "description": "",
+      "image": "/images/game-items/carrot-crate-9cd8288c.webp"
+    },
+    {
+      "uuid": "9c82a525-8a8b-4483-9595-505aaa042486",
+      "name": "Carrot Seed",
+      "description": "",
+      "image": "/images/game-items/carrot-seed-9c82a525.webp"
+    },
+    {
+      "uuid": "31ada55e-7c79-4aee-86b6-809c0e5468df",
+      "name": "Cash Register",
+      "description": "",
+      "image": "/images/game-items/cash-register-31ada55e.webp"
+    },
+    {
+      "uuid": "99b7fd1d-7126-4928-bfc2-f82befcbd905",
+      "name": "Caution Sign",
+      "description": "",
+      "image": "/images/game-items/caution-sign-99b7fd1d.webp"
+    },
+    {
+      "uuid": "6232b62a-f3e0-4609-a159-ab08abf8125f",
+      "name": "Cement Mix",
+      "description": "",
+      "image": "/images/game-items/cement-mix-6232b62a.webp"
+    },
+    {
+      "uuid": "2e792123-4a10-4cc6-b9ef-c5a518655cb4",
+      "name": "Chemical Bucket",
+      "description": "Bucket with chemical waste.",
+      "image": "/images/game-items/chemical-bucket-2e792123.webp"
+    },
+    {
+      "uuid": "be29592a-ef58-4b1d-b18c-895023abd27f",
+      "name": "Chemical Container",
+      "description": "Use to fuel sticky wheels with chemicals",
+      "image": "/images/game-items/chemical-container-be29592a.webp"
+    },
+    {
+      "uuid": "f74c2891-79a9-45e0-982e-4896651c2e25",
+      "name": "Chemicals",
+      "description": "Toxic but useful.",
+      "image": "/images/game-items/chemicals-f74c2891.webp"
+    },
+    {
+      "uuid": "ba3fbedc-1802-4406-852d-3f3a7ddc4be2",
+      "name": "Chili",
+      "description": "A flaming hot chili.",
+      "image": "/images/game-items/chili-ba3fbedc.webp"
+    },
+    {
+      "uuid": "8883e0ee-8a6e-423a-a4e0-583d9bf105bd",
+      "name": "Chili Seed",
+      "description": "",
+      "image": "/images/game-items/chili-seed-8883e0ee.webp"
+    },
+    {
+      "uuid": "f152e4df-bc40-44fb-8d20-3b3ff70cdfe3",
+      "name": "Circuit Board",
+      "description": "",
+      "image": "/images/game-items/circuit-board-f152e4df.webp"
+    },
+    {
+      "uuid": "6395a2f1-4169-4a7e-be15-a9864cb6ce7e",
+      "name": "Clay",
+      "description": "Use to place clay by hand. Can be used together with a Claygun for faster placement.",
+      "image": "/images/game-items/clay-6395a2f1.webp"
+    },
+    {
+      "uuid": "6993e5df-6852-4e84-88ae-df49f765e784",
+      "name": "Clay Gun",
+      "description": "Use clay together with the Clay Gun to spray a soaring arch of clay. This tool allows you to build in a new messy way. Great for shaping things in your surroundings.",
+      "image": "/images/game-items/clay-gun-6993e5df.webp"
+    },
+    {
+      "uuid": "84050f02-448f-4cc0-93b8-82876368ada6",
+      "name": "Coffee Pot",
+      "description": "",
+      "image": "/images/game-items/coffee-pot-84050f02.webp"
+    },
+    {
+      "uuid": "5530e6a0-4748-4926-b134-50ca9ecb9dcf",
+      "name": "Component Kit",
+      "description": "Use to upgrade interactive parts and unlock bots in the Mechanic Station.",
+      "image": "/images/game-items/component-kit-5530e6a0.webp"
+    },
+    {
+      "uuid": "18321228-7164-4dfd-928f-fa86bad31ba1",
+      "name": "Computer",
+      "description": "",
+      "image": "/images/game-items/computer-18321228.webp"
+    },
+    {
+      "uuid": "6f38a734-571f-4c3d-97b9-c0aa480973af",
+      "name": "Concave Wedge",
+      "description": "",
+      "image": "/images/game-items/concave-wedge-6f38a734.webp"
+    },
+    {
+      "uuid": "e69e0466-8783-4cfd-8a0a-8794af743094",
+      "name": "Concrete Big Barrier",
+      "description": "",
+      "image": "/images/game-items/concrete-big-barrier-e69e0466.webp"
+    },
+    {
+      "uuid": "d6f0de5e-8ba9-42e6-9dac-bfe5fc4606be",
+      "name": "Concrete Big Foundation",
+      "description": "",
+      "image": "/images/game-items/concrete-big-foundation-d6f0de5e.webp"
+    },
+    {
+      "uuid": "a6c6ce30-dd47-4587-b475-085d55c6a3b4",
+      "name": "Concrete Block Level 1",
+      "description": "",
+      "image": "/images/game-items/concrete-block-level-1-a6c6ce30.webp"
+    },
+    {
+      "uuid": "ff234e42-5da4-43cc-8893-940547c97882",
+      "name": "Concrete Block Level 2",
+      "description": "",
+      "image": "/images/game-items/concrete-block-level-2-ff234e42.webp"
+    },
+    {
+      "uuid": "e281599c-2343-4c86-886e-b2c1444e8810",
+      "name": "Concrete Block Level 3",
+      "description": "",
+      "image": "/images/game-items/concrete-block-level-3-e281599c.webp"
+    },
+    {
+      "uuid": "b0329961-7ac0-4a83-aabc-6701e516de7b",
+      "name": "Concrete Block Mould",
+      "description": "",
+      "image": "/images/game-items/concrete-block-mould-b0329961.webp"
+    },
+    {
+      "uuid": "2870f2dd-ea17-44dd-8c00-8f71e8d2764c",
+      "name": "Concrete Pillar",
+      "description": "",
+      "image": "/images/game-items/concrete-pillar-2870f2dd.webp"
+    },
+    {
+      "uuid": "cd0eff89-b693-40ee-bd4c-3500b23df44e",
+      "name": "Concrete Slab Block",
+      "description": "",
+      "image": "/images/game-items/concrete-slab-block-cd0eff89.webp"
+    },
+    {
+      "uuid": "9404a6a2-14c0-11ed-861d-0242ac120002",
+      "name": "Concrete Slab Wedge",
+      "description": "",
+      "image": "/images/game-items/concrete-slab-wedge-9404a6a2.webp"
+    },
+    {
+      "uuid": "0cd81a8e-a4b3-4743-b507-600fe35c93ee",
+      "name": "Concrete Small Barrier",
+      "description": "",
+      "image": "/images/game-items/concrete-small-barrier-0cd81a8e.webp"
+    },
+    {
+      "uuid": "8bc24c12-e4a9-414b-8467-33736e455cb0",
+      "name": "Concrete Small Foundation",
+      "description": "",
+      "image": "/images/game-items/concrete-small-foundation-8bc24c12.webp"
+    },
+    {
+      "uuid": "e83cd904-14b8-11ed-861d-0242ac120002",
+      "name": "Concrete Wedge Level 1",
+      "description": "",
+      "image": "/images/game-items/concrete-wedge-level-1-e83cd904.webp"
+    },
+    {
+      "uuid": "5dae15c6-14bf-11ed-861d-0242ac120002",
+      "name": "Concrete Wedge Level 2",
+      "description": "",
+      "image": "/images/game-items/concrete-wedge-level-2-5dae15c6.webp"
+    },
+    {
+      "uuid": "5dae14e0-14bf-11ed-861d-0242ac120002",
+      "name": "Concrete Wedge Level 3",
+      "description": "",
+      "image": "/images/game-items/concrete-wedge-level-3-5dae14e0.webp"
+    },
+    {
+      "uuid": "8c7efc37-cd7c-4262-976e-39585f8527bf",
+      "name": "Connect Tool",
+      "description": "Every mechanic's favorite tool. Connects interactive parts together, for example: a gas engine to bearings or a thruster to a driver's seat.",
+      "image": "/images/game-items/connect-tool-8c7efc37.webp"
+    },
+    {
+      "uuid": "ec757a7d-a27b-4688-ae85-46167659bf00",
+      "name": "Construction Pallet",
+      "description": "",
+      "image": "/images/game-items/construction-pallet-ec757a7d.webp"
+    },
+    {
+      "uuid": "70bf77d0-c9dd-4232-9e05-fbf7f49bd62c",
+      "name": "Construction Zone Sign",
+      "description": "",
+      "image": "/images/game-items/construction-zone-sign-70bf77d0.webp"
+    },
+    {
+      "uuid": "12862001-666c-4bdd-8326-a1f43610d28b",
+      "name": "Controller",
+      "description": "Allows bearings to rotate in sequence. Perfect for building transforming creations. Needs to be connected to bearings. Activated by connecting a trigger or driver's seat to the controller.",
+      "image": "/images/game-items/controller-12862001.webp"
+    },
+    {
+      "uuid": "598d865c-324c-4129-9c57-21a6abd2cb2e",
+      "name": "Controller Level 1",
+      "description": "Allows bearings to rotate in sequence. Perfect for building transforming creations. Needs to be connected to bearings. Activated by connecting a trigger or driver's seat to the controller.",
+      "image": "/images/game-items/controller-level-1-598d865c.webp"
+    },
+    {
+      "uuid": "2af00456-b22e-4743-b338-a91934aba7c5",
+      "name": "Cookbot",
+      "description": "Cooks delicious food that will fill up your health bar or revive fallen friends.",
+      "image": "/images/game-items/cookbot-2af00456.webp"
+    },
+    {
+      "uuid": "3be58cc4-04b4-455d-a9c3-8a8fd262b6d6",
+      "name": "Coralium",
+      "description": "A common valuable mineral.",
+      "image": "/images/game-items/coralium-3be58cc4.webp"
+    },
+    {
+      "uuid": "fe8bfeba-850b-4827-9785-10e2468c9c23",
+      "name": "Corn",
+      "description": "Wocs love to eat corn.",
+      "image": "/images/game-items/corn-fe8bfeba.webp"
+    },
+    {
+      "uuid": "e3bdeea5-d349-4d08-9b5a-5695ea05537e",
+      "name": "Cornade",
+      "description": "Use to effectively destroy bots. Can be bounced off walls. But be careful. They also destroy some blocks and parts.",
+      "image": "/images/game-items/cornade-e3bdeea5.webp"
+    },
+    {
+      "uuid": "3526de39-dcf4-484b-84ec-3336538be192",
+      "name": "Corner Brace",
+      "description": "",
+      "image": "/images/game-items/corner-brace-3526de39.webp"
+    },
+    {
+      "uuid": "3440440b-d362-4473-aa03-b7c41e1fe7ad",
+      "name": "Cotton",
+      "description": "",
+      "image": "/images/game-items/cotton-3440440b.webp"
+    },
+    {
+      "uuid": "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+      "name": "Cracked Concrete Block",
+      "description": "",
+      "image": "/images/game-items/cracked-concrete-block-f5ceb7e3.webp"
+    },
+    {
+      "uuid": "5dae13f0-14bf-11ed-861d-0242ac120002",
+      "name": "Cracked Concrete Wedge",
+      "description": "",
+      "image": "/images/game-items/cracked-concrete-wedge-5dae13f0.webp"
+    },
+    {
+      "uuid": "b63c6440-dfc2-4da7-acdb-3c385080b2e4",
+      "name": "Craftbot",
+      "description": "The Craftbot will help you craft everything from new blocks to useful interactive parts. A mechanics best friend.",
+      "image": "/images/game-items/craftbot-b63c6440.webp"
+    },
+    {
+      "uuid": "1c83675f-7c77-4cbb-875b-79d4bd46100d",
+      "name": "Craftbot",
+      "description": "",
+      "image": "/images/game-items/craftbot-1c83675f.webp"
+    },
+    {
+      "uuid": "4fcb4cb8-7623-11ea-bc55-0242ac130003",
+      "name": "Craftbot",
+      "description": "",
+      "image": "/images/game-items/craftbot-4fcb4cb8.webp"
+    },
+    {
+      "uuid": "b7571f6f-9d53-44ba-99d2-3b4f05e6fd0f",
+      "name": "Craftbot",
+      "description": "",
+      "image": "/images/game-items/craftbot-b7571f6f.webp"
+    },
+    {
+      "uuid": "c69a7855-d915-4784-af81-d0a8849e458f",
+      "name": "Craftbot",
+      "description": "",
+      "image": "/images/game-items/craftbot-c69a7855.webp"
+    },
+    {
+      "uuid": "ec334737-1467-4a29-a3b7-e04f662bca1b",
+      "name": "Crane Body",
+      "description": "",
+      "image": "/images/game-items/crane-body-ec334737.webp"
+    },
+    {
+      "uuid": "cbc6fc23-dcc9-4d6f-a7aa-9a3ae37ca41f",
+      "name": "Crane Cable Roll",
+      "description": "",
+      "image": "/images/game-items/crane-cable-roll-cbc6fc23.webp"
+    },
+    {
+      "uuid": "96392e20-12e9-4a19-8dc5-7a8e33238ae2",
+      "name": "Crane Hook",
+      "description": "",
+      "image": "/images/game-items/crane-hook-96392e20.webp"
+    },
+    {
+      "uuid": "b7cf1762-4010-4915-813d-dfbefb100ef5",
+      "name": "Crane Hook Block",
+      "description": "",
+      "image": "/images/game-items/crane-hook-block-b7cf1762.webp"
+    },
+    {
+      "uuid": "448d7d18-2a36-4749-8d73-3da913ae6aeb",
+      "name": "Crane Leg",
+      "description": "",
+      "image": "/images/game-items/crane-leg-448d7d18.webp"
+    },
+    {
+      "uuid": "2893e707-36b3-4ff1-bb3c-ef1b5524ae13",
+      "name": "Crane Loading Floor",
+      "description": "",
+      "image": "/images/game-items/crane-loading-floor-2893e707.webp"
+    },
+    {
+      "uuid": "8f5f8a39-734d-4bc3-8a9e-74026bcb3704",
+      "name": "Crane Panel",
+      "description": "",
+      "image": "/images/game-items/crane-panel-8f5f8a39.webp"
+    },
+    {
+      "uuid": "54ea2236-001c-4560-8e6d-3942a885bb3b",
+      "name": "Crane Top",
+      "description": "",
+      "image": "/images/game-items/crane-top-54ea2236.webp"
+    },
+    {
+      "uuid": "c4aa3807-0806-4202-a36d-b5fa254d3046",
+      "name": "Crane Wheel",
+      "description": "",
+      "image": "/images/game-items/crane-wheel-c4aa3807.webp"
+    },
+    {
+      "uuid": "1147e59d-6940-42b4-840b-07f05054f5e0",
+      "name": "Crude Oil",
+      "description": "",
+      "image": "/images/game-items/crude-oil-1147e59d.webp"
+    },
+    {
+      "uuid": "b593a935-802a-4715-b27f-739a091a8977",
+      "name": "Crushbot",
+      "description": "The Crushbot will help you break apart and refine the Ores you find.",
+      "image": "/images/game-items/crushbot-b593a935.webp"
+    },
+    {
+      "uuid": "84fdb4ca-46cd-424b-b608-0998741941dc",
+      "name": "Crystalium",
+      "description": "A common valuable mineral.",
+      "image": "/images/game-items/crystalium-84fdb4ca.webp"
+    },
+    {
+      "uuid": "b627c533-f0e7-4fa7-83e6-5c3d517568e0",
+      "name": "Cubicle Wall",
+      "description": "",
+      "image": "/images/game-items/cubicle-wall-b627c533.webp"
+    },
+    {
+      "uuid": "f0438bd7-6307-4991-943f-d78b04877d96",
+      "name": "Cucumber Box",
+      "description": "",
+      "image": "/images/game-items/cucumber-box-f0438bd7.webp"
+    },
+    {
+      "uuid": "239c9c71-e5c7-4ccb-ad40-7bdbb32f3cc9",
+      "name": "Cup Holder",
+      "description": "",
+      "image": "/images/game-items/cup-holder-239c9c71.webp"
+    },
+    {
+      "uuid": "a5198434-2639-4cb0-8e01-865bc4d9b791",
+      "name": "Danger Sign",
+      "description": "",
+      "image": "/images/game-items/danger-sign-a5198434.webp"
+    },
+    {
+      "uuid": "7b57beb6-26c2-42e1-b252-33a5441924fe",
+      "name": "Dekotora Arrow Frame",
+      "description": "",
+      "image": "/images/game-items/dekotora-arrow-frame-7b57beb6.webp"
+    },
+    {
+      "uuid": "87908d87-d384-40e0-bc60-bdcc0092d480",
+      "name": "Dekotora Backpack",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "1b3eb4f7-080a-4d98-adab-f29f0444b147",
+      "name": "Dekotora Beam",
+      "description": "",
+      "image": "/images/game-items/dekotora-beam-1b3eb4f7.webp"
+    },
+    {
+      "uuid": "89e040f6-6e30-41b0-9d7b-97e6bb2cc0b0",
+      "name": "Dekotora Bearing Hubcap",
+      "description": "",
+      "image": "/images/game-items/dekotora-bearing-hubcap-89e040f6.webp"
+    },
+    {
+      "uuid": "6873a5b8-c874-4424-8422-920d467140e9",
+      "name": "Dekotora Big Wheel",
+      "description": "",
+      "image": "/images/game-items/dekotora-big-wheel-6873a5b8.webp"
+    },
+    {
+      "uuid": "d8766548-a54d-436b-b086-c6b546a01b3b",
+      "name": "Dekotora Block",
+      "description": "",
+      "image": "/images/game-items/dekotora-block-d8766548.webp"
+    },
+    {
+      "uuid": "6e3bcef9-ce1e-427e-8c43-a14f466d63dc",
+      "name": "Dekotora Bulb Framing Bend",
+      "description": "",
+      "image": "/images/game-items/dekotora-bulb-framing-bend-6e3bcef9.webp"
+    },
+    {
+      "uuid": "eb8554ae-46de-4217-9906-3aa2d402429f",
+      "name": "Dekotora Bulb Framing Intersection",
+      "description": "",
+      "image": "/images/game-items/dekotora-bulb-framing-intersection-eb8554ae.webp"
+    },
+    {
+      "uuid": "9c65d5da-453d-46a1-86f6-9c2ada653e98",
+      "name": "Dekotora Bulb Framing Inward Bend",
+      "description": "",
+      "image": "/images/game-items/dekotora-bulb-framing-inward-bend-9c65d5da.webp"
+    },
+    {
+      "uuid": "a3fd668d-7590-4ce2-bbda-7154caae6b25",
+      "name": "Dekotora Bulb Framing Straight",
+      "description": "",
+      "image": "/images/game-items/dekotora-bulb-framing-straight-a3fd668d.webp"
+    },
+    {
+      "uuid": "95365a45-83aa-4858-b792-c182be676524",
+      "name": "Dekotora Centerpiece",
+      "description": "",
+      "image": "/images/game-items/dekotora-centerpiece-95365a45.webp"
+    },
+    {
+      "uuid": "b12d7023-e9ee-4f8a-960e-2993f2dba03d",
+      "name": "Dekotora Cube",
+      "description": "",
+      "image": "/images/game-items/dekotora-cube-b12d7023.webp"
+    },
+    {
+      "uuid": "c10fd31c-6f89-4739-ae7b-23581c1c0c36",
+      "name": "Dekotora Diamond Floor Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-diamond-floor-panel-c10fd31c.webp"
+    },
+    {
+      "uuid": "382924d1-66f5-49e2-949c-aa5aa319ad72",
+      "name": "Dekotora Dot Array Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-dot-array-panel-382924d1.webp"
+    },
+    {
+      "uuid": "8eb4f8d7-16fe-49c6-be8e-8c0f4350de9c",
+      "name": "Dekotora Exhaust Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-exhaust-panel-8eb4f8d7.webp"
+    },
+    {
+      "uuid": "d2d22576-7aa9-481d-8ae7-6a98f2673e74",
+      "name": "Dekotora Gloves",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "142ee54a-d0d9-42ff-b738-c8e22c7433c5",
+      "name": "Dekotora Hat",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "cdd6762b-263f-4dbc-b859-bceb56dbe92d",
+      "name": "Dekotora Headlight",
+      "description": "",
+      "image": "/images/game-items/dekotora-headlight-cdd6762b.webp"
+    },
+    {
+      "uuid": "ab442ca9-b6e8-4d7c-9044-9e9e6062a3ac",
+      "name": "Dekotora Jacket",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "1506a3ab-b545-424a-92a0-7395be9e76f6",
+      "name": "Dekotora Large Arrow Frame",
+      "description": "",
+      "image": "/images/game-items/dekotora-large-arrow-frame-1506a3ab.webp"
+    },
+    {
+      "uuid": "967b042a-2f92-4fa1-9d7a-801b7faf4a6e",
+      "name": "Dekotora LED horn",
+      "description": "",
+      "image": "/images/game-items/dekotora-led-horn-967b042a.webp"
+    },
+    {
+      "uuid": "e94095bb-e1aa-4ad1-bfae-85d5f7d0915a",
+      "name": "Dekotora Light Floor Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-light-floor-panel-e94095bb.webp"
+    },
+    {
+      "uuid": "f866cbdb-d469-4a8e-8b83-d9c94bd27e5e",
+      "name": "Dekotora Pants",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "fc0d73fa-d01f-407d-b5e2-2318a61d27df",
+      "name": "Dekotora Pill Light Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-pill-light-panel-fc0d73fa.webp"
+    },
+    {
+      "uuid": "8836fff8-11fc-4596-bb8b-4bf50e79a8bf",
+      "name": "Dekotora Pyramid",
+      "description": "",
+      "image": "/images/game-items/dekotora-pyramid-8836fff8.webp"
+    },
+    {
+      "uuid": "127b9b84-74b8-4e41-a53a-b7f163287479",
+      "name": "Dekotora Quarter Circle Railing",
+      "description": "",
+      "image": "/images/game-items/dekotora-quarter-circle-railing-127b9b84.webp"
+    },
+    {
+      "uuid": "5b684cc5-0af4-4dfc-a6fd-e3c441d3557a",
+      "name": "Dekotora Railing Extension",
+      "description": "",
+      "image": "/images/game-items/dekotora-railing-extension-5b684cc5.webp"
+    },
+    {
+      "uuid": "64a83163-23f6-4f10-bb6b-97c43c43f601",
+      "name": "Dekotora Rounded Light Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-rounded-light-panel-64a83163.webp"
+    },
+    {
+      "uuid": "cfeaa663-afeb-4ebb-bd3d-057b6f792382",
+      "name": "Dekotora Scrolling Bearings",
+      "description": "",
+      "image": "/images/game-items/dekotora-scrolling-bearings-cfeaa663.webp"
+    },
+    {
+      "uuid": "3e2ed3ed-d1a5-4f51-8d43-e65230168f9a",
+      "name": "Dekotora Scrolling Star Sign",
+      "description": "",
+      "image": "/images/game-items/dekotora-scrolling-star-sign-3e2ed3ed.webp"
+    },
+    {
+      "uuid": "dc772b19-77a6-4cab-862e-d04fad56b50e",
+      "name": "Dekotora Shoes",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "d84d768a-774e-491e-8a95-da1d4afa6df7",
+      "name": "Dekotora Side Light",
+      "description": "",
+      "image": "/images/game-items/dekotora-side-light-d84d768a.webp"
+    },
+    {
+      "uuid": "67900105-8c85-45b4-a35c-038b69f5eacf",
+      "name": "Dekotora Side Light Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-side-light-panel-67900105.webp"
+    },
+    {
+      "uuid": "23bdcd57-88d1-4626-a57a-a9cca055e3d1",
+      "name": "Dekotora Side Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-side-panel-23bdcd57.webp"
+    },
+    {
+      "uuid": "ddc45a73-e871-4e4d-a0e6-a10f2bed6ea9",
+      "name": "Dekotora Spinning Pole Light",
+      "description": "",
+      "image": "/images/game-items/dekotora-spinning-pole-light-ddc45a73.webp"
+    },
+    {
+      "uuid": "b8f17d3c-e07d-438d-8295-39fda96fb86b",
+      "name": "Dekotora Star",
+      "description": "",
+      "image": "/images/game-items/dekotora-star-b8f17d3c.webp"
+    },
+    {
+      "uuid": "eb5ba645-ef8c-430c-a037-d15d752bbcd3",
+      "name": "Dekotora Star Headlight",
+      "description": "",
+      "image": "/images/game-items/dekotora-star-headlight-eb5ba645.webp"
+    },
+    {
+      "uuid": "70a7042e-6865-4341-a481-214786653046",
+      "name": "Dekotora Star Hubcap",
+      "description": "",
+      "image": "/images/game-items/dekotora-star-hubcap-70a7042e.webp"
+    },
+    {
+      "uuid": "0f6cb8bb-b905-4636-8acf-614515adcae5",
+      "name": "Dekotora Starlight Sign",
+      "description": "",
+      "image": "/images/game-items/dekotora-starlight-sign-0f6cb8bb.webp"
+    },
+    {
+      "uuid": "e392d6d0-cfc3-48b5-8617-d5c9a7c624aa",
+      "name": "Dekotora Stripe Light Bend",
+      "description": "",
+      "image": "/images/game-items/dekotora-stripe-light-bend-e392d6d0.webp"
+    },
+    {
+      "uuid": "85a5f261-dd80-42db-9386-cb8606382d9c",
+      "name": "Dekotora Stripe Light Ending",
+      "description": "",
+      "image": "/images/game-items/dekotora-stripe-light-ending-85a5f261.webp"
+    },
+    {
+      "uuid": "b31b7203-44d0-4aab-93d0-843e5493ff15",
+      "name": "Dekotora Stripe Light Inward Bend",
+      "description": "",
+      "image": "/images/game-items/dekotora-stripe-light-inward-bend-b31b7203.webp"
+    },
+    {
+      "uuid": "3408bc45-4556-4c7e-9a89-40d520559963",
+      "name": "Dekotora Stripe Light Rounded Ending",
+      "description": "",
+      "image": "/images/game-items/dekotora-stripe-light-rounded-ending-3408bc45.webp"
+    },
+    {
+      "uuid": "aba65407-60a8-4640-881f-a67cb58b5956",
+      "name": "Dekotora Stripe Light Straight",
+      "description": "",
+      "image": "/images/game-items/dekotora-stripe-light-straight-aba65407.webp"
+    },
+    {
+      "uuid": "7dad8565-b3c3-4ffb-aec2-6df8eb82f06e",
+      "name": "Dekotora Top Light Panel",
+      "description": "",
+      "image": "/images/game-items/dekotora-top-light-panel-7dad8565.webp"
+    },
+    {
+      "uuid": "807f2819-b2f2-4db6-bd71-04add4b69634",
+      "name": "Dekotora Truck Fender",
+      "description": "",
+      "image": "/images/game-items/dekotora-truck-fender-807f2819.webp"
+    },
+    {
+      "uuid": "c844468a-8a31-4306-8af2-43e3f8cf0c13",
+      "name": "Dekotora Wave Railing",
+      "description": "",
+      "image": "/images/game-items/dekotora-wave-railing-c844468a.webp"
+    },
+    {
+      "uuid": "4f5f7175-28d0-417c-8b3b-be0b2c0b46f7",
+      "name": "Dekotora Wedge",
+      "description": "",
+      "image": "/images/game-items/dekotora-wedge-4f5f7175.webp"
+    },
+    {
+      "uuid": "eb0b62d6-3557-428b-a6e2-a98ff25e16c8",
+      "name": "Dekotora Wheel",
+      "description": "",
+      "image": "/images/game-items/dekotora-wheel-eb0b62d6.webp"
+    },
+    {
+      "uuid": "f7d4bfed-1093-49b9-be32-394c872a1ef4",
+      "name": "Diamond Plate Block",
+      "description": "",
+      "image": "/images/game-items/diamond-plate-block-f7d4bfed.webp"
+    },
+    {
+      "uuid": "27e9cdcc-14c4-11ed-861d-0242ac120002",
+      "name": "Diamond Plate Wedge",
+      "description": "",
+      "image": "/images/game-items/diamond-plate-wedge-27e9cdcc.webp"
+    },
+    {
+      "uuid": "b4498227-6650-4e52-b5a6-6db7a7b34d14",
+      "name": "Do Not Enter Sign",
+      "description": "",
+      "image": "/images/game-items/do-not-enter-sign-b4498227.webp"
+    },
+    {
+      "uuid": "ab835444-a6b3-41b4-bf37-207031c5ff8d",
+      "name": "Door Handle",
+      "description": "A trigger that works like a switch.",
+      "image": "/images/game-items/door-handle-ab835444.webp"
+    },
+    {
+      "uuid": "767a3121-2c31-473c-a5ab-27e188fdd55a",
+      "name": "Dressbot",
+      "description": "Use the Dressbot to make new clothes for your Mechanic. Just add your garment boxes and the right amount of cotton. You can also customise your look by using the blue wardrobe.",
+      "image": "/images/game-items/dressbot-767a3121.webp"
+    },
+    {
+      "uuid": "276fd55b-ae54-4a7a-ace6-fddd2d3370a5",
+      "name": "Drill",
+      "description": "Use the Drill to mine square rocks for stone and metal. Put it on a bearing that is connected to a engine and drive it in to a square rock.",
+      "image": "/images/game-items/drill-276fd55b.webp"
+    },
+    {
+      "uuid": "7d601a5a-796d-4cae-be88-b47479d38d11",
+      "name": "Driver's Saddle Level 1",
+      "description": "Makes bearings turn left and right. Can be connected to an engine to control the direction of travel. Can also be connected to triggers that can be activated from the saddle. Lvl 5 Driver's Saddle unlocks steering settings by pressing (E) on connected bearings with the Connect Tool.",
+      "image": "/images/game-items/driver-s-saddle-level-1-7d601a5a.webp"
+    },
+    {
+      "uuid": "cf3fdcfc-a7e5-4497-b000-ffda67dd8db7",
+      "name": "Driver's Seat",
+      "description": "Makes bearings turn left and right. Can be connected to an engine to control the direction of travel. Can also be connected to triggers that can be activated from the seat.",
+      "image": "/images/game-items/driver-s-seat-cf3fdcfc.webp"
+    },
+    {
+      "uuid": "77c2687c-2e13-4df8-996a-96fb26d75ee0",
+      "name": "Driver's Seat Level 1",
+      "description": "Makes bearings turn left and right. Can be connected to an engine to control the direction of travel. Can also be connected to triggers that can be activated from the seat. Lvl 5 Driver's Seat unlocks steering settings by pressing (E) on connected bearings with the Connect Tool.",
+      "image": "/images/game-items/driver-s-seat-level-1-77c2687c.webp"
+    },
+    {
+      "uuid": "53756aed-7057-43b7-b2e9-c51dbe4ac840",
+      "name": "Duckie Backpack",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "8fd10e09-6f48-4f6b-9fcc-e82b56ab4111",
+      "name": "Duckie Gloves",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "0e746cfc-def3-40a1-8150-831a44940e28",
+      "name": "Duckie Hat",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "c24f072a-fd74-4fe3-9897-8a69e953fe1f",
+      "name": "Duckie Jacket",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "0953c2b8-8dd4-44d7-b1ca-458a74f0dbd9",
+      "name": "Duckie Pants",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "c092af11-1ee1-49b9-8dc3-0ba3a9aeeb5c",
+      "name": "Duckie Shoes",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "d97a85c5-7c0f-4bfb-9ef4-ce6ecdab9539",
+      "name": "Duct Corner",
+      "description": "",
+      "image": "/images/game-items/duct-corner-d97a85c5.webp"
+    },
+    {
+      "uuid": "fbc0fbfb-803c-42dd-aace-1ae10e55a785",
+      "name": "Duct End",
+      "description": "",
+      "image": "/images/game-items/duct-end-fbc0fbfb.webp"
+    },
+    {
+      "uuid": "b050533f-200b-4253-9532-c2cfa273f982",
+      "name": "Duct Holder",
+      "description": "",
+      "image": "/images/game-items/duct-holder-b050533f.webp"
+    },
+    {
+      "uuid": "6f0c29d3-f8c1-4314-b13d-db637ed89061",
+      "name": "Duct Join",
+      "description": "",
+      "image": "/images/game-items/duct-join-6f0c29d3.webp"
+    },
+    {
+      "uuid": "01d2298b-6cdb-4f4f-bd73-37c76cd60ca3",
+      "name": "Duct Long",
+      "description": "",
+      "image": "/images/game-items/duct-long-01d2298b.webp"
+    },
+    {
+      "uuid": "9d7e182f-c5d6-45e9-af21-1c24977b30c9",
+      "name": "Duct Short",
+      "description": "",
+      "image": "/images/game-items/duct-short-9d7e182f.webp"
+    },
+    {
+      "uuid": "6546c293-a5aa-4442-80d5-a2819f077746",
+      "name": "Electric Engine",
+      "description": "Powers bearings. An engine with fixed power and adjustable speed. A slow engine with a lot of strength. Can be connected to a driver's seat or triggers.",
+      "image": "/images/game-items/electric-engine-6546c293.webp"
+    },
+    {
+      "uuid": "5e5d231e-405e-4f45-9bd0-b3557dbb42eb",
+      "name": "Electric Engine Level 1",
+      "description": "An engine with fixed power and adjustable speed. Upgrade for more connection points and less battery consumption. Connect to a driver's seat to enable differential steering settings on bearings.",
+      "image": "/images/game-items/electric-engine-level-1-5e5d231e.webp"
+    },
+    {
+      "uuid": "2bacc33e-60fb-40c3-b751-ef76f79392c7",
+      "name": "Elevator Sign",
+      "description": "",
+      "image": "/images/game-items/elevator-sign-2bacc33e.webp"
+    },
+    {
+      "uuid": "267e0c93-62e3-45ad-9470-a14035cb9ca4",
+      "name": "Ember",
+      "description": "Made from burned trees.",
+      "image": "/images/game-items/ember-267e0c93.webp"
+    },
+    {
+      "uuid": "916cbfc2-776f-49d4-838a-eb946136be3e",
+      "name": "Encryptor Base",
+      "description": "",
+      "image": "/images/game-items/encryptor-base-916cbfc2.webp"
+    },
+    {
+      "uuid": "ddaa82ea-22c5-4a2c-8367-c2ee12d5ea5b",
+      "name": "Encryptor Base Plate",
+      "description": "",
+      "image": "/images/game-items/encryptor-base-plate-ddaa82ea.webp"
+    },
+    {
+      "uuid": "3b47a99f-85c4-4490-8dc5-3560b7c4c863",
+      "name": "Encryptor Frame Beam",
+      "description": "",
+      "image": "/images/game-items/encryptor-frame-beam-3b47a99f.webp"
+    },
+    {
+      "uuid": "3cbf5f08-14da-4db5-8360-de5078e7c4c1",
+      "name": "Encryptor Frame Top",
+      "description": "",
+      "image": "/images/game-items/encryptor-frame-top-3cbf5f08.webp"
+    },
+    {
+      "uuid": "0ee4fc0a-9f69-4d67-b5c2-09ea5a22712f",
+      "name": "Encryptor Holder",
+      "description": "",
+      "image": "/images/game-items/encryptor-holder-0ee4fc0a.webp"
+    },
+    {
+      "uuid": "992ae45d-63b5-42c5-bc58-3b6c207834d9",
+      "name": "Executive Office Chair",
+      "description": "A comfortable chair for executive offices.",
+      "image": "/images/game-items/executive-office-chair-992ae45d.webp"
+    },
+    {
+      "uuid": "33739a87-babb-4731-a22b-d614a23e5e3f",
+      "name": "Executive Office Chair Foot",
+      "description": "",
+      "image": "/images/game-items/executive-office-chair-foot-33739a87.webp"
+    },
+    {
+      "uuid": "1a82f776-5989-4471-b09d-0c3f65012fb3",
+      "name": "Exit Sign",
+      "description": "",
+      "image": "/images/game-items/exit-sign-1a82f776.webp"
+    },
+    {
+      "uuid": "25a5ffe7-11b1-4d3e-8d7a-48129cbaf05e",
+      "name": "Extruded Metal Block",
+      "description": "",
+      "image": "/images/game-items/extruded-metal-block-25a5ffe7.webp"
+    },
+    {
+      "uuid": "a29f7c00-14c0-11ed-861d-0242ac120002",
+      "name": "Extruded Metal Wedge",
+      "description": "",
+      "image": "/images/game-items/extruded-metal-wedge-a29f7c00.webp"
+    },
+    {
+      "uuid": "c79a1857-a5c7-4616-b507-f1b151c31fe8",
+      "name": "Falling Objects Sign",
+      "description": "",
+      "image": "/images/game-items/falling-objects-sign-c79a1857.webp"
+    },
+    {
+      "uuid": "6ad9b8c7-4006-43cd-aa95-3d63c0e5c9fb",
+      "name": "Fan Base",
+      "description": "",
+      "image": "/images/game-items/fan-base-6ad9b8c7.webp"
+    },
+    {
+      "uuid": "c2ce40b1-fc95-48bd-bd05-9c3e394a157a",
+      "name": "Fan Blade",
+      "description": "",
+      "image": "/images/game-items/fan-blade-c2ce40b1.webp"
+    },
+    {
+      "uuid": "414854a9-77bc-48aa-a9d5-0c7cd213e4df",
+      "name": "Fan Blade Cap",
+      "description": "",
+      "image": "/images/game-items/fan-blade-cap-414854a9.webp"
+    },
+    {
+      "uuid": "b973b537-1a2c-4569-b323-1abcecca385f",
+      "name": "Fancy Bed",
+      "description": "Reinforced and more durable bed that can’t catch fire. It’s also super comfy.",
+      "image": "/images/game-items/fancy-bed-b973b537.webp"
+    },
+    {
+      "uuid": "4ae689b2-b785-4cb9-94e6-6bbe10adf926",
+      "name": "Fancy Carpet Block",
+      "description": "",
+      "image": "/images/game-items/fancy-carpet-block-4ae689b2.webp"
+    },
+    {
+      "uuid": "320538d4-14c7-11ed-861d-0242ac120002",
+      "name": "Fancy Carpet Wedge",
+      "description": "",
+      "image": "/images/game-items/fancy-carpet-wedge-320538d4.webp"
+    },
+    {
+      "uuid": "7cb6b060-d80a-473f-ab40-b260a34637d4",
+      "name": "Fantastic T-Shirt",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "4e9c67f9-602f-4df5-bcf6-939dcb18d010",
+      "name": "Farmbot Statue",
+      "description": "",
+      "image": "/images/game-items/farmbot-statue-4e9c67f9.webp"
+    },
+    {
+      "uuid": "f27cf05c-f6f9-43dc-93db-f810372110ec",
+      "name": "Farmbot Target",
+      "description": "",
+      "image": "/images/game-items/farmbot-target-f27cf05c.webp"
+    },
+    {
+      "uuid": "94f1f243-6f36-4cd7-9098-52849655a45d",
+      "name": "Farmer Backpack",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "7b0295df-7178-4ccb-a44d-f34d6b792c57",
+      "name": "Farmer Gloves",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "9baebeb4-95dc-4ee6-a1fd-c44cc67ced04",
+      "name": "Farmer Hat",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "f2c0c91f-4547-416e-b037-f56a8f04368c",
+      "name": "Farmer Jacket",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "4ed054a2-e354-4624-acd6-686b33d414a7",
+      "name": "Farmer Pants",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "78062d2a-1600-4144-80b6-435560cc0df6",
+      "name": "Farmer Shoes",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "8aa4459f-6c45-41ae-94f4-4ddff0279c18",
+      "name": "Farmer Target",
+      "description": "",
+      "image": "/images/game-items/farmer-target-8aa4459f.webp"
+    },
+    {
+      "uuid": "0db3e749-adf2-4ba5-bb37-1cebcfb59cb2",
+      "name": "Female Mechanic Statue",
+      "description": "",
+      "image": "/images/game-items/female-mechanic-statue-0db3e749.webp"
+    },
+    {
+      "uuid": "ac0b5b0a-14e1-4b31-8944-0a351fbfcc67",
+      "name": "Fertilizer",
+      "description": "Makes plants grow faster.",
+      "image": "/images/game-items/fertilizer-ac0b5b0a.webp"
+    },
+    {
+      "uuid": "90dbaebf-8ea1-4a5a-8f6f-86ddde77c6c8",
+      "name": "File Cabinet",
+      "description": "",
+      "image": "/images/game-items/file-cabinet-90dbaebf.webp"
+    },
+    {
+      "uuid": "d2fab7ef-21db-4681-a22a-cd4f278fc355",
+      "name": "Fire Extinguisher",
+      "description": "Use to put out fires.",
+      "image": "/images/game-items/fire-extinguisher-d2fab7ef.webp"
+    },
+    {
+      "uuid": "a2a2bb33-a841-4b23-88da-b758063d9206",
+      "name": "Fire Launcher",
+      "description": "Shoots balls of fire in an arc.",
+      "image": "/images/game-items/fire-launcher-a2a2bb33.webp"
+    },
+    {
+      "uuid": "78677314-1885-4c9e-87ee-04cdc929b0dc",
+      "name": "Fireworks",
+      "description": "Shoots a set of rockets that create beautiful fireworks.",
+      "image": "/images/game-items/fireworks-78677314.webp"
+    },
+    {
+      "uuid": "682538ac-7a45-4f56-b500-ec5d3d5f3eb7",
+      "name": "Flytrap Plant",
+      "description": "",
+      "image": "/images/game-items/flytrap-plant-682538ac.webp"
+    },
+    {
+      "uuid": "bd77f76a-6c47-4107-ba4a-c340e89ad516",
+      "name": "Fountain",
+      "description": "",
+      "image": "/images/game-items/fountain-bd77f76a.webp"
+    },
+    {
+      "uuid": "176f4537-b245-4ba2-a318-da12e15bf789",
+      "name": "Frame Beam Corner",
+      "description": "",
+      "image": "/images/game-items/frame-beam-corner-176f4537.webp"
+    },
+    {
+      "uuid": "d42cae51-343e-4847-83a4-e55c1b04aa80",
+      "name": "Frame Beam End",
+      "description": "",
+      "image": "/images/game-items/frame-beam-end-d42cae51.webp"
+    },
+    {
+      "uuid": "abaef792-741e-4c6b-8e79-02461a37b035",
+      "name": "Frame Beam Light",
+      "description": "",
+      "image": "/images/game-items/frame-beam-light-abaef792.webp"
+    },
+    {
+      "uuid": "bdb55551-39a4-437c-aeff-f54368b19b5e",
+      "name": "Frame Beam Long",
+      "description": "",
+      "image": "/images/game-items/frame-beam-long-bdb55551.webp"
+    },
+    {
+      "uuid": "82694546-92b2-47c3-894d-7fc215e2de4a",
+      "name": "Frame Beam Short",
+      "description": "",
+      "image": "/images/game-items/frame-beam-short-82694546.webp"
+    },
+    {
+      "uuid": "479e8131-cc76-48e1-9979-8053a7295d1f",
+      "name": "Freezer",
+      "description": "Put water in the Freezer to create ice blocks.",
+      "image": "/images/game-items/freezer-479e8131.webp"
+    },
+    {
+      "uuid": "27c00cfb-4e7f-45fc-a037-f9a941464ce6",
+      "name": "Fresh Neon Sign",
+      "description": "",
+      "image": "/images/game-items/fresh-neon-sign-27c00cfb.webp"
+    },
+    {
+      "uuid": "f08d772f-9851-400f-a014-d847900458a7",
+      "name": "Fridge",
+      "description": "Keeps your food fresh.",
+      "image": "/images/game-items/fridge-f08d772f.webp"
+    },
+    {
+      "uuid": "8b684022-254b-41af-a58c-ec4b14791000",
+      "name": "Fruit Box",
+      "description": "",
+      "image": "/images/game-items/fruit-box-8b684022.webp"
+    },
+    {
+      "uuid": "697e3b80-d3f7-4f4a-aba2-23611a45f967",
+      "name": "Fuse Box",
+      "description": "",
+      "image": "/images/game-items/fuse-box-697e3b80.webp"
+    },
+    {
+      "uuid": "63695efd-0862-49f2-ace6-4d1758147fae",
+      "name": "Garment Box (Common)",
+      "description": "Use it in a Dressbot to make new clothes.",
+      "image": "/images/game-items/garment-box-common-63695efd.webp"
+    },
+    {
+      "uuid": "7ab0cac7-b055-4283-b0bc-f85dd4d0416b",
+      "name": "Garment Box (Epic)",
+      "description": "Use it in a Dressbot to make new clothes.",
+      "image": "/images/game-items/garment-box-epic-7ab0cac7.webp"
+    },
+    {
+      "uuid": "27a221b1-9809-4df1-901a-caafe119c9b6",
+      "name": "Garment Box (Rare)",
+      "description": "Use it in a Dressbot to make new clothes.",
+      "image": "/images/game-items/garment-box-rare-27a221b1.webp"
+    },
+    {
+      "uuid": "056e5ff1-f030-40df-946a-b830bf494c92",
+      "name": "Gas Container",
+      "description": "Can stores more gas and loads gas in to Gas Engines and other interactive parts that require Gas when connected.",
+      "image": "/images/game-items/gas-container-056e5ff1.webp"
+    },
+    {
+      "uuid": "d5e36413-b3c1-4636-8447-3410c352ec7b",
+      "name": "Gas Engine",
+      "description": "An engine with fixed speed and adjustable power, ideally suited to powering vehicles. Can be connected to a driver's seat or triggers.",
+      "image": "/images/game-items/gas-engine-d5e36413.webp"
+    },
+    {
+      "uuid": "1bfccc0a-828f-475c-882c-87d5a96054c9",
+      "name": "Gas Engine Level 1",
+      "description": "An engine with fixed speed and adjustable power, ideally suited to powering vehicles. Can be connected to a driver's seat or trigger. Upgrade for more connection points and less gas consumption.",
+      "image": "/images/game-items/gas-engine-level-1-1bfccc0a.webp"
+    },
+    {
+      "uuid": "3082a130-f1e4-4a7f-9856-7129f969564c",
+      "name": "Gas Stove",
+      "description": "",
+      "image": "/images/game-items/gas-stove-3082a130.webp"
+    },
+    {
+      "uuid": "d4d68946-aa03-4b8f-b1af-96b81ad4e305",
+      "name": "Gasoline",
+      "description": "Used to power gas engines and thrusters.",
+      "image": "/images/game-items/gasoline-d4d68946.webp"
+    },
+    {
+      "uuid": "5cd67a6e-52cc-4eb0-9f44-275d366516c5",
+      "name": "Generator A",
+      "description": "",
+      "image": "/images/game-items/generator-a-5cd67a6e.webp"
+    },
+    {
+      "uuid": "8ca9a4f2-c8c8-439d-9945-e2e95dafbc21",
+      "name": "Generator B",
+      "description": "",
+      "image": "/images/game-items/generator-b-8ca9a4f2.webp"
+    },
+    {
+      "uuid": "7997f4a5-6f5f-492e-95cb-65a5e2a0f2f2",
+      "name": "Generator C",
+      "description": "",
+      "image": "/images/game-items/generator-c-7997f4a5.webp"
+    },
+    {
+      "uuid": "23572f75-03c0-4c33-b643-70250d0e4ae0",
+      "name": "Generator Coil Corner",
+      "description": "",
+      "image": "/images/game-items/generator-coil-corner-23572f75.webp"
+    },
+    {
+      "uuid": "7feba511-4910-429d-a0e3-f1727259ae5c",
+      "name": "Generator Coil Segment",
+      "description": "",
+      "image": "/images/game-items/generator-coil-segment-7feba511.webp"
+    },
+    {
+      "uuid": "af389b10-a31b-46f7-bbe9-0bfad8181e97",
+      "name": "Generator D",
+      "description": "",
+      "image": "/images/game-items/generator-d-af389b10.webp"
+    },
+    {
+      "uuid": "c349afdf-aded-47bc-9a5c-606372bc535b",
+      "name": "Generator E",
+      "description": "",
+      "image": "/images/game-items/generator-e-c349afdf.webp"
+    },
+    {
+      "uuid": "85623170-074a-4663-8944-97d131aff495",
+      "name": "Generator Pipe Corner",
+      "description": "",
+      "image": "/images/game-items/generator-pipe-corner-85623170.webp"
+    },
+    {
+      "uuid": "c85957a1-c393-4352-ba79-5004bb4f07a2",
+      "name": "Generator Pipe Four Way",
+      "description": "",
+      "image": "/images/game-items/generator-pipe-four-way-c85957a1.webp"
+    },
+    {
+      "uuid": "ad9f6357-b0b4-4dab-b84e-fb20df54d1ac",
+      "name": "Generator Pipe Holder",
+      "description": "",
+      "image": "/images/game-items/generator-pipe-holder-ad9f6357.webp"
+    },
+    {
+      "uuid": "838c8d9a-8fc0-4b15-898b-b82bbf8bf2e0",
+      "name": "Generator Pipe Long",
+      "description": "",
+      "image": "/images/game-items/generator-pipe-long-838c8d9a.webp"
+    },
+    {
+      "uuid": "872ae33f-cf02-4959-91d0-ead1dacfd34b",
+      "name": "Generator Pipe Short",
+      "description": "",
+      "image": "/images/game-items/generator-pipe-short-872ae33f.webp"
+    },
+    {
+      "uuid": "1b47f36c-7c6e-451c-87b2-34fdf33d6989",
+      "name": "Generator Pipe Tee",
+      "description": "",
+      "image": "/images/game-items/generator-pipe-tee-1b47f36c.webp"
+    },
+    {
+      "uuid": "684002ad-3218-4dd0-a6dd-53e6dfdec562",
+      "name": "Generator Tank",
+      "description": "",
+      "image": "/images/game-items/generator-tank-684002ad.webp"
+    },
+    {
+      "uuid": "63cf0973-b81e-4fe1-ae44-654937e1b0e4",
+      "name": "Giant Pipe",
+      "description": "",
+      "image": "/images/game-items/giant-pipe-63cf0973.webp"
+    },
+    {
+      "uuid": "9777f897-4cce-4c22-99ce-793aaca9f7c0",
+      "name": "Giant Pipe Bracer",
+      "description": "",
+      "image": "/images/game-items/giant-pipe-bracer-9777f897.webp"
+    },
+    {
+      "uuid": "41784077-0636-470f-a6df-b868f152af29",
+      "name": "Giant Pipe Corner",
+      "description": "",
+      "image": "/images/game-items/giant-pipe-corner-41784077.webp"
+    },
+    {
+      "uuid": "16ed53cc-a45b-4f64-92d4-2db93bf33e1c",
+      "name": "Giant Pipe Glass Corner",
+      "description": "",
+      "image": "/images/game-items/giant-pipe-glass-corner-16ed53cc.webp"
+    },
+    {
+      "uuid": "06fd0e52-f791-43a6-9fbd-5a8a6260f3f2",
+      "name": "Giant Pipe Glass Straight",
+      "description": "",
+      "image": "/images/game-items/giant-pipe-glass-straight-06fd0e52.webp"
+    },
+    {
+      "uuid": "66c3a5cd-ce37-4b37-916d-ac39a67ad2f5",
+      "name": "Giant Pipe Holder",
+      "description": "",
+      "image": "/images/game-items/giant-pipe-holder-66c3a5cd.webp"
+    },
+    {
+      "uuid": "8310f5b9-3394-4723-ac23-f59a21d6e3f3",
+      "name": "Giant Pipe Tee",
+      "description": "",
+      "image": "/images/game-items/giant-pipe-tee-8310f5b9.webp"
+    },
+    {
+      "uuid": "5f41af56-df4c-4837-9b3c-10781335757f",
+      "name": "Glass Block",
+      "description": "",
+      "image": "/images/game-items/glass-block-5f41af56.webp"
+    },
+    {
+      "uuid": "749f69e0-56c9-488c-adf6-66c58531818f",
+      "name": "Glass Tile Block",
+      "description": "",
+      "image": "/images/game-items/glass-tile-block-749f69e0.webp"
+    },
+    {
+      "uuid": "46ef860a-14bd-11ed-861d-0242ac120002",
+      "name": "Glass Tile Wedge",
+      "description": "",
+      "image": "/images/game-items/glass-tile-wedge-46ef860a.webp"
+    },
+    {
+      "uuid": "3bb5dc9e-14bd-11ed-861d-0242ac120002",
+      "name": "Glass Wedge",
+      "description": "",
+      "image": "/images/game-items/glass-wedge-3bb5dc9e.webp"
+    },
+    {
+      "uuid": "388adeab-67e5-4901-afe8-c56217754510",
+      "name": "Glow",
+      "description": "",
+      "image": "/images/game-items/glow-388adeab.webp"
+    },
+    {
+      "uuid": "3a3280e4-03b6-4a4d-9e02-e348478213c9",
+      "name": "Glowstick",
+      "description": "Throw them at night or other dark places to see things better.",
+      "image": "/images/game-items/glowstick-3a3280e4.webp"
+    },
+    {
+      "uuid": "36335664-6e61-4d44-9876-54f9660a8565",
+      "name": "Glue",
+      "description": "",
+      "image": "/images/game-items/glue-36335664.webp"
+    },
+    {
+      "uuid": "34081f36-2cca-47aa-b252-7d49a685e759",
+      "name": "Gold Platinum Bearing",
+      "description": "",
+      "image": "/images/game-items/gold-platinum-bearing-34081f36.webp"
+    },
+    {
+      "uuid": "13ffabca-91ec-48ce-9dd6-4f6660714701",
+      "name": "Grass Container",
+      "description": "",
+      "image": "/images/game-items/grass-container-13ffabca.webp"
+    },
+    {
+      "uuid": "03ae13a9-65a9-4c2f-8640-8235a8d9ed05",
+      "name": "Green Totebot Statue",
+      "description": "",
+      "image": "/images/game-items/green-totebot-statue-03ae13a9.webp"
+    },
+    {
+      "uuid": "40730f13-5fdb-4785-b32e-5ca6519c162e",
+      "name": "Growbed",
+      "description": "Allows you to grow certain things anywhere. Needs a power source and water to work. Use to grow seeds for Cotton Plant, Pigment Flower, Potato, Tomato and Carrot. But insufficient for other seeds.",
+      "image": "/images/game-items/growbed-40730f13.webp"
+    },
+    {
+      "uuid": "3384010e-bc1c-42bb-83ef-dbc78a1f9636",
+      "name": "Handbook",
+      "description": "Contains all the information you need to learn how to build amazing machines and become a true Scrap Mechanic.",
+      "image": "/images/game-items/handbook-3384010e.webp"
+    },
+    {
+      "uuid": "b3761216-dfc4-4679-960b-00f5ae5f8258",
+      "name": "Handle",
+      "description": "",
+      "image": "/images/game-items/handle-b3761216.webp"
+    },
+    {
+      "uuid": "20bd2885-d184-44ae-b72b-f90b786f8664",
+      "name": "Hard Work Sign",
+      "description": "",
+      "image": "/images/game-items/hard-work-sign-20bd2885.webp"
+    },
+    {
+      "uuid": "74a3f240-65b2-4f52-9555-9b52173fca0a",
+      "name": "Hay Bale",
+      "description": "",
+      "image": "/images/game-items/hay-bale-74a3f240.webp"
+    },
+    {
+      "uuid": "23ac6823-51a4-4581-b8ca-061c76f093f6",
+      "name": "Haystack",
+      "description": "",
+      "image": "/images/game-items/haystack-23ac6823.webp"
+    },
+    {
+      "uuid": "ed27f5e2-cac5-4a32-a5d9-49f116acc6af",
+      "name": "Headlight",
+      "description": "Let there be visibility! Connect to a trigger to turn on and off. Adjustable beam range.",
+      "image": "/images/game-items/headlight-ed27f5e2.webp"
+    },
+    {
+      "uuid": "22bdc94b-e85b-4a2a-be2b-f1d782cfab53",
+      "name": "Herbs Pot",
+      "description": "",
+      "image": "/images/game-items/herbs-pot-22bdc94b.webp"
+    },
+    {
+      "uuid": "b2c933a8-2dfb-479f-a3d9-b87797d5e0c6",
+      "name": "Holder Support Bend",
+      "description": "",
+      "image": "/images/game-items/holder-support-bend-b2c933a8.webp"
+    },
+    {
+      "uuid": "70a497d6-6bc2-4ee6-a381-0976d68ac980",
+      "name": "Holder Support Leg",
+      "description": "",
+      "image": "/images/game-items/holder-support-leg-70a497d6.webp"
+    },
+    {
+      "uuid": "5888a6dd-59ab-4cd6-86b2-6e68f64674b5",
+      "name": "Holder Support Leg Base",
+      "description": "",
+      "image": "/images/game-items/holder-support-leg-base-5888a6dd.webp"
+    },
+    {
+      "uuid": "1b927252-ee6d-420e-8bb4-ae42fcb43ba8",
+      "name": "Hollow Concrete",
+      "description": "",
+      "image": "/images/game-items/hollow-concrete-1b927252.webp"
+    },
+    {
+      "uuid": "818f4e15-ff51-4fed-b874-723a25d62e1c",
+      "name": "Horn",
+      "description": "Add it to your vehicle or use it as a door bell. Honk at your friends to avoid accidents. Set the pitch and connect it to a trigger to activate it.",
+      "image": "/images/game-items/horn-818f4e15.webp"
+    },
+    {
+      "uuid": "68a58472-368d-4b09-ad36-9093f11d76ae",
+      "name": "Hot Potato",
+      "description": "Overcooked Potato, still burning hot. Can be used as ammo with a fire launcher to set things ablaze.",
+      "image": "/images/game-items/hot-potato-68a58472.webp"
+    },
+    {
+      "uuid": "31768765-5a08-499a-a7e6-7e7613363f75",
+      "name": "I-Beam Corner",
+      "description": "",
+      "image": "/images/game-items/i-beam-corner-31768765.webp"
+    },
+    {
+      "uuid": "b9775316-7272-4a66-a8a9-179108d76f18",
+      "name": "I-Beam End",
+      "description": "",
+      "image": "/images/game-items/i-beam-end-b9775316.webp"
+    },
+    {
+      "uuid": "1ed1d5a8-466a-4b5e-867b-0d93cd9d2dcb",
+      "name": "I-Beam Holder",
+      "description": "",
+      "image": "/images/game-items/i-beam-holder-1ed1d5a8.webp"
+    },
+    {
+      "uuid": "099bbf9a-6766-4e39-bd12-90d8b81771af",
+      "name": "Ice Block",
+      "description": "",
+      "image": "/images/game-items/ice-block-099bbf9a.webp"
+    },
+    {
+      "uuid": "2a583574-6419-496a-b260-3236cc1cca5d",
+      "name": "Ice Wedge",
+      "description": "",
+      "image": "/images/game-items/ice-wedge-2a583574.webp"
+    },
+    {
+      "uuid": "3ac141b5-3fbe-4588-9679-c458ac07642a",
+      "name": "Industrial Beam Corner",
+      "description": "",
+      "image": "/images/game-items/industrial-beam-corner-3ac141b5.webp"
+    },
+    {
+      "uuid": "419fb889-e440-420c-b553-4cdf95e71a61",
+      "name": "Industrial Beam Corner Bend",
+      "description": "",
+      "image": "/images/game-items/industrial-beam-corner-bend-419fb889.webp"
+    },
+    {
+      "uuid": "e2844132-31b4-4a2c-af5f-0abd173af1ef",
+      "name": "Industrial Beam Crossing",
+      "description": "",
+      "image": "/images/game-items/industrial-beam-crossing-e2844132.webp"
+    },
+    {
+      "uuid": "f5b5acb3-afd5-4755-a7fe-2151f0559d43",
+      "name": "Industrial Beam End",
+      "description": "",
+      "image": "/images/game-items/industrial-beam-end-f5b5acb3.webp"
+    },
+    {
+      "uuid": "04680945-5bb7-4a8a-9246-24c6c2b977d1",
+      "name": "Industrial Beam Four Way",
+      "description": "",
+      "image": "/images/game-items/industrial-beam-four-way-04680945.webp"
+    },
+    {
+      "uuid": "a914fcb5-2509-428e-b8ad-80bf28af9f65",
+      "name": "Industrial Beam Long",
+      "description": "",
+      "image": "/images/game-items/industrial-beam-long-a914fcb5.webp"
+    },
+    {
+      "uuid": "6130d484-775e-481a-889a-43d2e8d29058",
+      "name": "Industrial Beam Short",
+      "description": "",
+      "image": "/images/game-items/industrial-beam-short-6130d484.webp"
+    },
+    {
+      "uuid": "9be6047c-3d44-44db-b4b9-9bcf8a9aab20",
+      "name": "Insulation Block",
+      "description": "",
+      "image": "/images/game-items/insulation-block-9be6047c.webp"
+    },
+    {
+      "uuid": "bf3de7c4-14c1-11ed-861d-0242ac120002",
+      "name": "Insulation Wedge",
+      "description": "",
+      "image": "/images/game-items/insulation-wedge-bf3de7c4.webp"
+    },
+    {
+      "uuid": "f57e4a93-f61b-4418-83c1-3d8cbcd6322a",
+      "name": "Ivy Pipe bend",
+      "description": "",
+      "image": "/images/game-items/ivy-pipe-bend-f57e4a93.webp"
+    },
+    {
+      "uuid": "63910258-85da-45eb-8108-bb5c489695a0",
+      "name": "Ivy Pipe Straight",
+      "description": "",
+      "image": "/images/game-items/ivy-pipe-straight-63910258.webp"
+    },
+    {
+      "uuid": "20d4a103-c842-40d7-9df8-0ba0f9000752",
+      "name": "Ivy Pipe T",
+      "description": "",
+      "image": "/images/game-items/ivy-pipe-t-20d4a103.webp"
+    },
+    {
+      "uuid": "ba4cdff7-227b-4b97-aca8-1c700b93fec7",
+      "name": "Kitchen Counter",
+      "description": "",
+      "image": "/images/game-items/kitchen-counter-ba4cdff7.webp"
+    },
+    {
+      "uuid": "d48dc62b-ae26-4b0d-bc15-939f835ae19b",
+      "name": "Kitchen Pot",
+      "description": "",
+      "image": "/images/game-items/kitchen-pot-d48dc62b.webp"
+    },
+    {
+      "uuid": "d6ce5127-c5be-42e3-a55f-0261bf1ac145",
+      "name": "Ladder",
+      "description": "Place it vertically to use the ladder.",
+      "image": "/images/game-items/ladder-d6ce5127.webp"
+    },
+    {
+      "uuid": "e9efc008-8fae-4391-9ad1-6a62dbab5760",
+      "name": "Large Chest",
+      "description": "Use as a normal chest or connect it to a trigger for a vacuum feature that will automatically pick up ground loot.",
+      "image": "/images/game-items/large-chest-e9efc008.webp"
+    },
+    {
+      "uuid": "ad35f7e6-af8f-40fa-aef4-77d827ac8a8a",
+      "name": "Large Chest",
+      "description": "Great for storing a lot of items. Can also be used with a Vacuum Pump.",
+      "image": "/images/game-items/large-chest-ad35f7e6.webp"
+    },
+    {
+      "uuid": "46d85e5b-353c-4f06-8fd8-b9ddd3443245",
+      "name": "Large Digital Sign",
+      "description": "Add text to things in the world. Customize text color and background.",
+      "image": "/images/game-items/large-digital-sign-46d85e5b.webp"
+    },
+    {
+      "uuid": "24001201-40dd-4950-b99f-17d878a9e07b",
+      "name": "Large Explosive Canister",
+      "description": "Highly explosive canister that can detonate by strong collisions or by Spud Guns. This canister has a large explosion radius.",
+      "image": "/images/game-items/large-explosive-canister-24001201.webp"
+    },
+    {
+      "uuid": "b3425d6d-ea3d-45de-9078-10af2e178389",
+      "name": "Large Metal Storage Lamp",
+      "description": "",
+      "image": "/images/game-items/large-metal-storage-lamp-b3425d6d.webp"
+    },
+    {
+      "uuid": "60075229-2e4e-4aeb-9e64-da41b6ac9611",
+      "name": "Large Narrow Warehouse Ramp",
+      "description": "",
+      "image": "/images/game-items/large-narrow-warehouse-ramp-60075229.webp"
+    },
+    {
+      "uuid": "49938942-fbb6-444d-bba6-1fb339ee5cf3",
+      "name": "Large Pipe Cap",
+      "description": "",
+      "image": "/images/game-items/large-pipe-cap-49938942.webp"
+    },
+    {
+      "uuid": "412dee88-996e-49c2-8b51-5644f659f9b2",
+      "name": "Large Pipe Compressor",
+      "description": "",
+      "image": "/images/game-items/large-pipe-compressor-412dee88.webp"
+    },
+    {
+      "uuid": "17153a0e-8461-442f-b172-3a899c1ae99f",
+      "name": "Large Pipe Corner",
+      "description": "",
+      "image": "/images/game-items/large-pipe-corner-17153a0e.webp"
+    },
+    {
+      "uuid": "3292878f-4d1e-49e3-a80f-16b710dad42e",
+      "name": "Large Pipe Extension",
+      "description": "",
+      "image": "/images/game-items/large-pipe-extension-3292878f.webp"
+    },
+    {
+      "uuid": "08918d4d-29e6-427d-ad8c-1eafcc4af1f9",
+      "name": "Large Pipe Join",
+      "description": "",
+      "image": "/images/game-items/large-pipe-join-08918d4d.webp"
+    },
+    {
+      "uuid": "53e8478f-517f-4ea0-be9c-f4a357400cc1",
+      "name": "Large Pipe Long",
+      "description": "",
+      "image": "/images/game-items/large-pipe-long-53e8478f.webp"
+    },
+    {
+      "uuid": "6661da68-74af-4425-ad63-d5b4631ee266",
+      "name": "Large Pipe Mount",
+      "description": "",
+      "image": "/images/game-items/large-pipe-mount-6661da68.webp"
+    },
+    {
+      "uuid": "862f6857-3050-4a84-8191-6a7cbb50bd1a",
+      "name": "Large Pipe Short",
+      "description": "",
+      "image": "/images/game-items/large-pipe-short-862f6857.webp"
+    },
+    {
+      "uuid": "763fd838-7ed5-420e-8984-c2ae86da1e5c",
+      "name": "Large Rectangular Window",
+      "description": "",
+      "image": "/images/game-items/large-rectangular-window-763fd838.webp"
+    },
+    {
+      "uuid": "15a8f24b-016a-4db6-adcc-967ee1b6c7b1",
+      "name": "Large Support Structure",
+      "description": "",
+      "image": "/images/game-items/large-support-structure-15a8f24b.webp"
+    },
+    {
+      "uuid": "68c2baa5-1274-4bfd-8b12-6e522123f4de",
+      "name": "Large Tank",
+      "description": "",
+      "image": "/images/game-items/large-tank-68c2baa5.webp"
+    },
+    {
+      "uuid": "20b3577f-a2f1-44f3-a22c-83f792732771",
+      "name": "Large Taperoll",
+      "description": "",
+      "image": "/images/game-items/large-taperoll-20b3577f.webp"
+    },
+    {
+      "uuid": "7f0d8b7c-861f-4597-94b4-a87978b3f750",
+      "name": "Large Warehouse Ramp",
+      "description": "",
+      "image": "/images/game-items/large-warehouse-ramp-7f0d8b7c.webp"
+    },
+    {
+      "uuid": "7a0e9041-9dd5-4cb1-b804-69ee16c45efe",
+      "name": "Large Windshield",
+      "description": "",
+      "image": "/images/game-items/large-windshield-7a0e9041.webp"
+    },
+    {
+      "uuid": "64401599-2a38-4d83-93f9-a76b137c9574",
+      "name": "Lattice Panel",
+      "description": "",
+      "image": "/images/game-items/lattice-panel-64401599.webp"
+    },
+    {
+      "uuid": "61b0abe1-817d-416a-b49d-443b2ec13b6e",
+      "name": "Lava Lamp",
+      "description": "",
+      "image": "/images/game-items/lava-lamp-61b0abe1.webp"
+    },
+    {
+      "uuid": "c5444340-52d3-44ff-bd27-c1800dd8ea7e",
+      "name": "Lemonium",
+      "description": "A rare valuable mineral.",
+      "image": "/images/game-items/lemonium-c5444340.webp"
+    },
+    {
+      "uuid": "a7fb4293-f623-4a0f-9465-8bc640f0038b",
+      "name": "License Plate",
+      "description": "",
+      "image": "/images/game-items/license-plate-a7fb4293.webp"
+    },
+    {
+      "uuid": "5cc12f03-275e-4c8e-b013-79fc0f913e1b",
+      "name": "Lift",
+      "description": "Build on the lift to create freely movable constructions that won't be fixed to the ground. Can be elevated and lowered as well as lift creations that have flipped over.",
+      "image": "/images/game-items/lift-5cc12f03.webp"
+    },
+    {
+      "uuid": "43562d7c-d1a8-4cea-98e0-ad791320729b",
+      "name": "Lift",
+      "description": "Build on the lift to create freely movable constructions that won't be fixed to the ground. Can be elevated and lowered as well as lift creations that have flipped over.",
+      "image": "/images/game-items/lift-43562d7c.webp"
+    },
+    {
+      "uuid": "8f190ce2-3a59-423e-8483-a7aa67bd5bc0",
+      "name": "Lift",
+      "description": "Build on the lift to create freely movable constructions that won't be fixed to the ground. Can be elevated and lowered as well as lift creations that have flipped over.",
+      "image": "/images/game-items/lift-8f190ce2.webp"
+    },
+    {
+      "uuid": "d0afb527-e786-4a22-a907-6da7e7cba8cb",
+      "name": "Locker",
+      "description": "",
+      "image": "/images/game-items/locker-d0afb527.webp"
+    },
+    {
+      "uuid": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+      "name": "Logic Gate",
+      "description": "The Logic Gate is a powerful block that allows you to build basic logical functions. By pressing E on the block, the mechanic can choose between different logic gate types. The logic gate can be connected to other logic gates, triggers, timers and more. Great for making advanced creations.",
+      "image": "/images/game-items/logic-gate-9f0f56e8.webp"
+    },
+    {
+      "uuid": "4c7b8096-b8ca-4341-bfe9-d31d2d5443b8",
+      "name": "Long I-Beam",
+      "description": "",
+      "image": "/images/game-items/long-i-beam-4c7b8096.webp"
+    },
+    {
+      "uuid": "4beb69d3-ede9-434e-9535-62e7677f6982",
+      "name": "Lowrider Plaque",
+      "description": "",
+      "image": "/images/game-items/lowrider-plaque-4beb69d3.webp"
+    },
+    {
+      "uuid": "d296c1ad-e893-4866-ba73-1cbbb38ebd37",
+      "name": "Main Humidifier",
+      "description": "",
+      "image": "/images/game-items/main-humidifier-d296c1ad.webp"
+    },
+    {
+      "uuid": "aec1ff30-9347-4166-9cb7-f414e1563d9d",
+      "name": "Maintenance Ship Door",
+      "description": "",
+      "image": "/images/game-items/maintenance-ship-door-aec1ff30.webp"
+    },
+    {
+      "uuid": "488dfd3c-eb6b-4663-90b1-add00b1c2700",
+      "name": "Maintenance Ship Statue",
+      "description": "",
+      "image": "/images/game-items/maintenance-ship-statue-488dfd3c.webp"
+    },
+    {
+      "uuid": "30d3d0fe-a96a-4804-a0bd-8f01cf674adb",
+      "name": "Male Mechanic Statue",
+      "description": "",
+      "image": "/images/game-items/male-mechanic-statue-30d3d0fe.webp"
+    },
+    {
+      "uuid": "178fadc6-fff7-4bde-a052-c047e8a8fbcd",
+      "name": "Mama Lazers Picture Frame",
+      "description": "A precious picture with a good memory.",
+      "image": "/images/game-items/mama-lazers-picture-frame-178fadc6.webp"
+    },
+    {
+      "uuid": "221badef-0313-419c-9a7c-7469d26b0d5b",
+      "name": "Man Sign",
+      "description": "",
+      "image": "/images/game-items/man-sign-221badef.webp"
+    },
+    {
+      "uuid": "c89f7bc8-5720-474d-989d-761916a411b2",
+      "name": "Mannequin Boot",
+      "description": "",
+      "image": "/images/game-items/mannequin-boot-c89f7bc8.webp"
+    },
+    {
+      "uuid": "b1dd7967-da2a-4ff5-a90f-bbd7e9bae4d7",
+      "name": "Mannequin Hand",
+      "description": "",
+      "image": "/images/game-items/mannequin-hand-b1dd7967.webp"
+    },
+    {
+      "uuid": "c654a023-ca53-4109-9f18-d297c18e9a02",
+      "name": "Master Battery",
+      "description": "Used to power on large spaceships or stations.",
+      "image": "/images/game-items/master-battery-c654a023.webp"
+    },
+    {
+      "uuid": "b23f64dd-8182-4d73-90bf-6ccb9dd24d4d",
+      "name": "Matrixium",
+      "description": "A rare valuable mineral.",
+      "image": "/images/game-items/matrixium-b23f64dd.webp"
+    },
+    {
+      "uuid": "9eead4cf-4743-486e-99be-a553c4c10740",
+      "name": "Mattress",
+      "description": "",
+      "image": "/images/game-items/mattress-9eead4cf.webp"
+    },
+    {
+      "uuid": "ebd73cee-988f-4ffb-95d1-d3c3c81fd506",
+      "name": "Mechanic Station",
+      "description": "",
+      "image": "/images/game-items/mechanic-station-ebd73cee.webp"
+    },
+    {
+      "uuid": "a96232ef-2778-4c23-8a11-7cbc5b1de8b0",
+      "name": "Medium Digital Sign",
+      "description": "Add text to things in the world. Customize text color and background.",
+      "image": "/images/game-items/medium-digital-sign-a96232ef.webp"
+    },
+    {
+      "uuid": "d71d8897-5af6-4adc-b626-50e45f931157",
+      "name": "Medium Tank",
+      "description": "",
+      "image": "/images/game-items/medium-tank-d71d8897.webp"
+    },
+    {
+      "uuid": "7468db55-b29d-4ce0-82b9-2414f493a376",
+      "name": "Metal",
+      "description": "",
+      "image": "/images/game-items/metal-7468db55.webp"
+    },
+    {
+      "uuid": "8aedf6c2-94e1-4506-89d4-a0227c552f1e",
+      "name": "Metal Block Level 1",
+      "description": "",
+      "image": "/images/game-items/metal-block-level-1-8aedf6c2.webp"
+    },
+    {
+      "uuid": "1016cafc-9f6b-40c9-8713-9019d399783f",
+      "name": "Metal Block Level 2",
+      "description": "",
+      "image": "/images/game-items/metal-block-level-2-1016cafc.webp"
+    },
+    {
+      "uuid": "c0dfdea5-a39d-433a-b94a-299345a5df46",
+      "name": "Metal Block Level 3",
+      "description": "",
+      "image": "/images/game-items/metal-block-level-3-c0dfdea5.webp"
+    },
+    {
+      "uuid": "6b78fb4b-2af9-4a01-a7c5-7e333d245adb",
+      "name": "Metal Column",
+      "description": "",
+      "image": "/images/game-items/metal-column-6b78fb4b.webp"
+    },
+    {
+      "uuid": "ba7775ef-d03b-46bd-aa09-09015297a415",
+      "name": "Metal Storage Beam",
+      "description": "",
+      "image": "/images/game-items/metal-storage-beam-ba7775ef.webp"
+    },
+    {
+      "uuid": "94acfb72-c650-4cb5-a8aa-08af3e691d2e",
+      "name": "Metal Storage Corner A",
+      "description": "",
+      "image": "/images/game-items/metal-storage-corner-a-94acfb72.webp"
+    },
+    {
+      "uuid": "b7e60b8e-2075-4ae4-b906-53af3845e198",
+      "name": "Metal Storage Corner B",
+      "description": "",
+      "image": "/images/game-items/metal-storage-corner-b-b7e60b8e.webp"
+    },
+    {
+      "uuid": "2bbaf389-4ef7-4dca-b7ee-397cc30f3862",
+      "name": "Metal Storage Corner C",
+      "description": "",
+      "image": "/images/game-items/metal-storage-corner-c-2bbaf389.webp"
+    },
+    {
+      "uuid": "513530b0-61bd-4b82-83e7-191d090d25d8",
+      "name": "Metal Storage Floor",
+      "description": "",
+      "image": "/images/game-items/metal-storage-floor-513530b0.webp"
+    },
+    {
+      "uuid": "fba945c7-a50f-4515-af38-57d768706078",
+      "name": "Metal Storage Handle",
+      "description": "",
+      "image": "/images/game-items/metal-storage-handle-fba945c7.webp"
+    },
+    {
+      "uuid": "66affe90-4552-455e-a0b0-b203f9988790",
+      "name": "Metal Storage Ramp",
+      "description": "",
+      "image": "/images/game-items/metal-storage-ramp-66affe90.webp"
+    },
+    {
+      "uuid": "43c0ca80-0980-433a-88a3-929727a62a6d",
+      "name": "Metal Storage Support",
+      "description": "",
+      "image": "/images/game-items/metal-storage-support-43c0ca80.webp"
+    },
+    {
+      "uuid": "c40683f3-d9ce-4067-af24-3514c1867a1a",
+      "name": "Metal Support",
+      "description": "",
+      "image": "/images/game-items/metal-support-c40683f3.webp"
+    },
+    {
+      "uuid": "a358c216-14b9-11ed-861d-0242ac120002",
+      "name": "Metal Wedge Level 1",
+      "description": "",
+      "image": "/images/game-items/metal-wedge-level-1-a358c216.webp"
+    },
+    {
+      "uuid": "5dae0f2c-14bf-11ed-861d-0242ac120002",
+      "name": "Metal Wedge Level 2",
+      "description": "",
+      "image": "/images/game-items/metal-wedge-level-2-5dae0f2c.webp"
+    },
+    {
+      "uuid": "5dae1008-14bf-11ed-861d-0242ac120002",
+      "name": "Metal Wedge Level 3",
+      "description": "",
+      "image": "/images/game-items/metal-wedge-level-3-5dae1008.webp"
+    },
+    {
+      "uuid": "8c4b9721-3de4-4ae3-a7d1-6f66a16d1368",
+      "name": "Metal Window",
+      "description": "",
+      "image": "/images/game-items/metal-window-8c4b9721.webp"
+    },
+    {
+      "uuid": "ea64acf0-c0a8-44c4-a946-f358d232e965",
+      "name": "Metallic Tube",
+      "description": "",
+      "image": "/images/game-items/metallic-tube-ea64acf0.webp"
+    },
+    {
+      "uuid": "eb608c5d-c418-49db-a2c5-1c8186b3d314",
+      "name": "Metallic Tube Bend",
+      "description": "",
+      "image": "/images/game-items/metallic-tube-bend-eb608c5d.webp"
+    },
+    {
+      "uuid": "eabc9e68-6172-4719-ace5-5d64333233c0",
+      "name": "Metallic Tube Straight",
+      "description": "",
+      "image": "/images/game-items/metallic-tube-straight-eabc9e68.webp"
+    },
+    {
+      "uuid": "2c4a2633-153a-4800-ba3d-2ac0d993b9c8",
+      "name": "Milk",
+      "description": "A healthy drink.",
+      "image": "/images/game-items/milk-2c4a2633.webp"
+    },
+    {
+      "uuid": "3ea882a5-2f64-4a50-9829-21e810876023",
+      "name": "Miner Backpack",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "5810f6aa-d20d-40a2-9d78-878e32e237b0",
+      "name": "Miner Gloves",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "92c83e5b-d277-46b7-9e62-e5e3d0abba5b",
+      "name": "Miner Helmet",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "0c377cef-8c93-421a-8715-7366229830ab",
+      "name": "Miner Jacket",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "d6a28ec6-d044-41dd-880c-6edd00d18cc3",
+      "name": "Miner Pants",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "5d334138-ecf9-46f2-aaf3-202cbe6fb8b2",
+      "name": "Miner Shoes",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "2ff2b13f-5a50-443c-bbda-1f40f6aa917f",
+      "name": "Mini Craftbot",
+      "description": "",
+      "image": "/images/game-items/mini-craftbot-2ff2b13f.webp"
+    },
+    {
+      "uuid": "3c0cf002-905f-45bc-84ef-b4fbb4549a63",
+      "name": "Modular Sofa",
+      "description": "",
+      "image": "/images/game-items/modular-sofa-3c0cf002.webp"
+    },
+    {
+      "uuid": "2fa43c38-9a66-4c03-a159-756a0c8b0078",
+      "name": "Modular Sofa Armrest",
+      "description": "",
+      "image": "/images/game-items/modular-sofa-armrest-2fa43c38.webp"
+    },
+    {
+      "uuid": "4d974692-e011-4556-952c-d50da68dd961",
+      "name": "Monster Wheel",
+      "description": "",
+      "image": "/images/game-items/monster-wheel-4d974692.webp"
+    },
+    {
+      "uuid": "79f63a7c-276e-4488-88d4-af7b0390a35f",
+      "name": "Monster Wheel Big",
+      "description": "",
+      "image": "/images/game-items/monster-wheel-big-79f63a7c.webp"
+    },
+    {
+      "uuid": "0dff60c2-f7ae-4c13-b9c4-962ec1039be8",
+      "name": "Mop Set",
+      "description": "",
+      "image": "/images/game-items/mop-set-0dff60c2.webp"
+    },
+    {
+      "uuid": "7143326d-e0b6-498b-a25b-45cda8958a0f",
+      "name": "Mountable Glow Gun",
+      "description": "Fill with glowsticks and connect a trigger to shoot.",
+      "image": "/images/game-items/mountable-glow-gun-7143326d.webp"
+    },
+    {
+      "uuid": "454ad69d-bac2-4b06-9386-6267bcbfece2",
+      "name": "Mountable Spud Gun",
+      "description": "Connect it to a Ammo container with a trigger to shoot.",
+      "image": "/images/game-items/mountable-spud-gun-454ad69d.webp"
+    },
+    {
+      "uuid": "0229f59d-1ba3-446a-8f9c-df8b0f816e51",
+      "name": "Mountable Spud Gun",
+      "description": "The potato shooting mountable spud gun is great for protecting your creations. Connect it to a trigger that is connected to a seat to shoot while seated.",
+      "image": "/images/game-items/mountable-spud-gun-0229f59d.webp"
+    },
+    {
+      "uuid": "e28c88fc-bd6d-4b03-a799-c0d39f0a799e",
+      "name": "Mud",
+      "description": "Core ingredient for making Clay",
+      "image": "/images/game-items/mud-e28c88fc.webp"
+    },
+    {
+      "uuid": "a6ec1dcc-07e9-418a-819e-904e28a32f63",
+      "name": "Mug",
+      "description": "",
+      "image": "/images/game-items/mug-a6ec1dcc.webp"
+    },
+    {
+      "uuid": "b41de15e-a136-425a-a730-889b58cf4466",
+      "name": "Multi Component Kit",
+      "description": "Use to upgrade special interactive parts.",
+      "image": "/images/game-items/multi-component-kit-b41de15e.webp"
+    },
+    {
+      "uuid": "4aa2a6f0-65a4-42e3-bf96-7dec62570e0b",
+      "name": "Net Block",
+      "description": "",
+      "image": "/images/game-items/net-block-4aa2a6f0.webp"
+    },
+    {
+      "uuid": "2228cef0-f22a-4901-93c5-48e4df52caf6",
+      "name": "Net Fence",
+      "description": "",
+      "image": "/images/game-items/net-fence-2228cef0.webp"
+    },
+    {
+      "uuid": "31c38d38-73f5-47ef-93c8-e10d4f579e1c",
+      "name": "Net frame",
+      "description": "",
+      "image": "/images/game-items/net-frame-31c38d38.webp"
+    },
+    {
+      "uuid": "4f5092dd-e2e5-4d42-8ec9-c0337cf23e21",
+      "name": "Net frame hatch",
+      "description": "",
+      "image": "/images/game-items/net-frame-hatch-4f5092dd.webp"
+    },
+    {
+      "uuid": "9acece58-14c1-11ed-861d-0242ac120002",
+      "name": "Net Wedge",
+      "description": "",
+      "image": "/images/game-items/net-wedge-9acece58.webp"
+    },
+    {
+      "uuid": "903871bd-e71f-4681-ad56-8bf180fe4da9",
+      "name": "Nimbolium",
+      "description": "A common valuable mineral.",
+      "image": "/images/game-items/nimbolium-903871bd.webp"
+    },
+    {
+      "uuid": "edd445cc-c298-4ce3-9a58-745c1bee1bc7",
+      "name": "Nut",
+      "description": "",
+      "image": "/images/game-items/nut-edd445cc.webp"
+    },
+    {
+      "uuid": "f3cfef9d-faef-4be8-9283-476eb99614d7",
+      "name": "Off-Road Suspension Level 1",
+      "description": "Adds shock absorption and provides stability. Great for vehicles to prevent them from easily flipping over. This suspension has a lot of bounce, making it ideal for off-road vehicles.",
+      "image": "/images/game-items/off-road-suspension-level-1-f3cfef9d.webp"
+    },
+    {
+      "uuid": "fdfcdb68-af22-4bb3-87d6-bd44b3c8b671",
+      "name": "Off-Road Suspension With Bearing Level 1",
+      "description": "Adds shock absorption and provides stability. Great for vehicles to prevent them from easily flipping over. This suspension has a lot of bounce, making it ideal for off-road vehicles. With an integrated bearing!",
+      "image": "/images/game-items/off-road-suspension-with-bearing-level-1-fdfcdb68.webp"
+    },
+    {
+      "uuid": "4c93de5a-72ab-40d0-a081-c41e3aa87e86",
+      "name": "Office Chair",
+      "description": "",
+      "image": "/images/game-items/office-chair-4c93de5a.webp"
+    },
+    {
+      "uuid": "1f343b76-3622-4e4b-9de4-238d43d60734",
+      "name": "Office Chair Base",
+      "description": "",
+      "image": "/images/game-items/office-chair-base-1f343b76.webp"
+    },
+    {
+      "uuid": "7728c105-1fd9-4aaa-95ec-1da45b425d89",
+      "name": "Office Sign",
+      "description": "",
+      "image": "/images/game-items/office-sign-7728c105.webp"
+    },
+    {
+      "uuid": "1991e0c6-4dd8-4e44-9da8-7fdf4d938fdc",
+      "name": "Office Table A",
+      "description": "",
+      "image": "/images/game-items/office-table-a-1991e0c6.webp"
+    },
+    {
+      "uuid": "47d33078-a9b0-4e30-9610-ad0556be5fa2",
+      "name": "Office Table B",
+      "description": "",
+      "image": "/images/game-items/office-table-b-47d33078.webp"
+    },
+    {
+      "uuid": "3de61f00-5782-40ca-923d-7efabe334572",
+      "name": "Office Table Leg",
+      "description": "",
+      "image": "/images/game-items/office-table-leg-3de61f00.webp"
+    },
+    {
+      "uuid": "cc80b6e0-f756-4036-9cd6-77af13a6de36",
+      "name": "Oil Bucket",
+      "description": "Bucket with oil.",
+      "image": "/images/game-items/oil-bucket-cc80b6e0.webp"
+    },
+    {
+      "uuid": "8694192c-d91b-444c-a184-910911bbb354",
+      "name": "Oily Toilet Seat",
+      "description": "",
+      "image": "/images/game-items/oily-toilet-seat-8694192c.webp"
+    },
+    {
+      "uuid": "7540ef9a-5c84-4dd2-b111-176d8de66e47",
+      "name": "Old Fruit Stand",
+      "description": "",
+      "image": "/images/game-items/old-fruit-stand-7540ef9a.webp"
+    },
+    {
+      "uuid": "659488be-3d33-4244-b762-e7d77dcdcbbe",
+      "name": "Old Restroom Mirror",
+      "description": "",
+      "image": "/images/game-items/old-restroom-mirror-659488be.webp"
+    },
+    {
+      "uuid": "de467c9b-a0ab-4e20-95ae-0e5fe8140989",
+      "name": "Onion Box",
+      "description": "",
+      "image": "/images/game-items/onion-box-de467c9b.webp"
+    },
+    {
+      "uuid": "102565a0-c864-463e-b517-72e82242eec2",
+      "name": "Open Plant Container",
+      "description": "",
+      "image": "/images/game-items/open-plant-container-102565a0.webp"
+    },
+    {
+      "uuid": "d4ae8963-40e9-4680-934d-5626a3bfc363",
+      "name": "Open Sign",
+      "description": "",
+      "image": "/images/game-items/open-sign-d4ae8963.webp"
+    },
+    {
+      "uuid": "f5098301-1693-457b-8efc-83b3504105ac",
+      "name": "Orange",
+      "description": "A juicy Orange.",
+      "image": "/images/game-items/orange-f5098301.webp"
+    },
+    {
+      "uuid": "8bcc5a38-b566-45fe-b47e-45118ee70d2d",
+      "name": "Orange Box",
+      "description": "",
+      "image": "/images/game-items/orange-box-8bcc5a38.webp"
+    },
+    {
+      "uuid": "c10a77d5-3357-4cb4-8113-a2cbe69c7ff2",
+      "name": "Orange Crate",
+      "description": "",
+      "image": "/images/game-items/orange-crate-c10a77d5.webp"
+    },
+    {
+      "uuid": "bee966b0-b5e5-41da-b992-5d363ab85ae4",
+      "name": "Orange Seed",
+      "description": "",
+      "image": "/images/game-items/orange-seed-bee966b0.webp"
+    },
+    {
+      "uuid": "80680f7d-5f8a-4bf7-962b-ebd07481cd0a",
+      "name": "Ore Collector",
+      "description": "Collects drill capsules filled with ore for easy transfer to the crusher. Can also be used with a trigger to offload to other nearby Ore Collectors.",
+      "image": "/images/game-items/ore-collector-80680f7d.webp"
+    },
+    {
+      "uuid": "cf4daf85-36a2-479f-96dc-b6201bc12d36",
+      "name": "Pack Instruction Sign",
+      "description": "",
+      "image": "/images/game-items/pack-instruction-sign-cf4daf85.webp"
+    },
+    {
+      "uuid": "1e2485d7-f600-406e-b348-9f0b7c1f5077",
+      "name": "Packing Lamp",
+      "description": "",
+      "image": "/images/game-items/packing-lamp-1e2485d7.webp"
+    },
+    {
+      "uuid": "acc00050-d40e-42e9-9c2e-22ec2109dc3e",
+      "name": "Packing Sign",
+      "description": "",
+      "image": "/images/game-items/packing-sign-acc00050.webp"
+    },
+    {
+      "uuid": "4db857f1-07dc-4ea2-9391-fd24903945d1",
+      "name": "Packing Table",
+      "description": "",
+      "image": "/images/game-items/packing-table-4db857f1.webp"
+    },
+    {
+      "uuid": "a2cf56fe-9961-481b-9a12-093f64867d9c",
+      "name": "Packing Table Holder",
+      "description": "",
+      "image": "/images/game-items/packing-table-holder-a2cf56fe.webp"
+    },
+    {
+      "uuid": "c7322cd1-3158-41d9-b15a-eff2f2f8d9f7",
+      "name": "Paint Ammo",
+      "description": "Load your Paint Tool and give your creations some color.",
+      "image": "/images/game-items/paint-ammo-c7322cd1.webp"
+    },
+    {
+      "uuid": "dac97219-d076-41db-8bbb-2509facf0eb4",
+      "name": "Paint Bucket",
+      "description": "",
+      "image": "/images/game-items/paint-bucket-dac97219.webp"
+    },
+    {
+      "uuid": "c60b9627-fc2b-4319-97c5-05921cb976c6",
+      "name": "Paint Tool",
+      "description": "Paint any part or block to personalize your creations or even make beautiful art! Paint using the left mouse button and delete with the right. Press 'Q' to open the color selector. Simply hold down left mouse button and drag if you want to paint larger surfaces.",
+      "image": "/images/game-items/paint-tool-c60b9627.webp"
+    },
+    {
+      "uuid": "e981c337-1c8a-449c-8602-1dd990cbba3a",
+      "name": "Painted Wall Block",
+      "description": "",
+      "image": "/images/game-items/painted-wall-block-e981c337.webp"
+    },
+    {
+      "uuid": "9acecd22-14c1-11ed-861d-0242ac120002",
+      "name": "Painted Wall Wedge",
+      "description": "",
+      "image": "/images/game-items/painted-wall-wedge-9acecd22.webp"
+    },
+    {
+      "uuid": "da86d1c6-e29b-4741-8b65-eed067222dc7",
+      "name": "Paper Stack",
+      "description": "",
+      "image": "/images/game-items/paper-stack-da86d1c6.webp"
+    },
+    {
+      "uuid": "073f92af-f37e-4aff-96b3-d66284d5081c",
+      "name": "Path Light Block",
+      "description": "",
+      "image": "/images/game-items/path-light-block-073f92af.webp"
+    },
+    {
+      "uuid": "996b107e-14be-11ed-861d-0242ac120002",
+      "name": "Path Light Wedge",
+      "description": "",
+      "image": "/images/game-items/path-light-wedge-996b107e.webp"
+    },
+    {
+      "uuid": "c9396a42-67c3-4fa3-b682-31428ff9eced",
+      "name": "Pigment Flower",
+      "description": "",
+      "image": "/images/game-items/pigment-flower-c9396a42.webp"
+    },
+    {
+      "uuid": "ff2207c1-e40b-416f-8bdd-66a9efd6d1a9",
+      "name": "Pillow",
+      "description": "",
+      "image": "/images/game-items/pillow-ff2207c1.webp"
+    },
+    {
+      "uuid": "9c051125-517d-4852-9bb9-2e77f8bea55f",
+      "name": "Pin",
+      "description": "",
+      "image": "/images/game-items/pin-9c051125.webp"
+    },
+    {
+      "uuid": "4ec64cda-1a5b-4465-88b4-5ea452c4a556",
+      "name": "Pineapple",
+      "description": "A juicy Pineapple.",
+      "image": "/images/game-items/pineapple-4ec64cda.webp"
+    },
+    {
+      "uuid": "bc69cb3b-7e0c-4c36-805d-f8d89fcfced3",
+      "name": "Pineapple Crate",
+      "description": "",
+      "image": "/images/game-items/pineapple-crate-bc69cb3b.webp"
+    },
+    {
+      "uuid": "9edb6f7c-fb44-4348-a1c4-8afb41b92d8a",
+      "name": "Pineapple Seed",
+      "description": "",
+      "image": "/images/game-items/pineapple-seed-9edb6f7c.webp"
+    },
+    {
+      "uuid": "4f1c0036-389b-432e-81de-8261cb9f9d57",
+      "name": "Pipe Corner",
+      "description": "",
+      "image": "/images/game-items/pipe-corner-4f1c0036.webp"
+    },
+    {
+      "uuid": "9f37d9e9-be8d-49c8-a7ac-e59c67786083",
+      "name": "Pipe Join",
+      "description": "",
+      "image": "/images/game-items/pipe-join-9f37d9e9.webp"
+    },
+    {
+      "uuid": "07232236-22eb-4912-8774-ab185f368bb9",
+      "name": "Pipe Long",
+      "description": "",
+      "image": "/images/game-items/pipe-long-07232236.webp"
+    },
+    {
+      "uuid": "bbc5cc77-443d-4aa7-a175-ebdeb09c2df3",
+      "name": "Pipe Short",
+      "description": "",
+      "image": "/images/game-items/pipe-short-bbc5cc77.webp"
+    },
+    {
+      "uuid": "260b4597-f1ac-409c-8e6b-90c998c5fe94",
+      "name": "Piston",
+      "description": "Extends and contracts! Connect it to a trigger to activate. The piston can also be connected to a controller to make it extend and contract in a sequence. Perfect for creating impressive creations.",
+      "image": "/images/game-items/piston-260b4597.webp"
+    },
+    {
+      "uuid": "fbb96932-a443-4bd1-a163-400814677a3d",
+      "name": "Piston",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "8c741785-5eae-4c48-9f99-d62bf522a83f",
+      "name": "Piston Level 1",
+      "description": "Extends and contracts! Connect it to a trigger to activate. The piston can also be connected to a controller to make it extend and contract in a sequence. Perfect for creating impressive creations.",
+      "image": "/images/game-items/piston-level-1-8c741785.webp"
+    },
+    {
+      "uuid": "54d84731-d9ec-435d-bc9d-d48e0763b1bf",
+      "name": "Pizza Burger",
+      "description": "Gives Max HP and randomly applies a special perk.",
+      "image": "/images/game-items/pizza-burger-54d84731.webp"
+    },
+    {
+      "uuid": "faae6e1a-f431-49fd-b8b8-16f12139ee88",
+      "name": "Plant Container",
+      "description": "",
+      "image": "/images/game-items/plant-container-faae6e1a.webp"
+    },
+    {
+      "uuid": "9b9c0a82-a9bf-41d4-a599-58182f162058",
+      "name": "Plasma Drill Level 1",
+      "description": "Powered by batteries. A highly advanced drill that digs in terra mass. The drill collects valuables and ejects them when they are ready to collect. Use the setting to adjust the beam size.",
+      "image": "/images/game-items/plasma-drill-level-1-9b9c0a82.webp"
+    },
+    {
+      "uuid": "d70849a1-cc53-4d17-b3bc-cac1adc75ceb",
+      "name": "Plasma saw 1",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "b145d9ae-4966-4af6-9497-8fca33f9aee3",
+      "name": "Plaster Block",
+      "description": "",
+      "image": "/images/game-items/plaster-block-b145d9ae.webp"
+    },
+    {
+      "uuid": "9acec674-14c1-11ed-861d-0242ac120002",
+      "name": "Plaster Wedge",
+      "description": "",
+      "image": "/images/game-items/plaster-wedge-9acec674.webp"
+    },
+    {
+      "uuid": "628b2d61-5ceb-43e9-8334-a4135566df7a",
+      "name": "Plastic Block",
+      "description": "",
+      "image": "/images/game-items/plastic-block-628b2d61.webp"
+    },
+    {
+      "uuid": "bf3de51c-14c1-11ed-861d-0242ac120002",
+      "name": "Plastic Wedge",
+      "description": "",
+      "image": "/images/game-items/plastic-wedge-bf3de51c.webp"
+    },
+    {
+      "uuid": "f092e8b5-4b10-48be-8ad1-2ac5625f49b8",
+      "name": "Plunger",
+      "description": "",
+      "image": "/images/game-items/plunger-f092e8b5.webp"
+    },
+    {
+      "uuid": "05900757-a49f-4907-b498-96bfd2b15176",
+      "name": "Portable Craftbot",
+      "description": "Perfect to bring on your vehicle as an emergency craftbot. Can come handy when quick repairs are needed or other survival situations.",
+      "image": "/images/game-items/portable-craftbot-05900757.webp"
+    },
+    {
+      "uuid": "bfcfac34-db0f-42d6-bd0c-74a7a5c95e82",
+      "name": "Potato",
+      "description": "A starchy Potato. Can also be used as ammo for spud guns and mountable spud guns.",
+      "image": "/images/game-items/potato-bfcfac34.webp"
+    },
+    {
+      "uuid": "096d4daf-639e-4947-a1a6-1890eaa94464",
+      "name": "Potato Ammo Container",
+      "description": "Connect it to a Mountable Spud Gun with a trigger to shoot potato ammo.",
+      "image": "/images/game-items/potato-ammo-container-096d4daf.webp"
+    },
+    {
+      "uuid": "d1421af8-6f80-4413-8099-2c6b217fb929",
+      "name": "Potted Blooming Cactus",
+      "description": "",
+      "image": "/images/game-items/potted-blooming-cactus-d1421af8.webp"
+    },
+    {
+      "uuid": "bb443a05-b5b9-4fad-90fc-5e04aa90fd8f",
+      "name": "Potted Blue Flower",
+      "description": "",
+      "image": "/images/game-items/potted-blue-flower-bb443a05.webp"
+    },
+    {
+      "uuid": "bc575e0c-d1aa-438e-9f3d-0a80f4ea915f",
+      "name": "Potted Cactus",
+      "description": "",
+      "image": "/images/game-items/potted-cactus-bc575e0c.webp"
+    },
+    {
+      "uuid": "df3734e2-f04b-443f-b568-fe5b076646c7",
+      "name": "Potted Plant",
+      "description": "",
+      "image": "/images/game-items/potted-plant-df3734e2.webp"
+    },
+    {
+      "uuid": "c4609540-bc32-4c3f-83b8-3b6926878012",
+      "name": "Potted Seed Plant",
+      "description": "",
+      "image": "/images/game-items/potted-seed-plant-c4609540.webp"
+    },
+    {
+      "uuid": "cec1d36c-b48a-43d2-9667-5e53b62dd4c5",
+      "name": "Potted Vine Plant",
+      "description": "",
+      "image": "/images/game-items/potted-vine-plant-cec1d36c.webp"
+    },
+    {
+      "uuid": "38934d9d-69a8-4a1f-8137-892ede148cb4",
+      "name": "Power Generator Side",
+      "description": "",
+      "image": "/images/game-items/power-generator-side-38934d9d.webp"
+    },
+    {
+      "uuid": "40c5b3fd-1ac4-47f4-ae61-503e14baf20f",
+      "name": "Power Station",
+      "description": "",
+      "image": "/images/game-items/power-station-40c5b3fd.webp"
+    },
+    {
+      "uuid": "f5670a5a-7782-4683-bed0-a6eda785a5e2",
+      "name": "Produce Billboard",
+      "description": "",
+      "image": "/images/game-items/produce-billboard-f5670a5a.webp"
+    },
+    {
+      "uuid": "b46c3271-6288-4b74-a6b1-9ea946cf072b",
+      "name": "Prospectorbot",
+      "description": "Processes crushed Ore by washing and sifting for valuables, requires water and supports chest automation.",
+      "image": "/images/game-items/prospectorbot-b46c3271.webp"
+    },
+    {
+      "uuid": "ea6864db-bb4f-4a89-b9ec-977849b6713a",
+      "name": "Punched Steel Block",
+      "description": "",
+      "image": "/images/game-items/punched-steel-block-ea6864db.webp"
+    },
+    {
+      "uuid": "4e72cd24-14c7-11ed-861d-0242ac120002",
+      "name": "Punched Steel Wedge",
+      "description": "",
+      "image": "/images/game-items/punched-steel-wedge-4e72cd24.webp"
+    },
+    {
+      "uuid": "c108d189-87ff-41d1-8d61-667769924a34",
+      "name": "Quartz",
+      "description": "",
+      "image": "/images/game-items/quartz-c108d189.webp"
+    },
+    {
+      "uuid": "dfefc9d7-db03-4d25-ad85-eae1d824d8c0",
+      "name": "Radio",
+      "description": "All hits, all the time. Those beastly bots have hijacked and are now transmitting classic selections from their deeply unusual taste in music. Activate it by interacting with it or by connecting it to a trigger.",
+      "image": "/images/game-items/radio-dfefc9d7.webp"
+    },
+    {
+      "uuid": "6620ceb4-3c35-4a61-9d98-f923d2277395",
+      "name": "Range Light",
+      "description": "",
+      "image": "/images/game-items/range-light-6620ceb4.webp"
+    },
+    {
+      "uuid": "13ce3374-841a-4ad2-a6c3-ad0dabc1963d",
+      "name": "Range Light Large",
+      "description": "",
+      "image": "/images/game-items/range-light-large-13ce3374.webp"
+    },
+    {
+      "uuid": "d053adac-e217-49de-b184-ad4bfbe1e52d",
+      "name": "Recycling Bin",
+      "description": "",
+      "image": "/images/game-items/recycling-bin-d053adac.webp"
+    },
+    {
+      "uuid": "9d6992f4-8a1a-40c2-8be3-adfce6e4cfed",
+      "name": "Red Totebot Statue",
+      "description": "",
+      "image": "/images/game-items/red-totebot-statue-9d6992f4.webp"
+    },
+    {
+      "uuid": "4ce00048-f735-4fab-b978-5f405e60f48f",
+      "name": "Redbeet",
+      "description": "A nutritious Redbeet.",
+      "image": "/images/game-items/redbeet-4ce00048.webp"
+    },
+    {
+      "uuid": "628fd350-577d-413f-82a8-7f08a83de3d8",
+      "name": "Redbeet Crate",
+      "description": "",
+      "image": "/images/game-items/redbeet-crate-628fd350.webp"
+    },
+    {
+      "uuid": "64051718-a3f1-422b-bda3-277efa0c4545",
+      "name": "Redbeet Seed",
+      "description": "",
+      "image": "/images/game-items/redbeet-seed-64051718.webp"
+    },
+    {
+      "uuid": "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c",
+      "name": "Refinebot",
+      "description": "Let the Refinebot help you out and refine all your collected logs. Put them in by hand or by placing a Resource Collector with logs next to it.",
+      "image": "/images/game-items/refinebot-5cb15c93.webp"
+    },
+    {
+      "uuid": "41db3e10-7b8f-4ff3-81f3-4f240f1f3cce",
+      "name": "Refined Coralium",
+      "description": "Refined Minerals are much more valuable than their unrefined counterparts.",
+      "image": "/images/game-items/refined-coralium-41db3e10.webp"
+    },
+    {
+      "uuid": "a0fbc5ac-4e77-4119-b6e9-f3b6f8fbcb66",
+      "name": "Refined Crystalium",
+      "description": "Refined Minerals are much more valuable than their unrefined counterparts.",
+      "image": "/images/game-items/refined-crystalium-a0fbc5ac.webp"
+    },
+    {
+      "uuid": "bd4b7d66-9d4b-433e-bff9-410cb5baafc3",
+      "name": "Refined Lemonium",
+      "description": "Refined Minerals are much more valuable than their unrefined counterparts.",
+      "image": "/images/game-items/refined-lemonium-bd4b7d66.webp"
+    },
+    {
+      "uuid": "847af9bd-21ae-4d16-971f-5c8378e83f51",
+      "name": "Refined Matrixium",
+      "description": "Refined Minerals are much more valuable than their unrefined counterparts.",
+      "image": "/images/game-items/refined-matrixium-847af9bd.webp"
+    },
+    {
+      "uuid": "d69139ee-5b7f-479a-b9c1-6549017a1ea1",
+      "name": "Refined Nimbolium",
+      "description": "Refined Minerals are much more valuable than their unrefined counterparts.",
+      "image": "/images/game-items/refined-nimbolium-d69139ee.webp"
+    },
+    {
+      "uuid": "c938e84c-ff59-4e7e-a87c-5211ac903927",
+      "name": "Reflector Antenna",
+      "description": "",
+      "image": "/images/game-items/reflector-antenna-c938e84c.webp"
+    },
+    {
+      "uuid": "a930a42f-63ed-4fb0-933e-56ce8a889cc5",
+      "name": "Resource Collector",
+      "description": "Perfect for collecting and stacking logs. When full, place it next to a refinebot to turn logs in to blocks.",
+      "image": "/images/game-items/resource-collector-a930a42f.webp"
+    },
+    {
+      "uuid": "5eb8975b-0acf-43a7-ab4e-62ce661c0df7",
+      "name": "Respawn Bed",
+      "description": "Take a lovely nap in this comfy bed to respawn in it after your mechanic has been knocked out.",
+      "image": "/images/game-items/respawn-bed-5eb8975b.webp"
+    },
+    {
+      "uuid": "920b40c8-6dfc-42e7-84e1-d7e7e73128f6",
+      "name": "Restroom Block",
+      "description": "",
+      "image": "/images/game-items/restroom-block-920b40c8.webp"
+    },
+    {
+      "uuid": "27e9cc8c-14c4-11ed-861d-0242ac120002",
+      "name": "Restroom Wedge",
+      "description": "",
+      "image": "/images/game-items/restroom-wedge-27e9cc8c.webp"
+    },
+    {
+      "uuid": "e243f642-6934-42bb-8cdd-f8ff1704d411",
+      "name": "Revival Baguette",
+      "description": "Feed your fallen friends to get them back on their feet and back in action.",
+      "image": "/images/game-items/revival-baguette-e243f642.webp"
+    },
+    {
+      "uuid": "7bc20d55-6b49-450c-830c-16282ce7fb2d",
+      "name": "Road Sign Base",
+      "description": "",
+      "image": "/images/game-items/road-sign-base-7bc20d55.webp"
+    },
+    {
+      "uuid": "3a2fa1bb-006c-4e35-a24e-a81cd296dfa4",
+      "name": "Rock T-Shirt",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "64fdc73f-259a-49df-94ac-24db25a4dc42",
+      "name": "Rounded Frame Corner",
+      "description": "",
+      "image": "/images/game-items/rounded-frame-corner-64fdc73f.webp"
+    },
+    {
+      "uuid": "220b201e-aa40-4995-96c8-e6007af160de",
+      "name": "Rusted Metal Block",
+      "description": "",
+      "image": "/images/game-items/rusted-metal-block-220b201e.webp"
+    },
+    {
+      "uuid": "a29f7ce6-14c0-11ed-861d-0242ac120002",
+      "name": "Rusted Metal Wedge",
+      "description": "",
+      "image": "/images/game-items/rusted-metal-wedge-a29f7ce6.webp"
+    },
+    {
+      "uuid": "2d3016f7-febe-416e-93bc-41d80ca3910d",
+      "name": "Saddle Level 1",
+      "description": "Used for avoiding standing. Take a seat and relax or add it to your vehicle so your friends can tag along. Can be connected to triggers which can activate other interactive parts from the saddle.",
+      "image": "/images/game-items/saddle-level-1-2d3016f7.webp"
+    },
+    {
+      "uuid": "198c8b79-1f02-49fc-aacf-f8cacca7a3a7",
+      "name": "Safe",
+      "description": "",
+      "image": "/images/game-items/safe-198c8b79.webp"
+    },
+    {
+      "uuid": "2289e96f-f9c6-440c-b7c9-ce9474da8264",
+      "name": "Sale Sign",
+      "description": "",
+      "image": "/images/game-items/sale-sign-2289e96f.webp"
+    },
+    {
+      "uuid": "c56700d9-bbe5-4b17-95ed-cef05bd8be1b",
+      "name": "Sand Block",
+      "description": "",
+      "image": "/images/game-items/sand-block-c56700d9.webp"
+    },
+    {
+      "uuid": "3f2e92d0-14c7-11ed-861d-0242ac120002",
+      "name": "Sand Wedge",
+      "description": "",
+      "image": "/images/game-items/sand-wedge-3f2e92d0.webp"
+    },
+    {
+      "uuid": "1daf2b8a-fd2f-4266-9942-c04feede4f7b",
+      "name": "Satellite Dish",
+      "description": "",
+      "image": "/images/game-items/satellite-dish-1daf2b8a.webp"
+    },
+    {
+      "uuid": "ce350b5c-cebb-42b0-b8ba-1bf084a0090c",
+      "name": "Satellite Reflector Dish",
+      "description": "",
+      "image": "/images/game-items/satellite-reflector-dish-ce350b5c.webp"
+    },
+    {
+      "uuid": "3e10ef67-383a-4b60-aa5b-b1173134e437",
+      "name": "Saw Blade",
+      "description": "Cut down trees faster with the Saw Blade. Put it on a bearing that is connected to a engine and drive it in to a tree.",
+      "image": "/images/game-items/saw-blade-3e10ef67.webp"
+    },
+    {
+      "uuid": "0a0cc4ee-bdd7-41b1-b5cb-f34a0e6de46e",
+      "name": "Sawbot",
+      "description": "Add any building block to the Sawbot to produce wedges from the same material.",
+      "image": "/images/game-items/sawbot-0a0cc4ee.webp"
+    },
+    {
+      "uuid": "094ceb5a-995b-431f-87f4-aac091494ae4",
+      "name": "Scaffold Frame",
+      "description": "",
+      "image": "/images/game-items/scaffold-frame-094ceb5a.webp"
+    },
+    {
+      "uuid": "93e32c6b-b9de-4fed-ad9d-49f0850ee634",
+      "name": "Scaffold Ledger",
+      "description": "",
+      "image": "/images/game-items/scaffold-ledger-93e32c6b.webp"
+    },
+    {
+      "uuid": "26119eb4-0e0e-4730-85ad-8a8c44f3d18c",
+      "name": "Scaffold Pallet Ramp",
+      "description": "",
+      "image": "/images/game-items/scaffold-pallet-ramp-26119eb4.webp"
+    },
+    {
+      "uuid": "87a3bc6b-5eb3-43a3-871a-0cb42a415d64",
+      "name": "Scaffold Plank",
+      "description": "",
+      "image": "/images/game-items/scaffold-plank-87a3bc6b.webp"
+    },
+    {
+      "uuid": "82625879-3a0a-4ab8-9895-575d38ec4420",
+      "name": "Scaffold Plastic Wall",
+      "description": "",
+      "image": "/images/game-items/scaffold-plastic-wall-82625879.webp"
+    },
+    {
+      "uuid": "de7a75db-207d-48fe-a385-fc4c61b40cf6",
+      "name": "Scaffolding Step",
+      "description": "",
+      "image": "/images/game-items/scaffolding-step-de7a75db.webp"
+    },
+    {
+      "uuid": "a3046bed-5cea-4bbb-a164-4b46448f87b3",
+      "name": "Schematic box",
+      "description": "Used at a SchematicBot Station to unlock a random new part.",
+      "image": "/images/game-items/schematic-box-a3046bed.webp"
+    },
+    {
+      "uuid": "87f60f59-fae9-419c-9189-29c75432b84e",
+      "name": "Schematicbot",
+      "description": "",
+      "image": "/images/game-items/schematicbot-87f60f59.webp"
+    },
+    {
+      "uuid": "f4107fbf-2c39-455c-9aaf-2bb94d915ae8",
+      "name": "Scrap Barrier",
+      "description": "",
+      "image": "/images/game-items/scrap-barrier-f4107fbf.webp"
+    },
+    {
+      "uuid": "5b8d77d3-b129-4d5c-b4c6-1d4f86b22058",
+      "name": "Scrap Beam",
+      "description": "",
+      "image": "/images/game-items/scrap-beam-5b8d77d3.webp"
+    },
+    {
+      "uuid": "5d2f2d3f-cd6b-4d84-8320-7844b672b192",
+      "name": "Scrap Canister Frame",
+      "description": "",
+      "image": "/images/game-items/scrap-canister-frame-5d2f2d3f.webp"
+    },
+    {
+      "uuid": "7527cf2e-1705-4214-9d07-3dc374957e25",
+      "name": "Scrap Chest",
+      "description": "A simple chest to store your items.",
+      "image": "/images/game-items/scrap-chest-7527cf2e.webp"
+    },
+    {
+      "uuid": "202b1841-fd43-4993-9720-e181df634077",
+      "name": "Scrap Cube",
+      "description": "",
+      "image": "/images/game-items/scrap-cube-202b1841.webp"
+    },
+    {
+      "uuid": "bd597ac9-6640-43ba-9bd8-ed584a794f13",
+      "name": "Scrap Driver's Seat",
+      "description": "Makes bearings turn left and right. Can be connected to an engine to control the direction of travel. Can also be connected to triggers that can be activated from the seat. This Drive's Seat is not upgradable.",
+      "image": "/images/game-items/scrap-driver-s-seat-bd597ac9.webp"
+    },
+    {
+      "uuid": "c96ab903-f238-4bae-a614-28a758716d00",
+      "name": "Scrap Gas Engine",
+      "description": "An engine with uneven speed and adjustable power, ideally suited to powering vehicles. Can be connected to a driver's seat or trigger. This Engine is not upgradable.",
+      "image": "/images/game-items/scrap-gas-engine-c96ab903.webp"
+    },
+    {
+      "uuid": "5cb39ea5-554d-4c40-9d9a-6b2dd59de953",
+      "name": "Scrap Metal",
+      "description": "",
+      "image": "/images/game-items/scrap-metal-5cb39ea5.webp"
+    },
+    {
+      "uuid": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39",
+      "name": "Scrap Metal Block",
+      "description": "",
+      "image": "/images/game-items/scrap-metal-block-1f7ac0bb.webp"
+    },
+    {
+      "uuid": "5dae0e46-14bf-11ed-861d-0242ac120002",
+      "name": "Scrap Metal Wedge",
+      "description": "",
+      "image": "/images/game-items/scrap-metal-wedge-5dae0e46.webp"
+    },
+    {
+      "uuid": "847daf20-02bf-4170-8699-9ab106acd29a",
+      "name": "Scrap Seat",
+      "description": "Used for avoiding standing. Take a seat and relax or add it to your vehicle so your friends can tag along. This Seat is not upgradable.",
+      "image": "/images/game-items/scrap-seat-847daf20.webp"
+    },
+    {
+      "uuid": "d51ec758-057b-4263-bd16-7a731e149480",
+      "name": "Scrap Spud Gun",
+      "description": "A hastily put together potato launcher.",
+      "image": "/images/game-items/scrap-spud-gun-d51ec758.webp"
+    },
+    {
+      "uuid": "69fffafa-8084-4de0-9368-e7954d8e1686",
+      "name": "Scrap Stair",
+      "description": "",
+      "image": "/images/game-items/scrap-stair-69fffafa.webp"
+    },
+    {
+      "uuid": "02ee2a98-bd8d-4a09-bb69-38edaf66b8e1",
+      "name": "Scrap Stone",
+      "description": "",
+      "image": "/images/game-items/scrap-stone-02ee2a98.webp"
+    },
+    {
+      "uuid": "30a2288b-e88e-4a92-a916-1edbfc2b2dac",
+      "name": "Scrap Stone Block",
+      "description": "",
+      "image": "/images/game-items/scrap-stone-block-30a2288b.webp"
+    },
+    {
+      "uuid": "5dae16a2-14bf-11ed-861d-0242ac120002",
+      "name": "Scrap Stone Wedge",
+      "description": "",
+      "image": "/images/game-items/scrap-stone-wedge-5dae16a2.webp"
+    },
+    {
+      "uuid": "59f6951a-a450-42bf-ad03-54567cb70245",
+      "name": "Scrap Wheel",
+      "description": "Not perfectly round.",
+      "image": "/images/game-items/scrap-wheel-59f6951a.webp"
+    },
+    {
+      "uuid": "968de65c-75f3-471b-954e-6165a4b6d3d6",
+      "name": "Scrap Wood",
+      "description": "",
+      "image": "/images/game-items/scrap-wood-968de65c.webp"
+    },
+    {
+      "uuid": "1fc74a28-addb-451a-878d-c3c605d63811",
+      "name": "Scrap Wood Block",
+      "description": "",
+      "image": "/images/game-items/scrap-wood-block-1fc74a28.webp"
+    },
+    {
+      "uuid": "a5a857de-14be-11ed-861d-0242ac120002",
+      "name": "Scrap Wood Wedge",
+      "description": "",
+      "image": "/images/game-items/scrap-wood-wedge-a5a857de.webp"
+    },
+    {
+      "uuid": "2a3fc190-3fff-4099-acd3-3db1d9d1e813",
+      "name": "Scrapper Backpack",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "61a50e7c-c454-4b0c-b32c-b322eb3f6ab1",
+      "name": "Scrapper Gloves",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "5476b4ca-d9b4-4667-9113-f5892e552c16",
+      "name": "Scrapper Hat",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "5eb99d5e-eae5-43a9-aec2-443ed3609cc6",
+      "name": "Scrapper Jacket",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "236aeca5-d247-45d0-9f52-8a8d68f80f4f",
+      "name": "Scrapper Pants",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "465ef85e-47be-472e-aa72-25b4c870d305",
+      "name": "Scrapper Shoes",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "c5e56da5-bc3f-4519-91c2-b307d36e15aa",
+      "name": "Screw",
+      "description": "",
+      "image": "/images/game-items/screw-c5e56da5.webp"
+    },
+    {
+      "uuid": "3b972f2f-30c7-4a5e-a100-5e257e62295d",
+      "name": "Seat Level 1",
+      "description": "Used for avoiding standing. Take a seat and relax or add it to your vehicle so your friends can tag along. Can be connected to triggers which can activate other interactive parts from the seat.",
+      "image": "/images/game-items/seat-level-1-3b972f2f.webp"
+    },
+    {
+      "uuid": "add3acc6-a6fd-44e8-a384-a7a16ce13c81",
+      "name": "Sensor",
+      "description": "It detects, it activates! The sensor activates when detecting any kind of surface that comes into its view, and has a reach of ten blocks. It can activate an engine, a thruster, the controller and more.",
+      "image": "/images/game-items/sensor-add3acc6.webp"
+    },
+    {
+      "uuid": "1d4793af-cb66-4628-804a-9d7404712643",
+      "name": "Sensor Level 1",
+      "description": "It detects, it activates! The sensor activates when detecting any kind of surface that comes into its view, and has a reach of ten blocks. It can activate an engine, a thruster, the controller and more.",
+      "image": "/images/game-items/sensor-level-1-1d4793af.webp"
+    },
+    {
+      "uuid": "c4ec4d33-83f7-4e7e-bb0a-8df52f96aef5",
+      "name": "Shack Awning",
+      "description": "",
+      "image": "/images/game-items/shack-awning-c4ec4d33.webp"
+    },
+    {
+      "uuid": "b94a113d-ddd4-45db-844c-1d97ca0e1d61",
+      "name": "Shack Half Wall",
+      "description": "",
+      "image": "/images/game-items/shack-half-wall-b94a113d.webp"
+    },
+    {
+      "uuid": "ebefa387-fe4a-4839-bdd9-b6b4da39368f",
+      "name": "Shack Light",
+      "description": "",
+      "image": "/images/game-items/shack-light-ebefa387.webp"
+    },
+    {
+      "uuid": "0c07dba0-be79-40fd-9ed8-5a1c34e2d196",
+      "name": "Shack Roof",
+      "description": "",
+      "image": "/images/game-items/shack-roof-0c07dba0.webp"
+    },
+    {
+      "uuid": "c8ca8731-3af2-4554-9019-6b941affcb16",
+      "name": "Shack Shade Sails",
+      "description": "",
+      "image": "/images/game-items/shack-shade-sails-c8ca8731.webp"
+    },
+    {
+      "uuid": "2aa8cb2c-2311-440c-8162-829ee394fbc2",
+      "name": "Shack Wall",
+      "description": "",
+      "image": "/images/game-items/shack-wall-2aa8cb2c.webp"
+    },
+    {
+      "uuid": "c8c07259-bc23-45a1-8a4c-585962274f19",
+      "name": "Shelf",
+      "description": "",
+      "image": "/images/game-items/shelf-c8c07259.webp"
+    },
+    {
+      "uuid": "dbd509b5-b7cc-43cf-9a89-b3befecfe991",
+      "name": "Shelf Pillar",
+      "description": "",
+      "image": "/images/game-items/shelf-pillar-dbd509b5.webp"
+    },
+    {
+      "uuid": "8d7be7bf-37c9-44d6-8adf-fc87b141cadf",
+      "name": "Shelf Support",
+      "description": "",
+      "image": "/images/game-items/shelf-support-8d7be7bf.webp"
+    },
+    {
+      "uuid": "196586b5-897f-40f3-926c-b5dfa4f772eb",
+      "name": "Ship Blinds",
+      "description": "",
+      "image": "/images/game-items/ship-blinds-196586b5.webp"
+    },
+    {
+      "uuid": "66c1ccc6-1a68-40f3-9e10-ee362c3c13bc",
+      "name": "Ship Ceiling Ventilation",
+      "description": "",
+      "image": "/images/game-items/ship-ceiling-ventilation-66c1ccc6.webp"
+    },
+    {
+      "uuid": "47062936-5d28-43ec-81b5-8fdb619e97e4",
+      "name": "Ship Light",
+      "description": "Let there be visibility! Connect to a trigger to turn on and off. Adjustable beam range.",
+      "image": "/images/game-items/ship-light-47062936.webp"
+    },
+    {
+      "uuid": "5f5926f5-1449-49b0-8997-2d5a0df37b21",
+      "name": "Ship Shelf",
+      "description": "",
+      "image": "/images/game-items/ship-shelf-5f5926f5.webp"
+    },
+    {
+      "uuid": "87878e83-8170-4796-9401-6baba45ccef2",
+      "name": "Short I-Beam",
+      "description": "",
+      "image": "/images/game-items/short-i-beam-87878e83.webp"
+    },
+    {
+      "uuid": "4d54298c-93a0-4b6d-8719-7380430a27bb",
+      "name": "Sickle-Down Billboard",
+      "description": "",
+      "image": "/images/game-items/sickle-down-billboard-4d54298c.webp"
+    },
+    {
+      "uuid": "e858c1d5-8b16-4749-9119-b77e904520ac",
+      "name": "Side Mirror",
+      "description": "",
+      "image": "/images/game-items/side-mirror-e858c1d5.webp"
+    },
+    {
+      "uuid": "3fa0afca-7715-459e-86fa-2a81cf3027b8",
+      "name": "Sink",
+      "description": "",
+      "image": "/images/game-items/sink-3fa0afca.webp"
+    },
+    {
+      "uuid": "2ccaa006-008e-4069-8de1-15668050f92e",
+      "name": "Skull Sign",
+      "description": "",
+      "image": "/images/game-items/skull-sign-2ccaa006.webp"
+    },
+    {
+      "uuid": "ed185725-ea12-43fc-9cd7-4295d0dbf88b",
+      "name": "Sledgehammer",
+      "description": "This mighty sledgehammer will let you push loose items around by hitting them.",
+      "image": "/images/game-items/sledgehammer-ed185725.webp"
+    },
+    {
+      "uuid": "bb641a4f-e391-441c-bc6d-0ae21a069476",
+      "name": "Sledgehammer",
+      "description": "This mighty sledgehammer will let you push loose items around by hitting them.",
+      "image": "/images/game-items/sledgehammer-bb641a4f.webp"
+    },
+    {
+      "uuid": "ce66734b-2122-460e-94dc-ccc73d799e32",
+      "name": "Slippery Surface Sign",
+      "description": "",
+      "image": "/images/game-items/slippery-surface-sign-ce66734b.webp"
+    },
+    {
+      "uuid": "4c474cff-3f6a-4306-93d1-c4c74578afd2",
+      "name": "Small Chest",
+      "description": "A simple chest to store your items. Can also be used with a Vacuum Pump.",
+      "image": "/images/game-items/small-chest-4c474cff.webp"
+    },
+    {
+      "uuid": "4908ecfb-ec05-42c5-a02a-7675ccc3eb19",
+      "name": "Small Digital Sign",
+      "description": "Add text to things in the world. Customize text color and background.",
+      "image": "/images/game-items/small-digital-sign-4908ecfb.webp"
+    },
+    {
+      "uuid": "8d3b98de-c981-4f05-abfe-d22ee4781d33",
+      "name": "Small Explosive Canister",
+      "description": "Highly explosive canister that can detonate by strong collisions or by Spud Guns. This canister has a small explosion radius.",
+      "image": "/images/game-items/small-explosive-canister-8d3b98de.webp"
+    },
+    {
+      "uuid": "04733746-4090-4d63-aff1-47dafae506fd",
+      "name": "Small Narrow Warehouse Ramp",
+      "description": "",
+      "image": "/images/game-items/small-narrow-warehouse-ramp-04733746.webp"
+    },
+    {
+      "uuid": "8024db09-9147-4fe3-a747-00bc30ab724b",
+      "name": "Small Pipe Bend",
+      "description": "",
+      "image": "/images/game-items/small-pipe-bend-8024db09.webp"
+    },
+    {
+      "uuid": "203fdf06-b311-49fd-933d-a1c6b671a017",
+      "name": "Small Pipe Corner",
+      "description": "",
+      "image": "/images/game-items/small-pipe-corner-203fdf06.webp"
+    },
+    {
+      "uuid": "c6ebae46-8e69-4ddd-a3c0-895d887027bd",
+      "name": "Small Pipe Five Way",
+      "description": "",
+      "image": "/images/game-items/small-pipe-five-way-c6ebae46.webp"
+    },
+    {
+      "uuid": "387095d6-5aba-45e3-abd0-098710c268f8",
+      "name": "Small Pipe Four Way",
+      "description": "",
+      "image": "/images/game-items/small-pipe-four-way-387095d6.webp"
+    },
+    {
+      "uuid": "5a106512-9284-40de-be68-2c186e903097",
+      "name": "Small Pipe Four Way Tee",
+      "description": "",
+      "image": "/images/game-items/small-pipe-four-way-tee-5a106512.webp"
+    },
+    {
+      "uuid": "927d80d8-84ee-44f0-9d8b-cb7a688e0b6c",
+      "name": "Small Pipe Long",
+      "description": "",
+      "image": "/images/game-items/small-pipe-long-927d80d8.webp"
+    },
+    {
+      "uuid": "0dba257b-b907-4919-baaf-2fefe19f4e24",
+      "name": "Small Pipe Short",
+      "description": "",
+      "image": "/images/game-items/small-pipe-short-0dba257b.webp"
+    },
+    {
+      "uuid": "9c6d8dba-1783-4c42-8a02-6af1c5d63ec6",
+      "name": "Small Pipe Six Way",
+      "description": "",
+      "image": "/images/game-items/small-pipe-six-way-9c6d8dba.webp"
+    },
+    {
+      "uuid": "e1273b8a-945b-4080-81eb-cbf79961cccb",
+      "name": "Small Pipe Tee",
+      "description": "",
+      "image": "/images/game-items/small-pipe-tee-e1273b8a.webp"
+    },
+    {
+      "uuid": "89f6c762-c0ed-44ad-b3f1-a60dbdd889c5",
+      "name": "Small Potted Plant",
+      "description": "",
+      "image": "/images/game-items/small-potted-plant-89f6c762.webp"
+    },
+    {
+      "uuid": "57fad8e9-2aff-40c3-9d5c-8f81573b58b9",
+      "name": "Small Rectangular Window",
+      "description": "",
+      "image": "/images/game-items/small-rectangular-window-57fad8e9.webp"
+    },
+    {
+      "uuid": "f1831414-735f-4323-834a-85d5953fc160",
+      "name": "Small Steel Bracket",
+      "description": "",
+      "image": "/images/game-items/small-steel-bracket-f1831414.webp"
+    },
+    {
+      "uuid": "29ededf7-6436-41bf-84f4-8fb5361d29ea",
+      "name": "Small Support Structure",
+      "description": "",
+      "image": "/images/game-items/small-support-structure-29ededf7.webp"
+    },
+    {
+      "uuid": "f37b101c-508b-4630-9f9d-47ef1c834183",
+      "name": "Small Tank",
+      "description": "",
+      "image": "/images/game-items/small-tank-f37b101c.webp"
+    },
+    {
+      "uuid": "8365cf6a-af1a-41aa-a8c9-34313dce1f55",
+      "name": "Small Taperolls",
+      "description": "",
+      "image": "/images/game-items/small-taperolls-8365cf6a.webp"
+    },
+    {
+      "uuid": "3b552b6f-2f32-4c1f-b9c4-ff9ff7dd0ac3",
+      "name": "Small Warehouse Ramp",
+      "description": "",
+      "image": "/images/game-items/small-warehouse-ramp-3b552b6f.webp"
+    },
+    {
+      "uuid": "50007ac9-e97d-4b32-9fd6-de919c8a34a4",
+      "name": "Small Windshield",
+      "description": "",
+      "image": "/images/game-items/small-windshield-50007ac9.webp"
+    },
+    {
+      "uuid": "9a3e478c-2224-44fa-887c-239965bd05ad",
+      "name": "Soil Bag",
+      "description": "Use them on the ground to place your seeds in.",
+      "image": "/images/game-items/soil-bag-9a3e478c.webp"
+    },
+    {
+      "uuid": "3d0b7a6e-5b40-474c-bbaf-efaa54890e6a",
+      "name": "Solid Net Block",
+      "description": "",
+      "image": "/images/game-items/solid-net-block-3d0b7a6e.webp"
+    },
+    {
+      "uuid": "9acecf66-14c1-11ed-861d-0242ac120002",
+      "name": "Solid Net Wedge",
+      "description": "",
+      "image": "/images/game-items/solid-net-wedge-9acecf66.webp"
+    },
+    {
+      "uuid": "4369132a-40d8-47e7-ac45-e390c0ea6597",
+      "name": "Sound Isolation Large",
+      "description": "",
+      "image": "/images/game-items/sound-isolation-large-4369132a.webp"
+    },
+    {
+      "uuid": "68db6d52-00fb-441a-ab34-a79341acde32",
+      "name": "Sound Isolation Small",
+      "description": "",
+      "image": "/images/game-items/sound-isolation-small-68db6d52.webp"
+    },
+    {
+      "uuid": "027bd4ec-b16d-47d2-8756-e18dc2af3eb6",
+      "name": "Spaceship Block",
+      "description": "",
+      "image": "/images/game-items/spaceship-block-027bd4ec.webp"
+    },
+    {
+      "uuid": "4ad97d49-c8a5-47f3-ace3-d56ba3affe50",
+      "name": "Spaceship Floor Block",
+      "description": "",
+      "image": "/images/game-items/spaceship-floor-block-4ad97d49.webp"
+    },
+    {
+      "uuid": "3f2e9064-14c7-11ed-861d-0242ac120002",
+      "name": "Spaceship Floor Wedge",
+      "description": "",
+      "image": "/images/game-items/spaceship-floor-wedge-3f2e9064.webp"
+    },
+    {
+      "uuid": "396c8a9a-14be-11ed-861d-0242ac120002",
+      "name": "Spaceship Wedge",
+      "description": "",
+      "image": "/images/game-items/spaceship-wedge-396c8a9a.webp"
+    },
+    {
+      "uuid": "67da25c9-3825-41f6-9724-4546a11cb2a5",
+      "name": "Sport Suspension Level 1",
+      "description": "Adds shock absorption and provides stability. Great for vehicles to prevent them from easily flipping over. This suspension is small, but has a firmer bounce.",
+      "image": "/images/game-items/sport-suspension-level-1-67da25c9.webp"
+    },
+    {
+      "uuid": "3cdbbefe-43b4-4ad7-af47-af0b2e7563c9",
+      "name": "Sport Suspension With Bearing Level 1",
+      "description": "Adds shock absorption and provides stability. Great for vehicles to prevent them from easily flipping over. This suspension is small, but has a firmer bounce. With an integrated bearing!",
+      "image": "/images/game-items/sport-suspension-with-bearing-level-1-3cdbbefe.webp"
+    },
+    {
+      "uuid": "c5ea0c2f-185b-48d6-b4df-45c386a575cc",
+      "name": "Spud Gun",
+      "description": "Spud Gun with single potato shot.",
+      "image": "/images/game-items/spud-gun-c5ea0c2f.webp"
+    },
+    {
+      "uuid": "448f7c93-699d-47b4-8e3e-296971067ef4",
+      "name": "Spud Gun",
+      "description": "Spud Gun with single potato shot.",
+      "image": "/images/game-items/spud-gun-448f7c93.webp"
+    },
+    {
+      "uuid": "f6250bf4-9726-406f-a29a-945c06e460e5",
+      "name": "Spud Shotgun",
+      "description": "Shoots sizzling hot fries in a spread.",
+      "image": "/images/game-items/spud-shotgun-f6250bf4.webp"
+    },
+    {
+      "uuid": "9fde0601-c2ba-4c70-8d5c-2a7a9fdd122b",
+      "name": "Spudling Gun",
+      "description": "Shoots potatoes in a rapid fire. Uses a lot of potato ammo.",
+      "image": "/images/game-items/spudling-gun-9fde0601.webp"
+    },
+    {
+      "uuid": "b4fa180c-2111-4339-b6fd-aed900b57093",
+      "name": "Square Mesh Block",
+      "description": "",
+      "image": "/images/game-items/square-mesh-block-b4fa180c.webp"
+    },
+    {
+      "uuid": "27e9c9ee-14c4-11ed-861d-0242ac120002",
+      "name": "Square Mesh Wedge",
+      "description": "",
+      "image": "/images/game-items/square-mesh-wedge-27e9c9ee.webp"
+    },
+    {
+      "uuid": "53349c8d-14e8-4055-bd79-a1ab56fe876e",
+      "name": "Square Window",
+      "description": "",
+      "image": "/images/game-items/square-window-53349c8d.webp"
+    },
+    {
+      "uuid": "d361b477-69b2-4a3a-b119-ec99a3938f5b",
+      "name": "Stacked Crates",
+      "description": "",
+      "image": "/images/game-items/stacked-crates-d361b477.webp"
+    },
+    {
+      "uuid": "1ef1f0e8-389c-4eb9-b4a8-784499353f14",
+      "name": "Staircase Baluster",
+      "description": "",
+      "image": "/images/game-items/staircase-baluster-1ef1f0e8.webp"
+    },
+    {
+      "uuid": "b50a014c-0785-4b1b-b63e-51cfdb7e49ad",
+      "name": "Staircase Banister",
+      "description": "",
+      "image": "/images/game-items/staircase-banister-b50a014c.webp"
+    },
+    {
+      "uuid": "d5da6d42-69e2-49ca-8def-3339bf9f0d35",
+      "name": "Staircase Landing",
+      "description": "",
+      "image": "/images/game-items/staircase-landing-d5da6d42.webp"
+    },
+    {
+      "uuid": "85379fe5-da83-4aa2-b9c2-d67476ad6079",
+      "name": "Staircase Long Railing",
+      "description": "",
+      "image": "/images/game-items/staircase-long-railing-85379fe5.webp"
+    },
+    {
+      "uuid": "295451dd-f5b2-421d-9113-b3f704d799d4",
+      "name": "Staircase Railing Join",
+      "description": "",
+      "image": "/images/game-items/staircase-railing-join-295451dd.webp"
+    },
+    {
+      "uuid": "635eee58-9a36-437f-9e30-78dab0cbcc59",
+      "name": "Staircase Ramp",
+      "description": "",
+      "image": "/images/game-items/staircase-ramp-635eee58.webp"
+    },
+    {
+      "uuid": "8336bf8b-cde0-46a0-b995-5000cba4f27f",
+      "name": "Staircase Short Railing",
+      "description": "",
+      "image": "/images/game-items/staircase-short-railing-8336bf8b.webp"
+    },
+    {
+      "uuid": "f5786e5d-8366-4ebf-be00-f3a4b036a77b",
+      "name": "Staircase Step",
+      "description": "",
+      "image": "/images/game-items/staircase-step-f5786e5d.webp"
+    },
+    {
+      "uuid": "e02620a5-371b-4d63-be35-fd8a0552eba9",
+      "name": "Staircase Wedge",
+      "description": "",
+      "image": "/images/game-items/staircase-wedge-e02620a5.webp"
+    },
+    {
+      "uuid": "1dc643c9-6f8e-478a-8ebb-4adf3cb9960f",
+      "name": "Stand Support",
+      "description": "",
+      "image": "/images/game-items/stand-support-1dc643c9.webp"
+    },
+    {
+      "uuid": "9b4ea447-9cd9-4cd1-84d5-8c414890e523",
+      "name": "Stand Support A",
+      "description": "",
+      "image": "/images/game-items/stand-support-a-9b4ea447.webp"
+    },
+    {
+      "uuid": "b1c6bac0-4055-4193-8490-7704d0ea7113",
+      "name": "Stand Support Base",
+      "description": "",
+      "image": "/images/game-items/stand-support-base-b1c6bac0.webp"
+    },
+    {
+      "uuid": "109e1514-4f3b-4bd9-8d95-2d81fdb8fb25",
+      "name": "Stand Support Corner",
+      "description": "",
+      "image": "/images/game-items/stand-support-corner-109e1514.webp"
+    },
+    {
+      "uuid": "e22c8acb-151f-4837-ba32-7c61896b4eec",
+      "name": "Stand Support Long",
+      "description": "",
+      "image": "/images/game-items/stand-support-long-e22c8acb.webp"
+    },
+    {
+      "uuid": "f8c057f3-5b05-40d0-a37e-30f24fcb1aa7",
+      "name": "Standard Box",
+      "description": "",
+      "image": "/images/game-items/standard-box-f8c057f3.webp"
+    },
+    {
+      "uuid": "007d6afc-59ef-4fb4-9bb7-52ab9bcfec22",
+      "name": "Steel Pallet",
+      "description": "",
+      "image": "/images/game-items/steel-pallet-007d6afc.webp"
+    },
+    {
+      "uuid": "6f699ce5-4955-4725-9829-2b6e1dd6eee9",
+      "name": "Steel Support Bracket",
+      "description": "",
+      "image": "/images/game-items/steel-support-bracket-6f699ce5.webp"
+    },
+    {
+      "uuid": "8a87566d-f540-49b6-909d-4dcfbfa007c0",
+      "name": "Sticky Wheel",
+      "description": "The sticky wheels use chemicals to generate a sticky substance that makes it possible to drive up walls. Use the stickiness setting to find the right balance.",
+      "image": "/images/game-items/sticky-wheel-8a87566d.webp"
+    },
+    {
+      "uuid": "068a89ca-504e-4782-9ede-48f710aeea73",
+      "name": "Stop Sign",
+      "description": "",
+      "image": "/images/game-items/stop-sign-068a89ca.webp"
+    },
+    {
+      "uuid": "e71b55c7-8547-4bef-bb77-e976c8abde0b",
+      "name": "Storage Sign",
+      "description": "",
+      "image": "/images/game-items/storage-sign-e71b55c7.webp"
+    },
+    {
+      "uuid": "a479066d-4b03-46b5-8437-e99fec3f43ee",
+      "name": "Striped Net Block",
+      "description": "",
+      "image": "/images/game-items/striped-net-block-a479066d.webp"
+    },
+    {
+      "uuid": "4e72ce8c-14c7-11ed-861d-0242ac120002",
+      "name": "Striped Net Wedge",
+      "description": "",
+      "image": "/images/game-items/striped-net-wedge-4e72ce8c.webp"
+    },
+    {
+      "uuid": "cb7305b2-d8b5-4302-aff3-6cdd9212ca64",
+      "name": "Sunshake",
+      "description": "Mechanics love a cold sunshake when thirsty.",
+      "image": "/images/game-items/sunshake-cb7305b2.webp"
+    },
+    {
+      "uuid": "5ad298e4-f5ad-479c-9ec6-6c4f9d3fb8ae",
+      "name": "Sunshake Vending Machine",
+      "description": "",
+      "image": "/images/game-items/sunshake-vending-machine-5ad298e4.webp"
+    },
+    {
+      "uuid": "aa5325da-03f9-46cc-9655-983ee7ac2ab2",
+      "name": "Support Pillar",
+      "description": "",
+      "image": "/images/game-items/support-pillar-aa5325da.webp"
+    },
+    {
+      "uuid": "45e5c193-8896-4687-a4b0-cf4b2da047d1",
+      "name": "Support Pillar Stand",
+      "description": "",
+      "image": "/images/game-items/support-pillar-stand-45e5c193.webp"
+    },
+    {
+      "uuid": "33d5f0c1-f80c-478a-b69d-9edafe376474",
+      "name": "Support Structure",
+      "description": "",
+      "image": "/images/game-items/support-structure-33d5f0c1.webp"
+    },
+    {
+      "uuid": "7cf717d7-d167-4f2d-a6e7-6b2c70aa3986",
+      "name": "Switch",
+      "description": "Unlimited toggling on demand. The Switch activates whatever it's connected to, making it indispensible when you want to turn things on and off with a single push. It can activate an engine, a thruster, the controller and more.",
+      "image": "/images/game-items/switch-7cf717d7.webp"
+    },
+    {
+      "uuid": "4f9d4c7b-c9fe-4f95-a36a-8f22654d14f5",
+      "name": "Synth",
+      "description": "Use to play a tune.",
+      "image": "/images/game-items/synth-4f9d4c7b.webp"
+    },
+    {
+      "uuid": "e5e81f70-6477-4099-ad77-76bf6a4f364f",
+      "name": "Table Lamp",
+      "description": "",
+      "image": "/images/game-items/table-lamp-e5e81f70.webp"
+    },
+    {
+      "uuid": "6a720005-ba27-4cfc-8fb3-b1af8b9c8bd3",
+      "name": "Table Support",
+      "description": "",
+      "image": "/images/game-items/table-support-6a720005.webp"
+    },
+    {
+      "uuid": "f80026c5-2019-4f87-8abd-345bd23aa156",
+      "name": "Tall Shelf Support",
+      "description": "",
+      "image": "/images/game-items/tall-shelf-support-f80026c5.webp"
+    },
+    {
+      "uuid": "5e96037a-a338-490a-a76f-6b4d820f8e46",
+      "name": "Thruster",
+      "description": "Enough of these can make things fly. Needs to be connected to a trigger or the driver's seat in order to activate.",
+      "image": "/images/game-items/thruster-5e96037a.webp"
+    },
+    {
+      "uuid": "df8528ed-15ad-4a39-a33a-698880684001",
+      "name": "Thruster Level 1",
+      "description": "Enough of these can make things fly. Needs to be connected to a trigger or the driver's seat in order to activate. Upgrade for less gas consumption.",
+      "image": "/images/game-items/thruster-level-1-df8528ed.webp"
+    },
+    {
+      "uuid": "8ca49bff-eeef-4b43-abd0-b527a567f1b7",
+      "name": "Tile Block",
+      "description": "",
+      "image": "/images/game-items/tile-block-8ca49bff.webp"
+    },
+    {
+      "uuid": "b67c82e4-14bc-11ed-861d-0242ac120002",
+      "name": "Tile Wedge",
+      "description": "",
+      "image": "/images/game-items/tile-wedge-b67c82e4.webp"
+    },
+    {
+      "uuid": "8f7fd0e7-c46e-4944-a414-7ce2437bb30f",
+      "name": "Timer",
+      "description": "The Timer allows you delay the interaction between two interactive parts. For example, between a switch and a controller. It goes great with Logic Gates.",
+      "image": "/images/game-items/timer-8f7fd0e7.webp"
+    },
+    {
+      "uuid": "ca003562-fde7-463c-969e-f8334ae54387",
+      "name": "Toilet",
+      "description": "Used for avoiding standing. Take a seat and relax or add it to your vehicle so your friends can tag along. Can be connected to triggers which can activate other interactive parts from the toilet. Don't forget to flush!",
+      "image": "/images/game-items/toilet-ca003562.webp"
+    },
+    {
+      "uuid": "e2a0770b-9bb9-4b3b-b9f2-994b534b79f3",
+      "name": "Toilet Paper",
+      "description": "",
+      "image": "/images/game-items/toilet-paper-e2a0770b.webp"
+    },
+    {
+      "uuid": "6d92d8e7-25e9-4698-b83d-a64dc97978c8",
+      "name": "Tomato",
+      "description": "A juicy Tomato.",
+      "image": "/images/game-items/tomato-6d92d8e7.webp"
+    },
+    {
+      "uuid": "1dcd74ca-39ba-4b00-a36a-3381b25055f4",
+      "name": "Tomato Crate",
+      "description": "",
+      "image": "/images/game-items/tomato-crate-1dcd74ca.webp"
+    },
+    {
+      "uuid": "a0654dd8-f36a-4c41-bafd-18d9e5f0df2e",
+      "name": "Tomato Juice Cylinder",
+      "description": "",
+      "image": "/images/game-items/tomato-juice-cylinder-a0654dd8.webp"
+    },
+    {
+      "uuid": "38e41fb5-dd50-4294-829d-a517f0282fed",
+      "name": "Tomato Seed",
+      "description": "",
+      "image": "/images/game-items/tomato-seed-38e41fb5.webp"
+    },
+    {
+      "uuid": "161786c1-1290-4817-8f8b-7f80de755a06",
+      "name": "Totebot Head: Bass",
+      "description": "This robot head is broken. But the sound generator inside seems to still be working. Creative mechanics can probably find a way to make music with this.",
+      "image": "/images/game-items/totebot-head-bass-161786c1.webp"
+    },
+    {
+      "uuid": "1c04327f-1de4-4b06-92a8-2c9b40e491aa",
+      "name": "Totebot Head: Blip",
+      "description": "This robot head is broken. But the sound generator inside seems to still be working. Creative mechanics can probably find a way to make music with this.",
+      "image": "/images/game-items/totebot-head-blip-1c04327f.webp"
+    },
+    {
+      "uuid": "4c6e27a2-4c35-4df3-9794-5e206fef9012",
+      "name": "Totebot Head: Percussion",
+      "description": "This robot head is broken. But the sound generator inside seems to still be working. Creative mechanics can probably find a way to make music with this.",
+      "image": "/images/game-items/totebot-head-percussion-4c6e27a2.webp"
+    },
+    {
+      "uuid": "a052e116-f273-4d73-872c-924a97b86720",
+      "name": "Totebot Head: Synth Voice",
+      "description": "This robot head is broken. But the sound generator inside seems to still be working. Creative mechanics can probably find a way to make music with this.",
+      "image": "/images/game-items/totebot-head-synth-voice-a052e116.webp"
+    },
+    {
+      "uuid": "f9e8707a-62f8-4051-84e9-c2e17b686d9e",
+      "name": "Tower Pole",
+      "description": "",
+      "image": "/images/game-items/tower-pole-f9e8707a.webp"
+    },
+    {
+      "uuid": "e3e58881-69e6-4593-8211-017bcd72c907",
+      "name": "Tower Pole Top",
+      "description": "",
+      "image": "/images/game-items/tower-pole-top-e3e58881.webp"
+    },
+    {
+      "uuid": "1f334b62-8955-4406-8848-91e03228c330",
+      "name": "Traffic Cone",
+      "description": "",
+      "image": "/images/game-items/traffic-cone-1f334b62.webp"
+    },
+    {
+      "uuid": "c7772f74-f120-4008-8121-977e52a1d7c0",
+      "name": "Traffic Sign",
+      "description": "",
+      "image": "/images/game-items/traffic-sign-c7772f74.webp"
+    },
+    {
+      "uuid": "346a4ea9-d360-4133-b62f-4c188000c60b",
+      "name": "Trigger Frame",
+      "description": "",
+      "image": "/images/game-items/trigger-frame-346a4ea9.webp"
+    },
+    {
+      "uuid": "903b0823-4ce1-48e6-9702-aeaa7598c347",
+      "name": "Tubes Corner",
+      "description": "",
+      "image": "/images/game-items/tubes-corner-903b0823.webp"
+    },
+    {
+      "uuid": "885ab381-007d-4a60-99e3-c58dec54c880",
+      "name": "Tubes Join",
+      "description": "",
+      "image": "/images/game-items/tubes-join-885ab381.webp"
+    },
+    {
+      "uuid": "2ba72fca-443a-49e4-8eb2-073c4226866e",
+      "name": "Tubes Long",
+      "description": "",
+      "image": "/images/game-items/tubes-long-2ba72fca.webp"
+    },
+    {
+      "uuid": "647296c4-41ef-4173-8a54-d2a1ae1e89c3",
+      "name": "Tubes Short",
+      "description": "",
+      "image": "/images/game-items/tubes-short-647296c4.webp"
+    },
+    {
+      "uuid": "b8f9c227-ab51-4d38-b425-dfc208cc4dd6",
+      "name": "Turret Seat Level 1",
+      "description": "A ball turret seat that let’s you aim in a 360 view and range of motion. Attach anything you like to the front surface.",
+      "image": "/images/game-items/turret-seat-level-1-b8f9c227.webp"
+    },
+    {
+      "uuid": "56545d5c-556d-4cd5-9125-6e34acf37c3d",
+      "name": "U-Beam",
+      "description": "",
+      "image": "/images/game-items/u-beam-56545d5c.webp"
+    },
+    {
+      "uuid": "db2ce519-490e-4432-b329-c973ecc8f5d9",
+      "name": "Udder Decoration",
+      "description": "",
+      "image": "/images/game-items/udder-decoration-db2ce519.webp"
+    },
+    {
+      "uuid": "8a4a55b0-0228-4839-933b-0716cedb3f96",
+      "name": "Unfolded Banana Box",
+      "description": "",
+      "image": "/images/game-items/unfolded-banana-box-8a4a55b0.webp"
+    },
+    {
+      "uuid": "71665314-db59-4c43-bfe2-2746baa8ffe9",
+      "name": "Unfolded Grow Box",
+      "description": "",
+      "image": "/images/game-items/unfolded-grow-box-71665314.webp"
+    },
+    {
+      "uuid": "f8da6b41-03d7-4bc1-ba94-011a351b1569",
+      "name": "Unfolded Onion Box",
+      "description": "",
+      "image": "/images/game-items/unfolded-onion-box-f8da6b41.webp"
+    },
+    {
+      "uuid": "884080be-c723-4e6e-828b-6019af8beed6",
+      "name": "Utility Sign",
+      "description": "",
+      "image": "/images/game-items/utility-sign-884080be.webp"
+    },
+    {
+      "uuid": "9b8f2abd-265c-4750-b8b9-fe6cb564633c",
+      "name": "Vacuum Pipe",
+      "description": "Use it with the Vacuum Pump to make items travel through pipes.",
+      "image": "/images/game-items/vacuum-pipe-9b8f2abd.webp"
+    },
+    {
+      "uuid": "5939f460-ab6c-48f2-9d07-a66845ce8cf2",
+      "name": "Vacuum Pipe Corner",
+      "description": "Use it with the Vacuum Pump to make items travel through pipes.",
+      "image": "/images/game-items/vacuum-pipe-corner-5939f460.webp"
+    },
+    {
+      "uuid": "bab9d1d1-6131-4329-a6f2-7b2ddf1f25e1",
+      "name": "Vacuum Pipe T",
+      "description": "Use it with the Vacuum Pump to make items travel through pipes.",
+      "image": "/images/game-items/vacuum-pipe-t-bab9d1d1.webp"
+    },
+    {
+      "uuid": "97f449b6-c948-448b-b8b3-4448e3f6b956",
+      "name": "Vacuum Pump",
+      "description": "The Vaccum Pump has many uses when connected to a trigger. Suck up water in to a water container. Pick up plants in to a chest. It can even shoot and place items from a chest.",
+      "image": "/images/game-items/vacuum-pump-97f449b6.webp"
+    },
+    {
+      "uuid": "04782466-eca1-4ed9-8502-036ea269aed9",
+      "name": "Valve",
+      "description": "",
+      "image": "/images/game-items/valve-04782466.webp"
+    },
+    {
+      "uuid": "80550b05-f9eb-433c-9773-2af3beb1479d",
+      "name": "Vegetable Box",
+      "description": "",
+      "image": "/images/game-items/vegetable-box-80550b05.webp"
+    },
+    {
+      "uuid": "54d8ef21-357d-48a3-a66d-40446f6bb686",
+      "name": "Veggie Burger",
+      "description": "Gives Max HP and randomly applies a special perk.",
+      "image": "/images/game-items/veggie-burger-54d8ef21.webp"
+    },
+    {
+      "uuid": "7237080a-676b-4be1-bb7f-2fb1a9f6f274",
+      "name": "Ventilation Frame",
+      "description": "",
+      "image": "/images/game-items/ventilation-frame-7237080a.webp"
+    },
+    {
+      "uuid": "0a597f6d-eb45-4f93-91e5-130e19e0f1f5",
+      "name": "Ventilation Grid",
+      "description": "",
+      "image": "/images/game-items/ventilation-grid-0a597f6d.webp"
+    },
+    {
+      "uuid": "2c90e412-9476-40d9-a440-228c888186bd",
+      "name": "Warehouse Brick Lamp",
+      "description": "",
+      "image": "/images/game-items/warehouse-brick-lamp-2c90e412.webp"
+    },
+    {
+      "uuid": "10590ecd-7d2f-4ff9-a6de-e749870ae8b8",
+      "name": "Warehouse Crate",
+      "description": "",
+      "image": "/images/game-items/warehouse-crate-10590ecd.webp"
+    },
+    {
+      "uuid": "7b2c96af-a4a1-420e-9370-ea5b58f23a7e",
+      "name": "Warehouse Fluorescent Light",
+      "description": "",
+      "image": "/images/game-items/warehouse-fluorescent-light-7b2c96af.webp"
+    },
+    {
+      "uuid": "4724913e-4f9b-4334-8408-4b0850a1c7de",
+      "name": "Warehouse Sign",
+      "description": "",
+      "image": "/images/game-items/warehouse-sign-4724913e.webp"
+    },
+    {
+      "uuid": "0ebf382a-e2e4-4c46-a48e-87808308c1e3",
+      "name": "Warehouse sink",
+      "description": "",
+      "image": "/images/game-items/warehouse-sink-0ebf382a.webp"
+    },
+    {
+      "uuid": "85339a1d-e67f-4c63-94fd-4a1cf8c25810",
+      "name": "Warehouse Spot Small",
+      "description": "",
+      "image": "/images/game-items/warehouse-spot-small-85339a1d.webp"
+    },
+    {
+      "uuid": "695d66c8-b937-472d-8bc2-f3d72dd92879",
+      "name": "Warehouse Spotlight",
+      "description": "Let there be visibility! Connect to a trigger to turn on and off. Adjustable beam range.",
+      "image": "/images/game-items/warehouse-spotlight-695d66c8.webp"
+    },
+    {
+      "uuid": "5e3dff9b-2450-44ae-ad46-d2f6b5148cbf",
+      "name": "Warehouse Square Light",
+      "description": "",
+      "image": "/images/game-items/warehouse-square-light-5e3dff9b.webp"
+    },
+    {
+      "uuid": "9e9280f7-c9bc-4b86-b788-43f9b48903dd",
+      "name": "Warehouse Ventilation Corner",
+      "description": "",
+      "image": "/images/game-items/warehouse-ventilation-corner-9e9280f7.webp"
+    },
+    {
+      "uuid": "e0f8dc49-c418-403b-a7a1-44bea7ecd3d0",
+      "name": "Warehouse Ventilation Drum",
+      "description": "",
+      "image": "/images/game-items/warehouse-ventilation-drum-e0f8dc49.webp"
+    },
+    {
+      "uuid": "468650b4-5ff7-4be1-9e75-05ed86fd83e0",
+      "name": "Warehouse Ventilation Long",
+      "description": "",
+      "image": "/images/game-items/warehouse-ventilation-long-468650b4.webp"
+    },
+    {
+      "uuid": "20821431-de44-4d54-8877-60833316104e",
+      "name": "Warehouse Ventilation Mount",
+      "description": "",
+      "image": "/images/game-items/warehouse-ventilation-mount-20821431.webp"
+    },
+    {
+      "uuid": "764e94d1-61c0-4fef-9719-5548889e4817",
+      "name": "Warehouse Ventilation Short",
+      "description": "",
+      "image": "/images/game-items/warehouse-ventilation-short-764e94d1.webp"
+    },
+    {
+      "uuid": "e846e3e7-b608-49c9-bbfd-e0bb859e6d3c",
+      "name": "Warehouse Ventilation Tee",
+      "description": "",
+      "image": "/images/game-items/warehouse-ventilation-tee-e846e3e7.webp"
+    },
+    {
+      "uuid": "e91b0bf2-dafa-439e-a503-286e91461bb0",
+      "name": "Warehouse Wall Light",
+      "description": "",
+      "image": "/images/game-items/warehouse-wall-light-e91b0bf2.webp"
+    },
+    {
+      "uuid": "16ba2d22-7b96-4c5e-9eb7-f6422ed80ad4",
+      "name": "Warehouse Wide Spotlight",
+      "description": "",
+      "image": "/images/game-items/warehouse-wide-spotlight-16ba2d22.webp"
+    },
+    {
+      "uuid": "869d4736-289a-4952-96cd-8a40117a2d28",
+      "name": "Water",
+      "description": "Can be used in a water cannon and some recipes.",
+      "image": "/images/game-items/water-869d4736.webp"
+    },
+    {
+      "uuid": "798c2c81-1f8e-481b-8c32-b71b5dc5511a",
+      "name": "Water Bucket",
+      "description": "Fill it with water to water your plants.",
+      "image": "/images/game-items/water-bucket-798c2c81.webp"
+    },
+    {
+      "uuid": "103fc4e6-7e57-465e-a86d-983343415877",
+      "name": "Water Bucket",
+      "description": "Bucket with water.",
+      "image": "/images/game-items/water-bucket-103fc4e6.webp"
+    },
+    {
+      "uuid": "69559e81-50fa-40ae-afa2-a22c1a49eb54",
+      "name": "Water Cannon",
+      "description": "Connect it to a Water container with a trigger to water your plants more efficiently.",
+      "image": "/images/game-items/water-cannon-69559e81.webp"
+    },
+    {
+      "uuid": "ea10d1af-b97a-46fb-8895-dfd1becb53bb",
+      "name": "Water Container",
+      "description": "Used to store larger amount of water and to fill water buckets.",
+      "image": "/images/game-items/water-container-ea10d1af.webp"
+    },
+    {
+      "uuid": "0c077288-d15d-45d6-8439-3dabe7144034",
+      "name": "Water Dispenser",
+      "description": "",
+      "image": "/images/game-items/water-dispenser-0c077288.webp"
+    },
+    {
+      "uuid": "e7eae129-9e3f-45d2-997c-637865c60a5e",
+      "name": "Water Tank",
+      "description": "",
+      "image": "/images/game-items/water-tank-e7eae129.webp"
+    },
+    {
+      "uuid": "d509a432-85f9-419f-8b02-8d58b1082f97",
+      "name": "Welcome Sign",
+      "description": "",
+      "image": "/images/game-items/welcome-sign-d509a432.webp"
+    },
+    {
+      "uuid": "fdb8b8be-96e7-4de0-85c7-d2f42e4f33ce",
+      "name": "Weld Tool",
+      "description": "Weld your creations together! Select the Weld Tool and left-click on a loose creation, then left-click on a surface of another creation to weld them together. You can also join touching parts on the lift. Hold the left mouse button on the first part and drag to the part you wish to weld together.",
+      "image": "/images/game-items/weld-tool-fdb8b8be.webp"
+    },
+    {
+      "uuid": "69e362c3-32aa-4cd1-adc0-dcfc47b92c0d",
+      "name": "Wheel",
+      "description": "",
+      "image": "/images/game-items/wheel-69e362c3.webp"
+    },
+    {
+      "uuid": "8b4bd31f-cb1e-42ae-ac33-b2f951609bd2",
+      "name": "Wind Shield",
+      "description": "",
+      "image": "/images/game-items/wind-shield-8b4bd31f.webp"
+    },
+    {
+      "uuid": "0e6e6903-c284-40ee-9d39-b55312094dac",
+      "name": "Window",
+      "description": "",
+      "image": "/images/game-items/window-0e6e6903.webp"
+    },
+    {
+      "uuid": "5e51e905-2092-4069-9eb5-afa67b8b2fc8",
+      "name": "Window With Blinds",
+      "description": "Connect it to a trigger to close the blinds.",
+      "image": "/images/game-items/window-with-blinds-5e51e905.webp"
+    },
+    {
+      "uuid": "120ee9c7-198b-4cb2-919d-51601ba2867e",
+      "name": "Window With Curtains",
+      "description": "Connect it to a trigger to close the curtains.",
+      "image": "/images/game-items/window-with-curtains-120ee9c7.webp"
+    },
+    {
+      "uuid": "cb40d51e-86dc-4bf4-999a-879dbfe91e4b",
+      "name": "Wire Wheel",
+      "description": "",
+      "image": "/images/game-items/wire-wheel-cb40d51e.webp"
+    },
+    {
+      "uuid": "33102836-a94d-4ab3-9864-3d54d32c230d",
+      "name": "Wires Bend",
+      "description": "",
+      "image": "/images/game-items/wires-bend-33102836.webp"
+    },
+    {
+      "uuid": "a8164438-65fa-4840-8bc2-766fad543841",
+      "name": "Wires Concave Bend",
+      "description": "",
+      "image": "/images/game-items/wires-concave-bend-a8164438.webp"
+    },
+    {
+      "uuid": "f0713386-8c95-493d-b013-e8e53e32d1ed",
+      "name": "Wires Convex Bend",
+      "description": "",
+      "image": "/images/game-items/wires-convex-bend-f0713386.webp"
+    },
+    {
+      "uuid": "0535b90e-f0a8-491c-8c70-1fc81b939fb4",
+      "name": "Wires Long",
+      "description": "",
+      "image": "/images/game-items/wires-long-0535b90e.webp"
+    },
+    {
+      "uuid": "6be64f78-927b-4f61-b645-20adfbd9bfce",
+      "name": "Wires Short",
+      "description": "",
+      "image": "/images/game-items/wires-short-6be64f78.webp"
+    },
+    {
+      "uuid": "cbd2c2d3-ea26-4805-b9fe-5694f89f162f",
+      "name": "Woc Picture",
+      "description": "",
+      "image": "/images/game-items/woc-picture-cbd2c2d3.webp"
+    },
+    {
+      "uuid": "fb0f128c-e607-4c52-9c25-f44dfd2dd95e",
+      "name": "Woc Steak",
+      "description": "",
+      "image": "/images/game-items/woc-steak-fb0f128c.webp"
+    },
+    {
+      "uuid": "e08d860d-650e-4b81-8cfa-411ea8e6e9c0",
+      "name": "Woman Sign",
+      "description": "",
+      "image": "/images/game-items/woman-sign-e08d860d.webp"
+    },
+    {
+      "uuid": "efb2837c-f1d2-412b-bff1-a210b3426fd9",
+      "name": "Wonk Stack",
+      "description": "",
+      "image": "/images/game-items/wonk-stack-efb2837c.webp"
+    },
+    {
+      "uuid": "f99ebc34-4821-4b39-a625-b839c5802ed5",
+      "name": "Wood",
+      "description": "",
+      "image": "/images/game-items/wood-f99ebc34.webp"
+    },
+    {
+      "uuid": "df953d9c-234f-4ac2-af5e-f0490b223e71",
+      "name": "Wood Block Level 1",
+      "description": "",
+      "image": "/images/game-items/wood-block-level-1-df953d9c.webp"
+    },
+    {
+      "uuid": "1897ee42-0291-43e4-9645-8c5a5d310398",
+      "name": "Wood Block Level 2",
+      "description": "",
+      "image": "/images/game-items/wood-block-level-2-1897ee42.webp"
+    },
+    {
+      "uuid": "061b5d4b-0a6a-4212-b0ae-9e9681f1cbfb",
+      "name": "Wood Block Level 3",
+      "description": "",
+      "image": "/images/game-items/wood-block-level-3-061b5d4b.webp"
+    },
+    {
+      "uuid": "e6796f6a-138e-4086-9fe3-da6910e00484",
+      "name": "Wood Box",
+      "description": "",
+      "image": "/images/game-items/wood-box-e6796f6a.webp"
+    },
+    {
+      "uuid": "7b2955eb-0491-46b4-b43d-b7ea4edd3852",
+      "name": "Wood Cable Spool",
+      "description": "",
+      "image": "/images/game-items/wood-cable-spool-7b2955eb.webp"
+    },
+    {
+      "uuid": "4406022d-30fb-42cd-9970-c4f5290b85a6",
+      "name": "Wood Freight Crate",
+      "description": "",
+      "image": "/images/game-items/wood-freight-crate-4406022d.webp"
+    },
+    {
+      "uuid": "8cf2c0fb-0b04-4a31-b8af-e89a025307b4",
+      "name": "Wood Freight Shell",
+      "description": "",
+      "image": "/images/game-items/wood-freight-shell-8cf2c0fb.webp"
+    },
+    {
+      "uuid": "6bc1a2b3-0e25-4c05-9965-95ed610931d0",
+      "name": "Wood Stairs",
+      "description": "",
+      "image": "/images/game-items/wood-stairs-6bc1a2b3.webp"
+    },
+    {
+      "uuid": "cb529af8-14b9-11ed-861d-0242ac120002",
+      "name": "Wood Wedge Level 1",
+      "description": "",
+      "image": "/images/game-items/wood-wedge-level-1-cb529af8.webp"
+    },
+    {
+      "uuid": "5dae0b3a-14bf-11ed-861d-0242ac120002",
+      "name": "Wood Wedge Level 2",
+      "description": "",
+      "image": "/images/game-items/wood-wedge-level-2-5dae0b3a.webp"
+    },
+    {
+      "uuid": "5dae0d42-14bf-11ed-861d-0242ac120002",
+      "name": "Wood Wedge Level 3",
+      "description": "",
+      "image": "/images/game-items/wood-wedge-level-3-5dae0d42.webp"
+    },
+    {
+      "uuid": "c3990931-b471-4e89-beb5-0baaef47f0af",
+      "name": "Wooden Crate",
+      "description": "",
+      "image": "/images/game-items/wooden-crate-c3990931.webp"
+    },
+    {
+      "uuid": "da6e54df-a223-4a0e-b42f-ddeddd33f5b3",
+      "name": "Work Light",
+      "description": "",
+      "image": "/images/game-items/work-light-da6e54df.webp"
+    },
+    {
+      "uuid": "d740a27d-cc0f-4866-9e07-6a5c516ad719",
+      "name": "Worn Metal Block",
+      "description": "",
+      "image": "/images/game-items/worn-metal-block-d740a27d.webp"
+    },
+    {
+      "uuid": "3f2e8e84-14c7-11ed-861d-0242ac120002",
+      "name": "Worn Metal Wedge",
+      "description": "",
+      "image": "/images/game-items/worn-metal-wedge-3f2e8e84.webp"
+    },
+    {
+      "uuid": "551eb70f-244c-4bb4-844c-b2f4ce11cb43",
+      "name": "Wow T-Shirt",
+      "description": "",
+      "image": null
+    },
+    {
+      "uuid": "72074131-529b-49c1-9ff3-73706f61eb06",
+      "name": "Wrapping Roll",
+      "description": "",
+      "image": "/images/game-items/wrapping-roll-72074131.webp"
+    },
+    {
+      "uuid": "9601f2ca-9552-48b0-afc1-b0f200461114",
+      "name": "XXL Chest",
+      "description": "A huge chest with multiple pipe connections, perfect for an upcoming factory engineer.",
+      "image": "/images/game-items/xxl-chest-9601f2ca.webp"
+    },
+    {
+      "uuid": "17371481-da9e-4bc1-bbbd-438109aad552",
+      "name": "Yellow Totebot Statue",
+      "description": "",
+      "image": "/images/game-items/yellow-totebot-statue-17371481.webp"
+    }
+  ]
+}

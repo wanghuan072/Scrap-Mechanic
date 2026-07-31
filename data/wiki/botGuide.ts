@@ -1,0 +1,413 @@
+export type BotDirectoryRow = {
+  name: string;
+  href?: string;
+  behavior: string;
+  encounter: string;
+  output: string;
+  response: string;
+};
+
+export type BotDirectoryGroup = {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+  rows: BotDirectoryRow[];
+};
+
+export const botDirectoryGroups: BotDirectoryGroup[] = [
+  {
+    id: "surface-raid-bots",
+    label: "Surface and raid threats",
+    title: "Farm bots that attack crops, players, and creations",
+    description:
+      "Use this group when the search means enemy farm bots rather than crafting stations. Color is not cosmetic: Totebot and Tapebot variants change movement, attack type, and target priority.",
+    rows: [
+      {
+        name: "Green Totebot",
+        href: "/wiki/bots/totebot",
+        behavior: "Fast melee swarm",
+        encounter: "Surface exploration and farm raids",
+        output: "Circuit Board",
+        response: "Split the pack and avoid backing into crop rows.",
+      },
+      {
+        name: "Haybot",
+        href: "/wiki/bots/haybot",
+        behavior: "Pitchfork melee; attacks weak structures",
+        encounter: "Ruins, fields, and raids",
+        output: "Scrap Metal plus a bonus roll",
+        response: "Read the wind-up and fight in an open lane.",
+      },
+      {
+        name: "Blue Totebot",
+        href: "/wiki/bots/blue-totebot",
+        behavior: "Underwater torpedo and 20-damage melee",
+        encounter: "Water routes and land after provocation",
+        output: "Independent chances for Circuit Board, Glue, and a rare Drill",
+        response: "Leave the water before committing to close combat.",
+      },
+      {
+        name: "Yellow Totebot",
+        href: "/wiki/bots/yellow-totebot",
+        behavior: "Jumping stomp that crosses floors and ceilings",
+        encounter: "Surface combat and farm raids",
+        output: "1–2 Circuit Boards; possible Batteries",
+        response: "Do not rely on a low roof as the only barrier.",
+      },
+      {
+        name: "Red Explosive Totebot",
+        href: "/wiki/bots/red-explosive-totebot",
+        behavior: "Ignites, rushes, and explodes",
+        encounter: "Surface, raids, Growlabs, Warehouses, underground",
+        output: "No normal loot",
+        response: "Make it the first target and keep it away from storage.",
+      },
+      {
+        name: "Tapebot family",
+        href: "/wiki/bots/tapebot",
+        behavior: "Ranged tape, explosive tape, bubbles, or slowing ink",
+        encounter: "Warehouses, Growlabs, and higher-pressure raids",
+        output: "Varies by family and encounter",
+        response: "Break line of sight; identify color before peeking.",
+      },
+      {
+        name: "Farmbot",
+        href: "/wiki/bots/farmbot",
+        behavior: "Heavy melee, kick, and pesticide pressure",
+        encounter: "Surface patrols and high-pressure raids",
+        output: "Warehouse Key plus bonus materials",
+        response: "Budget ammunition and keep it off the vehicle.",
+      },
+    ],
+  },
+  {
+    id: "drilling-thunder-bots",
+    label: "Drilling Thunder encounters",
+    title: "New bots tied to underground travel and story encounters",
+    description:
+      "These bots solve very different combat problems. A general-purpose farm wall does not answer digging Cablebots, ceiling Minerbots, an invulnerable Scannerbot event, and a staged Trashbot boss fight in the same way.",
+    rows: [
+      {
+        name: "Cablebot",
+        href: "/wiki/bots/cablebot",
+        behavior: "Bites, jumps, attacks creations, and can dig",
+        encounter: "Underground pockets and cable-infested routes",
+        output: "25% Cable Roll chance",
+        response: "Protect exposed working parts and clear it before repairs.",
+      },
+      {
+        name: "Minerbot",
+        href: "/wiki/bots/minerbot",
+        behavior: "Flying rock-spray threat",
+        encounter: "Underground mining routes",
+        output: "Component Kit and tier-matched ore nuggets",
+        response: "Scan overhead space and leave room for the crash.",
+      },
+      {
+        name: "Scannerbot",
+        href: "/wiki/bots/scannerbot",
+        behavior: "Mobile missile platform; normal attacks do not damage it",
+        encounter: "Scripted roaming event",
+        output: "No normal kill drop",
+        response: "Use terrain and movement; treat survival as the objective.",
+      },
+      {
+        name: "Drillbot",
+        behavior: "Multi-part drilling boss encounter",
+        encounter: "Drillbot arena and story progression",
+        output: "Encounter progression rather than a farmable drop",
+        response: "Read the phase objective instead of firing at every surface.",
+      },
+      {
+        name: "Trashbot",
+        href: "/wiki/bots/trashbot",
+        behavior: "Two staged fights with pattern and weak-point windows",
+        encounter: "Trashbot arena",
+        output: "Boss progression",
+        response: "Damage the open eye, then use the exposed core window.",
+      },
+    ],
+  },
+  {
+    id: "non-aggressive-bots",
+    label: "Non-aggressive and resource carriers",
+    title: "Bots and creatures that should not be treated like raid enemies",
+    description:
+      "Seedbot and Lootbot flee from nearby players and do not run attack states. Wocs and Glowbs are creatures, but players commonly include them in bot searches because they convert feed into useful farm resources.",
+    rows: [
+      {
+        name: "Seedbot",
+        href: "/wiki/bots/seedbot",
+        behavior: "Flees; carries one visible seed-crate type",
+        encounter: "Seedbot spawn nodes across Survival",
+        output: "Matching seeds when damaged or destroyed",
+        response: "Identify the crate before deciding whether to chase it.",
+      },
+      {
+        name: "Lootbot",
+        href: "/wiki/bots/lootbot",
+        behavior: "Flees and releases one reward per accepted hit",
+        encounter: "Raid or scripted loot encounters",
+        output: "Materials, produce, fuel, Batteries, or special raid reward",
+        response: "Keep the route clear and land deliberate hits.",
+      },
+      {
+        name: "Woc",
+        href: "/wiki/bots/woc",
+        behavior: "Passive animal that eats Corn",
+        encounter: "Surface fields and player pens",
+        output: "Woc Milk after enough Corn",
+        response: "Use a calm feeding pocket outside raid lanes.",
+      },
+      {
+        name: "Glowb",
+        href: "/wiki/bots/glowbug",
+        behavior: "Passive creature that seeks Cardboard Blocks",
+        encounter: "Water and dark natural areas",
+        output: "Glow after enough Cardboard",
+        response: "Feed on reachable ground and collect the Glow promptly.",
+      },
+    ],
+  },
+  {
+    id: "crafting-bots",
+    label: "Player-operated bot stations",
+    title: "Bots that craft, refine, cook, unlock, or process resources",
+    description:
+      "These are placeable stations, not autonomous farm workers. They do not plant or harvest a field by themselves; the player supplies ingredients or connects containers and chooses a recipe.",
+    rows: [
+      {
+        name: "Craftbot",
+        href: "/wiki/parts/crafting-bots",
+        behavior: "Main recipe station",
+        encounter: "Mechanic Station and player workshop",
+        output: "Parts, blocks, machines, and unlocked rewards",
+        response: "Use the Recipes directory to check ingredients and unlocks.",
+      },
+      {
+        name: "Cookbot",
+        href: "/wiki/parts/crafting-bots",
+        behavior: "Combines food ingredients",
+        encounter: "Player workshop",
+        output: "Pizza Burger, Veggie Burger, Revival Baguette",
+        response: "Bring the exact crop quantities; it does not grow crops.",
+      },
+      {
+        name: "Refinebot",
+        href: "/wiki/parts/crafting-bots",
+        behavior: "Processes resource pieces",
+        encounter: "Vehicle or workshop production line",
+        output: "Refined building resources",
+        response: "Pair it with a Resource Collector for a clean input path.",
+      },
+      {
+        name: "Schematicbot",
+        href: "/wiki/schematics/schematicbot",
+        behavior: "Registers locked recipes",
+        encounter: "Mechanic Station",
+        output: "Recipe access, not a finished item",
+        response: "Match the scan method to the recipe you need.",
+      },
+      {
+        name: "Crushbot / Prospectorbot / Sawbot",
+        href: "/wiki/recipes",
+        behavior: "Mining and material-processing stations",
+        encounter: "Excavation Island progression",
+        output: "Crushed ore, selected materials, and sawn outputs",
+        response: "Plan the whole input-to-storage chain before placing machines.",
+      },
+    ],
+  },
+];
+
+export type CropBotRoute = {
+  crop: string;
+  slug?: string;
+  seedbot: string;
+  lootbot: string;
+  cookbot: string;
+  fieldPlan: string;
+};
+
+export const cropBotRoutes: CropBotRoute[] = [
+  {
+    crop: "Tomato",
+    slug: "tomato",
+    seedbot: "Tomato Seedbot",
+    lootbot: "Possible produce from each accepted Lootbot hit",
+    cookbot: "Pizza Burger ×5; Veggie Burger ×2; Revival Baguette ×3",
+    fieldPlan: "Separate seed stock from tomatoes reserved for all three Cookbot recipes.",
+  },
+  {
+    crop: "Carrot",
+    slug: "carrot",
+    seedbot: "Carrot Seedbot",
+    lootbot: "Possible produce from each accepted Lootbot hit",
+    cookbot: "Veggie Burger ×4; Revival Baguette ×3",
+    fieldPlan: "Reserve seven Carrots if you want one of each Carrot-based Cookbot output.",
+  },
+  {
+    crop: "Redbeet",
+    slug: "redbeet",
+    seedbot: "Redbeet Seedbot",
+    lootbot: "Possible produce from each accepted Lootbot hit",
+    cookbot: "Revival Baguette ×3",
+    fieldPlan: "Keep three Redbeets outside the trade crate when preparing a Revival Baguette.",
+  },
+  {
+    crop: "Potato",
+    slug: "potato",
+    seedbot: "Potato Seedbot",
+    lootbot: "Possible 3, 5, or 7 Potatoes from an accepted Lootbot hit",
+    cookbot: "Pizza Burger ×10; Veggie Burger ×10",
+    fieldPlan: "Separate weapon ammunition from the two ten-Potato Cookbot batches.",
+  },
+  {
+    crop: "Cotton",
+    slug: "cotton-crop",
+    seedbot: "Cotton Seedbot",
+    lootbot: "Not in the regular hit or default raid reward pools",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Treat Cotton as a material crop and store its seeds away from food rows.",
+  },
+  {
+    crop: "Pigment Flower",
+    seedbot: "Pigment Flower Seedbot",
+    lootbot: "Not in the regular hit or default raid reward pools",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Use it as a paint-production route, not part of the food queue.",
+  },
+  {
+    crop: "Banana",
+    slug: "banana",
+    seedbot: "Banana Seedbot",
+    lootbot: "Possible produce from each accepted Lootbot hit",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Route Bananas toward packing, trading, or direct food use.",
+  },
+  {
+    crop: "Blueberry",
+    slug: "blueberry",
+    seedbot: "Blueberry Seedbot",
+    lootbot: "Possible produce from each accepted Lootbot hit",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Keep the seed return separate from fruit being packed or traded.",
+  },
+  {
+    crop: "Orange",
+    slug: "orange",
+    seedbot: "Orange Seedbot",
+    lootbot: "Possible produce from each accepted Lootbot hit",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Use a dedicated fruit chest so Seedbot seeds are not loaded as produce.",
+  },
+  {
+    crop: "Broccoli",
+    slug: "broccoli",
+    seedbot: "Broccoli Seedbot",
+    lootbot: "One possible default raid death reward: 10 Broccoli",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Secure a seed reserve before moving the high-value harvest into trade storage.",
+  },
+  {
+    crop: "Pineapple",
+    slug: "pineapple",
+    seedbot: "Pineapple Seedbot",
+    lootbot: "One possible default raid death reward: 10 Pineapples",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Do not mix a ten-Pineapple Lootbot reward with the next planting batch.",
+  },
+  {
+    crop: "Chili",
+    slug: "chili",
+    seedbot: "Chili Seedbot",
+    lootbot: "Not in the regular hit or default raid reward pools",
+    cookbot: "Not used by the three current Cookbot recipes",
+    fieldPlan: "Plan Chili around its own progression and raid pressure, not Cookbot demand.",
+  },
+];
+
+export const botBuildRoutes = [
+  {
+    bot: "Haybot / Green Totebot",
+    botHref: "/wiki/bots/haybot",
+    pressure: "Haybots and Green Totebots reaching crop rows",
+    build: "Base defense gate",
+    href: "/builds/base-defense-gate",
+    change: "Create a repairable outer lane and keep moving parts behind the first impact line.",
+  },
+  {
+    bot: "Tapebot",
+    botHref: "/wiki/bots/tapebot",
+    pressure: "Tapebot fire crossing an open farm",
+    build: "Base defense gate",
+    href: "/builds/base-defense-gate",
+    change: "Add hard line-of-sight breaks; a taller open fence does not stop ranged shots.",
+  },
+  {
+    bot: "Yellow Totebot",
+    botHref: "/wiki/bots/yellow-totebot",
+    pressure: "Yellow Totebot jumping over a low barrier",
+    build: "Base defense gate",
+    href: "/builds/base-defense-gate",
+    change: "Move the valuable mechanism away from the roof line and test vertical clearance.",
+  },
+  {
+    bot: "Cablebot",
+    botHref: "/wiki/bots/cablebot",
+    pressure: "Cablebots attacking exposed vehicle parts",
+    build: "Mining vehicle",
+    href: "/builds/mining-vehicle",
+    change: "Shield the working-part mounts and keep a service side that can be repaired quickly.",
+  },
+  {
+    bot: "Minerbot",
+    botHref: "/wiki/bots/minerbot",
+    pressure: "Minerbots above a mining lane",
+    build: "Mining vehicle",
+    href: "/builds/mining-vehicle",
+    change: "Preserve overhead sight lines and avoid roof cargo that hides the approach.",
+  },
+  {
+    bot: "Seedbot / Lootbot",
+    botHref: "/wiki/bots/seedbot",
+    pressure: "Seed, produce, and Lootbot rewards mixing together",
+    build: "Vacuum harvester",
+    href: "/builds/vacuum-harvester",
+    change: "Use labeled, independent chests for seeds, harvest produce, and field loot.",
+  },
+];
+
+export const botQuestions = [
+  {
+    question: "Are there neutral or friendly bots in Scrap Mechanic?",
+    answer:
+      "Seedbots and Lootbots are non-aggressive resource carriers: both flee when a player gets close and neither runs a normal attack state. Wocs and Glowbs are passive creatures, while crafting bots are placeable stations.",
+  },
+  {
+    question: "Which Scrap Mechanic bot gives crop seeds?",
+    answer:
+      "Seedbot carries one visible seed-crate type. The current set covers Tomato, Redbeet, Carrot, Potato, Cotton, Pigment Flower, Banana, Blueberry, Orange, Broccoli, Pineapple, and Chili. Damage can release matching seeds, and destroying the bot releases an additional matching bundle.",
+  },
+  {
+    question: "Does the Cookbot grow or harvest crops?",
+    answer:
+      "No. Cookbot only consumes supplied ingredients for three food recipes. Planting, watering, and harvesting require the player or a creation using Vacuum Pumps and water-delivery parts.",
+  },
+  {
+    question: "What is the difference between a Farmbot and farming bots?",
+    answer:
+      "Farmbot is the named red heavy enemy. Farming bots is a loose player phrase that may mean every hostile agricultural robot, the robots in a farm raid, or player-operated stations such as Craftbot and Cookbot.",
+  },
+  {
+    question: "Is the Seeker Bot the Scannerbot?",
+    answer:
+      "Players often use Seeker Bot for the large roaming missile bot. The current game files name the unit Scannerbot. Normal projectile, melee, explosion, and collision callbacks do not reduce it, so use cover and movement rather than treating it as a normal health-bar fight.",
+  },
+  {
+    question: "Which bots can appear when crops trigger a raid?",
+    answer:
+      "The answer depends on crop value, crop count, raid tier, night, and the current 1.0 raid configuration. Use the Raid Calculator for the current wave instead of relying on an old fixed list.",
+  },
+];

@@ -1,0 +1,374 @@
+.directory {
+  display: grid;
+  gap: 24px;
+  margin-block: 0;
+  padding-block: 32px;
+  border-block: 1px solid var(--line-bright);
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px;
+}
+
+.controls label > span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  max-width: 18ch;
+  margin: 0 0 9px;
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.heading p {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.resultCount {
+  display: grid;
+  min-width: 150px;
+  justify-items: end;
+  padding-bottom: 4px;
+}
+
+.resultCount strong {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 2.6rem;
+  line-height: 0.9;
+}
+
+.resultCount span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(420px, 1.2fr);
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: #091a20;
+}
+
+.controls label {
+  display: grid;
+  gap: 7px;
+}
+
+.controls input {
+  min-height: 48px;
+  padding: 0 13px;
+  border: 1px solid var(--line-bright);
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.venueFilters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-self: end;
+}
+
+.venueFilters button {
+  display: grid;
+  min-height: 48px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--line-bright);
+  border-right: 0;
+  color: #d4dfdd;
+  background: #0b1d23;
+  font-family: var(--display);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.venueFilters button:last-child {
+  border-right: 1px solid var(--line-bright);
+}
+
+.venueFilters button:hover,
+.venueFilters button.active {
+  color: #132025;
+  background: var(--orange);
+}
+
+.venueFilters small {
+  min-width: 24px;
+  padding: 1px 5px;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+.controls input:focus-visible,
+.venueFilters button:focus-visible,
+.recipe a:focus-visible,
+.empty button:focus-visible {
+  outline: 3px solid var(--orange-bright);
+  outline-offset: 3px;
+}
+
+.list {
+  border: 1px solid var(--line-bright);
+  background: rgb(8 22 28 / 76%);
+}
+
+.listHead,
+.list article {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(220px, 0.85fr) minmax(220px, 0.7fr);
+}
+
+.listHead {
+  min-height: 40px;
+  align-items: center;
+  color: #132025;
+  background: var(--orange);
+  font-family: var(--display);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.listHead span,
+.list article > * {
+  padding-inline: 16px;
+}
+
+.list article {
+  min-height: 102px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.list article:last-child {
+  border-bottom: 0;
+}
+
+.list article:hover {
+  background: #0d252d;
+}
+
+.output {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  flex: 0 0 auto;
+  place-items: center;
+  background: var(--panel-3);
+}
+
+.icon img,
+.cost img {
+  object-fit: contain;
+}
+
+.output div {
+  min-width: 0;
+}
+
+.output small {
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.output h3 {
+  margin: 2px 0;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cost {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-self: stretch;
+  align-content: center;
+  padding-block: 12px;
+  margin: 0;
+  border-left: 1px dashed var(--line-bright);
+  list-style: none;
+}
+
+.cost li {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.86rem;
+}
+
+.cost strong {
+  color: var(--orange-bright);
+  font-variant-numeric: tabular-nums;
+}
+
+.recipe {
+  align-self: stretch;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  border-left: 1px solid var(--line);
+}
+
+.recipe > span {
+  color: var(--cyan);
+  font-size: 0.72rem;
+}
+
+.recipe > strong {
+  color: #dce5e3;
+  font-size: 0.82rem;
+}
+
+.recipe a {
+  width: max-content;
+  margin-top: 4px;
+  color: var(--orange-bright);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.recipe a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.empty {
+  display: grid;
+  justify-items: start;
+  gap: 9px;
+  padding: 34px;
+  border: 1px dashed var(--line-bright);
+}
+
+.empty strong {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  text-transform: uppercase;
+}
+
+.empty p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.empty button {
+  min-height: 44px;
+  margin-top: 5px;
+  padding: 8px 14px;
+  border: 1px solid var(--orange);
+  color: #11191c;
+  background: var(--orange);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .controls,
+  .heading {
+    grid-template-columns: 1fr;
+  }
+
+  .resultCount {
+    grid-template-columns: auto 1fr;
+    align-items: end;
+    justify-items: start;
+    gap: 10px;
+  }
+
+  .listHead {
+    display: none;
+  }
+
+  .list article {
+    grid-template-columns: 1fr minmax(210px, 0.7fr);
+    padding-top: 14px;
+  }
+
+  .cost {
+    grid-column: 1 / -1;
+    border-top: 1px dashed var(--line-bright);
+    border-left: 0;
+  }
+
+  .recipe {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .venueFilters {
+    grid-template-columns: 1fr;
+  }
+
+  .venueFilters button,
+  .venueFilters button:last-child {
+    border-right: 1px solid var(--line-bright);
+    border-bottom: 0;
+  }
+
+  .venueFilters button:last-child {
+    border-bottom: 1px solid var(--line-bright);
+  }
+
+  .list article {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .output {
+    padding-block: 14px;
+  }
+
+  .recipe {
+    grid-column: 1;
+    grid-row: auto;
+    padding-block: 14px;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .cost {
+    padding-block: 12px;
+  }
+}

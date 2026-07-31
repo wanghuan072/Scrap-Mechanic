@@ -1,0 +1,1065 @@
+.page {
+  overflow: clip;
+}
+
+.hero {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border-bottom: 1px solid #4e6269;
+  background: #061015;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 47%;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(3 10 13 / 98%) 0%, rgb(3 10 13 / 89%) 45%, rgb(3 10 13 / 24%) 78%),
+    linear-gradient(0deg, rgb(3 10 13 / 98%) 0%, transparent 62%);
+}
+
+.heroInner {
+  position: relative;
+  padding-block: 20px 24px;
+}
+
+.heroGrid {
+  display: grid;
+  min-height: 220px;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  align-items: center;
+  gap: 24px;
+}
+
+.heroCopy {
+  max-width: 780px;
+}
+
+.heroCopy > span,
+.heading span,
+.sideHeading > span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  max-width: 760px;
+  margin: 6px 0 10px;
+  font-family: var(--display);
+  font-size: var(--text-h1);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.heroCopy p {
+  max-width: 640px;
+  margin: 0;
+  color: #d0dcdd;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.heroActions a {
+  padding: 7px 12px;
+  border: 1px solid var(--orange);
+  color: #121a1c;
+  background: var(--orange);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.heroActions a:last-child {
+  color: var(--orange-bright);
+  background: rgb(5 18 23 / 72%);
+}
+
+.heroPanel {
+  border: 1px solid #61757b;
+  background: rgb(7 22 28 / 94%);
+}
+
+.heroPanel > span {
+  display: block;
+  padding: 7px 11px;
+  border-bottom: 1px solid #61757b;
+  color: #8bc9d6;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.heroPanel dl {
+  margin: 0;
+}
+
+.heroPanel dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 11px;
+  border-bottom: 1px solid #354b52;
+}
+
+.heroPanel dt {
+  color: #87999d;
+  font-size: 11px;
+}
+
+.heroPanel dd {
+  margin: 0;
+  color: #f2f5f3;
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.heroParts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.heroParts a {
+  display: grid;
+  min-height: 52px;
+  place-items: center;
+  border-right: 1px solid #354b52;
+}
+
+.heroParts a:last-child {
+  border-right: 0;
+}
+
+.heroParts img {
+  object-fit: contain;
+}
+
+.heroParts a:hover {
+  background: #13303a;
+}
+
+.jobSection,
+.botPressureSection,
+.headSection,
+.systemSection,
+.diagnosticsSection {
+  padding-block: 28px;
+}
+
+.jobSection {
+  background: #0a1b21;
+}
+
+.botPressureSection {
+  border-block: 1px solid #52666d;
+  background:
+    linear-gradient(110deg, rgb(122 65 20 / 11%), transparent 46%),
+    #0c171a;
+}
+
+.botPressureTable {
+  margin-top: 26px;
+  border-top: 1px solid #536970;
+  border-left: 1px solid #536970;
+}
+
+.botPressureHead,
+.botPressureRow {
+  display: grid;
+  grid-template-columns:
+    minmax(160px, 0.72fr)
+    minmax(220px, 1.05fr)
+    minmax(170px, 0.76fr)
+    minmax(270px, 1.35fr);
+}
+
+.botPressureHead {
+  min-height: 42px;
+  align-items: center;
+  color: #78939a;
+  background: #071318;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.botPressureHead span,
+.botPressureRow > * {
+  min-width: 0;
+  margin: 0;
+  padding: 13px 16px;
+  border-right: 1px solid #536970;
+  border-bottom: 1px solid #536970;
+}
+
+.botPressureRow {
+  min-height: 92px;
+}
+
+.botPressureRow > * {
+  display: flex;
+  align-items: center;
+  color: #b6c4c6;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.botPressureRow > a {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.botPressureRow:hover {
+  background: #10252b;
+}
+
+.botPressureLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  margin-top: 22px;
+}
+
+.botPressureLinks a {
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(280px, 0.7fr);
+  align-items: end;
+  gap: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #52666d;
+}
+
+.heading h2,
+.sideHeading h2,
+.startGrid h2 {
+  margin: 4px 0 0;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.heading p,
+.sideHeading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.toolsSection {
+  padding-block: var(--space-section);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgb(105 169 183 / 6%) 31px 32px),
+    #07171d;
+}
+
+.toolsGrid,
+.diagnosticsGrid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1.45fr);
+  align-items: start;
+  gap: 62px;
+}
+
+.sideHeading h2 {
+  margin-bottom: 16px;
+}
+
+.sideHeading > a {
+  display: inline-block;
+  margin-top: 21px;
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.toolRows {
+  border-top: 1px solid #4b636b;
+  border-left: 1px solid #4b636b;
+}
+
+.toolRow {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(220px, 1fr) minmax(220px, 1fr) 100px;
+  min-height: 142px;
+}
+
+.toolRow > * {
+  padding: 19px;
+  border-right: 1px solid #4b636b;
+  border-bottom: 1px solid #4b636b;
+}
+
+.toolIdentity {
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-content: center;
+  align-items: center;
+  gap: 10px 14px;
+  background: rgb(12 35 43 / 70%);
+}
+
+.toolIdentity > span {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #75a6b0;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.toolIdentity img {
+  object-fit: contain;
+}
+
+.toolIdentity h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.toolRow > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toolRow > div > span,
+.usedBy span {
+  color: #79939a;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.toolRow p {
+  margin: 7px 0 0;
+  color: #bac8c9;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.usedBy p {
+  color: #f0b650;
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.headSection {
+  border-block: 1px solid #4e5a58;
+  background: #d7d6ca;
+  color: #122128;
+}
+
+.systemSection {
+  border-top: 1px solid #4a5f65;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 99px, rgb(59 101 109 / 5%) 100px),
+    #08191f;
+}
+
+.systemTable {
+  margin-top: 28px;
+  border-top: 1px solid #3e5a62;
+  border-left: 1px solid #3e5a62;
+}
+
+.systemHead,
+.systemTable article {
+  display: grid;
+  grid-template-columns: minmax(210px, 1fr) minmax(170px, 0.8fr) minmax(290px, 1.35fr) minmax(180px, 0.85fr);
+}
+
+.systemHead {
+  background: #18313a;
+}
+
+.systemHead span,
+.systemTable article > * {
+  min-width: 0;
+  padding: 14px 16px;
+  margin: 0;
+  border-right: 1px solid #3e5a62;
+  border-bottom: 1px solid #3e5a62;
+}
+
+.systemHead span {
+  color: #789ba4;
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.systemTable article {
+  background: #0b2027;
+}
+
+.systemTable article:nth-child(odd) {
+  background: #0d252d;
+}
+
+.systemTable article p {
+  color: #a8b9bc;
+  font-size: 13px;
+}
+
+.systemTable article a {
+  color: #68cde0;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.headSection .heading {
+  border-color: #848d8a;
+}
+
+.headSection .heading span {
+  color: #8b5613;
+}
+
+.headSection .heading p {
+  color: #526166;
+}
+
+.headRail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-left: 1px solid #89918f;
+}
+
+.headRail article {
+  display: grid;
+  min-height: 220px;
+  grid-template-columns: 114px 1fr;
+  border-right: 1px solid #89918f;
+  border-bottom: 1px solid #89918f;
+}
+
+.headRail article > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-right: 1px solid #a1a7a3;
+  background: rgb(255 255 255 / 24%);
+}
+
+.headRail article > a img {
+  object-fit: contain;
+}
+
+.headRail article > a span {
+  color: #72501f;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.headRail article > div {
+  padding: 23px 20px;
+}
+
+.headRail h3 {
+  margin: 18px 0 10px;
+  font-family: var(--display);
+  font-size: 23px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.headRail p {
+  margin: 0;
+  color: #4d5c61;
+  font-size: 13px;
+}
+
+.headRail div > a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #74470e;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.comparisonTable {
+  border-top: 1px solid #435960;
+  border-left: 1px solid #435960;
+}
+
+.comparisonHead,
+.comparisonRow {
+  display: grid;
+  grid-template-columns:
+    minmax(225px, 1.25fr)
+    minmax(175px, 0.95fr)
+    minmax(120px, 0.62fr)
+    minmax(118px, 0.58fr)
+    minmax(155px, 0.85fr)
+    78px
+    104px
+    42px;
+  align-items: center;
+}
+
+.comparisonHead {
+  min-height: 44px;
+  color: #78939a;
+  background: #112831;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparisonHead > span,
+.comparisonRow > * {
+  display: flex;
+  height: 100%;
+  min-width: 0;
+  align-items: center;
+  padding: 13px 14px;
+  border-right: 1px solid #435960;
+  border-bottom: 1px solid #435960;
+}
+
+.comparisonRow {
+  min-height: 104px;
+  background: #0b1d24;
+  transition: background 160ms ease;
+}
+
+.comparisonRow:hover {
+  background: #102b34;
+}
+
+.comparisonBuild {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.comparisonBuild span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.comparisonBuild strong {
+  margin-top: 5px;
+  font-family: var(--display);
+  font-size: 19px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.comparisonFocus p {
+  margin: 0;
+  color: #b6c5c7;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.comparisonFocus {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.recommendedBuild {
+  display: block;
+  font-family: var(--display);
+  font-size: 17px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.comparisonFocus small {
+  display: block;
+  margin-top: 5px;
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.comparisonMetric {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.comparisonMetric strong {
+  color: #e8efed;
+  font-family: var(--display);
+  font-size: 15px;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.comparisonPart {
+  gap: 10px;
+}
+
+.comparisonPart img {
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.comparisonPart strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.mobileLabel {
+  display: none;
+  color: #78939a;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparisonArrow {
+  justify-content: center;
+  color: #8bd1df;
+  font-size: 18px;
+}
+
+.diagnosticsSection {
+  background: #07171d;
+}
+
+.diagnosticTable {
+  border-top: 1px solid #475d65;
+  border-left: 1px solid #475d65;
+}
+
+.diagnosticHead,
+.diagnosticRow {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.55fr) minmax(260px, 1fr) minmax(280px, 1.1fr);
+}
+
+.diagnosticHead {
+  color: #7f9ba2;
+  background: #112831;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.diagnosticHead > span,
+.diagnosticRow > * {
+  padding: 14px 17px;
+  border-right: 1px solid #475d65;
+  border-bottom: 1px solid #475d65;
+}
+
+.diagnosticRow strong {
+  font-family: var(--display);
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.diagnosticRow p {
+  margin: 0;
+  color: #b7c5c7;
+  font-size: 13px;
+}
+
+.diagnosticRow p:last-child {
+  color: #eeb19f;
+}
+
+.startSection {
+  padding-bottom: 68px;
+  background: #07171d;
+}
+
+.startGrid {
+  position: relative;
+  min-height: 260px;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  border: 1px solid #536970;
+}
+
+.startGrid > img {
+  object-fit: cover;
+}
+
+.startGrid::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(3 12 16 / 96%), rgb(3 12 16 / 45%) 68%, transparent),
+    linear-gradient(0deg, rgb(3 12 16 / 90%), transparent 68%);
+  content: "";
+}
+
+.startGrid > div {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 45px;
+}
+
+.startGrid span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.startGrid p {
+  margin: 16px 0 20px;
+  color: #c9d4d5;
+  font-size: 17px;
+}
+
+.startGrid a {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .toolsGrid,
+  .diagnosticsGrid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .headRail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .comparisonHead,
+  .comparisonRow {
+    grid-template-columns:
+      minmax(210px, 1.25fr)
+      minmax(170px, 0.95fr)
+      minmax(112px, 0.62fr)
+      minmax(110px, 0.58fr)
+      minmax(145px, 0.85fr)
+      70px
+      96px;
+  }
+
+  .comparisonHead > span:last-child,
+  .comparisonArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero {
+    min-height: 340px;
+  }
+
+  .heroPanel {
+    display: grid;
+    grid-template-columns: 150px 1fr 250px;
+  }
+
+  .heroPanel > span {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #61757b;
+    border-bottom: 0;
+  }
+
+  .heroParts {
+    align-self: stretch;
+  }
+
+  .toolRow {
+    grid-template-columns: minmax(210px, 0.8fr) minmax(220px, 1fr) minmax(220px, 1fr);
+  }
+
+  .usedBy {
+    display: none !important;
+  }
+
+  .comparisonHead {
+    display: none;
+  }
+
+  .comparisonRow {
+    grid-template-columns: minmax(200px, 1fr) minmax(170px, 0.9fr);
+  }
+
+  .comparisonBuild,
+  .comparisonFocus {
+    min-height: 92px;
+  }
+
+  .comparisonMetric,
+  .comparisonPart {
+    min-height: 78px;
+  }
+
+  .mobileLabel {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .botPressureHead {
+    display: none;
+  }
+
+  .botPressureTable {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    border: 0;
+  }
+
+  .botPressureRow {
+    display: grid;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    align-content: start;
+    border: 1px solid #536970;
+  }
+
+  .botPressureRow > * {
+    display: block;
+    border-right: 0;
+  }
+
+  .botPressureRow p::before,
+  .botPressureRow a[data-label]::before {
+    display: block;
+    margin-bottom: 4px;
+    color: #78939a;
+    content: attr(data-label);
+    font-family: var(--display);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .systemHead {
+    display: none;
+  }
+
+  .systemTable {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    border: 0;
+  }
+
+  .systemTable article {
+    grid-template-columns: 1fr;
+    align-content: start;
+    border-top: 1px solid #3e5a62;
+    border-left: 1px solid #3e5a62;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 360px;
+  }
+
+  .heroShade {
+    background:
+      linear-gradient(90deg, rgb(3 10 13 / 82%), rgb(3 10 13 / 30%)),
+      linear-gradient(0deg, rgb(3 10 13 / 99%) 5%, rgb(3 10 13 / 76%) 60%, transparent 96%);
+  }
+
+  .heroInner {
+    padding-block: 26px 32px;
+  }
+
+  .heroGrid {
+    min-height: 320px;
+  }
+
+  .heroCopy h1 {
+    font-size: var(--text-h2);
+  }
+
+  .heroCopy p {
+    font-size: 16px;
+  }
+
+  .heroPanel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroPanel > span {
+    min-height: 62px;
+  }
+
+  .heroPanel dl {
+    grid-column: 1 / -1;
+  }
+
+  .heroParts {
+    grid-column: 1 / -1;
+  }
+
+  .jobSection,
+  .botPressureSection,
+  .toolsSection,
+  .headSection,
+  .systemSection,
+  .diagnosticsSection {
+    padding-block: 22px;
+  }
+
+  .heading {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .toolRow {
+    grid-template-columns: 1fr;
+  }
+
+  .toolIdentity {
+    grid-template-columns: 72px 1fr;
+    min-height: 112px;
+  }
+
+  .headRail {
+    grid-template-columns: 1fr;
+  }
+
+  .headRail article {
+    min-height: 190px;
+  }
+
+  .comparisonRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .comparisonBuild,
+  .comparisonFocus {
+    grid-column: 1 / -1;
+  }
+
+  .comparisonBuild {
+    min-height: 86px;
+  }
+
+  .comparisonFocus {
+    min-height: 70px;
+  }
+
+  .comparisonMetric,
+  .comparisonPart {
+    min-height: 82px;
+    padding: 12px;
+  }
+
+  .comparisonPart {
+    grid-column: 1 / -1;
+  }
+
+  .comparisonPart strong {
+    font-size: 15px;
+  }
+
+  .botPressureTable {
+    grid-template-columns: 1fr;
+  }
+
+  .systemTable {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnosticHead {
+    display: none;
+  }
+
+  .diagnosticRow {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnosticRow strong {
+    background: #112831;
+  }
+
+  .startGrid {
+    min-height: 280px;
+  }
+
+  .startGrid > div {
+    padding: 28px 22px;
+  }
+}

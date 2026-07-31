@@ -1,0 +1,345 @@
+.directory {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.venueRail {
+  position: sticky;
+  top: calc(var(--header-height) + 12px);
+  display: grid;
+  gap: 12px;
+}
+
+.venueRail > span,
+.tradeBoard header > div > span,
+.tradeBoard header label > span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.venueRail > div {
+  display: grid;
+  border: 1px solid var(--line-bright);
+}
+
+.venueRail button {
+  display: grid;
+  min-height: 76px;
+  align-content: center;
+  gap: 2px;
+  padding: 14px 16px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: #d0dbd9;
+  background: var(--panel);
+  text-align: left;
+  cursor: pointer;
+}
+
+.venueRail button:last-child {
+  border-bottom: 0;
+}
+
+.venueRail button:hover,
+.venueRail button.active {
+  color: #172026;
+  background: var(--orange);
+}
+
+.venueRail button:focus-visible,
+.tradeBoard input:focus-visible,
+.reward a:focus-visible,
+.cost a:focus-visible,
+.unlock a:focus-visible,
+.empty button:focus-visible {
+  outline: 3px solid var(--orange-bright);
+  outline-offset: 3px;
+}
+
+.resultFilters {
+  margin-top: -4px;
+}
+
+.venueRail button strong {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+
+.venueRail button small {
+  color: inherit;
+  opacity: 0.78;
+}
+
+.tradeBoard {
+  min-width: 0;
+}
+
+.tradeBoard > header {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 340px);
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.tradeBoard h2 {
+  margin: 4px 0 6px;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.tradeBoard header p {
+  max-width: 65ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.tradeBoard header label {
+  display: grid;
+  gap: 7px;
+}
+
+.tradeBoard header input {
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line-bright);
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.table {
+  border: 1px solid var(--line-bright);
+  background: rgb(8 22 28 / 76%);
+}
+
+.tableHead,
+.table article {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.95fr) minmax(300px, 1.05fr) 130px;
+}
+
+.tableHead {
+  min-height: 42px;
+  align-items: center;
+  color: #152026;
+  background: var(--orange);
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tableHead span,
+.table article > * {
+  padding-inline: 18px;
+}
+
+.table article {
+  min-height: 92px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.table article:last-child {
+  border-bottom: 0;
+}
+
+.table article:hover {
+  background: var(--panel-2);
+}
+
+.reward {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.reward .icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  flex: 0 0 auto;
+  place-items: center;
+  background: var(--panel-3);
+}
+
+.reward img,
+.cost img {
+  object-fit: contain;
+}
+
+.reward > span:last-child {
+  display: grid;
+}
+
+.reward small {
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.reward strong {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.reward a:hover,
+.cost a:hover {
+  color: var(--orange-bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cost {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding-block: 14px;
+  margin: 0;
+  border-left: 1px dashed var(--line-bright);
+  list-style: none;
+}
+
+.cost li {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 7px;
+}
+
+.cost strong {
+  color: var(--orange-bright);
+  font-variant-numeric: tabular-nums;
+}
+
+.unlock {
+  display: grid;
+  align-self: stretch;
+  place-items: center;
+  border-left: 1px solid var(--line);
+}
+
+.unlock span,
+.unlock a {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 3px 7px;
+  border: 1px solid var(--line-bright);
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.unlock a {
+  border-color: var(--orange);
+  color: var(--orange-bright);
+}
+
+.unlock a:hover {
+  color: #11191c;
+  background: var(--orange-bright);
+}
+
+.empty {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  padding: 40px;
+  border: 1px dashed var(--line-bright);
+}
+
+.empty strong {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.empty button {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid var(--orange);
+  color: var(--ink);
+  background: var(--orange);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .directory {
+    grid-template-columns: 1fr;
+  }
+
+  .venueRail {
+    position: static;
+  }
+
+  .venueRail > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .venueRail button {
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .tradeBoard > header {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .venueRail > div {
+    grid-template-columns: 1fr;
+  }
+
+  .venueRail button {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .tableHead {
+    display: none;
+  }
+
+  .table article {
+    grid-template-columns: 1fr auto;
+    padding: 14px 0 0;
+  }
+
+  .reward {
+    padding-bottom: 14px;
+  }
+
+  .cost {
+    grid-column: 1 / -1;
+    padding: 14px 18px;
+    border-top: 1px dashed var(--line-bright);
+    border-left: 0;
+  }
+
+  .unlock {
+    grid-column: 2;
+    grid-row: 1;
+    border-left: 0;
+  }
+}

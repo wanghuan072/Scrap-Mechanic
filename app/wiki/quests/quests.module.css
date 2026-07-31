@@ -1,0 +1,813 @@
+.hero {
+  border-bottom: 1px solid #42644b;
+  background:
+    linear-gradient(90deg, rgb(4 15 18 / 97%) 0%, rgb(6 24 27 / 92%) 58%, rgb(14 42 29 / 82%)),
+    url("/images/scrap-mechanic/screenshot-07.jpg") center / cover;
+}
+
+.heroInner {
+  display: grid;
+  min-height: 280px;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.eyebrow,
+.sectionHeading span,
+.help header span {
+  color: #9bd276;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 840px;
+  margin: 12px 0 17px;
+  font-family: var(--display);
+  font-size: var(--text-h1);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  color: var(--orange-bright);
+}
+
+.heroCopy > p {
+  max-width: 720px;
+  margin: 0;
+  color: #c1d0d0;
+  font-size: var(--text-body);
+}
+
+.jumpNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.jumpNav a {
+  padding: 9px 13px;
+  border: 1px solid #4a7355;
+  color: #b9e39e;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.jumpNav a:hover {
+  background: #173c28;
+}
+
+.questBoard {
+  overflow: hidden;
+  border: 1px solid #507254;
+  background: rgb(7 25 25 / 94%);
+  box-shadow: 16px 16px 0 rgb(0 0 0 / 24%);
+}
+
+.questBoard > div {
+  display: grid;
+  min-height: 122px;
+  grid-template-columns: 82px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 22px;
+  border-bottom: 1px solid #355940;
+}
+
+.questBoard img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.questBoard span {
+  color: #a7bcaf;
+  font-family: var(--display);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.questBoard strong {
+  color: #fff;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+}
+
+.questBoard footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: #102e23;
+}
+
+.questBoard footer b {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: var(--text-h3);
+}
+
+.mainSection,
+.sideSection {
+  padding: 22px 0 28px;
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
+  align-items: end;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-bright);
+}
+
+.sectionHeading h2,
+.help h2 {
+  margin: 6px 0 0;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.sectionHeading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.phaseStack {
+  display: grid;
+  gap: 54px;
+  margin-top: 36px;
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 30px;
+}
+
+.phase > header {
+  position: sticky;
+  top: calc(var(--header-height) + 12px);
+  align-self: start;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 13px;
+  padding: 16px 0;
+  border-top: 2px solid #5c8b62;
+}
+
+.phase > header > span {
+  color: #688e73;
+  font-family: var(--display);
+  font-size: var(--text-h3);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.phase > header small {
+  color: #769581;
+  font-family: var(--display);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.phase > header h3 {
+  margin: 4px 0 7px;
+  font-family: var(--display);
+  font-size: 21px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.phase > header p {
+  margin: 0;
+  color: #6f897d;
+  font-size: 12px;
+}
+
+.missionStack {
+  display: grid;
+  gap: 18px;
+}
+
+.mainMission {
+  overflow: hidden;
+  border: 1px solid #2c4a42;
+  background: #091b1e;
+  box-shadow: 7px 7px 0 rgb(0 0 0 / 17%);
+}
+
+.missionIdentity {
+  display: grid;
+  min-height: 86px;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #2d4c42;
+  background: linear-gradient(90deg, #102c27, #0b2224);
+}
+
+.missionIdentity img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.missionIdentity span,
+.objectiveField > span,
+.fieldHeading span,
+.ticketTop span,
+.ticketRewards > span {
+  color: #7fa18d;
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.missionIdentity h4 {
+  margin: 3px 0 0;
+  font-family: var(--display);
+  font-size: 27px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.missionIdentity > b {
+  padding: 8px 10px;
+  border: 1px solid #3d6151;
+  color: #add296;
+  font-family: var(--display);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.missionSummary {
+  max-width: 850px;
+  margin: 0;
+  padding: 20px 22px;
+  color: #c4d1cf;
+  font-size: 16px;
+}
+
+.missionFields {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.75fr);
+  border-top: 1px solid #263f3d;
+}
+
+.objectiveField,
+.rewardField {
+  padding: 20px 22px 22px;
+}
+
+.objectiveField {
+  border-right: 1px solid #263f3d;
+}
+
+.objectiveField ol {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  margin: 13px 0 0;
+  color: #b8c7c4;
+}
+
+.objectiveField li::marker {
+  color: #90bd73;
+  font-family: var(--display);
+  font-weight: 900;
+}
+
+.objectiveField p {
+  margin: 13px 0 0;
+  color: var(--muted);
+}
+
+.fieldHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #385347;
+}
+
+.fieldHeading b {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 22px;
+}
+
+.rewardContents ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0;
+  margin: 12px 0 0;
+  list-style: none;
+}
+
+.rewardContents li {
+  border: 1px solid #42624f;
+  background: #10291f;
+}
+
+.rewardContents li a,
+.rewardContents li > div {
+  display: grid;
+  gap: 1px;
+  padding: 8px 10px;
+}
+
+.rewardContents li span {
+  color: #759980;
+  font-family: var(--display);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.rewardContents li b {
+  color: #dce9d8;
+  font-family: var(--display);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.rewardContents li small {
+  margin-top: 5px;
+  color: #8ab899;
+  font-family: var(--display);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.rewardContents .linkedReward:hover {
+  border-color: var(--orange-bright);
+  background: #173627;
+}
+
+.noReward,
+.rewardNote {
+  margin: 12px 0 0;
+  color: #758c83;
+  font-size: 12px;
+}
+
+.rewardNote {
+  padding-left: 10px;
+  border-left: 2px solid var(--orange-bright);
+  color: #b9c8c1;
+}
+
+.sideSection {
+  border-top: 1px solid #31536a;
+  background:
+    linear-gradient(rgb(7 23 30 / 96%), rgb(7 23 30 / 96%)),
+    url("/images/scrap-mechanic/screenshot-04.jpg") center / cover fixed;
+}
+
+.sideSection .sectionHeading span {
+  color: #63cde0;
+}
+
+.sideDirectory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.sideGroup {
+  border-top: 3px solid #43899a;
+  background: #0a2028;
+  box-shadow: 8px 8px 0 rgb(0 0 0 / 17%);
+}
+
+.sideGroupWide {
+  grid-column: 1 / -1;
+}
+
+.sideGroup > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 21px;
+  border-right: 1px solid #315865;
+  border-bottom: 1px solid #315865;
+  border-left: 1px solid #315865;
+  background: linear-gradient(90deg, #123540, #0c2730);
+}
+
+.sideGroup > header span {
+  color: #6eb8c8;
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sideGroup > header h3 {
+  margin: 3px 0 0;
+  font-family: var(--display);
+  font-size: 25px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sideGroup > header > b {
+  color: #74cada;
+  font-family: var(--display);
+  font-size: var(--text-h3);
+}
+
+.ticketGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-left: 1px solid #294b55;
+}
+
+.sideGroup:not(.sideGroupWide) .ticketGrid {
+  grid-template-columns: 1fr;
+}
+
+.jobTicket {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid #294b55;
+  border-bottom: 1px solid #294b55;
+  background: linear-gradient(145deg, #0b222a, #091b22);
+}
+
+.ticketTop {
+  display: grid;
+  grid-template-columns: 43px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.ticketTop img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.ticketTop span {
+  color: #6da8b4;
+}
+
+.ticketTop h4 {
+  margin: 3px 0 0;
+  font-family: var(--display);
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.jobTicket > p {
+  margin: 16px 0 20px;
+  color: #9fb4b8;
+  font-size: 13px;
+}
+
+.ticketRewards {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed #355863;
+}
+
+.ticketRewards > span {
+  color: #73c0cf;
+}
+
+.ticketRewards .rewardContents li {
+  border-color: #355c67;
+  background: #102c35;
+}
+
+.ticketRewards .rewardContents li span {
+  color: #6497a3;
+}
+
+.farmerQuest {
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr) 270px;
+  align-items: center;
+  gap: 24px;
+  padding: 25px;
+  border-right: 1px solid #4b7880;
+  border-bottom: 1px solid #4b7880;
+  border-left: 1px solid #4b7880;
+  background: linear-gradient(110deg, #123b42, #0a222a);
+}
+
+.farmerQuest + .farmerQuest {
+  border-top: 1px solid #37626c;
+}
+
+.farmerIcon {
+  display: grid;
+  width: 82px;
+  height: 82px;
+  place-items: center;
+  border: 1px solid #4c8390;
+  background: #081a20;
+}
+
+.farmerQuest > div > span {
+  color: #62c7da;
+  font-family: var(--display);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.farmerQuest h4 {
+  margin: 4px 0 6px;
+  font-family: var(--display);
+  font-size: var(--text-h3);
+  text-transform: uppercase;
+}
+
+.farmerQuest p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.farmerQuest aside {
+  padding: 14px 18px;
+  border-left: 1px solid #37626c;
+}
+
+.farmerQuest aside b {
+  display: block;
+  color: #fff;
+  font-family: var(--display);
+  font-size: var(--text-h3);
+}
+
+.farmerQuest aside span {
+  color: #6c9da8;
+  font-family: var(--display);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.farmerQuest aside p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.help {
+  padding: 22px 0 28px;
+  border-top: 1px solid #4c6036;
+  background: #0c1c18;
+}
+
+.helpGrid {
+  display: grid;
+  gap: 28px;
+}
+
+.help h2 {
+  max-width: 760px;
+  font-size: var(--text-h2);
+}
+
+.help header > p {
+  max-width: 820px;
+  margin: 14px 0 0;
+  color: #a9bab1;
+}
+
+.recoveryTable {
+  overflow: hidden;
+  border-top: 1px solid #526347;
+  border-left: 1px solid #526347;
+  background: #10221c;
+}
+
+.recoveryHead,
+.recoveryTable article {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 0.85fr)
+    minmax(260px, 1fr)
+    minmax(300px, 1.2fr);
+}
+
+.recoveryHead {
+  background: #273524;
+}
+
+.recoveryHead b {
+  padding: 11px 15px;
+  border-right: 1px solid #526347;
+  border-bottom: 1px solid #526347;
+  color: #9caf87;
+  font-family: var(--display);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.recoveryTable article > * {
+  min-width: 0;
+  padding: 17px;
+  margin: 0;
+  border-right: 1px solid #465a40;
+  border-bottom: 1px solid #465a40;
+}
+
+.recoveryTable article:nth-child(odd) {
+  background: #13271f;
+}
+
+.recoveryTable strong {
+  display: block;
+  color: #e2ecd9;
+  font-family: var(--display);
+  font-size: 15px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.recoveryTable p {
+  color: #aab9b0;
+  font-size: 13px;
+}
+
+.recoveryTable a {
+  display: inline-block;
+  margin-top: 9px;
+  color: #a4d982;
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.saveRule {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.7fr) minmax(280px, 1.1fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 24px;
+  border: 1px solid #667047;
+  background: #22291e;
+}
+
+.saveRule span {
+  display: block;
+  color: #93b877;
+  font-family: var(--display);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.saveRule b {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--display);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.saveRule p {
+  margin: 0;
+  color: #aeb9aa;
+  font-size: 13px;
+}
+
+.saveRule a {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .heroInner {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 34px;
+  }
+
+  .phase {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+
+  .missionFields,
+  .sideDirectory {
+    grid-template-columns: 1fr;
+  }
+
+  .objectiveField {
+    border-right: 0;
+    border-bottom: 1px solid #263f3d;
+  }
+
+  .sideGroup,
+  .sideGroupWide {
+    grid-column: auto;
+  }
+
+  .sideGroup .ticketGrid,
+  .sideGroup:not(.sideGroupWide) .ticketGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .farmerQuest {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroInner,
+  .sectionHeading,
+  .phase,
+  .farmerQuest {
+    grid-template-columns: 1fr;
+  }
+
+  .heroInner {
+    min-height: auto;
+    gap: 28px;
+    padding-top: 28px;
+  }
+
+  .questBoard {
+    box-shadow: 8px 8px 0 rgb(0 0 0 / 24%);
+  }
+
+  .phase > header {
+    position: static;
+  }
+
+  .missionIdentity {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .missionIdentity img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .missionIdentity > b {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .sideGroup .ticketGrid,
+  .sideGroup:not(.sideGroupWide) .ticketGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobTicket {
+    min-height: auto;
+  }
+
+  .farmerQuest aside {
+    border-top: 1px solid #37626c;
+    border-left: 0;
+  }
+
+  .recoveryTable {
+    overflow: visible;
+  }
+
+  .recoveryHead {
+    display: none;
+  }
+
+  .recoveryTable article {
+    grid-template-columns: 1fr;
+    margin-bottom: 14px;
+    border-top: 1px solid #465a40;
+  }
+
+  .recoveryTable article > * {
+    border-bottom-style: dashed;
+  }
+
+  .saveRule {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

@@ -1,0 +1,443 @@
+.hero {
+  overflow: hidden;
+  border-bottom: 1px solid #4d603d;
+  background:
+    linear-gradient(110deg, rgb(5 18 22 / 98%) 0%, rgb(8 31 34 / 94%) 62%, rgb(48 47 18 / 84%)),
+    url("/images/scrap-mechanic/screenshot-01.jpg") center / cover;
+}
+
+.heroInner {
+  display: grid;
+  min-height: 280px;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.eyebrow,
+.sectionHeading span,
+.thresholdLayout > header > span,
+.explainerGrid article > span {
+  color: #a8cf69;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 870px;
+  margin: 11px 0 18px;
+  font-family: var(--display);
+  font-size: var(--text-h1);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  color: var(--orange-bright);
+}
+
+.heroCopy > p {
+  max-width: 760px;
+  margin: 0;
+  color: #c4d1cf;
+  font-size: var(--text-body);
+}
+
+.heroFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.heroFacts span {
+  padding: 7px 10px;
+  border: 1px solid #45615a;
+  color: #a8c0ba;
+  background: rgb(8 25 28 / 78%);
+  font-family: var(--display);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.heroPlate {
+  position: relative;
+  min-height: 300px;
+  padding: 32px;
+  border: 1px solid #7d6d2e;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 15px, rgb(255 187 34 / 4%) 16px),
+    rgb(24 30 23 / 94%);
+  box-shadow: 14px 14px 0 rgb(0 0 0 / 24%);
+}
+
+.heroPlate::before,
+.heroPlate::after {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  content: "";
+}
+
+.heroPlate::before {
+  top: 12px;
+  left: 12px;
+  border-top: 2px solid var(--orange-bright);
+  border-left: 2px solid var(--orange-bright);
+}
+
+.heroPlate::after {
+  right: 12px;
+  bottom: 12px;
+  border-right: 2px solid var(--orange-bright);
+  border-bottom: 2px solid var(--orange-bright);
+}
+
+.heroPlate > span {
+  display: block;
+  color: #bba85c;
+  font-family: var(--display);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.heroPlate strong {
+  display: block;
+  margin-top: 42px;
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.8;
+}
+
+.heroPlate p {
+  margin: 25px 0 0;
+  color: #c1c7b8;
+}
+
+.toolSection,
+.rulesSection,
+.thresholdSection,
+.explainerSection,
+.faqSection {
+  padding: 22px 0 28px;
+}
+
+.toolSection {
+  background:
+    repeating-linear-gradient(90deg, transparent 0 99px, rgb(67 101 108 / 4%) 100px),
+    #061116;
+}
+
+.rulesSection {
+  border-top: 1px solid #375057;
+  background: #0a1b20;
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  align-items: end;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #40575e;
+}
+
+.sectionHeading h2,
+.thresholdLayout h2,
+.explainerGrid h2 {
+  margin: 6px 0 0;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.sectionHeading p,
+.thresholdLayout > header > p {
+  margin: 0;
+  color: #9db0b4;
+}
+
+.timingGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 28px;
+  border-top: 1px solid #42585e;
+  border-left: 1px solid #42585e;
+}
+
+.timingGrid article {
+  min-height: 220px;
+  padding: 18px;
+  border-right: 1px solid #42585e;
+  border-bottom: 1px solid #42585e;
+  background: #0d2228;
+}
+
+.timingGrid article > span {
+  color: #55747c;
+  font-family: var(--display);
+  font-size: 12px;
+}
+
+.timingGrid small,
+.timingGrid strong {
+  display: block;
+  font-family: var(--display);
+  text-transform: uppercase;
+}
+
+.timingGrid small {
+  margin-top: 24px;
+  color: #7f969b;
+  font-size: 9px;
+}
+
+.timingGrid strong {
+  margin-top: 5px;
+  color: var(--orange-bright);
+  font-size: 26px;
+}
+
+.timingGrid p {
+  margin: 17px 0 0;
+  color: #9badb0;
+  font-size: 13px;
+}
+
+.thresholdSection {
+  border-top: 1px solid #55533a;
+  background: #171a16;
+}
+
+.thresholdLayout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 62px;
+}
+
+.thresholdLayout > header > p {
+  margin-top: 18px;
+}
+
+.thresholdLayout > header > a {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.thresholdTable {
+  border-top: 1px solid #56573f;
+  border-left: 1px solid #56573f;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+}
+
+.tableHead {
+  background: #29291d;
+}
+
+.tableHead b,
+.tableRow > * {
+  display: flex;
+  min-height: 49px;
+  align-items: center;
+  padding: 10px 14px;
+  border-right: 1px solid #56573f;
+  border-bottom: 1px solid #56573f;
+}
+
+.tableHead b {
+  color: #aaad8f;
+  font-family: var(--display);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.tableRow {
+  background: #1b211d;
+}
+
+.tableRow strong {
+  color: #f4e8bf;
+  font-family: var(--display);
+  text-transform: uppercase;
+}
+
+.tableRow span {
+  color: #aeb8aa;
+}
+
+.explainerSection {
+  border-top: 1px solid #3b5157;
+}
+
+.explainerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: #3f555b;
+}
+
+.explainerGrid article {
+  padding: 30px;
+  background: #0c2026;
+}
+
+.explainerGrid article:last-child {
+  background: #122027;
+}
+
+.explainerGrid ul {
+  display: grid;
+  gap: 9px;
+  padding-left: 20px;
+  margin: 22px 0 0;
+  color: #aebdc0;
+}
+
+.faqSection {
+  border-top: 1px solid #55533a;
+  background: #121913;
+}
+
+.faqLayout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.65fr) minmax(0, 1.35fr);
+  gap: 54px;
+}
+
+.faqLayout > header > span {
+  color: #a8cf69;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.faqLayout h2 {
+  margin: 7px 0 0;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.faqLayout > header p {
+  margin: 17px 0 0;
+  color: #a9b3a7;
+}
+
+.faqLayout > header a {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.faqList {
+  border-top: 1px solid #505b3e;
+}
+
+.faqList article {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr);
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid #505b3e;
+}
+
+.faqList article > span {
+  color: #82985b;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.faqList h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 19px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.faqList p {
+  margin: 8px 0 0;
+  color: #aeb9aa;
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .heroInner {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 34px;
+  }
+
+  .timingGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .heroInner,
+  .sectionHeading,
+  .thresholdLayout,
+  .explainerGrid,
+  .faqLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .heroInner {
+    min-height: auto;
+    gap: 28px;
+    padding-top: 28px;
+  }
+
+  .heroPlate {
+    min-height: 230px;
+  }
+
+  .heroPlate strong {
+    font-size: var(--text-h2);
+  }
+
+  .toolSection,
+  .rulesSection,
+  .thresholdSection,
+  .explainerSection,
+  .faqSection {
+    padding: 36px 0 46px;
+  }
+
+  .timingGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timingGrid article {
+    min-height: 190px;
+  }
+
+  .tableHead,
+  .tableRow {
+    grid-template-columns: 0.8fr 1fr 1.2fr;
+  }
+}

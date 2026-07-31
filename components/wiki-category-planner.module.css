@@ -1,0 +1,128 @@
+.planner {
+  margin: 24px 0 32px;
+  border-top: 3px solid #5ca4b3;
+}
+
+.plannerHeading {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.9fr) minmax(300px, 1.1fr);
+  align-items: end;
+  gap: 34px;
+  padding: 20px 22px;
+  border-right: 1px solid #36545d;
+  border-left: 1px solid #36545d;
+  background: linear-gradient(110deg, #12323b, #0a2028);
+}
+
+.plannerHeading span {
+  color: #6fc6d7;
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.plannerHeading h3 {
+  margin: 5px 0 0;
+  font-family: var(--display);
+  font-size: var(--text-h3);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.plannerHeading p {
+  margin: 0;
+  color: #a7babf;
+  font-size: 13px;
+}
+
+.jobTable {
+  overflow: hidden;
+  border-top: 1px solid #36545d;
+  border-left: 1px solid #36545d;
+}
+
+.tableHead,
+.jobTable article {
+  display: grid;
+  grid-template-columns: minmax(210px, 1.2fr) minmax(120px, 0.65fr) minmax(230px, 1.2fr) minmax(150px, 0.8fr);
+}
+
+.tableHead {
+  background: #182c32;
+}
+
+.tableHead b,
+.jobTable article > * {
+  min-width: 0;
+  padding: 13px 15px;
+  margin: 0;
+  border-right: 1px solid #36545d;
+  border-bottom: 1px solid #36545d;
+}
+
+.tableHead b {
+  color: #74929a;
+  font-family: var(--display);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.jobTable article {
+  background: #0b2027;
+}
+
+.jobTable article:nth-child(odd) {
+  background: #0d252d;
+}
+
+.jobTable article p {
+  color: #adbec1;
+  font-size: 12px;
+}
+
+.jobTable article > a,
+.jobTable article div > a {
+  color: #6ed2e6;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.jobTable article div p {
+  margin: 0 0 7px;
+  color: #adbec1;
+  font-size: 12px;
+}
+
+.resourceTable .tableHead,
+.resourceTable article {
+  grid-template-columns: minmax(130px, 0.65fr) minmax(230px, 1.25fr) minmax(190px, 1fr) minmax(220px, 1.15fr);
+}
+
+@media (max-width: 1024px) {
+  .plannerHeading {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .jobTable {
+    overflow: visible;
+    border: 0;
+  }
+
+  .tableHead {
+    display: none;
+  }
+
+  .jobTable article,
+  .resourceTable article {
+    grid-template-columns: 1fr;
+    margin-bottom: 12px;
+    border-top: 1px solid #36545d;
+    border-left: 1px solid #36545d;
+  }
+}

@@ -1,0 +1,363 @@
+.planner {
+  display: grid;
+  grid-template-columns: minmax(310px, 0.78fr) minmax(0, 1.22fr);
+  border: 1px solid var(--line-bright);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.orderPanel,
+.resultPanel {
+  padding: 16px;
+}
+
+.orderPanel {
+  border-right: 1px solid var(--line-bright);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgb(73 97 106 / 8%) 32px),
+    #09171d;
+}
+
+.orderPanel header > span,
+.resultPanel header > span,
+.materials > span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.orderPanel h2 {
+  margin: 4px 0 8px;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.resultPanel h3 {
+  margin: 4px 0 8px;
+  font-family: var(--display);
+  font-size: var(--text-h2);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.orderPanel header p,
+.resultTitle p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.search {
+  display: grid;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.search > label,
+.stationFilter > span,
+.recipeOption > span,
+.quantity > span {
+  color: #c5d2d2;
+  font-family: var(--display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.search > input,
+.stationFilter select,
+.recipeOption select,
+.quantity input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 14px;
+  border: 1px solid var(--line-bright);
+  color: var(--paper);
+  background: #061015;
+}
+
+.search > input:focus-visible,
+.stationFilter select:focus-visible,
+.recipeOption select:focus-visible,
+.quantity input:focus-visible,
+.matchList button:focus-visible {
+  outline: 3px solid var(--orange-bright);
+  outline-offset: 3px;
+}
+
+.databaseFacts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.databaseFacts span {
+  padding: 10px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: #82979c;
+  font-family: var(--display);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.databaseFacts b {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--orange-bright);
+  font-size: 1.15rem;
+}
+
+.stationFilter {
+  display: grid;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.noMatches {
+  padding: 16px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.matchList {
+  max-height: 286px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+}
+
+.matchList button {
+  display: grid;
+  width: 100%;
+  min-height: 54px;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: #d5dfdc;
+  background: #0b1b21;
+  text-align: left;
+  cursor: pointer;
+}
+
+.matchList button:last-child {
+  border-bottom: 0;
+}
+
+.matchList button:hover,
+.matchList button.selected {
+  color: #111a1d;
+  background: var(--orange);
+}
+
+.matchList button img {
+  object-fit: contain;
+}
+
+.matchList button span {
+  font-weight: 700;
+}
+
+.matchList button small {
+  font-family: var(--display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.recipeOption,
+.quantity {
+  display: grid;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.quantity {
+  grid-template-columns: 1fr 96px;
+  align-items: end;
+}
+
+.quantity input {
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  text-align: center;
+}
+
+.resultPanel {
+  background:
+    linear-gradient(145deg, rgb(25 180 209 / 5%), transparent 42%),
+    #0d2027;
+}
+
+.resultTitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.resultTitle > img {
+  flex: 0 0 auto;
+  object-fit: contain;
+  background: #102a32;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 34px 0;
+  border-top: 1px solid var(--line-bright);
+  border-left: 1px solid var(--line-bright);
+}
+
+.metrics div {
+  padding: 16px;
+  border-right: 1px solid var(--line-bright);
+  border-bottom: 1px solid var(--line-bright);
+}
+
+.metrics dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.metrics dd {
+  margin: 3px 0 0;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.materials {
+  display: grid;
+  gap: 12px;
+}
+
+.materials ul {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.materials li {
+  display: grid;
+  min-height: 74px;
+  grid-template-columns: 58px 72px minmax(120px, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.materials li > div {
+  display: grid;
+  place-items: center;
+}
+
+.materials li img {
+  object-fit: contain;
+}
+
+.materials li > strong {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 1.45rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.materials li > span {
+  font-weight: 750;
+}
+
+.materials li > small {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.fallbackIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  background: var(--panel-3);
+}
+
+.empty {
+  display: grid;
+  min-height: 420px;
+  place-content: center;
+  text-align: center;
+}
+
+.empty strong {
+  font-family: var(--display);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.empty p {
+  color: var(--muted);
+}
+
+@media (max-width: 1024px) {
+  .planner {
+    grid-template-columns: 1fr;
+  }
+
+  .orderPanel {
+    border-right: 0;
+    border-bottom: 1px solid var(--line-bright);
+  }
+}
+
+@media (max-width: 768px) {
+  .orderPanel,
+  .resultPanel {
+    padding: 24px 18px;
+  }
+
+  .resultTitle {
+    align-items: flex-start;
+  }
+
+  .resultTitle > img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .databaseFacts {
+    grid-template-columns: 1fr;
+  }
+
+  .materials li {
+    grid-template-columns: 48px 58px 1fr;
+    gap: 8px;
+    padding-block: 8px;
+  }
+
+  .materials li > small {
+    grid-column: 3;
+  }
+}

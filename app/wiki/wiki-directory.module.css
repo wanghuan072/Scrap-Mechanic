@@ -1,0 +1,371 @@
+.systemSection {
+  padding-block: 18px 10px;
+  border-block: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgb(255 158 0 / 3%) 1px, transparent 1px),
+    #07151a;
+  background-size: 56px 100%;
+}
+
+.taskLayout {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.55fr) minmax(0, 1.8fr);
+  align-items: start;
+  gap: 16px;
+}
+
+.taskHeader {
+  position: sticky;
+  top: calc(var(--header-height) + 12px);
+  display: grid;
+  gap: 12px;
+}
+
+.taskHeader > div > span,
+.catalogBody > span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.taskHeader h2 {
+  max-width: 10ch;
+  margin: 4px 0 8px;
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.taskHeader > div > p {
+  max-width: 34ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.taskHeader dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin: 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.taskHeader dl div {
+  padding: 8px;
+  background: #091a20;
+}
+
+.taskHeader dt {
+  color: #6f8e94;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.taskHeader dd {
+  margin: 2px 0 0;
+  color: #dce6e4;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.taskList {
+  display: grid;
+  border: 1px solid #41545c;
+  background: #071219;
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+}
+
+.taskList > a {
+  display: grid;
+  min-height: 84px;
+  grid-template-columns: 40px minmax(100px, 0.5fr) minmax(200px, 1.3fr) minmax(110px, 0.5fr) 32px;
+  align-items: center;
+  border-bottom: 1px solid #354d56;
+  background: #08181e;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.taskList > a:last-child {
+  border-bottom: 0;
+}
+
+.taskList > a:hover {
+  background: #102b35;
+}
+
+.taskList > a:focus-visible,
+.categoryLinks a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.taskIndex {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--line);
+  color: #607c83;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.taskName {
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px;
+}
+
+.taskName small {
+  color: var(--orange-bright);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.taskName strong {
+  font-family: var(--display);
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.taskQuestion {
+  min-width: 0;
+  padding: 10px 14px;
+  border-left: 1px solid var(--line);
+}
+
+.taskQuestion h3,
+.catalogBody h3 {
+  margin: 0 0 4px;
+  font-family: var(--display);
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.taskQuestion p,
+.catalogBody p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.taskMetric {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border-left: 1px dashed var(--line-bright);
+}
+
+.taskMetric strong {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.taskMetric span {
+  color: #7e999f;
+  font-size: 10px;
+}
+
+.taskArrow {
+  color: var(--cyan);
+  font-size: 14px;
+}
+
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.catalogCard {
+  display: grid;
+  min-height: 148px;
+  grid-template-columns: 48px 88px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid #41545c;
+  background:
+    linear-gradient(180deg, rgb(12 27 34 / 97%), rgb(6 18 24 / 98%)),
+    #09191f;
+  box-shadow:
+    inset 0 0 0 3px #071219,
+    inset 0 0 0 4px #1c3038;
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+}
+
+.catalogIndex {
+  display: grid;
+  align-content: space-between;
+  justify-items: center;
+  padding: 10px 4px;
+  border-right: 1px solid var(--line);
+  background: #061216;
+}
+
+.catalogIndex span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.catalogIndex small {
+  color: #779198;
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.catalogImage {
+  position: relative;
+  border-right: 1px solid var(--line);
+  background:
+    radial-gradient(circle, rgb(37 93 105 / 58%), transparent 68%),
+    #07171c;
+}
+
+.catalogImage img {
+  object-fit: contain;
+  padding: 8px;
+}
+
+.catalogBody {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.catalogBody h3 {
+  font-size: clamp(15px, 1.8vw, 18px);
+}
+
+.categoryLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.categoryLinks a {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 1px solid #405960;
+  color: #d8e4e3;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.categoryLinks a small {
+  display: grid;
+  min-width: 18px;
+  height: 18px;
+  place-items: center;
+  color: #0c171a;
+  background: var(--orange);
+  font-size: 9px;
+}
+
+.categoryLinks a:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+@media (max-width: 1024px) {
+  .taskLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .taskHeader {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .taskList > a {
+    grid-template-columns: 34px minmax(90px, 0.45fr) 1fr 28px;
+    min-height: 0;
+  }
+
+  .taskMetric {
+    grid-column: 2 / 4;
+    padding: 0 12px 10px;
+    border-left: 0;
+  }
+
+  .taskArrow {
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .taskList > a {
+    grid-template-columns: 28px 1fr 28px;
+  }
+
+  .taskQuestion {
+    grid-column: 2 / 4;
+    padding: 0 12px 8px;
+    border-left: 0;
+  }
+
+  .taskQuestion p {
+    display: none;
+  }
+
+  .taskMetric {
+    grid-column: 2 / 4;
+  }
+
+  .taskArrow {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .catalogCard {
+    min-height: 0;
+    grid-template-columns: 40px 72px minmax(0, 1fr);
+  }
+
+  .catalogBody p {
+    display: none;
+  }
+
+  .categoryLinks a {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

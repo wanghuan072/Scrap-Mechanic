@@ -1,0 +1,345 @@
+.manual {
+  padding: 12px 0 8px;
+}
+
+.manualHeading {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 420px);
+  align-items: end;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-bright);
+}
+
+.manualHeading span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.manualHeading h2 {
+  margin: 6px 0 0;
+  font-family: var(--display);
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.manualHeading > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.manualGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.7fr);
+  gap: 8px;
+}
+
+.coverStory {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(220px, 0.75fr);
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid var(--frame, #41545c);
+  background:
+    linear-gradient(180deg, rgb(12 27 34 / 97%), rgb(6 18 24 / 98%));
+  box-shadow:
+    inset 0 0 0 3px #071219,
+    inset 0 0 0 4px #1c3038;
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+}
+
+.coverImage {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.coverImage::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 48%, rgb(4 12 16 / 88%));
+  content: "";
+}
+
+.coverImage img {
+  object-fit: cover;
+  transition: filter 220ms ease;
+}
+
+.coverImage:hover img {
+  filter: brightness(1.08);
+}
+
+.coverImage > span {
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  bottom: 10px;
+  left: 12px;
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coverCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px;
+  border-left: 1px solid var(--line);
+}
+
+.coverCopy > span,
+.dispatchLabel,
+.laneHeading span {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.coverCopy h3,
+.dispatch h3,
+.laneHeading h2 {
+  margin: 6px 0 8px;
+  font-family: var(--display);
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.coverCopy p,
+.dispatch p {
+  margin: 0;
+  color: #b0bfc1;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.coverCopy a,
+.dispatch a {
+  margin-top: 10px;
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dispatch {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 16px;
+  border: 1px solid #6b542d;
+  background:
+    linear-gradient(155deg, rgb(67 44 13 / 42%), rgb(8 22 28 / 96%) 62%),
+    url("/images/scrap-mechanic/trailer-1-0.jpg") center / cover;
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+}
+
+.dispatch::after {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 7px;
+  height: 48px;
+  background: repeating-linear-gradient(135deg, var(--orange) 0 6px, #1a2225 6px 12px);
+  content: "";
+}
+
+.dispatch dl {
+  margin: 14px 0 0;
+}
+
+.dispatch dl div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 7px 0;
+  border-top: 1px solid #5a4d34;
+}
+
+.dispatch dt {
+  color: #aebdbf;
+  font-size: 11px;
+}
+
+.dispatch dd {
+  margin: 0;
+  color: #f3e2b2;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.lanes {
+  padding: 8px 0 28px;
+}
+
+.laneHeading {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 420px);
+  align-items: end;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-bright);
+}
+
+.laneHeading h2 {
+  margin-bottom: 0;
+}
+
+.laneHeading > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.lane {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.lane > header {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-content: start;
+  gap: 8px;
+}
+
+.lane > header > b {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.lane h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.lane header p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.laneEntries {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.guideRow {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 10px;
+  min-height: 88px;
+  padding: 10px 12px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #0a1b22;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.guideRow > span {
+  color: #59737b;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.guideRow small {
+  color: var(--orange-bright);
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.guideRow h4 {
+  margin: 3px 0 4px;
+  font-family: var(--display);
+  font-size: 14px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.guideRow p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.guideRow > b {
+  color: var(--cyan);
+  font-size: 14px;
+}
+
+.guideRow:hover {
+  background: #102a34;
+}
+
+@media (max-width: 1024px) {
+  .manualHeading,
+  .manualGrid,
+  .lane {
+    grid-template-columns: 1fr;
+  }
+
+  .coverStory {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverStory,
+  .manualHeading,
+  .laneHeading,
+  .laneEntries {
+    grid-template-columns: 1fr;
+  }
+
+  .coverImage {
+    min-height: 180px;
+  }
+
+  .coverCopy {
+    padding: 14px;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .guideRow {
+    min-height: 44px;
+    padding: 10px;
+  }
+}
