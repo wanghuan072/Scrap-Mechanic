@@ -6,45 +6,77 @@ export const itemEntries: WikiEntry[] = [
     category: "items",
     name: "Water Bucket",
     description:
-      "A portable bucket used to move water by hand, water early crops, and briefly interrupt some hostile bots.",
+      "The required opening tool used to carry pond water back to the crashed ship, extinguish its three marked interior fires, water crops, and briefly interrupt water-sensitive bots.",
     image: "/images/wiki/water-bucket.webp",
-    imageAlt: "water bucket image from Scrap Mechanic",
+    imageAlt: "Water Bucket item from Scrap Mechanic",
     gameVersion: "1.0",
     lastTested: "July 2026",
     featured: true,
     facts: [
-      { label: "Type", value: "Portable item" },
-      { label: "Primary use", value: "Moving water" },
-      { label: "Useful for", value: "Early farming and emergency bot control" },
+      { label: "Type", value: "Portable water tool" },
+      { label: "First location", value: "Pond beside the Crash Site" },
+      { label: "Opening objective", value: "Extinguish 3 marked ship fires" },
+      { label: "Refill sources", value: "Open water or a filled Water Container" },
+    ],
+    tables: [
+      {
+        caption: "Water Bucket states",
+        headers: ["Current state", "Player action", "Result"],
+        rows: [
+          ["Empty", "Use it on the pond or a filled Water Container", "Bucket becomes filled"],
+          ["Filled", "Throw water at a marked ship fire", "Fire is extinguished and bucket becomes empty"],
+          ["Filled", "Throw water at a dry crop plot", "The targeted plot is watered"],
+          ["Filled", "Throw water at a Haybot", "The bot is interrupted briefly"],
+        ],
+        note:
+          "The Crash Site objective requires repeated fill-and-return trips until all three marked interior fires are out.",
+      },
     ],
     sections: [
       {
-        heading: "What the Water Bucket Does",
+        heading: "Where the First Water Bucket Is",
         paragraphs: [
-          "The Water Bucket is the simple, manual way to carry water before a farm has pumps, containers, and automated watering. It remains useful after automation because it is quick to grab and does not depend on a powered machine.",
+          "Enter the crashed ship first so Getting Started activates, then stand at its entrance and follow the path running in the opposite direction. The nearby pond is grouped with the farming billboard, Soil Bags, seeds, and a planted Tomato. The Water Bucket is placed at the pond edge and receives a quest marker while the ship-fire objective is active.",
         ],
       },
       {
-        heading: "Practical Uses",
+        heading: "How to Fill the Bucket and Put Out the Ship Fires",
+        steps: [
+          "Equip the empty Water Bucket at the pond and use it on the water surface.",
+          "Return through the crashed ship entrance with the filled bucket.",
+          "Aim at one of the three fires carrying the active quest marker and throw the water.",
+          "Return to the pond after the bucket becomes empty, refill it, and repeat.",
+          "Continue until all three marked interior fires are gone and Getting Started points to the Master Battery.",
+        ],
+      },
+      {
+        heading: "The Opening Fire Does Not Need a Fire Extinguisher",
+        paragraphs: [
+          "The crashed-ship objective is completed with pond water and the Water Bucket. The Fire Extinguisher appears later through Built to Last and Where's the Fire?, so searching for that reward during the opening sequence sends the player into the wrong part of progression.",
+        ],
+      },
+      {
+        heading: "Uses After the Crash Site",
         bullets: [
-          "Water a small starter plot without building a full watering system.",
-          "Carry water to a test build before committing to pipes and pumps.",
+          "Water a small starter row before a Water System is worth building.",
+          "Refill from a Water Container when the farm is no longer beside a pond.",
+          "Carry one as manual recovery when a pump, switch, pipe, or watering arm stops working.",
           "Use a splash to create a brief opening against bots that react to water.",
         ],
       },
-      {
-        heading: "What to Build Next",
-        paragraphs: [
-          "Once repeated bucket trips become the slowest part of farming, move to a pump, water container, switch, and watering arm. Keep at least one bucket near the farm for recovery when an automated connection breaks.",
-        ],
-      },
     ],
-    relatedSlugs: ["tomato", "connect-tool", "controller"],
+    relatedSlugs: ["master-battery", "connect-tool", "mini-craftbot", "soil-bag", "tomato", "water-system"],
     seo: {
-      title: "Scrap Mechanic Water Bucket - Farming Uses Guide",
+      title: "Scrap Mechanic Water Bucket Location and Ship Fires",
       description:
-        "Learn how the Water Bucket helps with early farming, water transport, and emergency bot control in Scrap Mechanic Survival. Check it in Survival.",
-      keywords: ["Scrap Mechanic Water Bucket", "Scrap Mechanic watering", "Scrap Mechanic farming"],
+        "Find and fill the Scrap Mechanic Water Bucket, extinguish three marked fires inside the crashed ship, then reuse it for farming, recovery, and bot control.",
+      keywords: [
+        "Scrap Mechanic Water Bucket",
+        "Scrap Mechanic Water Bucket location",
+        "Scrap Mechanic how to put out fire",
+        "Scrap Mechanic crashed ship fire",
+        "Scrap Mechanic how to fill Water Bucket",
+      ],
     },
   },
   {
@@ -91,39 +123,65 @@ export const itemEntries: WikiEntry[] = [
     category: "items",
     name: "Master Battery",
     description:
-      "A progression item used to restore power to major early Survival facilities.",
+      "A fixed progression item used twice in the opening route: one battery restores the crashed ship and a separate battery restores the Mechanic Station control panel.",
     image: "/images/wiki/master-battery.webp",
-    imageAlt: "master battery image from Scrap Mechanic",
+    imageAlt: "Master Battery item from Scrap Mechanic",
     gameVersion: "1.0",
     lastTested: "July 2026",
     featured: true,
     facts: [
       { label: "Type", value: "Progression part" },
-      { label: "Used for", value: "Powering major facilities" },
-      { label: "Carry rule", value: "Transport it only for the active objective" },
+      { label: "First battery", value: "Nearby ruin → crashed ship" },
+      { label: "Second battery", value: "Station bunk room → control panel" },
+      { label: "Not the same as", value: "Normal Battery" },
+    ],
+    tables: [
+      {
+        caption: "Early Master Battery route",
+        headers: ["Quest", "Where the battery is marked", "Where it must be installed", "Completion proof"],
+        rows: [
+          ["Getting Started", "Ruin near the Crash Site", "Crashed ship battery socket", "Ship power and opening systems activate"],
+          ["The Mechanic Station", "Station bunk-room objective area", "Mechanic Station control panel", "Station facilities and Craftbot progression open"],
+        ],
+        note:
+          "The second objective does not ask you to remove or reuse the crashed-ship battery. Follow the new marker and collect the station battery.",
+      },
     ],
     sections: [
       {
-        heading: "Why It Matters",
+        heading: "First Battery: Restore the Crashed Ship",
         paragraphs: [
-          "The Master Battery is not ordinary vehicle fuel. It belongs to the opening progression chain, so read the active objective and place it in the facility that is asking for power.",
+          "Extinguishing the three marked ship fires advances Getting Started to the nearby ruin. Follow the objective and debris trail, take the marked Master Battery, and install it in the crashed ship. This powers the Mini Craftbot and lets the console and Logbook steps continue.",
         ],
       },
       {
-        heading: "Safe Handling",
-        bullets: [
-          "Do not bury it in general storage with batteries and circuit boards.",
-          "Clear the facility entrance before carrying it through a hostile area.",
-          "If an objective does not react, confirm the target and current game patch before moving other progression items.",
+        heading: "Second Battery: Restore the Mechanic Station",
+        paragraphs: [
+          "After the Logbook marks the Mechanic Station, the next main objective identifies a separate Master Battery in the station's bunk-room area. Carry that battery to the station control panel. The route is complete when the station accepts power and the Craftbot objective becomes available.",
+        ],
+      },
+      {
+        heading: "If the Battery Does Not Advance the Objective",
+        steps: [
+          "Read the active Logbook title: Getting Started targets the crashed ship; The Mechanic Station targets the station panel.",
+          "Confirm the battery came from the location marked for that objective.",
+          "Carry it to the highlighted socket rather than storing it with normal Batteries.",
+          "Let the objective update before leaving the area or beginning another quest interaction.",
         ],
       },
     ],
-    relatedSlugs: ["circuit-board", "lift", "component-kit"],
+    relatedSlugs: ["water-bucket", "connect-tool", "mini-craftbot", "craftbot", "battery", "component-kit"],
     seo: {
-      title: "Scrap Mechanic Master Battery - Uses and Guide",
+      title: "Scrap Mechanic Master Battery Locations and Uses",
       description:
-        "Learn what the Master Battery powers and how to handle this early progression item in Scrap Mechanic Survival. Review its role before committing materials.",
-      keywords: ["Scrap Mechanic Master Battery", "Scrap Mechanic station power", "Scrap Mechanic quest item"],
+        "Find both Scrap Mechanic Master Batteries, install each one at the crashed ship or Mechanic Station objective, and keep them separate from normal Batteries.",
+      keywords: [
+        "Scrap Mechanic Master Battery",
+        "Scrap Mechanic Master Battery location",
+        "Scrap Mechanic crashed ship battery",
+        "Scrap Mechanic Mechanic Station battery",
+        "Scrap Mechanic how to power ship",
+      ],
     },
   },
   {

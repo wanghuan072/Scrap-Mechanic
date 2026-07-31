@@ -67,9 +67,19 @@ export type ArticleEntry = {
   featured?: boolean;
   sourceUrl?: string;
   quickAnswer: string;
+  media?: Array<{
+    src: string;
+    alt: string;
+    caption: string;
+  }>;
   tables?: DataTable[];
   sections: ContentSection[];
   relatedWiki?: string[];
+  relatedGuides?: string[];
+  relatedRoutes?: Array<{
+    label: string;
+    href: string;
+  }>;
   seo: SeoData;
 };
 

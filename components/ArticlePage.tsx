@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ArticleEntry } from "@/data/types";
-import { getWikiEntryBySlug } from "@/lib/content";
+import { getWikiEntryBySlug, guides } from "@/lib/content";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { WikiLinkedText } from "@/components/WikiLinkedText";
 import { site } from "@/data/site";
 
 export function ArticlePage({
@@ -15,8 +16,12 @@ export function ArticlePage({
   basePath: string;
   collectionLabel: string;
 }) {
+  const currentHref = `${basePath}/${entry.slug}`;
   const relatedWiki = (entry.relatedWiki ?? [])
     .map(getWikiEntryBySlug)
+    .filter((item) => item !== undefined);
+  const relatedGuides = (entry.relatedGuides ?? [])
+    .map((slug) => guides.find((guide) => guide.slug === slug))
     .filter((item) => item !== undefined);
 
   return (
@@ -92,9 +97,30 @@ export function ArticlePage({
         <div className="container article-body-content">
           <article className="article-copy">
             <aside className="quick-answer">
-              <span>IN BRIEF</span>
-              <p>{entry.quickAnswer}</p>
+              <span>DO THIS FIRST</span>
+              <p>
+                <WikiLinkedText text={entry.quickAnswer} currentHref={currentHref} />
+              </p>
             </aside>
+            {entry.media && entry.media.length > 0 ? (
+              <div className="article-media-grid">
+                {entry.media.map((media) => (
+                  <figure key={media.src}>
+                    <div className="article-media-image">
+                      <Image
+                        src={media.src}
+                        alt={media.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 390px"
+                      />
+                    </div>
+                    <figcaption>
+                      <WikiLinkedText text={media.caption} currentHref={currentHref} />
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : null}
             {entry.tables?.map((table) => (
               <section key={table.caption} className="article-data-table">
                 <h2>{table.caption}</h2>
@@ -111,7 +137,9 @@ export function ArticlePage({
                       {table.rows.map((row) => (
                         <tr key={row.join("|")}>
                           {row.map((cell, index) => (
-                            <td key={`${row[0]}-${index}`}>{cell}</td>
+                            <td key={`${row[0]}-${index}`}>
+                              <WikiLinkedText text={cell} currentHref={currentHref} />
+                            </td>
                           ))}
                         </tr>
                       ))}
@@ -124,18 +152,26 @@ export function ArticlePage({
             {entry.sections.map((section) => (
               <section key={section.heading}>
                 <h2>{section.heading}</h2>
-                {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.paragraphs?.map((paragraph) => (
+                  <p key={paragraph}>
+                    <WikiLinkedText text={paragraph} currentHref={currentHref} />
+                  </p>
+                ))}
                 {section.bullets && (
                   <ul>
                     {section.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
+                      <li key={bullet}>
+                        <WikiLinkedText text={bullet} currentHref={currentHref} />
+                      </li>
                     ))}
                   </ul>
                 )}
                 {section.steps && (
                   <ol>
                     {section.steps.map((step) => (
-                      <li key={step}>{step}</li>
+                      <li key={step}>
+                        <WikiLinkedText text={step} currentHref={currentHref} />
+                      </li>
                     ))}
                   </ol>
                 )}
@@ -168,6 +204,34 @@ export function ArticlePage({
                     <li key={wiki.slug}>
                       <Link href={`/wiki/${wiki.category}/${wiki.slug}`}>
                         {wiki.name} <span aria-hidden="true">→</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {relatedGuides.length > 0 && (
+              <div className="sidebar-panel">
+                <span className="sidebar-label">RELATED GUIDES</span>
+                <ul className="sidebar-links">
+                  {relatedGuides.map((guide) => (
+                    <li key={guide.slug}>
+                      <Link href={`/guides/${guide.slug}`}>
+                        {guide.title} <span aria-hidden="true">→</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {entry.relatedRoutes && entry.relatedRoutes.length > 0 && (
+              <div className="sidebar-panel">
+                <span className="sidebar-label">ROUTE CHECKPOINTS</span>
+                <ul className="sidebar-links">
+                  {entry.relatedRoutes.map((route) => (
+                    <li key={route.href}>
+                      <Link href={route.href}>
+                        {route.label} <span aria-hidden="true">→</span>
                       </Link>
                     </li>
                   ))}

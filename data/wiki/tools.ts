@@ -6,7 +6,7 @@ export const toolWikiEntries: WikiEntry[] = [
     category: "tools",
     name: "Connect Tool",
     description:
-      "The tool used to link interactive parts and inspect how signals and movement travel through a creation.",
+      "An opening-route tool crafted at the powered crashed ship to reconnect its console, then used to link interactive parts and inspect signal direction throughout the game.",
     image: "/images/wiki/connect-tool.webp",
     imageAlt: "connect tool image from Scrap Mechanic",
     gameVersion: "1.0",
@@ -14,10 +14,18 @@ export const toolWikiEntries: WikiEntry[] = [
     featured: true,
     facts: [
       { label: "Type", value: "Building tool" },
-      { label: "Primary use", value: "Connecting interactive parts" },
+      { label: "First acquisition", value: "Crashed ship Mini Craftbot" },
+      { label: "Opening objective", value: "Reconnect the ship console" },
+      { label: "Primary use", value: "Connect interactive parts" },
       { label: "Also shows", value: "Connection order and bearing direction" },
     ],
     sections: [
+      {
+        heading: "How to Get the Connect Tool at the Crash Site",
+        paragraphs: [
+          "Complete the Water Bucket fire objective, recover the nearby Master Battery, and install it in the crashed ship. Once the ship's Mini Craftbot has power, follow Getting Started and craft the Connect Tool there. Use it on the requested console connection before taking the Logbook and leaving for the Mechanic Station.",
+        ],
+      },
       {
         heading: "How Connections Work",
         paragraphs: [
@@ -34,12 +42,17 @@ export const toolWikiEntries: WikiEntry[] = [
         ],
       },
     ],
-    relatedSlugs: ["bearing", "controller", "logic-gate"],
+    relatedSlugs: ["water-bucket", "master-battery", "mini-craftbot", "bearing", "controller", "logic-gate"],
     seo: {
-      title: "Scrap Mechanic Connect Tool - Uses and Guide",
+      title: "Scrap Mechanic Connect Tool Location and Uses",
       description:
-        "Use the Connect Tool to link interactive parts, inspect signal direction, and troubleshoot Scrap Mechanic creations. Confirm its current role.",
-      keywords: ["Scrap Mechanic Connect Tool", "Scrap Mechanic connections", "Scrap Mechanic interactive parts"],
+        "Craft the Scrap Mechanic Connect Tool at the powered crashed ship, reconnect the console, then use it for bearings, controls, logic, and troubleshooting.",
+      keywords: [
+        "Scrap Mechanic Connect Tool",
+        "Scrap Mechanic how to get Connect Tool",
+        "Scrap Mechanic reconnect ship console",
+        "Scrap Mechanic connections",
+      ],
     },
   },
   {

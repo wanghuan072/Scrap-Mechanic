@@ -326,7 +326,7 @@ export default function UpdatesPage() {
             ))}
           </div>
           <div className={styles.decisionLinks}>
-            <Link href="/guides/save-backups-and-branches">
+            <Link href="/guides/returning-to-1-0">
               Open the save and Steam branch guide →
             </Link>
             <Link href="/mods">Review current Workshop recommendations →</Link>

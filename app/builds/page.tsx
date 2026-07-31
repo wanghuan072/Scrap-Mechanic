@@ -161,7 +161,7 @@ const progressionSystems = [
     machine: "Crushbot → Prospectorbot",
     machineHref: "/wiki/parts/crushbot",
     boundary: "Crush raw ore first; the Prospectorbot stage needs crushed ore, water, and output space",
-    route: "/guides/excavation-island-mining",
+    route: "/builds/mining-vehicle",
     routeLabel: "Run the mining loop",
   },
   {

@@ -104,7 +104,7 @@ export default function TradesPage() {
               be crafted.
             </p>
             <div className={styles.heroLinks}>
-              <Link href="/guides/trading-and-packing">Plan a packing route</Link>
+              <Link href="/guides/farming-basics">Plan crop value and farm defense</Link>
               <Link href="/wiki/recipes">Browse crafting recipes</Link>
             </div>
           </div>

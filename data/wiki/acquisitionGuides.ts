@@ -11,12 +11,12 @@ export type WikiAcquisitionGuide = {
 export const wikiAcquisitionGuides: Record<string, WikiAcquisitionGuide> = {
   "water-bucket": {
     summary:
-      "The earliest Water Bucket is placed beside the pond near the Crash Site so the opening quest can teach filling and throwing water.",
+      "The opening Water Bucket is placed at the pond beside the Crash Site and is required to extinguish the three marked fires inside the crashed ship.",
     locations: [
       {
         name: "Crash Site pond",
         detail:
-          "Follow the path opposite the crashed ship entrance. The bucket sits near the pond, seeds, soil, and farming billboard.",
+          "Enter the ship to activate Getting Started, then follow the path opposite the crashed ship entrance. The bucket sits at the pond edge beside seeds, Soil Bags, a planted Tomato, and the farming billboard.",
         href: "/wiki/quests#getting-started",
       },
       {
@@ -26,9 +26,9 @@ export const wikiAcquisitionGuides: Record<string, WikiAcquisitionGuide> = {
       },
     ],
     fieldNotes: [
-      "Carry one near the starter farm until an automated water system is reliable.",
-      "The opening quest marks the nearby bucket when the ship fires become active.",
-      "A filled Water Container can also refill an empty bucket.",
+      "Fill the empty Water Bucket at the pond, throw one splash at a marked interior fire, then refill it for the next fire.",
+      "Getting Started advances after all three marked fires inside the crashed ship are extinguished.",
+      "A filled Water Container can refill an empty bucket after the opening route.",
     ],
   },
   "circuit-board": {
@@ -55,7 +55,7 @@ export const wikiAcquisitionGuides: Record<string, WikiAcquisitionGuide> = {
   },
   "master-battery": {
     summary:
-      "Master Batteries are fixed progression objects placed near the facilities they restore; they are not interchangeable with normal Batteries.",
+      "The opening route uses two fixed Master Batteries: the nearby ruin battery powers the crashed ship, while the station battery powers the Mechanic Station control panel.",
     locations: [
       {
         name: "Ruin near the Crash Site",
@@ -71,6 +71,7 @@ export const wikiAcquisitionGuides: Record<string, WikiAcquisitionGuide> = {
       },
     ],
     fieldNotes: [
+      "Do not save the Crash Site battery for the Mechanic Station; the station objective marks a second Master Battery.",
       "Follow the active quest marker instead of carrying a battery to an unrelated machine.",
       "Finish nearby combat before moving the progression object.",
       "Do not store it with normal consumable Batteries.",

@@ -30,15 +30,15 @@ const startSteps = [
   {
     number: "1",
     title: "Crash Site",
-    copy: "Secure resources and survive night one.",
+    copy: "Find the bucket, put out 3 ship fires, and restore power.",
     href: "/guides/beginner-first-hours",
     image: "/images/scrap-mechanic/screenshot-08.jpg",
   },
   {
     number: "2",
     title: "Mechanic Station",
-    copy: "Reach a working base and craft bench.",
-    href: "/map",
+    copy: "Install its second Master Battery and build the Craftbot.",
+    href: "/wiki/quests#the-mechanic-station",
     image: "/images/scrap-mechanic/screenshot-02.jpg",
   },
   {
@@ -117,7 +117,17 @@ const faqs = [
   {
     question: "How do I get started in Scrap Mechanic 1.0?",
     answer:
-      "Secure the crash area, learn the Lift and Connect Tool, follow a road toward a Mechanic Station, then test a simple vehicle before expanding your farm.",
+      "Enter the crashed ship, take the Water Bucket from the nearby pond, extinguish the three marked interior fires, recover the ruin's Master Battery, restore ship power, reconnect the console, and open the Logbook before leaving for the Mechanic Station.",
+  },
+  {
+    question: "Where is the Water Bucket at the Scrap Mechanic Crash Site?",
+    answer:
+      "Activate Getting Started inside the ship, then follow the path opposite the entrance to the nearby pond. The Water Bucket is at the pond edge beside the farming tutorial supplies.",
+  },
+  {
+    question: "Does the first Master Battery power the Mechanic Station?",
+    answer:
+      "No. The Master Battery from the ruin near the Crash Site powers the crashed ship. The Mechanic Station objective marks a separate battery in the station's bunk-room area.",
   },
   {
     question: "Can an old Survival world load in 1.0?",

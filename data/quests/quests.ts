@@ -7,12 +7,13 @@ export const quests: QuestEntry[] = [
     kind: "main",
     phase: "Crash and recovery",
     summary:
-      "Put out the ship fires, restore power with the nearby Master Battery, reconnect the console, and use the Logbook to mark the Mechanic Station.",
+      "Activate the opening objective inside the crashed ship, use the Water Bucket from the nearby pond to extinguish three marked interior fires, restore ship power with the nearby Master Battery, reconnect the console, and use the Logbook to mark the Mechanic Station.",
     objectiveCount: 5,
     rewardCount: 0,
     objectiveHighlights: [
-      "Find water and put out every fire inside the crashed ship.",
-      "Find the nearby Master Battery and restore ship power.",
+      "Follow the path opposite the ship entrance, take the Water Bucket at the pond, and fill it with water.",
+      "Return to the crashed ship and extinguish all 3 marked interior fires.",
+      "Follow the new marker to the nearby ruin, recover its Master Battery, and install it in the ship socket.",
       "Craft a Connect Tool and reconnect the console.",
       "Open the Logbook and set a waypoint to the Mechanic Station.",
     ],
@@ -23,12 +24,13 @@ export const quests: QuestEntry[] = [
     kind: "main",
     phase: "Crash and recovery",
     summary:
-      "Reach and investigate the Mechanic Station, restore its control-panel power, and build the Craftbot needed for the next stage of Survival.",
+      "Follow the Logbook waypoint to the Mechanic Station, locate its separate Master Battery in the bunk-room objective area, restore control-panel power, and build the Craftbot needed for the next stage of Survival.",
     objectiveCount: 4,
     rewardCount: 0,
     objectiveHighlights: [
-      "Reach and investigate the Mechanic Station.",
-      "Find the nearby Master Battery and restore the control panel.",
+      "Reach and investigate the Mechanic Station marked by the Logbook.",
+      "Find the station's second Master Battery in the bunk-room objective area.",
+      "Install that Master Battery in the Mechanic Station control panel.",
       "Build a Craftbot.",
     ],
   },

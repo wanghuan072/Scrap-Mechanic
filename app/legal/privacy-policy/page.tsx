@@ -31,6 +31,24 @@ export default function PrivacyPolicyPage() {
           browser type, device type, requested URL, timestamp, and error diagnostics to
           deliver the site, maintain security, and investigate service problems.
         </p>
+        <p>
+          Google Analytics is used to measure page views, navigation patterns, and
+          general site performance. When the Google tag loads, Google may process
+          cookie or device identifiers, approximate location derived from an IP
+          address, browser and device information, referring pages, and interactions
+          with this site. This information is used in aggregate to understand which
+          guides and tools are useful; it is not connected to a player account on this
+          site. Read the{" "}
+          <a
+            className="text-link"
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Google Privacy Policy
+          </a>{" "}
+          for details about Google&apos;s processing.
+        </p>
         <h2>Cookies and local browser storage</h2>
         <p>
           Interactive checklists and calculators may retain temporary choices in your

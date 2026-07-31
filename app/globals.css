@@ -1194,6 +1194,41 @@ img {
   font-size: 13px;
 }
 
+.article-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0 2px;
+}
+
+.article-media-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #08171d;
+}
+
+.article-media-image {
+  position: relative;
+  min-height: 190px;
+  background:
+    linear-gradient(135deg, rgb(18 48 57 / 72%), rgb(5 16 21 / 96%));
+}
+
+.article-media-image img {
+  object-fit: contain;
+  padding: 18px;
+}
+
+.article-media-grid figcaption {
+  min-height: 45px;
+  padding: 9px 11px;
+  border-top: 1px solid var(--line);
+  color: #aebfc2;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
 .article-data-table {
   margin-top: 16px;
 }
@@ -1973,6 +2008,14 @@ img {
   .simple-page p,
   .simple-page li {
     font-size: 14px;
+  }
+
+  .article-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-media-image {
+    min-height: 170px;
   }
 
   .wiki-category-card {

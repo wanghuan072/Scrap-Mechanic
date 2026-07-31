@@ -20,7 +20,7 @@ export const industrialPartEntries: WikiEntry[] = [
       {
         heading: "Mini Craftbot or Portable Craftbot?",
         paragraphs: [
-          "The Mini Craftbot is the tall station at the crashed ship. It supports the opening route and first-car lesson; it is not the compact emergency station intended to ride on a vehicle.",
+          "The Mini Craftbot is the tall station at the crashed ship. Extinguish the three marked interior fires, recover the nearby Master Battery, and restore ship power before relying on it for the Connect Tool and opening production. It supports the first-car lesson; it is not the compact emergency station intended to ride on a vehicle.",
           "Use the crash-site station while the quest still points through the wreck, then move regular production to the Mechanic Station. The Portable Craftbot is the craftable 4 × 3 × 3 option for field repairs.",
         ],
       },
@@ -33,7 +33,7 @@ export const industrialPartEntries: WikiEntry[] = [
         ],
       },
     ],
-    relatedSlugs: ["portable-craftbot", "crafting-bots", "bearing", "gas-engine"],
+    relatedSlugs: ["water-bucket", "master-battery", "connect-tool", "portable-craftbot", "crafting-bots", "bearing", "gas-engine"],
     seo: {
       title: "Scrap Mechanic Mini Craftbot - Crash Site Station",
       description:

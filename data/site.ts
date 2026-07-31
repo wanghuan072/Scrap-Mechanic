@@ -8,7 +8,7 @@ export const site = {
   email: "wyong@scrapmechanic.org",
   ogImage: "/images/og-image.png",
   currentVersion: "1.0.3",
-  lastChecked: "July 29, 2026",
+  lastChecked: "July 31, 2026",
   steamUrl: "https://store.steampowered.com/app/387990/Scrap_Mechanic/",
   officialUrl: "https://www.scrapmechanic.com/",
 };

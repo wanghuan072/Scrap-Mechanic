@@ -12,43 +12,29 @@ export const metadata: Metadata = createMetadata(pageTdk.guides, "/guides");
 
 export default function GuidesPage() {
   const featured = guides.find((guide) => guide.slug === "beginner-first-hours") ?? guides[0];
-  const fieldGuides = guides.filter((guide) => guide.slug !== featured.slug);
   const lanes = [
     {
-      label: "Survive",
-      copy: "Plant-value raids, mining loops, combat ammo math, and recoverable routes.",
+      label: "Survival",
+      copy: "Crop-value decisions, raid recovery, ammunition budgets, and Warehouse combat.",
       slugs: [
-        "raid-defense",
         "farming-basics",
-        "excavation-island-mining",
-        "health-food-perks",
         "warehouse-key-and-farmbot",
-        "beat-trash-bot",
-        "get-spud-gun",
       ],
     },
     {
-      label: "Build",
-      copy: "Vehicles, automation, Claygun, controls, and Craftbot priorities.",
+      label: "Building",
+      copy: "One exact starter chassis and three automation systems with pass/fail tests.",
       slugs: [
         "first-vehicle",
-        "automated-farming",
-        "claygun-basics",
         "controller-and-logic",
-        "controls",
-        "crafting-and-upgrade-priorities",
       ],
     },
     {
-      label: "Maintain",
-      copy: "1.0 return, Creative/Challenge/Garage, multiplayer, and save branches.",
+      label: "Progression",
+      copy: "Garage blueprint production and a complete 34-achievement route.",
       slugs: [
-        "returning-to-1-0",
-        "creative-mode",
-        "multiplayer-basics",
-        "save-backups-and-branches",
-        "trading-and-packing",
-        "exploration-and-loot",
+        "scrap-city-garage-blueprints",
+        "achievements",
       ],
     },
   ];
@@ -61,11 +47,11 @@ export default function GuidesPage() {
         eyebrow="Survival knowledge / arranged by player decision"
         image="/images/scrap-mechanic/screenshot-03.jpg"
         imageAlt="A mechanic overlooking a working Scrap Mechanic farm"
-        intro="Start with the problem in front of you—not a wall of identical articles. Routes are organized around surviving, building, and keeping the world recoverable."
+        intro="Eight complete manuals: two start points, then two data-led guides for Survival, Building, and Progression. Detailed item records stay in the Wiki instead of being repeated here."
         metrics={[
           { label: "Manuals", value: `${guides.length}` },
-          { label: "Baseline", value: "1.0.2" },
-          { label: "Best first read", value: "First hours" },
+          { label: "Categories", value: "3 × 2" },
+          { label: "Standalone", value: "2" },
         ]}
         title="Scrap Mechanic"
         tone="orange"
@@ -75,12 +61,12 @@ export default function GuidesPage() {
         <div className="container">
           <div className={styles.manualHeading}>
             <div>
-              <span>Priority brief</span>
-              <h2>Open one manual first</h2>
+              <span>Two standalone manuals</span>
+              <h2>Choose your starting point</h2>
             </div>
             <p>
-              Start with the first-hours route, or jump to the 1.0 return brief if you
-              already know the Early Access loop.
+              New worlds start with measured first-hour checkpoints. Existing worlds start
+              with the save, mod, and patch boundary.
             </p>
           </div>
           <div className={styles.manualGrid}>
@@ -107,8 +93,8 @@ export default function GuidesPage() {
             <span className={styles.dispatchLabel}>Current dispatch</span>
             <h3>Returning after Early Access?</h3>
             <p>
-              World generation, story progression, schematics, bots, and compatibility
-              changed together. Check the version boundary before loading an old save.
+              Check old Creative and Survival worlds, mod categories, schematic state,
+              multiplayer ownership, and the 1.0.3 patch boundary before changing a save.
             </p>
             <Link href="/guides/returning-to-1-0">Read the 1.0 return brief →</Link>
             <dl>
@@ -124,6 +110,10 @@ export default function GuidesPage() {
                 <dt>Parts / Custom Games</dt>
                 <dd>Check updates</dd>
               </div>
+              <div>
+                <dt>Public baseline</dt>
+                <dd>1.0.3</dd>
+              </div>
             </dl>
           </aside>
           </div>
@@ -134,14 +124,14 @@ export default function GuidesPage() {
         <div className="container">
           <div className={styles.laneHeading}>
             <div>
-              <span>Choose by job</span>
-              <h2>Three working lanes</h2>
+              <span>Six category guides</span>
+              <h2>Three jobs, two manuals each</h2>
             </div>
-            <p>Each lane mixes routes, checklists, and system explanations instead of repeating one card format.</p>
+            <p>Each pair covers a different player decision and links to the exact Wiki records behind its numbers.</p>
           </div>
           {lanes.map((lane, laneIndex) => {
             const entries = lane.slugs
-              .map((slug) => fieldGuides.find((guide) => guide.slug === slug))
+              .map((slug) => guides.find((guide) => guide.slug === slug))
               .filter((entry) => entry !== undefined);
             return (
               <section className={styles.lane} key={lane.label}>
@@ -160,6 +150,14 @@ export default function GuidesPage() {
                       key={guide.slug}
                     >
                       <span>{String(index + 1).padStart(2, "0")}</span>
+                      <div className={styles.guideThumb}>
+                        <Image
+                          src={guide.image}
+                          alt=""
+                          fill
+                          sizes="88px"
+                        />
+                      </div>
                       <div>
                         <small>{guide.category} · {guide.readingTime}</small>
                         <h4>{guide.title}</h4>

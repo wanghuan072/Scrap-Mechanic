@@ -211,7 +211,7 @@ export default function RaidCalculatorPage() {
               Use these checks after the number is correct but the live farm does
               not behave the way an older raid guide describes.
             </p>
-            <Link href="/guides/raid-defense">Build the defense route →</Link>
+            <Link href="/guides/farming-basics">Build the farm defense route →</Link>
           </header>
           <div className={styles.faqList}>
             {raidFaq.map((item, index) => (

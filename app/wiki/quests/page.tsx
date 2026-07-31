@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageJsonLd } from "@/components/JsonLd";
+import { WikiLinkedText } from "@/components/WikiLinkedText";
 import { quests } from "@/data/quests/quests";
 import type { QuestEntry } from "@/data/types";
 import { createMetadata } from "@/seo/metadata";
@@ -19,6 +20,28 @@ const mainPhases = [...new Set(mainQuests.map((quest) => quest.phase))];
 const sidePhases = [...new Set(builderQuests.map((quest) => quest.phase))];
 
 const questRecoveryRows = [
+  {
+    problem: "Cannot find the Water Bucket or make the ship fires count",
+    objective: "Getting Started",
+    href: "#getting-started",
+    check:
+      "Enter the crashed ship to activate the objective, then follow the path opposite its entrance to the pond and fill the marked Water Bucket.",
+    recovery:
+      "Throw one filled bucket at each of the three marked interior fires, returning to the pond to refill between throws. Ignore unmarked exterior flames.",
+    linkHref: "/wiki/items/water-bucket",
+    linkLabel: "Open the Water Bucket route",
+  },
+  {
+    problem: "The first Master Battery does not power the Mechanic Station",
+    objective: "Getting Started / The Mechanic Station",
+    href: "#getting-started",
+    check:
+      "The ruin battery near the Crash Site belongs in the crashed ship. The Mechanic Station objective marks a separate battery in the station bunk-room area.",
+    recovery:
+      "Install the first battery in the ship, finish the console and Logbook states, then follow the next quest marker to the station's own battery.",
+    linkHref: "/wiki/items/master-battery",
+    linkLabel: "Compare both Master Batteries",
+  },
   {
     problem: "Watchtower build will not register",
     objective: "Home Is Where Your Couch Is / Built to Last",
@@ -65,7 +88,7 @@ const questRecoveryRows = [
       "Confirm the Trashbot defeat and the next yellow quest title before leaving the Warehouse area.",
     recovery:
       "Track the new objective in the Logbook and follow its marker rather than returning to an older roof waypoint.",
-    linkHref: "/guides/beat-trash-bot",
+    linkHref: "/guides/warehouse-key-and-farmbot",
     linkLabel: "Open Trashbot guide",
   },
   {
@@ -240,14 +263,18 @@ export default function QuestsPage() {
                           </div>
                           <b>{quest.objectiveCount} states</b>
                         </header>
-                        <p className={styles.missionSummary}>{quest.summary}</p>
+                        <p className={styles.missionSummary}>
+                          <WikiLinkedText text={quest.summary} currentHref="/wiki/quests" />
+                        </p>
                         <div className={styles.missionFields}>
                           <section className={styles.objectiveField}>
                             <span>Objective highlights</span>
                             {quest.objectiveHighlights?.length ? (
                               <ol>
                                 {quest.objectiveHighlights.map((objective) => (
-                                  <li key={objective}>{objective}</li>
+                                  <li key={objective}>
+                                    <WikiLinkedText text={objective} currentHref="/wiki/quests" />
+                                  </li>
                                 ))}
                               </ol>
                             ) : (
@@ -406,7 +433,7 @@ export default function QuestsPage() {
               changing branches or removing mods, and keep the original state
               available if the same trigger fails again.
             </p>
-            <Link href="/guides/save-backups-and-branches">
+            <Link href="/guides/returning-to-1-0">
               Back up a Survival world →
             </Link>
           </aside>

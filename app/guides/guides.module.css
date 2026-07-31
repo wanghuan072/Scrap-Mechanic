@@ -254,9 +254,10 @@
 
 .guideRow {
   display: grid;
-  grid-template-columns: 28px 1fr auto;
+  grid-template-columns: 24px 88px 1fr auto;
+  align-items: center;
   gap: 10px;
-  min-height: 88px;
+  min-height: 104px;
   padding: 10px 12px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -266,10 +267,25 @@
 }
 
 .guideRow > span {
+  align-self: start;
   color: #59737b;
   font-family: var(--display);
   font-size: 11px;
   font-weight: 900;
+}
+
+.guideThumb {
+  position: relative;
+  align-self: stretch;
+  min-height: 80px;
+  overflow: hidden;
+  border: 1px solid #29434c;
+  background: #07151b;
+}
+
+.guideThumb img {
+  object-fit: cover;
+  transition: transform 220ms ease, filter 220ms ease;
 }
 
 .guideRow small {
@@ -308,6 +324,16 @@
   background: #102a34;
 }
 
+.guideRow:hover .guideThumb img {
+  transform: scale(1.035);
+  filter: brightness(1.08);
+}
+
+.guideRow:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: -2px;
+}
+
 @media (max-width: 1024px) {
   .manualHeading,
   .manualGrid,
@@ -339,7 +365,12 @@
   }
 
   .guideRow {
+    grid-template-columns: 24px 72px 1fr auto;
     min-height: 44px;
     padding: 10px;
+  }
+
+  .guideThumb {
+    min-height: 68px;
   }
 }

@@ -39,7 +39,7 @@ const toolJobs = [
     tool: "Claygun",
     href: "/wiki/tools/claygun",
     proof: "The route stays passable and still has an exit",
-    next: "/guides/claygun-basics",
+    next: "/wiki/tools/claygun",
     nextLabel: "Claygun controls",
   },
   {
@@ -47,7 +47,7 @@ const toolJobs = [
     tool: "Plasma Drill",
     href: "/wiki/tools/plasma-drill",
     proof: "The bore has reverse clearance and the tool head avoids the chassis",
-    next: "/guides/excavation-island-mining",
+    next: "/builds/mining-vehicle",
     nextLabel: "Mining loop",
   },
 ];
