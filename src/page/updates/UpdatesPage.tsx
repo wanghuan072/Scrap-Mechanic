@@ -105,7 +105,9 @@ export default function UpdatesPage() {
           alt=""
           fill
           sizes="100vw"
-          priority
+          quality={60}
+          loading="eager"
+          fetchPriority="high"
         />
         <div className={styles.heroShade} />
         <div className={`container ${styles.heroInner}`}>

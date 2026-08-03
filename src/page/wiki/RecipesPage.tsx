@@ -123,7 +123,9 @@ export default function RecipesPage() {
                 alt="Craftbot item icon in Scrap Mechanic"
                 width={192}
                 height={192}
-                priority
+                quality={60}
+                loading="eager"
+                fetchPriority="high"
               />
             )}
             <div>

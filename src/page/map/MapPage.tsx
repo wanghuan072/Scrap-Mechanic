@@ -16,8 +16,10 @@ export default function MapPage() {
         src="/images/scrap-mechanic/screenshot-01.jpg"
         alt="Mechanics exploring an industrial area in Scrap Mechanic"
         fill
-        priority
         sizes="100vw"
+        quality={60}
+        loading="eager"
+        fetchPriority="high"
       />
       <div className={styles.shade} />
 

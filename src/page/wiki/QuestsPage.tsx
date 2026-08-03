@@ -194,7 +194,8 @@ export default function QuestsPage() {
                 alt="Main quest icon from Scrap Mechanic 1.0"
                 width={92}
                 height={92}
-                priority
+                quality={60}
+                loading="eager"
               />
               <span>Main story</span>
               <strong>{mainQuests.length}</strong>
@@ -205,7 +206,8 @@ export default function QuestsPage() {
                 alt="Side quest icon from Scrap Mechanic 1.0"
                 width={92}
                 height={92}
-                priority
+                quality={60}
+                loading="eager"
               />
               <span>Side quests</span>
               <strong>{builderQuests.length + farmerQuests.length}</strong>

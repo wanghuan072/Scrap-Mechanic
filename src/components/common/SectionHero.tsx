@@ -32,7 +32,9 @@ export function SectionHero({
         alt={imageAlt}
         fill
         sizes="100vw"
-        priority
+        quality={60}
+        loading="eager"
+        fetchPriority="high"
       />
       <div className="section-hero-shade" />
       <div className="container section-hero-inner">

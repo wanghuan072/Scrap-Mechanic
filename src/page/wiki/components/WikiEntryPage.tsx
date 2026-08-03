@@ -368,7 +368,7 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
               width={200}
               height={200}
               sizes="168px"
-              quality={95}
+              quality={75}
               preload
               style={
                 entry.category === "garments"

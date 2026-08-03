@@ -197,7 +197,9 @@ export default function Home() {
           alt="A mechanic working beside an automated Scrap Mechanic farm"
           fill
           sizes="100vw"
-          priority
+          quality={60}
+          loading="eager"
+          fetchPriority="high"
         />
         <div className={styles.heroShade} />
         <div className={`container ${styles.heroContent}`}>
@@ -282,6 +284,7 @@ export default function Home() {
               alt={latestUpdate.imageAlt}
               fill
               sizes="(max-width: 768px) 100vw, 280px"
+              quality={60}
             />
           </div>
           <div className={styles.updateInfo}>
@@ -298,7 +301,8 @@ export default function Home() {
               src="/images/scrap-mechanic/screenshot-10.jpg"
               alt="A Scrap Mechanic drilling vehicle"
               fill
-              sizes="280px"
+              sizes="(max-width: 768px) 100vw, 260px"
+              quality={60}
             />
             <Link href="/updates">
               All updates <span aria-hidden="true">›</span>
@@ -316,7 +320,13 @@ export default function Home() {
             {startSteps.map((step) => (
               <Link href={step.href} className={styles.startCard} key={step.number}>
                 <div className={styles.tileImage}>
-                  <Image src={step.image} alt="" fill sizes="(max-width: 768px) 100vw, 200px" />
+                  <Image
+                    src={step.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 240px"
+                    quality={60}
+                  />
                 </div>
                 <b>{step.number}</b>
                 <h3>{step.title}</h3>
@@ -335,7 +345,13 @@ export default function Home() {
           <div className={styles.manualBody}>
             <Link href={`/guides/${leadGuide.slug}`} className={styles.guideFeature}>
               <div className={styles.guideFeatureImage}>
-                <Image src={leadGuide.image} alt={leadGuide.imageAlt} fill sizes="(max-width: 768px) 100vw, 40vw" />
+                <Image
+                  src={leadGuide.image}
+                  alt={leadGuide.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  quality={60}
+                />
               </div>
               <div>
                 <span>Lead file · {leadGuide.readingTime}</span>
@@ -410,7 +426,13 @@ export default function Home() {
           </div>
           <div className={styles.buildShowcase}>
             <Link href={`/builds/${leadBuild.slug}`} className={styles.buildFeature}>
-              <Image src={leadBuild.image} alt={leadBuild.imageAlt} fill sizes="(max-width: 768px) 100vw, 48vw" />
+              <Image
+                src={leadBuild.image}
+                alt={leadBuild.imageAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, 48vw"
+                quality={60}
+              />
               <div>
                 <span>{leadBuild.category}</span>
                 <h3>{leadBuild.title}</h3>
@@ -459,7 +481,13 @@ export default function Home() {
             {featuredMods.map((mod, index) => (
               <Link href={`/mods#${mod.slug}`} key={mod.slug} className={styles.modCard}>
                 <div className={styles.modImage}>
-                  <Image src={mod.image} alt={mod.imageAlt} fill sizes="180px" />
+                  <Image
+                    src={mod.image}
+                    alt={mod.imageAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 120px"
+                    quality={60}
+                  />
                 </div>
                 <div>
                   <span>{String(index + 1).padStart(2, "0")} · {mod.compatibility}</span>

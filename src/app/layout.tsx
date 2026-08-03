@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
-import Script from "next/script";
+import { DelayedGoogleAnalytics } from "@/components/analytics/DelayedGoogleAnalytics";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { JsonLd } from "@/seo/JsonLd";
@@ -70,19 +70,8 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <DelayedGoogleAnalytics measurementId="G-NRMF3E7FTM" delay={3000} />
       </body>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-NRMF3E7FTM"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-NRMF3E7FTM');
-        `}
-      </Script>
     </html>
   );
 }

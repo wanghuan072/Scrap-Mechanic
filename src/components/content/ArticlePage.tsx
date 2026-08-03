@@ -47,7 +47,9 @@ export function ArticlePage({
           alt=""
           fill
           sizes="100vw"
-          priority
+          quality={60}
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="article-hero-overlay" />
         <div className="container article-hero-content">

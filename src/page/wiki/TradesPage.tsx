@@ -115,7 +115,9 @@ export default function TradesPage() {
                 alt="Wonk Stack item icon in Scrap Mechanic"
                 width={160}
                 height={160}
-                priority
+                quality={60}
+                loading="eager"
+                fetchPriority="high"
               />
             )}
             <strong>{tradeCollection.tradeCount}</strong>

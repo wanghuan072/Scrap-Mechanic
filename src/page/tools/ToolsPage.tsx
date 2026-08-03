@@ -104,8 +104,10 @@ export default function ToolsPage() {
           src="/images/scrap-mechanic/screenshot-10.jpg"
           alt=""
           fill
-          priority
           sizes="100vw"
+          quality={60}
+          loading="eager"
+          fetchPriority="high"
         />
         <div className={styles.heroShade} />
         <div className={`container ${styles.heroInner}`}>

@@ -91,8 +91,9 @@ export default async function WikiCategoryPage({
                   width={200}
                   height={200}
                   sizes="160px"
-                  quality={95}
-                  priority
+                  quality={75}
+                  loading="eager"
+                  fetchPriority="high"
                 />
                 <b>Schematic Box</b>
               </div>
@@ -315,8 +316,9 @@ export default async function WikiCategoryPage({
               width={200}
               height={200}
               sizes="168px"
-              quality={95}
-              priority
+              quality={75}
+              loading="eager"
+              fetchPriority="high"
             />
             <b>{category.name}</b>
           </div>
