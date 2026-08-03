@@ -28,7 +28,6 @@ export function SiteFooter() {
           <Link
             className="site-logo"
             href="/"
-            rel="noopener noreferrer nofollow"
             aria-label="Scrap Mechanic home"
           >
             <Image
@@ -57,7 +56,14 @@ export function SiteFooter() {
             <ul>
               {group.links.map(([href, label]) => (
                 <li key={href}>
-                  <Link href={href} rel="noopener noreferrer nofollow">
+                  <Link
+                    href={href}
+                    rel={
+                      group.title === "Legal"
+                        ? "noopener noreferrer nofollow"
+                        : undefined
+                    }
+                  >
                     {label}
                   </Link>
                 </li>
