@@ -10,11 +10,11 @@ const footerGroups = [
   {
     title: "Legal",
     links: [
-      ["/legal/privacy-policy", "Privacy Policy"],
-      ["/legal/terms-of-service", "Terms of Service"],
-      ["/legal/copyright", "Copyright"],
-      ["/legal/about-us", "About Us"],
-      ["/legal/contact-us", "Contact Us"],
+      ["/privacy-policy", "Privacy Policy"],
+      ["/terms-of-service", "Terms of Service"],
+      ["/copyright", "Copyright"],
+      ["/about", "About Us"],
+      ["/contact", "Contact Us"],
     ],
   },
 ];

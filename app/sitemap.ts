@@ -5,6 +5,14 @@ import { allWikiEntries, articleCollections, tools, wikiCategories } from "@/lib
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentContentDate = "2026-07-30";
   const latestContentDate = "2026-07-31";
+  const legalRouteDate = "2026-08-03";
+  const legalRoutes = [
+    "/about",
+    "/contact",
+    "/privacy-policy",
+    "/terms-of-service",
+    "/copyright",
+  ];
   const fixedRoutes = [
     "",
     "/guides",
@@ -16,15 +24,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mods",
     "/updates",
     "/tools",
-    "/legal/about-us",
-    "/legal/contact-us",
-    "/legal/privacy-policy",
-    "/legal/terms-of-service",
-    "/legal/copyright",
+    ...legalRoutes,
   ].map((path) => ({
     path,
     lastModified:
-      path === "" || path === "/wiki/quests"
+      legalRoutes.includes(path)
+        ? legalRouteDate
+        : path === "" || path === "/wiki/quests"
         ? latestContentDate
         : currentContentDate,
     priority:
@@ -32,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? 1
         : ["/guides", "/wiki", "/builds", "/tools"].includes(path)
           ? 0.9
-          : path.startsWith("/legal/")
+          : legalRoutes.includes(path)
             ? 0.3
             : 0.8,
   }));
