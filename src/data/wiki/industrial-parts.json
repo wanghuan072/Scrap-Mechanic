@@ -1,0 +1,521 @@
+[
+  {
+    "slug": "mini-craftbot",
+    "category": "parts",
+    "name": "Mini Craftbot",
+    "description": "The fixed crash-site crafting station used during the opening Survival route for the first basic parts and vehicle lesson.",
+    "image": "/images/game-items/mini-craftbot-2ff2b13f.webp",
+    "imageAlt": "Mini Craftbot item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Location",
+        "value": "Crashed maintenance ship"
+      },
+      {
+        "label": "Role",
+        "value": "Opening tutorial production"
+      },
+      {
+        "label": "Collision size",
+        "value": "5 × 11 × 3"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Mini Craftbot or Portable Craftbot?",
+        "paragraphs": [
+          "The Mini Craftbot is the tall station at the crashed ship. Extinguish the three marked interior fires, recover the nearby Master Battery, and restore ship power before relying on it for the Connect Tool and opening production. It supports the first-car lesson; it is not the compact emergency station intended to ride on a vehicle.",
+          "Use the crash-site station while the quest still points through the wreck, then move regular production to the Mechanic Station. The Portable Craftbot is the craftable 4 × 3 × 3 option for field repairs."
+        ]
+      },
+      {
+        "heading": "When to Return to the Crash Site",
+        "bullets": [
+          "Return when the active builder objective explicitly refers to the ship or its early production step.",
+          "Do not plan a permanent production base around it; the full Craftbot route has a broader recipe set.",
+          "If an opening objective does not advance, finish the requested craft or placement before leaving the trigger area."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "water-bucket",
+      "master-battery",
+      "connect-tool",
+      "portable-craftbot",
+      "crafting-bots",
+      "bearing",
+      "gas-engine"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Mini Craftbot - Crash Site Station",
+      "description": "Find the Scrap Mechanic Mini Craftbot at the crashed ship, understand its opening quest role, and distinguish it from the Portable Craftbot.",
+      "keywords": [
+        "Scrap Mechanic Mini Craftbot",
+        "Scrap Mechanic crash site Craftbot",
+        "Mini Craftbot vs Portable Craftbot"
+      ]
+    }
+  },
+  {
+    "slug": "portable-craftbot",
+    "category": "parts",
+    "name": "Portable Craftbot",
+    "description": "A compact 4 × 3 × 3 crafting station for vehicle-mounted emergency production and repairs away from the main workshop.",
+    "image": "/images/game-items/portable-craftbot-05900757.webp",
+    "imageAlt": "Portable Craftbot item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Craftbot recipe",
+        "value": "20 Metal 1 + 2 Circuit Boards"
+      },
+      {
+        "label": "Workbench recipe",
+        "value": "40 Scrap Metal + 2 Circuit Boards"
+      },
+      {
+        "label": "Craft time",
+        "value": "30 seconds"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "A Repair Station, Not a Full Workshop Replacement",
+        "paragraphs": [
+          "The Portable Craftbot fits a recovery truck, mining support vehicle, or long-range hauler. Its value is the ability to turn carried material into basic repair supplies without returning to base.",
+          "Mount it inside the wheelbase and leave the front interaction face accessible. Its durability rating is 4 / 10, so exposed placement on a bumper or drill head risks losing the station when the vehicle takes a hit."
+        ]
+      },
+      {
+        "heading": "Choose the Cheaper Route You Already Support",
+        "bullets": [
+          "Use the Workbench route early when Scrap Metal is available but refined Metal is still limited.",
+          "Use the Craftbot route after the workshop can reliably produce Metal Block Level 1.",
+          "Carry a small Circuit Board reserve separately so the recovery station can replace electronic parts after a breakdown."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "mini-craftbot",
+      "crafting-bots",
+      "large-chest",
+      "circuit-board"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Portable Craftbot Recipe and Use",
+      "description": "In Scrap Mechanic, craft a Portable Craftbot from Metal or Scrap Metal, mount its 4 x 3 x 3 body safely, and use it for vehicle repairs away from base.",
+      "keywords": [
+        "Scrap Mechanic Portable Craftbot",
+        "Portable Craftbot recipe",
+        "Scrap Mechanic mobile crafting"
+      ]
+    }
+  },
+  {
+    "slug": "growbed",
+    "category": "parts",
+    "name": "Growbed",
+    "description": "A powered 5 × 2 × 5 planter that grows Cotton, Pigment Flower, Potato, Tomato, or Carrot away from normal soil.",
+    "image": "/images/game-items/growbed-40730f13.webp",
+    "imageAlt": "Growbed item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Supported seeds",
+        "value": "Cotton, Pigment, Potato, Tomato, Carrot"
+      },
+      {
+        "label": "Needs",
+        "value": "Power and water"
+      },
+      {
+        "label": "Recipe",
+        "value": "2 Component Kits + 2 Cable Rolls + 1 Soil Bag"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Which Crops Work in a Growbed?",
+        "paragraphs": [
+          "The Growbed accepts five crop families: Cotton Plant, Pigment Flower, Potato, Tomato, and Carrot. Redbeet, Banana, Blueberry, Orange, Broccoli, Pineapple, and Chili are outside its supported seed list.",
+          "That makes it useful for a compact mobile supply of potatoes, starter food, paint ingredients, or Cotton. It does not replace a high-value field when the goal is advanced crop trading."
+        ]
+      },
+      {
+        "heading": "Power, Water, and Placement",
+        "steps": [
+          "Reserve a 5 × 5 footprint and keep the two-block height clear above the mounting surface.",
+          "Connect the required power source before loading the seed.",
+          "Supply water and confirm the bed changes state before leaving it unattended.",
+          "Test one complete growth cycle before installing several beds on a moving vehicle."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "soil-bag",
+      "water-system",
+      "vacuum-pump",
+      "potato",
+      "cotton-crop"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Growbed - Crops, Power and Water",
+      "description": "Use the Scrap Mechanic Growbed for Cotton, Pigment Flower, Potato, Tomato, and Carrot with its exact recipe, power, water, and size requirements.",
+      "keywords": [
+        "Scrap Mechanic Growbed",
+        "what crops work in Growbed",
+        "Scrap Mechanic mobile farm"
+      ]
+    }
+  },
+  {
+    "slug": "crushbot",
+    "category": "parts",
+    "name": "Crushbot",
+    "description": "A Mining Hub machine that breaks apart and refines collected ores before their valuable contents are separated.",
+    "image": "/images/game-items/crushbot-b593a935.webp",
+    "imageAlt": "Crushbot item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Station",
+        "value": "Mining Hub Dispenser"
+      },
+      {
+        "label": "Cost",
+        "value": "50 Metal 2 + 10 Quartz + 5 Circuit Boards"
+      },
+      {
+        "label": "Production time",
+        "value": "12 seconds"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Where Crushbot Fits in the Ore Chain",
+        "paragraphs": [
+          "Crushbot belongs after collection and before Prospectorbot processing. Feeding unprocessed finds straight into the later station skips the preparation stage the chain expects.",
+          "Keep incoming ore and crushed output in different containers. A mixed chest makes it difficult to tell whether the bottleneck is collection, crushing, or the water-fed prospecting stage."
+        ]
+      },
+      {
+        "heading": "Before Buying It",
+        "bullets": [
+          "Reach the Mining Hub with 50 Metal Block Level 2, 10 Quartz, and 5 Circuit Boards available.",
+          "Allow space for input and output access instead of trapping the station against a wall.",
+          "Pair it with Prospectorbot only after the water supply and output storage are ready."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "prospectorbot",
+      "large-chest",
+      "plasma-drill",
+      "metal"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Crushbot Recipe and Ore Chain",
+      "description": "In Scrap Mechanic, get the Crushbot from the Mining Hub, pay its exact material cost, and place it correctly before the Prospectorbot stage.",
+      "keywords": [
+        "Scrap Mechanic Crushbot",
+        "Crushbot recipe",
+        "Scrap Mechanic ore processing"
+      ]
+    }
+  },
+  {
+    "slug": "prospectorbot",
+    "category": "parts",
+    "name": "Prospectorbot",
+    "description": "A water-fed Mining Hub station that washes and sifts crushed ore for valuables and supports connected chest automation.",
+    "image": "/images/game-items/prospectorbot-b46c3271.webp",
+    "imageAlt": "Prospectorbot item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Input",
+        "value": "Crushed ore and water"
+      },
+      {
+        "label": "Cost",
+        "value": "20 Quartz + 5 Aurumite + 1 Multi Component Kit"
+      },
+      {
+        "label": "Production time",
+        "value": "12 seconds"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Crush First, Prospect Second",
+        "paragraphs": [
+          "Prospectorbot processes crushed ore, not the raw material arriving from a drill face. Run the material through Crushbot, provide water, and leave a separate destination for recovered valuables.",
+          "Connected chest support makes this the automation stage of the chain. Label the crushed-ore input, water supply, and valuable output so an empty result can be traced without unloading every container."
+        ]
+      },
+      {
+        "heading": "Why the Machine Appears Idle",
+        "bullets": [
+          "Confirm the input is crushed ore rather than an unprocessed find.",
+          "Confirm water is present and connected to the station.",
+          "Leave output capacity; a full destination can stop an otherwise valid processing run.",
+          "Check that the input and output containers are not serving the opposite side of the chain."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "crushbot",
+      "vacuum-pump",
+      "water-system",
+      "large-chest"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Prospectorbot - Water and Ore Setup",
+      "description": "In Scrap Mechanic, set up the Prospectorbot with crushed ore, water, and chest automation, and check its Mining Hub material cost when it will not process.",
+      "keywords": [
+        "Scrap Mechanic Prospectorbot",
+        "Prospectorbot not working",
+        "Scrap Mechanic crushed ore"
+      ]
+    }
+  },
+  {
+    "slug": "sawbot",
+    "category": "parts",
+    "name": "Sawbot",
+    "description": "A large 9 × 7 × 5 production station that converts an inserted building block into wedges of the same material.",
+    "image": "/images/game-items/sawbot-0a0cc4ee.webp",
+    "imageAlt": "Sawbot item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Output",
+        "value": "Wedges matching the input block material"
+      },
+      {
+        "label": "Cost",
+        "value": "40 Metal 2 + 10 Cable Rolls + 5 Multi Component Kits"
+      },
+      {
+        "label": "Collision size",
+        "value": "9 × 7 × 5"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The Input Material Chooses the Wedge",
+        "paragraphs": [
+          "Sawbot does not apply one universal wedge material. Insert a building block and it produces wedge geometry from that same material, which lets a finished build keep its intended weight, durability, and surface family.",
+          "Because the station occupies 9 × 7 × 5 blocks, reserve a floor bay and an unobstructed interaction side before paying the Mining Hub cost."
+        ]
+      },
+      {
+        "heading": "Use Wedges Deliberately",
+        "bullets": [
+          "Prototype the slope with a cheaper material before cutting expensive final blocks.",
+          "Match vehicle body wedges to the frame material when mass and durability matter.",
+          "Keep a labeled chest for each wedge material instead of mixing visually similar outputs."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "structural-blocks",
+      "metal-blocks",
+      "wood-blocks",
+      "large-chest"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Sawbot - Wedges, Size and Cost",
+      "description": "In Scrap Mechanic, use the Sawbot to turn building blocks into matching wedges, with its exact Mining Hub cost and 9 x 7 x 5 placement size.",
+      "keywords": [
+        "Scrap Mechanic Sawbot",
+        "how to make wedges Scrap Mechanic",
+        "Sawbot recipe"
+      ]
+    }
+  },
+  {
+    "slug": "freezer",
+    "category": "parts",
+    "name": "Freezer",
+    "description": "A 3 × 4 × 3 Craftbot station that consumes water to produce ice blocks for construction.",
+    "image": "/images/game-items/freezer-479e8131.webp",
+    "imageAlt": "Freezer item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Input",
+        "value": "Water"
+      },
+      {
+        "label": "Output",
+        "value": "Ice blocks"
+      },
+      {
+        "label": "Recipe",
+        "value": "20 Metal 2 + 2 Component Kits + 4 Circuit Boards + 20 Chemicals"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Freezer Input and Output",
+        "paragraphs": [
+          "The Freezer has one narrow production job: put water into it to create ice blocks. It is a material station rather than refrigerated storage for food or crops.",
+          "Place it near the water logistics line but keep its ice output separate from the Water Container. This prevents a stopped Freezer from being mistaken for an empty pump."
+        ]
+      },
+      {
+        "heading": "If No Ice Is Produced",
+        "bullets": [
+          "Confirm the supplied liquid is water, not Chemicals or Crude Oil.",
+          "Check that the Freezer has a valid water input and room for the finished blocks.",
+          "Verify the machine is the 3 × 4 × 3 Freezer, not a decorative kitchen reward."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "water-system",
+      "vacuum-pump",
+      "chemicals",
+      "large-chest"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Freezer - Make Ice Blocks",
+      "description": "Craft the Scrap Mechanic Freezer, supply water, make ice blocks, and diagnose wrong-liquid or full-output problems. Review the connected uses.",
+      "keywords": [
+        "Scrap Mechanic Freezer",
+        "how to make ice Scrap Mechanic",
+        "Freezer recipe Scrap Mechanic"
+      ]
+    }
+  },
+  {
+    "slug": "sticky-wheel",
+    "category": "parts",
+    "name": "Sticky Wheel",
+    "description": "A chemical-powered 5-diameter wheel with adjustable grip for wall-driving and high-traction experimental vehicles.",
+    "image": "/images/game-items/sticky-wheel-8a87566d.webp",
+    "imageAlt": "Sticky Wheel item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Schematic price",
+        "value": "5,000 Wonk Stack at Mining Hub"
+      },
+      {
+        "label": "Crafting cost",
+        "value": "20 Metal 2 + 10 Beeswax + 5 Chemicals"
+      },
+      {
+        "label": "Wheel size",
+        "value": "5 diameter × 3 wide"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Stickiness Is a Tuning Setting",
+        "paragraphs": [
+          "Sticky Wheels consume Chemicals to generate their gripping surface. Increase stickiness only as far as the route requires; maximum grip can make steering, release, and transitions harder to control.",
+          "A wall-driving build needs more than special wheels. Keep the center of mass close to the surface, give every driven wheel reliable contact, and protect the chemical supply from impact."
+        ]
+      },
+      {
+        "heading": "Unlock, Craft, Test",
+        "steps": [
+          "Buy the Sticky Wheel schematic for 5,000 Wonk Stack at the Mining Hub.",
+          "Craft each wheel from 20 Metal Block Level 2, 10 Beeswax, and 5 Chemicals.",
+          "Test on a short clean wall at low engine power.",
+          "Tune stickiness, steering, and weight before attempting an overhead transition."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "chemicals",
+      "bearing",
+      "gas-engine",
+      "suspension"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Sticky Wheel - Unlock and Wall Driving",
+      "description": "Buy and craft Sticky Wheels, budget Chemicals, and tune grip, weight, and steering for Scrap Mechanic wall-driving vehicles. Review the connected uses.",
+      "keywords": [
+        "Scrap Mechanic Sticky Wheel",
+        "Scrap Mechanic drive up walls",
+        "Sticky Wheel schematic"
+      ]
+    }
+  },
+  {
+    "slug": "turret-seat",
+    "category": "parts",
+    "name": "Turret Seat Level 1",
+    "description": "A 7 × 1 × 7 ball-turret seat with full 360-degree aiming and a front mounting surface for tools or weapons.",
+    "image": "/images/game-items/turret-seat-level-1-b8f9c227.webp",
+    "imageAlt": "Turret Seat Level 1 item icon in Scrap Mechanic",
+    "gameVersion": "1.0.0.867",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Schematic price",
+        "value": "2,000 Wonk Stack at Mining Hub"
+      },
+      {
+        "label": "Crafting cost",
+        "value": "50 Metal 2 + 5 Component Kits + 2 Bearings"
+      },
+      {
+        "label": "Aim",
+        "value": "360-degree range of motion"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What Attaches to the Turret Seat",
+        "paragraphs": [
+          "The front face is the moving tool mount. Attach a weapon, camera-facing work head, light rig, or other aimed assembly there, then keep the fixed base clear of the full rotation envelope.",
+          "The seat itself is only one block high but occupies a 7 × 7 footprint. A narrow roof can look clear while still clipping the rotating front assembly."
+        ]
+      },
+      {
+        "heading": "Aiming Checklist",
+        "bullets": [
+          "Buy the recipe for 2,000 Wonk Stack at the Mining Hub before checking the Craftbot.",
+          "Test a light dummy arm through 360 degrees before mounting an expensive weapon.",
+          "Keep ammunition containers and control lines inside the safe rotation radius.",
+          "Mount the base on a low, wide section so recoil and player movement do not roll the vehicle."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "bearing",
+      "controller",
+      "mountable-spudgun",
+      "metal-blocks"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Turret Seat - 360 Aim and Recipe",
+      "description": "Unlock the Scrap Mechanic Turret Seat at the Mining Hub, craft its recipe, and plan the 7 x 7 footprint with full 360-degree weapon or tool rotation.",
+      "keywords": [
+        "Scrap Mechanic Turret Seat",
+        "Scrap Mechanic 360 turret",
+        "Turret Seat recipe"
+      ]
+    }
+  }
+]

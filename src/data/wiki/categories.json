@@ -1,0 +1,278 @@
+[
+  {
+    "slug": "items",
+    "name": "Items",
+    "description": "Portable objects, consumables, quest items, fuel, and farming supplies used in Survival.",
+    "focus": "Carry, store, consume, or place",
+    "symbol": "01",
+    "image": "/images/wiki/water-bucket.webp",
+    "imageAlt": "Water Bucket item icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Inventory and Storage",
+        "paragraphs": [
+          "Items are the things a mechanic carries, consumes, installs for an objective, or stores for later. Treat fuel, farming supplies, ammunition, and progression objects as separate stockpiles so an ordinary build does not consume material reserved for a quest or return trip."
+        ]
+      },
+      {
+        "heading": "Before You Spend an Item",
+        "bullets": [
+          "Check whether it is a normal consumable or a progression object with a specific destination.",
+          "Keep a return-trip reserve of fuel, food, and ammunition outside the active machine.",
+          "Test automated delivery with a small stack before loading the full supply."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "blocks",
+    "name": "Blocks",
+    "description": "Placeable structural materials for frames, floors, armor, machines, and decorative surfaces.",
+    "focus": "Shape, weight, strength, and surface",
+    "symbol": "02",
+    "image": "/images/wiki/scrap-metal-block.webp",
+    "imageAlt": "Scrap Metal Block icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Structure Is a Tradeoff",
+        "paragraphs": [
+          "A tougher block is not automatically better everywhere. Density changes acceleration, braking, suspension load, flotation, and how easily the Lift can be used during recovery. Use stronger material around impacts and moving joints, then reduce unnecessary mass elsewhere."
+        ]
+      },
+      {
+        "heading": "Building Checks",
+        "bullets": [
+          "Reinforce bearing mounts, suspension towers, tool heads, and the underside that meets terrain.",
+          "Keep the center of mass low and leave access to engines, seats, controllers, and fuel.",
+          "Test the unloaded chassis before adding cargo or armor."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "parts",
+    "name": "Parts",
+    "description": "Interactive parts that power, steer, move, sense, store, craft, and automate creations.",
+    "focus": "Connections, motion, logic, and power",
+    "symbol": "03",
+    "image": "/images/wiki/bearing.webp",
+    "imageAlt": "Bearing part icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Read the Signal Chain",
+        "paragraphs": [
+          "Most machines are easier to debug as a chain: an input such as a seat, switch, button, or sensor activates logic or a controller, which then drives an engine, bearing, piston, thruster, pump, or other output. Use the Connect Tool to inspect that chain one step at a time."
+        ]
+      },
+      {
+        "heading": "Test Parts Safely",
+        "bullets": [
+          "Raise the creation on the Lift before testing powered wheels, saws, drills, or steering.",
+          "Start with low engine power and short controller movements.",
+          "Check bearing direction, controller rotation, and input state before adding cargo."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "tools",
+    "name": "Tools",
+    "description": "Handheld equipment used to place, inspect, connect, paint, weld, recover, reshape, and mine with Plasma tools.",
+    "focus": "The mechanic's working kit",
+    "symbol": "04",
+    "image": "/images/wiki/connect-tool.webp",
+    "imageAlt": "Connect Tool icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Use the Right Tool for the Job",
+        "paragraphs": [
+          "The build tool places and removes parts, but the rest of the tool kit explains and repairs a creation: the Connect Tool exposes links, the Lift supports recovery and editing, the Weld Tool joins bodies, and the Paint Tool gives visual meaning to controls and systems."
+        ]
+      },
+      {
+        "heading": "Field Routine",
+        "bullets": [
+          "Put the creation on the Lift before inspecting moving joints.",
+          "Color-code inputs and dangerous moving sections on complicated machines.",
+          "Carry only the tools and consumables needed for the trip so recovery space stays available."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "weapons",
+    "name": "Weapons",
+    "description": "Handheld and mountable weapons for hostile bots, raids, Warehouses, and dangerous routes.",
+    "focus": "Range, ammunition, and target priority",
+    "symbol": "05",
+    "image": "/images/wiki/spudgun.webp",
+    "imageAlt": "Spudgun icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Prepare for the Encounter",
+        "paragraphs": [
+          "Weapons solve different problems. The Sledgehammer is dependable at close range, handheld spud weapons create distance, and mountable weapons belong to a powered or manually aimed creation. Ammunition, cover, and an escape route matter as much as the weapon itself."
+        ]
+      },
+      {
+        "heading": "Combat Checks",
+        "bullets": [
+          "Move the vehicle and fragile storage away from the fight before engaging a heavy bot.",
+          "Prioritize explosive and ranged threats instead of firing at the nearest target by habit.",
+          "Budget ammunition for the return route and avoid entering a Warehouse with only a partial stack."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "resources",
+    "name": "Resources",
+    "description": "Raw, refined, and recovered materials used by crafting stations, upgrades, fuel, and construction.",
+    "focus": "Gather, refine, route, and reserve",
+    "symbol": "06",
+    "image": "/images/wiki/component-kit.webp",
+    "imageAlt": "Component Kit icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Plan the Production Route",
+        "paragraphs": [
+          "A resource may be collected directly, dropped by a bot, refined from a node, or produced through another recipe. Count the finished build first, then work backward through refining and crafting so a material run has a clear target."
+        ]
+      },
+      {
+        "heading": "Storage Priorities",
+        "bullets": [
+          "Separate raw material from refined blocks and finished components.",
+          "Reserve upgrade materials before spending them on decoration.",
+          "Unload heavy cargo before tuning suspension or steering."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "crops",
+    "name": "Crops",
+    "description": "Plantable produce used for food, trading, ammunition, deliveries, and Survival progression, including mid and high raid-value crops such as Chili.",
+    "focus": "Seeds, water, growth, harvest, and raids",
+    "symbol": "07",
+    "image": "/images/wiki/tomato.webp",
+    "imageAlt": "Tomato crop icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Treat a Farm as a Timed System",
+        "paragraphs": [
+          "A crop plot needs soil, a seed, water, time, and a safe harvest path. Larger or more valuable fields can attract more pressure, so expand only when watering, storage, and defense can support the next harvest."
+        ]
+      },
+      {
+        "heading": "Farm Layout",
+        "bullets": [
+          "Use straight rows if pumps, water cannons, or Vacuum Pumps will be added later.",
+          "Keep seed storage away from the active crop line and raid approach.",
+          "Harvest and move produce to storage before rebuilding damaged defenses."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "garments",
+    "name": "Garments",
+    "description": "Character customization pieces unlocked through quests, Garment Boxes, and the Dressbot.",
+    "focus": "Outfits, unlock conditions, and customization",
+    "symbol": "08",
+    "image": "/images/wiki/duckie-hat.webp",
+    "imageAlt": "Official shared outfit icon used for the Duckie Hat reward in Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Garments Are Appearance Unlocks",
+        "paragraphs": [
+          "A garment changes the mechanic's appearance; it is not armor and does not improve a machine. Quest-awarded pieces register through progression, while Garment Boxes are processed through a Dressbot."
+        ]
+      },
+      {
+        "heading": "When an Outfit Piece Seems Missing",
+        "bullets": [
+          "Complete the quest and let the reward sequence finish before leaving the session.",
+          "Open the character customization flow and check the matching outfit slot.",
+          "Remember that the six Scrapper pieces follow completion position across eligible jobs, not one fixed quest-to-piece pairing."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "quest-rewards",
+    "name": "Quest Rewards",
+    "description": "Placeable parts, furniture, decorations, and functional unlocks awarded by 1.0 quests.",
+    "focus": "Exact unlock, Craftbot recipe, and build use",
+    "symbol": "09",
+    "image": "/images/wiki/anvil.webp",
+    "imageAlt": "Anvil quest reward icon from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Unlock First, Craft Second",
+        "paragraphs": [
+          "Most entries in this category are schematic rewards. Finishing the quest unlocks the production route; it does not necessarily place a finished copy in the inventory. Check the Craftbot after the quest state updates."
+        ]
+      },
+      {
+        "heading": "Plan for the Finished Part",
+        "bullets": [
+          "Read the exact recipe before spending rare materials on decorative unlocks.",
+          "Check dimensions and density before fitting a reward into a vehicle or compact room.",
+          "Follow the linked quest when the recipe is still locked instead of searching old pre-1.0 crafting advice."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bots",
+    "name": "Bots",
+    "description": "All major hostile, non-aggressive, creature, and workshop bot families in Survival, with crop seed routes, drops, locations, and build-specific counterplay.",
+    "focus": "Identify the bot, follow its resource route, or counter its attack",
+    "symbol": "10",
+    "image": "/images/wiki/haybot.png",
+    "imageAlt": "Haybot character render from Scrap Mechanic",
+    "fieldGuide": [
+      {
+        "heading": "Identify the Threat Before Fighting",
+        "paragraphs": [
+          "Bot encounters change with range, movement, terrain, and group composition. Melee enemies pressure space, ranged enemies punish exposed angles, and 1.0 introduces new behavior including flying, underwater, explosive, and digging threats."
+        ]
+      },
+      {
+        "heading": "Safer Counterplay",
+        "bullets": [
+          "Move fights away from loaded vehicles, crops, fuel, and fragile automation.",
+          "Use terrain and hard cover to split groups instead of standing in an open lane.",
+          "Collect drops only after checking for a second group or a ranged angle."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "schematics",
+    "name": "Schematics",
+    "description": "The 1.0 recipe-unlock system across Schematicbot scans, trader offers, quests, Farmer tasks, Growlabs, treasures, and Warehouse progression.",
+    "focus": "Find, register, and use gated recipes",
+    "symbol": "11",
+    "image": "/images/wiki/schematic-box.webp",
+    "imageAlt": "Schematic Box icon from Scrap Mechanic 1.0",
+    "fieldGuide": [
+      {
+        "heading": "Match the Recipe to Its Unlock Route",
+        "paragraphs": [
+          "The Craftbot and Saw Table contain 573 distinct outputs: 356 use the Schematicbot pool, 120 use dedicated progression routes, 73 are available from the start, and 24 belong to the Craftbot core set."
+        ]
+      },
+      {
+        "heading": "The Unlock Is Not the Finished Item",
+        "bullets": [
+          "A blue-icon part scan targets its exact recipe and does not consume the part.",
+          "A Schematic Box consumes one box and selects a random remaining recipe from the 356-item pool.",
+          "Trader, quest, Farmer task, Growlab, treasure, and Warehouse routes bypass the Schematicbot.",
+          "Every route registers a recipe; the finished item still needs its listed materials and station."
+        ]
+      }
+    ]
+  }
+]

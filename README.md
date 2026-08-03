@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scrap Mechanic Field Guide
 
-## Getting Started
+Next.js site for Scrap Mechanic guides, wiki entries, builds, tools, updates, and legal information.
 
-First, run the development server:
+## Project structure
+
+```text
+src/
+├─ app/          Next.js route entry files and framework files
+├─ page/         Complete page implementations grouped by site area
+├─ components/   Components shared by multiple page areas
+├─ style/        Global and page-owned styles
+├─ data/         Pure local JSON collections only
+├─ types/        Shared TypeScript data contracts
+├─ lib/          Data loaders, queries, calculations, and formatters
+├─ config/       Site-wide configuration and navigation
+└─ seo/          Metadata, fixed TDK, and structured-data helpers
+
+scripts/
+├─ audit/        SEO and rendered-output checks
+└─ data/         Local game-data extraction and generation tools
+```
+
+### Directory boundaries
+
+- `src/app` stays thin. A route file delegates rendering to its matching implementation in `src/page`.
+- `src/page/legal` owns the legal page implementations, while their public routes remain `/about`, `/contact`, `/copyright`, `/privacy-policy`, and `/terms-of-service`.
+- `src/data` contains JSON only. Each file represents a logical collection, including all detail records and their per-record SEO fields.
+- Runtime behavior does not belong in `src/data`; loaders and queries live in `src/lib`, and reusable contracts live in `src/types`.
+- Styles mirror the page area under `src/style/page` without changing the existing class names.
+
+## Commands
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run build
+npm run audit:seo
+npm run audit:rendered
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to optimize and load Barlow and Barlow Condensed.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

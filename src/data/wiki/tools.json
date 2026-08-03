@@ -1,0 +1,389 @@
+[
+  {
+    "slug": "connect-tool",
+    "category": "tools",
+    "name": "Connect Tool",
+    "description": "An opening-route tool crafted at the powered crashed ship to reconnect its console, then used to link interactive parts and inspect signal direction throughout the game.",
+    "image": "/images/wiki/connect-tool.webp",
+    "imageAlt": "connect tool image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Building tool"
+      },
+      {
+        "label": "First acquisition",
+        "value": "Crashed ship Mini Craftbot"
+      },
+      {
+        "label": "Opening objective",
+        "value": "Reconnect the ship console"
+      },
+      {
+        "label": "Primary use",
+        "value": "Connect interactive parts"
+      },
+      {
+        "label": "Also shows",
+        "value": "Connection order and bearing direction"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How to Get the Connect Tool at the Crash Site",
+        "paragraphs": [
+          "Complete the Water Bucket fire objective, recover the nearby Master Battery, and install it in the crashed ship. Once the ship's Mini Craftbot has power, follow Getting Started and craft the Connect Tool there. Use it on the requested console connection before taking the Logbook and leaving for the Mechanic Station."
+        ]
+      },
+      {
+        "heading": "How Connections Work",
+        "paragraphs": [
+          "Select the Connect Tool to reveal connection points on interactive parts. Drag from a control part to the part it should operate. The arrows on a completed line show which part sends the signal and which part receives it."
+        ]
+      },
+      {
+        "heading": "Useful Checks",
+        "bullets": [
+          "Confirm every wheel bearing points in the intended drive direction.",
+          "Read Controller connection numbers before changing a sequence.",
+          "Trace the signal from a Button, Switch, Sensor, or Seat to the final action.",
+          "Disconnect a line before rebuilding a mechanism around a different control."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "water-bucket",
+      "master-battery",
+      "mini-craftbot",
+      "bearing",
+      "controller",
+      "logic-gate"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Connect Tool Location and Uses",
+      "description": "Craft the Scrap Mechanic Connect Tool at the powered crashed ship, reconnect the console, then use it for bearings, controls, logic, and troubleshooting.",
+      "keywords": [
+        "Scrap Mechanic Connect Tool",
+        "Scrap Mechanic how to get Connect Tool",
+        "Scrap Mechanic reconnect ship console",
+        "Scrap Mechanic connections"
+      ]
+    }
+  },
+  {
+    "slug": "lift",
+    "category": "tools",
+    "name": "Lift",
+    "description": "A core building tool for creating movable constructions, recovering flipped vehicles, and loading saved creations.",
+    "image": "/images/wiki/lift.webp",
+    "imageAlt": "lift image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Building tool"
+      },
+      {
+        "label": "Primary use",
+        "value": "Building movable creations"
+      },
+      {
+        "label": "Important behavior",
+        "value": "Bearings stay locked while lifted"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Build and Recover",
+        "paragraphs": [
+          "The Lift creates a stable work platform for vehicles and machines. It is also the quickest recovery tool when a creation flips or becomes trapped in an awkward position."
+        ]
+      },
+      {
+        "heading": "Test off the Lift",
+        "bullets": [
+          "Remove the Lift before testing wheel rotation, suspension travel, or steering.",
+          "Check that the ground below the creation is clear before lowering it.",
+          "Use a simple test frame before loading a large saved creation into a new world."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "bearing",
+      "structural-blocks",
+      "controller"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Lift Building Tool - Uses and Guide",
+      "description": "Learn how the Lift supports building, saved creations, vehicle recovery, and reliable testing in Scrap Mechanic. Check the related systems first.",
+      "keywords": [
+        "Scrap Mechanic Lift",
+        "Scrap Mechanic building tool",
+        "Scrap Mechanic flipped vehicle"
+      ]
+    }
+  },
+  {
+    "slug": "sledgehammer",
+    "category": "tools",
+    "name": "Sledgehammer",
+    "description": "The starting Survival tool for melee defense, breaking resource objects, and interacting with loose physics objects.",
+    "image": "/images/wiki/sledgehammer.webp",
+    "imageAlt": "sledgehammer image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Starting tool and melee weapon"
+      },
+      {
+        "label": "Used for",
+        "value": "Resource objects and close defense"
+      },
+      {
+        "label": "Inventory",
+        "value": "Permanent mechanic equipment"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Create Space Before Swinging",
+        "paragraphs": [
+          "The Sledgehammer is strongest when a single target is controlled in open ground. Pull enemies away from loot, crops, and narrow interiors before committing to close range."
+        ],
+        "bullets": [
+          "Use terrain to avoid fighting several bots at once.",
+          "Stop collecting resources when the surrounding area is not secure.",
+          "Switch to ranged combat when the enemy or environment makes melee unsafe."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "haybot",
+      "totebot",
+      "scrap-metal"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Sledgehammer - Uses and Guide",
+      "description": "Use the Sledgehammer for early resource gathering and controlled melee encounters in Scrap Mechanic Survival. Review its role before committing materials.",
+      "keywords": [
+        "Scrap Mechanic Sledgehammer",
+        "Scrap Mechanic starting tool",
+        "Scrap Mechanic melee"
+      ]
+    }
+  },
+  {
+    "slug": "weld-tool",
+    "category": "tools",
+    "name": "Weld Tool",
+    "description": "A building tool used to join constructions and move attached sections into a permanent alignment.",
+    "image": "/images/wiki/weld-tool.webp",
+    "imageAlt": "weld tool image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Construction tool"
+      },
+      {
+        "label": "Used for",
+        "value": "Joining and aligning creations"
+      },
+      {
+        "label": "Check first",
+        "value": "Moving joints and orientation"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Weld Only After the Motion Test",
+        "paragraphs": [
+          "Joining two sections can remove the separation a mechanism depended on. Test bearings, pistons, clearance, and orientation while the modules are still easy to reposition."
+        ],
+        "bullets": [
+          "Save or duplicate a complex module before the final join.",
+          "Use visible alignment blocks as temporary guides.",
+          "Inspect connections again after welding."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "lift",
+      "connect-tool",
+      "bearing"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Weld Tool - Uses and Guide",
+      "description": "Join and align Scrap Mechanic constructions safely with the Weld Tool while preserving moving mechanisms. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Weld Tool",
+        "Scrap Mechanic weld creations",
+        "Scrap Mechanic building tool"
+      ]
+    }
+  },
+  {
+    "slug": "paint-tool",
+    "category": "tools",
+    "name": "Paint Tool",
+    "description": "A color tool for decoration, system labels, safety markings, and color-sensitive automation.",
+    "image": "/images/wiki/paint-tool.webp",
+    "imageAlt": "paint tool image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Color and labeling tool"
+      },
+      {
+        "label": "Survival cost",
+        "value": "Paint Ammo"
+      },
+      {
+        "label": "Logic use",
+        "value": "Works with configured color detection"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Create a Small Color Language",
+        "paragraphs": [
+          "Choose a few repeatable meanings: red for stop or danger, blue for water, yellow for moving parts, and another color for player controls. Consistency is more useful than painting every surface."
+        ],
+        "bullets": [
+          "Label both ends of long pipe or logic routes.",
+          "Use high contrast around moving gaps.",
+          "Record sensor colors before repainting a machine."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "paint-ammo",
+      "sensor",
+      "logic-gate"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Paint Tool - Uses and Guide",
+      "description": "Use the Paint Tool for decoration, readable controls, safety markings, and sensor colors in Scrap Mechanic. Check the related systems first.",
+      "keywords": [
+        "Scrap Mechanic Paint Tool",
+        "Scrap Mechanic paint",
+        "Scrap Mechanic color sensor"
+      ]
+    }
+  },
+  {
+    "slug": "handbook",
+    "category": "tools",
+    "name": "Handbook",
+    "description": "The in-game reference for core building controls, part placement, connections, and first construction concepts.",
+    "image": "/images/wiki/handbook.webp",
+    "imageAlt": "handbook image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "In-game help tool"
+      },
+      {
+        "label": "Covers",
+        "value": "Core controls and building basics"
+      },
+      {
+        "label": "Best used",
+        "value": "Beside a small test creation"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Turn Every Page into a Test",
+        "paragraphs": [
+          "The Handbook becomes useful when each control is tried immediately on a small frame. Place, rotate, remove, connect, and test one part before applying the same idea to a vehicle."
+        ],
+        "bullets": [
+          "Use the Lift for a disposable practice chassis.",
+          "Compare connection arrows before and after reversing a bearing.",
+          "Return to the Handbook when a control behaves differently after an update."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "lift",
+      "connect-tool",
+      "bearing"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Handbook - Uses and Guide",
+      "description": "Use the Scrap Mechanic Handbook with a small test build to learn placement, rotation, removal, and connections. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Handbook",
+        "Scrap Mechanic controls",
+        "Scrap Mechanic building basics"
+      ]
+    }
+  },
+  {
+    "slug": "claygun",
+    "category": "tools",
+    "name": "Claygun",
+    "description": "A 1.0 terrain-shaping tool that lets mechanics add and remove clay in Creative and Survival.",
+    "image": "/images/wiki/claygun.webp",
+    "imageAlt": "claygun image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Introduced",
+        "value": "1.0 / Drilling Thunder"
+      },
+      {
+        "label": "Available in",
+        "value": "Creative and Survival"
+      },
+      {
+        "label": "Used for",
+        "value": "Shaping terrain"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Terrain Is Now Part of the Build",
+        "paragraphs": [
+          "The Claygun can correct an approach, shape a test area, or integrate a structure with the ground. It should not be treated as a guaranteed defense because 1.0 also introduces enemies capable of digging."
+        ],
+        "bullets": [
+          "Keep vehicle clearance in mind when reshaping a road.",
+          "Make small changes and test movement before closing a route.",
+          "Do not block the only exit from an underground work area."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "lift",
+      "farmbot",
+      "structural-blocks",
+      "plasma-drill",
+      "minerbot"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Claygun Terrain Tool - Uses and Guide",
+      "description": "Use the 1.0 Claygun to shape terrain safely for routes, bases, and underground work in Scrap Mechanic. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Claygun",
+        "Scrap Mechanic terrain tool",
+        "Scrap Mechanic Drilling Thunder"
+      ]
+    }
+  }
+]

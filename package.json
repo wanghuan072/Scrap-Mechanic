@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "audit:seo": "node scripts/audit-seo.mjs",
-    "audit:rendered": "node scripts/audit-rendered.mjs"
+    "audit:seo": "node scripts/audit/seo.mjs",
+    "audit:rendered": "node scripts/audit/rendered.mjs"
   },
   "dependencies": {
     "next": "16.2.12",

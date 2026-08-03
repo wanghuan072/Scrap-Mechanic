@@ -1,0 +1,322 @@
+[
+  {
+    "slug": "crash-site",
+    "name": "Crashed Maintenance Ship",
+    "type": "Starting landmark",
+    "danger": "Low",
+    "description": "The opening Survival landmark contains the crashed ship, the three-fire Getting Started objective, the nearby Water Bucket pond, the first Master Battery ruin, the Mini Craftbot, and the Logbook route to the Mechanic Station.",
+    "navigation": "From the ship entrance, follow the path in the opposite direction to reach the pond and farming tutorial. After extinguishing the marked ship fires, follow the active objective and crash-debris trail to the nearby Master Battery ruin.",
+    "preparation": [
+      "Fill the Water Bucket and extinguish all 3 marked fires inside the ship.",
+      "Recover the nearby Master Battery and install it in the crashed ship, not the Mechanic Station.",
+      "Craft the Connect Tool, finish the console objective, and open the Logbook.",
+      "Leave only after the Mechanic Station waypoint appears; farming and Your First Car can then be handled as separate branches."
+    ],
+    "relatedHref": "/guides/beginner-first-hours",
+    "relatedLabel": "Complete the Crash Site route",
+    "keywords": [
+      "crash site",
+      "maintenance ship",
+      "Water Bucket location",
+      "ship fires",
+      "Master Battery location",
+      "Getting Started"
+    ]
+  },
+  {
+    "slug": "mechanic-station",
+    "name": "Mechanic Station",
+    "type": "Early-game hub",
+    "danger": "Low",
+    "description": "A recognizable station marked by a large illuminated wrench, commonly used as an early workshop, storage point, and vehicle base.",
+    "navigation": "Follow connected roads and watch the skyline for the wrench sign. Record the junction used to reach it, not only the final building.",
+    "preparation": [
+      "Bring the key progression item requested by the station objective.",
+      "Clear nearby threats before moving storage into the building.",
+      "Keep the first vehicle simple enough to repair on site."
+    ],
+    "relatedHref": "/wiki/quests#the-mechanic-station",
+    "relatedLabel": "Prepare the station objective",
+    "keywords": [
+      "mechanic station",
+      "wrench sign",
+      "craftbot"
+    ]
+  },
+  {
+    "slug": "packing-station",
+    "name": "Packing Station",
+    "type": "Produce logistics",
+    "danger": "Moderate",
+    "description": "A road-side destination used in produce logistics. Its value comes from turning farming into a transport problem rather than a chest-management problem.",
+    "navigation": "Treat the road between the farm and station as a freight route. Test bridge clearance, slopes, and turning space before hauling a full load.",
+    "preparation": [
+      "Use a low cargo deck with secure load boundaries.",
+      "Carry fuel and a recovery Lift.",
+      "Clear roadside bots before driving a slow, heavy load."
+    ],
+    "relatedHref": "/wiki/trades",
+    "relatedLabel": "Plan produce transport",
+    "keywords": [
+      "packing station",
+      "produce crates",
+      "fruit packing",
+      "vegetable packing"
+    ]
+  },
+  {
+    "slug": "farmers-hideout",
+    "name": "Farmers Hideout",
+    "type": "Trading location",
+    "danger": "Moderate",
+    "description": "A progression and trading location where prepared deliveries become useful equipment. The route matters as much as the destination because cargo can be bulky.",
+    "navigation": "Use the road network around a Packing Station and watch for the hideout's large industrial silhouette and smokestack.",
+    "preparation": [
+      "Confirm the delivery you are pursuing before loading the vehicle.",
+      "Leave room to carry the reward home safely.",
+      "Avoid mixing important cargo with loose exploration loot."
+    ],
+    "relatedHref": "/wiki/quests#palate-cleanser",
+    "relatedLabel": "Open the packing and trading route",
+    "keywords": [
+      "farmers hideout",
+      "trader",
+      "produce delivery",
+      "caged farmer"
+    ]
+  },
+  {
+    "slug": "warehouse",
+    "name": "Warehouse",
+    "type": "Hostile structure",
+    "danger": "High",
+    "description": "A large multi-level combat and exploration landmark associated with ranged bot threats, valuable materials, and difficult recovery runs.",
+    "navigation": "Park outside the immediate approach, mark the entrance used, and keep the return vehicle facing away from the structure.",
+    "preparation": [
+      "Bring a ranged weapon with a deliberate ammunition reserve.",
+      "Carry food, light, and only the tools needed for the run.",
+      "Deposit unrelated valuables before entering.",
+      "Clear rooms methodically instead of chasing enemies across floors."
+    ],
+    "relatedHref": "/guides/warehouse-key-and-farmbot",
+    "relatedLabel": "Follow the Warehouse combat route",
+    "keywords": [
+      "warehouse",
+      "tapebot",
+      "warehouse key",
+      "combat preparation",
+      "trash bot"
+    ]
+  },
+  {
+    "slug": "growlabs",
+    "name": "Growlabs",
+    "type": "1.0 story location",
+    "danger": "High",
+    "description": "Growlabs are part of the expanded 1.0 Survival world and story. They combine exploration, combat, and progression in spaces where preparation matters.",
+    "navigation": "Follow the active objective and build a reversible route from the nearest safe storage point. Exact placement varies with the generated world.",
+    "preparation": [
+      "Read the objective before crossing the final approach.",
+      "Bring ranged protection, food, light, and spare ammunition.",
+      "Test the route with low-value inventory first.",
+      "Back out and resupply instead of turning the run into an unrecoverable loss."
+    ],
+    "relatedHref": "/wiki/quests#a-farmers-side-hustle",
+    "relatedLabel": "Prepare for a Growlab",
+    "keywords": [
+      "growlab",
+      "grow labs",
+      "1.0 story",
+      "green tapebot",
+      "yellow tapebot"
+    ]
+  },
+  {
+    "slug": "excavation-island",
+    "name": "Excavation Island",
+    "type": "1.0 mining region",
+    "danger": "Variable",
+    "description": "A new 1.0 region built around abandoned mines, underground digging, rare discoveries, and machine-led excavation.",
+    "navigation": "Plan the trip as a separate expedition. Keep a surface staging point and make underground turns readable with sparse, consistent markers.",
+    "preparation": [
+      "Separate mining equipment from the road vehicle when possible.",
+      "Carry lighting, food, and storage capacity.",
+      "Leave a clear return corridor for a loaded mining machine.",
+      "Expect terrain shaping and drilling to change the route behind you."
+    ],
+    "relatedHref": "/builds/mining-vehicle",
+    "relatedLabel": "Follow the underground mining loop",
+    "keywords": [
+      "excavation island",
+      "miner island",
+      "abandoned mine",
+      "drilling thunder",
+      "plasma drill"
+    ]
+  },
+  {
+    "slug": "desert-biome",
+    "name": "Desert Biome",
+    "type": "1.0 biome",
+    "danger": "Variable",
+    "description": "A reworked 1.0 biome with open sightlines, different travel demands, and weather hazards that can interrupt vehicle routes.",
+    "navigation": "Favor visible roads and landmark bearings over cutting across unmarked flats. Note fuel needs before a long desert crossing.",
+    "preparation": [
+      "Carry extra fuel and food for long reverse trips.",
+      "Watch for tornado warnings and give storms a wide berth.",
+      "Do not test fragile suspension builds as the only desert scout."
+    ],
+    "relatedHref": "/map#tornado-hazard",
+    "relatedLabel": "Read tornado hazard guidance",
+    "keywords": [
+      "desert biome",
+      "tornado",
+      "1.0 world",
+      "travel route"
+    ]
+  },
+  {
+    "slug": "tornado-hazard",
+    "name": "Tornado Weather Hazard",
+    "type": "Weather hazard",
+    "danger": "High",
+    "description": "1.0 weather events that can appear in desert and open areas. Official notes suggest avoiding them; community builds often try to drive through anyway.",
+    "navigation": "If a tornado forms on your route, divert early using a road junction rather than racing the funnel with a loaded cargo truck.",
+    "preparation": [
+      "Keep valuable cargo off experimental storm-chasing vehicles.",
+      "Have a reverse landmark ready if visibility collapses.",
+      "Prefer postponing a packing delivery over losing the whole haul."
+    ],
+    "relatedHref": "/map#desert-biome",
+    "relatedLabel": "Review desert travel tips",
+    "keywords": [
+      "tornado",
+      "weather",
+      "desert hazard",
+      "Scrap Mechanic 1.0"
+    ]
+  },
+  {
+    "slug": "scrap-city-garage",
+    "name": "Scrap City Garage",
+    "type": "1.0 transfer hub",
+    "danger": "Low",
+    "description": "A 1.0 Garage destination used to bring supported Creative and Survival creations into an active Survival world.",
+    "navigation": "Locate Scrap City through story and road progression, then treat the Garage as a transfer stop rather than a combat objective.",
+    "preparation": [
+      "Start with a small unmodded blueprint before loading a complex Workshop creation.",
+      "Use the 30-slot Garage Chest and sort supplies by the exact material bill.",
+      "Remove unavailable or version-specific parts before the first Survival assembly."
+    ],
+    "relatedHref": "/guides/scrap-city-garage-blueprints",
+    "relatedLabel": "Open the Garage blueprint guide",
+    "keywords": [
+      "scrap city",
+      "garage",
+      "creative transfer",
+      "1.0"
+    ]
+  },
+  {
+    "slug": "ruins",
+    "name": "Ruins and Ruin City",
+    "type": "Exploration area",
+    "danger": "Variable",
+    "description": "Ruins range from small roadside loot stops to dense areas with multiple approach angles and stronger threats.",
+    "navigation": "Use the road-facing side as the return reference and clear a small perimeter before entering tight spaces.",
+    "preparation": [
+      "Keep one empty inventory row for recovered materials.",
+      "Listen for bots before climbing into blind corners.",
+      "Return loot to the vehicle before pushing into the next structure."
+    ],
+    "relatedHref": "/builds/off-road-scout",
+    "relatedLabel": "Use the exploration loop",
+    "keywords": [
+      "ruins",
+      "ruin city",
+      "loot",
+      "bot encounter"
+    ]
+  },
+  {
+    "slug": "chemical-lake",
+    "name": "Chemical Lake",
+    "type": "Resource landmark",
+    "danger": "Moderate",
+    "description": "A hazardous-looking resource landmark that is useful to identify when planning chemical collection and nearby travel routes.",
+    "navigation": "Mark the safe road approach rather than driving directly toward the shoreline with a heavy vehicle.",
+    "preparation": [
+      "Bring the container or collection build needed for the trip.",
+      "Keep important vehicle controls away from exposed edges.",
+      "Plan how the collected material will be stored at base."
+    ],
+    "relatedHref": "/wiki/resources/chemicals",
+    "relatedLabel": "Read the Chemicals entry",
+    "keywords": [
+      "chemical lake",
+      "chemicals",
+      "resource collection"
+    ]
+  },
+  {
+    "slug": "silo-district",
+    "name": "Silo District",
+    "type": "Industrial landmark",
+    "danger": "High",
+    "description": "A large industrial area that can expose vehicles and players to dangerous bot encounters across open approaches.",
+    "navigation": "Scout the outer road first, choose a retreat line, and avoid parking valuable transport in the center of the approach.",
+    "preparation": [
+      "Use a disposable scout vehicle or travel light.",
+      "Keep a ranged escape option.",
+      "Do not let the only storage vehicle become the combat cover."
+    ],
+    "relatedHref": "/wiki/bots/farmbot",
+    "relatedLabel": "Prepare for Farmbots",
+    "keywords": [
+      "silo district",
+      "industrial area",
+      "farmbot"
+    ]
+  },
+  {
+    "slug": "farmer-shacks",
+    "name": "Farmer Shacks and Camps",
+    "type": "Small structure",
+    "danger": "Variable",
+    "description": "Small structures and camps are useful resupply stops, route markers, and sources of ordinary building material during exploration.",
+    "navigation": "Use them as named stops between major landmarks. One clear marker at a nearby road junction is more useful than marking every shack.",
+    "preparation": [
+      "Check the perimeter before looting indoors.",
+      "Take only what supports the current objective.",
+      "Leave enough vehicle capacity for higher-value discoveries."
+    ],
+    "relatedHref": "/builds/off-road-scout",
+    "relatedLabel": "Plan efficient loot runs",
+    "keywords": [
+      "farmer shack",
+      "campsite",
+      "small structure",
+      "loot stop"
+    ]
+  },
+  {
+    "slug": "farmbot-scrapyard",
+    "name": "Farmbot Scrapyard",
+    "type": "Danger zone",
+    "danger": "High",
+    "description": "A location where the environment itself warns that heavy hostile machinery may be nearby.",
+    "navigation": "Approach from open ground with a clear exit. Dense cover can hide large enemies and trap a wide vehicle.",
+    "preparation": [
+      "Leave fragile transport outside the threat area.",
+      "Carry enough ammunition to disengage safely.",
+      "Avoid fighting with valuable cargo already loaded."
+    ],
+    "relatedHref": "/wiki/bots/farmbot",
+    "relatedLabel": "Review the Farmbot strategy",
+    "keywords": [
+      "farmbot scrapyard",
+      "danger area",
+      "farmbot spawn"
+    ]
+  }
+]

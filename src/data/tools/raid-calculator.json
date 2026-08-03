@@ -1,0 +1,159 @@
+{
+  "raidCropValueThresholds": [
+    0,
+    50,
+    100,
+    550,
+    1000,
+    5500,
+    10000
+  ],
+  "maximumRaidPlantValue": 100000,
+  "raidCrops": [
+    {
+      "slug": "tomato",
+      "name": "Tomato",
+      "value": 1,
+      "image": "/images/wiki/tomato.webp"
+    },
+    {
+      "slug": "potato",
+      "name": "Potato",
+      "value": 1,
+      "image": "/images/wiki/potato.webp"
+    },
+    {
+      "slug": "carrot",
+      "name": "Carrot",
+      "value": 2,
+      "image": "/images/wiki/carrot.webp"
+    },
+    {
+      "slug": "redbeet",
+      "name": "Redbeet",
+      "value": 5,
+      "image": "/images/wiki/redbeet.webp"
+    },
+    {
+      "slug": "banana",
+      "name": "Banana",
+      "value": 15,
+      "image": "/images/wiki/banana.webp"
+    },
+    {
+      "slug": "chili",
+      "name": "Chili",
+      "value": 15,
+      "image": "/images/wiki/chili.webp"
+    },
+    {
+      "slug": "blueberry",
+      "name": "Blueberry",
+      "value": 50,
+      "image": "/images/wiki/blueberry.webp"
+    },
+    {
+      "slug": "orange",
+      "name": "Orange",
+      "value": 100,
+      "image": "/images/wiki/orange.webp"
+    },
+    {
+      "slug": "broccoli",
+      "name": "Broccoli",
+      "value": 500,
+      "image": "/images/wiki/broccoli.webp"
+    },
+    {
+      "slug": "pineapple",
+      "name": "Pineapple",
+      "value": 1000,
+      "image": "/images/wiki/pineapple.webp"
+    }
+  ],
+  "raidLevels": [
+    {
+      "level": 1,
+      "minimumPlantValue": 1,
+      "budget": {
+        "minimum": 2,
+        "maximum": 30
+      }
+    },
+    {
+      "level": 2,
+      "minimumPlantValue": 50,
+      "budget": {
+        "minimum": 20,
+        "maximum": 50
+      }
+    },
+    {
+      "level": 3,
+      "minimumPlantValue": 100,
+      "budget": {
+        "minimum": 75,
+        "maximum": 135
+      }
+    },
+    {
+      "level": 4,
+      "minimumPlantValue": 550,
+      "budget": {
+        "minimum": 125,
+        "maximum": 200
+      }
+    },
+    {
+      "level": 5,
+      "minimumPlantValue": 1000,
+      "budget": {
+        "minimum": 300,
+        "maximum": 500
+      }
+    },
+    {
+      "level": 6,
+      "minimumPlantValue": 5500,
+      "budget": {
+        "minimum": 500,
+        "maximum": 700
+      }
+    },
+    {
+      "level": 7,
+      "minimumPlantValue": 10001,
+      "budget": {
+        "minimum": 1000,
+        "maximum": 5000
+      }
+    }
+  ],
+  "raidTimingRules": [
+    {
+      "label": "Countdown",
+      "value": "60 sec",
+      "detail": "A positive crop value starts the current raid countdown."
+    },
+    {
+      "label": "Early reset",
+      "value": "10 sec",
+      "detail": "Adding a qualifying crop during the opening window resets the timer."
+    },
+    {
+      "label": "Opening drop",
+      "value": "12 sec",
+      "detail": "The first group begins dropping after the attack phase starts."
+    },
+    {
+      "label": "Planting cluster",
+      "value": "10 units",
+      "detail": "Nearby planting positions inside this distance are merged."
+    },
+    {
+      "label": "Raid radius",
+      "value": "96 units",
+      "detail": "The raid manager associates the attack with this wider area."
+    }
+  ]
+}

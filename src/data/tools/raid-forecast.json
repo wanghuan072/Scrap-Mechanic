@@ -1,0 +1,568 @@
+{
+  "raidForecastSource": {
+    "checkedVersion": "1.0.0.867",
+    "note": "Weighted enemy groups transcribed from the current Survival raid tables."
+  },
+  "raidBots": {
+    "tg": {
+      "name": "Totebot",
+      "color": "#78b34a",
+      "family": "Totebot"
+    },
+    "tb": {
+      "name": "Totebot Blue",
+      "color": "#5a8fd6",
+      "family": "Totebot"
+    },
+    "tr": {
+      "name": "Totebot Red",
+      "color": "#d6543f",
+      "family": "Totebot"
+    },
+    "ty": {
+      "name": "Totebot Yellow",
+      "color": "#e0b23e",
+      "family": "Totebot"
+    },
+    "hb": {
+      "name": "Haybot",
+      "color": "#c9973f",
+      "family": "Haybot"
+    },
+    "pg": {
+      "name": "Tapebot Green",
+      "color": "#67a05a",
+      "family": "Tapebot"
+    },
+    "py": {
+      "name": "Tapebot Yellow",
+      "color": "#d9c052",
+      "family": "Tapebot"
+    },
+    "pr": {
+      "name": "Tapebot Red",
+      "color": "#cf4636",
+      "family": "Tapebot"
+    },
+    "fb": {
+      "name": "Farmbot",
+      "color": "#b03030",
+      "family": "Farmbot"
+    }
+  },
+  "raidBotOrder": [
+    "tg",
+    "tb",
+    "tr",
+    "ty",
+    "hb",
+    "pg",
+    "py",
+    "pr",
+    "fb"
+  ],
+  "openingGroups": {
+    "1": [
+      {
+        "list": {
+          "hb": 1,
+          "tg": 2
+        }
+      }
+    ],
+    "2": [
+      {
+        "list": {
+          "hb": 3,
+          "tg": 2
+        }
+      }
+    ],
+    "3": [
+      {
+        "list": {
+          "hb": 3,
+          "tg": 2,
+          "tb": 1
+        },
+        "delay": 2
+      }
+    ],
+    "4": [
+      {
+        "list": {
+          "hb": 2,
+          "tb": 1,
+          "pg": 1,
+          "py": 1
+        },
+        "delay": 2
+      },
+      {
+        "list": {
+          "hb": 2,
+          "tg": 2,
+          "tb": 1,
+          "pg": 1
+        },
+        "delay": 2
+      },
+      {
+        "list": {
+          "tg": 2,
+          "tr": 1
+        },
+        "delay": 2
+      }
+    ],
+    "5": [
+      {
+        "list": {
+          "fb": 1
+        },
+        "delay": 5
+      }
+    ],
+    "6": [
+      {
+        "list": {
+          "fb": 1
+        },
+        "delay": 5
+      }
+    ],
+    "7": [
+      {
+        "list": {
+          "fb": 3
+        },
+        "delay": 5
+      }
+    ]
+  },
+  "reinforcementGroups": {
+    "1": [
+      {
+        "list": {
+          "tg": 1
+        },
+        "cost": 2,
+        "weight": 1
+      },
+      {
+        "list": {
+          "tg": 2
+        },
+        "cost": 4,
+        "weight": 10
+      },
+      {
+        "list": {
+          "hb": 1
+        },
+        "cost": 5,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 2,
+          "hb": 1
+        },
+        "cost": 9,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 1,
+          "hb": 2
+        },
+        "cost": 12,
+        "weight": 100
+      }
+    ],
+    "2": [
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1
+        },
+        "cost": 7,
+        "weight": 1
+      },
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1,
+          "tb": 1
+        },
+        "cost": 12,
+        "weight": 10
+      },
+      {
+        "list": {
+          "tg": 1,
+          "hb": 2,
+          "tb": 1
+        },
+        "cost": 17,
+        "weight": 50
+      },
+      {
+        "list": {
+          "tg": 2,
+          "hb": 3
+        },
+        "cost": 19,
+        "weight": 100
+      }
+    ],
+    "3": [
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1
+        },
+        "cost": 7,
+        "weight": 1
+      },
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1,
+          "tb": 1
+        },
+        "cost": 12,
+        "weight": 10
+      },
+      {
+        "list": {
+          "tg": 1,
+          "hb": 2,
+          "tb": 1
+        },
+        "cost": 17,
+        "weight": 50
+      },
+      {
+        "list": {
+          "tg": 2,
+          "hb": 3
+        },
+        "cost": 19,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 2,
+          "tr": 1
+        },
+        "cost": 24,
+        "weight": 50
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pg": 1,
+          "py": 1
+        },
+        "cost": 16,
+        "weight": 50
+      }
+    ],
+    "4": [
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1
+        },
+        "cost": 7,
+        "weight": 1
+      },
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1,
+          "tb": 1
+        },
+        "cost": 12,
+        "weight": 10
+      },
+      {
+        "list": {
+          "tg": 1,
+          "hb": 2,
+          "tb": 1
+        },
+        "cost": 17,
+        "weight": 50
+      },
+      {
+        "list": {
+          "tg": 2,
+          "hb": 3
+        },
+        "cost": 19,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 2,
+          "tr": 1
+        },
+        "cost": 19,
+        "weight": 50
+      },
+      {
+        "list": {
+          "tg": 2,
+          "ty": 1
+        },
+        "cost": 19,
+        "weight": 50
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pg": 1,
+          "py": 1
+        },
+        "cost": 16,
+        "weight": 50
+      },
+      {
+        "list": {
+          "tg": 2,
+          "pg": 2,
+          "py": 1
+        },
+        "cost": 19,
+        "weight": 50
+      }
+    ],
+    "5": [
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1
+        },
+        "cost": 7,
+        "weight": 1
+      },
+      {
+        "list": {
+          "tg": 2,
+          "hb": 2
+        },
+        "cost": 14,
+        "weight": 10
+      },
+      {
+        "list": {
+          "tg": 3,
+          "hb": 3
+        },
+        "cost": 21,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "tb": 3
+        },
+        "cost": 21,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "ty": 2
+        },
+        "cost": 36,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "tr": 2
+        },
+        "cost": 36,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pg": 3,
+          "py": 2
+        },
+        "cost": 31,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pr": 2
+        },
+        "cost": 56,
+        "weight": 80
+      },
+      {
+        "list": {
+          "fb": 1
+        },
+        "cost": 75,
+        "weight": 60,
+        "delay": 5
+      }
+    ],
+    "6": [
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1
+        },
+        "cost": 7,
+        "weight": 1
+      },
+      {
+        "list": {
+          "tg": 2,
+          "hb": 2
+        },
+        "cost": 14,
+        "weight": 10
+      },
+      {
+        "list": {
+          "tg": 3,
+          "hb": 3
+        },
+        "cost": 21,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "tb": 3
+        },
+        "cost": 21,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "ty": 2
+        },
+        "cost": 36,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "tr": 2
+        },
+        "cost": 36,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pg": 3,
+          "py": 2
+        },
+        "cost": 31,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pr": 2
+        },
+        "cost": 56,
+        "weight": 80
+      },
+      {
+        "list": {
+          "fb": 1
+        },
+        "cost": 75,
+        "weight": 60,
+        "delay": 5
+      }
+    ],
+    "7": [
+      {
+        "list": {
+          "tg": 1,
+          "hb": 1
+        },
+        "cost": 7,
+        "weight": 1
+      },
+      {
+        "list": {
+          "tg": 2,
+          "hb": 2
+        },
+        "cost": 14,
+        "weight": 10
+      },
+      {
+        "list": {
+          "tg": 3,
+          "hb": 3
+        },
+        "cost": 21,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "tb": 3
+        },
+        "cost": 21,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "ty": 2
+        },
+        "cost": 36,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "tr": 2
+        },
+        "cost": 36,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pg": 3,
+          "py": 2
+        },
+        "cost": 31,
+        "weight": 100
+      },
+      {
+        "list": {
+          "tg": 3,
+          "pr": 2
+        },
+        "cost": 56,
+        "weight": 80
+      },
+      {
+        "list": {
+          "fb": 1
+        },
+        "cost": 75,
+        "weight": 60,
+        "delay": 5
+      }
+    ]
+  }
+}

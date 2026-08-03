@@ -1,0 +1,1082 @@
+[
+  {
+    "slug": "bearing",
+    "category": "parts",
+    "name": "Bearing",
+    "description": "The central rotational part for wheels, steering joints, doors, arms, and moving mechanisms.",
+    "image": "/images/wiki/bearing.webp",
+    "imageAlt": "bearing image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive part"
+      },
+      {
+        "label": "Movement",
+        "value": "Rotation"
+      },
+      {
+        "label": "Common controls",
+        "value": "Engine, Driver's Seat, or Controller"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How Bearings Work",
+        "paragraphs": [
+          "A Bearing creates a rotating connection between its base and the object attached to its moving side. Wheels use bearings to spin, while steering assemblies use them to change angle.",
+          "Bearings are locked while the creation is on the Lift. Remove the Lift before judging whether a joint moves correctly under physics."
+        ]
+      },
+      {
+        "heading": "Control Options",
+        "bullets": [
+          "Connect an engine when the bearing should provide continuous driven rotation.",
+          "Connect a Driver's Seat when the bearing should respond to steering input.",
+          "Connect a Controller when the bearing needs a programmed angle or sequence.",
+          "Use the Connect Tool to inspect and reverse a connected bearing direction."
+        ]
+      },
+      {
+        "heading": "Common Build Mistakes",
+        "bullets": [
+          "Attaching the moving body to the wrong face of the bearing.",
+          "Testing while the creation is still locked on the Lift.",
+          "Reversing one wheel or steering joint and not checking the connection arrows."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "controller",
+      "connect-tool",
+      "piston"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Bearing Guide - Uses and Guide",
+      "description": "Learn how Bearings create wheel rotation, steering joints, doors, and controlled movement in Scrap Mechanic builds. Review the connected uses.",
+      "keywords": [
+        "Scrap Mechanic Bearing",
+        "Scrap Mechanic steering",
+        "Scrap Mechanic wheel bearing"
+      ]
+    }
+  },
+  {
+    "slug": "controller",
+    "category": "parts",
+    "name": "Controller",
+    "description": "A programmable interactive part that sequences connected Bearings and Pistons.",
+    "image": "/images/wiki/controller.webp",
+    "imageAlt": "controller image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive part"
+      },
+      {
+        "label": "Controls",
+        "value": "Bearings and Pistons"
+      },
+      {
+        "label": "Activation",
+        "value": "Trigger or Driver's Seat connection"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What a Controller Is For",
+        "paragraphs": [
+          "The Controller is used when a moving part needs a repeatable position or sequence instead of free rotation. It can coordinate doors, folding sections, lifting arms, steering modes, and compact mechanisms."
+        ]
+      },
+      {
+        "heading": "Basic Setup",
+        "steps": [
+          "Place the Controller on the same creation as the moving parts.",
+          "Use the Connect Tool to connect the Controller to each Bearing or Piston.",
+          "Connect a Switch, Button, Sensor, or Driver's Seat to activate the sequence.",
+          "Set each movement frame and test slowly before increasing speed."
+        ]
+      },
+      {
+        "heading": "Troubleshooting",
+        "bullets": [
+          "Check the numbered connection order before editing a long sequence.",
+          "Reverse a bearing connection if the mechanism moves the wrong way.",
+          "Reduce speed when a heavy mechanism shakes or collides with its own frame."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "bearing",
+      "piston",
+      "connect-tool"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Controller Guide - Uses and Guide",
+      "description": "Set up a Scrap Mechanic Controller for Bearings, Pistons, timed sequences, doors, and moving build mechanisms. Check the related systems first.",
+      "keywords": [
+        "Scrap Mechanic Controller",
+        "Scrap Mechanic Controller guide",
+        "Scrap Mechanic logic build"
+      ]
+    }
+  },
+  {
+    "slug": "piston",
+    "category": "parts",
+    "name": "Piston",
+    "description": "A linear movement part used for lifts, presses, deployable tools, doors, and suspension experiments.",
+    "image": "/images/wiki/piston.webp",
+    "imageAlt": "piston image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive part"
+      },
+      {
+        "label": "Movement",
+        "value": "Linear extension"
+      },
+      {
+        "label": "Control",
+        "value": "Signal part or Controller"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Where Pistons Fit",
+        "paragraphs": [
+          "Pistons add controlled straight-line movement. They work well for compact lifts, deployable drills, gates, presses, stabilizers, and mechanisms that cannot be solved cleanly with rotation alone."
+        ]
+      },
+      {
+        "heading": "Build Safely",
+        "bullets": [
+          "Leave enough clearance for the full extension.",
+          "Test the piston at low speed before attaching a heavy tool head.",
+          "Watch for parts that collide with the frame while retracting."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "controller",
+      "bearing",
+      "connect-tool"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Piston Guide - Uses and Guide",
+      "description": "Use Pistons for linear movement, lifts, doors, deployable tools, and controlled Scrap Mechanic mechanisms. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Piston",
+        "Scrap Mechanic piston build",
+        "Scrap Mechanic moving parts"
+      ]
+    }
+  },
+  {
+    "slug": "logic-gate",
+    "category": "parts",
+    "name": "Logic Gate",
+    "description": "A signal-processing part used to combine inputs and build reliable automated behavior.",
+    "image": "/images/wiki/logic-gate.webp",
+    "imageAlt": "logic gate image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive logic part"
+      },
+      {
+        "label": "Input",
+        "value": "One or more connected signals"
+      },
+      {
+        "label": "Used for",
+        "value": "Conditions, memory, timing, and automation"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Start with One Decision",
+        "paragraphs": [
+          "Logic builds become easier when every gate answers one clear question. Begin with a simple condition, confirm the output, and only then connect it to the next stage."
+        ]
+      },
+      {
+        "heading": "Good First Projects",
+        "bullets": [
+          "A door that can be opened from either side.",
+          "A safety interlock that stops a machine while a gate is open.",
+          "A sensor-controlled watering pass.",
+          "A status light that shows whether a mechanism is ready."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "controller",
+      "connect-tool",
+      "piston"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Logic Gate Basics - Uses and Guide",
+      "description": "Learn the practical role of Logic Gates in Scrap Mechanic automation, safety circuits, doors, and sensor builds. Check the related systems first.",
+      "keywords": [
+        "Scrap Mechanic Logic Gate",
+        "Scrap Mechanic logic",
+        "Scrap Mechanic automation"
+      ]
+    }
+  },
+  {
+    "slug": "gas-engine",
+    "category": "parts",
+    "name": "Gas Engine",
+    "description": "A fuel-powered engine for wheel bearings and other continuously driven rotational systems.",
+    "image": "/images/wiki/gas-engine.webp",
+    "imageAlt": "gas engine image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive power part"
+      },
+      {
+        "label": "Consumes",
+        "value": "Gasoline"
+      },
+      {
+        "label": "Common use",
+        "value": "Vehicle drive bearings"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Set Power for the Vehicle You Have",
+        "paragraphs": [
+          "More engine power is not always more control. Begin at a low setting, test the unloaded chassis, then increase one step at a time after storage and tools are mounted."
+        ],
+        "bullets": [
+          "Connect only the bearings that should provide drive.",
+          "Reverse incorrect wheel direction with the Connect Tool.",
+          "Reduce power when acceleration causes rolling or wheel spin."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "gasoline",
+      "bearing",
+      "drivers-seat"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Gas Engine - Uses and Guide",
+      "description": "Connect and tune a Gas Engine for stable wheels, efficient fuel use, and controllable vehicles in Scrap Mechanic. Check the related systems first.",
+      "keywords": [
+        "Scrap Mechanic Gas Engine",
+        "Scrap Mechanic engine power",
+        "Scrap Mechanic vehicle engine"
+      ]
+    }
+  },
+  {
+    "slug": "electric-engine",
+    "category": "parts",
+    "name": "Electric Engine",
+    "description": "A battery-powered engine for controlled vehicle drive and powered rotational mechanisms.",
+    "image": "/images/wiki/electric-engine.webp",
+    "imageAlt": "electric engine image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive power part"
+      },
+      {
+        "label": "Consumes",
+        "value": "Batteries"
+      },
+      {
+        "label": "Use for",
+        "value": "Electric drive and controlled rotation"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Choose It as a System",
+        "paragraphs": [
+          "An Electric Engine changes the supply chain from Gasoline to Batteries. Make the choice around available resources, vehicle job, and how often it must operate, not only around the first test drive."
+        ],
+        "bullets": [
+          "Keep a separate battery reserve for essential transport.",
+          "Check every bearing direction before loading cargo.",
+          "Measure a real route before sizing the onboard supply."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "battery",
+      "bearing",
+      "drivers-seat"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Electric Engine - Uses and Guide",
+      "description": "Plan battery supply and bearing connections for an Electric Engine vehicle in Scrap Mechanic. Check its connected uses before the next Survival run.",
+      "keywords": [
+        "Scrap Mechanic Electric Engine",
+        "Scrap Mechanic battery vehicle",
+        "Scrap Mechanic engine"
+      ]
+    }
+  },
+  {
+    "slug": "thruster",
+    "category": "parts",
+    "name": "Thruster",
+    "description": "A directional force part used for propulsion, stabilization, assisted jumps, and experimental vehicles.",
+    "image": "/images/wiki/thruster.webp",
+    "imageAlt": "thruster image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive propulsion part"
+      },
+      {
+        "label": "Consumes",
+        "value": "Gasoline"
+      },
+      {
+        "label": "Main risk",
+        "value": "Force applied away from the center of mass"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Force Needs Alignment",
+        "paragraphs": [
+          "A Thruster pushes along its own axis. If that force misses the creation's center of mass, it also creates rotation, which can be useful for control or disastrous for a cargo vehicle."
+        ],
+        "bullets": [
+          "Test one axis at a time with low power.",
+          "Mount matched thrusters symmetrically when stable motion is the goal.",
+          "Add a clear shutoff control before increasing power."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "gasoline",
+      "switch",
+      "sensor"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Thruster Setup - Uses and Guide",
+      "description": "Align and control Thrusters for propulsion, stabilization, and experimental Scrap Mechanic creations. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Thruster",
+        "Scrap Mechanic propulsion",
+        "Scrap Mechanic flying build"
+      ]
+    }
+  },
+  {
+    "slug": "drivers-seat",
+    "category": "parts",
+    "name": "Driver's Seat",
+    "description": "The main player control part for driving, steering bearings, and activating connected vehicle functions.",
+    "image": "/images/wiki/drivers-seat.webp",
+    "imageAlt": "drivers seat image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Vehicle control part"
+      },
+      {
+        "label": "Controls",
+        "value": "Steering and connected functions"
+      },
+      {
+        "label": "Placement rule",
+        "value": "Protect it without blocking visibility"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Make Controls Readable",
+        "paragraphs": [
+          "Connect steering bearings first, verify left and right, then add engines and auxiliary controls. A small labeled control set is easier to recover under pressure than a seat connected to every machine on the vehicle."
+        ],
+        "bullets": [
+          "Keep steering separate from tool movement.",
+          "Place the seat near the vehicle center when practical.",
+          "Use paint or signs to identify important numbered controls."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "bearing",
+      "gas-engine",
+      "connect-tool"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Driver's Seat Controls - Uses and Guide",
+      "description": "Set up Driver's Seat steering and vehicle controls for readable, repairable Scrap Mechanic builds. Review its role before committing materials.",
+      "keywords": [
+        "Scrap Mechanic Driver's Seat",
+        "Scrap Mechanic steering",
+        "Scrap Mechanic vehicle controls"
+      ]
+    }
+  },
+  {
+    "slug": "switch",
+    "category": "parts",
+    "name": "Switch and Button",
+    "description": "Basic signal inputs used to turn systems on, trigger actions, and give a mechanic direct control.",
+    "image": "/images/wiki/switch.webp",
+    "imageAlt": "switch image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive input"
+      },
+      {
+        "label": "Switch",
+        "value": "Maintains an on or off state"
+      },
+      {
+        "label": "Button",
+        "value": "Provides a momentary input"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Choose the Correct Input Behavior",
+        "paragraphs": [
+          "Use a Switch when a machine should remain active after the player steps away. Use a Button when the action should last only while triggered or start a controlled sequence."
+        ],
+        "bullets": [
+          "Give dangerous machinery a reachable off control.",
+          "Label controls before a panel grows beyond two inputs.",
+          "Test the stopped state as carefully as the running state."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "logic-gate",
+      "controller",
+      "sensor"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Switch and Button - Uses and Guide",
+      "description": "Choose Switches and Buttons for direct controls, safe shutoffs, and logic inputs in Scrap Mechanic. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Switch",
+        "Scrap Mechanic Button",
+        "Scrap Mechanic control input"
+      ]
+    }
+  },
+  {
+    "slug": "sensor",
+    "category": "parts",
+    "name": "Sensor",
+    "description": "An interactive detector used to trigger doors, machines, alarms, and automated actions.",
+    "image": "/images/wiki/sensor.webp",
+    "imageAlt": "sensor image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive detection part"
+      },
+      {
+        "label": "Output",
+        "value": "Signal when configured detection succeeds"
+      },
+      {
+        "label": "Used for",
+        "value": "Automation and safety interlocks"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Design the Detection Zone First",
+        "paragraphs": [
+          "A Sensor is reliable only when its view and target are controlled. Build the doorway, crop row, or machine path first, then place the sensor where unrelated movement cannot trigger it."
+        ],
+        "bullets": [
+          "Test from the edges of the intended detection area.",
+          "Use color settings only with a consistent paint convention.",
+          "Combine with a Logic Gate when one detection should not be enough."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "logic-gate",
+      "paint-ammo",
+      "switch"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Sensor Automation - Uses and Guide",
+      "description": "Configure Scrap Mechanic Sensors for doors, farm machines, alarms, and safe automated systems. Check its connected uses before the next Survival run.",
+      "keywords": [
+        "Scrap Mechanic Sensor",
+        "Scrap Mechanic automation",
+        "Scrap Mechanic sensor door"
+      ]
+    }
+  },
+  {
+    "slug": "suspension",
+    "category": "parts",
+    "name": "Sport and Off-Road Suspension",
+    "description": "Adjustable suspension parts that help wheels follow terrain and reduce shock transferred into a vehicle frame.",
+    "image": "/images/wiki/suspension.webp",
+    "imageAlt": "suspension image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Variants",
+        "value": "Sport and Off-Road"
+      },
+      {
+        "label": "Used for",
+        "value": "Wheel travel and ride control"
+      },
+      {
+        "label": "Tune after",
+        "value": "Final cargo weight is mounted"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Tune the Loaded Vehicle",
+        "paragraphs": [
+          "A suspension setting that works on an empty chassis may collapse under cargo or bounce after a tool is added. Tune with the normal operating load and test both road travel and a controlled obstacle."
+        ],
+        "bullets": [
+          "Use matching settings across the same axle.",
+          "Leave physical clearance for full compression.",
+          "Lower the center of mass before making the suspension excessively stiff."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "bearing",
+      "drivers-seat",
+      "metal-blocks"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Suspension Tuning - Uses and Guide",
+      "description": "Tune Sport and Off-Road Suspension for wheel travel, cargo weight, and stable Scrap Mechanic vehicles. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Suspension",
+        "Scrap Mechanic Off-Road Suspension",
+        "Scrap Mechanic vehicle tuning"
+      ]
+    }
+  },
+  {
+    "slug": "vacuum-pump",
+    "category": "parts",
+    "name": "Vacuum Pump",
+    "description": "A reversible logistics part used with containers and pipes to collect, plant, water, harvest, and move supported materials.",
+    "image": "/images/wiki/vacuum-pump.webp",
+    "imageAlt": "vacuum pump image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Interactive logistics part"
+      },
+      {
+        "label": "Modes",
+        "value": "In and Out"
+      },
+      {
+        "label": "Collects",
+        "value": "Water, Chemicals, Crude Oil, crops, and supported items"
+      },
+      {
+        "label": "Recipe",
+        "value": "20 Metal 1 + 1 Component Kit + 1 Circuit Board + 3 Glue"
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Vacuum Pump mode by job",
+        "headers": [
+          "Job",
+          "Mode",
+          "Required destination or supply"
+        ],
+        "rows": [
+          [
+            "Collect water",
+            "In",
+            "Connected Water Container with free capacity"
+          ],
+          [
+            "Collect Chemicals",
+            "In",
+            "Compatible connected liquid storage"
+          ],
+          [
+            "Collect Crude Oil",
+            "In",
+            "Compatible connected liquid storage"
+          ],
+          [
+            "Harvest crops or loose items",
+            "In",
+            "Connected Chest with free slots"
+          ],
+          [
+            "Plant seeds or place supported items",
+            "Out",
+            "Connected Chest containing the item"
+          ],
+          [
+            "Move water to a farm system",
+            "Out",
+            "Stored water and a valid delivery target"
+          ]
+        ],
+        "note": "The control signal starts the pump; it does not replace the required container, contents, pipe route, or target."
+      },
+      {
+        "caption": "Vacuum Pump not working: isolate the failed stage",
+        "headers": [
+          "Symptom",
+          "Check first",
+          "Next test"
+        ],
+        "rows": [
+          [
+            "Pump animates but collects nothing",
+            "In mode and intake position",
+            "Aim at one supported liquid or loose item"
+          ],
+          [
+            "Liquid reaches no storage",
+            "Correct container type and free capacity",
+            "Connect pump directly to one empty container"
+          ],
+          [
+            "Out mode fires nothing",
+            "Chest contains a supported item",
+            "Load one seed or item and use a manual switch"
+          ],
+          [
+            "Water system stays dry",
+            "Water rather than Chemicals or Oil",
+            "Test pump, container, then cannon separately"
+          ],
+          [
+            "Works at one shoreline but not another",
+            "Intake height relative to liquid surface",
+            "Move a few metres and retest a clean edge"
+          ]
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "In Mode Collects; Out Mode Delivers",
+        "paragraphs": [
+          "In mode pulls supported material toward connected storage. It can collect Water, Chemicals, and Crude Oil when the intake reaches the matching liquid, and it can move crops or supported loose items into a Chest.",
+          "Out mode takes supported contents from connected storage and sends them toward the target. Use it for planting, item placement, or the delivery side of a farm machine. Reversing the mode changes the job; it does not reverse an incompatible container."
+        ]
+      },
+      {
+        "heading": "Why a Vacuum Pump Will Not Pick Up Water",
+        "steps": [
+          "Set the pump to In and connect a manual Button or Switch.",
+          "Connect it directly to an empty Water Container for the first test.",
+          "Place the intake at the liquid edge and adjust its height relative to the visible surface.",
+          "Trigger one short cycle and confirm the Water Container count changes.",
+          "Only after that works, add the longer Vacuum Pipe route, sensors, or a Water Cannon."
+        ]
+      },
+      {
+        "heading": "Water, Chemicals, and Oil Are Different Inputs",
+        "paragraphs": [
+          "A working shoreline collector can still fail at a Chemical Lake or oil source when the storage path is wrong. Test each liquid with its intended storage route and never diagnose three liquids through one complicated farm machine.",
+          "If one apparently valid water edge refuses to register after mode, height, connection, and capacity checks, move the intake a few metres and repeat the direct-container test. Treat that as a location workaround after the build has passed every other check."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "large-chest",
+      "water-system",
+      "sensor",
+      "chemicals",
+      "oil",
+      "growbed"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Vacuum Pump Not Working - Setup Guide",
+      "description": "Fix a Scrap Mechanic Vacuum Pump that will not collect water, Chemicals, Oil, crops, or items by checking mode, intake position, storage, pipes, and controls.",
+      "keywords": [
+        "Scrap Mechanic Vacuum Pump",
+        "Scrap Mechanic Vacuum Pump not working",
+        "Scrap Mechanic water pump",
+        "Scrap Mechanic collect oil",
+        "Scrap Mechanic farm automation"
+      ]
+    }
+  },
+  {
+    "slug": "water-system",
+    "category": "parts",
+    "name": "Water Cannon and Water Container",
+    "description": "A storage-and-delivery pair for moving water into farm machines, defensive systems, and repeatable mechanisms.",
+    "image": "/images/wiki/water-system.webp",
+    "imageAlt": "water system image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Parts",
+        "value": "Water Container and Water Cannon"
+      },
+      {
+        "label": "Used for",
+        "value": "Stored water and directed delivery"
+      },
+      {
+        "label": "Cannon recipe",
+        "value": "10 Metal 1 + 1 Circuit Board + 2 Glue"
+      },
+      {
+        "label": "Container recipe",
+        "value": "10 Metal 1 + 5 Circuit Boards + 4 Glue"
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Watering chain check",
+        "headers": [
+          "Stage",
+          "What must be true",
+          "Fast proof"
+        ],
+        "rows": [
+          [
+            "Collection",
+            "Vacuum Pump is In and aimed at water",
+            "Container count increases"
+          ],
+          [
+            "Storage",
+            "Water Container has free capacity",
+            "Bucket can draw stored water"
+          ],
+          [
+            "Delivery",
+            "Water Cannon has a water supply",
+            "Manual trigger fires water"
+          ],
+          [
+            "Coverage",
+            "Jet reaches the crop tile",
+            "One dry plant changes state"
+          ],
+          [
+            "Automation",
+            "Sensor or Controller sends the expected signal",
+            "Manual bypass still works"
+          ]
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Separate Storage from Aiming",
+        "paragraphs": [
+          "Mount the Water Container where its mass is stable and the Cannon where it can reach the target. A compact farm machine is easier to tune when refilling, aiming, and activation are treated as separate problems."
+        ],
+        "bullets": [
+          "Test coverage on the nearest and farthest crop row.",
+          "Prove the cannon with a manual Button before using Sensors or Controllers.",
+          "Keep a Water Bucket nearby for recovery.",
+          "If the pump works but the cannon does not, inspect the water supply and trigger as separate connections."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "water-bucket",
+      "vacuum-pump",
+      "controller"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Water Cannon and Container",
+      "description": "Build a reliable Water Cannon and Water Container system for farming and automation in Scrap Mechanic. Compare the practical requirements in-game.",
+      "keywords": [
+        "Scrap Mechanic Water Cannon",
+        "Scrap Mechanic Water Container",
+        "Scrap Mechanic watering system"
+      ]
+    }
+  },
+  {
+    "slug": "large-chest",
+    "category": "parts",
+    "name": "Large Chest",
+    "description": "High-capacity storage that can serve as vehicle cargo, base organization, and a connected logistics container.",
+    "image": "/images/wiki/large-chest.webp",
+    "imageAlt": "large chest image from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Storage and logistics part"
+      },
+      {
+        "label": "Use for",
+        "value": "Base stock, cargo, and connected systems"
+      },
+      {
+        "label": "1.0 improvement",
+        "value": "Can collect nearby loot bubbles"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Storage Needs a Retrieval Rule",
+        "paragraphs": [
+          "Use separate chests for building material, food and seeds, electronics, fuel, and expedition equipment. On vehicles, mount heavy storage low and inside the wheelbase."
+        ],
+        "bullets": [
+          "Label the outside with paint or a sample block.",
+          "Leave an empty chest for unloading a complete expedition.",
+          "Do not make the only supply chest part of an untested vehicle."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "vacuum-pump",
+      "paint-ammo",
+      "structural-blocks"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Large Chest Storage - Uses and Guide",
+      "description": "Organize Large Chests for base supplies, vehicle cargo, loot collection, and connected logistics in Scrap Mechanic. Confirm its current role.",
+      "keywords": [
+        "Scrap Mechanic Large Chest",
+        "Scrap Mechanic storage",
+        "Scrap Mechanic cargo"
+      ]
+    }
+  },
+  {
+    "slug": "crafting-bots",
+    "category": "parts",
+    "name": "Craftbot, Refinebot, Cookbot, and Dressbot",
+    "description": "Mechanic Station workshop chain: Dispenserbot creates the portable stations, Craftbot upgrades from 2 to 8 slots (Level 5 costs 20 Component Kits for ~2× speed), Refinebot processes resources, Cookbot makes perk food, Dressbot handles garments.",
+    "image": "/images/wiki/crafting-bots.webp",
+    "imageAlt": "Crafting station bots from Scrap Mechanic",
+    "gameVersion": "1.0",
+    "lastTested": "July 2026",
+    "featured": true,
+    "facts": [
+      {
+        "label": "Created at",
+        "value": "Dispenserbot (Mechanic Station)"
+      },
+      {
+        "label": "Craftbot start slots",
+        "value": "2"
+      },
+      {
+        "label": "Craftbot max slots",
+        "value": "8 (after upgrades)"
+      },
+      {
+        "label": "Levels 2–4 cost",
+        "value": "5 Component Kits each (+2 slots)"
+      },
+      {
+        "label": "Level 5 cost",
+        "value": "20 Component Kits (~50% faster craft)"
+      },
+      {
+        "label": "Refinebot craft (classic)",
+        "value": "60 Metal 1 + 5 Circuit Board + 5 Component Kit"
+      },
+      {
+        "label": "Cookbot craft (classic)",
+        "value": "50 Metal 2 + 10 Circuit Board + 10 Component Kit"
+      }
+    ],
+    "properties": [
+      {
+        "label": "Craftbot role",
+        "value": "Blocks, parts, tools, interactive recipes"
+      },
+      {
+        "label": "Refinebot role",
+        "value": "Resource objects → refined materials; auto-pull from nearby collectors"
+      },
+      {
+        "label": "Cookbot role",
+        "value": "Food / revive items; 1.0 perk meals"
+      },
+      {
+        "label": "Dressbot role",
+        "value": "Garment boxes and customization"
+      },
+      {
+        "label": "Automation",
+        "value": "Large Chests + Vacuum Pipes for input/output loops"
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Craftbot upgrade costs and slots",
+        "headers": [
+          "Level",
+          "Component Kits",
+          "Crafting slots",
+          "Speed"
+        ],
+        "rows": [
+          [
+            "1",
+            "—",
+            "2",
+            "1×"
+          ],
+          [
+            "2",
+            "5",
+            "4",
+            "1×"
+          ],
+          [
+            "3",
+            "5",
+            "6",
+            "1×"
+          ],
+          [
+            "4",
+            "5",
+            "8",
+            "1×"
+          ],
+          [
+            "5",
+            "20",
+            "8",
+            "~2× (≈50% faster)"
+          ]
+        ],
+        "note": "Level 5 speed has engine rounding quirks on very short recipes—expect about one second longer than a perfect half-time on some items."
+      },
+      {
+        "caption": "Station roles versus bottlenecks",
+        "headers": [
+          "Station",
+          "Unlocks progression when…",
+          "Typical bottleneck"
+        ],
+        "rows": [
+          [
+            "Craftbot",
+            "You need parts/blocks/tools at scale",
+            "Slots, then Component Kits for upgrades"
+          ],
+          [
+            "Refinebot",
+            "Raw resource objects pile up",
+            "Single output slot — pipe into chests"
+          ],
+          [
+            "Cookbot",
+            "Combat/travel needs food perks",
+            "Ingredient farm + labeled meal chest"
+          ],
+          [
+            "Dressbot",
+            "Quest garments / customization",
+            "Garment boxes, not combat power"
+          ]
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Dispenserbot Is the Gate",
+        "paragraphs": [
+          "After restoring the Mechanic Station, the static Dispenserbot creates portable Craftbot, Refinebot, Cookbot, and Dressbot units. Create Craftbot first; add Refinebot when raw nodes clog storage; add Cookbot before Warehouse and mining trips that need perk food."
+        ]
+      },
+      {
+        "heading": "Spend Component Kits on Slots, Then Speed",
+        "paragraphs": [
+          "Early kits are better spent unlocking Craftbot slots than cosmetics. Levels 2–4 are five kits each for two slots. Save a twenty-kit stack for Level 5 once the workshop already has labeled input/output chests—speed without organization just fills the wrong pile faster."
+        ]
+      },
+      {
+        "heading": "Refinebot Wants Pipes",
+        "paragraphs": [
+          "Refinebots pull from nearby Resource Collectors and choke on a single output slot. Connect Large Chests with Vacuum Pipes or port contact so refined material leaves automatically. Expect on the order of a few minutes to empty a full collector—batch refine instead of babysitting one log at a time."
+        ]
+      },
+      {
+        "heading": "Cookbot Is Loadout, Not Flavor",
+        "paragraphs": [
+          "In 1.0, cooked food restores health and grants perks. Stage a combat meal and a travel meal before Farmbot, Warehouse, or Excavation Island runs. Keep seed potatoes separate from ammo potatoes and from Cookbot ingredients."
+        ]
+      },
+      {
+        "heading": "1.0 Schematics Gate Recipes",
+        "paragraphs": [
+          "Some Craftbot recipes stay locked until Schematic Boxes / Schematicbot progression. If an older guide lists a part you cannot craft, check schematic unlocks before farming materials for a phantom recipe."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "component-kit",
+      "large-chest",
+      "schematic-box",
+      "schematicbot",
+      "vacuum-pump"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Craftbot Upgrades & Station Bots",
+      "description": "In Scrap Mechanic, Craftbot upgrade table (5/5/5/20 Component Kits), Refinebot/Cookbot/Dressbot roles, Dispenserbot gate, and workshop automation tips.",
+      "keywords": [
+        "Scrap Mechanic Craftbot",
+        "Scrap Mechanic Craftbot upgrade",
+        "Scrap Mechanic Refinebot",
+        "Scrap Mechanic Cookbot",
+        "Scrap Mechanic Component Kit"
+      ]
+    }
+  }
+]
