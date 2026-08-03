@@ -27,8 +27,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path === "" || path === "/wiki/quests"
         ? latestContentDate
         : currentContentDate,
+    priority:
+      path === ""
+        ? 1
+        : ["/guides", "/wiki", "/builds", "/tools"].includes(path)
+          ? 0.9
+          : path.startsWith("/legal/")
+            ? 0.3
+            : 0.8,
   }));
-  fixedRoutes.push({ path: "/map", lastModified: latestContentDate });
+  fixedRoutes.push({
+    path: "/map",
+    lastModified: latestContentDate,
+    priority: 0.3,
+  });
   const toIsoDate = (value: string) => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
     const monthYear = value.match(/^([A-Za-z]+)\s+(\d{4})$/);
@@ -57,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.map((entry) => ({
       path: `/${collection}/${entry.slug}`,
       lastModified: entry.updated,
+      priority: collection === "guides" || collection === "builds" ? 0.7 : 0.6,
     })),
   );
   const wikiCategoryRoutes = wikiCategories.map((category) => {
@@ -71,17 +84,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path: `/wiki/${category.slug}`,
       lastModified:
         category.slug === "tools" ? latestContentDate : lastModified,
+      priority: 0.8,
     };
   });
   const wikiEntryRoutes = allWikiEntries.map((entry) => ({
     path: `/wiki/${entry.category}/${entry.slug}`,
     lastModified: latestContentDate,
+    priority: 0.6,
   }));
   const toolRoutes = tools
     .filter((tool) => tool.status === "available")
     .map((tool) => ({
       path: `/tools/${tool.slug}`,
       lastModified: currentContentDate,
+      priority: 0.8,
     }));
 
   return [
@@ -90,8 +106,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...wikiCategoryRoutes,
     ...wikiEntryRoutes,
     ...toolRoutes,
-  ].map(({ path, lastModified }) => ({
+  ].map(({ path, lastModified, priority }) => ({
     url: `${site.url}${path}`,
     lastModified,
+    priority,
   }));
 }

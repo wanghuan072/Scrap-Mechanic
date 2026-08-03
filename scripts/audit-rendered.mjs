@@ -51,6 +51,9 @@ const productionUrls = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
 const lastModifiedValues = [
   ...sitemapXml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g),
 ].map((match) => match[1]);
+const priorityValues = [
+  ...sitemapXml.matchAll(/<priority>([^<]+)<\/priority>/g),
+].map((match) => Number(match[1]));
 const sitemapPaths = new Set(
   productionUrls.map((url) => new URL(url).pathname.replace(/\/$/, "") || "/"),
 );
@@ -63,11 +66,17 @@ if (productionUrls.length < 200) failures.push(`sitemap has only ${productionUrl
 if (lastModifiedValues.length !== productionUrls.length) {
   failures.push("sitemap lastmod count does not match URL count");
 }
+if (priorityValues.length !== productionUrls.length) {
+  failures.push("sitemap priority count does not match URL count");
+}
+if (priorityValues.some((priority) => !Number.isFinite(priority) || priority < 0 || priority > 1)) {
+  failures.push("sitemap contains an invalid priority value");
+}
 if (new Set(lastModifiedValues).size < 2) {
   failures.push("sitemap lastmod values do not preserve page-level dates");
 }
-if (/<priority>|<changefreq>|sitemapindex|sitemap-0/gi.test(sitemapXml)) {
-  failures.push("sitemap contains unwanted index, priority, or changefreq markup");
+if (/<changefreq>|sitemapindex|sitemap-0/gi.test(sitemapXml)) {
+  failures.push("sitemap contains unwanted index or changefreq markup");
 }
 
 for (let index = 0; index < productionUrls.length; index += 12) {
@@ -165,6 +174,7 @@ console.log(
     {
       sitemapUrls: productionUrls.length,
       lastModifiedDates: [...new Set(lastModifiedValues)].sort(),
+      priorityValues: [...new Set(priorityValues)].sort((a, b) => b - a),
       checkedLinks,
       failures: failures.length,
       records: [...new Set(failures)],
