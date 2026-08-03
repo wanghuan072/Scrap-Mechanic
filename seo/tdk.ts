@@ -61,9 +61,9 @@ export const pageTdk: Record<string, SeoData> = {
     ],
   },
   map: {
-    title: "Scrap Mechanic Map - Locations and Navigation",
+    title: "Scrap Mechanic Map - Interactive Map Preview",
     description:
-      "The Scrap Mechanic map is currently under development. Return soon for a practical navigation page covering generated worlds, landmarks, routes, and hazards.",
+      "Explore the Scrap Mechanic map preview with landmark guides, route planning, danger levels, and clear navigation advice for generated Survival worlds.",
     keywords: [
       "Scrap Mechanic map",
       "Scrap Mechanic locations",
