@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
-import { DelayedGoogleAnalytics } from "@/components/analytics/DelayedGoogleAnalytics";
+import Script from "next/script";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { JsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
 import { pageTdk } from "@/seo/tdk";
 import "@/style/globals.css";
+
+const GA_MEASUREMENT_ID = "G-NRMF3E7FTM";
 
 const barlow = Barlow({
   variable: "--font-barlow",
@@ -70,7 +72,21 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
-        <DelayedGoogleAnalytics measurementId="G-NRMF3E7FTM" delay={3000} />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.setTimeout(function () {
+              var s = document.createElement('script');
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+              s.async = true;
+              document.head.appendChild(s);
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            }, 3000);
+          `}
+        </Script>
       </body>
     </html>
   );
