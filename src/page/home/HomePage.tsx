@@ -66,19 +66,19 @@ const startSteps = [
 
 const guideLanes = [
   {
-    label: "Survive",
-    href: "/guides",
-    slugs: ["raid-defense", "farming-basics", "excavation-island-mining", "get-spud-gun"],
+    label: "Survival",
+    copy: "Crop value, raids, and Warehouse combat.",
+    slugs: ["farming-basics", "warehouse-key-and-farmbot"],
   },
   {
-    label: "Build",
-    href: "/guides",
-    slugs: ["first-vehicle", "automated-farming", "controller-and-logic", "crafting-and-upgrade-priorities"],
+    label: "Building",
+    copy: "Starter chassis and tested automation.",
+    slugs: ["first-vehicle", "controller-and-logic"],
   },
   {
-    label: "Maintain",
-    href: "/guides",
-    slugs: ["returning-to-1-0", "multiplayer-basics", "save-backups-and-branches", "trading-and-packing"],
+    label: "Progression",
+    copy: "Garage blueprints and achievement routes.",
+    slugs: ["scrap-city-garage-blueprints", "achievements"],
   },
 ] as const;
 
@@ -160,7 +160,11 @@ export default function Home() {
   const latestUpdate = updates[0];
   const updateBullets = latestUpdate.sections.flatMap((section) => section.bullets ?? []).slice(0, 4);
   const featuredGuides = guides.filter((guide) => guide.featured);
-  const leadGuide = featuredGuides[0] ?? guides[0];
+  const leadGuide =
+    guides.find((guide) => guide.slug === "beginner-first-hours") ??
+    featuredGuides[0] ??
+    guides[0];
+  const returnGuide = guides.find((guide) => guide.slug === "returning-to-1-0");
   const featuredBuilds = builds.filter((build) => build.featured);
   const leadBuild = featuredBuilds[0] ?? builds[0];
   const featuredMods = mods.slice(0, 4);
@@ -207,11 +211,11 @@ export default function Home() {
             <span className={styles.heroKicker}>FIELD GUIDE · v{site.currentVersion}</span>
             <h1>
               Scrap Mechanic{" "}
-              <span>- Survival Operations Desk</span>
+              <span>- Survival Field Guide</span>
             </h1>
             <p>
-              Compact routes for progression, wiki lookups, blueprints, raid math,
-              and 1.0 compatibility decisions.
+              Clear routes for first hours, wiki lookups, blueprints, raid math,
+              and 1.0 compatibility checks — built for the decision in front of you.
             </p>
             <div className={styles.heroActions}>
               <Link className={`${styles.heroButton} ${styles.orangeButton}`} href="/guides/beginner-first-hours">
@@ -222,9 +226,6 @@ export default function Home() {
               </Link>
               <Link className={`${styles.heroButton} ${styles.greenButton}`} href="/tools">
                 Run tools <span aria-hidden="true">›</span>
-              </Link>
-              <Link className={`${styles.heroButton} ${styles.darkButton}`} href="/builds">
-                Blueprints <span aria-hidden="true">›</span>
               </Link>
             </div>
           </div>
@@ -240,8 +241,10 @@ export default function Home() {
       <div className={`container ${styles.dashboard}`}>
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
-            <h2>Working tools</h2>
-            <p>Open either calculator directly from the operations desk.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Working tools</h2>
+              <p>Open either calculator directly when you need raid pressure or material totals.</p>
+            </div>
             <Link href="/tools">Compare both tools →</Link>
           </div>
           <div className={styles.toolsGrid}>
@@ -260,8 +263,10 @@ export default function Home() {
 
         <section className={`${styles.panel} ${styles.briefPanel}`}>
           <div className={styles.sectionLabel}>
-            <h2>Ops brief</h2>
-            <p>Live counts from the same indexes used on every inner page.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Ops brief</h2>
+              <p>Live counts from the same indexes used on every inner page.</p>
+            </div>
           </div>
           <div className={styles.briefGrid}>
             {briefing.map((item) => (
@@ -312,8 +317,10 @@ export default function Home() {
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
-            <h2>Start path</h2>
-            <p>Five decisions that unlock the rest of Survival.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Start path</h2>
+              <p>Five decisions that unlock the rest of Survival.</p>
+            </div>
             <Link href="/guides/beginner-first-hours">First hours →</Link>
           </div>
           <div className={styles.startGrid}>
@@ -324,13 +331,15 @@ export default function Home() {
                     src={step.image}
                     alt=""
                     fill
-                    sizes="(max-width: 768px) 100vw, 240px"
+                    sizes="96px"
                     quality={60}
                   />
                 </div>
                 <b>{step.number}</b>
-                <h3>{step.title}</h3>
-                <p>{step.copy}</p>
+                <div className={styles.startCopy}>
+                  <h3>{step.title}</h3>
+                  <p>{step.copy}</p>
+                </div>
               </Link>
             ))}
           </div>
@@ -338,55 +347,75 @@ export default function Home() {
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
-            <h2>Field manual</h2>
-            <p>Same Survive / Build / Maintain lanes as the Guides page.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Field manual</h2>
+              <p>Two start points, then Survival / Building / Progression manuals.</p>
+            </div>
             <Link href="/guides">All {guides.length} guides →</Link>
           </div>
           <div className={styles.manualBody}>
-            <Link href={`/guides/${leadGuide.slug}`} className={styles.guideFeature}>
-              <div className={styles.guideFeatureImage}>
-                <Image
-                  src={leadGuide.image}
-                  alt={leadGuide.imageAlt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                  quality={60}
-                />
-              </div>
-              <div>
-                <span>Lead file · {leadGuide.readingTime}</span>
-                <h3>{leadGuide.title}</h3>
-                <p>{leadGuide.quickAnswer}</p>
-                <b>Open route →</b>
-              </div>
-            </Link>
-            <div className={styles.laneBoard}>
-              {guideLanes.map((lane) => (
-                <div className={styles.laneColumn} key={lane.label}>
-                  <header>
-                    <h3>{lane.label}</h3>
-                    <Link href={lane.href}>Index ›</Link>
-                  </header>
-                  {lane.slugs.map((slug) => {
-                    const guide = guides.find((item) => item.slug === slug);
-                    if (!guide) return null;
-                    return (
-                      <Link href={`/guides/${guide.slug}`} key={guide.slug}>
-                        <small>{guide.readingTime}</small>
-                        <span>{guide.title}</span>
-                      </Link>
-                    );
-                  })}
+            <div className={styles.manualLead}>
+              <Link href={`/guides/${leadGuide.slug}`} className={styles.guideFeature}>
+                <div className={styles.guideFeatureImage}>
+                  <Image
+                    src={leadGuide.image}
+                    alt={leadGuide.imageAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    quality={60}
+                  />
                 </div>
-              ))}
+                <div>
+                  <span>New world · {leadGuide.readingTime}</span>
+                  <h3>{leadGuide.title}</h3>
+                  <p>{leadGuide.quickAnswer}</p>
+                  <b>Open first-hours route →</b>
+                </div>
+              </Link>
+              {returnGuide ? (
+                <Link href={`/guides/${returnGuide.slug}`} className={styles.returnCard}>
+                  <span>Existing save · {returnGuide.readingTime}</span>
+                  <h3>{returnGuide.title}</h3>
+                  <p>{returnGuide.quickAnswer}</p>
+                  <b>Read return brief →</b>
+                </Link>
+              ) : null}
+            </div>
+            <div className={styles.laneBoard}>
+              {guideLanes.map((lane) => {
+                const entries = lane.slugs
+                  .map((slug) => guides.find((item) => item.slug === slug))
+                  .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+                return (
+                  <div className={styles.laneColumn} key={lane.label}>
+                    <header>
+                      <div>
+                        <h3>{lane.label}</h3>
+                        <p>{lane.copy}</p>
+                      </div>
+                    </header>
+                    {entries.map((guide, index) => (
+                      <Link href={`/guides/${guide.slug}`} key={guide.slug}>
+                        <em>{String(index + 1).padStart(2, "0")}</em>
+                        <div>
+                          <small>{guide.readingTime}</small>
+                          <span>{guide.title}</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
-            <h2>Reference desk</h2>
-            <p>Task indexes first, encyclopedia categories second.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Reference desk</h2>
+              <p>Task indexes first, encyclopedia categories second.</p>
+            </div>
             <Link href="/wiki">Wiki directory →</Link>
           </div>
           <div className={styles.referenceBody}>
@@ -420,8 +449,10 @@ export default function Home() {
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
-            <h2>Blueprints</h2>
-            <p>Job-first builds with part counts and commissioning tests.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Blueprints</h2>
+              <p>Job-first builds with part counts and commissioning tests.</p>
+            </div>
             <Link href="/builds">All {builds.length} files →</Link>
           </div>
           <div className={styles.buildShowcase}>
@@ -456,8 +487,10 @@ export default function Home() {
 
         <section className={`${styles.panel} ${styles.splitPanel}`}>
           <div className={styles.sectionLabel}>
-            <h2>Landmarks</h2>
-            <p>Generated-world navigation by role, not coordinates.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Landmarks</h2>
+              <p>Generated-world navigation by role, not coordinates.</p>
+            </div>
             <Link href="/map">Map desk →</Link>
           </div>
           <div className={styles.landmarkGrid}>
@@ -473,8 +506,10 @@ export default function Home() {
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
-            <h2>Workshop</h2>
-            <p>Post-1.0 mod candidates with install and risk notes.</p>
+            <div className={styles.sectionIntro}>
+              <h2>Workshop</h2>
+              <p>Post-1.0 mod candidates with install and risk notes.</p>
+            </div>
             <Link href="/mods">Mods board →</Link>
           </div>
           <div className={styles.modsGrid}>
@@ -501,8 +536,10 @@ export default function Home() {
 
         <section className={`${styles.panel} ${styles.faqPanel}`}>
           <div className={styles.sectionLabel}>
-            <h2>FAQ</h2>
-            <p>High-frequency field questions.</p>
+            <div className={styles.sectionIntro}>
+              <h2>FAQ</h2>
+              <p>High-frequency field questions from Crash Site through Excavation Island.</p>
+            </div>
           </div>
           <div className={styles.faqList}>
             {faqs.map((item) => (

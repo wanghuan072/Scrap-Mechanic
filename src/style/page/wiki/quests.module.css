@@ -20,7 +20,7 @@
 .help header span {
   color: #9bd276;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -58,7 +58,7 @@
   border: 1px solid #4a7355;
   color: #b9e39e;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -179,7 +179,7 @@
 .phase > header small {
   color: #769581;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -194,7 +194,7 @@
 .phase > header p {
   margin: 0;
   color: #6f897d;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .missionStack {
@@ -233,7 +233,7 @@
 .ticketRewards > span {
   color: #7fa18d;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -252,7 +252,7 @@
   border: 1px solid #3d6151;
   color: #add296;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -343,7 +343,7 @@
 .rewardContents li b {
   color: #dce9d8;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -364,7 +364,7 @@
 .rewardNote {
   margin: 12px 0 0;
   color: #758c83;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .rewardNote {
@@ -417,7 +417,7 @@
 .sideGroup > header span {
   color: #6eb8c8;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -484,7 +484,7 @@
 .jobTicket > p {
   margin: 16px 0 20px;
   color: #9fb4b8;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .ticketRewards {
@@ -534,7 +534,7 @@
 .farmerQuest > div > span {
   color: #62c7da;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -565,13 +565,13 @@
 .farmerQuest aside span {
   color: #6c9da8;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
 .farmerQuest aside p {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .help {
@@ -622,7 +622,7 @@
   border-bottom: 1px solid #526347;
   color: #9caf87;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -650,7 +650,7 @@
 
 .recoveryTable p {
   color: #aab9b0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .recoveryTable a {
@@ -658,7 +658,7 @@
   margin-top: 9px;
   color: #a4d982;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -677,7 +677,7 @@
   display: block;
   color: #93b877;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -692,13 +692,13 @@
 .saveRule p {
   margin: 0;
   color: #aeb9aa;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .saveRule a {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }

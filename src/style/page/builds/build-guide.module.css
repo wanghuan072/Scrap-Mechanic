@@ -49,7 +49,7 @@
 .relatedHeading span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -85,7 +85,7 @@
   color: #c0cdcf;
   background: rgb(4 17 22 / 72%);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -102,7 +102,7 @@
   border-bottom: 1px solid #637980;
   color: var(--workshop-blue);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -131,7 +131,7 @@
 
 .heroDocket dt {
   color: #85999f;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .heroDocket dd {
@@ -166,7 +166,7 @@
   border-right: 1px solid #33484f;
   color: #9fb1b4;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -274,7 +274,7 @@
   margin-top: 22px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -300,7 +300,7 @@
   align-items: center;
   gap: 10px;
   color: #8da3a8;
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -364,7 +364,7 @@
   color: #76959d;
   background: #10272f;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -426,7 +426,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -535,7 +535,7 @@
 
 .material span {
   color: #435257;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.2;
 }
 
@@ -577,7 +577,7 @@
 .recipeStation span {
   display: block;
   color: #6b7779;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -613,7 +613,7 @@
   border: 1px solid #9da6a4;
   color: #455357;
   background: rgb(255 255 255 / 30%);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .recipeInputs b {
@@ -625,7 +625,7 @@
   grid-column: span 2;
   align-items: center;
   color: #6a5538;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .stagesSection {
@@ -662,7 +662,7 @@
 .stage aside span {
   color: #78939a;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -740,7 +740,7 @@
 
 .toolRow span {
   color: #82999e;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -755,7 +755,7 @@
 .toolRow p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .toolRow > b {
@@ -816,7 +816,7 @@
   color: #7e9aa1;
   background: #112831;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -868,7 +868,7 @@
 .variantList span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -902,7 +902,7 @@
 .relatedHeading a {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -948,7 +948,7 @@
 .relatedGrid span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -964,7 +964,7 @@
 .relatedGrid p {
   margin: 0;
   color: #b4c2c4;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45;
 }
 

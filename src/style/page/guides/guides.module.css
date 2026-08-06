@@ -15,7 +15,7 @@
 .manualHeading span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -32,7 +32,7 @@
 .manualHeading > p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .manualGrid {
@@ -85,7 +85,7 @@
   left: 12px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -104,7 +104,7 @@
 .laneHeading span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -124,7 +124,7 @@
 .dispatch p {
   margin: 0;
   color: #b0bfc1;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.45;
 }
 
@@ -133,7 +133,7 @@
   margin-top: 10px;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -173,14 +173,14 @@
 
 .dispatch dt {
   color: #aebdbf;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .dispatch dd {
   margin: 0;
   color: #f3e2b2;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -205,7 +205,7 @@
 .laneHeading > p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .lane {
@@ -241,7 +241,7 @@
 .lane header p {
   margin: 5px 0 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -270,7 +270,7 @@
   align-self: start;
   color: #59737b;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -291,7 +291,7 @@
 .guideRow small {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -307,7 +307,7 @@
 .guideRow p {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.35;
   display: -webkit-box;
   overflow: hidden;

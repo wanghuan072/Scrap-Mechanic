@@ -152,7 +152,7 @@
 .routeHeading span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -177,7 +177,7 @@
 .routeHeading > p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .routeGrid {

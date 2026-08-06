@@ -21,7 +21,7 @@
 .methodology header > span {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -44,7 +44,7 @@
   max-width: 620px;
   margin: 0;
   color: #c2d0d2;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -60,7 +60,7 @@
 .compatibilityCard > span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -92,7 +92,7 @@
 .compatibilityCard dt {
   color: #918968;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -149,21 +149,21 @@
 .metricNotes b {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
 .metricNotes p {
   margin: 10px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .snapshot {
   grid-column: 2;
   margin: 0;
   color: #75939a;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .sectionHeading {
@@ -221,7 +221,7 @@
   background: #112d35;
   color: #8db4bc;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
@@ -231,7 +231,7 @@
   padding: 15px;
   border-bottom: 1px solid #263f46;
   color: #c2d1d3;
-  font-size: 13px;
+  font-size: 16px;
   vertical-align: top;
 }
 
@@ -259,7 +259,7 @@
   display: block;
   margin-top: 5px;
   color: #748b90;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .rank {
@@ -276,7 +276,7 @@
   border: 1px solid #2d6978;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -350,7 +350,7 @@
   gap: 18px;
   color: #70a6b2;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -371,7 +371,7 @@
   margin: 0;
   color: #bde9f0;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -400,14 +400,14 @@
 .install b {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 .recommendation p {
   margin: 5px 0 0;
   color: #d2dfe0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .modStats {
@@ -435,7 +435,7 @@
 .install {
   margin: 12px 0 0;
   color: #a9bdc0;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .modCopy aside {
@@ -448,21 +448,21 @@
 .modCopy aside b {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 .modCopy aside p {
   margin: 5px 0 0;
   color: #c9d2d0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .modCopy > a {
   margin-top: 20px;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -520,7 +520,7 @@
 .classicCopy > small {
   color: #968c70;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -529,20 +529,20 @@
   margin-top: 14px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
 .classicCopy .classicCaution {
   margin-top: 13px;
   color: #b8b6a9;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .classicCaution b {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -569,7 +569,7 @@
 .classicMod dt {
   color: #7d7660;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -586,7 +586,7 @@
   border-left: 1px solid #4c442e;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -641,7 +641,7 @@
 .safety li p {
   margin: 6px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .faq {

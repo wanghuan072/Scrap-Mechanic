@@ -22,7 +22,7 @@
 .explainerGrid article > span {
   color: #a8cf69;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
   color: #a8c0ba;
   background: rgb(8 25 28 / 78%);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -102,7 +102,7 @@
   display: block;
   color: #bba85c;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -183,7 +183,7 @@
 .timingGrid article > span {
   color: #55747c;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .timingGrid small,
@@ -196,7 +196,7 @@
 .timingGrid small {
   margin-top: 24px;
   color: #7f969b;
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .timingGrid strong {
@@ -208,7 +208,7 @@
 .timingGrid p {
   margin: 17px 0 0;
   color: #9badb0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .thresholdSection {
@@ -231,7 +231,7 @@
   margin-top: 22px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -264,7 +264,7 @@
 .tableHead b {
   color: #aaad8f;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -324,7 +324,7 @@
 .faqLayout > header > span {
   color: #a8cf69;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -348,7 +348,7 @@
   margin-top: 20px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -368,7 +368,7 @@
 .faqList article > span {
   color: #82985b;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 900;
 }
 
@@ -383,7 +383,7 @@
 .faqList p {
   margin: 8px 0 0;
   color: #aeb9aa;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 @media (max-width: 1024px) {

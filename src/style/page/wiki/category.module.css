@@ -32,7 +32,7 @@
   border-left: 3px solid var(--orange);
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -84,14 +84,14 @@
 .heroFacts dt {
   color: #719098;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 .heroFacts dd {
   margin: 2px 0 0;
   color: #e1eeee;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .heroVisual {
@@ -139,7 +139,7 @@
   right: 18px;
   color: #6c929b;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -196,7 +196,7 @@
 .entryHeading span {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -229,7 +229,7 @@
 .categoryRail nav a > small {
   color: #6d858b;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .categoryRail nav a > b {
@@ -260,7 +260,7 @@
   padding: 10px 13px;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -294,7 +294,7 @@
 .fieldGuide article > span {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -370,7 +370,7 @@
 .entryCopy > span {
   color: #72a7b3;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -398,7 +398,7 @@
 .entry dl div {
   display: flex;
   gap: 6px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .entry dt {
@@ -464,7 +464,7 @@
   padding: 5px 10px 5px 0;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -517,7 +517,7 @@
   color: #111a1d;
   background: var(--orange);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -594,7 +594,7 @@
   right: 16px;
   color: #7ea3ac;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -628,7 +628,7 @@
   bottom: 14px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -662,7 +662,7 @@
 .schematicFacts dt {
   color: #7a979f;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -696,7 +696,7 @@
   border-bottom: 1px solid #314628;
   color: #d6e2d4;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;

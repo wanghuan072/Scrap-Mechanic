@@ -32,7 +32,7 @@
 .budgetNote > span {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
 .presets p {
   margin: 4px 0 0;
   color: #8fa3a7;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .presets > div:last-child {
@@ -68,7 +68,7 @@
   color: #d2dfdf;
   background: #08161b;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -91,7 +91,7 @@
   max-width: 690px;
   margin: 0;
   color: #9eb0b4;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .panelHeader button {
@@ -101,7 +101,7 @@
   color: #d7e1e1;
   background: #0a171b;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
@@ -169,14 +169,14 @@
 }
 
 .cropGrid strong {
-  font-size: 13px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
 .cropGrid small {
   margin-top: 4px;
   color: var(--orange-bright);
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .stepper {
@@ -254,7 +254,7 @@
 .playerControl label span {
   color: #8fa4a9;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -313,7 +313,7 @@
   max-width: 390px;
   margin: 0;
   color: #a8b6b8;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.45;
 }
 
@@ -334,7 +334,7 @@
 .resultMetrics dt {
   color: #829398;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -381,13 +381,13 @@
   padding-top: 4px;
   border-top: 1px solid #293e44;
   color: #9eb0b4;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .contribution b {
   color: #e4e9df;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .levelProgress {
@@ -414,7 +414,7 @@
 
 .levelProgress span {
   color: var(--cyan);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.08em;
 }
 
@@ -438,7 +438,7 @@
 .levelProgress p {
   margin: 0;
   color: #91a4a8;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .thresholdTrack {
@@ -468,7 +468,7 @@
 }
 
 .thresholdTrack b {
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -496,7 +496,7 @@
 .budgetNote p {
   margin: 8px 0 0;
   color: #aebdc0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .nextMove strong,
@@ -570,7 +570,7 @@
 .forecastSectionTitle > span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -616,7 +616,7 @@
 }
 
 .forecastMeta small {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .forecastSummary {
@@ -636,7 +636,7 @@
 .forecastSummary dt {
   color: #819499;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -686,7 +686,7 @@
 
 .forceEquation span {
   color: #7f9498;
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .forceEquation strong {
@@ -712,7 +712,7 @@
 .forceEquation .botLine span {
   color: #c9d3d3;
   font-family: inherit;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: none;
 }
 
@@ -753,7 +753,7 @@
 .forecastSectionTitle b {
   color: #c7d2d2;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   text-align: right;
   text-transform: uppercase;
 }
@@ -776,14 +776,14 @@
 .openingOptions small {
   color: #73878b;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 .openingPool > p {
   margin: 16px 0 0;
   color: #84979a;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .botLine {
@@ -811,7 +811,7 @@
 .botLine b {
   color: #f0e4c5;
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .forecastTableWrap {
@@ -850,7 +850,7 @@
 .forecastTableWrap thead th {
   color: #71868a;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -906,7 +906,7 @@
 .enemyMixGrid small,
 .enemyMixGrid b {
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -926,7 +926,7 @@
   gap: 6px;
   overflow: hidden;
   color: #d2dddd;
-  font-size: 12px;
+  font-size: 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -970,18 +970,18 @@
 
 .timelineDetails > summary span {
   color: var(--orange-bright);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.06em;
 }
 
 .timelineDetails > summary b {
   color: #83979a;
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .timelineDetails > summary i {
   color: #d8e2e1;
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .timelineDetails > summary i::after {
@@ -1007,7 +1007,7 @@
 
 .timelineActions small {
   color: #72878b;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .timelineActions button {
@@ -1080,7 +1080,7 @@
   color: #dce5e4;
   background: #0b1b20;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -1113,7 +1113,7 @@
 .timeline time {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -1126,14 +1126,14 @@
   border-top: 1px solid #3e4a4d;
   color: #7f9296;
   background: #111d20;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .forecastFootnote span {
   float: right;
   color: #8fa0a2;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 

@@ -36,7 +36,7 @@
 .visualCopy > span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -59,7 +59,7 @@
   max-width: 640px;
   margin: 0;
   color: #ccd4d2;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -76,7 +76,7 @@
   color: #e2c685;
   background: rgb(12 20 21 / 76%);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -91,7 +91,7 @@
 .releasePlate > span {
   color: #978969;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -124,7 +124,7 @@
   margin: 0;
   color: #ebe3d2;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   text-align: right;
   text-transform: uppercase;
 }
@@ -207,14 +207,14 @@
   margin: 10px 0 8px;
   color: #d6e4e5;
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
 .factGrid p {
   margin: 0;
   color: #77969d;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .sectionHeading {
@@ -313,14 +313,14 @@
   border: 1px solid #8b6629;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 .visualCopy p {
   margin: 15px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .officialLink {
@@ -328,7 +328,7 @@
   margin-top: 24px;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -354,7 +354,7 @@
   border-right: 1px solid var(--line);
   color: #82abb3;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -375,7 +375,7 @@
 .comparisonRow header span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
 }
 
@@ -391,14 +391,14 @@
   display: none;
   color: #7496a0;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
 .comparisonRow p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .systems {
@@ -441,7 +441,7 @@
 .system p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .decisionList {
@@ -461,7 +461,7 @@
 .decisionList article > span {
   color: #66848c;
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
 }
 
@@ -477,13 +477,13 @@
   display: block;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
 .decisionList p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .decisionLinks {
@@ -497,7 +497,7 @@
 .patch > a {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -535,7 +535,7 @@
 .requirements article > span {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -554,7 +554,7 @@
 
 .requirements dt {
   color: #71909a;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .requirements dd {
@@ -612,7 +612,7 @@
   border-bottom: 1px solid #4d432e;
   color: #968b70;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -639,7 +639,7 @@
   max-width: 100px;
   color: #968b70;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -655,7 +655,7 @@
 .patchBody > p,
 .patch li {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .patch ul {
@@ -680,7 +680,7 @@
 .patchLinks a {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }

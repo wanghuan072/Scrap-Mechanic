@@ -25,7 +25,7 @@
 .catalogBody > span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -44,7 +44,7 @@
   max-width: 34ch;
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
 }
 
@@ -64,7 +64,7 @@
 
 .taskHeader dt {
   color: #6f8e94;
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -72,7 +72,7 @@
   margin: 2px 0 0;
   color: #dce6e4;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -116,7 +116,7 @@
   border-right: 1px solid var(--line);
   color: #607c83;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -128,7 +128,7 @@
 
 .taskName small {
   color: var(--orange-bright);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -161,7 +161,7 @@
 .catalogBody p {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -175,13 +175,13 @@
 .taskMetric strong {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
 .taskMetric span {
   color: #7e999f;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .taskArrow {
@@ -229,7 +229,7 @@
 .catalogIndex small {
   color: #779198;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -278,7 +278,7 @@
   border: 1px solid #405960;
   color: #d8e4e3;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
@@ -291,7 +291,7 @@
   place-items: center;
   color: #0c171a;
   background: var(--orange);
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .categoryLinks a:hover {

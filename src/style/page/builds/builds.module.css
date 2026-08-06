@@ -45,7 +45,7 @@
 .sideHeading > span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -64,7 +64,7 @@
   max-width: 640px;
   margin: 0;
   color: #d0dcdd;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -81,7 +81,7 @@
   color: #121a1c;
   background: var(--orange);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -104,7 +104,7 @@
   border-bottom: 1px solid #61757b;
   color: #8bc9d6;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -124,7 +124,7 @@
 
 .heroPanel dt {
   color: #87999d;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .heroPanel dd {
@@ -200,7 +200,7 @@
   color: #78939a;
   background: #071318;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -223,7 +223,7 @@
   display: flex;
   align-items: center;
   color: #b6c4c6;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -249,7 +249,7 @@
 .botPressureLinks a {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -303,7 +303,7 @@
   margin-top: 21px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -341,7 +341,7 @@
   left: 12px;
   color: #75a6b0;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -367,7 +367,7 @@
 .usedBy span {
   color: #79939a;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -376,7 +376,7 @@
 .toolRow p {
   margin: 7px 0 0;
   color: #bac8c9;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -429,7 +429,7 @@
 .systemHead span {
   color: #789ba4;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -445,13 +445,13 @@
 
 .systemTable article p {
   color: #a8b9bc;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .systemTable article a {
   color: #68cde0;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -499,7 +499,7 @@
 .headRail article > a span {
   color: #72501f;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -519,7 +519,7 @@
 .headRail p {
   margin: 0;
   color: #4d5c61;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .headRail div > a {
@@ -527,7 +527,7 @@
   margin-top: 18px;
   color: #74470e;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -557,7 +557,7 @@
   color: #78939a;
   background: #112831;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -593,7 +593,7 @@
 .comparisonBuild span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.09em;
 }
@@ -609,7 +609,7 @@
 .comparisonFocus p {
   margin: 0;
   color: #b6c5c7;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -632,7 +632,7 @@
   margin-top: 5px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.08em;
 }
@@ -672,7 +672,7 @@
   display: none;
   color: #78939a;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -703,7 +703,7 @@
   color: #7f9ba2;
   background: #112831;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -725,7 +725,7 @@
 .diagnosticRow p {
   margin: 0;
   color: #b7c5c7;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .diagnosticRow p:last-child {
@@ -769,7 +769,7 @@
 .startGrid span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -784,7 +784,7 @@
 .startGrid a {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -906,7 +906,7 @@
     color: #78939a;
     content: attr(data-label);
     font-family: var(--display);
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }

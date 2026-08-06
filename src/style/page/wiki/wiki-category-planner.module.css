@@ -17,7 +17,7 @@
 .plannerHeading span {
   color: #6fc6d7;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
 .plannerHeading p {
   margin: 0;
   color: #a7babf;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .jobTable {
@@ -65,7 +65,7 @@
 .tableHead b {
   color: #74929a;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -80,14 +80,14 @@
 
 .jobTable article p {
   color: #adbec1;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .jobTable article > a,
 .jobTable article div > a {
   color: #6ed2e6;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -95,7 +95,7 @@
 .jobTable article div p {
   margin: 0 0 7px;
   color: #adbec1;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .resourceTable .tableHead,

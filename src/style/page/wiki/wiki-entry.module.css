@@ -30,7 +30,7 @@
   border-left: 3px solid var(--orange);
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -93,7 +93,7 @@
   border: 1px solid #2d4f58;
   color: #8fb1b8;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -157,7 +157,7 @@
   top: 18px;
   right: 20px;
   color: #72939a;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.1em;
 }
@@ -191,7 +191,7 @@
 .categoryNote > span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -210,7 +210,7 @@
 .sourceGrid article > span {
   color: #91c878;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -252,7 +252,7 @@
   margin-top: 13px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -270,7 +270,7 @@
 .fieldChecklist strong {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -319,7 +319,7 @@
 .profileGrid article > span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -344,7 +344,7 @@
   margin-top: 12px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -367,7 +367,7 @@
 .profileGrid dt {
   color: #85928b;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -420,7 +420,7 @@
 .questRecordGrid header span {
   color: #79a8b2;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -437,7 +437,7 @@
   flex: 0 0 auto;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -465,7 +465,7 @@
 .questRecordGrid dt {
   color: #78939a;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -485,7 +485,7 @@
 .rewardBundle > strong {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -517,7 +517,7 @@
 .rewardBundle li > span {
   color: #718e95;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -526,7 +526,7 @@
 .outfitRecord td a {
   color: #e6edeb;
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -578,14 +578,14 @@
 .relationGrid header span {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .relationGrid header b {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -615,7 +615,7 @@
 .relationGrid li small,
 .relationGrid article > small {
   color: #9eb0b0;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.45;
 }
 
@@ -624,7 +624,7 @@
   margin-top: 16px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -637,7 +637,7 @@
 .relationCheck {
   margin: 18px 0 0;
   color: #81999d !important;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .databasePanel > h2 {
@@ -655,7 +655,7 @@
 .inventoryNote strong {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -690,7 +690,7 @@
 .recipeStack header span,
 .recipeStack header b {
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -725,7 +725,7 @@
 .recipeStack strong {
   color: #f3e8c8;
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -747,7 +747,7 @@
 .propertyGrid dt {
   color: #8e967f;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -794,7 +794,7 @@
 .questConnections a > span {
   color: #6f9faa;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -808,14 +808,14 @@
 .questConnections a p {
   margin: 0;
   color: #a9bcc0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .questConnections a b {
   margin-top: 10px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -962,7 +962,7 @@
 .dataTable th {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -981,5 +981,5 @@
 .dataTableNote {
   margin: 12px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }

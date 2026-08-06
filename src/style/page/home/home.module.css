@@ -1,10 +1,17 @@
+/* ── Home page · industrial field-guide dark theme ── */
+
 .home {
   --frame: #41545c;
+  --home-body: 16px;
+  --home-meta: 14px;
+  --home-kicker: 13px;
 }
+
+/* ── Hero ── */
 
 .hero {
   position: relative;
-  height: 360px;
+  min-height: clamp(420px, 52vh, 560px);
   overflow: hidden;
   border-bottom: 1px solid #6d542b;
   background: #081116;
@@ -26,28 +33,28 @@
 .heroContent {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
-  height: 100%;
+  grid-template-columns: minmax(0, 1fr) min(280px, 32%);
+  min-height: inherit;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
 }
 
 .heroCopy {
-  width: min(620px, 100%);
+  width: min(640px, 100%);
 }
 
 .heroKicker {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   letter-spacing: 0.1em;
 }
 
 .hero h1 {
-  margin: 6px 0 10px;
+  margin: 8px 0 12px;
   font-family: var(--display);
-  font-size: clamp(42px, 5vw, 64px);
+  font-size: clamp(48px, 5.5vw, 76px);
   font-weight: 900;
   line-height: 0.88;
   letter-spacing: -0.03em;
@@ -57,50 +64,50 @@
 
 .hero h1 span {
   display: block;
-  margin-top: 6px;
-  font-size: 0.52em;
+  margin-top: 8px;
+  font-size: 0.48em;
   line-height: 0.95;
   letter-spacing: -0.01em;
   color: var(--orange-bright);
 }
 
 .heroCopy > p {
-  max-width: 460px;
+  max-width: 520px;
   margin: 0;
   color: #cfd8d6;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 17px;
+  line-height: 1.5;
   text-shadow: 0 2px 5px #000;
 }
 
 .heroActions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .heroButton {
   display: inline-flex;
-  min-width: 118px;
-  min-height: 36px;
+  min-width: 132px;
+  min-height: 46px;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 6px 12px;
+  gap: 10px;
+  padding: 8px 16px;
   border: 1px solid;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
-  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
   transition: filter 160ms ease;
 }
 
 .heroButton span {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
 }
 
@@ -130,8 +137,8 @@
 
 .heroBrief {
   align-self: end;
-  margin-bottom: 28px;
-  padding: 14px;
+  margin-bottom: 32px;
+  padding: 16px 18px;
   border: 1px solid #536b73;
   background: rgb(5 18 24 / 88%);
   backdrop-filter: blur(2px);
@@ -140,7 +147,7 @@
 .heroBrief > span {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -148,40 +155,44 @@
 
 .heroBrief strong {
   display: block;
-  margin: 6px 0 8px;
+  margin: 8px 0 10px;
   font-family: var(--display);
-  font-size: 16px;
-  line-height: 1.05;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
 .heroBrief p {
   margin: 0;
   color: #aebbbc;
-  font-size: 11px;
-  line-height: 1.4;
+  font-size: var(--home-meta);
+  line-height: 1.45;
 }
 
 .heroBrief a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: var(--home-meta);
   font-weight: 900;
   text-transform: uppercase;
 }
 
+/* ── Dashboard shell ── */
+
 .dashboard {
   display: grid;
-  gap: 8px;
-  padding-block: 8px 28px;
+  gap: 10px;
+  padding-block: 10px 32px;
 }
+
+/* ── Panel · horizontal header (no left rail) ── */
 
 .panel {
   position: relative;
-  display: grid;
-  grid-template-columns: 148px minmax(0, 1fr);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--frame);
   background:
@@ -217,58 +228,73 @@
 }
 
 .sectionLabel {
-  padding: 14px 12px;
-  border-right: 1px solid #354a52;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #354a52;
   background: linear-gradient(115deg, #0b2029, #07151b);
 }
 
 .sectionLabel > span,
 .sectionLabel > h2 {
-  display: block;
   margin: 0;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 15px;
+  font-size: clamp(24px, 2.4vw, 30px);
   font-weight: 900;
   line-height: 1.05;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
-.sectionLabel p {
-  margin: 8px 0 0;
+.sectionIntro {
+  flex: 1 1 240px;
+  margin: 0;
   color: #a8b6b6;
-  font-size: 11px;
+  font-size: var(--home-meta);
+  line-height: 1.45;
+}
+
+.sectionLabel p {
+  flex: 1 1 240px;
+  margin: 0;
+  color: #a8b6b6;
+  font-size: var(--home-meta);
   line-height: 1.45;
 }
 
 .sectionLabel a {
-  display: inline-block;
-  margin-top: 10px;
+  flex: 0 0 auto;
+  margin-left: auto;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
+/* ── Ops brief ── */
+
 .briefPanel {
-  grid-template-columns: 148px minmax(0, 1fr);
+  /* inherits panel flex column */
 }
 
 .briefGrid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr)) auto;
-  gap: 4px;
-  padding: 8px;
+  gap: 6px;
+  padding: 10px;
 }
 
 .briefStat {
   display: grid;
-  min-height: 64px;
   place-content: center;
-  gap: 2px;
+  gap: 4px;
+  padding: 10px 6px;
   border: 1px solid #354d56;
   background: #091a21;
   text-align: center;
@@ -284,7 +310,7 @@
 .briefStat small {
   color: #71878d;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: var(--home-kicker);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -293,16 +319,16 @@
 .briefStat b {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 22px;
+  font-size: clamp(22px, 2vw, 28px);
   line-height: 1;
 }
 
 .briefMeta {
   display: grid;
-  min-width: 140px;
+  min-width: 148px;
   place-content: center;
   gap: 4px;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border: 1px solid #3d5a45;
   background: linear-gradient(160deg, #12301f, #0a1a14);
   text-align: center;
@@ -310,19 +336,21 @@
 
 .briefMeta span {
   color: #8eaa93;
-  font-size: 10px;
+  font-size: var(--home-meta);
 }
 
 .briefMeta strong {
   color: #d8f0cf;
   font-family: var(--display);
-  font-size: 13px;
+  font-size: var(--home-body);
   text-transform: uppercase;
 }
 
+/* ── Situation report ── */
+
 .updatePanel {
+  display: grid;
   grid-template-columns: 280px minmax(0, 1fr) 260px;
-  min-height: 148px;
 }
 
 .updateArt,
@@ -332,7 +360,7 @@
 }
 
 .updateArt {
-  margin: 8px;
+  margin: 10px;
   border: 1px solid #3c5b68;
 }
 
@@ -346,26 +374,26 @@
 }
 
 .updateInfo {
-  padding: 14px 18px;
+  padding: 16px 20px;
 }
 
 .panelKicker {
   margin: 0;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .updateInfo h3 {
-  margin: 3px 0 6px;
+  margin: 4px 0 8px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 20px;
+  font-size: clamp(17px, 1.5vw, 20px);
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.05;
   text-transform: uppercase;
 }
 
@@ -373,20 +401,20 @@
   padding: 0;
   margin: 0;
   color: #c6d0ce;
-  font-size: 11px;
+  font-size: var(--home-meta);
   line-height: 1.55;
   list-style: none;
 }
 
 .updateInfo li::before {
-  margin-right: 7px;
+  margin-right: 8px;
   color: var(--green);
   content: "●";
-  font-size: 7px;
+  font-size: 8px;
 }
 
 .updateMachine {
-  min-height: 140px;
+  min-height: 0;
 }
 
 .updateMachine::after {
@@ -398,55 +426,54 @@
 
 .updateMachine a {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 12px;
+  bottom: 12px;
   z-index: 2;
-  padding: 5px 9px;
+  padding: 6px 12px;
   border: 1px solid var(--cyan);
   color: var(--cyan);
   background: rgb(5 17 22 / 88%);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.startGrid,
-.toolsGrid {
-  display: grid;
-  padding: 8px;
-  gap: 4px;
-}
+/* ── Start path · horizontal row cards ── */
 
 .startGrid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 10px;
 }
 
-.startCard,
-.toolCard,
-.taskCard,
-.landmarkCard,
-.modCard {
-  position: relative;
-  overflow: hidden;
+.startCard {
+  display: grid;
+  grid-template-columns: 96px 40px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 0 12px;
+  padding: 10px 12px;
   border: 1px solid #354d56;
   background: linear-gradient(180deg, #10242c, #08171d);
   cursor: pointer;
   transition: border-color 160ms ease, background 160ms ease;
 }
 
-.startCard {
-  min-height: 168px;
-  padding: 92px 8px 8px;
-  text-align: center;
+.startCard:last-child {
+  grid-column: 1 / -1;
 }
 
 .tileImage {
-  position: absolute;
-  inset: 0 0 auto;
-  height: 88px;
+  position: relative;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 96px;
+  height: 72px;
   overflow: hidden;
+  border: 1px solid #2c4048;
 }
 
 .tileImage::after {
@@ -456,64 +483,85 @@
   content: "";
 }
 
-.startCard b {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+.startCard > b {
+  grid-column: 2;
+  grid-row: 1 / 3;
   display: grid;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   place-items: center;
   color: #10181b;
   background: var(--orange);
   font-family: var(--display);
-  font-size: 14px;
+  font-size: var(--home-body);
+  font-weight: 900;
 }
 
-.startCard h3,
-.toolCard h3,
-.modCard h3 {
-  position: relative;
-  z-index: 1;
+.startCopy {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  align-self: center;
+  min-width: 0;
+}
+
+.startCard > h3,
+.startCopy h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 13px;
-  line-height: 1.05;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
-.startCard p,
-.toolCard p,
-.landmarkCard p,
-.modCard p {
-  position: relative;
-  z-index: 1;
+.startCard > p,
+.startCopy p {
   margin: 4px 0 0;
   color: #aebbbc;
-  font-size: 10px;
-  line-height: 1.35;
+  font-size: var(--home-meta);
+  line-height: 1.4;
 }
 
+.startCard > h3 {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: end;
+}
+
+.startCard > p {
+  grid-column: 3;
+  grid-row: 2;
+  align-self: start;
+}
+
+/* ── Field manual · stack layout ── */
+
 .manualBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.manualLead {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.2fr);
-  gap: 6px;
-  padding: 8px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+  gap: 8px;
+  align-items: start;
 }
 
 .guideFeature {
   display: grid;
   grid-template-columns: minmax(180px, 0.85fr) 1fr;
-  min-height: 220px;
   overflow: hidden;
   border: 1px solid #3c5963;
   background: #0b2028;
   cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
 }
 
 .guideFeatureImage {
   position: relative;
+  min-height: 160px;
   overflow: hidden;
 }
 
@@ -526,7 +574,50 @@
 
 .guideFeature > div:last-child {
   align-self: center;
-  padding: 16px;
+  padding: 18px;
+}
+
+.returnCard {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 16px 18px;
+  border: 1px solid #3d5a45;
+  background: linear-gradient(160deg, #12301f, #0a1a14);
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.returnCard span {
+  color: var(--green);
+  font-family: var(--display);
+  font-size: var(--home-kicker);
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.returnCard h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.returnCard p {
+  margin: 0;
+  color: #aebdbf;
+  font-size: var(--home-meta);
+  line-height: 1.4;
+}
+
+.returnCard b {
+  margin-top: 4px;
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: var(--home-kicker);
+  text-transform: uppercase;
 }
 
 .guideFeature span,
@@ -536,7 +627,7 @@
 .landmarkCard small {
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -544,10 +635,10 @@
 
 .guideFeature h3,
 .buildFeature h3 {
-  margin: 5px 0 7px;
+  margin: 6px 0 8px;
   font-family: var(--display);
-  font-size: 20px;
-  line-height: 0.98;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -555,8 +646,8 @@
 .buildFeature p {
   margin: 0;
   color: #aebdbf;
-  font-size: 11px;
-  line-height: 1.4;
+  font-size: var(--home-body);
+  line-height: 1.45;
 }
 
 .guideFeature b {
@@ -564,14 +655,15 @@
   margin-top: 12px;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--home-kicker);
   text-transform: uppercase;
 }
 
 .laneBoard {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 4px;
+  gap: 6px;
+  align-items: start;
 }
 
 .laneColumn {
@@ -586,7 +678,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-bottom: 1px solid #354d56;
   background: #0d222a;
 }
@@ -594,7 +686,7 @@
 .laneColumn header h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: var(--home-body);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -602,17 +694,20 @@
 .laneColumn header a {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .laneColumn > a {
   display: grid;
-  gap: 2px;
-  padding: 8px 10px;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 12px;
   border-bottom: 1px solid #2c4048;
   cursor: pointer;
+  transition: background 160ms ease;
 }
 
 .laneColumn > a:hover {
@@ -621,40 +716,47 @@
 
 .laneColumn > a small {
   color: #6f858c;
-  font-size: 9px;
+  font-family: var(--display);
+  font-size: var(--home-kicker);
+  font-weight: 800;
 }
 
 .laneColumn > a span {
   font-family: var(--display);
-  font-size: 12px;
-  line-height: 1.15;
+  font-size: var(--home-body);
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
+/* ── Reference desk ── */
+
 .referenceBody {
   display: grid;
-  gap: 6px;
-  padding: 8px;
+  gap: 8px;
+  padding: 10px;
 }
 
 .taskGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 4px;
+  gap: 6px;
 }
 
 .taskCard {
   display: grid;
-  min-height: 88px;
   align-content: center;
-  gap: 2px;
-  padding: 10px 12px;
+  gap: 3px;
+  padding: 12px 14px;
+  border: 1px solid #354d56;
+  background: linear-gradient(180deg, #10242c, #08171d);
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
 }
 
 .taskCard small {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 9px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -663,22 +765,22 @@
 .taskCard h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 15px;
+  font-size: clamp(17px, 1.5vw, 20px);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .taskCard b {
-  margin-top: 4px;
+  margin-top: 2px;
   color: var(--orange-bright);
   font-family: var(--display);
-  font-size: 22px;
+  font-size: clamp(22px, 2vw, 28px);
   line-height: 1;
 }
 
 .taskCard span {
   color: #71878d;
-  font-size: 10px;
+  font-size: var(--home-meta);
 }
 
 .wikiDirectory {
@@ -690,22 +792,22 @@
 
 .wikiTile {
   display: grid;
-  grid-template-columns: 24px 56px 1fr auto;
-  min-height: 58px;
+  grid-template-columns: 28px 56px 1fr auto;
   align-items: center;
-  gap: 8px;
-  padding: 4px 8px;
+  gap: 10px;
+  padding: 8px 10px;
   border-right: 1px solid #354d56;
   border-bottom: 1px solid #354d56;
   background: #091a21;
   text-align: left;
   cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease;
 }
 
 .wikiTile > span {
   color: #718890;
   font-family: var(--display);
-  font-size: 9px;
+  font-size: var(--home-kicker);
   font-weight: 900;
 }
 
@@ -728,9 +830,9 @@
   display: block;
   margin: 0;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: var(--home-body);
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
@@ -738,26 +840,31 @@
   display: block;
   margin-top: 3px;
   color: #71878d;
-  font-size: 9px;
+  font-size: var(--home-meta);
 }
 
 .wikiTile > b {
   color: var(--orange-bright);
 }
 
+/* ── Blueprints ── */
+
 .buildShowcase {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  gap: 6px;
-  padding: 8px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: 8px;
+  padding: 10px;
+  align-items: start;
 }
 
 .buildFeature {
   position: relative;
-  min-height: 230px;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border: 1px solid #3c5963;
   cursor: pointer;
+  transition: border-color 160ms ease;
 }
 
 .buildFeature::after {
@@ -772,9 +879,9 @@
 .buildFeature > div {
   position: absolute;
   z-index: 1;
-  right: 14px;
-  bottom: 12px;
-  left: 14px;
+  right: 16px;
+  bottom: 14px;
+  left: 16px;
 }
 
 .buildStack {
@@ -785,29 +892,29 @@
 
 .buildStack > a {
   display: grid;
-  grid-template-columns: 28px 1fr auto;
-  min-height: 44px;
+  grid-template-columns: 32px 1fr auto;
   align-items: center;
-  gap: 8px;
-  padding: 7px 10px;
+  gap: 10px;
+  padding: 9px 12px;
   border-right: 1px solid #354d56;
   border-bottom: 1px solid #354d56;
   background: #091a21;
   cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease;
 }
 
 .buildStack > a > span {
   color: #718890;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--home-kicker);
   font-weight: 900;
 }
 
 .buildStack h3 {
   margin: 2px 0 0;
   font-family: var(--display);
-  font-size: 13px;
-  line-height: 1;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.05;
   text-transform: uppercase;
 }
 
@@ -815,17 +922,25 @@
   color: var(--cyan);
 }
 
+/* ── Working tools ── */
+
 .toolsGrid {
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 10px;
 }
 
 .toolCard {
   display: grid;
   grid-template-columns: 52px 1fr;
-  min-height: 96px;
   align-items: start;
-  gap: 10px;
-  padding: 12px;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #354d56;
+  background: linear-gradient(180deg, #10242c, #08171d);
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
 }
 
 .toolSymbol {
@@ -837,53 +952,91 @@
   color: var(--orange-bright);
   background: #07161c;
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
+}
+
+.toolCard h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.toolCard p {
+  margin: 4px 0 0;
+  color: #aebbbc;
+  font-size: var(--home-meta);
+  line-height: 1.4;
 }
 
 .toolCard div:last-child > span {
   display: block;
-  margin-top: 6px;
+  margin-top: 8px;
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   text-transform: uppercase;
+}
+
+/* ── Landmarks ── */
+
+.splitPanel {
+  /* inherits panel flex column */
 }
 
 .landmarkGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 4px;
-  padding: 8px;
+  gap: 6px;
+  padding: 10px;
 }
 
 .landmarkCard {
-  min-height: 108px;
-  padding: 10px 12px;
+  min-height: 0;
+  padding: 12px 14px;
+  border: 1px solid #354d56;
+  background: linear-gradient(180deg, #10242c, #08171d);
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
 }
 
 .landmarkCard h3 {
   display: block;
   margin: 4px 0 0;
   font-family: var(--display);
-  font-size: 14px;
+  font-size: clamp(17px, 1.5vw, 20px);
   font-weight: 900;
   line-height: 1.05;
   text-transform: uppercase;
 }
 
+.landmarkCard p {
+  margin: 4px 0 0;
+  color: #aebbbc;
+  font-size: var(--home-meta);
+  line-height: 1.4;
+}
+
+/* ── Workshop mods ── */
+
 .modsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 4px;
-  padding: 8px;
+  gap: 6px;
+  padding: 10px;
 }
 
 .modCard {
   display: grid;
   grid-template-columns: 120px 1fr;
-  min-height: 96px;
+  min-height: 0;
+  border: 1px solid #354d56;
+  background: linear-gradient(180deg, #10242c, #08171d);
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
 }
 
 .modImage {
@@ -893,18 +1046,41 @@
 }
 
 .modCard > div:last-child {
-  padding: 10px 12px;
+  padding: 12px 14px;
 }
 
+.modCard h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.modCard p {
+  margin: 4px 0 0;
+  color: #aebbbc;
+  font-size: var(--home-meta);
+  line-height: 1.4;
+}
+
+/* ── FAQ + help ── */
+
 .faqPanel {
-  grid-template-columns: 148px minmax(0, 1fr) 220px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(220px, 28%);
+  grid-template-rows: auto 1fr;
+}
+
+.faqPanel > .sectionLabel {
+  grid-column: 1 / -1;
 }
 
 .faqList {
   display: grid;
   align-content: start;
-  gap: 3px;
-  padding: 8px;
+  gap: 4px;
+  padding: 10px;
 }
 
 .faqList details {
@@ -913,24 +1089,27 @@
 }
 
 .faqList summary {
-  min-height: 28px;
-  padding: 5px 28px 5px 10px;
+  min-height: 36px;
+  padding: 8px 32px 8px 12px;
   font-family: var(--display);
-  font-size: 12px;
+  font-size: var(--home-body);
   font-weight: 800;
+  line-height: 1.3;
   cursor: pointer;
 }
 
 .faqList details p {
-  padding: 0 10px 8px;
+  padding: 0 12px 10px;
   margin: 0;
   color: #aebbbc;
-  font-size: 11px;
+  font-size: var(--home-meta);
+  line-height: 1.45;
 }
 
 .helpPanel {
-  align-self: stretch;
-  padding: 16px 14px;
+  grid-row: 2;
+  grid-column: 2;
+  padding: 18px 16px;
   border-left: 1px solid #354d56;
   background:
     linear-gradient(120deg, rgb(8 31 39 / 92%), rgb(8 20 26 / 98%)),
@@ -940,36 +1119,40 @@
 .helpPanel > span {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 14px;
+  font-size: clamp(17px, 1.5vw, 20px);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .helpPanel p {
-  margin: 5px 0 12px;
+  margin: 6px 0 14px;
   color: #b9c6c6;
-  font-size: 11px;
+  font-size: var(--home-meta);
+  line-height: 1.45;
 }
 
 .helpPanel a {
   display: inline-flex;
-  min-height: 28px;
+  min-height: 36px;
   align-items: center;
-  padding: 4px 8px;
+  padding: 6px 12px;
   border: 1px solid var(--cyan);
   color: var(--cyan);
   background: #07171d;
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--home-kicker);
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
 }
 
+/* ── Shared card hover ── */
+
 .startCard:hover,
 .wikiTile:hover,
 .toolCard:hover,
 .guideFeature:hover,
+.returnCard:hover,
 .buildFeature:hover,
 .taskCard:hover,
 .landmarkCard:hover,
@@ -985,7 +1168,26 @@
   filter: brightness(1.12);
 }
 
-@media (max-width: 1024px) {
+/* ── Responsive · 1180px ── */
+
+@media (max-width: 1180px) {
+  .heroContent {
+    grid-template-columns: 1fr min(260px, 34%);
+    gap: 20px;
+  }
+
+  .updatePanel {
+    grid-template-columns: 240px minmax(0, 1fr) 220px;
+  }
+
+  .manualLead {
+    grid-template-columns: 1fr;
+  }
+
+  .buildShowcase {
+    grid-template-columns: 1fr minmax(240px, 0.9fr);
+  }
+
   .briefGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -993,67 +1195,63 @@
   .briefMeta {
     grid-column: 1 / -1;
   }
+}
 
-  .manualBody,
-  .buildShowcase {
+/* ── Responsive · 1024px ── */
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: clamp(380px, 48vh, 520px);
+  }
+
+  .heroContent {
     grid-template-columns: 1fr;
+    align-content: end;
+    padding-block: 32px 20px;
+  }
+
+  .heroBrief {
+    align-self: auto;
+    margin: 0;
+  }
+
+  .updatePanel {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .updateArt {
+    grid-column: 1;
+    min-height: 180px;
+  }
+
+  .updateInfo {
+    grid-column: 2;
+  }
+
+  .updateMachine {
+    grid-column: 1 / -1;
+    min-height: 140px;
+  }
+
+  .manualBody .guideFeature {
+    grid-template-columns: 1fr;
+  }
+
+  .guideFeatureImage {
+    min-height: 180px;
   }
 
   .laneBoard {
     grid-template-columns: 1fr;
   }
 
-  .updatePanel {
-    grid-template-columns: 220px 1fr 200px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .hero {
-    height: auto;
-    min-height: 340px;
-  }
-
-  .heroContent {
-    grid-template-columns: 1fr;
-    align-content: end;
-    padding-block: 28px 18px;
-  }
-
-  .heroBrief {
-    margin: 0;
-  }
-
-  .panel,
-  .faqPanel,
-  .briefPanel {
+  .buildShowcase {
     grid-template-columns: 1fr;
   }
 
-  .sectionLabel {
-    display: grid;
-    grid-template-columns: 140px 1fr auto;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    border-right: 0;
-    border-bottom: 1px solid #354a52;
-  }
-
-  .sectionLabel p {
-    margin: 0;
-  }
-
-  .sectionLabel a {
-    margin-top: 0;
-  }
-
-  .updatePanel {
-    grid-template-columns: 1fr;
-  }
-
-  .updateArt {
-    min-height: 150px;
+  .buildFeature {
+    aspect-ratio: 16 / 9;
   }
 
   .wikiDirectory,
@@ -1061,16 +1259,31 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .taskGrid,
-  .modsGrid,
-  .toolsGrid {
-    grid-template-columns: 1fr 1fr;
+  .taskGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faqPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .helpPanel {
+    grid-row: auto;
+    grid-column: 1;
+    border-top: 1px solid #354d56;
+    border-left: 0;
   }
 }
 
+/* ── Responsive · 768px ── */
+
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 38px;
+    font-size: clamp(38px, 10vw, 52px);
+  }
+
+  .heroCopy > p {
+    font-size: var(--home-body);
   }
 
   .heroActions {
@@ -1080,18 +1293,18 @@
 
   .heroButton {
     min-width: 0;
+    font-size: var(--home-meta);
+    min-height: 42px;
   }
 
   .sectionLabel {
-    display: block;
-  }
-
-  .sectionLabel p {
-    margin-top: 5px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .sectionLabel a {
-    margin-top: 8px;
+    margin-left: 0;
+    margin-top: 4px;
   }
 
   .briefGrid,
@@ -1104,26 +1317,42 @@
     grid-template-columns: 1fr;
   }
 
+  .startCard:last-child {
+    grid-column: auto;
+  }
+
+  .startCard {
+    grid-template-columns: 80px 36px minmax(0, 1fr);
+  }
+
+  .tileImage {
+    width: 80px;
+    height: 64px;
+  }
+
+  .startCard > b {
+    width: 36px;
+    height: 36px;
+  }
+
+  .updatePanel {
+    grid-template-columns: 1fr;
+  }
+
+  .updateArt {
+    min-height: 160px;
+  }
+
   .guideFeature,
   .modCard {
     grid-template-columns: 1fr;
   }
 
-  .guideFeatureImage,
   .modImage {
-    min-height: 150px;
-  }
-
-  .startCard:last-child {
-    grid-column: auto;
-  }
-
-  .helpPanel {
-    border-top: 1px solid #354d56;
-    border-left: 0;
+    min-height: 140px;
   }
 
   .faqList summary {
-    min-height: 40px;
+    min-height: 44px;
   }
 }

@@ -41,7 +41,7 @@
 .statusLabel {
   color: var(--cyan);
   font-family: var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -102,7 +102,7 @@
 .status p {
   margin: 4px 0 0;
   color: #aebdbf;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
