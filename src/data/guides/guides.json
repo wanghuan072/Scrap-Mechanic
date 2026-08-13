@@ -508,231 +508,6 @@
     ]
   },
   {
-    "slug": "first-vehicle",
-    "title": "First Vehicle Guide - Exact Starter Chassis",
-    "description": "Build the VEH-01 starter car with a 10 × 16 footprint, 48-block frame, six bearings, four wheels, and repeatable steering and load tests.",
-    "category": "Building",
-    "image": "/images/scrap-mechanic/screenshot-10.jpg",
-    "imageAlt": "A simple four-wheel vehicle driving in Scrap Mechanic",
-    "gameVersion": "1.0",
-    "published": "2026-07-28",
-    "updated": "2026-07-31",
-    "readingTime": "14 min",
-    "featured": true,
-    "quickAnswer": "Build a low 10 × 16 ladder frame from 48 Wood Block Level 1, use six Bearings for four hubs and two steering pivots, start engine power low, and pass full-lock, ditch, rollover, and one-chest tests before adding bodywork.",
-    "sections": [
-      {
-        "heading": "Lay Out the 48-Block Frame",
-        "steps": [
-          "Build two 16-block rails.",
-          "Join them with at least three crossmembers.",
-          "Keep seat, engine, and future chest inside the wheelbase.",
-          "Leave both front corners open for steering travel.",
-          "Mark one accessible Lift point at each end."
-        ]
-      },
-      {
-        "heading": "Install Six Bearings by Role",
-        "paragraphs": [
-          "The four wheel bearings rotate for drive; the two front pivot bearings rotate for steering. Mixing those roles produces connections that look complete but behave unpredictably. Connect the seat only to the steering pivots and engine throttle, then connect the engine only to driven wheel hubs."
-        ]
-      },
-      {
-        "heading": "Commission the Empty Chassis",
-        "bullets": [
-          "Drive straight and reverse without adding power.",
-          "Complete a full-lock circle in both directions.",
-          "Cross a shallow ditch diagonally.",
-          "Tip the empty chassis in a safe area and recover it with the Lift."
-        ]
-      },
-      {
-        "heading": "Load One Chest, Then Repeat the Tests",
-        "paragraphs": [
-          "A Large Chest changes mass distribution even when the body looks symmetrical. Mount it low, inside the wheelbase, and closer to the steering axle if the front tires lose authority. The first vehicle is complete when one light chest returns safely—not when every available part fits on the frame."
-        ]
-      },
-      {
-        "heading": "Upgrade by Route, Not by Decoration",
-        "bullets": [
-          "Rough road: add four Off-Road Suspension units and retest rollover behavior.",
-          "Long night route: protect fuel and add two Switch-controlled Headlights.",
-          "Second chest: extend the wheelbase before loading it.",
-          "Heavy tool head: move to a dedicated mining or harvesting chassis."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "bearing",
-      "connect-tool",
-      "lift",
-      "drivers-seat",
-      "gas-engine",
-      "large-chest",
-      "suspension"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic First Vehicle - 10 × 16 Starter Car",
-      "description": "Build a Scrap Mechanic starter car with 48 blocks, 6 bearings, 4 wheels, exact connections, load tests, rollover recovery, and symptom-based steering fixes.",
-      "keywords": [
-        "Scrap Mechanic first vehicle",
-        "Scrap Mechanic starter car",
-        "Scrap Mechanic bearing direction",
-        "Scrap Mechanic car not steering",
-        "Scrap Mechanic beginner build"
-      ]
-    },
-    "media": [
-      {
-        "src": "/images/wiki/bearing.webp",
-        "alt": "Bearing part icon from Scrap Mechanic",
-        "caption": "Six bearings define the starter chassis: four wheel hubs and two front steering pivots. Direction errors should be fixed before bodywork hides the connections."
-      },
-      {
-        "src": "/images/wiki/connect-tool.webp",
-        "alt": "Connect Tool icon from Scrap Mechanic",
-        "caption": "Use the Connect Tool to separate steering bearings, drive bearings, engine throttle, and optional lights into readable groups."
-      }
-    ],
-    "tables": [
-      {
-        "caption": "VEH-01 starter bill",
-        "headers": [
-          "Part",
-          "Quantity",
-          "Job"
-        ],
-        "rows": [
-          [
-            "Wood Block Level 1",
-            "48",
-            "Low ladder frame"
-          ],
-          [
-            "Bearing",
-            "6",
-            "4 wheel hubs + 2 steering pivots"
-          ],
-          [
-            "Wheel",
-            "4",
-            "Road contact"
-          ],
-          [
-            "Driver's Seat Level 1",
-            "1",
-            "Steering and throttle input"
-          ],
-          [
-            "Gas Engine Level 1",
-            "1",
-            "Drive power"
-          ],
-          [
-            "Switch",
-            "1 optional",
-            "Headlight control"
-          ],
-          [
-            "Headlight",
-            "2 optional",
-            "Night route visibility"
-          ],
-          [
-            "Large Chest",
-            "1 maximum for first test",
-            "Low-mounted cargo"
-          ]
-        ]
-      },
-      {
-        "caption": "Frame and connection specification",
-        "headers": [
-          "System",
-          "Setting",
-          "Pass condition"
-        ],
-        "rows": [
-          [
-            "Footprint",
-            "10 × 16 blocks",
-            "Symmetrical rails and three or more crossmembers"
-          ],
-          [
-            "Ground clearance",
-            "2 blocks",
-            "Shallow ditch crossed diagonally"
-          ],
-          [
-            "Steering",
-            "Front pivots mirrored",
-            "Both full-lock turns clear the frame"
-          ],
-          [
-            "Drive",
-            "Rear-wheel or four-wheel",
-            "All driven wheels agree on forward"
-          ],
-          [
-            "Power",
-            "Low, then one step at a time",
-            "No rollover or steering loss"
-          ],
-          [
-            "Payload",
-            "Driver + one light chest",
-            "Loaded return keeps steering authority"
-          ]
-        ]
-      },
-      {
-        "caption": "Failure diagnosis",
-        "headers": [
-          "Symptom",
-          "Likely cause",
-          "Specific correction"
-        ],
-        "rows": [
-          [
-            "Vehicle fights itself",
-            "One drive bearing reversed",
-            "Inspect arrows and reverse only that hub"
-          ],
-          [
-            "Turns opposite input",
-            "Steering pivots not mirrored",
-            "Reverse one front steering bearing"
-          ],
-          [
-            "Wheel rub at full lock",
-            "Track too narrow or rail too close",
-            "Widen front corners before reducing steering"
-          ],
-          [
-            "Flips after adding chest",
-            "Mass above or behind wheelbase",
-            "Move chest low and forward"
-          ],
-          [
-            "Beaches on road edge",
-            "Clearance below 2 blocks",
-            "Raise local frame without raising cargo"
-          ],
-          [
-            "Cannot recover",
-            "Body covers all Lift points",
-            "Leave exposed front and rear recovery pads"
-          ]
-        ]
-      }
-    ],
-    "relatedGuides": [
-      "beginner-first-hours",
-      "controller-and-logic",
-      "scrap-city-garage-blueprints"
-    ]
-  },
-  {
     "slug": "farming-basics",
     "title": "Farming and Raid Defense Guide",
     "description": "Plan crop rows with exact 1.0 plant values, a protected seed reserve, one defended approach, and automation sized to an 8–12 plot test row.",
@@ -963,502 +738,433 @@
     ]
   },
   {
-    "slug": "raid-defense",
-    "title": "Raid Defense Guide - Control the Approach",
-    "description": "Defend crops with current plant-value thresholds, durability-aware contact surfaces, controlled approach lanes, and realistic potato ammo budgets.",
-    "category": "Combat",
-    "image": "/images/scrap-mechanic/screenshot-01.jpg",
-    "imageAlt": "Players defending an area from hostile bots in Scrap Mechanic",
-    "gameVersion": "1.0",
-    "published": "2026-07-28",
-    "updated": "2026-07-30",
-    "readingTime": "12 min",
-    "featured": true,
-    "quickAnswer": "Run the Raid Calculator before planting high-value rows, force bots into one kill lane, use Metal-tier durability on contact surfaces, and stock Spudgun potatoes for the expected bot mix.",
-    "tables": [
-      {
-        "caption": "1.0 calculator plant values (on-site tool)",
-        "headers": [
-          "Crop",
-          "Plant value",
-          "Defense note"
-        ],
-        "rows": [
-          [
-            "Tomato / Potato",
-            "1",
-            "Cheap food/ammo fields"
-          ],
-          [
-            "Carrot",
-            "2",
-            "Mild step up"
-          ],
-          [
-            "Redbeet",
-            "5",
-            "Counts fast—check totals"
-          ],
-          [
-            "Banana / Chili",
-            "15",
-            "Mid-tier spike"
-          ],
-          [
-            "Blueberry",
-            "50",
-            "Serious raid budgeting"
-          ],
-          [
-            "Orange",
-            "100",
-            "One plant is a decision"
-          ],
-          [
-            "Broccoli",
-            "500",
-            "Advanced farms only"
-          ],
-          [
-            "Pineapple",
-            "1000",
-            "Top calculator crop"
-          ]
-        ],
-        "note": "Use /tools/raid-calculator for the exact total and distance to the next current threshold."
-      },
-      {
-        "caption": "Potato ammo quick reference",
-        "headers": [
-          "Target",
-          "HP",
-          "Spudgun (28)",
-          "Shotgun full (64)"
-        ],
-        "rows": [
-          [
-            "Totebot / Tapebot",
-            "40",
-            "≈2",
-            "1"
-          ],
-          [
-            "Haybot",
-            "100",
-            "≈4",
-            "2"
-          ],
-          [
-            "Farmbot",
-            "1500",
-            "54",
-            "≈24"
-          ]
-        ]
-      }
-    ],
+    "slug": "warehouse-key-and-farmbot",
+    "title": "Warehouse Route - Spudguns, Farmbots, Tapebots, and Trashbot",
+    "description": "A combat route with exact weapon damage, Farmbot key drops, Tapebot projectile pressure, Warehouse staging, and Trashbot phase rules.",
+    "category": "Survival",
+    "image": "/images/scrap-mechanic/screenshot-05.jpg",
+    "imageAlt": "Dangerous Scrap Mechanic structure exploration",
+    "gameVersion": "1.0.3",
+    "published": "2026-07-29",
+    "updated": "2026-07-31",
+    "readingTime": "16 min",
+    "quickAnswer": "Budget at least 54 accurate Spudgun hits for a 1500 HP Farmbot, secure its guaranteed Warehouse Key, clear 40 HP Tapebots from hard cover, bank loot outside the entrance, and enter Trashbot phases ready for the eye-open damage window and five exposed-core hits.",
     "sections": [
       {
-        "heading": "Plant Value Is the Real Raid Difficulty Slider",
-        "paragraphs": [
-          "Raids care about planted value in a cluster, not how pretty the farm looks. Ten oranges (1000) outrank a huge tomato field. Open the Raid Calculator before the second high-value row, and keep seed chests outside the raid radius so a wipe does not delete replant capacity."
-        ]
-      },
-      {
-        "heading": "One Kill Lane, Not a Decorative Maze",
-        "bullets": [
-          "Force bots through a single lit approach you can shoot.",
-          "Put crops behind the contact line; put Craftbots and pipes farther back.",
-          "Leave a human escape path that is not the bot funnel.",
-          "Mark repair kits and ammo crates with paint so night panic has landmarks."
-        ]
-      },
-      {
-        "heading": "Durability Beats Wishful Wood",
-        "paragraphs": [
-          "Bot attacks use break chance by durability level—not a simple hit-point bar. Haybots struggle past mid-high durability; Farmbots still threaten softer shells and can trash low-durability blocks by walking over them. Put Metal-tier material on the first contact face; keep scrap wood for interior scaffolding."
-        ]
-      },
-      {
-        "heading": "Ammo and Food Before the Warning Ends",
-        "paragraphs": [
-          "Restock potatoes and Cookbot meals when the unauthorized-farming warning appears—not after the first Totebot is in the crops. If your plant value can summon Tapebots or worse, treat the night like a mini Warehouse: ADS angles, not hammer heroics."
-        ]
-      },
-      {
-        "heading": "Recover Before You Replant",
+        "heading": "Stage the Route Before the Farmbot Pull",
         "steps": [
-          "Clear remaining bots and loot Circuit Boards / Scrap Metal.",
-          "Repair the kill lane and any broken automation.",
-          "Move spare seeds back to protected storage.",
-          "Re-run the Raid Calculator before expanding the next row."
+          "Unlock or craft the chosen Spudgun and split combat potatoes from farm-defense potatoes.",
+          "Park the cargo vehicle outside the Farmbot kite path.",
+          "Carry healing food, Glowsticks, repair blocks, and one empty loot section.",
+          "Choose open ground with no dead end behind the player.",
+          "Count the ammunition again before firing the first shot."
+        ]
+      },
+      {
+        "heading": "Farmbot: The Key Is the Mandatory Drop",
+        "paragraphs": [
+          "Every Normal Farmbot drops a Warehouse Key. Component Kits at 66.7% and Circuit Boards at 33.3% are additional rolls, not substitutes for the key. Pick the key up immediately; do not leave it exposed while chasing a smaller bot or repairing cosmetic vehicle damage."
+        ]
+      },
+      {
+        "heading": "Warehouse: Convert Rooms Into Single Angles",
+        "bullets": [
+          "Peek from a hard corner; never fight from the center of an atrium.",
+          "Blue Tapebot shots at 55 and Red shots at 62 can erase a bad open crossing quickly.",
+          "Move valuable loot to an exterior chest between sections.",
+          "Use Glowsticks to reveal the next angle, not only the floor under the player.",
+          "Retreat to cleared space instead of backing into an unopened side room."
+        ]
+      },
+      {
+        "heading": "Do Not Treat Trashbot as a Larger Farmbot",
+        "paragraphs": [
+          "Trashbot is controlled by attack patterns, eye state, phase health, and an exposed-core recovery sequence. Continuous fire into a closed eye wastes potatoes and hides the next projectile wall. Reload before the opening, deliver the phase damage, land five core hits, and reset movement space."
+        ]
+      },
+      {
+        "heading": "Extraction Is a Separate Phase",
+        "steps": [
+          "Move keys and progression items to the exterior vehicle first.",
+          "Unload the current section before opening optional rooms.",
+          "Keep the return route lit and free of parked debris.",
+          "Leave when healing or miss reserve reaches the route minimum.",
+          "Repair and restock outside the combat structure."
         ]
       }
     ],
     "relatedWiki": [
-      "haybot",
-      "farmbot",
-      "tapebot",
       "spudgun",
       "spud-shotgun",
-      "tomato",
-      "pineapple"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Raid Defense with Plant Values",
-      "description": "Defend Scrap Mechanic farms using 1.0 plant values, classic wave context, durability rules, and potato ammo budgets for Totebot through Farmbot.",
-      "keywords": [
-        "Scrap Mechanic raid defense",
-        "Scrap Mechanic crop value",
-        "Scrap Mechanic farm defense",
-        "Scrap Mechanic raid levels"
-      ]
-    }
-  },
-  {
-    "slug": "multiplayer-basics",
-    "title": "Multiplayer Guide - Safer Shared Worlds",
-    "description": "Organize a co-op world so builds, storage, mods, and progression remain understandable for every player.",
-    "category": "Multiplayer",
-    "image": "/images/scrap-mechanic/screenshot-07.jpg",
-    "imageAlt": "Two players exploring together in Scrap Mechanic",
-    "gameVersion": "1.0.2",
-    "published": "2026-07-28",
-    "updated": "2026-07-28",
-    "readingTime": "6 min",
-    "quickAnswer": "Agree on the game branch and mod list first, label shared storage, and let the host verify quest and recipe progression after updates.",
-    "sections": [
-      {
-        "heading": "Match the Environment",
-        "bullets": [
-          "Every player should use the same game branch.",
-          "Keep the active mod list short and version-compatible.",
-          "Back up the host save before changing the mod set."
-        ]
-      },
-      {
-        "heading": "Make Shared Work Visible",
-        "paragraphs": [
-          "Label storage and leave incomplete builds in a clear work area. A shared world becomes difficult when nobody knows which materials are reserved or which machine is safe to modify."
-        ]
-      },
-      {
-        "heading": "Verify Progression Together",
-        "paragraphs": [
-          "The 1.0.1 patch fixed a case where crafting recipes did not unlock correctly in games with many players. After an update, let the host confirm the quest state and ask each player to check newly unlocked recipes before continuing."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "schematic-box",
-      "connect-tool",
-      "component-kit"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Multiplayer Basics",
-      "description": "Run a safer Scrap Mechanic co-op world with matching versions, compatible mods, shared storage, and progression checks. Check each step in-game.",
-      "keywords": [
-        "Scrap Mechanic multiplayer",
-        "Scrap Mechanic co-op guide",
-        "Scrap Mechanic multiplayer mods"
-      ]
-    }
-  },
-  {
-    "slug": "crafting-and-upgrade-priorities",
-    "title": "Crafting Guide - Upgrade What Removes the Bottleneck",
-    "description": "Choose Craftbot parts, interactive upgrades, storage, and production improvements in an order that solves real problems.",
-    "category": "Crafting",
-    "image": "/images/scrap-mechanic/screenshot-07.jpg",
-    "imageAlt": "A busy Scrap Mechanic crafting workshop",
-    "gameVersion": "1.0.2",
-    "published": "2026-07-28",
-    "updated": "2026-07-28",
-    "readingTime": "10 min",
-    "featured": true,
-    "quickAnswer": "Upgrade the system that is stopping the next goal: transport before remote gathering, storage before bulk production, and recipe unlocks before farming materials for a part you still cannot craft.",
-    "sections": [
-      {
-        "heading": "Start from the Next Job",
-        "paragraphs": [
-          "A useful upgrade makes the next complete loop easier. Decide whether the next loop is farming, mining, exploration, combat, or cargo transport, then list the part that is currently forcing repeated manual work."
-        ],
-        "bullets": [
-          "If trips are slow, improve reliable transport before adding production.",
-          "If materials are lost or mixed, fix storage before gathering more.",
-          "If the recipe is locked, pursue schematic progression before stockpiling every ingredient."
-        ]
-      },
-      {
-        "heading": "Protect a Repair Reserve",
-        "paragraphs": [
-          "Do not spend the last Component Kits, Circuit Boards, fuel, or structural material on an optional upgrade. A machine that cannot be repaired after one field test is not a finished upgrade."
-        ]
-      },
-      {
-        "heading": "A Practical Upgrade Order",
-        "steps": [
-          "Make the starter vehicle steer, stop, and return reliably.",
-          "Create labeled storage for fuel, electronics, food, seeds, and building material.",
-          "Improve the Craftbot path and unlock the recipe needed for the next job.",
-          "Build one focused machine and test it on a small real workload.",
-          "Upgrade durability, capacity, or speed only after the bottleneck is observed."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "crafting-bots",
-      "component-kit",
-      "schematicbot",
-      "large-chest"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Crafting and Upgrade Priorities",
-      "description": "Choose Scrap Mechanic crafting upgrades by the real bottleneck in transport, storage, recipes, farming, or mining. Use the checks before departure.",
-      "keywords": [
-        "Scrap Mechanic crafting guide",
-        "Scrap Mechanic upgrade order",
-        "Scrap Mechanic Craftbot"
-      ]
-    }
-  },
-  {
-    "slug": "warehouse-preparation",
-    "title": "Warehouse Guide - Prepare, Clear, and Return Safely",
-    "description": "A practical checklist for ammunition, food, route marking, room clearing, loot handling, and recovery before entering a Warehouse.",
-    "category": "Exploration",
-    "image": "/images/scrap-mechanic/screenshot-05.jpg",
-    "imageAlt": "A dangerous industrial structure in Scrap Mechanic",
-    "gameVersion": "1.0",
-    "published": "2026-07-28",
-    "updated": "2026-07-28",
-    "readingTime": "11 min",
-    "featured": true,
-    "quickAnswer": "Bring ranged combat equipment, leave unrelated valuables at base, park a recoverable vehicle outside the approach, and clear one angle and room at a time.",
-    "sections": [
-      {
-        "heading": "Load for the Structure, Not the Whole Game",
-        "bullets": [
-          "A ranged weapon and a protected ammunition reserve.",
-          "Food for recovery and enough light for the return route.",
-          "Only the tools needed for interaction and emergency building.",
-          "Empty inventory space divided between essential loot and optional material."
-        ]
-      },
-      {
-        "heading": "Establish a Surface Staging Point",
-        "paragraphs": [
-          "Park outside the immediate combat lane with the vehicle facing the return direction. Put backup food and ammunition in a separate chest so one failed entry does not consume the entire supply."
-        ]
-      },
-      {
-        "heading": "Clear by Angles",
-        "steps": [
-          "Stop before a new doorway and listen.",
-          "Expose one side of the room while keeping hard cover.",
-          "Remove the visible ranged threat before crossing open floor.",
-          "Check upper levels and side openings before collecting drops.",
-          "Return valuable loot to the staging point before pushing deeper."
-        ]
-      },
-      {
-        "heading": "Know When the Run Is Complete",
-        "paragraphs": [
-          "A run that returns with useful progression and preserves the equipment is successful. Do not turn a controlled expedition into an inventory recovery because one optional corner remains uncleared."
-        ]
-      }
-    ],
-    "relatedWiki": [
+      "spudling-gun",
+      "farmbot",
       "tapebot",
-      "spudgun",
-      "cornade",
+      "haybot",
+      "trashbot",
       "glowstick"
     ],
     "seo": {
-      "title": "Scrap Mechanic Guides - Warehouse Preparation",
-      "description": "Prepare ammunition, food, staging storage, room-clearing tactics, and a safe return route for Scrap Mechanic Warehouses. Confirm it in-game.",
+      "title": "Scrap Mechanic Warehouse, Farmbot and Trashbot Guide",
+      "description": "Plan Scrap Mechanic Warehouse combat with Farmbot ammo math, guaranteed keys, Tapebot damage, loot staging, and Trashbot phase and core data.",
       "keywords": [
         "Scrap Mechanic Warehouse guide",
+        "Scrap Mechanic Farmbot",
+        "Scrap Mechanic Warehouse Key",
         "Scrap Mechanic Tapebot",
-        "Scrap Mechanic warehouse preparation"
+        "Scrap Mechanic Trashbot",
+        "Scrap Mechanic Spudgun ammo"
       ]
-    }
-  },
-  {
-    "slug": "trading-and-packing",
-    "title": "Trading Guide - Farms, Packing Stations, and Cargo",
-    "description": "Turn a crop objective into a complete harvest, packing, hauling, and trading route without losing the delivery on the road.",
-    "category": "Progression",
-    "image": "/images/scrap-mechanic/screenshot-03.jpg",
-    "imageAlt": "A Scrap Mechanic farm prepared for a produce delivery",
-    "gameVersion": "1.0",
-    "published": "2026-07-28",
-    "updated": "2026-07-28",
-    "readingTime": "9 min",
-    "quickAnswer": "Confirm the required produce first, grow only the batch you need, test the road with an empty cargo vehicle, and keep the load low and physically contained.",
-    "sections": [
+    },
+    "media": [
       {
-        "heading": "Work Backward from the Trade",
-        "steps": [
-          "Identify the item or progression goal you are pursuing.",
-          "Confirm which produce and packed cargo support that goal.",
-          "Reserve the seeds for another complete planting.",
-          "Prepare watering and raid defense for the exact crop batch.",
-          "Test the Packing Station and trader route before loading cargo."
-        ]
+        "src": "/images/wiki/farmbot.png",
+        "alt": "Farmbot image from Scrap Mechanic",
+        "caption": "Farmbot: 1500 HP, guaranteed Warehouse Key, 66.7% Component Kit roll, and 33.3% Circuit Board roll on Normal difficulty."
       },
       {
-        "heading": "Build a Cargo Vehicle, Not a Fast Car",
-        "paragraphs": [
-          "A produce hauler needs a low deck, a wide stable stance, boundaries that keep the load from sliding out, and enough steering clearance for road junctions. Top speed is secondary."
+        "src": "/images/wiki/tapebot.png",
+        "alt": "Tapebot image from Scrap Mechanic",
+        "caption": "Tapebots have only 40 HP but deliver ranged pressure: Blue projectiles deal 55 damage and Red projectiles deal 62."
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Weapon budget against a 1500 HP Farmbot",
+        "headers": [
+          "Weapon",
+          "Damage / potato cost",
+          "Accurate hit floor",
+          "Use condition"
         ],
-        "bullets": [
-          "Keep the load between the axles.",
-          "Use a gate or removable restraint instead of stacking loose cargo high.",
-          "Carry fuel and a Lift where they remain accessible after a rollover."
+        "rows": [
+          [
+            "Spudgun",
+            "28 / 1 Potato",
+            "54",
+            "Safest range and predictable economy"
+          ],
+          [
+            "Spud Shotgun",
+            "64 / 2 Potatoes",
+            "≈24 full hits",
+            "Only when full spread damage lands"
+          ],
+          [
+            "Spudling Gun",
+            "20 / 1 Potato",
+            "≈75 chunks",
+            "Sustained fire after spin-up"
+          ],
+          [
+            "Mountable Spudgun",
+            "28 / 1 Potato",
+            "54",
+            "Connected Potato Ammo Container required"
+          ]
+        ],
+        "note": "Carry a miss and escape reserve beyond the hit floor. Losing the hauler costs more than waiting for another prepared pull."
+      },
+      {
+        "caption": "Combat target and loot decisions",
+        "headers": [
+          "Target",
+          "Normal data",
+          "Progression value",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "Farmbot",
+            "1500 HP; kick 10; swipe 35",
+            "Warehouse Key always",
+            "Pick up the key before secondary loot"
+          ],
+          [
+            "Tapebot",
+            "40 HP; Blue 55 / Red 62 damage",
+            "Battery ≈35.7%; Kit ≈14.3%",
+            "Clear one sightline at a time"
+          ],
+          [
+            "Haybot",
+            "100 HP; poke 20; swing 30",
+            "Scrap Metal always",
+            "Do not spend Farmbot reserve unnecessarily"
+          ],
+          [
+            "Trashbot",
+            "30 HP per phase before scaling",
+            "Scripted boss progression",
+            "Damage eye window, then land 5 core hits"
+          ]
         ]
       },
       {
-        "heading": "Protect the Return",
-        "paragraphs": [
-          "Leave room for the reward, do not fill every inventory slot with roadside loot, and keep enough fuel to return even if the loaded vehicle takes a slower route."
-        ]
+        "caption": "Trashbot arena timing",
+        "headers": [
+          "State",
+          "Data",
+          "Player job"
+        ],
+        "rows": [
+          [
+            "Pattern active / eye closed",
+            "No normal damage window",
+            "Read projectile or shockwave path"
+          ],
+          [
+            "Eye open",
+            "30 phase HP before player multiplier",
+            "Use the preloaded firing lane"
+          ],
+          [
+            "Core exposed",
+            "5 required core hits",
+            "Keep one shooter line clear"
+          ],
+          [
+            "Stun window",
+            "3 seconds",
+            "Reload and reposition immediately"
+          ],
+          [
+            "Explosion event",
+            "30-unit radius",
+            "Leave the center before greed damage"
+          ]
+        ],
+        "note": "The encounter tracks the maximum player count it has seen, so a co-op phase should not be budgeted like a fresh solo arena."
       }
     ],
-    "relatedWiki": [
-      "large-chest",
-      "suspension",
-      "carrot",
-      "orange"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Packing Station and Trading",
-      "description": "Plan crop batches, Packing Station routes, stable cargo vehicles, and trader deliveries in Scrap Mechanic Survival. Follow the route with a recoverable save.",
-      "keywords": [
-        "Scrap Mechanic Packing Station",
-        "Scrap Mechanic trader",
-        "Scrap Mechanic produce crates"
-      ]
-    }
+    "relatedGuides": [
+      "farming-basics",
+      "achievements"
+    ]
   },
   {
-    "slug": "exploration-and-loot",
-    "title": "Exploration Guide - Find More and Lose Less",
-    "description": "A repeatable exploration loop for generated worlds, roadside ruins, inventory decisions, route markers, and safe returns.",
-    "category": "Exploration",
-    "image": "/images/scrap-mechanic/screenshot-09.jpg",
-    "imageAlt": "Mechanics exploring the generated Scrap Mechanic world",
+    "slug": "first-vehicle",
+    "title": "First Vehicle Guide - Exact Starter Chassis",
+    "description": "Build the VEH-01 starter car with a 10 × 16 footprint, 48-block frame, six bearings, four wheels, and repeatable steering and load tests.",
+    "category": "Building",
+    "image": "/images/scrap-mechanic/screenshot-10.jpg",
+    "imageAlt": "A simple four-wheel vehicle driving in Scrap Mechanic",
     "gameVersion": "1.0",
     "published": "2026-07-28",
-    "updated": "2026-07-28",
-    "readingTime": "8 min",
-    "quickAnswer": "Travel from one known landmark to the next, mark decision points, clear before looting, and return when the important cargo or repair reserve is at risk.",
-    "sections": [
-      {
-        "heading": "Use a Reversible Landmark Chain",
-        "paragraphs": [
-          "Generated terrain makes copied coordinates unreliable. Build a route from stable observations: the road left from base, the bridge crossed, the station passed, the ruin entered, and the direction used to leave."
-        ]
-      },
-      {
-        "heading": "Give Every Trip a Priority",
-        "bullets": [
-          "Resource trip: carry the collection tool and return with one material family.",
-          "Loot trip: keep inventory open and avoid heavy construction work.",
-          "Story trip: preserve food, weapons, and objective items over ordinary blocks.",
-          "Scout trip: travel light and record the route instead of clearing everything."
-        ]
-      },
-      {
-        "heading": "Use a Three-Stage Loot Rule",
-        "steps": [
-          "Clear the immediate threat.",
-          "Move priority loot to the vehicle or staging chest.",
-          "Only then decide whether optional material is worth the remaining space."
-        ]
-      },
-      {
-        "heading": "Return Before the Vehicle Becomes the Loot",
-        "paragraphs": [
-          "Extra exploration is not profitable when the vehicle carrying the first half of the trip is destroyed. Turn around while the route, fuel, and repair capacity still make the return routine."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "glowstick",
-      "large-chest",
-      "gasoline",
-      "sledgehammer"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Exploration and Loot Routes",
-      "description": "Navigate generated worlds, mark routes, prioritize loot, and return safely from Scrap Mechanic exploration trips. Use the checks before departure.",
-      "keywords": [
-        "Scrap Mechanic exploration guide",
-        "Scrap Mechanic loot",
-        "Scrap Mechanic generated map"
-      ]
-    }
-  },
-  {
-    "slug": "automated-farming",
-    "title": "Automated Farming Guide - One Reliable Crop Row",
-    "description": "Build planting, watering, fertilizer, and harvest automation one tested stage at a time.",
-    "category": "Farming",
-    "image": "/images/scrap-mechanic/screenshot-06.jpg",
-    "imageAlt": "An automated Scrap Mechanic farm with machines beside crop rows",
-    "gameVersion": "1.0",
-    "published": "2026-07-28",
-    "updated": "2026-07-28",
-    "readingTime": "12 min",
+    "updated": "2026-07-31",
+    "readingTime": "14 min",
     "featured": true,
-    "quickAnswer": "Automate one straight row first: confirm pump direction, container contents, coverage, and controls at each stage before adding the next row.",
+    "quickAnswer": "Build a low 10 × 16 ladder frame from 48 Wood Block Level 1, use six Bearings for four hubs and two steering pivots, start engine power low, and pass full-lock, ditch, rollover, and one-chest tests before adding bodywork.",
     "sections": [
       {
-        "heading": "Standardize the Farm Geometry",
-        "paragraphs": [
-          "Straight rows and predictable spacing make every later step easier. Leave a service lane for the mechanic and enough edge space for a pump, moving arm, or harvesting vehicle."
-        ]
-      },
-      {
-        "heading": "Build the System in Four Tests",
+        "heading": "Lay Out the 48-Block Frame",
         "steps": [
-          "Fill the water system and prove that every soil plot receives water.",
-          "Load one seed and verify the planting direction and spacing.",
-          "Apply one unit of Fertilizer only after the correct plot is targeted.",
-          "Harvest one mature row and confirm the output reaches the intended storage."
+          "Build two 16-block rails.",
+          "Join them with at least three crossmembers.",
+          "Keep seat, engine, and future chest inside the wheelbase.",
+          "Leave both front corners open for steering travel.",
+          "Mark one accessible Lift point at each end."
         ]
       },
       {
-        "heading": "Separate Inputs",
-        "bullets": [
-          "Use labeled containers for seeds, water, Fertilizer, and harvested crops.",
-          "Give collection and delivery separate controls.",
-          "Keep the manual Water Bucket and seed reserve outside the machine."
-        ]
-      },
-      {
-        "heading": "Automation Does Not Replace Defense",
+        "heading": "Install Six Bearings by Role",
         "paragraphs": [
-          "A faster crop cycle still needs a protected approach, an escape path, and storage outside the raid lane. Scale the machine and the farm defense together."
+          "The four wheel bearings rotate for drive; the two front pivot bearings rotate for steering. Mixing those roles produces connections that look complete but behave unpredictably. Connect the seat only to the steering pivots and engine throttle, then connect the engine only to driven wheel hubs."
+        ]
+      },
+      {
+        "heading": "Commission the Empty Chassis",
+        "bullets": [
+          "Drive straight and reverse without adding power.",
+          "Complete a full-lock circle in both directions.",
+          "Cross a shallow ditch diagonally.",
+          "Tip the empty chassis in a safe area and recover it with the Lift."
+        ]
+      },
+      {
+        "heading": "Load One Chest, Then Repeat the Tests",
+        "paragraphs": [
+          "A Large Chest changes mass distribution even when the body looks symmetrical. Mount it low, inside the wheelbase, and closer to the steering axle if the front tires lose authority. The first vehicle is complete when one light chest returns safely—not when every available part fits on the frame."
+        ]
+      },
+      {
+        "heading": "Upgrade by Route, Not by Decoration",
+        "bullets": [
+          "Rough road: add four Off-Road Suspension units and retest rollover behavior.",
+          "Long night route: protect fuel and add two Switch-controlled Headlights.",
+          "Second chest: extend the wheelbase before loading it.",
+          "Heavy tool head: move to a dedicated mining or harvesting chassis."
         ]
       }
     ],
     "relatedWiki": [
-      "vacuum-pump",
-      "water-system",
-      "sensor",
-      "fertilizer"
+      "bearing",
+      "connect-tool",
+      "lift",
+      "drivers-seat",
+      "gas-engine",
+      "large-chest",
+      "suspension"
     ],
     "seo": {
-      "title": "Scrap Mechanic Guides - Automated Farming",
-      "description": "In Scrap Mechanic, automate planting, watering, fertilizer, and harvesting with Vacuum Pumps, containers, and tested crop rows. Verify the current role in-game.",
+      "title": "Scrap Mechanic First Vehicle - 10 × 16 Starter Car",
+      "description": "Build a Scrap Mechanic starter car with 48 blocks, 6 bearings, 4 wheels, exact connections, load tests, rollover recovery, and symptom-based steering fixes.",
       "keywords": [
-        "Scrap Mechanic automated farming",
-        "Scrap Mechanic Vacuum Pump farm",
-        "Scrap Mechanic watering system"
+        "Scrap Mechanic first vehicle",
+        "Scrap Mechanic starter car",
+        "Scrap Mechanic bearing direction",
+        "Scrap Mechanic car not steering",
+        "Scrap Mechanic beginner build"
       ]
-    }
+    },
+    "media": [
+      {
+        "src": "/images/wiki/bearing.webp",
+        "alt": "Bearing part icon from Scrap Mechanic",
+        "caption": "Six bearings define the starter chassis: four wheel hubs and two front steering pivots. Direction errors should be fixed before bodywork hides the connections."
+      },
+      {
+        "src": "/images/wiki/connect-tool.webp",
+        "alt": "Connect Tool icon from Scrap Mechanic",
+        "caption": "Use the Connect Tool to separate steering bearings, drive bearings, engine throttle, and optional lights into readable groups."
+      }
+    ],
+    "tables": [
+      {
+        "caption": "VEH-01 starter bill",
+        "headers": [
+          "Part",
+          "Quantity",
+          "Job"
+        ],
+        "rows": [
+          [
+            "Wood Block Level 1",
+            "48",
+            "Low ladder frame"
+          ],
+          [
+            "Bearing",
+            "6",
+            "4 wheel hubs + 2 steering pivots"
+          ],
+          [
+            "Wheel",
+            "4",
+            "Road contact"
+          ],
+          [
+            "Driver's Seat Level 1",
+            "1",
+            "Steering and throttle input"
+          ],
+          [
+            "Gas Engine Level 1",
+            "1",
+            "Drive power"
+          ],
+          [
+            "Switch",
+            "1 optional",
+            "Headlight control"
+          ],
+          [
+            "Headlight",
+            "2 optional",
+            "Night route visibility"
+          ],
+          [
+            "Large Chest",
+            "1 maximum for first test",
+            "Low-mounted cargo"
+          ]
+        ]
+      },
+      {
+        "caption": "Frame and connection specification",
+        "headers": [
+          "System",
+          "Setting",
+          "Pass condition"
+        ],
+        "rows": [
+          [
+            "Footprint",
+            "10 × 16 blocks",
+            "Symmetrical rails and three or more crossmembers"
+          ],
+          [
+            "Ground clearance",
+            "2 blocks",
+            "Shallow ditch crossed diagonally"
+          ],
+          [
+            "Steering",
+            "Front pivots mirrored",
+            "Both full-lock turns clear the frame"
+          ],
+          [
+            "Drive",
+            "Rear-wheel or four-wheel",
+            "All driven wheels agree on forward"
+          ],
+          [
+            "Power",
+            "Low, then one step at a time",
+            "No rollover or steering loss"
+          ],
+          [
+            "Payload",
+            "Driver + one light chest",
+            "Loaded return keeps steering authority"
+          ]
+        ]
+      },
+      {
+        "caption": "Failure diagnosis",
+        "headers": [
+          "Symptom",
+          "Likely cause",
+          "Specific correction"
+        ],
+        "rows": [
+          [
+            "Vehicle fights itself",
+            "One drive bearing reversed",
+            "Inspect arrows and reverse only that hub"
+          ],
+          [
+            "Turns opposite input",
+            "Steering pivots not mirrored",
+            "Reverse one front steering bearing"
+          ],
+          [
+            "Wheel rub at full lock",
+            "Track too narrow or rail too close",
+            "Widen front corners before reducing steering"
+          ],
+          [
+            "Flips after adding chest",
+            "Mass above or behind wheelbase",
+            "Move chest low and forward"
+          ],
+          [
+            "Beaches on road edge",
+            "Clearance below 2 blocks",
+            "Raise local frame without raising cargo"
+          ],
+          [
+            "Cannot recover",
+            "Body covers all Lift points",
+            "Leave exposed front and rear recovery pads"
+          ]
+        ]
+      }
+    ],
+    "relatedGuides": [
+      "beginner-first-hours",
+      "controller-and-logic",
+      "scrap-city-garage-blueprints"
+    ]
   },
   {
     "slug": "controller-and-logic",
@@ -1721,828 +1427,6 @@
     "relatedGuides": [
       "first-vehicle",
       "farming-basics"
-    ]
-  },
-  {
-    "slug": "save-backups-and-branches",
-    "title": "Save Guide - Backups, Old Worlds, and Steam Branches",
-    "description": "Protect Creative and Survival worlds before updating, switching branches, testing mods, or troubleshooting quest progression.",
-    "category": "Troubleshooting",
-    "image": "/images/scrap-mechanic/trailer-1-0.jpg",
-    "imageAlt": "Scrap Mechanic 1.0 Drilling Thunder release artwork",
-    "gameVersion": "1.0.2",
-    "published": "2026-07-28",
-    "updated": "2026-07-28",
-    "readingTime": "8 min",
-    "featured": true,
-    "quickAnswer": "Back up the complete save before changing game versions or mods. Old Creative worlds can load in 1.0, while old Survival worlds require an older branch.",
-    "sections": [
-      {
-        "heading": "Create a Backup Before the Experiment",
-        "steps": [
-          "Close the game so the save is not being written.",
-          "Copy the complete Survival or Creative save to a dated folder outside the active save directory.",
-          "Record the game version and enabled mod list beside the backup.",
-          "Open a copied world first after changing branch or mod configuration."
-        ]
-      },
-      {
-        "heading": "Know the 1.0 Boundary",
-        "paragraphs": [
-          "The official 1.0 release guidance says older Creative worlds remain usable in 1.0. Older Survival worlds require switching to an older Steam version because the full-release Survival world and progression changed substantially."
-        ]
-      },
-      {
-        "heading": "Preserve Evidence for a Real Bug",
-        "bullets": [
-          "Keep the affected save instead of repeatedly overwriting it.",
-          "Record the objective that failed and the action immediately before it.",
-          "Test a copy without incompatible mods.",
-          "Keep the session log when reporting a reproducible problem."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "schematic-box",
-      "schematicbot",
-      "handbook"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Save Backups and Old Worlds",
-      "description": "Back up Scrap Mechanic saves, understand old Survival and Creative world compatibility, and test Steam branches safely. Check each step in-game.",
-      "keywords": [
-        "Scrap Mechanic save backup",
-        "Scrap Mechanic old Survival world",
-        "Scrap Mechanic Steam branch"
-      ]
-    }
-  },
-  {
-    "slug": "excavation-island-mining",
-    "title": "Excavation Island Guide - Underground Mining Loop",
-    "description": "Stage-by-stage Excavation Island loop: prospect, plasma bore, collect, crush, extract—with Minerbot vertical threat rules and potato ammo budgets.",
-    "category": "1.0",
-    "image": "/images/scrap-mechanic/screenshot-07.jpg",
-    "imageAlt": "Underground and industrial Scrap Mechanic exploration scene",
-    "gameVersion": "1.0",
-    "published": "2026-07-29",
-    "updated": "2026-07-30",
-    "readingTime": "12 min",
-    "featured": true,
-    "quickAnswer": "Prospect → Plasma Drill bore with reverse clearance → collect/crush behind the face → extract. Budget Spudgun ammo for Minerbots the way you budget Farmbots on the surface.",
-    "tables": [
-      {
-        "caption": "Mining loop checklist",
-        "headers": [
-          "Stage",
-          "Tool",
-          "Done when…"
-        ],
-        "rows": [
-          [
-            "Scout",
-            "Ore Prospector",
-            "Heading marked; escape road known"
-          ],
-          [
-            "Bore",
-            "Plasma Drill",
-            "Short corridor reverses cleanly"
-          ],
-          [
-            "Collect",
-            "Ore Collector",
-            "Material leaves the dig pocket"
-          ],
-          [
-            "Process",
-            "Ore Crusher",
-            "Output sits in labeled chests"
-          ],
-          [
-            "Extract",
-            "Surface hauler",
-            "Full load on the road, not deeper"
-          ]
-        ]
-      },
-      {
-        "caption": "Loadout before the first deep bore",
-        "headers": [
-          "Item",
-          "Why"
-        ],
-        "rows": [
-          [
-            "Spudgun + 60+ potatoes",
-            "Minerbot / interrupt fights"
-          ],
-          [
-            "Cookbot perk meal",
-            "Health + travel perks"
-          ],
-          [
-            "Glowsticks / headlights",
-            "Vertical sightlines"
-          ],
-          [
-            "Repair blocks",
-            "Tool mount and wheel recovery"
-          ],
-          [
-            "Empty chest capacity",
-            "Ore + rare finds"
-          ]
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "heading": "Do Not Arrive Empty-Handed",
-        "paragraphs": [
-          "Excavation Island is a progression region, not a casual sightseeing stop. Bring food with useful Cookbot perks, a Spudgun reserve, Glowsticks or vehicle lights, repair blocks, and a mining frame that can reverse without rebuilding itself underground."
-        ],
-        "bullets": [
-          "Leave fragile cargo haulers on the surface approach.",
-          "Carry a Respawn Bed only if you understand its limited uses.",
-          "Confirm the surface landmark and road back before the first deep bore."
-        ]
-      },
-      {
-        "heading": "Run the Mining Loop in Order",
-        "steps": [
-          "Use the Ore Prospector to choose a dig heading.",
-          "Open a short Plasma Drill corridor and confirm reverse clearance.",
-          "Clear Cablebots, Minerbots, or Drill Spawners before extending.",
-          "Collect ore, process it at the Ore Crusher behind the dig face, and store output.",
-          "Retreat with a full inventory instead of forcing one more tunnel."
-        ]
-      },
-      {
-        "heading": "Expect Vertical Threats",
-        "paragraphs": [
-          "Minerbots attack from above and can crash into vehicles after being shot down. Keep ceiling sightlines, avoid parking the only engine under the flight path, and treat every new cave opening as an ambush check rather than free space."
-        ]
-      },
-      {
-        "heading": "Claygun Helps Routes, Not Absolute Defense",
-        "paragraphs": [
-          "Shape ramps and work floors with the Claygun, but do not rely on clay walls alone. Digging enemies and spawn pressure can invalidate a terrain-only bunker. Combine shaped ground with open kite space and a working vehicle exit."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "plasma-drill",
-      "plasma-saw",
-      "minerbot",
-      "spudgun",
-      "glowstick"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Excavation Island Mining",
-      "description": "Mine Scrap Mechanic Excavation Island with Plasma Drills, Ore Collectors, Crushers, Prospectors, and a plan for Cablebots and Minerbots. Confirm it in-game.",
-      "keywords": [
-        "Scrap Mechanic Excavation Island",
-        "Scrap Mechanic mining guide",
-        "Scrap Mechanic Plasma Drill",
-        "Scrap Mechanic underground"
-      ]
-    }
-  },
-  {
-    "slug": "get-spud-gun",
-    "title": "How to Get a Spud Gun in Scrap Mechanic 1.0",
-    "description": "Follow the current 1.0 quest and schematic path to unlock and craft a Spud Gun for Survival combat and Warehouse runs.",
-    "category": "Progression",
-    "image": "/images/wiki/spudgun.webp",
-    "imageAlt": "Spudgun weapon icon from Scrap Mechanic",
-    "gameVersion": "1.0",
-    "published": "2026-07-29",
-    "updated": "2026-07-29",
-    "readingTime": "7 min",
-    "featured": true,
-    "quickAnswer": "In 1.0, progress the yellow main quest through the Watchtower rebuilding chain to receive the Spud Gun schematic, unlock it through schematic progression, then craft and stock ammunition before Warehouse or Farmbot fights.",
-    "sections": [
-      {
-        "heading": "Follow the Yellow Markers First",
-        "paragraphs": [
-          "Older Early Access trading routes are not a safe substitute for the current 1.0 unlock path. Use the Logbook, complete the named main objectives, and let the Spud Gun schematic reward register before inventing a side farm just to force an old guide to work."
-        ],
-        "bullets": [
-          "Distinguish yellow main quests from blue builder and green Farmer side work.",
-          "Do not spend every Component Kit on cosmetics before the combat unlock.",
-          "Confirm the schematic appears in the unlock interface after the quest reward."
-        ]
-      },
-      {
-        "heading": "Craft and Supply the Weapon",
-        "steps": [
-          "Unlock the Spud Gun recipe through the schematic reward.",
-          "Gather the current Craftbot ingredients shown in your client.",
-          "Craft the gun and a first ammunition reserve.",
-          "Test fire away from crops and fragile vehicles.",
-          "Pack spare ammo before Warehouse, Farmbot, or Trash Bot trips."
-        ]
-      },
-      {
-        "heading": "What the Spud Gun Unlocks in Practice",
-        "paragraphs": [
-          "Ranged pressure makes Farmbots, Tapebots, and rooftop boss fights manageable. Mountable Spudguns and later potato weapons expand base defense, but the handheld Spud Gun is the first tool that turns dangerous structures into planned expeditions instead of panic retreats."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "spudgun",
-      "schematicbot",
-      "schematic-box",
-      "farmbot",
-      "tapebot"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - How to Get a Spud Gun",
-      "description": "Unlock and craft the Scrap Mechanic 1.0 Spud Gun through the main quest schematic path, then stock ammo for Warehouse and Farmbot fights. Confirm it in-game.",
-      "keywords": [
-        "Scrap Mechanic Spud Gun",
-        "how to get Spud Gun",
-        "Scrap Mechanic Spudgun unlock",
-        "Scrap Mechanic 1.0 weapons"
-      ]
-    }
-  },
-  {
-    "slug": "beat-trash-bot",
-    "title": "How to Beat the Trash Bot",
-    "description": "Prepare a Warehouse rooftop fight against the Scrap Mechanic 1.0 Trash Bot with ammo, food perks, and a clean escape plan.",
-    "category": "Combat",
-    "image": "/images/scrap-mechanic/screenshot-05.jpg",
-    "imageAlt": "Hostile industrial Scrap Mechanic combat scene",
-    "gameVersion": "1.0",
-    "published": "2026-07-29",
-    "updated": "2026-07-29",
-    "readingTime": "8 min",
-    "featured": true,
-    "quickAnswer": "Clear lesser Warehouse bots first, leave cargo outside, bring Spudgun ammo plus Cookbot food perks, kite on open roof space, and extract loot only after the Trash Bot is down.",
-    "sections": [
-      {
-        "heading": "Preparation Checklist",
-        "bullets": [
-          "Spudgun with a real ammunition reserve, plus Cornades if available.",
-          "Cooked food that restores health and grants useful combat perks.",
-          "A parked escape vehicle outside the immediate roof fight.",
-          "No valuable packing crates or rare schematics left on the approach."
-        ]
-      },
-      {
-        "heading": "Fight Sequence",
-        "steps": [
-          "Clear Tapebots and other interior threats that can shoot into the climb.",
-          "Secure the rooftop entry and identify lateral kite space.",
-          "Prioritize explosive or interrupt enemies if they spawn with the boss.",
-          "Keep moving; do not stand in a corner against a large bot.",
-          "Recover ammo and move loot to the vehicle before exploring deeper."
-        ]
-      },
-      {
-        "heading": "Common Failures",
-        "paragraphs": [
-          "Most failed Trash Bot runs start before the fight: overloaded cargo, empty food, or a climb that dumps the player into a Tapebot angle. Treat the roof as a prepared arena, not the last room of a loot binge."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "farmbot",
-      "spudgun",
-      "cornade",
-      "tapebot",
-      "spud-shotgun"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - How to Beat the Trash Bot",
-      "description": "Beat the Scrap Mechanic Trash Bot with Warehouse preparation, Spudgun ammo, food perks, kite space, and a clean extract. Check each step in-game.",
-      "keywords": [
-        "Scrap Mechanic Trash Bot",
-        "how to beat Trash Bot",
-        "Scrap Mechanic Warehouse boss",
-        "Scrap Mechanic 1.0 boss"
-      ]
-    }
-  },
-  {
-    "slug": "health-food-perks",
-    "title": "Health, Food, and Perk Guide for Scrap Mechanic 1.0",
-    "description": "Understand the 1.0 health system where food and drink restore HP and Cookbot meals grant combat and travel perks.",
-    "category": "Survival",
-    "image": "/images/scrap-mechanic/screenshot-03.jpg",
-    "imageAlt": "Farming and survival supplies in Scrap Mechanic",
-    "gameVersion": "1.0",
-    "published": "2026-07-29",
-    "updated": "2026-07-29",
-    "readingTime": "8 min",
-    "featured": true,
-    "quickAnswer": "Forget old hunger-calorie tables. In 1.0, food and drink restore health directly, and Cookbot meals grant perks such as faster movement, reduced fall damage, quicker sledge swings, or regeneration before hard fights.",
-    "sections": [
-      {
-        "heading": "What Changed",
-        "paragraphs": [
-          "Scrap Mechanic 1.0 replaces the older hunger-focused loop with a health-first system. Raw produce still matters for farming and trading, but prepared Cookbot food is now combat and expedition preparation rather than a vague calorie fill."
-        ],
-        "bullets": [
-          "Eat to recover HP before and during dangerous routes.",
-          "Cook deliberate perk meals before Warehouse, mining, or Farmbot work.",
-          "Keep a travel food stack separate from seed and trade crates."
-        ]
-      },
-      {
-        "heading": "Build a Simple Food Routine",
-        "steps": [
-          "Keep a small protected farm for reliable ingredients.",
-          "Place the Cookbot beside labeled ingredient and finished-meal chests.",
-          "Cook a combat meal and a travel meal before long trips.",
-          "Restock after each Warehouse, mining, or raid defense session."
-        ]
-      },
-      {
-        "heading": "Perks Are Loadout",
-        "paragraphs": [
-          "Preview coverage and player reports highlight perks such as faster movement, reduced fall damage, quicker sledgehammer swings, and health regeneration. Exact recipe names can shift with patches, so trust the live Cookbot interface and treat food as part of the loadout checklist beside ammo and fuel."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "crafting-bots",
-      "tomato",
-      "potato",
-      "water-bucket",
-      "component-kit"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Health Food and Perks",
-      "description": "Learn the Scrap Mechanic 1.0 health system, Cookbot food restoration, and perk meals for combat and exploration. Use the checks before departure.",
-      "keywords": [
-        "Scrap Mechanic health",
-        "Scrap Mechanic food perks",
-        "Scrap Mechanic Cookbot",
-        "Scrap Mechanic 1.0 hunger"
-      ]
-    }
-  },
-  {
-    "slug": "claygun-basics",
-    "title": "Claygun Guide - Shape Terrain Without Trapping Yourself",
-    "description": "Use the Scrap Mechanic 1.0 Claygun for roads, ramps, and dig sites while avoiding sealed exits and false defenses.",
-    "category": "Building",
-    "image": "/images/wiki/claygun.webp",
-    "imageAlt": "Claygun terrain tool from Scrap Mechanic",
-    "gameVersion": "1.0",
-    "published": "2026-07-29",
-    "updated": "2026-07-29",
-    "readingTime": "7 min",
-    "quickAnswer": "Use the Claygun to flatten build pads, fix vehicle approaches, and open underground work floors in small reversible steps. Never seal your only exit, and never treat clay walls as dig-proof armor.",
-    "sections": [
-      {
-        "heading": "Safe Uses",
-        "bullets": [
-          "Flatten a pad before placing a Lift or workshop.",
-          "Carve a gentle ramp for a mining or cargo vehicle.",
-          "Widen a dig pocket so Cablebot fights have kite room.",
-          "Repair a washed-out road edge after weather or combat damage."
-        ]
-      },
-      {
-        "heading": "Dangerous Habits",
-        "paragraphs": [
-          "Closing a tunnel behind you, burying a vehicle axle, or building a clay bunker against digging enemies creates recovery problems faster than it solves combat. Always leave a reverse path and a second opening when reshaping underground spaces."
-        ],
-        "steps": [
-          "Make a small change.",
-          "Drive or walk the route both ways.",
-          "Only then expand the shaped area."
-        ]
-      },
-      {
-        "heading": "Creative Versus Survival",
-        "paragraphs": [
-          "Creative mode can treat the Claygun as a sculpting brush with fewer consequences. Survival should treat every clay edit as a logistics decision: fuel to return, bots that dig, and machines that need clearance."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "claygun",
-      "plasma-drill",
-      "minerbot",
-      "lift"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - How to Use the Claygun",
-      "description": "Shape Scrap Mechanic terrain with the 1.0 Claygun for roads, pads, and mining routes without sealing exits or trusting clay as armor. Check each step in-game.",
-      "keywords": [
-        "Scrap Mechanic Claygun",
-        "how to use Claygun",
-        "Scrap Mechanic terrain tool",
-        "Scrap Mechanic terraforming"
-      ]
-    }
-  },
-  {
-    "slug": "creative-mode",
-    "title": "Creative Mode Guide - Build Freely and Bring Creations Back",
-    "description": "Use Scrap Mechanic Creative for prototypes, Garage exports, and unlimited building without Survival pressure.",
-    "category": "Modes",
-    "image": "/images/scrap-mechanic/screenshot-11.jpg",
-    "imageAlt": "Complex Scrap Mechanic creation suitable for Creative prototyping",
-    "gameVersion": "1.0",
-    "published": "2026-07-29",
-    "updated": "2026-07-29",
-    "readingTime": "7 min",
-    "quickAnswer": "Creative is unlimited building; Challenge Mode is the separate puzzle track (1.0.2 fixed empty challenge chests); Garage transfers supported creations into Survival. Prototype here—progress the story in Survival.",
-    "tables": [
-      {
-        "caption": "Mode comparison",
-        "headers": [
-          "Mode",
-          "Resources",
-          "Primary use",
-          "1.0 note"
-        ],
-        "rows": [
-          [
-            "Survival",
-            "Gathered / crafted",
-            "Story, raids, mining, quests",
-            "Full voiced campaign + Excavation Island"
-          ],
-          [
-            "Creative",
-            "Unlimited",
-            "Prototypes, showcases, mod tests",
-            "Old Creative worlds can load; back up first"
-          ],
-          [
-            "Challenge",
-            "Constrained per level",
-            "Puzzle / objective practice",
-            "1.0.2 restored missing challenge chest items"
-          ]
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "heading": "What Creative Is For",
-        "bullets": [
-          "Prototype vehicles, logic, and farms without raids.",
-          "Practice Claygun landscaping and Lift workflows.",
-          "Test mod packs safely before touching a valued Survival save.",
-          "Build showcase creations with the full 1.0 part set."
-        ]
-      },
-      {
-        "heading": "Garage Bridge Into Survival",
-        "paragraphs": [
-          "Scrap City’s Garage can bring supported creations from Creative and Survival saves into an active Survival world. Transfer disposable prototypes first. Garage is not a substitute for schematic unlocks, Component Kits, or raid-ready food."
-        ]
-      },
-      {
-        "heading": "Challenge Mode Without a Thin Separate Page",
-        "paragraphs": [
-          "Challenge Mode sits beside Creative as constrained building practice. Use it between Survival sessions for Lift/logic drills. If a challenge chest looks empty on an old broken session, update to 1.0.2+ before filing a new report."
-        ]
-      },
-      {
-        "heading": "Achievements Ride the Live Branch",
-        "paragraphs": [
-          "Steam Achievements arrived with 1.0. Chase them on current 1.0.x; patch 1.0.1 fixed issues such as Pizzaburger. Do not burn a valued Survival save on experimental mods while hunting unlocks—use a copy."
-        ]
-      },
-      {
-        "heading": "Save Hygiene",
-        "paragraphs": [
-          "Back up Creative worlds before the first 1.0 save or mod experiment. Keep one disposable Creative sandbox for Workshop packs."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "claygun",
-      "lift",
-      "controller",
-      "structural-blocks"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Creative, Challenge & Garage",
-      "description": "Compare Scrap Mechanic Creative, Challenge, and Survival; Garage transfers; 1.0.2 challenge chests; and Steam Achievement branch tips. Confirm it in-game.",
-      "keywords": [
-        "Scrap Mechanic Creative Mode",
-        "Scrap Mechanic Challenge Mode",
-        "Scrap Mechanic Garage",
-        "Scrap Mechanic achievements"
-      ]
-    }
-  },
-  {
-    "slug": "controls",
-    "title": "Scrap Mechanic Controls Guide",
-    "description": "Default building, combat, and Survival interaction bindings—with a checklist for mode differences after 1.0.",
-    "category": "Basics",
-    "image": "/images/wiki/handbook.webp",
-    "imageAlt": "Scrap Mechanic Handbook tool icon",
-    "gameVersion": "1.0",
-    "published": "2026-07-29",
-    "updated": "2026-07-30",
-    "readingTime": "7 min",
-    "quickAnswer": "Left Mouse places, Right Mouse removes or aims weapons, E interacts, Connect Tool wires parts. Re-check the Handbook after updates—Survival aiming and Creative sledge behavior are not identical.",
-    "tables": [
-      {
-        "caption": "Default control map (verify in Settings / Handbook)",
-        "headers": [
-          "Action",
-          "Default",
-          "Notes"
-        ],
-        "rows": [
-          [
-            "Place block/part",
-            "Left Mouse",
-            "Build mode selection"
-          ],
-          [
-            "Remove / aim weapon",
-            "Right Mouse",
-            "Survival: aim Spudguns; Creative sledge block differs"
-          ],
-          [
-            "Interact",
-            "E",
-            "Stations, seats, chests, quest objects"
-          ],
-          [
-            "Connect parts",
-            "Connect Tool drag",
-            "Shows signal/bearing direction arrows"
-          ],
-          [
-            "Lift creation",
-            "Lift tool",
-            "Bearings locked while lifted"
-          ],
-          [
-            "Inventory / hotbar",
-            "Number keys",
-            "Keep food, ammo, repair one press away"
-          ],
-          [
-            "Quest / logbook",
-            "Logbook UI",
-            "Yellow main vs blue/green side markers"
-          ]
-        ],
-        "note": "Bindings are rebindable. After 1.0 patches, confirm anything that “feels wrong” in the Handbook before blaming a bug."
-      }
-    ],
-    "sections": [
-      {
-        "heading": "Build Loop: Place → Connect → Test Off Lift",
-        "steps": [
-          "Place a disposable frame on the Lift.",
-          "Add seat, engine, bearings; Connect Tool every drive link.",
-          "Remove the Lift before judging steering.",
-          "Only then copy the pattern onto a real vehicle."
-        ]
-      },
-      {
-        "heading": "Survival Hotbar Discipline",
-        "bullets": [
-          "Potato stack and Cookbot meal on reachable slots before raids.",
-          "Glowstick or light source for Warehouse / mines.",
-          "Repair blocks separate from decorative scrap."
-        ]
-      },
-      {
-        "heading": "Mode Differences That Break Muscle Memory",
-        "paragraphs": [
-          "Creative sledgehammer hold-to-block behavior is not the Survival Spudgun ADS pattern. Challenge Mode (separate puzzle track; 1.0.2 fixed empty challenge chests) uses constrained parts—do not expect Survival hotkeys to solve Creative logic puzzles automatically."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "handbook",
-      "connect-tool",
-      "lift",
-      "sledgehammer",
-      "spudgun"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Guides - Controls and Keybinds",
-      "description": "Scrap Mechanic default controls table for place, remove, aim, interact, Connect Tool, Lift, and Survival hotbar habits. Check each step in-game.",
-      "keywords": [
-        "Scrap Mechanic controls",
-        "Scrap Mechanic keybinds",
-        "Scrap Mechanic hotkeys",
-        "Scrap Mechanic Connect Tool"
-      ]
-    }
-  },
-  {
-    "slug": "warehouse-key-and-farmbot",
-    "title": "Warehouse Route - Spudguns, Farmbots, Tapebots, and Trashbot",
-    "description": "A combat route with exact weapon damage, Farmbot key drops, Tapebot projectile pressure, Warehouse staging, and Trashbot phase rules.",
-    "category": "Survival",
-    "image": "/images/scrap-mechanic/screenshot-05.jpg",
-    "imageAlt": "Dangerous Scrap Mechanic structure exploration",
-    "gameVersion": "1.0.3",
-    "published": "2026-07-29",
-    "updated": "2026-07-31",
-    "readingTime": "16 min",
-    "quickAnswer": "Budget at least 54 accurate Spudgun hits for a 1500 HP Farmbot, secure its guaranteed Warehouse Key, clear 40 HP Tapebots from hard cover, bank loot outside the entrance, and enter Trashbot phases ready for the eye-open damage window and five exposed-core hits.",
-    "sections": [
-      {
-        "heading": "Stage the Route Before the Farmbot Pull",
-        "steps": [
-          "Unlock or craft the chosen Spudgun and split combat potatoes from farm-defense potatoes.",
-          "Park the cargo vehicle outside the Farmbot kite path.",
-          "Carry healing food, Glowsticks, repair blocks, and one empty loot section.",
-          "Choose open ground with no dead end behind the player.",
-          "Count the ammunition again before firing the first shot."
-        ]
-      },
-      {
-        "heading": "Farmbot: The Key Is the Mandatory Drop",
-        "paragraphs": [
-          "Every Normal Farmbot drops a Warehouse Key. Component Kits at 66.7% and Circuit Boards at 33.3% are additional rolls, not substitutes for the key. Pick the key up immediately; do not leave it exposed while chasing a smaller bot or repairing cosmetic vehicle damage."
-        ]
-      },
-      {
-        "heading": "Warehouse: Convert Rooms Into Single Angles",
-        "bullets": [
-          "Peek from a hard corner; never fight from the center of an atrium.",
-          "Blue Tapebot shots at 55 and Red shots at 62 can erase a bad open crossing quickly.",
-          "Move valuable loot to an exterior chest between sections.",
-          "Use Glowsticks to reveal the next angle, not only the floor under the player.",
-          "Retreat to cleared space instead of backing into an unopened side room."
-        ]
-      },
-      {
-        "heading": "Do Not Treat Trashbot as a Larger Farmbot",
-        "paragraphs": [
-          "Trashbot is controlled by attack patterns, eye state, phase health, and an exposed-core recovery sequence. Continuous fire into a closed eye wastes potatoes and hides the next projectile wall. Reload before the opening, deliver the phase damage, land five core hits, and reset movement space."
-        ]
-      },
-      {
-        "heading": "Extraction Is a Separate Phase",
-        "steps": [
-          "Move keys and progression items to the exterior vehicle first.",
-          "Unload the current section before opening optional rooms.",
-          "Keep the return route lit and free of parked debris.",
-          "Leave when healing or miss reserve reaches the route minimum.",
-          "Repair and restock outside the combat structure."
-        ]
-      }
-    ],
-    "relatedWiki": [
-      "spudgun",
-      "spud-shotgun",
-      "spudling-gun",
-      "farmbot",
-      "tapebot",
-      "haybot",
-      "trashbot",
-      "glowstick"
-    ],
-    "seo": {
-      "title": "Scrap Mechanic Warehouse, Farmbot and Trashbot Guide",
-      "description": "Plan Scrap Mechanic Warehouse combat with Farmbot ammo math, guaranteed keys, Tapebot damage, loot staging, and Trashbot phase and core data.",
-      "keywords": [
-        "Scrap Mechanic Warehouse guide",
-        "Scrap Mechanic Farmbot",
-        "Scrap Mechanic Warehouse Key",
-        "Scrap Mechanic Tapebot",
-        "Scrap Mechanic Trashbot",
-        "Scrap Mechanic Spudgun ammo"
-      ]
-    },
-    "media": [
-      {
-        "src": "/images/wiki/farmbot.png",
-        "alt": "Farmbot image from Scrap Mechanic",
-        "caption": "Farmbot: 1500 HP, guaranteed Warehouse Key, 66.7% Component Kit roll, and 33.3% Circuit Board roll on Normal difficulty."
-      },
-      {
-        "src": "/images/wiki/tapebot.png",
-        "alt": "Tapebot image from Scrap Mechanic",
-        "caption": "Tapebots have only 40 HP but deliver ranged pressure: Blue projectiles deal 55 damage and Red projectiles deal 62."
-      }
-    ],
-    "tables": [
-      {
-        "caption": "Weapon budget against a 1500 HP Farmbot",
-        "headers": [
-          "Weapon",
-          "Damage / potato cost",
-          "Accurate hit floor",
-          "Use condition"
-        ],
-        "rows": [
-          [
-            "Spudgun",
-            "28 / 1 Potato",
-            "54",
-            "Safest range and predictable economy"
-          ],
-          [
-            "Spud Shotgun",
-            "64 / 2 Potatoes",
-            "≈24 full hits",
-            "Only when full spread damage lands"
-          ],
-          [
-            "Spudling Gun",
-            "20 / 1 Potato",
-            "≈75 chunks",
-            "Sustained fire after spin-up"
-          ],
-          [
-            "Mountable Spudgun",
-            "28 / 1 Potato",
-            "54",
-            "Connected Potato Ammo Container required"
-          ]
-        ],
-        "note": "Carry a miss and escape reserve beyond the hit floor. Losing the hauler costs more than waiting for another prepared pull."
-      },
-      {
-        "caption": "Combat target and loot decisions",
-        "headers": [
-          "Target",
-          "Normal data",
-          "Progression value",
-          "Immediate action"
-        ],
-        "rows": [
-          [
-            "Farmbot",
-            "1500 HP; kick 10; swipe 35",
-            "Warehouse Key always",
-            "Pick up the key before secondary loot"
-          ],
-          [
-            "Tapebot",
-            "40 HP; Blue 55 / Red 62 damage",
-            "Battery ≈35.7%; Kit ≈14.3%",
-            "Clear one sightline at a time"
-          ],
-          [
-            "Haybot",
-            "100 HP; poke 20; swing 30",
-            "Scrap Metal always",
-            "Do not spend Farmbot reserve unnecessarily"
-          ],
-          [
-            "Trashbot",
-            "30 HP per phase before scaling",
-            "Scripted boss progression",
-            "Damage eye window, then land 5 core hits"
-          ]
-        ]
-      },
-      {
-        "caption": "Trashbot arena timing",
-        "headers": [
-          "State",
-          "Data",
-          "Player job"
-        ],
-        "rows": [
-          [
-            "Pattern active / eye closed",
-            "No normal damage window",
-            "Read projectile or shockwave path"
-          ],
-          [
-            "Eye open",
-            "30 phase HP before player multiplier",
-            "Use the preloaded firing lane"
-          ],
-          [
-            "Core exposed",
-            "5 required core hits",
-            "Keep one shooter line clear"
-          ],
-          [
-            "Stun window",
-            "3 seconds",
-            "Reload and reposition immediately"
-          ],
-          [
-            "Explosion event",
-            "30-unit radius",
-            "Leave the center before greed damage"
-          ]
-        ],
-        "note": "The encounter tracks the maximum player count it has seen, so a co-op phase should not be budgeted like a fresh solo arena."
-      }
-    ],
-    "relatedGuides": [
-      "farming-basics",
-      "achievements"
     ]
   },
   {

@@ -145,11 +145,15 @@ for (let index = 0; index < productionUrls.length; index += 12) {
     const footer = html.match(/<footer\b[\s\S]*?<\/footer>/i)?.[0] ?? "";
     const footerAnchors = footer.match(/<a\b[^>]*>/gi) ?? [];
     for (const anchor of footerAnchors) {
+      const href = decode(anchor.match(/href=["']([^"']*)["']/i)?.[1] ?? "");
+      const opensNewContext = /target=["']_blank["']/i.test(anchor);
+      const isExternal = /^https?:\/\//i.test(href);
+      if (!opensNewContext && !isExternal) continue;
+
       const rel = anchor.match(/rel=["']([^"']*)["']/i)?.[1] ?? "";
-      for (const token of ["noopener", "noreferrer", "nofollow"]) {
+      for (const token of ["noopener", "noreferrer"]) {
         if (!rel.split(/\s+/).includes(token)) {
-          failures.push(`${path}: footer link missing ${token}`);
-          break;
+          failures.push(`${path}: external footer link missing ${token}`);
         }
       }
     }

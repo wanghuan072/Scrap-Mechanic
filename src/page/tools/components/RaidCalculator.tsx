@@ -3,88 +3,21 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import {
-  maximumRaidPlantValue,
   raidCrops,
-  raidCropValueThresholds,
-  raidLevels,
 } from "@/lib/data/raid-calculator";
+import {
+  calculateRaid,
+  normalizeWholeNumber,
+  type CropCounts,
+} from "@/lib/tools/raid-calculator";
 import { RaidForecast } from "./RaidForecast";
 import styles from "@/style/page/tools/raid-calculator.module.css";
-
-type CropCounts = Record<string, number>;
-
-function normalizeCount(value: number, minimum = 0, maximum = 9999) {
-  if (!Number.isFinite(value)) return minimum;
-  return Math.max(minimum, Math.min(maximum, Math.floor(value)));
-}
-
-function getRaidLevel(plantValue: number) {
-  if (plantValue <= 0) return undefined;
-  if (plantValue > raidCropValueThresholds.at(-1)!) return raidLevels.at(-1);
-
-  for (let index = raidCropValueThresholds.length - 1; index >= 0; index -= 1) {
-    if (plantValue >= raidCropValueThresholds[index]) {
-      return raidLevels[Math.min(index, raidLevels.length - 2)];
-    }
-  }
-
-  return undefined;
-}
-
-function getLevelFraction(plantValue: number, level: number) {
-  if (plantValue <= 0) return 0;
-  if (plantValue >= maximumRaidPlantValue) return 1;
-
-  const minimum = raidCropValueThresholds[level - 1];
-  const maximum =
-    level < raidLevels.length
-      ? raidCropValueThresholds[level]
-      : maximumRaidPlantValue;
-
-  return Math.max(0, Math.min(1, (plantValue - minimum) / (maximum - minimum)));
-}
 
 export function RaidCalculator() {
   const [counts, setCounts] = useState<CropCounts>({});
   const [players, setPlayers] = useState(1);
 
-  const result = useMemo(() => {
-    const plantValue = raidCrops.reduce(
-      (total, crop) => total + (counts[crop.slug] ?? 0) * crop.value,
-      0,
-    );
-    const level = getRaidLevel(plantValue);
-    const playerModifier = Math.min(1 + (players - 1) * 0.5, 2);
-
-    if (!level) {
-      return {
-        plantValue,
-        level: undefined,
-        playerModifier,
-        budget: 0,
-        fraction: 0,
-        nextThreshold: 1,
-      };
-    }
-
-    const fraction = getLevelFraction(plantValue, level.level);
-    const budget = Math.ceil(
-      fraction * (level.budget.maximum - level.budget.minimum) +
-        level.budget.minimum * playerModifier,
-    );
-    const nextLevel = raidLevels.find(
-      (candidate) => candidate.minimumPlantValue > plantValue,
-    );
-
-    return {
-      plantValue,
-      level,
-      playerModifier,
-      budget,
-      fraction,
-      nextThreshold: nextLevel?.minimumPlantValue,
-    };
-  }, [counts, players]);
+  const result = useMemo(() => calculateRaid(counts, players), [counts, players]);
 
   const activeCrops = useMemo(
     () =>
@@ -105,7 +38,7 @@ export function RaidCalculator() {
   const totalPlants = activeCrops.reduce((total, crop) => total + crop.count, 0);
 
   function setCropCount(slug: string, value: number) {
-    const normalized = normalizeCount(value);
+    const normalized = normalizeWholeNumber(value);
     setCounts((current) => {
       if (normalized === 0) {
         const next = { ...current };
@@ -232,7 +165,9 @@ export function RaidCalculator() {
             <span>Players</span>
             <select
               value={players}
-              onChange={(event) => setPlayers(normalizeCount(Number(event.target.value), 1, 4))}
+              onChange={(event) =>
+                setPlayers(normalizeWholeNumber(Number(event.target.value), 1, 4))
+              }
             >
               <option value="1">1 player</option>
               <option value="2">2 players</option>

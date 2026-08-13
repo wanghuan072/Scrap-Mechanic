@@ -6,6 +6,10 @@ import type {
   CraftingRecipe,
   RecipeUnlockRoute,
 } from "@/lib/game/player-data";
+import {
+  calculateCraftingOrder,
+  normalizeCraftQuantity,
+} from "@/lib/tools/crafting-planner";
 import styles from "@/style/page/tools/crafting-planner.module.css";
 
 type CraftingPlannerProps = {
@@ -23,11 +27,6 @@ const unlockLabels: Record<RecipeUnlockRoute, string> = {
   default: "Available from the start",
   core: "Craftbot core set",
 };
-
-function normalizeQuantity(value: number) {
-  if (!Number.isFinite(value)) return 1;
-  return Math.max(1, Math.min(9999, Math.floor(value)));
-}
 
 export function CraftingPlanner({
   recipes,
@@ -87,11 +86,10 @@ export function CraftingPlanner({
   const recipeOptions = recipes.filter(
     (option) => option.output.uuid === selectedUuid,
   );
-  const batches = recipe
-    ? Math.ceil(quantity / Math.max(1, recipe.output.quantity))
-    : 0;
-  const produced = recipe ? batches * recipe.output.quantity : 0;
-  const totalSeconds = recipe ? batches * recipe.craftTime : 0;
+  const { batches, produced, totalSeconds } = calculateCraftingOrder(
+    recipe,
+    quantity,
+  );
   const craftableUuids = useMemo(
     () => new Set(recipes.map((item) => item.output.uuid)),
     [recipes],
@@ -227,7 +225,9 @@ export function CraftingPlanner({
             step="1"
             value={quantity}
             onChange={(event) =>
-              setQuantity(normalizeQuantity(Number(event.currentTarget.value)))
+              setQuantity(
+                normalizeCraftQuantity(Number(event.currentTarget.value)),
+              )
             }
           />
         </label>
