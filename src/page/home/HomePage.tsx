@@ -488,10 +488,13 @@ export default function Home() {
         <section className={`${styles.panel} ${styles.splitPanel}`}>
           <div className={styles.sectionLabel}>
             <div className={styles.sectionIntro}>
-              <h2>Landmarks</h2>
-              <p>Generated-world navigation by role, not coordinates.</p>
+              <h2>Survival map and landmarks</h2>
+              <p>
+                Understand generated-world locations, progression routes, risks,
+                and preparation.
+              </p>
             </div>
-            <Link href="/map">Map desk →</Link>
+            <Link href="/map">Open location guide →</Link>
           </div>
           <div className={styles.landmarkGrid}>
             {mapPreview.map((location) => (

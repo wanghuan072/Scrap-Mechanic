@@ -571,7 +571,12 @@ export const searchDocuments: SearchDocument[] = [
     href: `/map#${location.slug}`,
     type: `Map · ${location.type}`,
     image: "/images/scrap-mechanic/screenshot-09.jpg",
-    keywords: [location.name, location.type, ...location.keywords],
+    keywords: [
+      location.name,
+      ...(location.aliases ?? []),
+      location.type,
+      ...location.keywords,
+    ],
   })),
 ];
 

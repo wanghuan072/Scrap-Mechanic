@@ -149,6 +149,9 @@ export type ToolEntry = {
 export type LocationEntry = {
   slug: string;
   name: string;
+  aliases?: string[];
+  group: "starting-route" | "story" | "exploration" | "region-hazard";
+  kind: "landmark" | "location-group" | "region" | "dynamic-hazard";
   type: string;
   danger: "Low" | "Moderate" | "High" | "Variable";
   description: string;

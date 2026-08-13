@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   fixedRoutes.push({
     path: "/map",
     lastModified: latestContentDate,
-    priority: 0.3,
+    priority: 0.7,
   });
   const toIsoDate = (value: string) => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;

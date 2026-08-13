@@ -2,6 +2,9 @@
   {
     "slug": "crash-site",
     "name": "Crashed Maintenance Ship",
+    "aliases": ["Crash Site", "Crashed Ship"],
+    "group": "starting-route",
+    "kind": "landmark",
     "type": "Starting landmark",
     "danger": "Low",
     "description": "The opening Survival landmark contains the crashed ship, the three-fire Getting Started objective, the nearby Water Bucket pond, the first Master Battery ruin, the Mini Craftbot, and the Logbook route to the Mechanic Station.",
@@ -26,6 +29,8 @@
   {
     "slug": "mechanic-station",
     "name": "Mechanic Station",
+    "group": "starting-route",
+    "kind": "landmark",
     "type": "Early-game hub",
     "danger": "Low",
     "description": "A recognizable station marked by a large illuminated wrench, commonly used as an early workshop, storage point, and vehicle base.",
@@ -46,6 +51,9 @@
   {
     "slug": "packing-station",
     "name": "Packing Station",
+    "aliases": ["Vegetable Packing Station", "Fruit Packing Station"],
+    "group": "starting-route",
+    "kind": "location-group",
     "type": "Produce logistics",
     "danger": "Moderate",
     "description": "A road-side destination used in produce logistics. Its value comes from turning farming into a transport problem rather than a chest-management problem.",
@@ -67,6 +75,9 @@
   {
     "slug": "farmers-hideout",
     "name": "Farmers Hideout",
+    "aliases": ["Farmers' Hideout", "Trader"],
+    "group": "starting-route",
+    "kind": "landmark",
     "type": "Trading location",
     "danger": "Moderate",
     "description": "A progression and trading location where prepared deliveries become useful equipment. The route matters as much as the destination because cargo can be bulky.",
@@ -88,6 +99,8 @@
   {
     "slug": "warehouse",
     "name": "Warehouse",
+    "group": "story",
+    "kind": "location-group",
     "type": "Hostile structure",
     "danger": "High",
     "description": "A large multi-level combat and exploration landmark associated with ranged bot threats, valuable materials, and difficult recovery runs.",
@@ -111,6 +124,9 @@
   {
     "slug": "growlabs",
     "name": "Growlabs",
+    "aliases": ["Grow Labs", "Growlab"],
+    "group": "story",
+    "kind": "location-group",
     "type": "1.0 story location",
     "danger": "High",
     "description": "Growlabs are part of the expanded 1.0 Survival world and story. They combine exploration, combat, and progression in spaces where preparation matters.",
@@ -134,6 +150,9 @@
   {
     "slug": "excavation-island",
     "name": "Excavation Island",
+    "aliases": ["Miner Island", "Mining Island"],
+    "group": "story",
+    "kind": "region",
     "type": "1.0 mining region",
     "danger": "Variable",
     "description": "A new 1.0 region built around abandoned mines, underground digging, rare discoveries, and machine-led excavation.",
@@ -149,14 +168,42 @@
     "keywords": [
       "excavation island",
       "miner island",
+      "mining island",
       "abandoned mine",
       "drilling thunder",
       "plasma drill"
     ]
   },
   {
+    "slug": "mining-hub",
+    "name": "Mining Hub",
+    "aliases": ["Underground Mining Hub"],
+    "group": "story",
+    "kind": "landmark",
+    "type": "1.0 mining facility",
+    "danger": "High",
+    "description": "The Mining Hub is a later Survival progression facility connected to underground extraction, processing stations, the Vault, and the Drilling Thunder story route.",
+    "navigation": "Follow the active mining objective and establish a surface staging point before committing a loaded excavation vehicle to the underground route.",
+    "preparation": [
+      "Carry lighting, food, ammunition, and repair materials.",
+      "Keep the return tunnel wide enough for a loaded mining vehicle.",
+      "Store important discoveries before advancing to the next objective.",
+      "Confirm which processing station the current quest requires."
+    ],
+    "relatedHref": "/wiki/quests#the-mining-hub",
+    "relatedLabel": "Open the Mining Hub quest",
+    "keywords": [
+      "mining hub",
+      "underground mining",
+      "the vault",
+      "drilling thunder"
+    ]
+  },
+  {
     "slug": "desert-biome",
     "name": "Desert Biome",
+    "group": "region-hazard",
+    "kind": "region",
     "type": "1.0 biome",
     "danger": "Variable",
     "description": "A reworked 1.0 biome with open sightlines, different travel demands, and weather hazards that can interrupt vehicle routes.",
@@ -178,6 +225,9 @@
   {
     "slug": "tornado-hazard",
     "name": "Tornado Weather Hazard",
+    "aliases": ["Tornado"],
+    "group": "region-hazard",
+    "kind": "dynamic-hazard",
     "type": "Weather hazard",
     "danger": "High",
     "description": "1.0 weather events that can appear in desert and open areas. Official notes suggest avoiding them; community builds often try to drive through anyway.",
@@ -199,6 +249,9 @@
   {
     "slug": "scrap-city-garage",
     "name": "Scrap City Garage",
+    "aliases": ["Garage", "Scrap Garage"],
+    "group": "story",
+    "kind": "landmark",
     "type": "1.0 transfer hub",
     "danger": "Low",
     "description": "A 1.0 Garage destination used to bring supported Creative and Survival creations into an active Survival world.",
@@ -220,6 +273,9 @@
   {
     "slug": "ruins",
     "name": "Ruins and Ruin City",
+    "aliases": ["Ruins", "Ruin City"],
+    "group": "exploration",
+    "kind": "location-group",
     "type": "Exploration area",
     "danger": "Variable",
     "description": "Ruins range from small roadside loot stops to dense areas with multiple approach angles and stronger threats.",
@@ -241,6 +297,9 @@
   {
     "slug": "chemical-lake",
     "name": "Chemical Lake",
+    "aliases": ["Chemical Pond", "Chemical Lakes"],
+    "group": "exploration",
+    "kind": "location-group",
     "type": "Resource landmark",
     "danger": "Moderate",
     "description": "A hazardous-looking resource landmark that is useful to identify when planning chemical collection and nearby travel routes.",
@@ -261,6 +320,8 @@
   {
     "slug": "silo-district",
     "name": "Silo District",
+    "group": "exploration",
+    "kind": "landmark",
     "type": "Industrial landmark",
     "danger": "High",
     "description": "A large industrial area that can expose vehicles and players to dangerous bot encounters across open approaches.",
@@ -281,6 +342,9 @@
   {
     "slug": "farmer-shacks",
     "name": "Farmer Shacks and Camps",
+    "aliases": ["Farmer Shacks", "Campsites"],
+    "group": "exploration",
+    "kind": "location-group",
     "type": "Small structure",
     "danger": "Variable",
     "description": "Small structures and camps are useful resupply stops, route markers, and sources of ordinary building material during exploration.",
@@ -302,6 +366,8 @@
   {
     "slug": "farmbot-scrapyard",
     "name": "Farmbot Scrapyard",
+    "group": "exploration",
+    "kind": "location-group",
     "type": "Danger zone",
     "danger": "High",
     "description": "A location where the environment itself warns that heavy hostile machinery may be nearby.",
