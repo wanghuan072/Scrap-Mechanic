@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { BotFieldGuide } from "@/page/wiki/components/BotFieldGuide";
 import { SchematicUnlockDirectory } from "@/page/wiki/components/SchematicUnlockDirectory";
@@ -230,6 +231,8 @@ export default async function WikiCategoryPage({
           </div>
         </section>
 
+        <GptAd slotId="div-gpt-ad-wiki-schematics-1" unit="banner1" />
+
         <section className={styles.schematicDirectorySection}>
           <div className="container">
             <SchematicUnlockDirectory
@@ -238,6 +241,8 @@ export default async function WikiCategoryPage({
             />
           </div>
         </section>
+
+        <GptAd slotId="div-gpt-ad-wiki-schematics-2" unit="banner2" />
 
         <section className={styles.schematicHelp}>
           <div className={`container ${styles.schematicHelpInner}`}>
@@ -324,6 +329,8 @@ export default async function WikiCategoryPage({
           </div>
         </div>
       </section>
+
+      <GptAd slotId={`div-gpt-ad-wiki-${slug}-1`} unit="banner1" />
 
       <section className={styles.directory}>
         <div className={`container ${styles.directoryGrid}`}>

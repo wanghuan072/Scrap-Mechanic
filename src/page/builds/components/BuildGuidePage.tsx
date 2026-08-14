@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
 import { JsonLd } from "@/seo/JsonLd";
@@ -381,6 +382,11 @@ export function BuildGuidePage({
         </div>
       </section>
 
+      <GptAd
+        slotId={`div-gpt-ad-build-${entry.slug}-1`}
+        unit="banner1"
+      />
+
       <section className={styles.stagesSection} id="stages">
         <div className="container">
           <header className={styles.wideHeading}>
@@ -515,6 +521,11 @@ export function BuildGuidePage({
           </div>
         </div>
       </section>
+
+      <GptAd
+        slotId={`div-gpt-ad-build-${entry.slug}-2`}
+        unit="banner2"
+      />
 
       <section className={styles.variantsSection}>
         <div className={`container ${styles.variantsGrid}`}>

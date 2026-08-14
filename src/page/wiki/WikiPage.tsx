@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { SectionHero } from "@/components/common/SectionHero";
 import { PageJsonLd } from "@/seo/JsonLd";
 import {
@@ -181,6 +182,8 @@ export default function WikiPage() {
           </nav>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-wiki-1" unit="banner1" />
 
       <section className="page-section page-section-dark">
         <div className="container">

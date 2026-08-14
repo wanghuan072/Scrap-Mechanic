@@ -97,6 +97,11 @@ for (let index = 0; index < productionUrls.length; index += 12) {
     const canonical = getLink(html, "canonical");
     const ogImage = getMeta(html, "property", "og:image");
     const twitterImage = getMeta(html, "name", "twitter:image");
+    const expectedSocialImage = `${productionOrigin}${
+      path === "/map"
+        ? "/images/og/scrap-mechanic-map.jpg"
+        : "/images/og-image.png"
+    }`;
     const h1Count = (html.match(/<h1\b/gi) ?? []).length;
     const headingRanks = [...html.matchAll(/<h([1-4])\b/gi)].map((match) =>
       Number(match[1]),
@@ -112,10 +117,10 @@ for (let index = 0; index < productionUrls.length; index += 12) {
     if (canonical !== productionUrl) {
       failures.push(`${path}: canonical ${canonical || "missing"}`);
     }
-    if (ogImage !== `${productionOrigin}/images/og-image.png`) {
+    if (ogImage !== expectedSocialImage) {
       failures.push(`${path}: unexpected og:image ${ogImage || "missing"}`);
     }
-    if (twitterImage !== `${productionOrigin}/images/og-image.png`) {
+    if (twitterImage !== expectedSocialImage) {
       failures.push(`${path}: unexpected twitter:image ${twitterImage || "missing"}`);
     }
     if (h1Count !== 1) failures.push(`${path}: ${h1Count} H1 elements`);

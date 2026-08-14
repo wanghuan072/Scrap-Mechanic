@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { CraftingPlanner } from "@/page/tools/components/CraftingPlanner";
 import { JsonLd } from "@/seo/JsonLd";
@@ -104,6 +105,8 @@ export default function CraftingPlannerPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-crafting-planner-1" unit="banner1" />
+
       <section className={styles.workflowSection}>
         <div className={`container ${styles.workflowGrid}`}>
           <header>
@@ -162,6 +165,8 @@ export default function CraftingPlannerPage() {
           </article>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-crafting-planner-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqGrid}`}>

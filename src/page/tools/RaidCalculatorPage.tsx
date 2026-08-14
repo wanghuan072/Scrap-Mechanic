@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RaidCalculator } from "@/page/tools/components/RaidCalculator";
 import { JsonLd } from "@/seo/JsonLd";
@@ -118,6 +119,8 @@ export default function RaidCalculatorPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-raid-calculator-1" unit="banner1" />
+
       <section className={styles.rulesSection}>
         <div className="container">
           <header className={styles.sectionHeading}>
@@ -201,6 +204,8 @@ export default function RaidCalculatorPage() {
           </article>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-raid-calculator-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqLayout}`}>

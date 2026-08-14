@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import { mods, workshopLeaderboard } from "@/lib/data/mods";
@@ -209,6 +210,8 @@ export default function ModsPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-mods-1" unit="banner1" />
+
       <section className={styles.classics}>
         <div className="container">
           <header className={styles.sectionHeading}>
@@ -329,6 +332,8 @@ export default function ModsPage() {
           </div>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-mods-2" unit="banner2" />
 
       <section className={styles.safety}>
         <div className={`container ${styles.safetyGrid}`}>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
 import { locations } from "@/lib/data/locations";
@@ -9,7 +10,11 @@ import { createMetadata } from "@/seo/metadata";
 import { pageTdk } from "@/seo/tdk";
 import styles from "@/style/page/map/map.module.css";
 
-export const metadata: Metadata = createMetadata(pageTdk.map, "/map");
+const mapOgImage = "/images/og/scrap-mechanic-map.jpg";
+
+export const metadata: Metadata = createMetadata(pageTdk.map, "/map", {
+  image: mapOgImage,
+});
 
 const locationGroups = [
   {
@@ -51,6 +56,12 @@ const kindLabels = {
 
 const interactiveMapUrl = "https://scrap-mechanic-map.vercel.app/";
 const mapReviewDateIso = "2026-08-14";
+const mapReviewDate = "August 14, 2026";
+const mapStats = {
+  regionViews: 18,
+  locationEntries: 376,
+  markerTypes: 5,
+} as const;
 
 const mapFaqs = [
   {
@@ -69,10 +80,9 @@ const mapFaqs = [
       "The viewer displays an X and Y readout and can overlay a Coordinate Grid. Coordinates are most reliable inside the same map reference; confirm the destination in your own world before committing cargo or rare equipment.",
   },
   {
-    question:
-      "Is the Chapter 2 map the same as the Scrap Mechanic 1.0 / Drilling Thunder map?",
+    question: "What happened to the Scrap Mechanic Chapter 2 map?",
     answer:
-      "Chapter 2 was the older name many players used for the next Survival expansion. The released version is Scrap Mechanic 1.0 and Drilling Thunder. Use the viewer's 1.0 region list and compare Terrain, Location Names, and Generated Locations instead of relying on an older cropped map.",
+      "The content many players previously called Chapter 2 was released as Scrap Mechanic 1.0 and Drilling Thunder. Use the viewer's current region list and compare Terrain, Location Names, and Generated Locations instead of relying on an older cropped map.",
   },
   {
     question: "Is this a Scrap Mechanic seed map generator or save editor?",
@@ -128,7 +138,7 @@ const mapTools = [
   {
     number: "01",
     label: "Choose a region",
-    text: "Start with one of 18 region views so surface, lab, underground, and boss geometry never compete for attention.",
+    text: `Start with one of ${mapStats.regionViews} region views so surface, lab, underground, and boss geometry never compete for attention.`,
   },
   {
     number: "02",
@@ -202,6 +212,12 @@ export default function MapPage() {
         type="CollectionPage"
         additionalProperties={{
           dateModified: mapReviewDateIso,
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: `${site.url}${mapOgImage}`,
+            width: 1200,
+            height: 630,
+          },
           author: {
             "@type": "Organization",
             name: site.publisherName,
@@ -254,23 +270,56 @@ export default function MapPage() {
 
         <div className={`container ${styles.heroContent}`}>
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Map" }]} />
-          <span className={styles.eyebrow}>World navigation / location field guide</span>
-          <h1>
-            Scrap Mechanic Map <span>- Interactive Map</span>
-          </h1>
-          <p className={styles.intro}>
-            Explore the major landmarks, progression routes, resource areas, and
-            hazards found across Scrap Mechanic Survival. Use the location guide, then
-            pan and zoom through the embedded interactive world map below.
-          </p>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroCopy}>
+              <span className={styles.eyebrow}>World navigation / interactive viewer</span>
+              <h1>
+                Scrap Mechanic Map <span>- Interactive Map</span>
+              </h1>
+              <p className={styles.intro}>
+                Explore Survival landmarks, progression routes, resource areas, and
+                hazards. Open the embedded viewer to search locations, switch regions,
+                combine layers, and mark a route before leaving the garage.
+              </p>
 
-          <div className={styles.heroActions}>
-            <Link className={styles.primaryAction} href="#location-directory">
-              Browse locations
-            </Link>
-            <Link className={styles.secondaryAction} href="#interactive-map">
-              Open interactive map
-            </Link>
+              <div className={styles.heroActions}>
+                <Link className={styles.primaryAction} href="#interactive-map">
+                  Open interactive map
+                </Link>
+                <Link className={styles.secondaryAction} href="#location-directory">
+                  Browse locations
+                </Link>
+              </div>
+
+              <div className={styles.reviewLine} aria-label="Map review details">
+                <span>Verified for Scrap Mechanic {site.currentVersion}</span>
+                <time dateTime={mapReviewDateIso}>Updated {mapReviewDate}</time>
+                <Link href="/updates/1-0-drilling-thunder">Version notes</Link>
+                <Link href="/about">Editorial policy</Link>
+              </div>
+            </div>
+
+            <aside className={styles.heroPanel} aria-label="Interactive map coverage">
+              <span>Viewer coverage</span>
+              <dl>
+                <div>
+                  <dt>Region views</dt>
+                  <dd>{mapStats.regionViews}</dd>
+                </div>
+                <div>
+                  <dt>Location index</dt>
+                  <dd>{mapStats.locationEntries}</dd>
+                </div>
+                <div>
+                  <dt>Marker types</dt>
+                  <dd>{mapStats.markerTypes}</dd>
+                </div>
+                <div>
+                  <dt>Navigation</dt>
+                  <dd>X / Y / Zoom</dd>
+                </div>
+              </dl>
+            </aside>
           </div>
         </div>
       </section>
@@ -286,7 +335,6 @@ export default function MapPage() {
               {group.eyebrow}
             </Link>
           ))}
-          <Link href="#save-data">World data</Link>
           <Link href="#map-faq">FAQ</Link>
         </div>
       </nav>
@@ -296,13 +344,14 @@ export default function MapPage() {
           <header className={styles.mapHeader}>
             <div className={styles.mapCopy}>
               <span className={styles.eyebrow}>Live world viewer</span>
-              <h2>Scrap Mechanic Map Viewer for Survival 1.0</h2>
+              <h2>Explore the Interactive Survival Map</h2>
             </div>
             <div className={styles.mapIntroduction}>
               <p>
-                Use this Scrap Mechanic Survival map viewer to explore 18 selectable
-                regions from the 1.0 and Drilling Thunder world, search the location
-                index, combine terrain and coordinate layers, and place route markers.
+                Use the Scrap Mechanic map viewer below to explore{" "}
+                {mapStats.regionViews} selectable regions from the 1.0 and Drilling
+                Thunder world, search the location index, combine terrain and
+                coordinate layers, and place route markers.
               </p>
               <div className={styles.mapStatus} role="status">
                 <span className={styles.statusLight} aria-hidden="true" />
@@ -333,15 +382,15 @@ export default function MapPage() {
             <dl className={styles.viewerStats}>
               <div>
                 <dt>Region views</dt>
-                <dd>18 selectable</dd>
+                <dd>{mapStats.regionViews} selectable</dd>
               </div>
               <div>
                 <dt>Generated index</dt>
-                <dd>376 entries</dd>
+                <dd>{mapStats.locationEntries} entries</dd>
               </div>
               <div>
                 <dt>Player markers</dt>
-                <dd>5 marker types</dd>
+                <dd>{mapStats.markerTypes} marker types</dd>
               </div>
               <div>
                 <dt>Navigation</dt>
@@ -360,9 +409,9 @@ export default function MapPage() {
                 or rare equipment into the field.
               </p>
               <p className={styles.quickStartNote}>
-                Map scope: 18 region views plus search, layers, markers, coordinates,
-                and zoom. Generated roads and sites can vary, so confirm the final
-                route in your own save.
+                Map scope: {mapStats.regionViews} region views plus search, layers,
+                markers, coordinates, and zoom. Generated roads and sites can vary, so
+                confirm the final route in your own save.
               </p>
             </div>
 
@@ -396,11 +445,13 @@ export default function MapPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-map-1" unit="banner1" />
+
       <section className={styles.generatedSection} id="map-tools">
         <div className={`container ${styles.generatedGrid}`}>
           <div className={styles.sectionHeading}>
             <span className={styles.eyebrow}>Map workflow</span>
-            <h2>Every Survival world is generated</h2>
+            <h2>Plan Routes in a Generated World</h2>
             <p>
               The viewer combines a fixed reference map with a large generated-location
               index. Use its controls to narrow the reference, then verify the final
@@ -439,7 +490,7 @@ export default function MapPage() {
           <div className={styles.regionLead}>
             <div>
               <span className={styles.eyebrow}>Viewer region index</span>
-              <h2>Scrap Mechanic 1.0 &amp; Drilling Thunder Map Regions</h2>
+              <h2>Explore All 18 Map Regions</h2>
             </div>
             <p>
               The region selector separates surface navigation from self-contained
@@ -552,6 +603,8 @@ export default function MapPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-map-2" unit="banner2" />
+
       <section className={styles.planningSection}>
         <div className={`container ${styles.planningInner}`}>
           <div className={styles.sectionHeading}>
@@ -570,32 +623,6 @@ export default function MapPage() {
         </div>
       </section>
 
-      <section className={styles.saveSection} id="save-data">
-        <div className={`container ${styles.saveLayout}`}>
-          <div className={styles.sectionHeading}>
-            <span className={styles.eyebrow}>Map scope and save safety</span>
-            <h2>Prepare your Survival world data safely</h2>
-            <p>
-              The map provides search, layer, coordinate, region, and player-marker
-              controls. It does not accept a save-file upload, so use it as a planning
-              reference and keep world backups before using any third-party utility.
-            </p>
-          </div>
-          <div className={styles.savePanel}>
-            <span className={styles.panelLabel}>Common Windows save location</span>
-            <code>
-              {"%AppData%\\Axolot Games\\Scrap Mechanic\\User\\User_<STEAMID>\\Save\\Survival"}
-            </code>
-            <ul>
-              <li>Back up the original world before using any third-party utility.</li>
-              <li>Work from a copy; never allow a viewer to overwrite the only save.</li>
-              <li>Use the viewer&apos;s X/Y readout as reference data, not a save editor.</li>
-              <li>Cross-check generated roads and sites inside the world you are playing.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section className={styles.faqSection} id="map-faq">
         <div className={`container ${styles.faqLayout}`}>
           <div className={styles.sectionHeading}>
@@ -607,11 +634,11 @@ export default function MapPage() {
             </p>
           </div>
           <div className={styles.faqList}>
-            {mapFaqs.map((item, index) => (
-              <details key={item.question} open={index === 0}>
-                <summary>{item.question}</summary>
+            {mapFaqs.map((item) => (
+              <article key={item.question}>
+                <strong>{item.question}</strong>
                 <p>{item.answer}</p>
-              </details>
+              </article>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { TradeDirectory } from "@/page/wiki/components/TradeDirectory";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -174,6 +175,8 @@ export default function TradesPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-trades-1" unit="banner1" />
+
       <section className={styles.directorySection}>
         <div className="container">
           <Suspense fallback={<div className="empty-state">Preparing trader filters…</div>}>
@@ -185,6 +188,8 @@ export default function TradesPage() {
           </Suspense>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-trades-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqGrid}`}>

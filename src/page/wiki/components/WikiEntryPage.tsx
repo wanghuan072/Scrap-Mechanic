@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
 import { JsonLd } from "@/seo/JsonLd";
@@ -380,6 +381,10 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
           </div>
         </div>
       </section>
+      <GptAd
+        slotId={`div-gpt-ad-wiki-entry-${entry.category}-${entry.slug}-1`}
+        unit="banner1"
+      />
       <section className="article-body-section">
         <div className="container article-body-content">
           <article className="article-copy">

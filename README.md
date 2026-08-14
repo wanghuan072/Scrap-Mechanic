@@ -31,7 +31,7 @@ Every primary navigation page is available from the website header.
 | [Guides](https://scrapmechanic.org/guides) | Step-by-step help for first hours, returning saves, farming, mining, weapons, raids, Creative mode, and other progression problems. |
 | [Wiki](https://scrapmechanic.org/wiki) | Connected entries for items, blocks, parts, tools, weapons, resources, crops, garments, quest rewards, bots, schematics, recipes, trades, and quests. |
 | [Builds](https://scrapmechanic.org/builds) | Practical vehicle, farm, mining, defense, logic, and utility builds with part lists, connection notes, controls, construction stages, and test checks. |
-| [Map](https://scrapmechanic.org/map) | A generated-world navigation guide covering major landmarks, progression routes, hazards, preparation, and the future interactive map connection. |
+| [Map](https://scrapmechanic.org/map) | An interactive world viewer with 18 region views, location search, terrain and coordinate layers, player markers, and route-planning guidance. |
 | [Mods](https://scrapmechanic.org/mods) | Workshop selections, installation guidance, compatibility notes, save-risk reminders, and advice for diagnosing mods after game updates. |
 | [Updates](https://scrapmechanic.org/updates) | Current version coverage, patch changes, save compatibility notes, system requirements, known fixes, and major update briefings. |
 | [Tools](https://scrapmechanic.org/tools) | Player-facing calculators for estimating crop raid pressure and planning materials across recipes, quantities, and crafting stations. |
@@ -77,7 +77,7 @@ Open the [Guides](https://scrapmechanic.org/guides) section and start with the f
 
 ### Can I use the map to find an exact location?
 
-The [Map](https://scrapmechanic.org/map) page now provides a location and route-planning guide. The embedded world viewer is still awaiting its final URL. Survival worlds are generated, so dependable navigation uses roads, landmarks, biome clues, and location roles rather than one copied set of coordinates.
+The [Map](https://scrapmechanic.org/map) page includes an embedded interactive world viewer. Choose among 18 surface, story, Grow Lab, underground, and boss-region views, then use location search, terrain and coordinate layers, and player markers to plan a route. Generated roads, ruins, resources, and other locations can differ between Survival worlds, so confirm the destination in your own save instead of relying only on coordinates copied from another player.
 
 ### How do I calculate the raid created by my crops?
 

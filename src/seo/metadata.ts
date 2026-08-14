@@ -5,9 +5,10 @@ import { site } from "@/config/site";
 export function createMetadata(
   seo: SeoData,
   path: string,
-  options?: { noIndex?: boolean },
+  options?: { noIndex?: boolean; image?: string },
 ): Metadata {
   const url = `${site.url}${path}`;
+  const image = options?.image ?? site.ogImage;
   return {
     title: seo.title,
     description: seo.description,
@@ -24,13 +25,13 @@ export function createMetadata(
       url,
       siteName: site.name,
       locale: "en_US",
-      images: [{ url: site.ogImage, width: 1200, height: 630, alt: seo.title }],
+      images: [{ url: image, width: 1200, height: 630, alt: seo.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: [site.ogImage],
+      images: [image],
     },
   };
 }

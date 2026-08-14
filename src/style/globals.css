@@ -78,6 +78,55 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.gpt-ad-section {
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 48px) max(10px, env(safe-area-inset-left));
+  border-block: 1px solid rgb(73 97 106 / 28%);
+  background:
+    linear-gradient(90deg, rgb(25 180 209 / 4%) 1px, transparent 1px),
+    #071319;
+  background-size: 32px 32px;
+  text-align: center;
+}
+
+.gpt-ad-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #70858a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.gpt-ad-shell,
+.gpt-ad-slot {
+  display: flex;
+  width: 100%;
+  min-width: 300px;
+  min-height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gpt-ad-shell {
+  max-width: 1200px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.gpt-ad-slot iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 560px) {
+  .gpt-ad-section {
+    padding-block: 24px;
+  }
+}
+
 img {
   display: block;
 }

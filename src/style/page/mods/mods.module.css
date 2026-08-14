@@ -7,10 +7,13 @@
 
 .heroInner {
   display: grid;
+  max-width: 1240px;
   min-height: 280px;
   grid-template-columns: minmax(0, 1fr) 250px;
   align-items: center;
   gap: 28px;
+  margin-right: auto;
+  margin-left: max(16px, calc((100% - 1360px) / 2));
   padding-top: 28px;
   padding-bottom: 28px;
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RecipeDirectory } from "@/page/wiki/components/RecipeDirectory";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -187,6 +188,8 @@ export default function RecipesPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-recipes-1" unit="banner1" />
+
       <section className={styles.playerNotes}>
         <div className={`container ${styles.notesGrid}`}>
           <article>
@@ -222,6 +225,8 @@ export default function RecipesPage() {
           </article>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-recipes-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqLayout}`}>

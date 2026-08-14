@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { buildFailureChecks } from "@/lib/data/builds";
@@ -428,6 +429,8 @@ export default function BuildsPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-builds-1" unit="banner1" />
+
       <section className={styles.botPressureSection}>
         <div className="container">
           <header className={styles.heading}>
@@ -579,6 +582,8 @@ export default function BuildsPage() {
           </div>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-builds-2" unit="banner2" />
 
       <section className={styles.diagnosticsSection}>
         <div className={`container ${styles.diagnosticsGrid}`}>

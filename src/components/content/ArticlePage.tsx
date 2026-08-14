@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import type { ArticleEntry } from "@/types/content";
 import { getWikiEntryBySlug, guides } from "@/lib/content/catalog";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
@@ -94,6 +95,11 @@ export function ArticlePage({
           </div>
         </div>
       </section>
+
+      <GptAd
+        slotId={`div-gpt-ad-${basePath.replace(/^\//, "")}-${entry.slug}-1`}
+        unit="banner1"
+      />
 
       <section className="article-body-section">
         <div className="container article-body-content">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
 import { PageJsonLd } from "@/seo/JsonLd";
@@ -301,6 +302,8 @@ export default function QuestsPage() {
         </div>
       </section>
 
+      <GptAd slotId="div-gpt-ad-quests-1" unit="banner1" />
+
       <section className={styles.sideSection} id="side-quests">
         <div className="container">
           <header className={styles.sectionHeading}>
@@ -391,6 +394,8 @@ export default function QuestsPage() {
           </div>
         </div>
       </section>
+
+      <GptAd slotId="div-gpt-ad-quests-2" unit="banner2" />
 
       <section className={styles.help} id="quest-help">
         <div className={`container ${styles.helpGrid}`}>
