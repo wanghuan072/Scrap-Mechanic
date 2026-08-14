@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   fixedRoutes.push({
     path: "/map",
-    lastModified: latestContentDate,
+    lastModified: "2026-08-14",
     priority: 0.7,
   });
   const toIsoDate = (value: string) => {

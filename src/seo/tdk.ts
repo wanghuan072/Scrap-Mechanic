@@ -61,15 +61,16 @@ export const pageTdk: Record<string, SeoData> = {
     ],
   },
   map: {
-    title: "Scrap Mechanic Map - Interactive Map Preview",
+    title: "Scrap Mechanic Map - Interactive World Map and Locations",
     description:
-      "Explore the Scrap Mechanic map preview with landmark guides, route planning, danger levels, and clear navigation advice for generated Survival worlds.",
+      "Explore the interactive Scrap Mechanic map with 18 region views, searchable locations, terrain and coordinate layers, player markers, and route planning.",
     keywords: [
       "Scrap Mechanic map",
+      "Scrap Mechanic interactive map",
       "Scrap Mechanic locations",
-      "Scrap Mechanic Mechanic Station",
-      "Scrap Mechanic Excavation Island",
-      "Scrap Mechanic tornado",
+      "Scrap Mechanic Grow Lab map",
+      "Scrap Mechanic underground map",
+      "Scrap Mechanic 1.0 map",
     ],
   },
   mods: {

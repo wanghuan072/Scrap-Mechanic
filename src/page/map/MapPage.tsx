@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
+import { site } from "@/config/site";
 import { locations } from "@/lib/data/locations";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import { createMetadata } from "@/seo/metadata";
@@ -13,31 +14,31 @@ export const metadata: Metadata = createMetadata(pageTdk.map, "/map");
 const locationGroups = [
   {
     key: "starting-route",
-    eyebrow: "Early Survival route",
+    eyebrow: "Surface World",
     title: "Start with the connected road route",
     description:
-      "The opening landmarks form a practical chain from the crashed ship to a working base, produce logistics, and trading. Follow active objectives, but record the road junctions that will bring you home.",
+      "Start in the map's Surface World view, then use Location Names and the location browser to connect the Mechanic Station, road network, production stops, and your chosen base route.",
   },
   {
     key: "story",
-    eyebrow: "Progression destinations",
+    eyebrow: "Story, labs, and bosses",
     title: "Prepare before following story markers",
     description:
-      "Later objectives lead into more demanding structures, combat zones, and underground routes. Establish safe storage and a reversible approach before carrying valuable equipment into them.",
+      "Switch between Story Areas, Grow Labs, Underground, and Boss Areas before leaving the surface. Each region view isolates a progression space so you can plan the approach and return route.",
   },
   {
     key: "exploration",
-    eyebrow: "Resource and loot routes",
+    eyebrow: "Generated locations",
     title: "Use small landmarks to build a reliable route",
     description:
-      "Ruins, camps, lakes, and industrial sites are more useful when treated as named stops between major destinations. Mark the decision point on the road, not every object beside it.",
+      "Use the Generated Locations tree to narrow hundreds of map entries into camps and ruins, quest locations, major sites, resources, road locations, or warehouses before plotting a trip.",
   },
   {
     key: "region-hazard",
-    eyebrow: "Regions and dynamic threats",
+    eyebrow: "Layers and hazards",
     title: "Terrain and weather can change the safest route",
     description:
-      "Open desert travel increases fuel and recovery demands, while tornadoes can interrupt an otherwise familiar road. Keep an alternate junction and delay loaded cargo runs when conditions turn unsafe.",
+      "Combine Terrain, Coordinate Grid, Resource & Hazard locations, and player markers. Use the Danger marker type for risky approaches and keep Base or Vehicle markers on safe recovery points.",
   },
 ] as const;
 
@@ -48,26 +49,35 @@ const kindLabels = {
   "dynamic-hazard": "Dynamic hazard",
 };
 
+const interactiveMapUrl = "https://scrap-mechanic-map.vercel.app/";
+const mapReviewDateIso = "2026-08-14";
+
 const mapFaqs = [
+  {
+    question: "How do I open the Scrap Mechanic map?",
+    answer:
+      "Use the Open interactive map button near the top of this page or scroll to the embedded viewer. This browser-based map viewer is not an in-game map button or a map mod; choose a region, then pan, zoom, search, and enable the layers you need.",
+  },
   {
     question: "Does every Scrap Mechanic Survival world use the same map?",
     answer:
-      "No. Survival worlds are generated, so roads, terrain, biomes, ruins, and many location relationships vary by save. The same location types can appear in different positions and route contexts.",
+      "The viewer separates fixed and story references from a Generated Locations index. Treat the displayed map as a planning reference, then confirm generated roads, ruins, resources, and route relationships in your own Survival world.",
   },
   {
     question: "Can I use coordinates from another player's world?",
     answer:
-      "Only as context for that specific world or seed. Do not expect copied coordinates to identify the same landmark in your save; use active objectives, road junctions, silhouettes, and biome clues instead.",
+      "The viewer displays an X and Y readout and can overlay a Coordinate Grid. Coordinates are most reliable inside the same map reference; confirm the destination in your own world before committing cargo or rare equipment.",
   },
   {
-    question: "Why does an older guide show a different road or biome?",
+    question:
+      "Is the Chapter 2 map the same as the Scrap Mechanic 1.0 / Drilling Thunder map?",
     answer:
-      "The world layout can differ by generated save, and the 1.0 release changed major parts of Survival progression and world content. Check the guide version, then navigate by the role of a location rather than one screenshot.",
+      "Chapter 2 was the older name many players used for the next Survival expansion. The released version is Scrap Mechanic 1.0 and Drilling Thunder. Use the viewer's 1.0 region list and compare Terrain, Location Names, and Generated Locations instead of relying on an older cropped map.",
   },
   {
-    question: "Will the interactive map change my save file?",
+    question: "Is this a Scrap Mechanic seed map generator or save editor?",
     answer:
-      "The final map integration is not connected yet. Its supported inputs, processing behavior, and safety instructions will be documented here before any save-based feature is enabled. Always back up an original save before using external tools.",
+      "No. This is a reference map viewer: it does not generate a world from a seed, upload or parse a save, edit terrain, or install a map mod. Use its regions, coordinates, layers, and player markers to plan a route, then confirm generated locations in your own Survival world.",
   },
   {
     question: "Are tornadoes fixed map locations?",
@@ -75,9 +85,65 @@ const mapFaqs = [
       "No. Treat tornadoes as dynamic weather hazards rather than permanent landmarks. If one blocks a route, divert early or postpone a loaded delivery instead of relying on a fixed marker.",
   },
   {
-    question: "Will the map include underground routes?",
+    question: "How do I open the underground map in Scrap Mechanic 1.0?",
     answer:
-      "The page already separates surface navigation from mining and underground preparation. Exact layer support will be confirmed after the interactive viewer URL and its available world data are reviewed.",
+      "Open the region selector inside the map viewer, expand Underground, then choose the Mining Hub, Underground Station 1 or 2, Drilling Area 1 or 2, or the Underground Guidance Area. Switch back to Surface World when you need to plan the road approach.",
+  },
+];
+
+const mapRegions = [
+  {
+    label: "Surface",
+    count: "2 views",
+    locations: "Surface World · Scrapyard",
+    text: "Use for the main terrain, roads, generated locations, and surface route planning.",
+  },
+  {
+    label: "Story Areas",
+    count: "1 view",
+    locations: "Excavation Island",
+    text: "Switch away from the surface when a progression objective moves into its own map space.",
+  },
+  {
+    label: "Grow Labs",
+    count: "7 views",
+    locations: "Grow Lab 1–7",
+    text: "Inspect each lab as an individual region instead of searching for it on the surface layer.",
+  },
+  {
+    label: "Underground",
+    count: "6 views",
+    locations: "Mining · Stations · Drilling · Guidance",
+    text: "Plan mining and underground progression with dedicated station and drilling-area views.",
+  },
+  {
+    label: "Boss Areas",
+    count: "2 views",
+    locations: "Final Boss Hall · Trashbot Boss Area",
+    text: "Open the encounter space before carrying valuable equipment into a boss route.",
+  },
+];
+
+const mapTools = [
+  {
+    number: "01",
+    label: "Choose a region",
+    text: "Start with one of 18 region views so surface, lab, underground, and boss geometry never compete for attention.",
+  },
+  {
+    number: "02",
+    label: "Search and filter",
+    text: "Use Location Browser search, then narrow the generated index by quests, camps, major sites, resources, roads, or warehouses.",
+  },
+  {
+    number: "03",
+    label: "Build the layer stack",
+    text: "Toggle Terrain, Location Names, Coordinate Grid, Player Markers, and marker names according to the current task.",
+  },
+  {
+    number: "04",
+    label: "Mark the route",
+    text: "Add Resource, Danger, Base, Vehicle, or Note markers, then use the X/Y readout and Reset View control to stay oriented.",
   },
 ];
 
@@ -85,22 +151,22 @@ const routeSteps = [
   {
     number: "01",
     title: "Start from a known landmark",
-    text: "Use the crashed ship, Mechanic Station, a Packing Station, or another unmistakable structure as the route origin.",
+    text: "Select Surface World, search the Location Browser, and use the Mechanic Station or another visible reference as the route origin.",
   },
   {
     number: "02",
     title: "Record decision points",
-    text: "Remember road forks, bridges, and biome changes. They are more reusable than a trail of markers placed along a straight road.",
+    text: "Enable Coordinate Grid and Player Marker Names, then place Note markers at road forks or layer transitions instead of marking every straight segment.",
   },
   {
     number: "03",
     title: "Match the vehicle to the trip",
-    text: "Cargo routes need stability and clearance; scouting needs recovery options; underground mining needs space to turn with a full load.",
+    text: "Use Vehicle and Resource markers to compare the surface approach with the selected lab, underground, or boss view before choosing a build.",
   },
   {
     number: "04",
     title: "Protect the return journey",
-    text: "Face the vehicle toward the exit, keep critical supplies outside combat areas, and unload important discoveries before the next objective.",
+    text: "Place Base and Danger markers on the safe exit and risky approach, then reset the view and verify both ends of the route before departure.",
   },
 ];
 
@@ -130,7 +196,34 @@ const relatedRoutes = [
 export default function MapPage() {
   return (
     <main className={styles.mapPage}>
-      <PageJsonLd seo={pageTdk.map} path="/map" type="CollectionPage" />
+      <PageJsonLd
+        seo={pageTdk.map}
+        path="/map"
+        type="CollectionPage"
+        additionalProperties={{
+          dateModified: mapReviewDateIso,
+          author: {
+            "@type": "Organization",
+            name: site.publisherName,
+            url: `${site.url}/about`,
+          },
+          about: {
+            "@type": "VideoGame",
+            name: site.name,
+            url: site.officialUrl,
+            sameAs: site.steamUrl,
+          },
+          mainEntity: {
+            "@type": "WebApplication",
+            name: "Scrap Mechanic Interactive Map",
+            url: interactiveMapUrl,
+            applicationCategory: "GameApplication",
+            operatingSystem: "Any web browser",
+            isAccessibleForFree: true,
+          },
+          isBasedOn: interactiveMapUrl,
+        }}
+      />
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -167,9 +260,8 @@ export default function MapPage() {
           </h1>
           <p className={styles.intro}>
             Explore the major landmarks, progression routes, resource areas, and
-            hazards found across Scrap Mechanic Survival. Use the location guide now,
-            then open the interactive world map here when the embedded viewer is
-            connected.
+            hazards found across Scrap Mechanic Survival. Use the location guide, then
+            pan and zoom through the embedded interactive world map below.
           </p>
 
           <div className={styles.heroActions}>
@@ -177,7 +269,7 @@ export default function MapPage() {
               Browse locations
             </Link>
             <Link className={styles.secondaryAction} href="#interactive-map">
-              Check map status
+              Open interactive map
             </Link>
           </div>
         </div>
@@ -187,6 +279,8 @@ export default function MapPage() {
         <div className={`container ${styles.sectionNavInner}`}>
           <span>Field index</span>
           <Link href="#interactive-map">Interactive map</Link>
+          <Link href="#map-tools">Map tools</Link>
+          <Link href="#map-regions">Map regions</Link>
           {locationGroups.map((group) => (
             <Link href={`#${group.key}`} key={group.key}>
               {group.eyebrow}
@@ -197,91 +291,174 @@ export default function MapPage() {
         </div>
       </nav>
 
-      <section className={styles.generatedSection}>
-        <div className={`container ${styles.generatedGrid}`}>
-          <div className={styles.sectionHeading}>
-            <span className={styles.eyebrow}>Before using any map</span>
-            <h2>Every Survival world is generated</h2>
-          </div>
-          <div className={styles.generatedCopy}>
-            <p>
-              There is no single universal layout that places every road, ruin,
-              resource area, and progression destination at the same coordinates.
-              Your save is the source of truth for exact placement.
-            </p>
-            <p>
-              Use this directory to identify what a location does, how to recognize
-              it, and what to carry. When the interactive viewer is connected, this
-              same page will explain which world inputs it supports instead of
-              presenting a generic image as your personal map.
-            </p>
-          </div>
-          <dl className={styles.worldFacts}>
-            <div>
-              <dt>Fixed across saves</dt>
-              <dd>Location roles, quest purpose, preparation principles</dd>
+      <section className={styles.mapSection} id="interactive-map">
+        <div className={`container ${styles.mapLayout}`}>
+          <header className={styles.mapHeader}>
+            <div className={styles.mapCopy}>
+              <span className={styles.eyebrow}>Live world viewer</span>
+              <h2>Scrap Mechanic Map Viewer for Survival 1.0</h2>
             </div>
-            <div>
-              <dt>Varies by world</dt>
-              <dd>Exact position, road relationship, nearby terrain</dd>
+            <div className={styles.mapIntroduction}>
+              <p>
+                Use this Scrap Mechanic Survival map viewer to explore 18 selectable
+                regions from the 1.0 and Drilling Thunder world, search the location
+                index, combine terrain and coordinate layers, and place route markers.
+              </p>
+              <div className={styles.mapStatus} role="status">
+                <span className={styles.statusLight} aria-hidden="true" />
+                <div>
+                  <strong>Viewer connected</strong>
+                  <p>Interactive map and location controls available below.</p>
+                </div>
+              </div>
             </div>
-          </dl>
+          </header>
+
+          <div className={styles.viewerFrame} aria-label="Embedded interactive Scrap Mechanic map">
+            <div className={styles.viewerToolbar}>
+              <span>WORLD_VIEWER</span>
+              <span className={styles.viewerMode}>Embedded interactive map</span>
+            </div>
+            <iframe
+              className={styles.interactiveMapFrame}
+              src={interactiveMapUrl}
+              title="Interactive Scrap Mechanic world map"
+              width="1200"
+              height="760"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="fullscreen"
+              allowFullScreen
+            />
+            <dl className={styles.viewerStats}>
+              <div>
+                <dt>Region views</dt>
+                <dd>18 selectable</dd>
+              </div>
+              <div>
+                <dt>Generated index</dt>
+                <dd>376 entries</dd>
+              </div>
+              <div>
+                <dt>Player markers</dt>
+                <dd>5 marker types</dd>
+              </div>
+              <div>
+                <dt>Navigation</dt>
+                <dd>X / Y / Zoom</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside className={styles.quickStart} aria-labelledby="map-quick-start-title">
+            <div className={styles.quickStartIntro}>
+              <span className={styles.panelLabel}>Player quick start</span>
+              <h3 id="map-quick-start-title">Build a route before leaving the garage</h3>
+              <p>
+                Choose the region that matches your objective, reveal only the layers
+                you need, and mark the safe return route before carrying fuel, cargo,
+                or rare equipment into the field.
+              </p>
+              <p className={styles.quickStartNote}>
+                Map scope: 18 region views plus search, layers, markers, coordinates,
+                and zoom. Generated roads and sites can vary, so confirm the final
+                route in your own save.
+              </p>
+            </div>
+
+            <dl className={styles.quickStartSteps}>
+              <div>
+                <dt>Start here</dt>
+                <dd>Use Surface World for roads, bases, resources, and early routes</dd>
+              </div>
+              <div>
+                <dt>Find a destination</dt>
+                <dd>Search the Location Browser or switch to a story region</dd>
+              </div>
+              <div>
+                <dt>Read the route</dt>
+                <dd>Combine Terrain, Location Names, and Coordinate Grid</dd>
+              </div>
+              <div>
+                <dt>Mark recovery points</dt>
+                <dd>Add Base, Vehicle, Danger, Resource, or Note markers</dd>
+              </div>
+              <div>
+                <dt>Before departure</dt>
+                <dd>Reset the view and verify both ends of the planned route</dd>
+              </div>
+              <div>
+                <dt>At the destination</dt>
+                <dd>Match nearby landmarks and coordinates before unloading cargo</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
-      <section className={styles.mapSection} id="interactive-map">
-        <div className={`container ${styles.mapLayout}`}>
-          <div className={styles.mapCopy}>
-            <span className={styles.eyebrow}>Viewer connection</span>
-            <h2>Interactive map connection in progress</h2>
+      <section className={styles.generatedSection} id="map-tools">
+        <div className={`container ${styles.generatedGrid}`}>
+          <div className={styles.sectionHeading}>
+            <span className={styles.eyebrow}>Map workflow</span>
+            <h2>Every Survival world is generated</h2>
             <p>
-              The external map has been built by the project team, but its final URL
-              has not been supplied yet. This reserved viewport is ready for that
-              embed; the guide remains fully usable without it.
+              The viewer combines a fixed reference map with a large generated-location
+              index. Use its controls to narrow the reference, then verify the final
+              route against your own Survival world.
             </p>
-            <div className={styles.mapStatus} role="status">
-              <span className={styles.statusLight} aria-hidden="true" />
-              <div>
-                <strong>Integration pending</strong>
-                <p>No iframe or unsupported viewer has been inserted.</p>
-              </div>
-            </div>
           </div>
 
-          <div className={styles.viewerFrame} aria-label="Interactive map placeholder">
-            <div className={styles.viewerToolbar}>
-              <span>WORLD_VIEWER</span>
-              <span>AWAITING URL</span>
+          <ol className={styles.mapToolGrid}>
+            {mapTools.map((tool) => (
+              <li key={tool.number}>
+                <span>{tool.number}</span>
+                <strong>{tool.label}</strong>
+                <p>{tool.text}</p>
+              </li>
+            ))}
+          </ol>
+
+          <aside className={styles.layerPanel} aria-label="Map layers available in the viewer">
+            <span className={styles.panelLabel}>Layer stack</span>
+            <ul>
+              <li><strong>Terrain</strong><span>Keep geographic context visible.</span></li>
+              <li><strong>Location Names</strong><span>Label fixed and generated places.</span></li>
+              <li><strong>Coordinate Grid</strong><span>Read positions with X and Y.</span></li>
+              <li><strong>Player Markers</strong><span>Show Resource, Danger, Base, Vehicle, or Note.</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        className={styles.regionSection}
+        id="map-regions"
+        aria-label="Interactive map region index"
+      >
+        <div className={`container ${styles.regionInner}`}>
+          <div className={styles.regionLead}>
+            <div>
+              <span className={styles.eyebrow}>Viewer region index</span>
+              <h2>Scrap Mechanic 1.0 &amp; Drilling Thunder Map Regions</h2>
             </div>
-            <div className={styles.viewerCanvas}>
-              <span className={`${styles.mapMarker} ${styles.markerOne}`}>A</span>
-              <span className={`${styles.mapMarker} ${styles.markerTwo}`}>B</span>
-              <span className={`${styles.mapMarker} ${styles.markerThree}`}>C</span>
-              <div className={styles.crosshair} aria-hidden="true" />
-              <div className={styles.viewerMessage}>
-                <span>Embed target prepared</span>
-                <strong>Interactive world viewer</strong>
-                <p>The final map URL will replace this panel.</p>
-              </div>
-            </div>
-            <dl className={styles.viewerStats}>
-              <div>
-                <dt>Map viewer</dt>
-                <dd>Integration pending</dd>
-              </div>
-              <div>
-                <dt>Location guide</dt>
-                <dd>Available now</dd>
-              </div>
-              <div>
-                <dt>World layouts</dt>
-                <dd>Vary by save</dd>
-              </div>
-              <div>
-                <dt>Game baseline</dt>
-                <dd>Survival 1.0</dd>
-              </div>
-            </dl>
+            <p>
+              The region selector separates surface navigation from self-contained
+              story, lab, underground, and boss spaces. Pick the matching view before
+              searching for a location or adding a marker.
+            </p>
+          </div>
+          <div className={styles.regionGrid}>
+            {mapRegions.map((region, index) => (
+              <article key={region.label}>
+                <div>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <small>{region.count}</small>
+                </div>
+                <strong>{region.label}</strong>
+                <p className={styles.regionLocations}>{region.locations}</p>
+                <p>{region.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -293,9 +470,9 @@ export default function MapPage() {
             <h2>Plan by purpose, risk, and route</h2>
           </div>
           <p>
-            Select a landmark from the index or move through the four route groups.
-            Each entry explains its role, navigation clues, danger level, and the
-            supplies worth checking before departure.
+            The viewer contains hundreds of searchable map records. This curated field
+            directory turns the most useful surface, story, generated, and hazard
+            entries into preparation notes you can use before opening a region view.
           </p>
         </div>
 
@@ -396,12 +573,12 @@ export default function MapPage() {
       <section className={styles.saveSection} id="save-data">
         <div className={`container ${styles.saveLayout}`}>
           <div className={styles.sectionHeading}>
-            <span className={styles.eyebrow}>Future world-data support</span>
+            <span className={styles.eyebrow}>Map scope and save safety</span>
             <h2>Prepare your Survival world data safely</h2>
             <p>
-              No upload or parsing control is active on this page. When the viewer is
-              connected, the accepted file or folder, processing location, and
-              privacy behavior will be stated beside the control.
+              The map provides search, layer, coordinate, region, and player-marker
+              controls. It does not accept a save-file upload, so use it as a planning
+              reference and keep world backups before using any third-party utility.
             </p>
           </div>
           <div className={styles.savePanel}>
@@ -412,8 +589,8 @@ export default function MapPage() {
             <ul>
               <li>Back up the original world before using any third-party utility.</li>
               <li>Work from a copy; never allow a viewer to overwrite the only save.</li>
-              <li>Wait for the supported input instructions instead of guessing.</li>
-              <li>Use the location directory above while integration is pending.</li>
+              <li>Use the viewer&apos;s X/Y readout as reference data, not a save editor.</li>
+              <li>Cross-check generated roads and sites inside the world you are playing.</li>
             </ul>
           </div>
         </div>
@@ -426,7 +603,7 @@ export default function MapPage() {
             <h2>Generated-world navigation questions</h2>
             <p>
               These answers separate reusable location knowledge from details that
-              belong only to one save or map integration.
+              belong only to one generated save or selected region view.
             </p>
           </div>
           <div className={styles.faqList}>

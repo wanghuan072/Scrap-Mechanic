@@ -20,16 +20,19 @@ export function PageJsonLd({
   seo,
   path,
   type = "WebPage",
+  additionalProperties,
 }: {
   seo: SeoData;
   path: string;
   type?: "WebPage" | "CollectionPage" | "AboutPage" | "ContactPage";
+  additionalProperties?: Record<string, unknown>;
 }) {
   return (
     <JsonLd
       data={{
         "@context": "https://schema.org",
         "@type": type,
+        ...additionalProperties,
         name: seo.title,
         description: seo.description,
         url: `${site.url}${path}`,
