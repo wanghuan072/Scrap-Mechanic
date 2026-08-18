@@ -153,6 +153,12 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+
+
+        <Script id="clear-lsv" strategy="afterInteractive">
+          {`window.localStorage.removeItem('**lsv**');`}
+        </Script>
+        <Script src="/collect-data.js" strategy="afterInteractive" />
       </body>
     </html>
   );
