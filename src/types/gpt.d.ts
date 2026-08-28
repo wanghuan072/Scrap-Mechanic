@@ -6,7 +6,20 @@ interface GptSlot {
   defineSizeMapping(mapping: readonly unknown[]): GptSlot;
 }
 
+interface GptSlotRenderEndedEvent {
+  isEmpty: boolean;
+  slot: GptSlot;
+}
+
 interface GptPubAdsService {
+  addEventListener(
+    eventType: "slotRenderEnded",
+    listener: (event: GptSlotRenderEndedEvent) => void,
+  ): void;
+  removeEventListener(
+    eventType: "slotRenderEnded",
+    listener: (event: GptSlotRenderEndedEvent) => void,
+  ): void;
   refresh(slots: GptSlot[]): void;
 }
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import { mods, workshopLeaderboard } from "@/lib/data/mods";
@@ -11,13 +12,16 @@ import styles from "@/style/page/mods/mods.module.css";
 export const metadata: Metadata = createMetadata(pageTdk.mods, "/mods");
 
 const recentMods = mods.filter((mod) => mod.compatibility === "recent-1-0-candidate");
+const availableRecentMods = recentMods.filter(
+  (mod) => mod.workshopStatus !== "removed-incompatible",
+);
 const classicMods = mods.filter((mod) => mod.compatibility === "legacy-check");
 
 const modFaqs = [
   {
     question: "What are the best Scrap Mechanic mods after 1.0?",
     answer:
-      "For a current test, start with a mod updated after the July 2026 1.0 release. Better Survival Chapter 2 is the strongest Survival rebalance in this shortlist, while Heavy-Duty Vehicle Parts and Solid are more suitable for Creative building. Recent updates improve the odds of compatibility, but they are not a guarantee.",
+      "For a current test, start with an item whose Steam page is still available and whose author has checked the current game. Heavy-Duty Vehicle Parts and Solid remain candidates for disposable Creative test worlds. Better Survival Chapter 2 is quarantined because Steam currently shows it as removed and incompatible.",
   },
   {
     question: "How many downloads does a Scrap Mechanic Workshop mod have?",
@@ -32,12 +36,12 @@ const modFaqs = [
   {
     question: "How do I install Scrap Mechanic mods from the Steam Workshop?",
     answer:
-      "For a normal Parts mod, subscribe on Steam, open the world settings, and enable the item with every required dependency. Read the author instructions first: Better Survival Chapter 2 is an exception that uses a manual file install and the -dev launch option.",
+      "For an available Parts mod, subscribe on Steam, open the world settings, and enable the item with every required dependency. Do not use third-party mirrors for a removed item. Always test a copied world before changing an important save.",
   },
   {
     question: "Do Scrap Mechanic mods disable achievements?",
     answer:
-      "Do not assume every Workshop subscription has the same effect. The Better Survival Chapter 2 author specifically states that its manual -dev setup disables Steam achievements. Check each mod page before using it in an achievement-focused save.",
+      "Do not assume every Workshop subscription has the same effect. Manual file replacement and -dev setups may affect achievements, while ordinary Parts subscriptions can behave differently. Check the current author instructions before using any mod in an achievement-focused save.",
   },
 ];
 
@@ -69,10 +73,10 @@ export default function ModsPage() {
               Scrap Mechanic Mods <span>- Workshop Picks by Purpose</span>
             </h1>
             <p>
-              These are the six Scrap Mechanic mods I recommend for specific jobs:
-              three post-1.0 candidates for current testing and three Workshop classics
-              for legacy Creative builds. I explain what each mod adds, who should use
-              it, why it earns a place here, and when I would avoid it.
+              This page tracks six Scrap Mechanic Workshop items by purpose: two
+              post-1.0 candidates for current testing, one removed item retained as a
+              warning, and three classics for legacy Creative builds. Every entry states
+              when it should be tested, quarantined, or avoided.
             </p>
           </div>
           <aside className={styles.compatibilityCard}>
@@ -86,7 +90,7 @@ export default function ModsPage() {
             <dl>
               <div>
                 <dt>Post-1.0 candidates</dt>
-                <dd>{recentMods.length}</dd>
+                <dd>{availableRecentMods.length}</dd>
               </div>
               <div>
                 <dt>Legacy classics</dt>
@@ -96,6 +100,23 @@ export default function ModsPage() {
           </aside>
         </div>
       </section>
+
+      <EvidenceStatus
+        label="Steam Workshop status correction"
+        status="Workshop alert"
+        title="One previous pick is now quarantined"
+        summary="Steam currently shows BETTER SURVIVAL Chapter 2 as removed and incompatible with Scrap Mechanic. The entry remains visible so existing links and the original title stay intact, but it is no longer presented as installable or recommended."
+        facts={[
+          { label: "Workshop ID", value: "3770927146" },
+          { label: "Current state", value: "Removed / incompatible" },
+          { label: "Checked", value: "August 21, 2026" },
+        ]}
+        source={{
+          label: "View Steam status",
+          href: "https://steamcommunity.com/sharedfiles/filedetails/?id=3770927146",
+        }}
+        tone="alert"
+      />
 
       <section className={styles.methodology}>
         <div className={`container ${styles.methodologyGrid}`}>
@@ -159,6 +180,13 @@ export default function ModsPage() {
                   <span>0{index + 1}</span>
                 </div>
                 <div className={styles.modCopy}>
+                  {mod.workshopStatus === "removed-incompatible" ? (
+                    <div className={styles.statusAlert} role="status">
+                      <b>Quarantined Workshop item</b>
+                      <p>{mod.statusNote}</p>
+                      <small>Checked {mod.statusCheckedAt}</small>
+                    </div>
+                  ) : null}
                   <div className={styles.modTopline}>
                     <span>Updated {mod.updated}</span>
                     <b>Workshop {mod.workshopId}</b>
@@ -167,7 +195,11 @@ export default function ModsPage() {
                   <p className={styles.bestFor}>{mod.bestFor}</p>
                   <p>{mod.summary}</p>
                   <div className={styles.recommendation}>
-                    <b>Why I recommend it</b>
+                    <b>
+                      {mod.workshopStatus === "removed-incompatible"
+                        ? "Why the old record remains"
+                        : "Why I recommend it"}
+                    </b>
                     <p>{mod.whyRecommended}</p>
                   </div>
                   <ul>
@@ -201,7 +233,9 @@ export default function ModsPage() {
                     <p>{mod.caution}</p>
                   </aside>
                   <a href={mod.workshopUrl} target="_blank" rel="noreferrer">
-                    Open in Steam Workshop ↗
+                    {mod.workshopStatus === "removed-incompatible"
+                      ? "View removed Workshop record ↗"
+                      : "Open in Steam Workshop ↗"}
                   </a>
                 </div>
               </article>

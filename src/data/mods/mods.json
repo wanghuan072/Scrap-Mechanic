@@ -4,11 +4,14 @@
       "slug": "better-survival-chapter-2",
       "workshopId": "3770927146",
       "title": "BETTER SURVIVAL Chapter 2",
-      "summary": "A Survival overhaul that reduces repetitive gathering, shortens crafting and refining waits, and makes a fresh Chapter 2 run move faster.",
-      "bestFor": "Players who want a less grind-heavy 1.0 Survival run",
-      "whyRecommended": "This is the strongest current Scrap Mechanic Survival mod candidate in this list because it was built and updated after 1.0, targets a clear player pain point, and documents exactly how progression changes.",
+      "summary": "A Survival overhaul that previously advertised reduced gathering and shorter crafting and refining waits. Its Workshop record is retained here only to show the current removal and compatibility status.",
+      "bestFor": "Do not install from mirrors; this entry is retained as a status warning",
+      "whyRecommended": "This item was previously selected because it targeted post-1.0 Survival grind and documented its progression changes. Steam now shows the item as removed and incompatible, so it is no longer a current recommendation.",
       "installMethod": "Manual game-file install; the author requires the -dev launch option",
       "compatibility": "recent-1-0-candidate",
+      "workshopStatus": "removed-incompatible",
+      "statusCheckedAt": "2026-08-21",
+      "statusNote": "Steam currently shows this Workshop item as removed and incompatible with Scrap Mechanic. The page does not establish why the item was removed beyond Steam's own status notice.",
       "subscriptions": 1411,
       "lifetimeSubscriptions": 1640,
       "views": 4759,
@@ -22,7 +25,7 @@
         "Raises mining and natural-resource yields, increases stack sizes, and halves selected trader costs.",
         "Doubles engine efficiency and triples much of the loot, shifting the focus from grind to building."
       ],
-      "caution": "This is not a normal one-click Parts mod: it replaces Survival files, requires -dev, disables Steam achievements, and can be undone by game updates or file verification. Back up the original folders and use a separate world.",
+      "caution": "Do not treat old installation instructions or third-party mirrors as a current supported release. Steam currently shows the item as removed and incompatible. This status does not by itself establish that the author or files were malicious.",
       "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3770927146"
     },
     {

@@ -69,7 +69,12 @@ export default async function SearchPage({
               {results.length > 0 ? (
                 <div className="search-results">
                   {results.map((result) => (
-                    <Link className="search-result" href={result.href} key={result.href}>
+                    <Link
+                      className="search-result"
+                      href={result.href}
+                      key={result.href}
+                      prefetch={false}
+                    >
                       <div className="search-result-image">
                         <Image
                           src={result.image}
@@ -108,6 +113,7 @@ export default async function SearchPage({
                     className="wiki-category-card"
                     href={`/wiki/${category.slug}`}
                     key={category.slug}
+                    prefetch={false}
                   >
                     <div className="wiki-category-body">
                       <span className="wiki-category-symbol">{category.symbol}</span>

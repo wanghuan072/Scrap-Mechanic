@@ -258,6 +258,7 @@ export default async function WikiCategoryPage({
                 <Link
                   href={`/wiki/${entry.category}/${entry.slug}`}
                   key={entry.slug}
+                  prefetch={false}
                 >
                   <span className={styles.schematicHelpImage}>
                     <Image
@@ -348,6 +349,7 @@ export default async function WikiCategoryPage({
                     href={`/wiki/${item.slug}`}
                     key={item.slug}
                     aria-current={item.slug === slug ? "page" : undefined}
+                    prefetch={false}
                   >
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <b>{item.name}</b>
@@ -355,7 +357,7 @@ export default async function WikiCategoryPage({
                   </Link>
                 );
               })}
-              <Link href="/wiki/quests">
+              <Link href="/wiki/quests" prefetch={false}>
                 <span>{String(wikiCategories.length + 1).padStart(2, "0")}</span>
                 <b>Quests</b>
                 <small>{quests.length}</small>
@@ -425,6 +427,7 @@ export default async function WikiCategoryPage({
                       className={styles.entry}
                       href={`/wiki/${entry.category}/${entry.slug}`}
                       key={entry.slug}
+                      prefetch={false}
                     >
                       <span className={styles.entryNumber}>{String(index + 1).padStart(2, "0")}</span>
                       <div className={styles.entryImage}>

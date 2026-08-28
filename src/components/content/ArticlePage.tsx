@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import type { ArticleEntry } from "@/types/content";
 import { getWikiEntryBySlug, guides } from "@/lib/content/catalog";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
@@ -24,6 +25,12 @@ export function ArticlePage({
   const relatedGuides = (entry.relatedGuides ?? [])
     .map((slug) => guides.find((guide) => guide.slug === slug))
     .filter((item) => item !== undefined);
+  const fieldStatus =
+    basePath === "/updates"
+      ? entry.gameVersion === site.currentVersion
+        ? "Current patch"
+        : "Superseded patch"
+      : "Versioned content";
 
   return (
     <main className="content-page">
@@ -84,7 +91,7 @@ export function ArticlePage({
                 </div>
                 <div>
                   <dt>Status</dt>
-                  <dd>Current</dd>
+                  <dd>{fieldStatus}</dd>
                 </div>
                 <div>
                   <dt>Use</dt>
@@ -95,6 +102,28 @@ export function ArticlePage({
           </div>
         </div>
       </section>
+
+      <EvidenceStatus
+        label={`${entry.title} version status`}
+        status={fieldStatus}
+        title={`This file covers version ${entry.gameVersion}`}
+        summary={
+          basePath === "/updates"
+            ? "This article records one official release or patch. It remains available as version history even after a later patch supersedes it."
+            : "The live game release and this guide's checked boundary are deliberately separate. Read later patch notes before applying version-sensitive instructions to an important save."
+        }
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Article version", value: entry.gameVersion },
+          { label: "Article updated", value: entry.updated },
+        ]}
+        source={
+          entry.sourceUrl
+            ? { label: "Official source", href: entry.sourceUrl }
+            : undefined
+        }
+        tone={entry.gameVersion === site.currentVersion ? "confirmed" : "review"}
+      />
 
       <GptAd
         slotId={`div-gpt-ad-${basePath.replace(/^\//, "")}-${entry.slug}-1`}
@@ -191,8 +220,12 @@ export function ArticlePage({
               <span className="sidebar-label">FIELD STATUS</span>
               <dl>
                 <div>
-                  <dt>Game version</dt>
+                  <dt>Article version</dt>
                   <dd>{entry.gameVersion}</dd>
+                </div>
+                <div>
+                  <dt>Live game</dt>
+                  <dd>{site.currentVersion}</dd>
                 </div>
                 <div>
                   <dt>Last updated</dt>
@@ -210,7 +243,10 @@ export function ArticlePage({
                 <ul className="sidebar-links">
                   {relatedWiki.map((wiki) => (
                     <li key={wiki.slug}>
-                      <Link href={`/wiki/${wiki.category}/${wiki.slug}`}>
+                      <Link
+                        href={`/wiki/${wiki.category}/${wiki.slug}`}
+                        prefetch={false}
+                      >
                         {wiki.name} <span aria-hidden="true">→</span>
                       </Link>
                     </li>
@@ -224,7 +260,7 @@ export function ArticlePage({
                 <ul className="sidebar-links">
                   {relatedGuides.map((guide) => (
                     <li key={guide.slug}>
-                      <Link href={`/guides/${guide.slug}`}>
+                      <Link href={`/guides/${guide.slug}`} prefetch={false}>
                         {guide.title} <span aria-hidden="true">→</span>
                       </Link>
                     </li>
@@ -238,7 +274,7 @@ export function ArticlePage({
                 <ul className="sidebar-links">
                   {entry.relatedRoutes.map((route) => (
                     <li key={route.href}>
-                      <Link href={route.href}>
+                      <Link href={route.href} prefetch={false}>
                         {route.label} <span aria-hidden="true">→</span>
                       </Link>
                     </li>

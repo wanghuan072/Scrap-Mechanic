@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RaidCalculator } from "@/page/tools/components/RaidCalculator";
 import { JsonLd } from "@/seo/JsonLd";
@@ -112,6 +113,19 @@ export default function RaidCalculatorPage() {
           </aside>
         </div>
       </section>
+
+      <EvidenceStatus
+        label="Raid calculator data status"
+        status="Recheck required"
+        title="Raid tables are versioned separately from the live game"
+        summary="Crop thresholds, timing rules, budgets, and weighted enemy groups are transcribed from Survival raid data. They remain usable as a documented 1.0 baseline, but have not been re-extracted from the current 1.0.5 build."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Raid dataset", value: "1.0.0.867" },
+          { label: "Method", value: "Game-file transcription" },
+        ]}
+        tone="review"
+      />
 
       <section className={styles.toolSection}>
         <div className="container">

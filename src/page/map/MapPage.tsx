@@ -292,7 +292,7 @@ export default function MapPage() {
               </div>
 
               <div className={styles.reviewLine} aria-label="Map review details">
-                <span>Verified for Scrap Mechanic {site.currentVersion}</span>
+                <span>Live game {site.currentVersion} · map review is separately dated</span>
                 <time dateTime={mapReviewDateIso}>Updated {mapReviewDate}</time>
                 <Link href="/updates/1-0-drilling-thunder">Version notes</Link>
                 <Link href="/about">Editorial policy</Link>

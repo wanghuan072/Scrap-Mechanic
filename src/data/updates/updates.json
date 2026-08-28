@@ -194,7 +194,7 @@
     "readingTime": "4 min",
     "featured": true,
     "sourceUrl": "https://steamcommunity.com/games/387990/announcements/detail/689764519146160688",
-    "quickAnswer": "Patch 1.0.3 is the current public baseline. It adds three Creative chat commands and lists nine fixes or stability changes for rendering, raids, turret-seat parts, Vault quests, underground events, the Thruster interface, older CPUs, and crashes.",
+    "quickAnswer": "Patch 1.0.3 added three Creative chat commands and listed fixes or stability changes for rendering, raids, turret-seat parts, Vault quests, underground events, the Thruster interface, older CPUs, and crashes. It has since been superseded by later official patches.",
     "sections": [
       {
         "heading": "Creative Mode Additions",
@@ -245,6 +245,113 @@
         "Scrap Mechanic vault quest not progressing",
         "Scrap Mechanic old CPU crash",
         "Scrap Mechanic Creative commands"
+      ]
+    }
+  },
+  {
+    "slug": "patch-1-0-4",
+    "title": "Patch 1.0.4 - Creative Parts, Growlab and Building Fixes",
+    "description": "Official fixes for missing Creative and Challenge parts, Growlab progress, storage, quest indicators, piston and spring building, rendering, crashes, the ending, and achievements.",
+    "category": "Patch Notes",
+    "image": "/images/scrap-mechanic/screenshot-11.jpg",
+    "imageAlt": "A Scrap Mechanic creation representing building and stability fixes",
+    "gameVersion": "1.0.4",
+    "published": "2026-07-31",
+    "updated": "2026-08-21",
+    "readingTime": "4 min",
+    "featured": true,
+    "sourceUrl": "https://steamcommunity.com/ogg/387990/announcements/detail/689764519146161793",
+    "quickAnswer": "Patch 1.0.4 restored missing parts, corrected several Creative, Challenge, building, rendering, quest, Growlab, ending, and achievement problems, and fixed a sensor-related elevator crash. The official note groups additional work under an unspecified ‘Other fixes’ item.",
+    "sections": [
+      {
+        "heading": "Creative and Challenge Content",
+        "bullets": [
+          "Added parts back to Creative mode that went missing in the 1.0 update.",
+          "Added many Survival parts to Creative and Challenge modes.",
+          "Fixed the flat Creative terrain clutter type."
+        ]
+      },
+      {
+        "heading": "World, Quest and Progression Fixes",
+        "bullets": [
+          "The Garage chest no longer accepts more items than it can hold.",
+          "The Glowbug builder-quest giver can no longer be picked up.",
+          "Growlab 5 was redesigned where players could be locked out after being knocked out following a completed combat event.",
+          "Missing quest indicators were fixed.",
+          "Beacons left in an exploded Warehouse no longer remain in the Logbook and compass.",
+          "An issue that could hide characters during the ending event was fixed.",
+          "Achievement fixes were included."
+        ]
+      },
+      {
+        "heading": "Building, Rendering and Stability",
+        "bullets": [
+          "Fixed a crash caused by moving a creation with a sensor through an elevator.",
+          "Restored the ability to build blocks and parts through springs and pistons.",
+          "Fixed piston and light inventory rendering issues.",
+          "The official note also lists other fixes without further detail."
+        ]
+      }
+    ],
+    "relatedWiki": [
+      "piston",
+      "suspension",
+      "sensor",
+      "glowbug"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic 1.0.4 Patch Notes - Parts & Growlab Fixes",
+      "description": "Read the official Scrap Mechanic 1.0.4 fixes for Creative parts, Growlab progress, pistons, springs, quest indicators, rendering, crashes, and achievements.",
+      "keywords": [
+        "Scrap Mechanic 1.0.4",
+        "Scrap Mechanic Growlab fix",
+        "Scrap Mechanic missing Creative parts",
+        "Scrap Mechanic patch notes"
+      ]
+    }
+  },
+  {
+    "slug": "patch-1-0-5",
+    "title": "Patch 1.0.5 - Bearing, Suspension and Piston Welding Fix",
+    "description": "The official welding hotfix for bearings, suspensions, and pistons after the previous patch introduced an attachment problem.",
+    "category": "Patch Notes",
+    "image": "/images/scrap-mechanic/screenshot-10.jpg",
+    "imageAlt": "A Scrap Mechanic vehicle representing the welding hotfix",
+    "gameVersion": "1.0.5",
+    "published": "2026-08-03",
+    "updated": "2026-08-21",
+    "readingTime": "2 min",
+    "featured": true,
+    "sourceUrl": "https://steamcommunity.com/ogg/387990/announcements/detail/689764519146162105",
+    "quickAnswer": "Patch 1.0.5 fixed the welding problem introduced by the previous patch: welding onto bearings, suspensions, and pistons did not work correctly. The official note lists no other fix in this patch.",
+    "sections": [
+      {
+        "heading": "Official Fix",
+        "bullets": [
+          "Fixed the issue introduced in the previous patch where welding onto bearings, suspensions, and pistons did not work correctly."
+        ]
+      },
+      {
+        "heading": "Version Boundary",
+        "paragraphs": [
+          "This page records only the fix stated in the official 1.0.5 announcement. It does not claim that every older creation, save issue, or unrelated welding problem is repaired. Preserve a backup before testing a creation affected by 1.0.4."
+        ]
+      }
+    ],
+    "relatedWiki": [
+      "bearing",
+      "suspension",
+      "piston",
+      "weld-tool"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic 1.0.5 Patch Notes - Welding Fix",
+      "description": "Read the official Scrap Mechanic 1.0.5 hotfix for welding creations onto bearings, suspensions, and pistons after the 1.0.4 attachment regression.",
+      "keywords": [
+        "Scrap Mechanic 1.0.5",
+        "Scrap Mechanic welding fix",
+        "Scrap Mechanic bearing welding",
+        "Scrap Mechanic patch notes"
       ]
     }
   }

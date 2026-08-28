@@ -60,7 +60,13 @@ function ItemName({
   wikiLinks: Record<string, string>;
 }) {
   const href = wikiLinks[name.toLowerCase()];
-  return href ? <Link href={href}>{name}</Link> : <>{name}</>;
+  return href ? (
+    <Link href={href} prefetch={false}>
+      {name}
+    </Link>
+  ) : (
+    <>{name}</>
+  );
 }
 
 export function RecipeDirectory({

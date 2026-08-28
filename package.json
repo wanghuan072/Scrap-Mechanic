@@ -11,6 +11,7 @@
     "test": "vitest run",
     "audit:data": "node scripts/audit/data.mjs",
     "audit:seo": "node scripts/audit/seo.mjs",
+    "audit:seo-contract": "node scripts/audit/seo-contract.mjs",
     "audit:rendered": "node scripts/audit/rendered.mjs"
   },
   "dependencies": {

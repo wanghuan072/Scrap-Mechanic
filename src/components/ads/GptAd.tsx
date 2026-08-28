@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   GPT_BANNER_SIZES,
   GPT_UNITS,
@@ -22,10 +22,19 @@ export function GptAd({
   slotId: string;
   unit: GptBannerUnit;
 }) {
+  const [renderState, setRenderState] = useState<"loading" | "filled" | "empty">(
+    "loading",
+  );
+
   useEffect(() => {
     const googletag = getGoogletag();
     let cancelled = false;
     let slot: GptSlot | null = null;
+    let pubads: GptPubAdsService | null = null;
+    let onSlotRenderEnded: ((event: GptSlotRenderEndedEvent) => void) | null = null;
+    const blockedAdTimeout = window.setTimeout(() => {
+      if (!cancelled) setRenderState("empty");
+    }, 5000);
 
     googletag.cmd.push(() => {
       if (cancelled || !document.getElementById(slotId)) return;
@@ -37,19 +46,36 @@ export function GptAd({
         .addSize([0, 0], [[320, 50], [300, 250], "fluid"])
         .build();
 
+      pubads = googletag.pubads();
       slot = googletag
         .defineSlot(GPT_UNITS[unit], GPT_BANNER_SIZES[unit], slotId)
         ?.defineSizeMapping(mapping)
-        .addService(googletag.pubads()) ?? null;
+        .addService(pubads) ?? null;
 
-      if (!slot) return;
+      if (!slot) {
+        window.clearTimeout(blockedAdTimeout);
+        setRenderState("empty");
+        return;
+      }
+
+      const mountedSlot = slot;
+      onSlotRenderEnded = (event) => {
+        if (event.slot !== mountedSlot || cancelled) return;
+        window.clearTimeout(blockedAdTimeout);
+        setRenderState(event.isEmpty ? "empty" : "filled");
+      };
+      pubads.addEventListener("slotRenderEnded", onSlotRenderEnded);
 
       googletag.display(slotId);
-      googletag.pubads().refresh([slot]);
+      pubads.refresh([slot]);
     });
 
     return () => {
       cancelled = true;
+      window.clearTimeout(blockedAdTimeout);
+      if (pubads && onSlotRenderEnded) {
+        pubads.removeEventListener("slotRenderEnded", onSlotRenderEnded);
+      }
       if (!slot) return;
 
       const mountedSlot = slot;
@@ -60,7 +86,12 @@ export function GptAd({
   }, [slotId, unit]);
 
   return (
-    <aside className="gpt-ad-section" aria-label="Advertisement">
+    <aside
+      className="gpt-ad-section"
+      aria-label="Advertisement"
+      aria-hidden={renderState === "empty" ? true : undefined}
+      data-ad-status={renderState}
+    >
       <span className="gpt-ad-label">Advertisement</span>
       <div className="gpt-ad-shell">
         <div className="gpt-ad-slot" id={slotId} />
@@ -68,4 +99,3 @@ export function GptAd({
     </aside>
   );
 }
-

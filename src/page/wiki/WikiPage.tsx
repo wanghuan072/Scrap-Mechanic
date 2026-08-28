@@ -160,7 +160,7 @@ export default function WikiPage() {
 
           <nav className={styles.taskList} aria-label="Player task indexes">
             {taskRoutes.map((task) => (
-              <Link href={task.href} key={task.href}>
+              <Link href={task.href} key={task.href} prefetch={false}>
                 <span className={styles.taskIndex}>{task.index}</span>
                 <div className={styles.taskName}>
                   <small>{task.verb}</small>
@@ -228,7 +228,11 @@ export default function WikiPage() {
                     <p>{group.description}</p>
                     <div className={styles.categoryLinks}>
                       {categories.map((category) => (
-                        <Link href={`/wiki/${category.slug}`} key={category.slug}>
+                        <Link
+                          href={`/wiki/${category.slug}`}
+                          key={category.slug}
+                          prefetch={false}
+                        >
                           {category.name}
                           <small>
                             {getWikiEntriesByCategory(category.slug).length}

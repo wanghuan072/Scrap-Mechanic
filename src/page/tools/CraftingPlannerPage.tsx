@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { CraftingPlanner } from "@/page/tools/components/CraftingPlanner";
 import { JsonLd } from "@/seo/JsonLd";
@@ -95,6 +96,19 @@ export default function CraftingPlannerPage() {
           </div>
         </div>
       </section>
+
+      <EvidenceStatus
+        label="Crafting planner data status"
+        status="Versioned game data"
+        title="Recipes and unlock routes have separate checked versions"
+        summary="Material totals use extracted crafting recipe files. Unlock labels come from a later RecipeManager and progression pass. Neither dataset is relabeled as 1.0.5 until the current game files are reprocessed."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Recipes", value: recipeCollection.checkedVersion },
+          { label: "Unlock routes", value: recipeUnlockCollection.checkedVersion },
+        ]}
+        tone="review"
+      />
 
       <section className={styles.toolSection}>
         <div className="container">

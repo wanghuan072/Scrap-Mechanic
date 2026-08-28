@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { TradeDirectory } from "@/page/wiki/components/TradeDirectory";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -129,6 +130,19 @@ export default function TradesPage() {
           </aside>
         </div>
       </section>
+
+      <EvidenceStatus
+        label="Trader directory data status"
+        status="Versioned game data"
+        title="Trader offers keep their extracted build number"
+        summary="The 127 Hideout and Mining Hub offers come from the checked game-data snapshot below. The live game version is shown separately so a later official patch is never mistaken for a fresh extraction."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Trade dataset", value: tradeCollection.checkedVersion },
+          { label: "Offers", value: String(tradeCollection.tradeCount) },
+        ]}
+        tone="review"
+      />
 
       <section className={styles.routeSection}>
         <div className="container">

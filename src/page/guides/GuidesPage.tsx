@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { SectionHero } from "@/components/common/SectionHero";
+import { site } from "@/config/site";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { guides } from "@/lib/content/catalog";
 import { createMetadata } from "@/seo/metadata";
@@ -58,6 +60,20 @@ export default function GuidesPage() {
         tone="orange"
       />
 
+      <EvidenceStatus
+        label="Guide version status"
+        status="Version boundary"
+        title={`The live game is ${site.currentVersion}; guides keep their own test labels`}
+        summary="The returning-player manual was written against the 1.0.3 boundary. Use the current patch timeline before applying its version-sensitive troubleshooting, while save backups and legacy-branch guidance remain separately documented."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Current patch", value: site.currentVersionPublished },
+          { label: "Status checked", value: site.lastChecked },
+        ]}
+        source={{ label: "Official current patch", href: site.currentVersionSource }}
+        tone="review"
+      />
+
       <section className={styles.manual}>
         <div className="container">
           <div className={styles.manualHeading}>
@@ -97,7 +113,7 @@ export default function GuidesPage() {
             <h3>Returning after Early Access?</h3>
             <p>
               Check old Creative and Survival worlds, mod categories, schematic state,
-              multiplayer ownership, and the 1.0.3 patch boundary before changing a save.
+              multiplayer ownership, and the current patch timeline before changing a save.
             </p>
             <Link href="/guides/returning-to-1-0">Read the 1.0 return brief →</Link>
             <dl>
@@ -115,7 +131,7 @@ export default function GuidesPage() {
               </div>
               <div>
                 <dt>Public baseline</dt>
-                <dd>1.0.3</dd>
+                <dd>{site.currentVersion}</dd>
               </div>
             </dl>
           </aside>
@@ -153,6 +169,7 @@ export default function GuidesPage() {
                       className={styles.guideRow}
                       href={`/guides/${guide.slug}`}
                       key={guide.slug}
+                      prefetch={false}
                     >
                       <span>{String(index + 1).padStart(2, "0")}</span>
                       <div className={styles.guideThumb}>

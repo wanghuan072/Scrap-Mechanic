@@ -136,7 +136,7 @@ function QuestRewards({ quest }: { quest: QuestEntry }) {
               key={`${reward.type}-${reward.name}`}
             >
               {reward.wikiHref ? (
-                <Link href={reward.wikiHref}>
+                <Link href={reward.wikiHref} prefetch={false}>
                   <span>{reward.type}</span>
                   <b>{reward.name}</b>
                   <small aria-hidden="true">Wiki →</small>
@@ -418,13 +418,17 @@ export default function QuestsPage() {
               <article key={row.problem}>
                 <div>
                   <strong>{row.problem}</strong>
-                  <Link href={row.href}>{row.objective} →</Link>
+                  <Link href={row.href} prefetch={false}>
+                    {row.objective} →
+                  </Link>
                 </div>
                 <p>{row.check}</p>
                 <div>
                   <p>{row.recovery}</p>
                   {row.linkHref && (
-                    <Link href={row.linkHref}>{row.linkLabel} →</Link>
+                    <Link href={row.linkHref} prefetch={false}>
+                      {row.linkLabel} →
+                    </Link>
                   )}
                 </div>
               </article>

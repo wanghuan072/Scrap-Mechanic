@@ -332,7 +332,12 @@ export default function BuildsPage() {
               <div className={styles.heroParts} aria-label="Common build parts">
                 {["Lift", "Connect Tool", "Bearing", "Controller Level 1"].map(
                   (name) => (
-                    <Link href={wikiHref(name)} key={name} title={name}>
+                    <Link
+                      href={wikiHref(name)}
+                      key={name}
+                      title={name}
+                      prefetch={false}
+                    >
                       <ItemIcon name={name} size={54} />
                     </Link>
                   ),
@@ -380,6 +385,7 @@ export default function BuildsPage() {
                   className={styles.comparisonRow}
                   href={`/builds/${job.slug}`}
                   key={job.slug}
+                  prefetch={false}
                 >
                   <div className={styles.comparisonBuild}>
                     <span>{job.number}</span>
@@ -454,9 +460,15 @@ export default function BuildsPage() {
             </div>
             {botBuildRoutes.map((route) => (
               <article className={styles.botPressureRow} key={route.pressure}>
-                <Link href={route.botHref}>{route.bot} ↗</Link>
+                <Link href={route.botHref} prefetch={false}>
+                  {route.bot} ↗
+                </Link>
                 <p data-label="Failure pressure">{route.pressure}</p>
-                <Link data-label="Use this blueprint" href={route.href}>
+                <Link
+                  data-label="Use this blueprint"
+                  href={route.href}
+                  prefetch={false}
+                >
                   {route.build} ↗
                 </Link>
                 <p data-label="Change before testing">{route.change}</p>
@@ -492,6 +504,7 @@ export default function BuildsPage() {
                   <Link
                     className={styles.toolIdentity}
                     href={wikiHref(tool.name)}
+                    prefetch={false}
                   >
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <ItemIcon name={tool.name} size={72} />
@@ -533,14 +546,14 @@ export default function BuildsPage() {
               const build = builds.find((entry) => entry.slug === head.build)!;
               return (
                 <article key={head.name}>
-                  <Link href={wikiHref(head.name)}>
+                  <Link href={wikiHref(head.name)} prefetch={false}>
                     <ItemIcon name={head.name} size={88} />
                     <span>Part file ↗</span>
                   </Link>
                   <div>
                     <h3>{head.name}</h3>
                     <p>{head.scene}</p>
-                    <Link href={`/builds/${head.build}`}>
+                    <Link href={`/builds/${head.build}`} prefetch={false}>
                       Use in {build.title} →
                     </Link>
                   </div>
@@ -574,9 +587,13 @@ export default function BuildsPage() {
             {progressionSystems.map((system) => (
               <article key={system.need}>
                 <p>{system.need}</p>
-                <Link href={system.machineHref}>{system.machine} ↗</Link>
+                <Link href={system.machineHref} prefetch={false}>
+                  {system.machine} ↗
+                </Link>
                 <p>{system.boundary}</p>
-                <Link href={system.route}>{system.routeLabel} →</Link>
+                <Link href={system.route} prefetch={false}>
+                  {system.routeLabel} →
+                </Link>
               </article>
             ))}
           </div>

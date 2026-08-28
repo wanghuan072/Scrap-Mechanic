@@ -23,7 +23,13 @@ function WikiName({
   wikiLinks: Record<string, string>;
 }) {
   const href = wikiLinks[name.toLowerCase()];
-  return href ? <Link href={href}>{name}</Link> : <>{name}</>;
+  return href ? (
+    <Link href={href} prefetch={false}>
+      {name}
+    </Link>
+  ) : (
+    <>{name}</>
+  );
 }
 
 export function TradeDirectory({
@@ -175,7 +181,9 @@ export function TradeDirectory({
                       {trade.output.quantity > 1 &&
                         `${trade.output.quantity.toLocaleString("en-US")}× `}
                       {trade.schematic ? (
-                        <Link href={recipeHref}>{trade.output.name}</Link>
+                        <Link href={recipeHref} prefetch={false}>
+                          {trade.output.name}
+                        </Link>
                       ) : (
                         <WikiName name={trade.output.name} wikiLinks={wikiLinks} />
                       )}
@@ -197,9 +205,13 @@ export function TradeDirectory({
                 </ul>
                 <div className={styles.unlock}>
                   {trade.schematic ? (
-                    <Link href={recipeHref}>View recipe</Link>
+                    <Link href={recipeHref} prefetch={false}>
+                      View recipe
+                    </Link>
                   ) : wikiHref ? (
-                    <Link href={wikiHref}>Open Wiki</Link>
+                    <Link href={wikiHref} prefetch={false}>
+                      Open Wiki
+                    </Link>
                   ) : (
                     <span>Finished item</span>
                   )}

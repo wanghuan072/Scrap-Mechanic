@@ -77,7 +77,12 @@ export function WikiLinkedText({
       linkCount < maxLinks
     ) {
       output.push(
-        <Link className={styles.link} href={href} key={`${href}-${start}-${index}`}>
+        <Link
+          className={styles.link}
+          href={href}
+          key={`${href}-${start}-${index}`}
+          prefetch={false}
+        >
           {label}
         </Link>,
       );

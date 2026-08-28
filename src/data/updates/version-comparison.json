@@ -130,9 +130,9 @@
       "detail": "The official notes say the previous five-type roster more than doubles."
     },
     {
-      "value": "3",
+      "value": "5",
       "label": "launch patches",
-      "detail": "Versions 1.0.1, 1.0.2, and 1.0.3 followed the full release."
+      "detail": "Versions 1.0.1 through 1.0.5 followed the full release."
     },
     {
       "value": "30 GB",

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
 import { JsonLd } from "@/seo/JsonLd";
@@ -381,6 +382,18 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
           </div>
         </div>
       </section>
+      <EvidenceStatus
+        label={`${entry.name} verification status`}
+        status="Entry version boundary"
+        title={`${entry.name} is checked for ${entry.gameVersion}`}
+        summary="The live game version is shown separately from this article's own test label. Structured recipe, trade, object, and quest relationships can also carry older source versions and are not automatically promoted by a site-wide release update."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Entry version", value: entry.gameVersion },
+          { label: "Entry checked", value: entry.lastTested },
+        ]}
+        tone={entry.gameVersion === site.currentVersion ? "confirmed" : "review"}
+      />
       <GptAd
         slotId={`div-gpt-ad-wiki-entry-${entry.category}-${entry.slug}-1`}
         unit="banner1"

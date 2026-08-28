@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RecipeDirectory } from "@/page/wiki/components/RecipeDirectory";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -137,6 +138,19 @@ export default function RecipesPage() {
           </aside>
         </div>
       </section>
+
+      <EvidenceStatus
+        label="Recipe directory data status"
+        status="Versioned game data"
+        title="Recipe rows are not silently promoted to the live patch"
+        summary="The directory comes from extracted CraftingRecipes data, while unlock routes come from a separate progression pass. Both versions remain visible until the current installation can be reprocessed."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Recipes", value: recipeCollection.checkedVersion },
+          { label: "Unlock routes", value: recipeUnlockCollection.checkedVersion },
+        ]}
+        tone="review"
+      />
 
       <section className={styles.stationSection}>
         <div className="container">

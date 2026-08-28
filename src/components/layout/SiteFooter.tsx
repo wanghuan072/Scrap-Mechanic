@@ -48,7 +48,7 @@ export function SiteFooter() {
             Practical 1.0 help for mechanics who want a working answer before the
             next raid, build test, or story run.
           </p>
-          <span className="version-chip">Checked for {site.currentVersion}</span>
+          <span className="version-chip">Live game {site.currentVersion}</span>
         </div>
         {footerGroups.map((group) => (
           <div className="footer-group" key={group.title}>
@@ -63,6 +63,7 @@ export function SiteFooter() {
                         ? "noopener noreferrer nofollow"
                         : undefined
                     }
+                    prefetch={false}
                   >
                     {label}
                   </Link>

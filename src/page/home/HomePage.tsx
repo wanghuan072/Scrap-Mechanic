@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import {
   recipeCollection,
@@ -239,6 +240,23 @@ export default function Home() {
         </div>
       </section>
 
+      <EvidenceStatus
+        label="Scrap Mechanic version and data status"
+        status="Live release confirmed"
+        title={`Scrap Mechanic ${site.currentVersion} is live`}
+        summary="The live game version and the checked version of a dataset are shown separately. Recipes, trades, unlocks, raid tables, and individual wiki entries keep their own version labels until they are re-extracted or retested."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Official patch", value: site.currentVersionPublished },
+          { label: "Status checked", value: site.lastChecked },
+        ]}
+        source={{
+          label: "Official patch note",
+          href: site.currentVersionSource,
+        }}
+        tone="confirmed"
+      />
+
       <GptAd slotId="div-gpt-ad-home-1" unit="banner1" />
 
       <div className={`container ${styles.dashboard}`}>
@@ -280,7 +298,7 @@ export default function Home() {
             ))}
             <div className={styles.briefMeta}>
               <span>Checked {site.lastChecked}</span>
-              <strong>Baseline {site.currentVersion}</strong>
+              <strong>Live game {site.currentVersion}</strong>
             </div>
           </div>
         </section>
@@ -400,7 +418,11 @@ export default function Home() {
                       </div>
                     </header>
                     {entries.map((guide, index) => (
-                      <Link href={`/guides/${guide.slug}`} key={guide.slug}>
+                      <Link
+                        href={`/guides/${guide.slug}`}
+                        key={guide.slug}
+                        prefetch={false}
+                      >
                         <em>{String(index + 1).padStart(2, "0")}</em>
                         <div>
                           <small>{guide.readingTime}</small>
@@ -426,7 +448,12 @@ export default function Home() {
           <div className={styles.referenceBody}>
             <div className={styles.taskGrid}>
               {taskRoutes.map((task) => (
-                <Link href={task.href} className={styles.taskCard} key={task.href}>
+                <Link
+                  href={task.href}
+                  className={styles.taskCard}
+                  key={task.href}
+                  prefetch={false}
+                >
                   <small>{task.verb}</small>
                   <h3>{task.title}</h3>
                   <b>{task.metric}</b>
@@ -436,7 +463,12 @@ export default function Home() {
             </div>
             <div className={styles.wikiDirectory}>
               {wikiCategories.map((category, index) => (
-                <Link href={`/wiki/${category.slug}`} className={styles.wikiTile} key={category.slug}>
+                <Link
+                  href={`/wiki/${category.slug}`}
+                  className={styles.wikiTile}
+                  key={category.slug}
+                  prefetch={false}
+                >
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <div className={styles.wikiThumb}>
                     <Image src={category.image} alt="" fill sizes="72px" />
@@ -479,7 +511,11 @@ export default function Home() {
             </Link>
             <div className={styles.buildStack}>
               {featuredBuilds.slice(1, 6).map((build, index) => (
-                <Link href={`/builds/${build.slug}`} key={build.slug}>
+                <Link
+                  href={`/builds/${build.slug}`}
+                  key={build.slug}
+                  prefetch={false}
+                >
                   <span>A-{String(index + 2).padStart(2, "0")}</span>
                   <div>
                     <small>{build.category}</small>
@@ -505,7 +541,12 @@ export default function Home() {
           </div>
           <div className={styles.landmarkGrid}>
             {mapPreview.map((location) => (
-              <Link href={`/map#${location.slug}`} key={location.slug} className={styles.landmarkCard}>
+              <Link
+                href={`/map#${location.slug}`}
+                key={location.slug}
+                className={styles.landmarkCard}
+                prefetch={false}
+              >
                 <small>{location.type} · {location.danger}</small>
                 <h3>{location.name}</h3>
                 <p>{location.description}</p>
@@ -518,13 +559,18 @@ export default function Home() {
           <div className={styles.sectionLabel}>
             <div className={styles.sectionIntro}>
               <h2>Workshop</h2>
-              <p>Post-1.0 mod candidates with install and risk notes.</p>
+              <p>Post-1.0 candidates, legacy dependencies, and current status warnings.</p>
             </div>
             <Link href="/mods">Mods board →</Link>
           </div>
           <div className={styles.modsGrid}>
             {featuredMods.map((mod, index) => (
-              <Link href={`/mods#${mod.slug}`} key={mod.slug} className={styles.modCard}>
+              <Link
+                href={`/mods#${mod.slug}`}
+                key={mod.slug}
+                className={styles.modCard}
+                prefetch={false}
+              >
                 <div className={styles.modImage}>
                   <Image
                     src={mod.image}
@@ -535,7 +581,12 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <span>{String(index + 1).padStart(2, "0")} · {mod.compatibility}</span>
+                  <span>
+                    {String(index + 1).padStart(2, "0")} ·{" "}
+                    {mod.workshopStatus === "removed-incompatible"
+                      ? "quarantined"
+                      : mod.compatibility}
+                  </span>
                   <h3>{mod.title}</h3>
                   <p>{mod.bestFor}</p>
                 </div>

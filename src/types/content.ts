@@ -109,6 +109,9 @@ export type WorkshopMod = {
   whyRecommended: string;
   installMethod: string;
   compatibility: "recent-1-0-candidate" | "legacy-check";
+  workshopStatus?: "available" | "removed-incompatible" | "legacy-incompatible";
+  statusCheckedAt?: string;
+  statusNote?: string;
   subscriptions: number;
   lifetimeSubscriptions: number;
   views: number;

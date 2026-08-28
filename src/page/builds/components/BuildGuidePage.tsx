@@ -258,7 +258,11 @@ export function BuildGuidePage({
             </div>
             {spec.parts.map((part) => (
               <div className={styles.partRow} key={part.name}>
-                <Link className={styles.partIdentity} href={wikiHref(part.name)}>
+                <Link
+                  className={styles.partIdentity}
+                  href={wikiHref(part.name)}
+                  prefetch={false}
+                >
                   <ItemImage name={part.name} />
                   <strong>{part.name}</strong>
                 </Link>
@@ -325,6 +329,7 @@ export function BuildGuidePage({
                   href={wikiHref(material.name)}
                   className={styles.material}
                   key={material.uuid}
+                  prefetch={false}
                 >
                   {material.image ? (
                     <Image
@@ -448,6 +453,7 @@ export function BuildGuidePage({
                   className={styles.toolRow}
                   href={wikiHref(tool.name)}
                   key={tool.name}
+                  prefetch={false}
                 >
                   <ItemImage name={tool.name} size={58} />
                   <div>
@@ -560,7 +566,11 @@ export function BuildGuidePage({
           </header>
           <div className={styles.relatedGrid}>
             {finalRelated.map((build) => (
-              <Link href={`/builds/${build.slug}`} key={build.slug}>
+              <Link
+                href={`/builds/${build.slug}`}
+                key={build.slug}
+                prefetch={false}
+              >
                 <Image
                   src={build.image}
                   alt={build.imageAlt}

@@ -347,6 +347,36 @@
   padding: 34px;
 }
 
+.statusAlert {
+  margin-bottom: 18px;
+  padding: 15px 17px;
+  border: 1px solid #a74f48;
+  border-left: 4px solid #ff776d;
+  background: #291617;
+}
+
+.statusAlert b {
+  color: #ff9289;
+  font-family: var(--display);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.statusAlert p {
+  margin: 6px 0;
+  color: #e8cecb;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.statusAlert small {
+  color: #c6938e;
+  font-family: var(--display);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 .modTopline {
   display: flex;
   justify-content: space-between;

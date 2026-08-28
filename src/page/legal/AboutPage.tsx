@@ -28,10 +28,11 @@ export default function AboutUsPage() {
           to act on it.
         </p>
         <p>
-          Coverage currently centers on Scrap Mechanic {site.currentVersion}. The site
-          was last reviewed across its current-version content on {site.lastChecked}.
-          Version labels matter because recipes, progression, quests, object behavior,
-          and mod compatibility can change between releases or Steam branches.
+          Coverage currently centers on the Scrap Mechanic 1.0 release series. The
+          official live release was last checked as {site.currentVersion} on {site.lastChecked},
+          while each database and guide keeps its own checked version. Version labels
+          matter because recipes, progression, quests, object behavior, and mod
+          compatibility can change between releases or Steam branches.
         </p>
         <h2>How information is organized</h2>
         <p>

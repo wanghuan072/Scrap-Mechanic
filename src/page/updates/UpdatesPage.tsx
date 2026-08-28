@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
+import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import {
@@ -14,6 +15,7 @@ import {
 import { updates } from "@/lib/data/updates";
 import { createMetadata } from "@/seo/metadata";
 import { pageTdk } from "@/seo/tdk";
+import { site } from "@/config/site";
 import styles from "@/style/page/updates/updates.module.css";
 
 export const metadata: Metadata = createMetadata(pageTdk.updates, "/updates");
@@ -45,13 +47,25 @@ const patchEvidence: Record<
     sourceUrl:
       "https://steamcommunity.com/games/387990/announcements/detail/689764519146160688",
   },
+  "patch-1-0-4": {
+    listedChanges: 14,
+    focus: "Creative and Challenge parts, Growlab progress, building, rendering, quests, and achievements",
+    sourceUrl:
+      "https://steamcommunity.com/ogg/387990/announcements/detail/689764519146161793",
+  },
+  "patch-1-0-5": {
+    listedChanges: 1,
+    focus: "Welding onto bearings, suspensions, and pistons after the 1.0.4 regression",
+    sourceUrl:
+      "https://steamcommunity.com/ogg/387990/announcements/detail/689764519146162105",
+  },
 };
 
 const updateFaqs = [
   {
     question: "What is the latest Scrap Mechanic version?",
     answer:
-      "The latest public version in the official announcements is Scrap Mechanic 1.0.3, published on July 29, 2026 UTC. This page was checked on July 30, 2026.",
+      "The latest public version in the official announcements is Scrap Mechanic 1.0.5, published on August 3, 2026. This page was checked on August 21, 2026.",
   },
   {
     question: "When did Scrap Mechanic 1.0 and Drilling Thunder release?",
@@ -115,7 +129,7 @@ export default function UpdatesPage() {
           <div className={styles.heroCopy}>
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Updates" }]} />
             <span className={styles.eyebrow}>
-              Official release data / checked July 30, 2026
+              Official release data / checked August 21, 2026
             </span>
             <h1>
               Scrap Mechanic Updates <span>- 1.0.3 Current</span>
@@ -123,7 +137,7 @@ export default function UpdatesPage() {
             <p>
               A picture-led, data-backed guide to Scrap Mechanic 1.0 and Drilling
               Thunder: what the release added, what changed for returning players, and
-              which launch bugs were fixed in patches 1.0.1 through 1.0.3.
+              which launch bugs were fixed in patches 1.0.1 through 1.0.5.
             </p>
             <nav className={styles.jumpNav} aria-label="Scrap Mechanic update sections">
               <a href="#visual-evidence">Official screenshots</a>
@@ -135,7 +149,7 @@ export default function UpdatesPage() {
           </div>
           <aside className={styles.releasePlate}>
             <span>Current public baseline</span>
-            <strong>1.0.3</strong>
+            <strong>{site.currentVersion}</strong>
             <dl>
               <div>
                 <dt>Full release</dt>
@@ -143,11 +157,11 @@ export default function UpdatesPage() {
               </div>
               <div>
                 <dt>Latest patch</dt>
-                <dd>July 29 UTC</dd>
+                <dd>August 3, 2026</dd>
               </div>
               <div>
                 <dt>Launch patches</dt>
-                <dd>3 / 22 listed changes</dd>
+                <dd>5 / 37 listed changes</dd>
               </div>
               <div>
                 <dt>Expansion</dt>
@@ -157,6 +171,20 @@ export default function UpdatesPage() {
           </aside>
         </div>
       </section>
+
+      <EvidenceStatus
+        label="Official Scrap Mechanic release status"
+        status="Live release correction"
+        title={`Official current version: ${site.currentVersion}`}
+        summary="Official patches 1.0.4 and 1.0.5 are now included below. Older recipes, trades, raid tables, and wiki entries continue to show their own checked versions instead of inheriting the live release number."
+        facts={[
+          { label: "Live game", value: site.currentVersion },
+          { label: "Published", value: site.currentVersionPublished },
+          { label: "Verified", value: site.lastChecked },
+        ]}
+        source={{ label: "Official 1.0.5 note", href: site.currentVersionSource }}
+        tone="confirmed"
+      />
 
       <section className={styles.intro}>
         <div className={`container ${styles.introGrid}`}>
@@ -408,7 +436,7 @@ export default function UpdatesPage() {
         <div className="container">
           <header className={styles.sectionHeading}>
             <div>
-              <span>22 listed launch changes</span>
+              <span>37 listed launch changes</span>
               <h2>Scrap Mechanic patch notes timeline</h2>
             </div>
             <p>

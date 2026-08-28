@@ -307,7 +307,7 @@
   {
     "slug": "returning-to-1-0",
     "title": "Returning Player Guide - Saves, Mods, and 1.0 Systems",
-    "description": "A version-boundary checklist for old Creative and Survival worlds, Parts and Custom Game mods, schematics, multiplayer hosts, and launch patches through 1.0.3.",
+    "description": "A version-boundary checklist for old Creative and Survival worlds, Parts and Custom Game mods, schematics, multiplayer hosts, and the original launch patches through 1.0.3, with a separate current-release warning.",
     "category": "Standalone",
     "image": "/images/scrap-mechanic/trailer-1-0.jpg",
     "imageAlt": "Scrap Mechanic 1.0 trailer artwork",
@@ -316,7 +316,7 @@
     "updated": "2026-07-31",
     "readingTime": "13 min",
     "featured": true,
-    "quickAnswer": "Old Creative worlds can load in 1.0; old Survival worlds need a legacy Steam branch. Back up the complete save before switching, test Parts or Custom Game mods on a copy, and use the 1.0.3 public baseline before diagnosing raid, Vault, underground, or Thruster problems.",
+    "quickAnswer": "Old Creative worlds can load in 1.0; old Survival worlds need a legacy Steam branch. Back up the complete save before switching, test Parts or Custom Game mods on a copy, and check the current 1.0.5 patch timeline before diagnosing raid, Vault, underground, welding, or Thruster problems.",
     "sections": [
       {
         "heading": "Back Up the Whole World Before Changing a Branch",

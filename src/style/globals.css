@@ -90,6 +90,10 @@ a {
   text-align: center;
 }
 
+.gpt-ad-section[data-ad-status="empty"] {
+  display: none;
+}
+
 .gpt-ad-label {
   display: block;
   margin-bottom: 8px;
