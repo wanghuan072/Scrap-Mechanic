@@ -17,6 +17,16 @@ export default function GuidesPage() {
   const featured = guides.find((guide) => guide.slug === "beginner-first-hours") ?? guides[0];
   const lanes = [
     {
+      label: "Resources",
+      copy: "Oil, water, battery, and schematic routes with recipe-backed checkpoints.",
+      slugs: [
+        "how-to-get-oil",
+        "how-to-get-water",
+        "how-to-get-battery",
+        "how-to-get-schematics",
+      ],
+    },
+    {
       label: "Survival",
       copy: "Crop-value decisions, raid recovery, ammunition budgets, and Warehouse combat.",
       slugs: [
@@ -50,10 +60,10 @@ export default function GuidesPage() {
         eyebrow="Survival knowledge / arranged by player decision"
         image="/images/scrap-mechanic/screenshot-03.jpg"
         imageAlt="A mechanic overlooking a working Scrap Mechanic farm"
-        intro="Eight complete manuals: two start points, then two data-led guides for Survival, Building, and Progression. Detailed item records stay in the Wiki instead of being repeated here."
+        intro="Twelve complete manuals: two start points, four acquisition guides, then data-led Survival, Building, and Progression routes. Detailed item records stay in the Wiki instead of being repeated here."
         metrics={[
           { label: "Manuals", value: `${guides.length}` },
-          { label: "Categories", value: "3 × 2" },
+          { label: "Lanes", value: "4" },
           { label: "Standalone", value: "2" },
         ]}
         title="Scrap Mechanic"
@@ -145,10 +155,10 @@ export default function GuidesPage() {
         <div className="container">
           <div className={styles.laneHeading}>
             <div>
-              <span>Six category guides</span>
-              <h2>Three jobs, two manuals each</h2>
+              <span>Ten category guides</span>
+              <h2>Four jobs, practical routes first</h2>
             </div>
-            <p>Each pair covers a different player decision and links to the exact Wiki records behind its numbers.</p>
+            <p>Each lane covers a different player decision and links to the exact Wiki records behind its numbers.</p>
           </div>
           {lanes.map((lane, laneIndex) => {
             const entries = lane.slugs

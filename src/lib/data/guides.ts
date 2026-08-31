@@ -2,6 +2,10 @@ import guidesJson from "@/data/guides/guides.json";
 import type { ArticleEntry } from "@/types/content";
 
 const guideOrder = [
+  "how-to-get-oil",
+  "how-to-get-water",
+  "how-to-get-battery",
+  "how-to-get-schematics",
   "beginner-first-hours",
   "returning-to-1-0",
   "farming-basics",

@@ -117,8 +117,8 @@ const categorySlugs = new Set(categorySlugList);
 const guideSlugs = new Set(guideSlugList);
 const buildSlugs = new Set(buildSlugList);
 
-if (guides.length !== 8) {
-  failures.push(`guides/guides.json: expected 8 published guides, found ${guides.length}`);
+if (guides.length !== 12) {
+  failures.push(`guides/guides.json: expected 12 published guides, found ${guides.length}`);
 }
 
 checkUnique("guide slugs", guideSlugList);

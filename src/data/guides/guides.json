@@ -1,5 +1,778 @@
 [
   {
+    "slug": "how-to-get-oil",
+    "title": "How to Get Oil in Scrap Mechanic",
+    "description": "Collect Oil with the correct bucket or pump route, convert Oil Buckets into Crude Oil, and turn that into Gasoline without chasing unsupported pond or vent rumors.",
+    "category": "Resources",
+    "image": "/images/scrap-mechanic/screenshot-09.jpg",
+    "imageAlt": "Scrap Mechanic shoreline route used for oil collection planning",
+    "gameVersion": "1.0.5",
+    "published": "2026-08-31",
+    "updated": "2026-08-31",
+    "readingTime": "10 min",
+    "quickAnswer": "For current Survival, treat Oil Bucket and Crude Oil as separate states. Use an Oil Bucket or a Vacuum Pump intake with storage, then craft Oil Bucket into 5 Crude Oil at the Craftbot. Crude Oil crafts into Gasoline at 5 to 5 in the Craftbot, or 1 to 1 in the Portable Crafter and Workbench.",
+    "media": [
+      {
+        "src": "/images/wiki/oil.webp",
+        "alt": "Scrap Mechanic Oil resource guide icon for crude oil crafting",
+        "caption": "Use the Oil wiki entry for the item definition, then use this guide for the acquisition route and conversion checkpoints."
+      },
+      {
+        "src": "/images/wiki/gasoline.webp",
+        "alt": "Scrap Mechanic Gasoline crafted from Crude Oil",
+        "caption": "Gasoline is the practical reason to collect Crude Oil early. Do not spend the whole batch before reserving return-trip fuel."
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Oil quick reference",
+        "headers": [
+          "Method",
+          "Requirement",
+          "Output",
+          "Version note"
+        ],
+        "rows": [
+          [
+            "Oil Bucket route",
+            "Oil Bucket in inventory",
+            "Craftbot: 5 Crude Oil",
+            "Verified in repository recipes; no extra refinery step is used."
+          ],
+          [
+            "Vacuum Pump intake",
+            "Vacuum Pump in In mode plus compatible storage",
+            "Crude Oil collection into storage",
+            "Repository part data lists Crude Oil as a supported pump target."
+          ],
+          [
+            "Fuel conversion",
+            "Crude Oil",
+            "Gasoline",
+            "Craftbot converts 5 Crude Oil to 5 Gasoline; Portable Crafter and Workbench convert 1 to 1."
+          ]
+        ],
+        "note": "Unsupported collection claims, underground-node claims, extra-station conversion claims, and fixed numeric field yields are not used here."
+      },
+      {
+        "caption": "Crude Oil recipe checks",
+        "headers": [
+          "Recipe",
+          "Station",
+          "Time",
+          "Inputs"
+        ],
+        "rows": [
+          [
+            "Crude Oil x5",
+            "Craftbot",
+            "5 sec",
+            "Oil Bucket x1"
+          ],
+          [
+            "Gasoline x5",
+            "Craftbot",
+            "5 sec",
+            "Crude Oil x5"
+          ],
+          [
+            "Gasoline x1",
+            "Portable Crafter / Workbench",
+            "5 sec",
+            "Crude Oil x1"
+          ],
+          [
+            "Gas Engine Level 1",
+            "Craftbot",
+            "30 sec",
+            "20 Metal Block 1, 5 Component Kits, 1 Circuit Board, 5 Crude Oil"
+          ]
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Quick answer: Oil, Oil Bucket, and Crude Oil",
+        "paragraphs": [
+          "The site data separates three terms that players often collapse into one search: Oil is the wiki resource topic, Oil Bucket is the carried container state, and Crude Oil is the crafting input used by fuel and industrial recipes.",
+          "If a guide tells you to refine Oil in an extra station, ignore it for this build. The current repository recipe set uses Craftbot, Portable Crafter, and Workbench conversions."
+        ]
+      },
+      {
+        "heading": "Method 1: Direct collection route",
+        "steps": [
+          "Leave base with a clear cargo plan: one Oil Bucket route or one pump-and-storage route, not a mixed loot run.",
+          "Use the collection interaction that gives an Oil Bucket, then return before filling general storage with unrelated parts.",
+          "At base, craft Oil Bucket into Crude Oil x5 before planning the fuel batch.",
+          "Store Crude Oil separately from Gasoline so vehicle fuel is not confused with raw input stock."
+        ]
+      },
+      {
+        "heading": "Method 2: Vacuum Pump collection",
+        "paragraphs": [
+          "Vacuum Pump data lists In and Out modes and includes Crude Oil as a supported collection target. The pump still needs the right direction, a compatible container, a valid intake position, and free capacity.",
+          "Do not build a giant extractor first. Test a direct pump-to-storage line, confirm one transfer, then scale the route."
+        ],
+        "bullets": [
+          "If the pump animates but collects nothing, check In mode and intake placement first.",
+          "If storage stays empty, connect one pump directly to one empty container and remove the pipe chain from the test.",
+          "If the shoreline is inconsistent, move the intake and retest rather than declaring a fixed spawn coordinate."
+        ]
+      },
+      {
+        "heading": "Common oil mistakes",
+        "bullets": [
+          "Do not search for an extra-station conversion; it is not in the current recipe path.",
+          "Do not spend every Crude Oil stack on decorative or side recipes before reserving Gasoline.",
+          "Do not quote fixed oil field yields unless you tested that exact current-version world state."
+        ]
+      },
+      {
+        "heading": "Frequently asked questions",
+        "bullets": [
+          "How do you collect oil in Scrap Mechanic? Use an Oil Bucket route or a Vacuum Pump intake with compatible storage, then convert Oil Bucket into Crude Oil if needed.",
+          "Where is Crude Oil located? The repository supports collection routing but does not provide universal fixed coordinates, so use visible liquid-source routing and storage tests.",
+          "Can a Vacuum Pump collect oil? Yes, the current Vacuum Pump data lists Crude Oil as a supported In-mode target.",
+          "What is Crude Oil used for? Gasoline, early suspension and gas-engine recipes, blocks, and some later decorative or utility recipes."
+        ]
+      },
+      {
+        "heading": "Related guides",
+        "bullets": [
+          "For farm water systems, use the how-to-get-water guide.",
+          "For electric power storage, use the how-to-get-battery guide.",
+          "For locked recipe progression, use the how-to-get-schematics guide."
+        ]
+      }
+    ],
+    "relatedWiki": [
+      "oil",
+      "gasoline",
+      "vacuum-pump",
+      "large-chest",
+      "gas-engine"
+    ],
+    "relatedGuides": [
+      "how-to-get-water",
+      "how-to-get-battery",
+      "how-to-get-schematics"
+    ],
+    "relatedRoutes": [
+      {
+        "label": "Oil wiki entry",
+        "href": "/wiki/resources/oil"
+      },
+      {
+        "label": "Gasoline wiki entry",
+        "href": "/wiki/items/gasoline"
+      },
+      {
+        "label": "Recipes directory",
+        "href": "/wiki/recipes"
+      }
+    ],
+    "seo": {
+      "title": "How to Get Oil in Scrap Mechanic - Crude Oil Guide",
+      "description": "Get Oil in Scrap Mechanic with Oil Buckets, Vacuum Pumps, Crude Oil conversion, and Gasoline recipes using verified Survival crafting routes.",
+      "keywords": [
+        "Scrap Mechanic oil",
+        "Crude Oil",
+        "Oil Bucket",
+        "Gasoline"
+      ]
+    }
+  },
+  {
+    "slug": "how-to-get-water",
+    "title": "How to Get Water in Scrap Mechanic",
+    "description": "Use the starter Water Bucket, Craftbot bucket recipe, Vacuum Pump storage, and Water Cannon delivery for ship fires, crops, and farm builds.",
+    "category": "Resources",
+    "image": "/images/scrap-mechanic/screenshot-06.jpg",
+    "imageAlt": "Scrap Mechanic farm route where water collection and delivery matter",
+    "gameVersion": "1.0.5",
+    "published": "2026-08-31",
+    "updated": "2026-08-31",
+    "readingTime": "11 min",
+    "quickAnswer": "Early water is a Water Bucket job: find the first bucket at the Crash Site pond, fill it from open water, and use it on fires or crops. For automation, craft a Water Container, connect a submerged Vacuum Pump in In mode, then feed a Water Cannon or refill buckets from the stored water.",
+    "media": [
+      {
+        "src": "/images/wiki/water-bucket.webp",
+        "alt": "Scrap Mechanic Water Bucket location and water collection guide",
+        "caption": "The Water Bucket is the first verified water tool and remains the fallback when automation fails."
+      },
+      {
+        "src": "/images/game-items/water-container-ea10d1af.webp",
+        "alt": "Scrap Mechanic Water Container for farm water storage",
+        "caption": "Water Container storage matters before a Water Cannon can deliver clean farming cycles."
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Water quick reference",
+        "headers": [
+          "Method",
+          "Source",
+          "Required parts",
+          "Best use"
+        ],
+        "rows": [
+          [
+            "Water Bucket",
+            "Open water or filled Water Container",
+            "Water Bucket",
+            "Ship fires, hand watering, recovery"
+          ],
+          [
+            "Crafted Water Bucket",
+            "Craftbot",
+            "5 Metal Block Level 1",
+            "Extra manual backup buckets"
+          ],
+          [
+            "Vacuum Pump intake",
+            "Open water",
+            "Vacuum Pump, Water Container, pipe or direct connection",
+            "Farm storage and automation"
+          ],
+          [
+            "Water Cannon",
+            "Stored water",
+            "Water Container, Water Cannon, trigger/control",
+            "Repeatable crop watering"
+          ]
+        ],
+        "note": "There is no verified player-hydration loop in this site data. Water here is for objectives, crops, storage, and delivery systems."
+      },
+      {
+        "caption": "Water system recipes",
+        "headers": [
+          "Output",
+          "Station",
+          "Time",
+          "Inputs"
+        ],
+        "rows": [
+          [
+            "Water Bucket x1",
+            "Craftbot",
+            "5 sec",
+            "5 Metal Block Level 1"
+          ],
+          [
+            "Water Container x1",
+            "Craftbot",
+            "30 sec",
+            "10 Metal Block Level 1, 5 Circuit Boards, 4 Glue"
+          ],
+          [
+            "Water Cannon x1",
+            "Craftbot",
+            "30 sec",
+            "10 Metal Block Level 1, 1 Circuit Board, 2 Glue"
+          ],
+          [
+            "Vacuum Pump x1",
+            "Craftbot",
+            "30 sec",
+            "20 Metal Block Level 1, 1 Component Kit, 1 Circuit Board, 3 Glue"
+          ]
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Quick answer: collecting water",
+        "paragraphs": [
+          "The early route is not complicated: pick up the Crash Site Water Bucket, fill it at the pond, and repeat the trip for each marked ship fire or crop plot.",
+          "Automation begins only when you have a Water Container and a pump line that has passed a one-transfer test."
+        ]
+      },
+      {
+        "heading": "Method 1: Water Bucket",
+        "steps": [
+          "Enter the crashed ship first so the opening objective activates.",
+          "Follow the path opposite the ship entrance to the pond beside the farming setup.",
+          "Pick up the Water Bucket at the pond edge.",
+          "Use the bucket on open water, then throw the filled bucket at the marked fire or dry crop plot.",
+          "Refill after each use. A filled bucket becomes empty after throwing water."
+        ]
+      },
+      {
+        "heading": "Method 2: Vacuum Pump and Water Container",
+        "paragraphs": [
+          "The pump does not replace storage. It moves water only when the intake, mode, control signal, and connected container are all valid.",
+          "Build the first test as a short direct line. A long pipe chain hides the real fault when the pump is reversed or the container is full."
+        ],
+        "bullets": [
+          "Pump mode: In for collection from water.",
+          "Storage: Water Container with free capacity.",
+          "Delivery: Water Cannon or bucket refill after storage is confirmed."
+        ]
+      },
+      {
+        "heading": "Method 3: Water Cannon setup",
+        "steps": [
+          "Fill a Water Container with a bucket or pump intake.",
+          "Connect the Water Cannon to the container.",
+          "Connect a Button, Switch, Sensor, or Controller logic line for activation.",
+          "Fire one shot at one crop plot before moving the cannon on a piston or vehicle.",
+          "Only scale the watering arm after the single-shot test waters the intended plot."
+        ]
+      },
+      {
+        "heading": "Frequently asked questions",
+        "bullets": [
+          "How do you get a Water Container? Craft it at the Craftbot with 10 Metal Block Level 1, 5 Circuit Boards, and 4 Glue.",
+          "Can you drink water in Scrap Mechanic? This guide does not support a player-hydration claim; repository water uses are objectives, crops, and storage.",
+          "Why is my pump not collecting water? Check In mode, intake placement, free Water Container capacity, and direct connection before changing the whole build.",
+          "Can a bucket refill from storage? Yes, the Water Bucket data lists open water or a filled Water Container as refill sources."
+        ]
+      },
+      {
+        "heading": "Related guides",
+        "bullets": [
+          "Oil collection uses similar pump troubleshooting, but different storage intent.",
+          "Battery planning matters once the farm uses electric systems.",
+          "Schematics control some later recipe access; do not confuse that with water storage."
+        ]
+      }
+    ],
+    "relatedWiki": [
+      "water-bucket",
+      "water-system",
+      "vacuum-pump",
+      "soil-bag",
+      "tomato"
+    ],
+    "relatedGuides": [
+      "beginner-first-hours",
+      "farming-basics",
+      "how-to-get-oil",
+      "how-to-get-battery"
+    ],
+    "relatedRoutes": [
+      {
+        "label": "Water Bucket wiki entry",
+        "href": "/wiki/items/water-bucket"
+      },
+      {
+        "label": "Farming guide",
+        "href": "/guides/farming-basics"
+      },
+      {
+        "label": "Recipes directory",
+        "href": "/wiki/recipes"
+      }
+    ],
+    "seo": {
+      "title": "How to Get Water in Scrap Mechanic - Bucket & Pump",
+      "description": "Get Water in Scrap Mechanic with Water Bucket, Water Container, Vacuum Pump, and Water Cannon routes for ship fires, crops, and farm automation.",
+      "keywords": [
+        "Scrap Mechanic water",
+        "Water Bucket",
+        "Water Container",
+        "Vacuum Pump"
+      ]
+    }
+  },
+  {
+    "slug": "how-to-get-battery",
+    "title": "How to Get Batteries in Scrap Mechanic",
+    "description": "Find, craft, store, and spend normal Batteries for electric systems while keeping Master Batteries, charger rumors, and dead-battery claims separate.",
+    "category": "Resources",
+    "image": "/images/scrap-mechanic/screenshot-03.jpg",
+    "imageAlt": "Scrap Mechanic powered base route for Battery planning",
+    "gameVersion": "1.0.5",
+    "published": "2026-08-31",
+    "updated": "2026-08-31",
+    "readingTime": "10 min",
+    "quickAnswer": "Normal Batteries are consumable power for electric systems. The current recipe crafts 10 Batteries at the Craftbot from 5 Metal Block Level 1, 1 Glow, and 5 Chemicals. Do not treat Master Batteries as craftable fuel, and do not plan around a vanilla recharge station unless your mod list adds one.",
+    "media": [
+      {
+        "src": "/images/wiki/battery.webp",
+        "alt": "Scrap Mechanic Battery crafting and electric engine guide",
+        "caption": "Normal Batteries power electric systems and stack separately from fixed Master Battery quest objects."
+      },
+      {
+        "src": "/images/wiki/master-battery.webp",
+        "alt": "Scrap Mechanic Master Battery is not the same as normal Battery",
+        "caption": "Master Batteries are progression items. Do not put them in the same mental bucket as electric-engine fuel."
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Battery quick reference",
+        "headers": [
+          "Source or use",
+          "Location / station",
+          "Requirement",
+          "Best stage"
+        ],
+        "rows": [
+          [
+            "Craft Batteries",
+            "Craftbot",
+            "5 Metal Block Level 1, 1 Glow, 5 Chemicals",
+            "After chemical supply is stable"
+          ],
+          [
+            "Loot Batteries",
+            "Exploration and bot routes",
+            "Inventory space and return plan",
+            "Early reserve before electric builds"
+          ],
+          [
+            "Power Electric Engine",
+            "Vehicle or machine",
+            "Electric Engine and Battery supply",
+            "When controlled electric drive matters"
+          ],
+          [
+            "Battery Container",
+            "Connected electric systems",
+            "Container and connection plan",
+            "Larger builds with repeat consumption"
+          ]
+        ],
+        "note": "No vanilla recharge-station or spent-battery loop is used in this guide. Treat charging claims as mod-specific until proven otherwise."
+      },
+      {
+        "caption": "Battery recipe and consumers",
+        "headers": [
+          "Item",
+          "Station",
+          "Time",
+          "Battery relation"
+        ],
+        "rows": [
+          [
+            "Battery x10",
+            "Craftbot",
+            "5 sec",
+            "Output from Metal 1, Glow, and Chemicals"
+          ],
+          [
+            "Electric Engine Level 1",
+            "Craftbot",
+            "30 sec",
+            "Consumes 5 Batteries in the recipe and then uses Batteries as power"
+          ],
+          [
+            "Power Station",
+            "Craftbot",
+            "10 sec",
+            "Uses 1 Battery as an ingredient"
+          ],
+          [
+            "Broken Microwave",
+            "Craftbot",
+            "10 sec",
+            "Uses 1 Battery as an ingredient"
+          ]
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Quick answer: normal Battery, not Master Battery",
+        "paragraphs": [
+          "The normal Battery item is consumable power. The Master Battery is a fixed story/progression object used by the crashed ship and Mechanic Station route.",
+          "If a route tells you to recharge spent Batteries in vanilla Survival, stop and check the mod list. The current repository data has no recharge-station entry and no spent-battery mechanic."
+        ]
+      },
+      {
+        "heading": "Method 1: Loot and reserve Batteries",
+        "paragraphs": [
+          "The item wiki describes Batteries as normal electric-system power and separates them from Master Batteries. Loot routes are useful early, but the guide should not promise guaranteed drops where the current data does not provide exact tables.",
+          "Bring Batteries home before committing to an electric vehicle. A loose handful in inventory disappears quickly once test driving begins."
+        ]
+      },
+      {
+        "heading": "Method 2: Craft Batteries",
+        "steps": [
+          "Stabilize Metal Block Level 1 supply first.",
+          "Collect Chemicals and keep them away from water or fuel storage.",
+          "Reserve Glow specifically for the Battery batch instead of spending it on side recipes.",
+          "Craft Battery x10 at the Craftbot.",
+          "Store the batch beside the electric machine that will consume it."
+        ]
+      },
+      {
+        "heading": "What Batteries are used for",
+        "bullets": [
+          "Electric Engine systems that need controlled battery-powered movement.",
+          "Battery Container routing for larger electric builds.",
+          "Crafting ingredients for electrical or powered objects such as Power Station and Broken Microwave.",
+          "Recovery stock when a vehicle or machine consumes more than expected during testing."
+        ]
+      },
+      {
+        "heading": "Frequently asked questions",
+        "bullets": [
+          "Where can you find Batteries early? Treat early Batteries as loot and exploration stock, but do not assume a guaranteed route unless the current save shows it.",
+          "What is the Battery recipe? Craftbot: 5 Metal Block Level 1, 1 Glow, and 5 Chemicals for 10 Batteries.",
+          "Can you charge Batteries? Not in the verified vanilla data used here. Charging belongs to mods or unsupported claims until proven otherwise.",
+          "Is a Master Battery the same as a Battery? No. Master Batteries are fixed progression objects; normal Batteries power electric systems."
+        ]
+      },
+      {
+        "heading": "Related guides",
+        "bullets": [
+          "Use the water guide before building farm automation that depends on connected systems.",
+          "Use the oil guide when the build uses Gasoline instead of Batteries.",
+          "Use the schematics guide when an electric part recipe is locked behind progression."
+        ]
+      }
+    ],
+    "relatedWiki": [
+      "battery",
+      "master-battery",
+      "electric-engine",
+      "circuit-board",
+      "chemicals"
+    ],
+    "relatedGuides": [
+      "beginner-first-hours",
+      "controller-and-logic",
+      "how-to-get-oil",
+      "how-to-get-water",
+      "how-to-get-schematics"
+    ],
+    "relatedRoutes": [
+      {
+        "label": "Battery wiki entry",
+        "href": "/wiki/items/battery"
+      },
+      {
+        "label": "Master Battery wiki entry",
+        "href": "/wiki/items/master-battery"
+      },
+      {
+        "label": "Recipes directory",
+        "href": "/wiki/recipes"
+      }
+    ],
+    "seo": {
+      "title": "How to Get Batteries in Scrap Mechanic - Power Guide",
+      "description": "Get Batteries in Scrap Mechanic by crafting and looting them, then use them for electric engines while separating Master Battery and charger claims.",
+      "keywords": [
+        "Scrap Mechanic Battery",
+        "Batteries",
+        "Electric Engine",
+        "Master Battery"
+      ]
+    }
+  },
+  {
+    "slug": "how-to-get-schematics",
+    "title": "How to Get Schematics in Scrap Mechanic",
+    "description": "Get Schematic Boxes, scan them at Schematicbot, unlock recipes, and troubleshoot missing unlocks using verified station and drop data.",
+    "category": "Progression",
+    "image": "/images/scrap-mechanic/trailer-1-0.jpg",
+    "imageAlt": "Scrap Mechanic 1.0 progression scene for schematic unlock planning",
+    "gameVersion": "1.0.5",
+    "published": "2026-08-31",
+    "updated": "2026-08-31",
+    "readingTime": "12 min",
+    "quickAnswer": "Get schematics through Schematic Boxes, exact blue-icon part scans, trader recipe offers, and quest rewards. A Schematic Box is consumed at the Schematicbot and unlocks one random eligible Craftbot or Saw Table recipe; a blue-icon part scan unlocks that exact recipe without consuming the part.",
+    "media": [
+      {
+        "src": "/images/wiki/schematic-box.webp",
+        "alt": "Scrap Mechanic Schematic Box acquisition and unlock guide",
+        "caption": "Each Schematic Box scan consumes one box and registers one random eligible recipe in the save."
+      },
+      {
+        "src": "/images/wiki/schematicbot.webp",
+        "alt": "Scrap Mechanic Schematicbot recipe unlock station guide",
+        "caption": "The Schematicbot is a fixed station. It scans boxes or eligible blue-icon parts; it is not a movable base machine."
+      }
+    ],
+    "tables": [
+      {
+        "caption": "Schematic source quick reference",
+        "headers": [
+          "Source",
+          "Requirement",
+          "Unlock result",
+          "Version note"
+        ],
+        "rows": [
+          [
+            "Schematic Box scan",
+            "1 Schematic Box at Schematicbot",
+            "1 random eligible recipe",
+            "Box is consumed; fresh-save pool is 356 recipes."
+          ],
+          [
+            "Blue-icon part scan",
+            "Eligible part in operator inventory",
+            "Exact matching recipe",
+            "Part is not consumed after a successful scan."
+          ],
+          [
+            "Farmers Hideout exchange",
+            "1 Broccoli Crate",
+            "5 Schematic Boxes",
+            "Two trades fill one 10-box stack."
+          ],
+          [
+            "Tapebot drops",
+            "Standard or Red Tapebot",
+            "25% chance for 1 Schematic Box",
+            "Combat route, not a guaranteed box per bot."
+          ],
+          [
+            "Crates",
+            "Common, Warehouse, Epic, or Legendary crates",
+            "13.33% to 16.67% box chance by crate group",
+            "Higher tiers can award 2-3 boxes."
+          ],
+          [
+            "Quest or trader recipe unlock",
+            "Named objective or listed trade",
+            "Fixed listed recipe",
+            "Does not require random box scanning unless stated."
+          ]
+        ],
+        "note": "Unsupported regional-stock claims are removed. The verified Schematicbot locations are kiosk layouts and the Mining Hub."
+      },
+      {
+        "caption": "Schematicbot input behavior",
+        "headers": [
+          "Input",
+          "Recipe selected",
+          "Input consumed?",
+          "Persistence"
+        ],
+        "rows": [
+          [
+            "Schematic Box",
+            "One random eligible recipe",
+            "Yes, 1 box",
+            "Recipe unlock is shared by the save"
+          ],
+          [
+            "Eligible blue-icon part",
+            "That exact part recipe",
+            "No",
+            "Recipe unlock is shared by the save"
+          ],
+          [
+            "Trader recipe offer",
+            "Listed recipe",
+            "No Schematicbot input",
+            "Unlock follows trade completion"
+          ],
+          [
+            "Quest schematic reward",
+            "Quest-defined recipe",
+            "No Schematicbot input",
+            "Unlock follows objective state"
+          ]
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Quick answer: obtain a box, then register the unlock",
+        "paragraphs": [
+          "Do not stop at picking up a Schematic Box. The useful state is the registered recipe after the Schematicbot scan and final unlock confirmation.",
+          "The box does not produce a finished item. It opens a recipe, and the item still needs its normal station, materials, and craft time."
+        ]
+      },
+      {
+        "heading": "Method 1: Schematic Boxes",
+        "steps": [
+          "Get Schematic Boxes from Farmers Hideout exchange, Tapebot drops, crate routes, or fixed placed-box layouts when found.",
+          "Carry the box stack to a Schematicbot station.",
+          "Scan one box and wait for the roughly two-second scan.",
+          "Confirm the unlock after the scan completes.",
+          "Open the Craftbot or Saw Table list and find the newly available recipe."
+        ]
+      },
+      {
+        "heading": "Method 2: Exact part scans",
+        "paragraphs": [
+          "An eligible part with the blue schematic icon is the precision route. Scan it when you care about that exact recipe more than random pool efficiency.",
+          "The current Schematicbot data says the part is not consumed. Once the recipe is unlocked, that part stops appearing as an available scan input."
+        ]
+      },
+      {
+        "heading": "How to use the Schematicbot",
+        "bullets": [
+          "Inputs: blue-icon part or Schematic Box.",
+          "Box scan: random eligible recipe and one box consumed.",
+          "Part scan: exact matching recipe and part preserved.",
+          "Visible choices: three inputs at a time; use arrows if more are available.",
+          "Locations: kiosk layouts and Mining Hub. Bring the input to the station; the station is fixed."
+        ]
+      },
+      {
+        "heading": "Why the recipe is not showing",
+        "bullets": [
+          "You left after the scan timer and did not press the final unlock control.",
+          "You checked the wrong station; the random pool can include Craftbot and Saw Table outputs.",
+          "The recipe was already unlocked before the scan.",
+          "The box pool is exhausted in this save, so carried boxes may stop appearing as usable inputs.",
+          "In multiplayer, let the host complete one scan and then recheck the shared recipe list."
+        ]
+      },
+      {
+        "heading": "Frequently asked questions",
+        "bullets": [
+          "Where do you find Schematic Boxes? Farmers Hideout trades, Tapebot drops, crate rewards, and specific placed-box layouts are verified in the repository data.",
+          "What does the Schematicbot do? It registers recipe unlocks from boxes or eligible blue-icon parts.",
+          "Can you lose a schematic unlock? The registered recipe is shared by the save; losing an unscanned box is not the same as losing an unlocked recipe.",
+          "Do Schematicbots sell rotating stock? No. The current data describes fixed stations and separate trader recipe offers, not regional stock."
+        ]
+      },
+      {
+        "heading": "Related guides",
+        "bullets": [
+          "Oil, Water, and Battery guides cover resource routes that feed unlocked recipes.",
+          "The returning-player guide covers old-save and patch-boundary checks for schematic problems.",
+          "The recipe directory is the right place to inspect the full unlocked crafting list."
+        ]
+      }
+    ],
+    "relatedWiki": [
+      "schematic-box",
+      "schematicbot",
+      "crafting-bots",
+      "controller",
+      "component-kit"
+    ],
+    "relatedGuides": [
+      "returning-to-1-0",
+      "how-to-get-oil",
+      "how-to-get-water",
+      "how-to-get-battery"
+    ],
+    "relatedRoutes": [
+      {
+        "label": "Schematics wiki directory",
+        "href": "/wiki/schematics"
+      },
+      {
+        "label": "Schematic Box wiki entry",
+        "href": "/wiki/schematics/schematic-box"
+      },
+      {
+        "label": "Recipes directory",
+        "href": "/wiki/recipes"
+      }
+    ],
+    "seo": {
+      "title": "How to Get Schematics in Scrap Mechanic Fast",
+      "description": "Get Schematics in Scrap Mechanic with Schematic Boxes, Schematicbot scans, part scans, drops, trades, and quest unlocks using verified routes.",
+      "keywords": [
+        "Scrap Mechanic schematics",
+        "Schematicbot",
+        "Schematic Box"
+      ]
+    }
+  },
+  {
     "slug": "beginner-first-hours",
     "title": "Beginner Guide - Crash Site to Mechanic Station",
     "description": "Complete the opening ship recovery in order: find the Water Bucket, extinguish three marked fires, install the first Master Battery, reconnect the console, take the Logbook, and only then choose a farm or first-car branch.",
