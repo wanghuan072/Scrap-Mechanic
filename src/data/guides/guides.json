@@ -138,10 +138,27 @@
       },
       {
         "heading": "Related guides",
-        "bullets": [
-          "For farm water systems, use the how-to-get-water guide.",
-          "For electric power storage, use the how-to-get-battery guide.",
-          "For locked recipe progression, use the how-to-get-schematics guide."
+        "links": [
+          {
+            "label": "How to Get Water in Scrap Mechanic",
+            "href": "/guides/how-to-get-water",
+            "description": "Build and troubleshoot farm water collection systems."
+          },
+          {
+            "label": "How to Get Batteries in Scrap Mechanic",
+            "href": "/guides/how-to-get-battery",
+            "description": "Plan normal Battery loot, crafting, and electric storage."
+          },
+          {
+            "label": "How to Get Schematics in Scrap Mechanic",
+            "href": "/guides/how-to-get-schematics",
+            "description": "Register locked recipes before planning later builds."
+          },
+          {
+            "label": "All Scrap Mechanic Guides",
+            "href": "/guides",
+            "description": "Return to the complete guide directory."
+          }
         ]
       }
     ],
@@ -330,10 +347,27 @@
       },
       {
         "heading": "Related guides",
-        "bullets": [
-          "Oil collection uses similar pump troubleshooting, but different storage intent.",
-          "Battery planning matters once the farm uses electric systems.",
-          "Schematics control some later recipe access; do not confuse that with water storage."
+        "links": [
+          {
+            "label": "How to Get Oil in Scrap Mechanic",
+            "href": "/guides/how-to-get-oil",
+            "description": "Compare Crude Oil collection with water-system pump troubleshooting."
+          },
+          {
+            "label": "How to Get Batteries in Scrap Mechanic",
+            "href": "/guides/how-to-get-battery",
+            "description": "Plan power once farm automation uses electric systems."
+          },
+          {
+            "label": "How to Get Schematics in Scrap Mechanic",
+            "href": "/guides/how-to-get-schematics",
+            "description": "Check recipe unlocks for later automation parts."
+          },
+          {
+            "label": "All Scrap Mechanic Guides",
+            "href": "/guides",
+            "description": "Return to the complete guide directory."
+          }
         ]
       }
     ],
@@ -517,10 +551,27 @@
       },
       {
         "heading": "Related guides",
-        "bullets": [
-          "Use the water guide before building farm automation that depends on connected systems.",
-          "Use the oil guide when the build uses Gasoline instead of Batteries.",
-          "Use the schematics guide when an electric part recipe is locked behind progression."
+        "links": [
+          {
+            "label": "How to Get Oil in Scrap Mechanic",
+            "href": "/guides/how-to-get-oil",
+            "description": "Use the fuel route when a build needs Gasoline instead of Batteries."
+          },
+          {
+            "label": "How to Get Water in Scrap Mechanic",
+            "href": "/guides/how-to-get-water",
+            "description": "Build the water side of an electrically controlled farm system."
+          },
+          {
+            "label": "How to Get Schematics in Scrap Mechanic",
+            "href": "/guides/how-to-get-schematics",
+            "description": "Unlock electric-part recipes gated by progression."
+          },
+          {
+            "label": "All Scrap Mechanic Guides",
+            "href": "/guides",
+            "description": "Return to the complete guide directory."
+          }
         ]
       }
     ],
@@ -728,10 +779,27 @@
       },
       {
         "heading": "Related guides",
-        "bullets": [
-          "Oil, Water, and Battery guides cover resource routes that feed unlocked recipes.",
-          "The returning-player guide covers old-save and patch-boundary checks for schematic problems.",
-          "The recipe directory is the right place to inspect the full unlocked crafting list."
+        "links": [
+          {
+            "label": "How to Get Oil in Scrap Mechanic",
+            "href": "/guides/how-to-get-oil",
+            "description": "Collect Crude Oil used by unlocked crafting routes."
+          },
+          {
+            "label": "How to Get Water in Scrap Mechanic",
+            "href": "/guides/how-to-get-water",
+            "description": "Collect and automate Water for unlocked recipes and farms."
+          },
+          {
+            "label": "How to Get Batteries in Scrap Mechanic",
+            "href": "/guides/how-to-get-battery",
+            "description": "Gather Batteries for unlocked electric parts and builds."
+          },
+          {
+            "label": "All Scrap Mechanic Guides",
+            "href": "/guides",
+            "description": "Return to the complete guide directory."
+          }
         ]
       }
     ],

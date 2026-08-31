@@ -212,6 +212,18 @@ export function ArticlePage({
                     ))}
                   </ol>
                 )}
+                {section.links && (
+                  <ul>
+                    {section.links.map((link) => (
+                      <li key={link.href}>
+                        <Link href={link.href} prefetch={false}>
+                          {link.label}
+                        </Link>
+                        {link.description ? ` — ${link.description}` : null}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </section>
             ))}
           </article>

@@ -9,6 +9,11 @@ export type ContentSection = {
   paragraphs?: string[];
   bullets?: string[];
   steps?: string[];
+  links?: Array<{
+    label: string;
+    href: string;
+    description?: string;
+  }>;
 };
 
 export type DataTable = {
