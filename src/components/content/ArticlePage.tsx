@@ -53,7 +53,8 @@ export function ArticlePage({
           className="article-hero-backdrop"
           src={entry.image}
           alt=""
-          fill
+          width={1920}
+          height={1080}
           sizes="100vw"
           quality={60}
           loading="eager"
@@ -147,7 +148,8 @@ export function ArticlePage({
                       <Image
                         src={media.src}
                         alt={media.alt}
-                        fill
+                        width={media.width ?? 720}
+                        height={media.height ?? 405}
                         sizes="(max-width: 768px) 100vw, 390px"
                       />
                     </div>

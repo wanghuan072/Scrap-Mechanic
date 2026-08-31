@@ -9,18 +9,22 @@
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
     "updated": "2026-08-31",
-    "readingTime": "10 min",
-    "quickAnswer": "For current Survival, treat Oil Bucket and Crude Oil as separate states. Use an Oil Bucket or a Vacuum Pump intake with storage, then craft Oil Bucket into 5 Crude Oil at the Craftbot. Crude Oil crafts into Gasoline at 5 to 5 in the Craftbot, or 1 to 1 in the Portable Crafter and Workbench.",
+    "readingTime": "13 min",
+    "quickAnswer": "If you need to know how to get oil in Scrap Mechanic, start by separating three terms: Oil is the wiki resource topic, Oil Bucket is the carried container state, and Crude Oil is the crafting input. Collect Oil Buckets directly or automate intake with a Vacuum Pump and storage, then craft 1 Oil Bucket into 5 Crude Oil at the Craftbot. Convert 5 Crude Oil into 5 Gasoline when fuel is the goal, and reserve a return-trip stack before spending the batch on engines or suspension.",
     "media": [
       {
         "src": "/images/wiki/oil.webp",
         "alt": "Scrap Mechanic Oil resource guide icon for crude oil crafting",
-        "caption": "Use the Oil wiki entry for the item definition, then use this guide for the acquisition route and conversion checkpoints."
+        "caption": "Use the Oil wiki entry for the item definition, then use this guide for the acquisition route and conversion checkpoints.",
+        "width": 96,
+        "height": 96
       },
       {
         "src": "/images/wiki/gasoline.webp",
         "alt": "Scrap Mechanic Gasoline crafted from Crude Oil",
-        "caption": "Gasoline is the practical reason to collect Crude Oil early. Do not spend the whole batch before reserving return-trip fuel."
+        "caption": "Gasoline is the practical reason to collect Crude Oil early. Do not spend the whole batch before reserving return-trip fuel.",
+        "width": 96,
+        "height": 96
       }
     ],
     "tables": [
@@ -92,31 +96,58 @@
     ],
     "sections": [
       {
-        "heading": "Quick answer: Oil, Oil Bucket, and Crude Oil",
+        "heading": "How to Get Oil in Scrap Mechanic: quick answer",
         "paragraphs": [
           "The site data separates three terms that players often collapse into one search: Oil is the wiki resource topic, Oil Bucket is the carried container state, and Crude Oil is the crafting input used by fuel and industrial recipes.",
           "If a guide tells you to refine Oil in an extra station, ignore it for this build. The current repository recipe set uses Craftbot, Portable Crafter, and Workbench conversions."
         ]
       },
       {
-        "heading": "Method 1: Direct collection route",
+        "heading": "How to Get Oil in Scrap Mechanic by hand",
         "steps": [
-          "Leave base with a clear cargo plan: one Oil Bucket route or one pump-and-storage route, not a mixed loot run.",
-          "Use the collection interaction that gives an Oil Bucket, then return before filling general storage with unrelated parts.",
-          "At base, craft Oil Bucket into Crude Oil x5 before planning the fuel batch.",
-          "Store Crude Oil separately from Gasoline so vehicle fuel is not confused with raw input stock."
+          "Leave base with enough Gasoline for the outbound and return drive.",
+          "Keep storage empty enough for Oil Buckets or later Crude Oil stacks.",
+          "Collect the Oil Bucket state first; do not convert it until you know the final use.",
+          "Return to the Craftbot before crafting fuel so the conversion happens beside storage.",
+          "Convert only the portion needed for Gasoline, suspension, or engine work."
+        ],
+        "paragraphs": [
+          "Run the manual route when the base is still light and fuel is scarce. Bring at least one empty Oil Bucket slot, park the vehicle where it can be turned around without reversing through bots, and collect only what you can bring home cleanly. The failure state is not the collection click; it is overextending until the return trip costs more fuel than the oil run produced.",
+          "Use visual confirmation instead of inherited map claims. Current site data supports Oil Bucket and Crude Oil handling, but it does not support fixed numeric yields, fixed coordinates, or extra conversion stations. Treat each collection point as a route checkpoint: identify it, collect, mark the road back, and leave before night pressure turns a resource run into a vehicle recovery job."
         ]
       },
       {
-        "heading": "Method 2: Vacuum Pump collection",
+        "heading": "How to Get Oil in Scrap Mechanic with a Vacuum Pump",
         "paragraphs": [
           "Vacuum Pump data lists In and Out modes and includes Crude Oil as a supported collection target. The pump still needs the right direction, a compatible container, a valid intake position, and free capacity.",
-          "Do not build a giant extractor first. Test a direct pump-to-storage line, confirm one transfer, then scale the route."
+          "Do not build a giant extractor first. Test a direct pump-to-storage line, confirm one transfer, then scale the route.",
+          "The Vacuum Pump route is for repeatability, not magic output. The part can collect Crude Oil, but it still needs the same practical checks as any fluid intake: correct In mode, a valid intake position, storage with free capacity, and a connection path that is not blocked by a reversed pump or full container.",
+          "Test the pump with a small container before building a full outpost. If one cycle does not move the resource into storage, do not add more pipes yet. Check pump direction, storage capacity, and the control signal. Scaling a broken intake only hides the first failed condition under more parts."
         ],
         "bullets": [
           "If the pump animates but collects nothing, check In mode and intake placement first.",
           "If storage stays empty, connect one pump directly to one empty container and remove the pipe chain from the test.",
           "If the shoreline is inconsistent, move the intake and retest rather than declaring a fixed spawn coordinate."
+        ]
+      },
+      {
+        "heading": "Oil route setup before leaving base",
+        "paragraphs": [
+          "The best oil run starts at the garage, not at the collection point. Put one chest or vehicle container on the route vehicle, carry repair material, and leave one inventory row empty for emergency pickups. If the route crosses rough ground, lower speed beats top speed because tipped vehicles burn more time than slow vehicles.",
+          "Keep the first conversion close to storage. Crafting Oil Bucket into Crude Oil at the Craftbot gives a clean 1 to 5 inventory result, while the common Gasoline conversion uses 5 Crude Oil into 5 Gasoline. That makes the minimum useful fuel batch easy to audit: one Oil Bucket can become one five-unit Crude Oil batch, and that batch can become one five-unit Gasoline batch if fuel is the only target."
+        ],
+        "bullets": [
+          "Reserve fuel for the return drive before crafting anything else.",
+          "Do not mix Oil Buckets, Crude Oil, and Gasoline in one unlabeled chest.",
+          "Keep one unconverted batch if the next build needs Crude Oil directly.",
+          "Use the Recipes directory when the target part matters more than raw fuel."
+        ]
+      },
+      {
+        "heading": "Oil image checkpoints and common misreads",
+        "paragraphs": [
+          "The Oil media block uses the resource icon and Gasoline icon deliberately. The icon pair teaches the actual decision: collect and hold the resource state first, then decide whether the output becomes Crude Oil stock or immediate Gasoline. A scenic screenshot would be less useful here because generated worlds can move the route, while the item-state distinction never stops mattering.",
+          "Do not read the Gasoline image as proof that every oil trip should become fuel. Gas Engine work, Thruster experiments, and long scouting routes need Gasoline; some crafting and progression checks need the intermediate resource. Convert after the plan is clear, not because the Craftbot menu is open."
         ]
       },
       {
@@ -209,18 +240,22 @@
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
     "updated": "2026-08-31",
-    "readingTime": "11 min",
-    "quickAnswer": "Early water is a Water Bucket job: find the first bucket at the Crash Site pond, fill it from open water, and use it on fires or crops. For automation, craft a Water Container, connect a submerged Vacuum Pump in In mode, then feed a Water Cannon or refill buckets from the stored water.",
+    "readingTime": "13 min",
+    "quickAnswer": "If you need to know how to get water in Scrap Mechanic, use a filled Water Bucket for the first job and a Vacuum Pump plus Water Container for repeat work. The Crash Site bucket handles the opening fires and early crops. Later, craft a Water Container, set a submerged Vacuum Pump to In mode, connect storage, and feed a Water Cannon only after the container can fill and drain on command.",
     "media": [
       {
         "src": "/images/wiki/water-bucket.webp",
         "alt": "Scrap Mechanic Water Bucket location and water collection guide",
-        "caption": "The Water Bucket is the first verified water tool and remains the fallback when automation fails."
+        "caption": "The Water Bucket is the first verified water tool and remains the fallback when automation fails.",
+        "width": 96,
+        "height": 96
       },
       {
         "src": "/images/game-items/water-container-ea10d1af.webp",
         "alt": "Scrap Mechanic Water Container for farm water storage",
-        "caption": "Water Container storage matters before a Water Cannon can deliver clean farming cycles."
+        "caption": "Water Container storage matters before a Water Cannon can deliver clean farming cycles.",
+        "width": 96,
+        "height": 96
       }
     ],
     "tables": [
@@ -298,27 +333,33 @@
     ],
     "sections": [
       {
-        "heading": "Quick answer: collecting water",
+        "heading": "How to Get Water in Scrap Mechanic: quick answer",
         "paragraphs": [
           "The early route is not complicated: pick up the Crash Site Water Bucket, fill it at the pond, and repeat the trip for each marked ship fire or crop plot.",
           "Automation begins only when you have a Water Container and a pump line that has passed a one-transfer test."
         ]
       },
       {
-        "heading": "Method 1: Water Bucket",
+        "heading": "How to Get Water in Scrap Mechanic with a Water Bucket",
         "steps": [
           "Enter the crashed ship first so the opening objective activates.",
           "Follow the path opposite the ship entrance to the pond beside the farming setup.",
           "Pick up the Water Bucket at the pond edge.",
           "Use the bucket on open water, then throw the filled bucket at the marked fire or dry crop plot.",
           "Refill after each use. A filled bucket becomes empty after throwing water."
+        ],
+        "paragraphs": [
+          "The bucket route is still the correct first answer because it has the fewest failure points. Find or craft the bucket, fill it from open water, throw the water at the marked fire or crop, and refill. The only timing mistake is trying to scale farming before the bucket loop is proven and before spare seeds are protected.",
+          "Use the bucket as a diagnostic tool after automation exists. If a crop row accepts bucket water but the Water Cannon misses, the crop is not the problem. The failure is delivery angle, storage, pump direction, or control timing. That distinction saves a full rebuild."
         ]
       },
       {
-        "heading": "Method 2: Vacuum Pump and Water Container",
+        "heading": "How to Get Water in Scrap Mechanic with a Vacuum Pump",
         "paragraphs": [
           "The pump does not replace storage. It moves water only when the intake, mode, control signal, and connected container are all valid.",
-          "Build the first test as a short direct line. A long pipe chain hides the real fault when the pump is reversed or the container is full."
+          "Build the first test as a short direct line. A long pipe chain hides the real fault when the pump is reversed or the container is full.",
+          "The pump route needs a clean intake chain. Start with the smallest complete circuit: Vacuum Pump in In mode, valid water contact, one Water Container, and one switch or button. Do not add pistons, sensors, or moving gantries until one manual trigger fills storage.",
+          "When the container stays empty, audit the system in order. First check that the pump direction is In. Second, check that the intake is actually placed where the game accepts water. Third, check that the container is connected and has capacity. Fourth, check that your control signal reaches the pump. Randomly rotating parts after each test creates new variables and makes the next failure harder to read."
         ],
         "bullets": [
           "Pump mode: In for collection from water.",
@@ -327,13 +368,38 @@
         ]
       },
       {
-        "heading": "Method 3: Water Cannon setup",
+        "heading": "How to Get Water in Scrap Mechanic into a Water Cannon",
         "steps": [
           "Fill a Water Container with a bucket or pump intake.",
           "Connect the Water Cannon to the container.",
           "Connect a Button, Switch, Sensor, or Controller logic line for activation.",
           "Fire one shot at one crop plot before moving the cannon on a piston or vehicle.",
           "Only scale the watering arm after the single-shot test waters the intended plot."
+        ],
+        "paragraphs": [
+          "Treat the Water Cannon as delivery, not storage. The reliable chain is source, pump, Water Container, cannon, trigger. If the cannon fires dry, step backward through the chain instead of rebuilding the cannon mount. A dry cannon usually means the container never filled, the connection is wrong, or the trigger is firing before water reaches the line.",
+          "For crop rows, aim for coverage you can observe. One short row is enough for the first pass. Fire once, walk the row, and confirm every plot received water before you automate movement. A piston or controller can make the same mistake faster; it cannot fix a bad water angle."
+        ]
+      },
+      {
+        "heading": "Water route setup before farming automation",
+        "paragraphs": [
+          "A good water setup has a manual fallback. Keep a filled bucket near the farm even after the pump works, because raids, vehicle impacts, and accidental rewiring can interrupt the automatic line. The goal is not to remove the bucket forever; the goal is to stop hand-watering from being the only way the farm survives.",
+          "Build in layers. First prove storage. Then prove one Water Cannon shot. Then prove one crop row. Only after those three checks should you add controller timing, piston travel, or sensors. This order makes the failure visible at the exact layer where it starts."
+        ],
+        "steps": [
+          "Fill one Water Bucket by hand and verify the crop or objective accepts water.",
+          "Fill one Water Container from a fixed Vacuum Pump.",
+          "Fire one Water Cannon shot from the filled container.",
+          "Water one short crop row and inspect every plot.",
+          "Add movement automation only after the fixed test passes."
+        ]
+      },
+      {
+        "heading": "Water image checkpoints and common misreads",
+        "paragraphs": [
+          "The Water Bucket image marks the first verified tool. It belongs early in the page because it answers the opening player problem: put out the ship fires and keep a small crop row alive. The Water Container image marks the point where the route changes from manual carrying to stored supply.",
+          "Do not treat the container image as proof that the pump is optional. A Water Container without intake is just a tank. The container becomes useful when a pump fills it and a cannon or bucket route draws from it in a controlled cycle."
         ]
       },
       {
@@ -411,26 +477,30 @@
   },
   {
     "slug": "how-to-get-battery",
-    "title": "How to Get Batteries in Scrap Mechanic",
-    "description": "Find, craft, store, and spend normal Batteries for electric systems while keeping Master Batteries, charger rumors, and dead-battery claims separate.",
+    "title": "How to Get Battery in Scrap Mechanic",
+    "description": "Get the normal Battery item through verified loot, Craftbot recipes, and routing discipline while keeping Master Battery quest objects separate.",
     "category": "Resources",
     "image": "/images/scrap-mechanic/screenshot-03.jpg",
     "imageAlt": "Scrap Mechanic powered base route for Battery planning",
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
     "updated": "2026-08-31",
-    "readingTime": "10 min",
-    "quickAnswer": "Normal Batteries are consumable power for electric systems. The current recipe crafts 10 Batteries at the Craftbot from 5 Metal Block Level 1, 1 Glow, and 5 Chemicals. Do not treat Master Batteries as craftable fuel, and do not plan around a vanilla recharge station unless your mod list adds one.",
+    "readingTime": "13 min",
+    "quickAnswer": "If you are searching how to get battery in Scrap Mechanic, use the normal Battery item route, not the Master Battery quest route. Loot early Batteries conservatively, then craft 10 Batteries at the Craftbot from 5 Metal Block Level 1, 1 Glow, and 5 Chemicals when the recipe is available. The Battery item powers electric systems and appears in electrical crafting chains; the Master Battery is a fixed progression object and should not be planned as fuel.",
     "media": [
       {
         "src": "/images/wiki/battery.webp",
         "alt": "Scrap Mechanic Battery crafting and electric engine guide",
-        "caption": "Normal Batteries power electric systems and stack separately from fixed Master Battery quest objects."
+        "caption": "Normal Batteries power electric systems and stack separately from fixed Master Battery quest objects.",
+        "width": 96,
+        "height": 96
       },
       {
         "src": "/images/wiki/master-battery.webp",
         "alt": "Scrap Mechanic Master Battery is not the same as normal Battery",
-        "caption": "Master Batteries are progression items. Do not put them in the same mental bucket as electric-engine fuel."
+        "caption": "Master Batteries are progression items. Do not put them in the same mental bucket as electric-engine fuel.",
+        "width": 96,
+        "height": 96
       }
     ],
     "tables": [
@@ -508,27 +578,33 @@
     ],
     "sections": [
       {
-        "heading": "Quick answer: normal Battery, not Master Battery",
+        "heading": "How to Get Battery in Scrap Mechanic: quick answer",
         "paragraphs": [
           "The normal Battery item is consumable power. The Master Battery is a fixed story/progression object used by the crashed ship and Mechanic Station route.",
           "If a route tells you to recharge spent Batteries in vanilla Survival, stop and check the mod list. The current repository data has no recharge-station entry and no spent-battery mechanic."
         ]
       },
       {
-        "heading": "Method 1: Loot and reserve Batteries",
+        "heading": "How to Get Battery in Scrap Mechanic from loot",
         "paragraphs": [
           "The item wiki describes Batteries as normal electric-system power and separates them from Master Batteries. Loot routes are useful early, but the guide should not promise guaranteed drops where the current data does not provide exact tables.",
-          "Bring Batteries home before committing to an electric vehicle. A loose handful in inventory disappears quickly once test driving begins."
+          "Bring Batteries home before committing to an electric vehicle. A loose handful in inventory disappears quickly once test driving begins.",
+          "Looted Battery stacks are best treated as runway, not income. Spend the first few only when the build immediately solves a movement, power, or progression problem. If a part can wait until the Craftbot recipe is online, let it wait. Running out of Battery items before the electric build is finished creates the worst kind of stop: the vehicle looks complete but cannot do the job.",
+          "Separate every Master Battery prompt from the normal Battery item. The crashed ship and Mechanic Station objectives use fixed Master Battery objects, while electric systems consume the normal item. Mixing those names in storage labels, notes, or guide planning is the main reason battery routes look inconsistent."
         ]
       },
       {
-        "heading": "Method 2: Craft Batteries",
+        "heading": "How to Get Battery in Scrap Mechanic at the Craftbot",
         "steps": [
           "Stabilize Metal Block Level 1 supply first.",
           "Collect Chemicals and keep them away from water or fuel storage.",
           "Reserve Glow specifically for the Battery batch instead of spending it on side recipes.",
           "Craft Battery x10 at the Craftbot.",
           "Store the batch beside the electric machine that will consume it."
+        ],
+        "paragraphs": [
+          "The verified Craftbot recipe is the clean fallback: 5 Metal Block Level 1, 1 Glow, and 5 Chemicals produce 10 Battery items. That output size matters. Craft in tens, then divide the batch between active electric systems, recipe requirements, and a reserve stack. Do not feed every new Battery into the first experimental engine test.",
+          "Chemicals are the gating ingredient in practice. Before crafting, check whether the next project actually needs electric power or whether a gas setup will solve the route with resources you already have. A battery craft is efficient when it unlocks a system; it is wasteful when it becomes a decorative stockpile beside an unfinished build."
         ]
       },
       {
@@ -538,6 +614,30 @@
           "Battery Container routing for larger electric builds.",
           "Crafting ingredients for electrical or powered objects such as Power Station and Broken Microwave.",
           "Recovery stock when a vehicle or machine consumes more than expected during testing."
+        ],
+        "paragraphs": [
+          "A Battery Container changes logistics, not the source of power. It can store more Battery items and load them into connected Electric Engines and compatible interactive parts. That makes it useful on vehicles or machines that need a managed supply, but it does not turn Master Batteries into fuel and it does not prove a vanilla recharge loop.",
+          "For electric vehicles, test consumption under load. A vehicle that works on flat ground can still drain the supply too quickly while climbing or hauling. Run a short route, return to base, and record how many Battery items disappeared before expanding the build."
+        ]
+      },
+      {
+        "heading": "Battery route setup before electric builds",
+        "paragraphs": [
+          "The right battery route starts with the target machine. List the Electric Engine, Battery Container, switches, and any other interactive parts before crafting the batch. Then decide how many Battery items are for testing and how many are reserved for the actual trip. Testing without a reserve is how a half-built electric vehicle strands itself at the edge of the base.",
+          "If the build is still experimental, use a short loop. Drive out, turn, climb one slope, return, and check consumption. That small route gives better data than a long expedition because every missing Battery can be tied to one test condition."
+        ],
+        "bullets": [
+          "Label normal Battery storage separately from Master Battery quest notes.",
+          "Craft in 10-item batches and reserve part of each batch.",
+          "Do not assume charging unless a mod or future patch explicitly adds it.",
+          "Use Gasoline systems when the route needs cheap early movement more than controlled electric power."
+        ]
+      },
+      {
+        "heading": "Battery image checkpoints and common misreads",
+        "paragraphs": [
+          "The normal Battery image is the page anchor because it is the item players spend in electric systems. The Master Battery image is included as a warning, not as a source route. The two icons look like progression resources, but they belong to different loops.",
+          "When an electric build fails, check the normal Battery supply before blaming the engine. A missing connection, empty Battery Container, or no reserve stack can all look like a broken machine from the driver's seat."
         ]
       },
       {
@@ -604,7 +704,7 @@
       }
     ],
     "seo": {
-      "title": "How to Get Batteries in Scrap Mechanic - Power Guide",
+      "title": "How to Get Battery in Scrap Mechanic - Methods & Locations",
       "description": "Get Batteries in Scrap Mechanic by crafting and looting them, then use them for electric engines while separating Master Battery and charger claims.",
       "keywords": [
         "Scrap Mechanic Battery",
@@ -624,18 +724,22 @@
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
     "updated": "2026-08-31",
-    "readingTime": "12 min",
-    "quickAnswer": "Get schematics through Schematic Boxes, exact blue-icon part scans, trader recipe offers, and quest rewards. A Schematic Box is consumed at the Schematicbot and unlocks one random eligible Craftbot or Saw Table recipe; a blue-icon part scan unlocks that exact recipe without consuming the part.",
+    "readingTime": "14 min",
+    "quickAnswer": "If you need to know how to get schematics in Scrap Mechanic, collect Schematic Boxes, scan eligible blue-icon parts, complete verified quest or trader unlocks, and register the result at the Schematicbot. A Schematic Box scan consumes one box and unlocks one random eligible recipe for the save. A blue-icon part scan is exact: bring the part, scan it, then confirm the recipe at the correct crafting station.",
     "media": [
       {
         "src": "/images/wiki/schematic-box.webp",
         "alt": "Scrap Mechanic Schematic Box acquisition and unlock guide",
-        "caption": "Each Schematic Box scan consumes one box and registers one random eligible recipe in the save."
+        "caption": "Each Schematic Box scan consumes one box and registers one random eligible recipe in the save.",
+        "width": 96,
+        "height": 96
       },
       {
         "src": "/images/wiki/schematicbot.webp",
         "alt": "Scrap Mechanic Schematicbot recipe unlock station guide",
-        "caption": "The Schematicbot is a fixed station. It scans boxes or eligible blue-icon parts; it is not a movable base machine."
+        "caption": "The Schematicbot is a fixed station. It scans boxes or eligible blue-icon parts; it is not a movable base machine.",
+        "width": 96,
+        "height": 96
       }
     ],
     "tables": [
@@ -725,27 +829,33 @@
     ],
     "sections": [
       {
-        "heading": "Quick answer: obtain a box, then register the unlock",
+        "heading": "How to Get Schematics in Scrap Mechanic: quick answer",
         "paragraphs": [
           "Do not stop at picking up a Schematic Box. The useful state is the registered recipe after the Schematicbot scan and final unlock confirmation.",
           "The box does not produce a finished item. It opens a recipe, and the item still needs its normal station, materials, and craft time."
         ]
       },
       {
-        "heading": "Method 1: Schematic Boxes",
+        "heading": "How to Get Schematics in Scrap Mechanic from Schematic Boxes",
         "steps": [
           "Get Schematic Boxes from Farmers Hideout exchange, Tapebot drops, crate routes, or fixed placed-box layouts when found.",
           "Carry the box stack to a Schematicbot station.",
           "Scan one box and wait for the roughly two-second scan.",
           "Confirm the unlock after the scan completes.",
           "Open the Craftbot or Saw Table list and find the newly available recipe."
+        ],
+        "paragraphs": [
+          "Use Schematic Boxes when you are building the general recipe pool. The box route is not targeted; it is controlled randomness. That means one box should never be promised as the exact missing recipe unless the source data says the pool is already constrained. Scan the box, record the unlock, and then check the Craftbot or Saw Table before assuming the reward failed.",
+          "The current data gives the Schematic Box a clear identity: it stacks to 10, is consumed per scan, and can come from verified drop or trade sources. The page table keeps those sources in one place so the route is based on source category and chance, not invented map coordinates."
         ]
       },
       {
-        "heading": "Method 2: Exact part scans",
+        "heading": "How to Get Schematics in Scrap Mechanic from part scans",
         "paragraphs": [
           "An eligible part with the blue schematic icon is the precision route. Scan it when you care about that exact recipe more than random pool efficiency.",
-          "The current Schematicbot data says the part is not consumed. Once the recipe is unlocked, that part stops appearing as an available scan input."
+          "The current Schematicbot data says the part is not consumed. Once the recipe is unlocked, that part stops appearing as an available scan input.",
+          "Part scanning solves a different problem. When the item has a blue icon and the Schematicbot accepts it, the scan is exact rather than random. That makes part scans better for a specific missing build component, while Schematic Boxes are better for widening the recipe pool.",
+          "Keep the part scan close to storage if possible. After registration, go straight to the matching crafting station and confirm the recipe appears. If the recipe is visible but cannot be made, the issue is materials or station access, not schematic acquisition."
         ]
       },
       {
@@ -756,6 +866,31 @@
           "Part scan: exact matching recipe and part preserved.",
           "Visible choices: three inputs at a time; use arrows if more are available.",
           "Locations: kiosk layouts and Mining Hub. Bring the input to the station; the station is fixed."
+        ],
+        "paragraphs": [
+          "The Schematicbot is a registration station. Stand close enough to interact, choose the accepted input, and wait for the scan to complete before leaving. A half-finished interaction is not the same as a registered unlock, so watch for the recipe result instead of assuming the box leaving your inventory is the final proof.",
+          "For multiplayer saves, let the host verify the unlock after scanning. The current site data describes unlock scope at the save level, but host state is still the practical place to diagnose missing recipes. If a client cannot see the recipe, have the host check the station before rescanning another box."
+        ]
+      },
+      {
+        "heading": "Schematic route setup before scanning",
+        "paragraphs": [
+          "Prepare a small scan log. Write down the source, the item scanned, and the recipe that appears. This sounds excessive until two boxes in a row unlock recipes you did not need and you cannot remember whether the third box was actually scanned. A simple log also makes mod and version troubleshooting cleaner.",
+          "Do not carry every box into a risky route. Scan at a known station, move the unlocked recipe into the build plan, then go back out for more sources. Losing an unscanned box is an inventory loss; losing track of a registered recipe is an information problem."
+        ],
+        "steps": [
+          "Collect one verified Schematic Box or one eligible blue-icon part.",
+          "Bring it to a Schematicbot location such as a kiosk layout or Mining Hub station.",
+          "Scan one item at a time and wait for the unlock result.",
+          "Check the correct Craftbot or Saw Table recipe list.",
+          "Record the unlock before scanning the next source."
+        ]
+      },
+      {
+        "heading": "Schematic image checkpoints and common misreads",
+        "paragraphs": [
+          "The Schematic Box image marks random-pool progression. The Schematicbot image marks registration. Put together, they show the full loop: obtain a valid source, scan it, then verify the recipe at the station. Skipping the verification step is the fastest way to misdiagnose a normal material shortage as a schematic bug.",
+          "Do not read the Schematicbot image as a shop interface. The current route is scan and register first, then craft elsewhere when the recipe and materials are available."
         ]
       },
       {

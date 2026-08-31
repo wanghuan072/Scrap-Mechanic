@@ -76,6 +76,8 @@ export type ArticleEntry = {
     src: string;
     alt: string;
     caption: string;
+    width?: number;
+    height?: number;
   }>;
   tables?: DataTable[];
   sections: ContentSection[];
