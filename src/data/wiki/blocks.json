@@ -466,5 +466,179 @@
         "Scrap Mechanic test build"
       ]
     }
+  },
+  {
+    "slug": "glass-block",
+    "category": "blocks",
+    "name": "Glass Block",
+    "description": "A transparent building block crafted from Sand Blocks and Ember, used wherever a recipe needs a clear structural material.",
+    "image": "/images/game-items/glass-block-5f41af56.webp",
+    "imageAlt": "Glass Block item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Transparent building block"
+      },
+      {
+        "label": "Craftbot batch",
+        "value": "10 Sand Block + 1 Ember → 10 Glass Block"
+      },
+      {
+        "label": "Craft time",
+        "value": "5 seconds"
+      },
+      {
+        "label": "Max stack",
+        "value": "500"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Turn Sand into a Workshop Material",
+        "paragraphs": [
+          "Glass Block is the refining step between Sand Block collection and a large set of windows, lamps, containers, and machine recipes. Keep Ember beside the Craftbot so a missing single unit does not halt a full glass batch."
+        ]
+      },
+      {
+        "heading": "Plan the Batch Before Building",
+        "bullets": [
+          "One Craftbot batch converts 10 Sand Blocks and 1 Ember into 10 Glass Blocks.",
+          "Reserve recipe stock before using the same Glass Blocks as decoration.",
+          "Use the recipe list below to check the exact variant and quantity a machine consumes."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "sand-block",
+      "ember",
+      "metal-blocks"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Glass Block Recipe and Uses",
+      "description": "Check the Scrap Mechanic Glass Block recipe, Sand Block and Ember cost, current block properties, and every matching Craftbot use in Survival.",
+      "keywords": [
+        "Scrap Mechanic Glass Block",
+        "Scrap Mechanic glass recipe",
+        "Scrap Mechanic Sand Block"
+      ]
+    }
+  },
+  {
+    "slug": "plastic-block",
+    "category": "blocks",
+    "name": "Plastic Block",
+    "description": "A light, buoyant building material made from Crude Oil and consumed by many utility-part recipes.",
+    "image": "/images/game-items/plastic-block-628b2d61.webp",
+    "imageAlt": "Plastic Block item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Light building block"
+      },
+      {
+        "label": "Craftbot batch",
+        "value": "5 Crude Oil → 10 Plastic Block"
+      },
+      {
+        "label": "Craft time",
+        "value": "5 seconds"
+      },
+      {
+        "label": "Max stack",
+        "value": "500"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Convert Oil in Useful Batches",
+        "paragraphs": [
+          "Plastic Block turns collected Crude Oil into a general workshop material. Because a five-oil craft returns ten blocks, plan demand by output batch instead of treating every block as a separate oil cost."
+        ]
+      },
+      {
+        "heading": "Keep Structural and Recipe Stock Separate",
+        "bullets": [
+          "Use its low weight and high buoyancy where those properties help the build.",
+          "Keep a labeled reserve for parts that explicitly require Plastic Block.",
+          "Check the live recipe panel before committing a decorative stockpile."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "oil",
+      "chemicals",
+      "cardboard-block"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Plastic Block Recipe and Uses",
+      "description": "See the Scrap Mechanic Plastic Block recipe, Crude Oil batch cost, current physical properties, and parts that consume Plastic Blocks in Survival.",
+      "keywords": [
+        "Scrap Mechanic Plastic Block",
+        "Scrap Mechanic plastic recipe",
+        "Scrap Mechanic Crude Oil"
+      ]
+    }
+  },
+  {
+    "slug": "sand-block",
+    "category": "blocks",
+    "name": "Sand Block",
+    "description": "A dense raw building block refined from Scrap Stone Block and used as the main Craftbot input for Glass Block.",
+    "image": "/images/game-items/sand-block-c56700d9.webp",
+    "imageAlt": "Sand Block item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Dense building block"
+      },
+      {
+        "label": "Craftbot batch",
+        "value": "5 Scrap Stone Block → 10 Sand Block"
+      },
+      {
+        "label": "Primary use",
+        "value": "Glass Block production"
+      },
+      {
+        "label": "Max stack",
+        "value": "500"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Read Sand as a Refining Stage",
+        "paragraphs": [
+          "Sand Block is both a placeable material and the upstream input for Glass Block. The Craftbot doubles the block count when it converts five Scrap Stone Blocks into ten Sand Blocks, but the following glass step still needs Ember."
+        ]
+      },
+      {
+        "heading": "Use the Right Supply Route",
+        "bullets": [
+          "Craft it from Scrap Stone Block when refining collected material.",
+          "The Farmers Hideout trade data also lists a 500-block Sand reward for one Redbeet Crate.",
+          "Calculate Glass Block demand first so the Ember requirement is not missed."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "glass-block",
+      "ember",
+      "stone"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Sand Block Recipe and Glass Route",
+      "description": "Check how to craft or trade for Sand Blocks in Scrap Mechanic and calculate the next Glass Block step with its Ember requirement before production.",
+      "keywords": [
+        "Scrap Mechanic Sand Block",
+        "Scrap Mechanic sand recipe",
+        "Scrap Mechanic Glass Block"
+      ]
+    }
   }
 ]

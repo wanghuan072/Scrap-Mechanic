@@ -586,5 +586,63 @@
         "Scrap Mechanic exploration"
       ]
     }
+  },
+  {
+    "slug": "water",
+    "category": "items",
+    "name": "Water",
+    "description": "A stored liquid item used by the Water Cannon and by crafting recipes including higher-level Metal Blocks.",
+    "image": "/images/game-items/water-869d4736.webp",
+    "imageAlt": "Water item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Craftbot batch",
+        "value": "1 Water Bucket → 5 Water"
+      },
+      {
+        "label": "Craft time",
+        "value": "5 seconds"
+      },
+      {
+        "label": "Used by",
+        "value": "Water Cannon and selected recipes"
+      },
+      {
+        "label": "Max stack",
+        "value": "20"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Separate Water the Item from Water the Source",
+        "paragraphs": [
+          "A shoreline is a collection source, a Water Bucket carries the source, and the Craftbot converts one filled bucket into five Water items. Recipe totals refer to those stored items, not to five bucket trips."
+        ]
+      },
+      {
+        "heading": "Count Water Across the Full Upgrade",
+        "bullets": [
+          "Metal Block Level 2 consumes Water in each batch.",
+          "The Level 3 recipe adds another Water requirement after the Level 2 batches.",
+          "Keep farm-system Water and workshop-recipe Water in clearly separated storage."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "water-bucket",
+      "water-system",
+      "metal-blocks"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Water Item Recipe and Uses",
+      "description": "See how a Water Bucket becomes five Water items in Scrap Mechanic and calculate Water for cannons, Metal Blocks, and current recipes in Survival mode.",
+      "keywords": [
+        "Scrap Mechanic Water",
+        "Scrap Mechanic Water recipe",
+        "Scrap Mechanic Water Bucket"
+      ]
+    }
   }
 ]

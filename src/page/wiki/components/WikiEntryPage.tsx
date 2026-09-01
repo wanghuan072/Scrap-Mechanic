@@ -1,9 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
+import {
+  AssetDossier,
+  MetalProgressionPanel,
+  WikiPropertyGrid,
+  WikiRecipeFlow,
+} from "@/page/wiki/components/WikiDataVisuals";
 import { JsonLd } from "@/seo/JsonLd";
 import {
   formatObjectDimensions,
@@ -73,14 +78,17 @@ function relationTerms(entry: WikiEntry) {
       .join(" ")
       .toLowerCase()
       .match(/[a-z0-9]+/g)
-      ?.filter((term) => term.length >= 4 && !relationStopWords.has(term)) ?? [],
+      ?.filter((term) => term.length >= 4 && !relationStopWords.has(term)) ??
+      [],
   );
 }
 
 function entrySimilarityScore(entry: WikiEntry, candidate: WikiEntry) {
   const terms = relationTerms(entry);
   const candidateTerms = relationTerms(candidate);
-  const sharedTerms = [...terms].filter((term) => candidateTerms.has(term)).length;
+  const sharedTerms = [...terms].filter((term) =>
+    candidateTerms.has(term),
+  ).length;
   const entryType = valueFor(entry.facts, "Entry type");
   const candidateType = valueFor(candidate.facts, "Entry type");
 
@@ -111,8 +119,17 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
   const playerItem =
     getPlayerItem(entry.name) ??
     (entryAliases.length === 1 ? relatedPlayerItems[0] : undefined);
+  const objectDetails =
+    getGameObjectDetails(entry.name) ??
+    (entryAliases.length === 1
+      ? getGameObjectDetails(entryAliases[0])
+      : undefined);
   const matchingNames = new Set(
-    [entry.name, ...entryAliases, ...relatedPlayerItems.map((item) => item.name)]
+    [
+      entry.name,
+      ...entryAliases,
+      ...relatedPlayerItems.map((item) => item.name),
+    ]
       .filter((name): name is string => Boolean(name))
       .map((name) => name.toLowerCase()),
   );
@@ -129,6 +146,18 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
   const craftingOptions = recipeCollection.recipes.filter((recipe) =>
     matchingNames.has(recipe.output.name.toLowerCase()),
   );
+  const outputOrder = new Map(
+    entryAliases.map((name, index) => [name.toLowerCase(), index]),
+  );
+  const displayedCraftingOptions = [...craftingOptions].sort((left, right) => {
+    const outputDifference =
+      (outputOrder.get(left.output.name.toLowerCase()) ??
+        Number.MAX_SAFE_INTEGER) -
+      (outputOrder.get(right.output.name.toLowerCase()) ??
+        Number.MAX_SAFE_INTEGER);
+    if (outputDifference !== 0) return outputDifference;
+    return left.stationName.localeCompare(right.stationName);
+  });
   const usedInRecipes = recipeCollection.recipes.filter((recipe) =>
     recipe.ingredients.some((ingredient) =>
       matchingNames.has(ingredient.name.toLowerCase()),
@@ -151,9 +180,11 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
   const entryType = valueFor(entry.facts, "Entry type");
   const unlockValue = valueFor(entry.facts, "Unlock");
   const dimensions =
-    valueFor(propertyValues, "Dimensions") ?? valueFor(entry.facts, "Dimensions");
+    valueFor(propertyValues, "Dimensions") ??
+    valueFor(entry.facts, "Dimensions");
   const durability =
-    valueFor(propertyValues, "Durability") ?? valueFor(entry.facts, "Durability");
+    valueFor(propertyValues, "Durability") ??
+    valueFor(entry.facts, "Durability");
   const friction = valueFor(propertyValues, "Friction");
   const buoyancy = valueFor(propertyValues, "Buoyancy");
   const density = valueFor(propertyValues, "Density");
@@ -168,7 +199,8 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
     entry.category === "quest-rewards" ||
     entry.category === "garments" ||
     hasGeneratedRewardCopy;
-  const slot = entry.category === "garments" ? garmentSlot(entry.name) : undefined;
+  const slot =
+    entry.category === "garments" ? garmentSlot(entry.name) : undefined;
   const family =
     entry.category === "garments" ? garmentFamily(entry.name) : undefined;
   const primaryQuest = relatedQuests[0];
@@ -191,7 +223,7 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
             }. ${unlockValue ?? "No single named quest is mapped to this entry."}${
               dimensions ? ` Its collision footprint is ${dimensions}.` : ""
             }${durability ? ` Durability is ${durability}.` : ""}`
-        : entry.description;
+          : entry.description;
   const isRepresentativeImage =
     /representing|reference image|artwork showing|scene used|statue/i.test(
       entry.imageAlt,
@@ -202,6 +234,34 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
     : isOfficialPreview
       ? "Official preview"
       : "In-game asset";
+  const assetFacts: Array<{ label: string; value: string }> = [
+    { label: "Category", value: category?.name ?? entry.category },
+  ];
+  const objectSize = objectDetails
+    ? formatObjectDimensions(objectDetails)
+    : undefined;
+  if (objectSize) assetFacts.push({ label: "Size", value: objectSize });
+  if (objectDetails?.stackSize) {
+    assetFacts.push({
+      label: "Max stack",
+      value: `${objectDetails.stackSize}`,
+    });
+  }
+  if (typeof objectDetails?.flammable === "boolean") {
+    assetFacts.push({
+      label: "Flammable",
+      value: objectDetails.flammable ? "Yes" : "No",
+    });
+  }
+  const assetFactLabels = new Set(
+    assetFacts.map((fact) => fact.label.toLowerCase()),
+  );
+  for (const fact of entry.facts) {
+    if (assetFacts.length >= 4) break;
+    if (assetFactLabels.has(fact.label.toLowerCase())) continue;
+    assetFacts.push(fact);
+    assetFactLabels.add(fact.label.toLowerCase());
+  }
   const garmentSiblings =
     family && family !== entry.name
       ? allWikiEntries.filter(
@@ -230,7 +290,8 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
     .filter(({ score }) => score >= 3)
     .sort(
       (left, right) =>
-        right.score - left.score || left.item.name.localeCompare(right.item.name),
+        right.score - left.score ||
+        left.item.name.localeCompare(right.item.name),
     )
     .slice(0, 6)
     .map(({ item }) => item);
@@ -256,10 +317,11 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
     ...new Set(craftingOptions.map((recipe) => recipe.stationName)),
   ];
   const inputAmounts = usedInRecipes
-    .map((recipe) =>
-      recipe.ingredients.find((ingredient) =>
-        matchingNames.has(ingredient.name.toLowerCase()),
-      )?.quantity,
+    .map(
+      (recipe) =>
+        recipe.ingredients.find((ingredient) =>
+          matchingNames.has(ingredient.name.toLowerCase()),
+        )?.quantity,
     )
     .filter((amount): amount is number => amount !== undefined);
   const overviewFacts = [...entry.facts];
@@ -318,8 +380,16 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
           dateModified: entry.lastTested,
           image: `${site.url}${entry.image}`,
           mainEntityOfPage: `${site.url}/wiki/${entry.category}/${entry.slug}`,
-          author: { "@type": "Organization", name: site.publisherName, url: site.url },
-          publisher: { "@type": "Organization", name: site.publisherName, url: site.url },
+          author: {
+            "@type": "Organization",
+            name: site.publisherName,
+            url: site.url,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: site.publisherName,
+            url: site.url,
+          },
         }}
       />
       <section className={styles.hero}>
@@ -344,14 +414,20 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
               <h1>{entry.name}</h1>
             </div>
             <p className={styles.lead}>
-              <WikiLinkedText text={playerDescription} currentHref={currentHref} />
+              <WikiLinkedText
+                text={playerDescription}
+                currentHref={currentHref}
+              />
             </p>
             <div className={styles.meta}>
               <span>Version {entry.gameVersion}</span>
               <span>Checked {entry.lastTested}</span>
               <span>{category?.focus}</span>
-              {hasUnlockRoute && <Link href="#where-to-get-it">How to get it ↓</Link>}
-              {entry.recipes && entry.recipes.length > 0 && (
+              {hasUnlockRoute && (
+                <Link href="#where-to-get-it">How to get it ↓</Link>
+              )}
+              {(craftingOptions.length > 0 ||
+                (entry.recipes?.length ?? 0) > 0) && (
                 <Link href="#current-recipes">Current recipe ↓</Link>
               )}
               {relatedQuests.length > 0 && (
@@ -362,24 +438,15 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
               )}
             </div>
           </div>
-          <div className={styles.itemPlate}>
-            <span>{imageLabel} / {entry.category}</span>
-            <Image
-              src={entry.image}
-              alt={entry.imageAlt}
-              width={200}
-              height={200}
-              sizes="168px"
-              quality={75}
-              preload
-              style={
-                entry.category === "garments"
-                  ? { imageRendering: "pixelated" }
-                  : undefined
-              }
-            />
-            <b>{entry.name}</b>
-          </div>
+          <AssetDossier
+            category={entry.category}
+            facts={assetFacts}
+            image={entry.image}
+            imageAlt={entry.imageAlt}
+            imageLabel={imageLabel}
+            name={entry.name}
+            pixelated={entry.category === "garments"}
+          />
         </div>
       </section>
       <EvidenceStatus
@@ -392,7 +459,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
           { label: "Entry version", value: entry.gameVersion },
           { label: "Entry checked", value: entry.lastTested },
         ]}
-        tone={entry.gameVersion === site.currentVersion ? "confirmed" : "review"}
+        tone={
+          entry.gameVersion === site.currentVersion ? "confirmed" : "review"
+        }
       />
       <GptAd
         slotId={`div-gpt-ad-wiki-entry-${entry.category}-${entry.slug}-1`}
@@ -406,7 +475,10 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                 <div key={fact.label}>
                   <dt>{fact.label}</dt>
                   <dd>
-                    <WikiLinkedText text={fact.value} currentHref={currentHref} />
+                    <WikiLinkedText
+                      text={fact.value}
+                      currentHref={currentHref}
+                    />
                   </dd>
                 </div>
               ))}
@@ -414,13 +486,19 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
             {isRewardProfile && (
               <section className={styles.entryProfile}>
                 <div className={styles.sectionKicker}>
-                  {entry.category === "garments" ? "Outfit unlock" : "Quest reward"}
+                  {entry.category === "garments"
+                    ? "Outfit unlock"
+                    : "Quest reward"}
                 </div>
                 <h2>{entry.name}: quest, use, and game values</h2>
                 <div className={styles.profileGrid}>
                   <article>
                     <span>Where it unlocks</span>
-                    <h3>{relatedQuests.length > 0 ? "Quest reward" : "Progression state"}</h3>
+                    <h3>
+                      {relatedQuests.length > 0
+                        ? "Quest reward"
+                        : "Progression state"}
+                    </h3>
                     <p>
                       <WikiLinkedText
                         text={
@@ -431,7 +509,10 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       />
                     </p>
                     {relatedQuests.map(({ quest, reward }) => (
-                      <Link href={`/wiki/quests#${quest.slug}`} key={quest.slug}>
+                      <Link
+                        href={`/wiki/quests#${quest.slug}`}
+                        key={quest.slug}
+                      >
                         {quest.title} · {reward.type}
                       </Link>
                     ))}
@@ -442,9 +523,10 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       <span>Outfit slot</span>
                       <h3>{slot} slot</h3>
                       <p>
-                        {entry.name} belongs to the {family} group and changes the{" "}
-                        {slot?.toLowerCase()} appearance. No armor, durability, or
-                        machine-performance value is listed for this wearable.
+                        {entry.name} belongs to the {family} group and changes
+                        the {slot?.toLowerCase()} appearance. No armor,
+                        durability, or machine-performance value is listed for
+                        this wearable.
                       </p>
                       {garmentSiblings.length > 0 && (
                         <p>
@@ -452,7 +534,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                           {garmentSiblings.map((item, index) => (
                             <span key={item.slug}>
                               {index > 0 ? ", " : ""}
-                              <Link href={`/wiki/${item.category}/${item.slug}`}>
+                              <Link
+                                href={`/wiki/${item.category}/${item.slug}`}
+                              >
                                 {item.name}
                               </Link>
                             </span>
@@ -474,7 +558,8 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       {(entry.recipes?.length ?? 0) > 0 ? (
                         entry.recipes?.map((recipe, index) => (
                           <p key={`${recipe.station}-${index}`}>
-                            <strong>{recipe.station}</strong> · {recipe.duration}:{" "}
+                            <strong>{recipe.station}</strong> ·{" "}
+                            {recipe.duration}:{" "}
                             <WikiLinkedText
                               text={recipe.ingredients}
                               currentHref={currentHref}
@@ -484,9 +569,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                         ))
                       ) : (
                         <p>
-                          {entry.name} is registered through progression; the current
-                          crafting list does not contain a finished-item recipe with{" "}
-                          {entry.name} as its output.
+                          {entry.name} is registered through progression; the
+                          current crafting list does not contain a finished-item
+                          recipe with {entry.name} as its output.
                         </p>
                       )}
                     </article>
@@ -569,7 +654,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                         <div>
                           <dt>Quest type</dt>
                           <dd>
-                            {quest.kind === "main" ? "Main story" : `${quest.kind} task`}
+                            {quest.kind === "main"
+                              ? "Main story"
+                              : `${quest.kind} task`}
                           </dd>
                         </div>
                         <div>
@@ -605,7 +692,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                           <strong>Complete reward bundle</strong>
                           <ul>
                             {quest.rewards?.map((questReward) => (
-                              <li key={`${questReward.type}-${questReward.name}`}>
+                              <li
+                                key={`${questReward.type}-${questReward.name}`}
+                              >
                                 <span>{questReward.type}</span>
                                 {questReward.wikiHref ? (
                                   <Link href={questReward.wikiHref}>
@@ -646,7 +735,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       </thead>
                       <tbody>
                         {[entry, ...garmentSiblings]
-                          .sort((left, right) => left.name.localeCompare(right.name))
+                          .sort((left, right) =>
+                            left.name.localeCompare(right.name),
+                          )
                           .map((item) => {
                             const questLink = getQuestsForWikiEntry(
                               item.category,
@@ -710,9 +801,12 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                   )}
                   {traderRewards.length + traderCosts.length > 0 && (
                     <>
-                      It also appears in {traderRewards.length + traderCosts.length}{" "}
-                      trader offer
-                      {traderRewards.length + traderCosts.length === 1 ? "" : "s"}.
+                      It also appears in{" "}
+                      {traderRewards.length + traderCosts.length} trader offer
+                      {traderRewards.length + traderCosts.length === 1
+                        ? ""
+                        : "s"}
+                      .
                     </>
                   )}
                 </p>
@@ -721,10 +815,13 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                     <article>
                       <header>
                         <span>How to make it</span>
-                        <b>{craftingOptions.length} option{craftingOptions.length === 1 ? "" : "s"}</b>
+                        <b>
+                          {craftingOptions.length} option
+                          {craftingOptions.length === 1 ? "" : "s"}
+                        </b>
                       </header>
                       <ul>
-                        {craftingOptions.slice(0, 8).map((recipe) => (
+                        {displayedCraftingOptions.slice(0, 8).map((recipe) => (
                           <li key={recipe.id}>
                             <strong>{recipe.stationName}</strong>
                             <span>
@@ -739,7 +836,7 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                               />
                             </span>
                             <small>
-                              {recipe.output.quantity} output
+                              {recipe.output.quantity}× {recipe.output.name}
                               {recipe.craftTime > 0
                                 ? ` / ${recipe.craftTime} seconds`
                                 : ""}
@@ -759,13 +856,17 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                     <article>
                       <header>
                         <span>What it can make</span>
-                        <b>{usedInRecipes.length} recipe{usedInRecipes.length === 1 ? "" : "s"}</b>
+                        <b>
+                          {usedInRecipes.length} recipe
+                          {usedInRecipes.length === 1 ? "" : "s"}
+                        </b>
                       </header>
                       <ul>
                         {usedInRecipes.slice(0, 12).map((recipe) => {
-                          const amount = recipe.ingredients.find((ingredient) =>
-                            matchingNames.has(ingredient.name.toLowerCase()),
-                          )?.quantity;
+                          const matchedIngredient = recipe.ingredients.find(
+                            (ingredient) =>
+                              matchingNames.has(ingredient.name.toLowerCase()),
+                          );
                           return (
                             <li key={recipe.id}>
                               <strong>
@@ -775,7 +876,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                                 />
                               </strong>
                               <span>
-                                Uses {amount}× {entry.name} at {recipe.stationName}
+                                Uses {matchedIngredient?.quantity}×{" "}
+                                {matchedIngredient?.name} at{" "}
+                                {recipe.stationName}
                               </span>
                             </li>
                           );
@@ -783,8 +886,8 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       </ul>
                       {usedInRecipes.length > 12 && (
                         <small>
-                          Plus {usedInRecipes.length - 12} more matches in the recipe
-                          directory.
+                          Plus {usedInRecipes.length - 12} more matches in the
+                          recipe directory.
                         </small>
                       )}
                       <Link href={recipeSearchHref}>Search every use →</Link>
@@ -795,7 +898,12 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                     <article>
                       <header>
                         <span>Trader connection</span>
-                        <b>{traderRewards.length + traderCosts.length} offer{traderRewards.length + traderCosts.length === 1 ? "" : "s"}</b>
+                        <b>
+                          {traderRewards.length + traderCosts.length} offer
+                          {traderRewards.length + traderCosts.length === 1
+                            ? ""
+                            : "s"}
+                        </b>
                       </header>
                       <ul>
                         {traderRewards.slice(0, 6).map((trade) => (
@@ -832,7 +940,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                                   currentHref={currentHref}
                                 />
                               </strong>
-                              <span>Trade {amount}× {entry.name}</span>
+                              <span>
+                                Trade {amount}× {entry.name}
+                              </span>
                             </li>
                           );
                         })}
@@ -893,9 +1003,10 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                 <div className={styles.sectionKicker}>How to get it</div>
                 <h2>Unlock it through the quest line</h2>
                 <p>
-                  This entry is tied to a confirmed quest reward. Finish the listed
-                  objective chain, let the reward register, then check the Craftbot or
-                  customization interface according to the reward type.
+                  This entry is tied to a confirmed quest reward. Finish the
+                  listed objective chain, let the reward register, then check
+                  the Craftbot or customization interface according to the
+                  reward type.
                 </p>
                 <div className={styles.sourceGrid}>
                   {relatedQuests.map(({ quest, reward }) => (
@@ -903,46 +1014,70 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       <span>{reward.type} reward</span>
                       <h3>{quest.title}</h3>
                       <p>
-                        Complete this {quest.kind === "main" ? "main-story" : "side"} quest
+                        Complete this{" "}
+                        {quest.kind === "main" ? "main-story" : "side"} quest
                         during {quest.phase.toLowerCase()}.
                       </p>
-                      <Link href={`/wiki/quests#${quest.slug}`}>Open quest objectives →</Link>
+                      <Link href={`/wiki/quests#${quest.slug}`}>
+                        Open quest objectives →
+                      </Link>
                     </article>
                   ))}
                 </div>
                 <div className={styles.fieldChecklist}>
                   <strong>After completion</strong>
                   <ul>
-                    <li>Wait for the quest tracker and reward state to update.</li>
                     <li>
-                      A schematic unlock enables a recipe; it is not the same as receiving
-                      a finished placeable part.
+                      Wait for the quest tracker and reward state to update.
                     </li>
                     <li>
-                      Customization rewards appear through the character outfit interface.
+                      A schematic unlock enables a recipe; it is not the same as
+                      receiving a finished placeable part.
+                    </li>
+                    <li>
+                      Customization rewards appear through the character outfit
+                      interface.
                     </li>
                   </ul>
                 </div>
               </section>
             )}
-            {((entry.recipes?.length ?? 0) > 0 ||
+            {(craftingOptions.length > 0 ||
+              (entry.recipes?.length ?? 0) > 0 ||
               (entry.properties?.length ?? 0) > 0 ||
               (entry.tables?.length ?? 0) > 0 ||
               Boolean(playerItem?.description) ||
               variantObjects.length > 1) && (
               <section className={styles.databasePanel}>
                 <div className={styles.sectionKicker}>Game data</div>
-                <h2 id="current-recipes">{entry.name} recipes and properties</h2>
+                <h2 id="current-recipes">
+                  {entry.name} recipes and properties
+                </h2>
                 {playerItem?.description && (
                   <div className={styles.inventoryNote}>
                     <strong>Inventory description</strong>
                     <p>{playerItem.description}</p>
                   </div>
                 )}
-                {(entry.recipes?.length ?? 0) > 0 && (
+                {craftingOptions.length > 0 ? (
+                  <div className={styles.recipeFlowList}>
+                    {entry.slug === "metal-blocks" && (
+                      <MetalProgressionPanel recipes={craftingOptions} />
+                    )}
+                    {displayedCraftingOptions.slice(0, 8).map((recipe) => (
+                      <WikiRecipeFlow
+                        currentHref={currentHref}
+                        key={recipe.id}
+                        recipe={recipe}
+                      />
+                    ))}
+                  </div>
+                ) : (entry.recipes?.length ?? 0) > 0 ? (
                   <div className={styles.recipeStack}>
                     {entry.recipes?.map((recipe, index) => (
-                      <article key={`${recipe.station}-${recipe.output}-${index}`}>
+                      <article
+                        key={`${recipe.station}-${recipe.output}-${index}`}
+                      >
                         <header>
                           <span>{recipe.station}</span>
                           <b>{recipe.duration}</b>
@@ -965,21 +1100,12 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       </article>
                     ))}
                   </div>
-                )}
+                ) : null}
                 {(entry.properties?.length ?? 0) > 0 && (
-                  <dl className={styles.propertyGrid}>
-                    {entry.properties?.map((property) => (
-                      <div key={property.label}>
-                        <dt>{property.label}</dt>
-                        <dd>
-                          <WikiLinkedText
-                            text={property.value}
-                            currentHref={currentHref}
-                          />
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
+                  <WikiPropertyGrid
+                    currentHref={currentHref}
+                    properties={entry.properties ?? []}
+                  />
                 )}
                 {variantObjects.length > 1 && (
                   <div className={styles.dataTableWrap}>
@@ -1033,7 +1159,14 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                   </div>
                 )}
                 {entry.tables?.map((table) => (
-                  <div className={styles.dataTableWrap} key={table.caption}>
+                  <div
+                    className={`${styles.dataTableWrap} ${
+                      /upgrade|level/i.test(table.caption)
+                        ? styles.upgradeTableWrap
+                        : ""
+                    }`}
+                    key={table.caption}
+                  >
                     <h3>{table.caption}</h3>
                     <div className={styles.dataTableScroll}>
                       <table className={styles.dataTable}>
@@ -1072,44 +1205,51 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                 ))}
               </section>
             )}
-            {!isRewardProfile && entry.sections.map((section) => (
-              <section key={section.heading}>
-                <h2>{section.heading}</h2>
-                {section.paragraphs?.map((paragraph) => (
-                  <p key={paragraph}>
-                    <WikiLinkedText
-                      text={paragraph}
-                      currentHref={currentHref}
-                    />
-                  </p>
-                ))}
-                {section.bullets && (
-                  <ul>
-                    {section.bullets.map((bullet) => (
-                      <li key={bullet}>
-                        <WikiLinkedText text={bullet} currentHref={currentHref} />
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {section.steps && (
-                  <ol>
-                    {section.steps.map((step) => (
-                      <li key={step}>
-                        <WikiLinkedText text={step} currentHref={currentHref} />
-                      </li>
-                    ))}
-                  </ol>
-                )}
-              </section>
-            ))}
+            {!isRewardProfile &&
+              entry.sections.map((section) => (
+                <section key={section.heading}>
+                  <h2>{section.heading}</h2>
+                  {section.paragraphs?.map((paragraph) => (
+                    <p key={paragraph}>
+                      <WikiLinkedText
+                        text={paragraph}
+                        currentHref={currentHref}
+                      />
+                    </p>
+                  ))}
+                  {section.bullets && (
+                    <ul>
+                      {section.bullets.map((bullet) => (
+                        <li key={bullet}>
+                          <WikiLinkedText
+                            text={bullet}
+                            currentHref={currentHref}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {section.steps && (
+                    <ol>
+                      {section.steps.map((step) => (
+                        <li key={step}>
+                          <WikiLinkedText
+                            text={step}
+                            currentHref={currentHref}
+                          />
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </section>
+              ))}
             {!isRewardProfile && relatedQuests.length > 0 && (
               <section className={styles.questConnections} id="related-quests">
                 <div className={styles.sectionKicker}>Quest connection</div>
                 <h2>Quest that awards {entry.name}</h2>
                 <p>
-                  Finish the linked objective chain and allow the Logbook reward state
-                  to update before checking the Craftbot or outfit menu.
+                  Finish the linked objective chain and allow the Logbook reward
+                  state to update before checking the Craftbot or outfit menu.
                 </p>
                 <div>
                   {relatedQuests.map(({ quest, reward }) => (
@@ -1130,7 +1270,10 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
               <p>
                 Wiki / {entry.category} / {entry.name}
               </p>
-              <Link className="button button-secondary" href={`/wiki/${entry.category}`}>
+              <Link
+                className="button button-secondary"
+                href={`/wiki/${entry.category}`}
+              >
                 View {entry.category}
               </Link>
             </div>

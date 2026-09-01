@@ -261,11 +261,68 @@
         "value": "Vehicle drive bearings"
       }
     ],
+    "tables": [
+      {
+        "caption": "Gas Engine upgrade ladder (1.0 data)",
+        "headers": [
+          "Level",
+          "Bearing connections",
+          "Power settings",
+          "Max torque",
+          "Work per Gasoline",
+          "Next upgrade"
+        ],
+        "rows": [
+          [
+            "1",
+            "2",
+            "5",
+            "150",
+            "4,000",
+            "4 Component Kits"
+          ],
+          [
+            "2",
+            "4",
+            "7",
+            "390",
+            "6,000",
+            "6 Component Kits"
+          ],
+          [
+            "3",
+            "6",
+            "9",
+            "1,020",
+            "9,000",
+            "8 Component Kits"
+          ],
+          [
+            "4",
+            "8",
+            "11",
+            "2,670",
+            "13,500",
+            "10 Component Kits"
+          ],
+          [
+            "5",
+            "10",
+            "13",
+            "6,990",
+            "20,250",
+            "—"
+          ]
+        ],
+        "note": "Reaching Level 5 costs 28 Component Kits in total. Higher power settings change available torque; test the setting again after every upgrade and load change."
+      }
+    ],
     "sections": [
       {
         "heading": "Set Power for the Vehicle You Have",
         "paragraphs": [
-          "More engine power is not always more control. Begin at a low setting, test the unloaded chassis, then increase one step at a time after storage and tools are mounted."
+          "More engine power is not always more control. Begin at a low setting, test the unloaded chassis, then increase one step at a time after storage and tools are mounted.",
+          "Each level adds two bearing connections and increases the available power range, torque, and work per unit of Gasoline. Upgrade only when the current connection limit or loaded performance is the real constraint."
         ],
         "bullets": [
           "Connect only the bearings that should provide drive.",
@@ -312,11 +369,68 @@
         "value": "Electric drive and controlled rotation"
       }
     ],
+    "tables": [
+      {
+        "caption": "Electric Engine upgrade ladder (1.0 data)",
+        "headers": [
+          "Level",
+          "Bearing connections",
+          "Speed settings",
+          "Work per Battery",
+          "Steering mode",
+          "Next upgrade"
+        ],
+        "rows": [
+          [
+            "1",
+            "2",
+            "5",
+            "4,000",
+            "Standard",
+            "4 Component Kits"
+          ],
+          [
+            "2",
+            "4",
+            "7",
+            "6,000",
+            "Standard",
+            "6 Component Kits"
+          ],
+          [
+            "3",
+            "6",
+            "9",
+            "9,000",
+            "Standard",
+            "8 Component Kits"
+          ],
+          [
+            "4",
+            "8",
+            "11",
+            "13,500",
+            "Standard",
+            "10 Component Kits"
+          ],
+          [
+            "5",
+            "10",
+            "13",
+            "20,250",
+            "Standard / differential",
+            "—"
+          ]
+        ],
+        "note": "Reaching Level 5 costs 28 Component Kits in total. The Electric Engine setting controls target speed; Level 5 also exposes differential steering behavior."
+      }
+    ],
     "sections": [
       {
         "heading": "Choose It as a System",
         "paragraphs": [
-          "An Electric Engine changes the supply chain from Gasoline to Batteries. Make the choice around available resources, vehicle job, and how often it must operate, not only around the first test drive."
+          "An Electric Engine changes the supply chain from Gasoline to Batteries. Make the choice around available resources, vehicle job, and how often it must operate, not only around the first test drive.",
+          "Every upgrade adds two bearing connections and increases both the available speed settings and work per Battery. Treat Level 5 differential steering as a control option, not a substitute for correct wheel and bearing geometry."
         ],
         "bullets": [
           "Keep a separate battery reserve for essential transport.",
@@ -414,11 +528,56 @@
         "value": "Protect it without blocking visibility"
       }
     ],
+    "tables": [
+      {
+        "caption": "Driver's Seat upgrade ladder (1.0 data)",
+        "headers": [
+          "Level",
+          "Connection limit",
+          "Adjustable steering",
+          "Next upgrade"
+        ],
+        "rows": [
+          [
+            "1",
+            "6",
+            "No",
+            "1 Component Kit"
+          ],
+          [
+            "2",
+            "8",
+            "No",
+            "2 Component Kits"
+          ],
+          [
+            "3",
+            "12",
+            "No",
+            "3 Component Kits"
+          ],
+          [
+            "4",
+            "16",
+            "No",
+            "5 Component Kits"
+          ],
+          [
+            "5",
+            "20",
+            "Yes",
+            "—"
+          ]
+        ],
+        "note": "Reaching Level 5 costs 11 Component Kits in total. Level 5 raises the connection ceiling to 20 and unlocks per-bearing steering settings."
+      }
+    ],
     "sections": [
       {
         "heading": "Make Controls Readable",
         "paragraphs": [
-          "Connect steering bearings first, verify left and right, then add engines and auxiliary controls. A small labeled control set is easier to recover under pressure than a seat connected to every machine on the vehicle."
+          "Connect steering bearings first, verify left and right, then add engines and auxiliary controls. A small labeled control set is easier to recover under pressure than a seat connected to every machine on the vehicle.",
+          "Upgrade the seat when its connection limit blocks the next control, or when Level 5 steering-angle settings solve a specific axle problem. A higher-level seat does not correct a reversed bearing by itself."
         ],
         "bullets": [
           "Keep steering separate from tool movement.",
@@ -593,6 +752,73 @@
         "Scrap Mechanic Suspension",
         "Scrap Mechanic Off-Road Suspension",
         "Scrap Mechanic vehicle tuning"
+      ]
+    }
+  },
+  {
+    "slug": "big-wheel",
+    "category": "parts",
+    "name": "Big Wheel",
+    "description": "A five-block-diameter vehicle wheel that adds ground clearance and a wider contact area for larger Scrap Mechanic builds.",
+    "image": "/images/game-items/big-wheel-db66f0b1.webp",
+    "imageAlt": "Big Wheel item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Vehicle part"
+      },
+      {
+        "label": "Size",
+        "value": "5-block diameter × 2-block depth"
+      },
+      {
+        "label": "Max stack",
+        "value": "5"
+      },
+      {
+        "label": "Requires",
+        "value": "Bearing for rotation"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Big Wheel Overview",
+        "paragraphs": [
+          "The Big Wheel is a larger alternative to the standard Wheel. Its five-block diameter raises the axle and places more tread against the ground, which can help a cargo vehicle clear uneven terrain.",
+          "A Big Wheel does not rotate on its own. Mount each wheel on a Bearing, connect the drive bearings to an engine, and verify the direction of every connection before adding cargo."
+        ]
+      },
+      {
+        "heading": "Build and Tune the Axle",
+        "bullets": [
+          "Leave clearance around the full five-block diameter through steering and suspension travel.",
+          "Use matching wheel, bearing, and suspension placement on both sides of an axle.",
+          "Test steering lock and body roll with the normal storage load installed.",
+          "Keep the axle low enough for stability while preserving the ground clearance the larger radius provides."
+        ]
+      },
+      {
+        "heading": "Recipe and Data Boundary",
+        "paragraphs": [
+          "The structured recipe and physical ratings below come from the checked 1.0.1.869 game data set. Keep that source version separate from the live site version until the values are re-extracted or confirmed in a later build."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "bearing",
+      "suspension",
+      "gas-engine"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Big Wheel Recipe, Stats and Uses",
+      "description": "Check the Scrap Mechanic Big Wheel recipe, 5-block diameter, weight, durability, grip, buoyancy, stack size, and practical axle setup for vehicles.",
+      "keywords": [
+        "Scrap Mechanic Big Wheel",
+        "Scrap Mechanic Big Wheel recipe",
+        "Scrap Mechanic wheel stats",
+        "Scrap Mechanic vehicle wheel"
       ]
     }
   },

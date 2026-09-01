@@ -65,7 +65,7 @@ const updateFaqs = [
   {
     question: "What is the latest Scrap Mechanic version?",
     answer:
-      "The latest public version in the official announcements is Scrap Mechanic 1.0.5, published on August 3, 2026. This page was checked on August 21, 2026.",
+      "The latest public version in the official announcements is Scrap Mechanic 1.0.5, published on August 3, 2026. This page was checked on September 1, 2026.",
   },
   {
     question: "When did Scrap Mechanic 1.0 and Drilling Thunder release?",
@@ -129,10 +129,10 @@ export default function UpdatesPage() {
           <div className={styles.heroCopy}>
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Updates" }]} />
             <span className={styles.eyebrow}>
-              Official release data / checked August 21, 2026
+              Official release data / checked September 1, 2026
             </span>
             <h1>
-              Scrap Mechanic Updates <span>- 1.0.3 Current</span>
+              Scrap Mechanic Updates <span>- {site.currentVersion} Current</span>
             </h1>
             <p>
               A picture-led, data-backed guide to Scrap Mechanic 1.0 and Drilling

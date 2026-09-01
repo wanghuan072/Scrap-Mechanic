@@ -413,5 +413,353 @@
         "Scrap Mechanic garment crafting"
       ]
     }
+  },
+  {
+    "slug": "glue",
+    "category": "resources",
+    "name": "Glue",
+    "description": "A compact crafting resource made from Scrap Wood Block and Beeswax, required by many containers, tools, and utility parts.",
+    "image": "/images/game-items/glue-36335664.webp",
+    "imageAlt": "Glue item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Craftbot recipe",
+        "value": "20 Scrap Wood Block + 2 Beeswax → 1 Glue"
+      },
+      {
+        "label": "Craft time",
+        "value": "5 seconds"
+      },
+      {
+        "label": "Max stack",
+        "value": "20"
+      },
+      {
+        "label": "Storage role",
+        "value": "High-frequency workshop ingredient"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Treat Glue as a Shared Bottleneck",
+        "paragraphs": [
+          "Glue appears across many unrelated recipes, so one planned machine can consume the reserve intended for another. Count finished Glue first, then multiply the wood and Beeswax cost before the gathering trip."
+        ]
+      },
+      {
+        "heading": "Stage Both Ingredients Together",
+        "bullets": [
+          "One Glue needs 20 Scrap Wood Blocks and 2 Beeswax.",
+          "Keep Beeswax near the Craftbot instead of mixing it into general loot storage.",
+          "Use the generated list below to see exact current recipe quantities."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "beeswax",
+      "scrap-wood-block",
+      "component-kit"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Glue Recipe and Crafting Uses",
+      "description": "Check the Scrap Mechanic Glue recipe, Scrap Wood Block and Beeswax cost, current properties, and every part that consumes Glue in Survival mode.",
+      "keywords": [
+        "Scrap Mechanic Glue",
+        "Scrap Mechanic Glue recipe",
+        "Scrap Mechanic Beeswax"
+      ]
+    }
+  },
+  {
+    "slug": "pigment-flower",
+    "category": "resources",
+    "name": "Pigment Flower",
+    "description": "A harvestable color resource used by paint production, crafting recipes, and the Beeswax supply chain.",
+    "image": "/images/game-items/pigment-flower-c9396a42.webp",
+    "imageAlt": "Pigment Flower item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Harvestable crafting resource"
+      },
+      {
+        "label": "Used for",
+        "value": "Paint, recipes, and Beeswax production"
+      },
+      {
+        "label": "Direct Craftbot recipe",
+        "value": "None in the checked data"
+      },
+      {
+        "label": "Max stack",
+        "value": "20"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Do Not Confuse Gathering with Crafting",
+        "paragraphs": [
+          "The checked recipe data contains no finished-output Craftbot recipe for Pigment Flower. Build its supply around harvesting and renewable production, then reserve separate amounts for paint and for materials downstream of the flower."
+        ]
+      },
+      {
+        "heading": "Split the Harvest by Destination",
+        "bullets": [
+          "Keep planting or production stock separate from immediate crafting stock.",
+          "Route a stable surplus toward the Beehive and Beeswax chain.",
+          "Check Paint Ammo and machine recipes before consuming the last stack."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "paint-ammo",
+      "beeswax",
+      "growbed"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Pigment Flower Uses and Supply",
+      "description": "Plan Pigment Flower gathering and production for Scrap Mechanic paint, Beeswax, and the current recipes that consume this resource in Survival.",
+      "keywords": [
+        "Scrap Mechanic Pigment Flower",
+        "Scrap Mechanic paint flower",
+        "Scrap Mechanic Beeswax"
+      ]
+    }
+  },
+  {
+    "slug": "beeswax",
+    "category": "resources",
+    "name": "Beeswax",
+    "description": "A gathered and renewable workshop resource best known as the second ingredient in the Glue recipe.",
+    "image": "/images/game-items/beeswax-fcf0958c.webp",
+    "imageAlt": "Beeswax item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Natural crafting resource"
+      },
+      {
+        "label": "Primary use",
+        "value": "2 Beeswax per Glue"
+      },
+      {
+        "label": "Production link",
+        "value": "Pigment Flower and Beehive chain"
+      },
+      {
+        "label": "Max stack",
+        "value": "20"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Gather for the Glue Total",
+        "paragraphs": [
+          "Beeswax demand is easier to understand after converting the build plan into Glue. Every finished Glue requires two Beeswax, so a ten-Glue workshop project needs twenty before any other Beeswax recipe is counted."
+        ]
+      },
+      {
+        "heading": "Move from Scavenging to Production",
+        "bullets": [
+          "Use gathered Beeswax for the first critical Glue crafts.",
+          "Develop the Pigment Flower and Beehive route when demand becomes repeatable.",
+          "Store the result beside Scrap Wood Block to make missing inputs obvious."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "glue",
+      "pigment-flower",
+      "big-wheel"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Beeswax for Glue and Crafting",
+      "description": "Calculate Scrap Mechanic Beeswax needs for Glue, compare its supply routes, and see the current recipes that consume it before the next workshop build.",
+      "keywords": [
+        "Scrap Mechanic Beeswax",
+        "Scrap Mechanic Glue",
+        "Scrap Mechanic Beehive"
+      ]
+    }
+  },
+  {
+    "slug": "ember",
+    "category": "resources",
+    "name": "Ember",
+    "description": "A heat-related crafting resource first recovered from burned trees and then used in metal, glass, and workshop recipes.",
+    "image": "/images/game-items/ember-267e0c93.webp",
+    "imageAlt": "Ember item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Initial source",
+        "value": "Burned trees"
+      },
+      {
+        "label": "Craftbot batch",
+        "value": "50 Scrap Wood Block + 1 Ember → 5 Ember"
+      },
+      {
+        "label": "Net batch gain",
+        "value": "4 Ember"
+      },
+      {
+        "label": "Max stack",
+        "value": "20"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Keep One Ember to Grow the Supply",
+        "paragraphs": [
+          "The checked Craftbot recipe consumes one Ember with fifty Scrap Wood Blocks and returns five. That means the batch adds four Ember, but it cannot start from zero; keep a seed unit instead of spending the last one on Glass or Metal Block upgrades."
+        ]
+      },
+      {
+        "heading": "Count the Whole Upgrade Chain",
+        "bullets": [
+          "Metal Block Level 2 and Level 3 both add Ember costs.",
+          "Glass Block consumes one Ember per ten-block batch.",
+          "Stage Ember beside Water before starting a full Metal Block Level 3 run."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "metal-blocks",
+      "glass-block",
+      "scrap-wood-block"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Ember Recipe, Sources and Uses",
+      "description": "Learn how Scrap Mechanic Ember supply grows from burned-tree Ember and Scrap Wood, then calculate Metal Block and Glass recipe costs for Survival crafting.",
+      "keywords": [
+        "Scrap Mechanic Ember",
+        "Scrap Mechanic Ember recipe",
+        "Scrap Mechanic burned trees"
+      ]
+    }
+  },
+  {
+    "slug": "glow",
+    "category": "resources",
+    "name": "Glow",
+    "description": "A luminous crafting resource produced through the Glowb feeding loop and consumed by lights and other glowing parts.",
+    "image": "/images/game-items/glow-388adeab.webp",
+    "imageAlt": "Glow item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Source route",
+        "value": "Feed Cardboard to a Glowb"
+      },
+      {
+        "label": "Used for",
+        "value": "Lights and luminous crafting parts"
+      },
+      {
+        "label": "Direct Craftbot recipe",
+        "value": "None in the checked data"
+      },
+      {
+        "label": "Max stack",
+        "value": "20"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Build a Supply Loop, Not a Recipe Queue",
+        "paragraphs": [
+          "Glow is not listed as a direct Craftbot output in the checked data. Its practical route runs through a Glowb that consumes Cardboard, so the real inputs are creature access, feed stock, and collection time."
+        ]
+      },
+      {
+        "heading": "Reserve It for Finished Parts",
+        "bullets": [
+          "Keep Cardboard Block production separate from structural Cardboard use.",
+          "Collect Glow in batches before beginning a multi-light build.",
+          "Use the generated recipe list to verify every current Glow quantity."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "glowbug",
+      "cardboard-block",
+      "glowstick"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Glow and Glowb Production Guide",
+      "description": "Set up the Scrap Mechanic Glowb and Cardboard supply route for Glow, then review every current recipe that consumes the luminous resource safely.",
+      "keywords": [
+        "Scrap Mechanic Glow",
+        "Scrap Mechanic Glowb",
+        "Scrap Mechanic Cardboard"
+      ]
+    }
+  },
+  {
+    "slug": "quartz",
+    "category": "resources",
+    "name": "Quartz",
+    "description": "A mining-progression material used by advanced industrial machines and selected late-workshop recipes.",
+    "image": "/images/game-items/quartz-c108d189.webp",
+    "imageAlt": "Quartz item icon from Scrap Mechanic",
+    "gameVersion": "1.0.1.869",
+    "lastTested": "August 2026",
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Mining material"
+      },
+      {
+        "label": "Recipe role",
+        "value": "Advanced industrial machines"
+      },
+      {
+        "label": "Direct Craftbot recipe",
+        "value": "None in the checked data"
+      },
+      {
+        "label": "Max stack",
+        "value": "20"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Quartz Belongs to the Mining Plan",
+        "paragraphs": [
+          "Quartz is an input rather than a finished Craftbot output in the checked recipe set. Treat it as part of the Mining Hub and industrial-machine progression, and confirm the full machine bill before spending a partial stack."
+        ]
+      },
+      {
+        "heading": "Protect the Advanced-Machine Reserve",
+        "bullets": [
+          "Store Quartz with other industrial materials instead of general Glass stock.",
+          "Check Component Kit and Metal Block requirements at the same time.",
+          "Use the recipe matches below as the version-specific quantity reference."
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "component-kit",
+      "metal-blocks",
+      "crafting-bots"
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Quartz Mining Uses and Recipes",
+      "description": "Review Scrap Mechanic Quartz as a mining material and check its current advanced-machine recipes, quantities, and related workshop requirements.",
+      "keywords": [
+        "Scrap Mechanic Quartz",
+        "Scrap Mechanic mining material",
+        "Scrap Mechanic industrial recipes"
+      ]
+    }
   }
 ]

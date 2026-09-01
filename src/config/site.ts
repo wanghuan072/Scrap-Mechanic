@@ -9,7 +9,7 @@ export const site = {
   ogImage: "/images/og-image.png",
   currentVersion: "1.0.5",
   currentVersionPublished: "August 3, 2026",
-  lastChecked: "August 21, 2026",
+  lastChecked: "September 1, 2026",
   currentVersionSource:
     "https://steamcommunity.com/ogg/387990/announcements/detail/689764519146162105",
   steamUrl: "https://store.steampowered.com/app/387990/Scrap_Mechanic/",

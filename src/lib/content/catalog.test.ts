@@ -20,9 +20,18 @@ describe("content catalog", () => {
 
   it("resolves player-facing aliases and object-detail aliases", () => {
     expect(getWikiEntryByName("Spud Gun")?.slug).toBe("spudgun");
+    expect(getWikiEntryByName("Big Wheel")?.slug).toBe("big-wheel");
     expect(
       getWikiEntryAliases({ category: "blocks", slug: "structural-blocks" }),
     ).toContain("Scrap Metal Block");
+  });
+
+  it("includes the high-frequency materials used by generated recipe links", () => {
+    expect(getWikiEntryByName("Glass Block")?.slug).toBe("glass-block");
+    expect(getWikiEntryByName("Glue")?.slug).toBe("glue");
+    expect(getWikiEntryByName("Ember")?.slug).toBe("ember");
+    expect(getWikiEntryByName("Water")?.slug).toBe("water");
+    expect(getWikiEntryByName("Quartz")?.slug).toBe("quartz");
   });
 
   it("cross-links the four acquisition guides from their body sections", () => {

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GptAd } from "@/components/ads/GptAd";
-import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { SectionHero } from "@/components/common/SectionHero";
 import { site } from "@/config/site";
 import { PageJsonLd } from "@/seo/JsonLd";
@@ -68,20 +67,6 @@ export default function GuidesPage() {
         ]}
         title="Scrap Mechanic"
         tone="orange"
-      />
-
-      <EvidenceStatus
-        label="Guide version status"
-        status="Version boundary"
-        title={`The live game is ${site.currentVersion}; guides keep their own test labels`}
-        summary="The returning-player manual was written against the 1.0.3 boundary. Use the current patch timeline before applying its version-sensitive troubleshooting, while save backups and legacy-branch guidance remain separately documented."
-        facts={[
-          { label: "Live game", value: site.currentVersion },
-          { label: "Current patch", value: site.currentVersionPublished },
-          { label: "Status checked", value: site.lastChecked },
-        ]}
-        source={{ label: "Official current patch", href: site.currentVersionSource }}
-        tone="review"
       />
 
       <section className={styles.manual}>

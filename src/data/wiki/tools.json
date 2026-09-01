@@ -92,6 +92,18 @@
         "value": "Building movable creations"
       },
       {
+        "label": "Availability",
+        "value": "Starting Survival tool"
+      },
+      {
+        "label": "Placed limit",
+        "value": "One Lift per player"
+      },
+      {
+        "label": "Placed size",
+        "value": "4 × 4 × 2 blocks"
+      },
+      {
         "label": "Important behavior",
         "value": "Bearings stay locked while lifted"
       }
@@ -100,15 +112,20 @@
       {
         "heading": "Build and Recover",
         "paragraphs": [
-          "The Lift creates a stable work platform for vehicles and machines. It is also the quickest recovery tool when a creation flips or becomes trapped in an awkward position."
+          "The Lift creates a stable work platform for vehicles and machines. It is also the quickest recovery tool when a creation flips or becomes trapped in an awkward position.",
+          "Place the Lift on clear ground, build above its platform, and use the assigned Lift Up and Lift Down controls to reach the underside of the creation. Removing the Lift returns the creation to normal physics, so lower heavy builds close to the ground before release.",
+          "Aim at a loose creation with the Lift equipped to capture it, then place the Lift again at a safer work area. In Creative and supported builder modes, the Lift also opens the blueprint workflow for saving and loading creations."
         ]
       },
       {
         "heading": "Test off the Lift",
         "bullets": [
           "Remove the Lift before testing wheel rotation, suspension travel, or steering.",
+          "Only one Lift can remain placed for each player; placing it again moves the active work platform.",
+          "A creation carrying restricted resource objects or produce cargo may need to be unloaded before the Lift can capture it.",
           "Check that the ground below the creation is clear before lowering it.",
-          "Use a simple test frame before loading a large saved creation into a new world."
+          "Use a simple test frame before loading a large saved creation into a new world.",
+          "The Lift is a persistent starting tool in Survival and is not intended for normal inventory storage or dropping."
         ]
       }
     ],
