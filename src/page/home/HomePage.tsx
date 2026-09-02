@@ -264,9 +264,9 @@ export default function Home() {
           <div className={styles.sectionLabel}>
             <div className={styles.sectionIntro}>
               <h2>Working tools</h2>
-              <p>Open either calculator directly when you need raid pressure or material totals.</p>
+              <p>Open a calculator for raid pressure, material totals, or steering geometry.</p>
             </div>
-            <Link href="/tools">Compare both tools →</Link>
+            <Link href="/tools">Compare all tools →</Link>
           </div>
           <div className={styles.toolsGrid}>
             {availableTools.map((tool) => (

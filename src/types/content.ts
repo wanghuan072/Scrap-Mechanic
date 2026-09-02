@@ -43,6 +43,7 @@ export type WikiEntry = {
   imageAlt: string;
   gameVersion: string;
   lastTested: string;
+  updated?: string;
   featured?: boolean;
   facts: Array<{ label: string; value: string }>;
   recipes?: Array<{
@@ -153,6 +154,7 @@ export type ToolEntry = {
   symbol: string;
   image: string;
   imageAlt: string;
+  updated: string;
   seo: SeoData;
 };
 

@@ -106,13 +106,14 @@ export const pageTdk: Record<string, SeoData> = {
     ],
   },
   tools: {
-    title: "Scrap Mechanic Tools - Raid and Crafting Calculators",
+    title: "Scrap Mechanic Tools - Game Calculators and Planners",
     description:
-      "Use Scrap Mechanic tools to calculate current crop raid levels and bot budgets or plan materials across recipes, quantities, and crafting stations.",
+      "Use Scrap Mechanic tools to calculate crop raids, plan crafting materials, and set ideal inner and outer wheel angles for front-steered vehicles.",
     keywords: [
       "Scrap Mechanic tools",
       "Scrap Mechanic raid calculator",
       "Scrap Mechanic crafting planner",
+      "Scrap Mechanic wheel angle calculator",
       "Scrap Mechanic material calculator",
       "Scrap Mechanic crop value calculator",
       "Scrap Mechanic recipe calculator",

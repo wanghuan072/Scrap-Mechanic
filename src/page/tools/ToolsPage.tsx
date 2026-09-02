@@ -5,10 +5,7 @@ import type { CSSProperties } from "react";
 import { GptAd } from "@/components/ads/GptAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
-import {
-  recipeCollection,
-  recipeUnlockCollection,
-} from "@/lib/game/player-data";
+import { recipeCollection } from "@/lib/game/player-data";
 import { site } from "@/config/site";
 import {
   raidCrops,
@@ -42,7 +39,7 @@ const toolFaqs = [
   {
     question: "Which Scrap Mechanic tools are available here?",
     answer:
-      "The Tools section contains two working calculators: the Scrap Mechanic Raid Calculator and the Crafting Planner. Placeholder tools and the old checklist have been removed.",
+      "The Tools section contains three working calculators: the Scrap Mechanic Raid Calculator, the Crafting Planner, and the Wheel Angle Calculator. Placeholder tools and the old checklist have been removed.",
   },
   {
     question: "What does the Scrap Mechanic Raid Calculator calculate?",
@@ -58,6 +55,11 @@ const toolFaqs = [
     answer:
       "No. It deliberately totals direct recipe inputs for the selected station recipe. Craftable ingredients are labeled so you can open a separate order without mixing direct and recursive totals.",
   },
+  {
+    question: "What does the Wheel Angle Calculator model?",
+    answer:
+      "It calculates ideal inner and outer front-wheel angles for one fixed rear axle and one independently steered front axle. Tire grip, suspension movement, body clearance, rear steering, and steering linkages remain outside the model.",
+  },
 ];
 
 export default function ToolsPage() {
@@ -71,7 +73,7 @@ export default function ToolsPage() {
             {
               "@type": "ItemList",
               name: "Scrap Mechanic calculators",
-              numberOfItems: 2,
+              numberOfItems: 3,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -84,6 +86,12 @@ export default function ToolsPage() {
                   position: 2,
                   url: `${site.url}/tools/crafting-planner`,
                   name: "Scrap Mechanic Crafting Planner",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  url: `${site.url}/tools/wheel-angle-calculator`,
+                  name: "Scrap Mechanic Wheel Angle Calculator",
                 },
               ],
             },
@@ -114,20 +122,20 @@ export default function ToolsPage() {
         <div className={`container ${styles.heroInner}`}>
           <div>
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tools" }]} />
-            <span className={styles.eyebrow}>Two calculators / no placeholder tools</span>
+            <span className={styles.eyebrow}>Three calculators / no placeholder tools</span>
             <h1>
               Scrap Mechanic Tools <span>- Data In, Decisions Out</span>
             </h1>
             <p>
-              Use the Raid Calculator before planting and the Crafting Planner before
-              loading a station. Both tools expose their inputs, version boundaries,
-              rounding rules, and limits so every result can be checked against the
-              current game data.
+              Check raid pressure before planting, total materials before loading a
+              station, or calculate separate front-wheel limits before tuning a vehicle.
+              Every tool exposes its inputs, rules, and limits so the result can be
+              checked.
             </p>
           </div>
           <aside className={styles.heroPlate}>
             <span>Live tool inventory</span>
-            <strong>02</strong>
+            <strong>03</strong>
             <dl>
               <div>
                 <dt>Raid inputs</dt>
@@ -138,8 +146,8 @@ export default function ToolsPage() {
                 <dd>{recipeCollection.recipeCount} recipes</dd>
               </div>
               <div>
-                <dt>Placeholders</dt>
-                <dd>0</dd>
+                <dt>Steering presets</dt>
+                <dd>3 editable</dd>
               </div>
             </dl>
           </aside>
@@ -164,9 +172,9 @@ export default function ToolsPage() {
             <p>From the Workbench to the Mining Hub Dispenser.</p>
           </article>
           <article>
-            <strong>{recipeUnlockCollection.counts.schematicbot}</strong>
-            <span>Schematicbot outputs</span>
-            <p>Marked by the current unlock-route data.</p>
+            <strong>1–89°</strong>
+            <span>steering model</span>
+            <p>Conventional front-steer angle range with guarded inputs.</p>
           </article>
         </div>
       </section>
@@ -179,8 +187,8 @@ export default function ToolsPage() {
               <h2>Two tools, two verified jobs</h2>
             </div>
             <p>
-              The calculators remain separate because raid pressure and crafting cost
-              use different inputs, version checks, and uncertainty boundaries.
+              Raid pressure and crafting cost use different inputs, version checks, and
+              uncertainty boundaries, so their calculators remain separate.
             </p>
           </header>
 
@@ -284,6 +292,68 @@ export default function ToolsPage() {
               </div>
             </article>
           </div>
+
+          <header className={`${styles.sectionHeading} ${styles.steeringHeading}`}>
+            <div>
+              <span>Vehicle geometry</span>
+              <h2>One steering tool, one clear model</h2>
+            </div>
+            <p>
+              The wheel-angle tool stays independent because it models bearing-center
+              geometry instead of game-data totals.
+            </p>
+          </header>
+
+          <div className={styles.toolStack}>
+            <article className={`${styles.toolCard} ${styles.wheelCard}`}>
+              <div className={styles.toolVisual}>
+                <Image
+                  src="/images/game-items/driver-s-seat-cf3fdcfc.webp"
+                  alt="Driver's Seat used to configure steering bearings"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 48vw"
+                />
+                <span>03 / Steering geometry</span>
+              </div>
+              <div className={styles.toolCopy}>
+                <span className={styles.status}>Available now</span>
+                <h3>Scrap Mechanic Wheel Angle Calculator</h3>
+                <p>
+                  Convert wheelbase, steering-bearing spacing, and the maximum inner
+                  wheel angle into separate left and right bearing limits for ideal
+                  Ackermann steering.
+                </p>
+                <dl className={styles.metrics}>
+                  <div>
+                    <dt>Presets</dt>
+                    <dd>3</dd>
+                  </div>
+                  <div>
+                    <dt>Angle range</dt>
+                    <dd>1–89°</dd>
+                  </div>
+                  <div>
+                    <dt>Steering axles</dt>
+                    <dd>1 front</dd>
+                  </div>
+                  <div>
+                    <dt>Setup</dt>
+                    <dd>Level 5</dd>
+                  </div>
+                </dl>
+                <div className={styles.boundary}>
+                  <b>Geometry proof</b>
+                  <p>
+                    A 6 × 4 chassis with a 27° inside-wheel limit needs a 20.82°
+                    outside-wheel limit for the ideal bearing-center model.
+                  </p>
+                </div>
+                <Link href="/tools/wheel-angle-calculator">
+                  Open Wheel Angle Calculator →
+                </Link>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -372,6 +442,22 @@ export default function ToolsPage() {
               <p>
                 Trader exchanges and deeper ingredient trees stay separate so the
                 result remains auditable against one in-game recipe panel.
+              </p>
+            </article>
+            <article>
+              <span>Wheel Angle Calculator knows</span>
+              <strong>Ideal bearing-center steering geometry</strong>
+              <p>
+                Wheelbase, pivot track, and inner-wheel limit determine the ideal outer
+                angle, angle difference, turning radius, and physical bearing settings.
+              </p>
+            </article>
+            <article>
+              <span>Wheel Angle Calculator cannot know</span>
+              <strong>Grip, flex, clearance, or special steering</strong>
+              <p>
+                Tire friction, suspension movement, body contact, rear steering,
+                multiple axles, and linkages still require an in-game test.
               </p>
             </article>
           </div>

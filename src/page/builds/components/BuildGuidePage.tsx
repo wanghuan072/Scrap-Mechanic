@@ -219,6 +219,16 @@ export function BuildGuidePage({
               Use these dimensions and targets for the first working version. They
               are a practical starting layout, not a fixed in-game preset; adjust
               them only after the baseline passes its tests.
+              {entry.slug === "starter-car" ? (
+                <>
+                  {" "}After upgrading to a Level 5 Driver&apos;s Seat, use the{" "}
+                  <Link href="/tools/wheel-angle-calculator">
+                    Wheel Angle Calculator
+                  </Link>{" "}
+                  to set separate inner and outer steering limits before the
+                  full-lock test.
+                </>
+              ) : null}
             </p>
             <Link href="/tools/crafting-planner">Plan the craftable parts →</Link>
           </header>

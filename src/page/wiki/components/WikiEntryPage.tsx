@@ -377,7 +377,7 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
           "@type": "Article",
           headline: entry.name,
           description: playerDescription,
-          dateModified: entry.lastTested,
+          dateModified: entry.updated ?? entry.lastTested,
           image: `${site.url}${entry.image}`,
           mainEntityOfPage: `${site.url}/wiki/${entry.category}/${entry.slug}`,
           author: {
@@ -1240,6 +1240,18 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                         </li>
                       ))}
                     </ol>
+                  )}
+                  {section.links && (
+                    <ul>
+                      {section.links.map((link) => (
+                        <li key={link.href}>
+                          <Link href={link.href} prefetch={false}>
+                            {link.label}
+                          </Link>
+                          {link.description ? ` — ${link.description}` : null}
+                        </li>
+                      ))}
+                    </ul>
                   )}
                 </section>
               ))}

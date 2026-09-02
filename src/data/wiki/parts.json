@@ -8,6 +8,7 @@
     "imageAlt": "bearing image from Scrap Mechanic",
     "gameVersion": "1.0",
     "lastTested": "July 2026",
+    "updated": "2026-09-02",
     "featured": true,
     "facts": [
       {
@@ -38,6 +39,13 @@
           "Connect a Driver's Seat when the bearing should respond to steering input.",
           "Connect a Controller when the bearing needs a programmed angle or sequence.",
           "Use the Connect Tool to inspect and reverse a connected bearing direction."
+        ],
+        "links": [
+          {
+            "label": "Calculate inner and outer steering angles",
+            "href": "/tools/wheel-angle-calculator",
+            "description": "Convert wheelbase and steering-bearing spacing into separate Level 5 seat limits."
+          }
         ]
       },
       {
@@ -514,6 +522,7 @@
     "imageAlt": "drivers seat image from Scrap Mechanic",
     "gameVersion": "1.0",
     "lastTested": "July 2026",
+    "updated": "2026-09-02",
     "facts": [
       {
         "label": "Type",
@@ -583,6 +592,13 @@
           "Keep steering separate from tool movement.",
           "Place the seat near the vehicle center when practical.",
           "Use paint or signs to identify important numbered controls."
+        ],
+        "links": [
+          {
+            "label": "Set Level 5 Driver's Seat bearing angles",
+            "href": "/tools/wheel-angle-calculator",
+            "description": "Calculate the left and right limits for each front steering bearing."
+          }
         ]
       }
     ],

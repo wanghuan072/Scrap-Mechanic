@@ -8,6 +8,7 @@
     "imageAlt": "connect tool image from Scrap Mechanic",
     "gameVersion": "1.0",
     "lastTested": "July 2026",
+    "updated": "2026-09-02",
     "featured": true,
     "facts": [
       {
@@ -51,6 +52,13 @@
           "Read Controller connection numbers before changing a sequence.",
           "Trace the signal from a Button, Switch, Sensor, or Seat to the final action.",
           "Disconnect a line before rebuilding a mechanism around a different control."
+        ],
+        "links": [
+          {
+            "label": "Open the Wheel Angle Calculator",
+            "href": "/tools/wheel-angle-calculator",
+            "description": "Find separate inner and outer limits before entering Level 5 steering-bearing settings."
+          }
         ]
       }
     ],

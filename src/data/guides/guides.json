@@ -1926,7 +1926,7 @@
     "imageAlt": "A simple four-wheel vehicle driving in Scrap Mechanic",
     "gameVersion": "1.0",
     "published": "2026-07-28",
-    "updated": "2026-07-31",
+    "updated": "2026-09-02",
     "readingTime": "14 min",
     "featured": true,
     "quickAnswer": "Build a low 10 × 16 ladder frame from 48 Wood Block Level 1, use six Bearings for four hubs and two steering pivots, start engine power low, and pass full-lock, ditch, rollover, and one-chest tests before adding bodywork.",
@@ -1954,6 +1954,13 @@
           "Complete a full-lock circle in both directions.",
           "Cross a shallow ditch diagonally.",
           "Tip the empty chassis in a safe area and recover it with the Lift."
+        ],
+        "links": [
+          {
+            "label": "Calculate separate inner and outer steering angles",
+            "href": "/tools/wheel-angle-calculator",
+            "description": "Use this after upgrading to a Level 5 Driver's Seat and before the full-lock test."
+          }
         ]
       },
       {

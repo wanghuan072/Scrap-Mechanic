@@ -61,8 +61,9 @@ export default function PrivacyPolicyPage() {
           search field.
         </p>
         <p>
-          Crafting and raid calculator inputs are processed in the current browser page
-          to display a result. The tools do not upload a Scrap Mechanic save, inspect
+          Calculator inputs, including crafting, raid, and wheel measurements, are
+          processed in the current browser page to display a result. The tools do not
+          upload a Scrap Mechanic save, inspect
           local game files, or create a server-side player profile. Inputs reset when the
           page state is discarded unless your browser independently restores a previous
           session.

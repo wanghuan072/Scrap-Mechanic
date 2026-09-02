@@ -198,6 +198,10 @@
   margin-top: 32px;
 }
 
+.steeringHeading {
+  margin-top: clamp(56px, 7vw, 88px);
+}
+
 .toolCard {
   display: grid;
   min-height: 300px;
@@ -233,12 +237,20 @@
   object-fit: cover;
 }
 
-.craftingCard .toolVisual img {
+.craftingCard .toolVisual img,
+.wheelCard .toolVisual img {
   padding: 13%;
   background:
     radial-gradient(circle, rgb(33 83 93 / 85%), transparent 52%),
     #07171c;
   object-fit: contain;
+}
+
+.wheelCard .toolVisual img {
+  padding: 17%;
+  background:
+    radial-gradient(circle, rgb(74 92 43 / 72%), transparent 48%),
+    linear-gradient(145deg, #10272a, #071619);
 }
 
 .toolVisual > span {

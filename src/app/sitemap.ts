@@ -3,50 +3,26 @@ import { site } from "@/config/site";
 import { allWikiEntries, articleCollections, tools, wikiCategories } from "@/lib/content/catalog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentContentDate = "2026-07-30";
-  const latestContentDate = "2026-07-31";
-  const legalRouteDate = "2026-08-03";
-  const legalRoutes = [
-    "/about",
-    "/contact",
-    "/privacy-policy",
-    "/terms-of-service",
-    "/copyright",
-  ];
+  const legacyContentDate = "2026-07-30";
+  const legacyWikiEntryDate = "2026-07-31";
   const fixedRoutes = [
-    "",
-    "/guides",
-    "/wiki",
-    "/wiki/quests",
-    "/wiki/recipes",
-    "/wiki/trades",
-    "/builds",
-    "/mods",
-    "/updates",
-    "/tools",
-    ...legalRoutes,
-  ].map((path) => ({
-    path,
-    lastModified:
-      legalRoutes.includes(path)
-        ? legalRouteDate
-        : path === "" || path === "/wiki/quests"
-        ? latestContentDate
-        : currentContentDate,
-    priority:
-      path === ""
-        ? 1
-        : ["/guides", "/wiki", "/builds", "/tools"].includes(path)
-          ? 0.9
-          : legalRoutes.includes(path)
-            ? 0.3
-            : 0.8,
-  }));
-  fixedRoutes.push({
-    path: "/map",
-    lastModified: "2026-08-14",
-    priority: 0.7,
-  });
+    { path: "", lastModified: "2026-09-02", priority: 1 },
+    { path: "/guides", lastModified: "2026-07-30", priority: 0.9 },
+    { path: "/wiki", lastModified: "2026-07-30", priority: 0.9 },
+    { path: "/wiki/quests", lastModified: "2026-07-31", priority: 0.8 },
+    { path: "/wiki/recipes", lastModified: "2026-07-30", priority: 0.8 },
+    { path: "/wiki/trades", lastModified: "2026-07-30", priority: 0.8 },
+    { path: "/builds", lastModified: "2026-07-30", priority: 0.9 },
+    { path: "/mods", lastModified: "2026-07-30", priority: 0.8 },
+    { path: "/updates", lastModified: "2026-07-30", priority: 0.8 },
+    { path: "/tools", lastModified: "2026-09-02", priority: 0.9 },
+    { path: "/about", lastModified: "2026-08-03", priority: 0.3 },
+    { path: "/contact", lastModified: "2026-08-03", priority: 0.3 },
+    { path: "/privacy-policy", lastModified: "2026-09-02", priority: 0.3 },
+    { path: "/terms-of-service", lastModified: "2026-08-03", priority: 0.3 },
+    { path: "/copyright", lastModified: "2026-08-03", priority: 0.3 },
+    { path: "/map", lastModified: "2026-08-14", priority: 0.7 },
+  ];
   const toIsoDate = (value: string) => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
     const monthYear = value.match(/^([A-Za-z]+)\s+(\d{4})$/);
@@ -69,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         return `${monthYear[2]}-${String(monthIndex + 1).padStart(2, "0")}-01`;
       }
     }
-    return currentContentDate;
+    return legacyContentDate;
   };
   const articleRoutes = Object.entries(articleCollections).flatMap(([collection, entries]) =>
     entries.map((entry) => ({
@@ -85,24 +61,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const lastModified = categoryEntries
       .map((entry) => toIsoDate(entry.lastTested))
       .sort()
-      .at(-1) ?? currentContentDate;
+      .at(-1) ?? legacyContentDate;
     return {
       path: `/wiki/${category.slug}`,
       lastModified:
-        category.slug === "tools" ? latestContentDate : lastModified,
+        category.slug === "tools" ? legacyWikiEntryDate : lastModified,
       priority: 0.8,
     };
   });
   const wikiEntryRoutes = allWikiEntries.map((entry) => ({
     path: `/wiki/${entry.category}/${entry.slug}`,
-    lastModified: latestContentDate,
+    lastModified: entry.updated ?? legacyWikiEntryDate,
     priority: 0.6,
   }));
   const toolRoutes = tools
     .filter((tool) => tool.status === "available")
     .map((tool) => ({
       path: `/tools/${tool.slug}`,
-      lastModified: currentContentDate,
+      lastModified: tool.updated,
       priority: 0.8,
     }));
 
