@@ -26,6 +26,7 @@
   --text-kicker: 12px;
   --space-section: 28px;
   --header-height: 56px;
+  --container-max: 1400px;
 }
 
 * {
@@ -173,7 +174,8 @@ img {
 }
 
 .container {
-  width: min(100% - 32px, 1360px);
+  width: min(100% - 32px, var(--container-max));
+  max-width: var(--container-max);
   margin-inline: auto;
 }
 
