@@ -16,7 +16,7 @@ describe("sitemap last-modified dates", () => {
   it("uses the current date only for pages changed in this release", () => {
     const dates = sitemapDates();
 
-    expect(dates.get("/tools/wheel-angle-calculator")).toBe("2026-09-02");
+    expect(dates.get("/tools/wheel-angle-calculator")).toBe("2026-09-05");
     expect(dates.get("/guides/first-vehicle")).toBe("2026-09-02");
     expect(dates.get("/builds/starter-car")).toBe("2026-09-02");
     expect(dates.get("/wiki/parts/bearing")).toBe("2026-09-02");

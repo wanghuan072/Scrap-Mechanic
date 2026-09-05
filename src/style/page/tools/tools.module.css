@@ -295,6 +295,19 @@
   color: var(--muted);
 }
 
+.inlineGuideLink {
+  color: var(--cyan);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgb(47 193 220 / 60%);
+  text-underline-offset: 3px;
+}
+
+.inlineGuideLink:hover {
+  color: var(--orange-bright);
+  text-decoration-color: currentcolor;
+}
+
 .metrics {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

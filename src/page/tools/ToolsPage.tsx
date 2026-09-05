@@ -45,6 +45,10 @@ const toolFaqs = [
     question: "What does the Scrap Mechanic Raid Calculator calculate?",
     answer:
       `It totals ${raidCrops.length} current crop values, selects one of seven raid levels, applies the player modifier, returns the exact bot budget, and simulates weighted outcomes for nine enemy variants. The forecast estimates probabilities and sample timelines; it does not claim the exact live roll or spawn position.`,
+    guideLink: {
+      label: "raid levels",
+      href: "/guides/raid-levels",
+    },
   },
   {
     question: "How much crafting data is in the Crafting Planner?",
@@ -207,9 +211,12 @@ export default function ToolsPage() {
                 <span className={styles.status}>Available now</span>
                 <h3>Scrap Mechanic Raid Calculator</h3>
                 <p>
-                  Convert planted crops into total crop value, raid level, exact bot
-                  budget, multiplayer modifier, weighted enemy probabilities, and one
-                  possible drop timeline.
+                  Convert planted crops into total crop value,{" "}
+                  <Link className={styles.inlineGuideLink} href="/guides/raid-levels">
+                    raid level
+                  </Link>
+                  , exact bot budget, multiplayer modifier, weighted enemy probabilities,
+                  and one possible drop timeline.
                 </p>
                 <dl className={styles.metrics}>
                   <div>
@@ -236,8 +243,11 @@ export default function ToolsPage() {
                   <b>Boundary proof</b>
                   <p>
                     10 Pineapples = 10,000 points, Level 6, base budget 700. Add
-                    one Tomato and 10,001 becomes a Super Raid with a one-player budget
-                    of 1,001.
+                    one Tomato and 10,001 becomes a{" "}
+                    <Link className={styles.inlineGuideLink} href="/guides/raid-levels">
+                      Super Raid
+                    </Link>{" "}
+                    with a one-player budget of 1,001.
                   </p>
                 </div>
                 <Link href="/tools/raid-calculator">Open Raid Calculator →</Link>
@@ -484,7 +494,22 @@ export default function ToolsPage() {
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{item.question}</h3>
-                  <p>{item.answer}</p>
+                  <p>
+                    {item.guideLink ? (
+                      <>
+                        {item.answer.split(item.guideLink.label)[0]}
+                        <Link
+                          className={styles.inlineGuideLink}
+                          href={item.guideLink.href}
+                        >
+                          {item.guideLink.label}
+                        </Link>
+                        {item.answer.split(item.guideLink.label)[1]}
+                      </>
+                    ) : (
+                      item.answer
+                    )}
+                  </p>
                 </div>
               </article>
             ))}

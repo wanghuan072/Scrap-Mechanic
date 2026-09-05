@@ -82,6 +82,19 @@
   line-height: 1.55;
 }
 
+.inlineGuideLink {
+  color: var(--cyan);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgb(47 193 220 / 60%);
+  text-underline-offset: 3px;
+}
+
+.inlineGuideLink:hover {
+  color: var(--orange-bright);
+  text-decoration-color: currentcolor;
+}
+
 .heroFacts {
   display: flex;
   flex-wrap: wrap;

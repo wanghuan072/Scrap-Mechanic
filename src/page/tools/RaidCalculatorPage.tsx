@@ -145,7 +145,12 @@ export default function RaidCalculatorPage() {
             <p>
               The calculator handles the numerical raid decision. The live world still
               controls spawn direction, exact positions, pathfinding, and which valid
-              weighted enemy groups are rolled.
+              weighted enemy groups are rolled. Read the <Link
+                className={styles.inlineGuideLink}
+                href="/guides/raid-levels"
+              >
+                Raid Levels guide
+              </Link> for the full threshold and bot table.
             </p>
           </header>
           <div className={styles.timingGrid}>
@@ -169,7 +174,12 @@ export default function RaidCalculatorPage() {
             <p>
               Crop count alone is not enough. A Pineapple contributes 1,000 points,
               while a Tomato contributes 1, so two equal-sized plots can create very
-              different raids.
+              different raids. The <Link
+                className={styles.inlineGuideLink}
+                href="/guides/raid-levels"
+              >
+                seven raid-level bands
+              </Link> explain where each threshold begins.
             </p>
             <Link href="/wiki/crops">Browse the crop Wiki →</Link>
           </header>

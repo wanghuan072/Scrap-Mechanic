@@ -99,7 +99,9 @@ export default function WheelAngleCalculatorPage() {
             </h1>
             <p>
               Calculate separate inner and outer steering limits for a Level 5
-              Driver&apos;s Seat. Use the result to reduce low-speed tire scrub on a
+              <Link className={styles.inlineGuideLink} href="/wiki/parts/drivers-seat">
+                Driver&apos;s Seat
+              </Link>. Use the result to reduce low-speed tire scrub on a
               conventional front-steered vehicle.
             </p>
             <div className={styles.heroFacts}>
@@ -161,7 +163,9 @@ export default function WheelAngleCalculatorPage() {
               <h2>Measure, calculate, then enter both bearing limits</h2>
             </div>
             <p>
-              Use bearing centers, not tire edges. With the default 6 × 4 setup,
+              Use <Link className={styles.inlineGuideLink} href="/wiki/parts/bearing">
+                Bearing centers
+              </Link>, not tire edges. With the default 6 × 4 setup,
               a 27° inner limit produces a 20.82° outer target.
             </p>
           </header>
