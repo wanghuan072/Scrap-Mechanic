@@ -1,13 +1,18 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
-import { allWikiEntries, articleCollections, tools, wikiCategories } from "@/lib/content/catalog";
+import {
+  allWikiEntries,
+  articleCollections,
+  tools,
+  wikiCategories,
+} from "@/lib/content/catalog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const legacyContentDate = "2026-07-30";
   const legacyWikiEntryDate = "2026-07-31";
   const fixedRoutes = [
-    { path: "", lastModified: "2026-09-02", priority: 1 },
-    { path: "/guides", lastModified: "2026-07-30", priority: 0.9 },
+    { path: "", lastModified: "2026-09-05", priority: 1 },
+    { path: "/guides", lastModified: "2026-09-05", priority: 0.9 },
     { path: "/wiki", lastModified: "2026-07-30", priority: 0.9 },
     { path: "/wiki/quests", lastModified: "2026-07-31", priority: 0.8 },
     { path: "/wiki/recipes", lastModified: "2026-07-30", priority: 0.8 },
@@ -15,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/builds", lastModified: "2026-07-30", priority: 0.9 },
     { path: "/mods", lastModified: "2026-07-30", priority: 0.8 },
     { path: "/updates", lastModified: "2026-07-30", priority: 0.8 },
-    { path: "/tools", lastModified: "2026-09-02", priority: 0.9 },
+    { path: "/tools", lastModified: "2026-09-05", priority: 0.9 },
     { path: "/about", lastModified: "2026-08-03", priority: 0.3 },
     { path: "/contact", lastModified: "2026-08-03", priority: 0.3 },
     { path: "/privacy-policy", lastModified: "2026-09-02", priority: 0.3 },
@@ -47,21 +52,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     return legacyContentDate;
   };
-  const articleRoutes = Object.entries(articleCollections).flatMap(([collection, entries]) =>
-    entries.map((entry) => ({
-      path: `/${collection}/${entry.slug}`,
-      lastModified: entry.updated,
-      priority: collection === "guides" || collection === "builds" ? 0.7 : 0.6,
-    })),
+  const articleRoutes = Object.entries(articleCollections).flatMap(
+    ([collection, entries]) =>
+      entries.map((entry) => ({
+        path: `/${collection}/${entry.slug}`,
+        lastModified: entry.updated,
+        priority:
+          collection === "guides" || collection === "builds" ? 0.7 : 0.6,
+      })),
   );
   const wikiCategoryRoutes = wikiCategories.map((category) => {
     const categoryEntries = allWikiEntries.filter(
       (entry) => entry.category === category.slug,
     );
-    const lastModified = categoryEntries
-      .map((entry) => toIsoDate(entry.lastTested))
-      .sort()
-      .at(-1) ?? legacyContentDate;
+    const lastModified =
+      categoryEntries
+        .map((entry) => toIsoDate(entry.lastTested))
+        .sort()
+        .at(-1) ?? legacyContentDate;
     return {
       path: `/wiki/${category.slug}`,
       lastModified:

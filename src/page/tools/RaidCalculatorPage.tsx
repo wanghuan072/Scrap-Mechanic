@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RaidCalculator } from "@/page/tools/components/RaidCalculator";
 import { JsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
-import { raidLevels, raidTimingRules } from "@/lib/data/raid-calculator";
+import { raidCrops, raidLevels, raidTimingRules } from "@/lib/data/raid-calculator";
 import { getTool } from "@/lib/content/catalog";
 import { createMetadata } from "@/seo/metadata";
 import styles from "@/style/page/tools/raid-calculator-page.module.css";
@@ -97,7 +97,7 @@ export default function RaidCalculatorPage() {
             </p>
             <div className={styles.heroFacts}>
               <span>Checked version 1.0.0.867</span>
-              <span>10 current crop values</span>
+              <span>{raidCrops.length} current crop values</span>
               <span>7 raid levels</span>
               <span>9 enemy variants</span>
               <span>Up to 10,000 simulations</span>

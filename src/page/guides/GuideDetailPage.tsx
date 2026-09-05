@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticlePage } from "@/components/content/ArticlePage";
 import { getArticle, guides } from "@/lib/content/catalog";
+import { RaidLevelsGuidePage } from "@/page/guides/RaidLevelsGuidePage";
 import { createMetadata } from "@/seo/metadata";
 
 export function generateStaticParams() {
@@ -15,9 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const entry = getArticle("guides", slug);
-  return entry
-    ? createMetadata(entry.seo, `/guides/${entry.slug}`)
-    : {};
+  return entry ? createMetadata(entry.seo, `/guides/${entry.slug}`) : {};
 }
 
 export default async function GuideDetailPage({
@@ -28,11 +27,10 @@ export default async function GuideDetailPage({
   const { slug } = await params;
   const entry = getArticle("guides", slug);
   if (!entry) notFound();
+  if (entry.slug === "raid-levels") {
+    return <RaidLevelsGuidePage entry={entry} />;
+  }
   return (
-    <ArticlePage
-      basePath="/guides"
-      collectionLabel="Guides"
-      entry={entry}
-    />
+    <ArticlePage basePath="/guides" collectionLabel="Guides" entry={entry} />
   );
 }

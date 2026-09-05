@@ -5,6 +5,7 @@ import {
   getRaidLevelFraction,
   normalizeWholeNumber,
 } from "@/lib/tools/raid-calculator";
+import { raidCrops } from "@/lib/data/raid-calculator";
 
 describe("raid calculator", () => {
   it.each([
@@ -36,5 +37,15 @@ describe("raid calculator", () => {
     expect(normalizeWholeNumber(7.9, 1, 4)).toBe(4);
     expect(getRaidLevelFraction(0, 1)).toBe(0);
     expect(getRaidLevelFraction(100000, 7)).toBe(1);
+  });
+
+  it("includes all twelve referenced crops and keeps zero-value crops raid-safe", () => {
+    expect(raidCrops).toHaveLength(12);
+    expect(
+      raidCrops
+        .filter((crop) => crop.value === 0)
+        .map((crop) => crop.name),
+    ).toEqual(["Cotton", "Pigment Flower"]);
+    expect(calculateRaid({ cotton: 50, "pigment-flower": 50 }, 1).level).toBeUndefined();
   });
 });

@@ -9,6 +9,7 @@ const guideOrder = [
   "beginner-first-hours",
   "returning-to-1-0",
   "farming-basics",
+  "raid-levels",
   "warehouse-key-and-farmbot",
   "first-vehicle",
   "controller-and-logic",

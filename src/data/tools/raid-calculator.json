@@ -11,6 +11,18 @@
   "maximumRaidPlantValue": 100000,
   "raidCrops": [
     {
+      "slug": "cotton",
+      "name": "Cotton",
+      "value": 0,
+      "image": "/images/wiki/cotton-crop.webp"
+    },
+    {
+      "slug": "pigment-flower",
+      "name": "Pigment Flower",
+      "value": 0,
+      "image": "/images/game-items/pigment-flower-c9396a42.webp"
+    },
+    {
       "slug": "tomato",
       "name": "Tomato",
       "value": 1,

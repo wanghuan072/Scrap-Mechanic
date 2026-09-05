@@ -70,7 +70,7 @@ const guideLanes = [
   {
     label: "Survival",
     copy: "Crop value, raids, and Warehouse combat.",
-    slugs: ["farming-basics", "warehouse-key-and-farmbot"],
+    slugs: ["farming-basics", "raid-levels", "warehouse-key-and-farmbot"],
   },
   {
     label: "Building",

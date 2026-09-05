@@ -18,11 +18,21 @@ export type {
 export const raidForecastSource = raidForecastJson.raidForecastSource;
 export const raidBots = raidForecastJson.raidBots as Record<
   RaidBotId,
-  { name: string; color: string; family: "Totebot" | "Haybot" | "Tapebot" | "Farmbot" }
+  {
+    name: string;
+    color: string;
+    family: "Totebot" | "Haybot" | "Tapebot" | "Farmbot";
+  }
 >;
 export const raidBotOrder = raidForecastJson.raidBotOrder as RaidBotId[];
-const openingGroups = raidForecastJson.openingGroups as Record<number, RaidEnemyGroup[]>;
-const reinforcementGroups = raidForecastJson.reinforcementGroups as Record<number, RaidEnemyGroup[]>;
+const openingGroups = raidForecastJson.openingGroups as Record<
+  number,
+  RaidEnemyGroup[]
+>;
+const reinforcementGroups = raidForecastJson.reinforcementGroups as Record<
+  number,
+  RaidEnemyGroup[]
+>;
 
 function createRandom(seed: number) {
   let state = seed >>> 0;
@@ -36,7 +46,10 @@ function createRandom(seed: number) {
 }
 
 function pickWeighted(groups: RaidEnemyGroup[], random: () => number) {
-  const totalWeight = groups.reduce((total, group) => total + (group.weight ?? 1), 0);
+  const totalWeight = groups.reduce(
+    (total, group) => total + (group.weight ?? 1),
+    0,
+  );
   let target = random() * totalWeight;
 
   for (const group of groups) {
@@ -58,13 +71,19 @@ function rollOpeningGroup(level: number, random: () => number) {
   return pickWeighted(openingGroups[level], random);
 }
 
-function rollReinforcementGroups(level: number, budget: number, random: () => number) {
+function rollReinforcementGroups(
+  level: number,
+  budget: number,
+  random: () => number,
+) {
   const selected: RaidEnemyGroup[] = [];
   const pool = reinforcementGroups[level];
   let remaining = budget;
 
   while (true) {
-    const affordable = pool.filter((group) => remaining >= Math.max(group.cost ?? 1, 1));
+    const affordable = pool.filter(
+      (group) => remaining >= Math.max(group.cost ?? 1, 1),
+    );
     if (affordable.length === 0) break;
 
     const group = pickWeighted(affordable, random);
@@ -79,8 +98,26 @@ export function getOpeningRaidGroups(level: number) {
   return openingGroups[level] ?? [];
 }
 
+export function getReinforcementRaidGroups(level: number) {
+  return reinforcementGroups[level] ?? [];
+}
+
+export function getEligibleRaidBotIds(level: number) {
+  const eligible = new Set<RaidBotId>();
+
+  for (const group of reinforcementGroups[level] ?? []) {
+    for (const id of raidBotOrder) {
+      if ((group.list[id] ?? 0) > 0) eligible.add(id);
+    }
+  }
+
+  return raidBotOrder.filter((id) => eligible.has(id));
+}
+
 export function getMinimumReinforcementCost(level: number) {
-  const costs = (reinforcementGroups[level] ?? []).map((group) => group.cost ?? 1);
+  const costs = (reinforcementGroups[level] ?? []).map(
+    (group) => group.cost ?? 1,
+  );
   return costs.length > 0 ? Math.min(...costs) : undefined;
 }
 
@@ -88,12 +125,17 @@ export function getRaidForecastSimulationCount(plantValue: number) {
   return plantValue > 10000 ? 1500 : 10000;
 }
 
-export function createRaidForecastSeed(plantValue: number, players: number, salt = 0) {
+export function createRaidForecastSeed(
+  plantValue: number,
+  players: number,
+  salt = 0,
+) {
   return (
-    Math.imul(plantValue + 1, 2654435761) ^
-    Math.imul(players + 7, 2246822519) ^
-    Math.imul(salt + 11, 3266489917)
-  ) >>> 0;
+    (Math.imul(plantValue + 1, 2654435761) ^
+      Math.imul(players + 7, 2246822519) ^
+      Math.imul(salt + 11, 3266489917)) >>>
+    0
+  );
 }
 
 export function simulateRaidForecast(
@@ -149,7 +191,11 @@ export function simulateRaidForecast(
   };
 }
 
-export function createRaidTimeline(level: number, budget: number, seed: number) {
+export function createRaidTimeline(
+  level: number,
+  budget: number,
+  seed: number,
+) {
   const random = createRandom(seed);
   const opening = rollOpeningGroup(level, random);
   const waves = [opening, ...rollReinforcementGroups(level, budget, random)];

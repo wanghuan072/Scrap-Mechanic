@@ -40,8 +40,8 @@
       "family": "Tapebot"
     },
     "pr": {
-      "name": "Tapebot Red",
-      "color": "#cf4636",
+      "name": "Tapebot Blue",
+      "color": "#4f88c6",
       "family": "Tapebot"
     },
     "fb": {
@@ -253,7 +253,7 @@
       },
       {
         "list": {
-          "tg": 2,
+          "tg": 1,
           "tr": 1
         },
         "cost": 24,
@@ -261,7 +261,7 @@
       },
       {
         "list": {
-          "tg": 3,
+          "tg": 1,
           "pg": 1,
           "py": 1
         },

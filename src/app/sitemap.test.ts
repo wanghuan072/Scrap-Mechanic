@@ -22,12 +22,16 @@ describe("sitemap last-modified dates", () => {
     expect(dates.get("/wiki/parts/bearing")).toBe("2026-09-02");
     expect(dates.get("/wiki/parts/drivers-seat")).toBe("2026-09-02");
     expect(dates.get("/wiki/tools/connect-tool")).toBe("2026-09-02");
+    expect(dates.get("/guides/raid-levels")).toBe("2026-09-05");
+    expect(dates.get("/guides")).toBe("2026-09-05");
+    expect(dates.get("/")).toBe("2026-09-05");
+    expect(dates.get("/tools")).toBe("2026-09-05");
+    expect(dates.get("/tools/raid-calculator")).toBe("2026-09-05");
   });
 
   it("preserves dates for unchanged tool and wiki pages", () => {
     const dates = sitemapDates();
 
-    expect(dates.get("/tools/raid-calculator")).toBe("2026-07-30");
     expect(dates.get("/tools/crafting-planner")).toBe("2026-07-30");
     expect(dates.get("/wiki/parts/controller")).toBe("2026-07-31");
   });

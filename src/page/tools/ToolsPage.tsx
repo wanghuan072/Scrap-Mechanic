@@ -44,7 +44,7 @@ const toolFaqs = [
   {
     question: "What does the Scrap Mechanic Raid Calculator calculate?",
     answer:
-      "It totals 10 current crop values, selects one of seven raid levels, applies the player modifier, returns the exact bot budget, and simulates weighted outcomes for nine enemy variants. The forecast estimates probabilities and sample timelines; it does not claim the exact live roll or spawn position.",
+      `It totals ${raidCrops.length} current crop values, selects one of seven raid levels, applies the player modifier, returns the exact bot budget, and simulates weighted outcomes for nine enemy variants. The forecast estimates probabilities and sample timelines; it does not claim the exact live roll or spawn position.`,
   },
   {
     question: "How much crafting data is in the Crafting Planner?",

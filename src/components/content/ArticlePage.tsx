@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { GptAd } from "@/components/ads/GptAd";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import type { ArticleEntry } from "@/types/content";
@@ -13,10 +14,12 @@ export function ArticlePage({
   entry,
   basePath,
   collectionLabel,
+  featuredContent,
 }: {
   entry: ArticleEntry;
   basePath: string;
   collectionLabel: string;
+  featuredContent?: ReactNode;
 }) {
   const currentHref = `${basePath}/${entry.slug}`;
   const relatedWiki = (entry.relatedWiki ?? [])
@@ -44,8 +47,16 @@ export function ArticlePage({
           dateModified: entry.updated,
           image: `${site.url}${entry.image}`,
           mainEntityOfPage: `${site.url}${basePath}/${entry.slug}`,
-          author: { "@type": "Organization", name: site.publisherName, url: site.url },
-          publisher: { "@type": "Organization", name: site.publisherName, url: site.url },
+          author: {
+            "@type": "Organization",
+            name: site.publisherName,
+            url: site.url,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: site.publisherName,
+            url: site.url,
+          },
         }}
       />
       <section className="article-hero-section">
@@ -123,7 +134,9 @@ export function ArticlePage({
             ? { label: "Official source", href: entry.sourceUrl }
             : undefined
         }
-        tone={entry.gameVersion === site.currentVersion ? "confirmed" : "review"}
+        tone={
+          entry.gameVersion === site.currentVersion ? "confirmed" : "review"
+        }
       />
 
       <GptAd
@@ -137,9 +150,13 @@ export function ArticlePage({
             <aside className="quick-answer">
               <span>DO THIS FIRST</span>
               <p>
-                <WikiLinkedText text={entry.quickAnswer} currentHref={currentHref} />
+                <WikiLinkedText
+                  text={entry.quickAnswer}
+                  currentHref={currentHref}
+                />
               </p>
             </aside>
+            {featuredContent}
             {entry.media && entry.media.length > 0 ? (
               <div className="article-media-grid">
                 {entry.media.map((media) => (
@@ -154,7 +171,10 @@ export function ArticlePage({
                       />
                     </div>
                     <figcaption>
-                      <WikiLinkedText text={media.caption} currentHref={currentHref} />
+                      <WikiLinkedText
+                        text={media.caption}
+                        currentHref={currentHref}
+                      />
                     </figcaption>
                   </figure>
                 ))}
@@ -177,7 +197,10 @@ export function ArticlePage({
                         <tr key={row.join("|")}>
                           {row.map((cell, index) => (
                             <td key={`${row[0]}-${index}`}>
-                              <WikiLinkedText text={cell} currentHref={currentHref} />
+                              <WikiLinkedText
+                                text={cell}
+                                currentHref={currentHref}
+                              />
                             </td>
                           ))}
                         </tr>
@@ -185,7 +208,9 @@ export function ArticlePage({
                     </tbody>
                   </table>
                 </div>
-                {table.note ? <p className="article-data-note">{table.note}</p> : null}
+                {table.note ? (
+                  <p className="article-data-note">{table.note}</p>
+                ) : null}
               </section>
             ))}
             {entry.sections.map((section) => (
@@ -193,14 +218,20 @@ export function ArticlePage({
                 <h2>{section.heading}</h2>
                 {section.paragraphs?.map((paragraph) => (
                   <p key={paragraph}>
-                    <WikiLinkedText text={paragraph} currentHref={currentHref} />
+                    <WikiLinkedText
+                      text={paragraph}
+                      currentHref={currentHref}
+                    />
                   </p>
                 ))}
                 {section.bullets && (
                   <ul>
                     {section.bullets.map((bullet) => (
                       <li key={bullet}>
-                        <WikiLinkedText text={bullet} currentHref={currentHref} />
+                        <WikiLinkedText
+                          text={bullet}
+                          currentHref={currentHref}
+                        />
                       </li>
                     ))}
                   </ul>
@@ -306,7 +337,10 @@ export function ArticlePage({
             {entry.sourceUrl ? (
               <div className="sidebar-panel">
                 <span className="sidebar-label">OFFICIAL NOTE</span>
-                <p>Read the developer&apos;s original announcement for the complete release context.</p>
+                <p>
+                  Read the developer&apos;s original announcement for the
+                  complete release context.
+                </p>
                 <a
                   href={entry.sourceUrl}
                   target="_blank"

@@ -30,12 +30,7 @@
     "tables": [
       {
         "caption": "Oil quick reference",
-        "headers": [
-          "Method",
-          "Requirement",
-          "Output",
-          "Version note"
-        ],
+        "headers": ["Method", "Requirement", "Output", "Version note"],
         "rows": [
           [
             "Oil Bucket route",
@@ -60,25 +55,10 @@
       },
       {
         "caption": "Crude Oil recipe checks",
-        "headers": [
-          "Recipe",
-          "Station",
-          "Time",
-          "Inputs"
-        ],
+        "headers": ["Recipe", "Station", "Time", "Inputs"],
         "rows": [
-          [
-            "Crude Oil x5",
-            "Craftbot",
-            "5 sec",
-            "Oil Bucket x1"
-          ],
-          [
-            "Gasoline x5",
-            "Craftbot",
-            "5 sec",
-            "Crude Oil x5"
-          ],
+          ["Crude Oil x5", "Craftbot", "5 sec", "Oil Bucket x1"],
+          ["Gasoline x5", "Craftbot", "5 sec", "Crude Oil x5"],
           [
             "Gasoline x1",
             "Portable Crafter / Workbench",
@@ -222,12 +202,7 @@
     "seo": {
       "title": "How to Get Oil in Scrap Mechanic - Crude Oil Guide",
       "description": "Get Oil in Scrap Mechanic with Oil Buckets, Vacuum Pumps, Crude Oil conversion, and Gasoline recipes using verified Survival crafting routes.",
-      "keywords": [
-        "Scrap Mechanic oil",
-        "Crude Oil",
-        "Oil Bucket",
-        "Gasoline"
-      ]
+      "keywords": ["Scrap Mechanic oil", "Crude Oil", "Oil Bucket", "Gasoline"]
     }
   },
   {
@@ -261,12 +236,7 @@
     "tables": [
       {
         "caption": "Water quick reference",
-        "headers": [
-          "Method",
-          "Source",
-          "Required parts",
-          "Best use"
-        ],
+        "headers": ["Method", "Source", "Required parts", "Best use"],
         "rows": [
           [
             "Water Bucket",
@@ -297,19 +267,9 @@
       },
       {
         "caption": "Water system recipes",
-        "headers": [
-          "Output",
-          "Station",
-          "Time",
-          "Inputs"
-        ],
+        "headers": ["Output", "Station", "Time", "Inputs"],
         "rows": [
-          [
-            "Water Bucket x1",
-            "Craftbot",
-            "5 sec",
-            "5 Metal Block Level 1"
-          ],
+          ["Water Bucket x1", "Craftbot", "5 sec", "5 Metal Block Level 1"],
           [
             "Water Container x1",
             "Craftbot",
@@ -542,12 +502,7 @@
       },
       {
         "caption": "Battery recipe and consumers",
-        "headers": [
-          "Item",
-          "Station",
-          "Time",
-          "Battery relation"
-        ],
+        "headers": ["Item", "Station", "Time", "Battery relation"],
         "rows": [
           [
             "Battery x10",
@@ -745,12 +700,7 @@
     "tables": [
       {
         "caption": "Schematic source quick reference",
-        "headers": [
-          "Source",
-          "Requirement",
-          "Unlock result",
-          "Version note"
-        ],
+        "headers": ["Source", "Requirement", "Unlock result", "Version note"],
         "rows": [
           [
             "Schematic Box scan",
@@ -968,11 +918,7 @@
     "seo": {
       "title": "How to Get Schematics in Scrap Mechanic Fast",
       "description": "Get Schematics in Scrap Mechanic with Schematic Boxes, Schematicbot scans, part scans, drops, trades, and quest unlocks using verified routes.",
-      "keywords": [
-        "Scrap Mechanic schematics",
-        "Schematicbot",
-        "Schematic Box"
-      ]
+      "keywords": ["Scrap Mechanic schematics", "Schematicbot", "Schematic Box"]
     }
   },
   {
@@ -1093,11 +1039,7 @@
     "tables": [
       {
         "caption": "Getting Started completion checkpoints",
-        "headers": [
-          "Step",
-          "Where / item",
-          "What proves it is complete"
-        ],
+        "headers": ["Step", "Where / item", "What proves it is complete"],
         "rows": [
           [
             "1. Start",
@@ -1144,11 +1086,7 @@
       },
       {
         "caption": "The two early Master Batteries",
-        "headers": [
-          "Battery",
-          "Marked location",
-          "Correct destination"
-        ],
+        "headers": ["Battery", "Marked location", "Correct destination"],
         "rows": [
           [
             "Crash Site battery",
@@ -1165,11 +1103,7 @@
       },
       {
         "caption": "Choose the next branch only after the Logbook",
-        "headers": [
-          "Next job",
-          "Start condition",
-          "First measurable target"
-        ],
+        "headers": ["Next job", "Start condition", "First measurable target"],
         "rows": [
           [
             "First farm",
@@ -1190,11 +1124,7 @@
       },
       {
         "caption": "Optional starter-car test baseline",
-        "headers": [
-          "Measurement",
-          "Baseline",
-          "Commissioning proof"
-        ],
+        "headers": ["Measurement", "Baseline", "Commissioning proof"],
         "rows": [
           [
             "Frame",
@@ -1211,11 +1141,7 @@
             "48",
             "Bare frame is complete before decorative bodywork"
           ],
-          [
-            "Bearings",
-            "6",
-            "4 wheel hubs and 2 front steering pivots"
-          ],
+          ["Bearings", "6", "4 wheel hubs and 2 front steering pivots"],
           [
             "Controls",
             "1 seat + 1 Gas Engine",
@@ -1231,40 +1157,17 @@
       },
       {
         "caption": "Small first-farm values",
-        "headers": [
-          "Crop",
-          "1.0 plant value",
-          "Why it belongs or waits"
-        ],
+        "headers": ["Crop", "1.0 plant value", "Why it belongs or waits"],
         "rows": [
-          [
-            "Tomato",
-            "1",
-            "Food and the lowest-value practice row"
-          ],
-          [
-            "Potato",
-            "1",
-            "Food now; Spudgun ammunition later"
-          ],
-          [
-            "Carrot",
-            "2",
-            "Food with twice Tomato's calculator value"
-          ],
-          [
-            "Redbeet",
-            "5",
-            "Delay larger rows until the approach is defended"
-          ]
+          ["Tomato", "1", "Food and the lowest-value practice row"],
+          ["Potato", "1", "Food now; Spudgun ammunition later"],
+          ["Carrot", "2", "Food with twice Tomato's calculator value"],
+          ["Redbeet", "5", "Delay larger rows until the approach is defended"]
         ],
         "note": "Never plant the final seed. A seed chest outside the crop approach is the recovery plan after a failed night."
       }
     ],
-    "relatedGuides": [
-      "first-vehicle",
-      "farming-basics"
-    ],
+    "relatedGuides": ["first-vehicle", "farming-basics"],
     "relatedRoutes": [
       {
         "label": "Getting Started objectives",
@@ -1369,11 +1272,7 @@
     "tables": [
       {
         "caption": "World and mod compatibility boundary",
-        "headers": [
-          "Existing content",
-          "1.0 handling",
-          "Safe test"
-        ],
+        "headers": ["Existing content", "1.0 handling", "Safe test"],
         "rows": [
           [
             "Old Creative world",
@@ -1409,11 +1308,7 @@
       },
       {
         "caption": "Public 1.0 patch checkpoints",
-        "headers": [
-          "Version",
-          "Relevant fixes",
-          "What to retest"
-        ],
+        "headers": ["Version", "Relevant fixes", "What to retest"],
         "rows": [
           [
             "1.0",
@@ -1439,11 +1334,7 @@
       },
       {
         "caption": "Old expectation versus current 1.0 system",
-        "headers": [
-          "System",
-          "Old habit",
-          "Current decision"
-        ],
+        "headers": ["System", "Old habit", "Current decision"],
         "rows": [
           [
             "Recipes",
@@ -1478,10 +1369,7 @@
         ]
       }
     ],
-    "relatedGuides": [
-      "scrap-city-garage-blueprints",
-      "achievements"
-    ]
+    "relatedGuides": ["scrap-city-garage-blueprints", "achievements"]
   },
   {
     "slug": "farming-basics",
@@ -1576,108 +1464,35 @@
     "tables": [
       {
         "caption": "1.0 crop plant values",
-        "headers": [
-          "Crop",
-          "Plant value",
-          "Tomato equivalent"
-        ],
+        "headers": ["Crop", "Plant value", "Tomato equivalent"],
         "rows": [
-          [
-            "Tomato",
-            "1",
-            "1 Tomato"
-          ],
-          [
-            "Potato",
-            "1",
-            "1 Tomato"
-          ],
-          [
-            "Carrot",
-            "2",
-            "2 Tomatoes"
-          ],
-          [
-            "Redbeet",
-            "5",
-            "5 Tomatoes"
-          ],
-          [
-            "Banana",
-            "15",
-            "15 Tomatoes"
-          ],
-          [
-            "Chili",
-            "15",
-            "15 Tomatoes"
-          ],
-          [
-            "Blueberry",
-            "50",
-            "50 Tomatoes"
-          ],
-          [
-            "Orange",
-            "100",
-            "100 Tomatoes"
-          ],
-          [
-            "Broccoli",
-            "500",
-            "500 Tomatoes"
-          ],
-          [
-            "Pineapple",
-            "1000",
-            "1000 Tomatoes"
-          ]
+          ["Tomato", "1", "1 Tomato"],
+          ["Potato", "1", "1 Tomato"],
+          ["Carrot", "2", "2 Tomatoes"],
+          ["Redbeet", "5", "5 Tomatoes"],
+          ["Banana", "15", "15 Tomatoes"],
+          ["Chili", "15", "15 Tomatoes"],
+          ["Blueberry", "50", "50 Tomatoes"],
+          ["Orange", "100", "100 Tomatoes"],
+          ["Broccoli", "500", "500 Tomatoes"],
+          ["Pineapple", "1000", "1000 Tomatoes"]
         ],
         "note": "Use the Raid Calculator for the current total and next threshold; mixed beds hide value faster than labeled single-crop rows."
       },
       {
         "caption": "Potato-ammo floor for a failed farm lane",
-        "headers": [
-          "Bot",
-          "Normal HP",
-          "Spudgun at 28",
-          "Spud Shotgun at 64"
-        ],
+        "headers": ["Bot", "Normal HP", "Spudgun at 28", "Spud Shotgun at 64"],
         "rows": [
-          [
-            "Totebot",
-            "40",
-            "2 hits",
-            "1 full hit"
-          ],
-          [
-            "Tapebot",
-            "40",
-            "2 hits",
-            "1 full hit"
-          ],
-          [
-            "Haybot",
-            "100",
-            "4 hits",
-            "2 full hits"
-          ],
-          [
-            "Farmbot",
-            "1500",
-            "54 hits",
-            "≈24 full hits"
-          ]
+          ["Totebot", "40", "2 hits", "1 full hit"],
+          ["Tapebot", "40", "2 hits", "1 full hit"],
+          ["Haybot", "100", "4 hits", "2 full hits"],
+          ["Farmbot", "1500", "54 hits", "≈24 full hits"]
         ],
         "note": "Reserve misses and retreat ammunition on top of the mathematical floor. Shotgun values assume full close-range damage."
       },
       {
         "caption": "When the farm is ready to automate",
-        "headers": [
-          "Check",
-          "Test size",
-          "Pass condition"
-        ],
+        "headers": ["Check", "Test size", "Pass condition"],
         "rows": [
           [
             "Manual row",
@@ -1712,6 +1527,112 @@
       "controller-and-logic",
       "warehouse-key-and-farmbot"
     ]
+  },
+  {
+    "slug": "raid-levels",
+    "title": "Scrap Mechanic Raid Levels - Crop Values, Budgets and Bots",
+    "description": "Read all seven documented Scrap Mechanic raid levels, their crop-value thresholds, configured bot budgets, opening groups, eligible enemies, and multiplayer scaling.",
+    "category": "Survival",
+    "image": "/images/scrap-mechanic/screenshot-06.jpg",
+    "imageAlt": "A defended farm area in Scrap Mechanic Survival",
+    "gameVersion": "1.0.0.867",
+    "published": "2026-09-05",
+    "updated": "2026-09-05",
+    "readingTime": "10 min",
+    "featured": true,
+    "quickAnswer": "Cotton and Pigment Flower add zero raid pressure. Any positive plant value starts Raid Level 1; Level 5 starts at 1000 and guarantees a Farmbot opening group, while Level 7 starts at 10001 and opens with three Farmbots. Use the Raid Calculator for a specific mixed field because the remaining enemy groups are selected by weighted budget rather than a fixed list.",
+    "sections": [
+      {
+        "heading": "How a Farm Enters a Raid Level",
+        "paragraphs": [
+          "The checked 1.0 raid scripts total the configured value of player-planted crops inside one raid area. Cotton and Pigment Flower each contribute zero; every other listed crop contributes a positive value. A positive total creates the first raid band and starts a 60-second countdown, while a field containing only zero-value crops does not produce a Level 1 raid.",
+          "New qualifying crops planted during the opening 10-second window can reset the countdown. Later crops still change the tracked value, but they do not keep postponing the attack. Harvesting or destroying crops before groups are prepared recalculates the value, and removing every tracked crop cancels that raid record."
+        ]
+      },
+      {
+        "heading": "How the Raid Budget Becomes Bots",
+        "paragraphs": [
+          "Each level defines a minimum and maximum reinforcement budget. The game interpolates between those values from the farm's position inside the current crop-value band, then applies the multiplayer modifier to the minimum term. In compact form: budget = ceil(level fraction × (maximum − minimum) + minimum × player modifier).",
+          "The opening group is created separately before the calculated budget is spent. The game repeatedly chooses an affordable weighted group, subtracts its cost, and continues until no eligible group fits. That is why farms with the same crop value can receive different reinforcement counts."
+        ]
+      },
+      {
+        "heading": "Does Multiplayer Multiply the Whole Raid Budget?",
+        "paragraphs": [
+          "No. One player uses 1.00× of the level minimum term, two players use 1.50×, and three or more players use the 2.00× cap. The interpolated maximum-minus-minimum portion is not multiplied again for every player.",
+          "More mechanics can still change the practical difficulty because damage, repairs, and aggro can be divided across the team. The table describes the script calculation only, not how easy the defense will feel."
+        ]
+      },
+      {
+        "heading": "When Do Farmbots Start Spawning in Raids?",
+        "paragraphs": [
+          "Level 5 is the first Farmbot boundary and starts at 1000 crop-value points. Levels 5 and 6 each begin with one Farmbot; Level 7 begins with three before weighted reinforcements are added. Move vehicles and exposed machines away from the crop perimeter before crossing that threshold.",
+          "Levels 3 and 4 introduce ranged pressure before Farmbots become guaranteed. Add overhead protection and a covered firing position instead of preparing only for Totebots and Haybots at the wall."
+        ]
+      },
+      {
+        "heading": "What Does the 100,000 Raid Value Cap Mean?",
+        "paragraphs": [
+          "100000 is not another numbered raid level. Level 7 remains the maximum level, while 100000 is the ceiling used by the intensity interpolation. Crop value above that point does not increase the level fraction or the configured one-player maximum budget of 5000.",
+          "The exact enemy total still varies because the remaining budget is spent on weighted groups. Treat the maximum as a budget ceiling, not as a promise that one fixed army will appear."
+        ]
+      },
+      {
+        "heading": "Use the Table Without Treating It as a Spawn Promise",
+        "bullets": [
+          "Count planted crops in the same raid area; harvested food and stored produce do not count.",
+          "Use the opening-group column for the guaranteed first pressure, then read eligible bots as possibilities rather than fixed quantities.",
+          "Enter the actual mixed crop counts and player count in the Raid Calculator before expanding the field.",
+          "Leave a protected repair route and a retreat path before crossing Level 5 or the Level 7 Super Raid boundary."
+        ],
+        "links": [
+          {
+            "label": "Open the Scrap Mechanic Raid Calculator",
+            "href": "/tools/raid-calculator",
+            "description": "Calculate exact crop value, budget, bot probabilities, and one possible drop timeline."
+          },
+          {
+            "label": "Compare every crop value",
+            "href": "/wiki/crops",
+            "description": "Check crop roles and current calculator weights before planting."
+          }
+        ]
+      }
+    ],
+    "relatedWiki": [
+      "cotton-crop",
+      "pigment-flower",
+      "tomato",
+      "blueberry",
+      "pineapple",
+      "totebot",
+      "haybot",
+      "tapebot",
+      "farmbot"
+    ],
+    "relatedGuides": ["farming-basics", "warehouse-key-and-farmbot"],
+    "relatedRoutes": [
+      {
+        "label": "Raid Calculator",
+        "href": "/tools/raid-calculator"
+      },
+      {
+        "label": "Crop Wiki",
+        "href": "/wiki/crops"
+      }
+    ],
+    "seo": {
+      "title": "Scrap Mechanic Raid Levels - Threshold and Bot Table",
+      "description": "Check all seven Scrap Mechanic raid levels with crop-value thresholds, bot budget bands, opening groups, Farmbot boundaries, and multiplayer scaling.",
+      "keywords": [
+        "Scrap Mechanic raid levels",
+        "Scrap Mechanic raid level table",
+        "Scrap Mechanic crop value thresholds",
+        "Scrap Mechanic Super Raid",
+        "when do Farmbots spawn in raids",
+        "Scrap Mechanic multiplayer raid scaling"
+      ]
+    }
   },
   {
     "slug": "warehouse-key-and-farmbot",
@@ -1877,11 +1798,7 @@
       },
       {
         "caption": "Trashbot arena timing",
-        "headers": [
-          "State",
-          "Data",
-          "Player job"
-        ],
+        "headers": ["State", "Data", "Player job"],
         "rows": [
           [
             "Pattern active / eye closed",
@@ -1898,11 +1815,7 @@
             "5 required core hits",
             "Keep one shooter line clear"
           ],
-          [
-            "Stun window",
-            "3 seconds",
-            "Reload and reposition immediately"
-          ],
+          ["Stun window", "3 seconds", "Reload and reposition immediately"],
           [
             "Explosion event",
             "30-unit radius",
@@ -1912,10 +1825,7 @@
         "note": "The encounter tracks the maximum player count it has seen, so a co-op phase should not be budgeted like a fresh solo arena."
       }
     ],
-    "relatedGuides": [
-      "farming-basics",
-      "achievements"
-    ]
+    "relatedGuides": ["farming-basics", "achievements"]
   },
   {
     "slug": "first-vehicle",
@@ -2014,72 +1924,28 @@
     "tables": [
       {
         "caption": "VEH-01 starter bill",
-        "headers": [
-          "Part",
-          "Quantity",
-          "Job"
-        ],
+        "headers": ["Part", "Quantity", "Job"],
         "rows": [
-          [
-            "Wood Block Level 1",
-            "48",
-            "Low ladder frame"
-          ],
-          [
-            "Bearing",
-            "6",
-            "4 wheel hubs + 2 steering pivots"
-          ],
-          [
-            "Wheel",
-            "4",
-            "Road contact"
-          ],
-          [
-            "Driver's Seat Level 1",
-            "1",
-            "Steering and throttle input"
-          ],
-          [
-            "Gas Engine Level 1",
-            "1",
-            "Drive power"
-          ],
-          [
-            "Switch",
-            "1 optional",
-            "Headlight control"
-          ],
-          [
-            "Headlight",
-            "2 optional",
-            "Night route visibility"
-          ],
-          [
-            "Large Chest",
-            "1 maximum for first test",
-            "Low-mounted cargo"
-          ]
+          ["Wood Block Level 1", "48", "Low ladder frame"],
+          ["Bearing", "6", "4 wheel hubs + 2 steering pivots"],
+          ["Wheel", "4", "Road contact"],
+          ["Driver's Seat Level 1", "1", "Steering and throttle input"],
+          ["Gas Engine Level 1", "1", "Drive power"],
+          ["Switch", "1 optional", "Headlight control"],
+          ["Headlight", "2 optional", "Night route visibility"],
+          ["Large Chest", "1 maximum for first test", "Low-mounted cargo"]
         ]
       },
       {
         "caption": "Frame and connection specification",
-        "headers": [
-          "System",
-          "Setting",
-          "Pass condition"
-        ],
+        "headers": ["System", "Setting", "Pass condition"],
         "rows": [
           [
             "Footprint",
             "10 × 16 blocks",
             "Symmetrical rails and three or more crossmembers"
           ],
-          [
-            "Ground clearance",
-            "2 blocks",
-            "Shallow ditch crossed diagonally"
-          ],
+          ["Ground clearance", "2 blocks", "Shallow ditch crossed diagonally"],
           [
             "Steering",
             "Front pivots mirrored",
@@ -2104,11 +1970,7 @@
       },
       {
         "caption": "Failure diagnosis",
-        "headers": [
-          "Symptom",
-          "Likely cause",
-          "Specific correction"
-        ],
+        "headers": ["Symptom", "Likely cause", "Specific correction"],
         "rows": [
           [
             "Vehicle fights itself",
@@ -2243,47 +2105,19 @@
     "tables": [
       {
         "caption": "FRM-03 automatic watering baseline",
-        "headers": [
-          "Element",
-          "Quantity / size",
-          "Commissioning proof"
-        ],
+        "headers": ["Element", "Quantity / size", "Commissioning proof"],
         "rows": [
           [
             "Crop row",
             "8–12 soil plots",
             "Every plot remains reachable manually"
           ],
-          [
-            "Water Container",
-            "1",
-            "Cannon receives stored water"
-          ],
-          [
-            "Water Cannon",
-            "1",
-            "Fixed test waters one plot before motion"
-          ],
-          [
-            "Piston Level 1",
-            "2",
-            "Dry pass reaches both limits"
-          ],
-          [
-            "Controller Level 1",
-            "1",
-            "Slow out-and-return sequence"
-          ],
-          [
-            "Switch",
-            "2",
-            "Separate master stop and water enable"
-          ],
-          [
-            "Button",
-            "1",
-            "Starts one cycle, not continuous motion"
-          ],
+          ["Water Container", "1", "Cannon receives stored water"],
+          ["Water Cannon", "1", "Fixed test waters one plot before motion"],
+          ["Piston Level 1", "2", "Dry pass reaches both limits"],
+          ["Controller Level 1", "1", "Slow out-and-return sequence"],
+          ["Switch", "2", "Separate master stop and water enable"],
+          ["Button", "1", "Starts one cycle, not continuous motion"],
           [
             "Sensor Level 1",
             "1 optional",
@@ -2293,37 +2127,17 @@
       },
       {
         "caption": "FRM-08 Vacuum Pump harvester baseline",
-        "headers": [
-          "Element",
-          "Quantity / size",
-          "Commissioning proof"
-        ],
+        "headers": ["Element", "Quantity / size", "Commissioning proof"],
         "rows": [
           [
             "Footprint",
             "8 × 14 blocks",
             "Fits the service lane without entering soil"
           ],
-          [
-            "Metal Block Level 1",
-            "56",
-            "Low row-following chassis"
-          ],
-          [
-            "Wheels / Bearings",
-            "4 / 6",
-            "Slow travel with front steering"
-          ],
-          [
-            "Vacuum Pump",
-            "1 in In mode",
-            "One mature crop reaches storage"
-          ],
-          [
-            "Large Chest",
-            "1 dedicated",
-            "No seed or supply mixture"
-          ],
+          ["Metal Block Level 1", "56", "Low row-following chassis"],
+          ["Wheels / Bearings", "4 / 6", "Slow travel with front steering"],
+          ["Vacuum Pump", "1 in In mode", "One mature crop reaches storage"],
+          ["Large Chest", "1 dedicated", "No seed or supply mixture"],
           [
             "Travel speed",
             "Lowest reliable pass",
@@ -2333,32 +2147,12 @@
       },
       {
         "caption": "LOG-09 Piston elevator baseline",
-        "headers": [
-          "Element",
-          "Quantity / size",
-          "Commissioning proof"
-        ],
+        "headers": ["Element", "Quantity / size", "Commissioning proof"],
         "rows": [
-          [
-            "Platform",
-            "6 × 6 blocks",
-            "Off-center load stays guided"
-          ],
-          [
-            "Pistons",
-            "4 in matched pairs",
-            "Both sides reach equal height"
-          ],
-          [
-            "Controller",
-            "1",
-            "Repeats two fixed landings"
-          ],
-          [
-            "Buttons",
-            "2",
-            "One accessible from each landing"
-          ],
+          ["Platform", "6 × 6 blocks", "Off-center load stays guided"],
+          ["Pistons", "4 in matched pairs", "Both sides reach equal height"],
+          ["Controller", "1", "Repeats two fixed landings"],
+          ["Buttons", "2", "One accessible from each landing"],
           [
             "Emergency Switch",
             "1 outside shaft",
@@ -2373,27 +2167,15 @@
       },
       {
         "caption": "Four responsibility rule",
-        "headers": [
-          "Responsibility",
-          "Parts",
-          "Question to answer"
-        ],
+        "headers": ["Responsibility", "Parts", "Question to answer"],
         "rows": [
-          [
-            "Motion",
-            "Bearing / Piston",
-            "What physically moves?"
-          ],
+          ["Motion", "Bearing / Piston", "What physically moves?"],
           [
             "Sequence",
             "Controller",
             "Which positions and timing are repeatable?"
           ],
-          [
-            "Decision",
-            "Sensor / Logic Gate",
-            "When is movement allowed?"
-          ],
+          ["Decision", "Sensor / Logic Gate", "When is movement allowed?"],
           [
             "Authority",
             "Switch / Button / Seat",
@@ -2407,10 +2189,7 @@
         ]
       }
     ],
-    "relatedGuides": [
-      "first-vehicle",
-      "farming-basics"
-    ]
+    "relatedGuides": ["first-vehicle", "farming-basics"]
   },
   {
     "slug": "scrap-city-garage-blueprints",
@@ -2428,11 +2207,7 @@
     "tables": [
       {
         "caption": "Garage creation sequence",
-        "headers": [
-          "Step",
-          "Player action",
-          "What the Garage verifies"
-        ],
+        "headers": ["Step", "Player action", "What the Garage verifies"],
         "rows": [
           [
             "1. Select",
@@ -2469,22 +2244,14 @@
       },
       {
         "caption": "Garage Chest behavior",
-        "headers": [
-          "Capacity rule",
-          "Value",
-          "Why it matters"
-        ],
+        "headers": ["Capacity rule", "Value", "Why it matters"],
         "rows": [
           [
             "Inventory slots",
             "30",
             "Large mixed blueprints may need careful stack organization"
           ],
-          [
-            "Maximum stack",
-            "256",
-            "Blocks can be staged in large quantities"
-          ],
+          ["Maximum stack", "256", "Blocks can be staged in large quantities"],
           [
             "Connected inputs",
             "Included",
@@ -2499,11 +2266,7 @@
       },
       {
         "caption": "Why the Garage will not build the blueprint",
-        "headers": [
-          "Symptom",
-          "Most likely check",
-          "Player fix"
-        ],
+        "headers": ["Symptom", "Most likely check", "Player fix"],
         "rows": [
           [
             "No material bill",
@@ -2603,11 +2366,7 @@
         "caption": "Interactive and upgraded parts can make a compact blueprint materially expensive. The Garage still requires the exact included parts and quantities."
       }
     ],
-    "relatedGuides": [
-      "first-vehicle",
-      "returning-to-1-0",
-      "achievements"
-    ]
+    "relatedGuides": ["first-vehicle", "returning-to-1-0", "achievements"]
   },
   {
     "slug": "achievements",
@@ -2625,11 +2384,7 @@
     "tables": [
       {
         "caption": "Story, quest, Challenge, and exploration achievements",
-        "headers": [
-          "Achievement",
-          "Requirement",
-          "Efficient route"
-        ],
+        "headers": ["Achievement", "Requirement", "Efficient route"],
         "rows": [
           [
             "My first car",
@@ -2700,11 +2455,7 @@
       },
       {
         "caption": "Combat, farming, and production achievements",
-        "headers": [
-          "Achievement",
-          "Requirement",
-          "Efficient route"
-        ],
+        "headers": ["Achievement", "Requirement", "Efficient route"],
         "rows": [
           [
             "Bot splat",
@@ -2770,11 +2521,7 @@
       },
       {
         "caption": "Building, customization, Workshop, and completion achievements",
-        "headers": [
-          "Achievement",
-          "Requirement",
-          "Efficient route"
-        ],
+        "headers": ["Achievement", "Requirement", "Efficient route"],
         "rows": [
           [
             "My beautiful background",

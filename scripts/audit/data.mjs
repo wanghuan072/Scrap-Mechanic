@@ -69,7 +69,8 @@ const documents = new Map();
 
 for (const file of jsonFiles) {
   const document = readJson(file);
-  if (document !== undefined) documents.set(file.replaceAll("\\", "/"), document);
+  if (document !== undefined)
+    documents.set(file.replaceAll("\\", "/"), document);
 }
 
 const guides = documents.get("guides/guides.json") ?? [];
@@ -80,10 +81,18 @@ const quests = documents.get("quests/quests.json") ?? [];
 const locations = documents.get("locations/locations.json") ?? [];
 const tools = documents.get("tools/tools.json") ?? [];
 const categories = documents.get("wiki/categories.json") ?? [];
-const modsDocument = documents.get("mods/mods.json") ?? { mods: [], workshopLeaderboard: [] };
+const modsDocument = documents.get("mods/mods.json") ?? {
+  mods: [],
+  workshopLeaderboard: [],
+};
 const itemsDocument = documents.get("game/items.json") ?? { items: [] };
-const objectDetails = documents.get("game/object-details.json") ?? { objects: [] };
-const recipes = documents.get("game/recipes.json") ?? { stations: [], recipes: [] };
+const objectDetails = documents.get("game/object-details.json") ?? {
+  objects: [],
+};
+const recipes = documents.get("game/recipes.json") ?? {
+  stations: [],
+  recipes: [],
+};
 const trades = documents.get("game/trades.json") ?? { venues: [], trades: [] };
 const aliases = documents.get("wiki/entry-aliases.json") ?? {};
 const raidCalculator = documents.get("tools/raid-calculator.json") ?? {
@@ -117,24 +126,50 @@ const categorySlugs = new Set(categorySlugList);
 const guideSlugs = new Set(guideSlugList);
 const buildSlugs = new Set(buildSlugList);
 
-if (guides.length !== 12) {
-  failures.push(`guides/guides.json: expected 12 published guides, found ${guides.length}`);
+if (guides.length !== 13) {
+  failures.push(
+    `guides/guides.json: expected 13 published guides, found ${guides.length}`,
+  );
 }
 
 checkUnique("guide slugs", guideSlugList);
 checkUnique("build slugs", buildSlugList);
 checkUnique("update slugs", updateSlugList);
-checkUnique("quest slugs", quests.map((quest) => quest.slug));
-checkUnique("location slugs", locations.map((location) => location.slug));
-checkUnique("tool slugs", tools.map((tool) => tool.slug));
+checkUnique(
+  "quest slugs",
+  quests.map((quest) => quest.slug),
+);
+checkUnique(
+  "location slugs",
+  locations.map((location) => location.slug),
+);
+checkUnique(
+  "tool slugs",
+  tools.map((tool) => tool.slug),
+);
 checkUnique("wiki category slugs", categorySlugList);
 checkUnique("wiki routes", wikiRouteList);
 checkUnique("wiki slugs", wikiSlugList);
-checkUnique("recipe ids", recipes.recipes.map((recipe) => recipe.id));
-checkUnique("trade ids", trades.trades.map((trade) => trade.id));
-checkUnique("game item UUIDs", itemsDocument.items.map((item) => item.uuid));
-checkUnique("mod slugs", modsDocument.mods.map((mod) => mod.slug));
-checkUnique("mod Workshop ids", modsDocument.mods.map((mod) => mod.workshopId));
+checkUnique(
+  "recipe ids",
+  recipes.recipes.map((recipe) => recipe.id),
+);
+checkUnique(
+  "trade ids",
+  trades.trades.map((trade) => trade.id),
+);
+checkUnique(
+  "game item UUIDs",
+  itemsDocument.items.map((item) => item.uuid),
+);
+checkUnique(
+  "mod slugs",
+  modsDocument.mods.map((mod) => mod.slug),
+);
+checkUnique(
+  "mod Workshop ids",
+  modsDocument.mods.map((mod) => mod.workshopId),
+);
 
 for (const entry of wikiEntries) {
   if (!categorySlugs.has(entry.category)) {
@@ -195,11 +230,14 @@ for (const entry of [...recipes.recipes, ...trades.trades]) {
 
 checkUnique("build spec slugs", Object.keys(buildSpecs));
 for (const slug of buildSlugs) {
-  if (!buildSpecs[slug]) failures.push(`builds/specs.json: missing spec ${slug}`);
+  if (!buildSpecs[slug])
+    failures.push(`builds/specs.json: missing spec ${slug}`);
 }
 for (const [slug, spec] of Object.entries(buildSpecs)) {
-  if (!buildSlugs.has(slug)) failures.push(`builds/specs.json: orphan spec ${slug}`);
-  if (spec.slug !== slug) failures.push(`builds/specs.json: mismatched spec slug ${slug}`);
+  if (!buildSlugs.has(slug))
+    failures.push(`builds/specs.json: orphan spec ${slug}`);
+  if (spec.slug !== slug)
+    failures.push(`builds/specs.json: mismatched spec slug ${slug}`);
 }
 
 checkCount(
@@ -207,8 +245,16 @@ checkCount(
   objectDetails.objectCount,
   objectDetails.objects.length,
 );
-checkCount("game/recipes.json recipeCount", recipes.recipeCount, recipes.recipes.length);
-checkCount("game/trades.json tradeCount", trades.tradeCount, trades.trades.length);
+checkCount(
+  "game/recipes.json recipeCount",
+  recipes.recipeCount,
+  recipes.recipes.length,
+);
+checkCount(
+  "game/trades.json tradeCount",
+  trades.tradeCount,
+  trades.trades.length,
+);
 checkCount(
   "game/recipes.json station recipe counts",
   recipes.stations.reduce((total, station) => total + station.recipeCount, 0),
@@ -220,15 +266,22 @@ checkCount(
   trades.trades.length,
 );
 
-if (raidCalculator.raidCropValueThresholds.length !== raidCalculator.raidLevels.length) {
-  failures.push("tools/raid-calculator.json: threshold and level counts differ");
+if (
+  raidCalculator.raidCropValueThresholds.length !==
+  raidCalculator.raidLevels.length
+) {
+  failures.push(
+    "tools/raid-calculator.json: threshold and level counts differ",
+  );
 }
 for (let index = 1; index < raidCalculator.raidLevels.length; index += 1) {
   if (
     raidCalculator.raidLevels[index].minimumPlantValue <=
     raidCalculator.raidLevels[index - 1].minimumPlantValue
   ) {
-    failures.push("tools/raid-calculator.json: raid levels are not strictly increasing");
+    failures.push(
+      "tools/raid-calculator.json: raid levels are not strictly increasing",
+    );
     break;
   }
 }
@@ -236,7 +289,11 @@ for (let index = 1; index < raidCalculator.raidLevels.length; index += 1) {
 for (const [file, document] of documents) {
   for (const reference of collectImageReferences(document, file)) {
     imageReferencesChecked += 1;
-    const imagePath = path.join(projectRoot, "public", reference.image.slice(1));
+    const imagePath = path.join(
+      projectRoot,
+      "public",
+      reference.image.slice(1),
+    );
     if (!fs.existsSync(imagePath)) {
       failures.push(`${reference.source}: missing image ${reference.image}`);
     }
