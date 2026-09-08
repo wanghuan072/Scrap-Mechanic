@@ -67,7 +67,7 @@ export function ArticlePage({
           width={1920}
           height={1080}
           sizes="100vw"
-          quality={60}
+          quality={82}
           loading="eager"
           fetchPriority="high"
         />

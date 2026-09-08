@@ -17,16 +17,20 @@ describe("sitemap last-modified dates", () => {
     const dates = sitemapDates();
 
     expect(dates.get("/tools/wheel-angle-calculator")).toBe("2026-09-05");
-    expect(dates.get("/guides/first-vehicle")).toBe("2026-09-02");
-    expect(dates.get("/builds/starter-car")).toBe("2026-09-02");
+    expect(dates.get("/guides/first-vehicle")).toBe("2026-09-08");
+    expect(dates.get("/builds/starter-car")).toBe("2026-09-08");
     expect(dates.get("/wiki/parts/bearing")).toBe("2026-09-02");
     expect(dates.get("/wiki/parts/drivers-seat")).toBe("2026-09-02");
     expect(dates.get("/wiki/tools/connect-tool")).toBe("2026-09-02");
-    expect(dates.get("/guides/raid-levels")).toBe("2026-09-05");
-    expect(dates.get("/guides")).toBe("2026-09-05");
-    expect(dates.get("/")).toBe("2026-09-05");
+    expect(dates.get("/guides/raid-levels")).toBe("2026-09-08");
+    expect(dates.get("/guides")).toBe("2026-09-08");
+    expect(dates.get("/")).toBe("2026-09-08");
     expect(dates.get("/tools")).toBe("2026-09-05");
     expect(dates.get("/tools/raid-calculator")).toBe("2026-09-05");
+    expect(dates.get("/updates")).toBe("2026-09-08");
+    expect(dates.get("/updates/1-0-drilling-thunder")).toBe("2026-09-08");
+    expect(dates.get("/wiki/bots")).toBe("2026-09-08");
+    expect(dates.get("/wiki/bots/cablebot")).toBe("2026-09-08");
   });
 
   it("preserves dates for unchanged tool and wiki pages", () => {

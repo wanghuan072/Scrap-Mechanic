@@ -118,7 +118,7 @@ export default function ToolsPage() {
           alt=""
           fill
           sizes="100vw"
-          quality={60}
+          quality={82}
           loading="eager"
           fetchPriority="high"
         />
@@ -257,8 +257,8 @@ export default function ToolsPage() {
             <article className={`${styles.toolCard} ${styles.craftingCard}`}>
               <div className={styles.toolVisual}>
                 <Image
-                  src="/images/game-items/craftbot-b63c6440.webp"
-                  alt="Craftbot used by the Scrap Mechanic Crafting Planner"
+                  src="/images/scrap-mechanic/craftbot-station.jpg"
+                  alt="Mechanic beside a Craftbot-style crafting station in Scrap Mechanic"
                   fill
                   sizes="(max-width: 768px) 100vw, 48vw"
                 />
@@ -318,8 +318,8 @@ export default function ToolsPage() {
             <article className={`${styles.toolCard} ${styles.wheelCard}`}>
               <div className={styles.toolVisual}>
                 <Image
-                  src="/images/game-items/driver-s-seat-cf3fdcfc.webp"
-                  alt="Driver's Seat used to configure steering bearings"
+                  src="/images/scrap-mechanic/steering-assembly.jpg"
+                  alt="Scrap Mechanic vehicle bearings marked for steering and drive roles"
                   fill
                   sizes="(max-width: 768px) 100vw, 48vw"
                 />

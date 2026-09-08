@@ -1285,10 +1285,11 @@
     "category": "bots",
     "name": "Seedbot",
     "description": "A non-aggressive 100 HP carrier that flees from nearby players and releases the same seed type shown by the crate mounted on its head.",
-    "image": "/images/wiki/tomato.webp",
-    "imageAlt": "Tomato icon representing one of the Seedbot seed-crate variants",
+    "image": "/images/scrap-mechanic/screenshot-03.jpg",
+    "imageAlt": "Scrap Mechanic farm encounter scene used as Seedbot context",
     "gameVersion": "1.0",
     "lastTested": "July 2026",
+    "updated": "2026-09-08",
     "featured": true,
     "facts": [
       {
@@ -1428,10 +1429,11 @@
     "category": "bots",
     "name": "Lootbot",
     "description": "A non-aggressive reward carrier with 14 durability points, a one-second damage cooldown, one loot release per accepted hit, and encounter-specific death rewards.",
-    "image": "/images/wiki/component-kit.webp",
-    "imageAlt": "Component Kit representing one of the Lootbot hit rewards",
+    "image": "/images/scrap-mechanic/screenshot-01.jpg",
+    "imageAlt": "Scrap Mechanic robot encounter scene used as Lootbot context",
     "gameVersion": "1.0",
     "lastTested": "July 2026",
+    "updated": "2026-09-08",
     "featured": true,
     "facts": [
       {
@@ -1571,10 +1573,11 @@
     "category": "bots",
     "name": "Cablebot",
     "description": "A 10 HP underground attacker that can dig toward targets, jump-bite characters, select exposed creation parts, and has a 25% chance to drop a Cable Roll.",
-    "image": "/images/game-items/cable-roll-48f39ccd.webp",
-    "imageAlt": "Cable Roll item dropped by Cablebots",
+    "image": "/images/wiki/cablebot-concept.png",
+    "imageAlt": "Cablebot concept image showing its green chassis, red eye, and cable clippers",
     "gameVersion": "1.0",
     "lastTested": "July 2026",
+    "updated": "2026-09-08",
     "featured": true,
     "facts": [
       {
@@ -1706,10 +1709,11 @@
     "category": "bots",
     "name": "Scannerbot",
     "description": "The large roaming missile platform often called the Seeker Bot by players; normal projectiles, melee, explosions, collisions, and crushing do not reduce it.",
-    "image": "/images/scrap-mechanic/trailer-1-0.jpg",
-    "imageAlt": "Official Drilling Thunder artwork showing the 1.0 robot threat",
+    "image": "/images/scrap-mechanic/screenshot-01.jpg",
+    "imageAlt": "Scrap Mechanic hostile robot encounter scene used as Scannerbot context",
     "gameVersion": "1.0",
     "lastTested": "July 2026",
+    "updated": "2026-09-08",
     "featured": true,
     "facts": [
       {

@@ -116,11 +116,11 @@ export default function UpdatesPage() {
       <section className={styles.hero}>
         <Image
           className={styles.heroImage}
-          src="/images/scrap-mechanic/trailer-1-0.jpg"
+          src="/images/scrap-mechanic/screenshot-06.jpg"
           alt=""
           fill
           sizes="100vw"
-          quality={60}
+          quality={82}
           loading="eager"
           fetchPriority="high"
         />

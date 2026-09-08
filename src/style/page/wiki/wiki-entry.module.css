@@ -213,11 +213,15 @@
 .itemVisual img {
   position: relative;
   z-index: 1;
-  width: min(118px, 82%);
+  width: min(96px, 82%);
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
   filter: drop-shadow(0 12px 12px rgb(0 0 0 / 46%));
+}
+
+.itemVisual img.pixelatedAsset {
+  width: min(48px, 82%);
 }
 
 .assetFacts {

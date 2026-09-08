@@ -225,12 +225,14 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
             }${durability ? ` Durability is ${durability}.` : ""}`
           : entry.description;
   const isRepresentativeImage =
-    /representing|reference image|artwork showing|scene used|statue/i.test(
+    /representing|reference image|artwork showing|scene used|concept|statue/i.test(
       entry.imageAlt,
     );
   const isOfficialPreview = /official.+preview|devblog/i.test(entry.imageAlt);
   const imageLabel = isRepresentativeImage
-    ? "Associated game asset"
+    ? entry.category === "bots"
+      ? "Encounter context"
+      : "Associated game asset"
     : isOfficialPreview
       ? "Official preview"
       : "In-game asset";

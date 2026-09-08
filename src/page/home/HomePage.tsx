@@ -203,7 +203,7 @@ export default function Home() {
           alt="A mechanic working beside an automated Scrap Mechanic farm"
           fill
           sizes="100vw"
-          quality={60}
+          quality={82}
           loading="eager"
           fetchPriority="high"
         />
@@ -310,7 +310,7 @@ export default function Home() {
               alt={latestUpdate.imageAlt}
               fill
               sizes="(max-width: 768px) 100vw, 280px"
-              quality={60}
+              quality={82}
             />
           </div>
           <div className={styles.updateInfo}>
@@ -328,7 +328,7 @@ export default function Home() {
               alt="A Scrap Mechanic drilling vehicle"
               fill
               sizes="(max-width: 768px) 100vw, 260px"
-              quality={60}
+              quality={82}
             />
             <Link href="/updates">
               All updates <span aria-hidden="true">›</span>
@@ -355,7 +355,7 @@ export default function Home() {
                     alt=""
                     fill
                     sizes="96px"
-                    quality={60}
+                    quality={82}
                   />
                 </div>
                 <b>{step.number}</b>
@@ -385,7 +385,7 @@ export default function Home() {
                     alt={leadGuide.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 40vw"
-                    quality={60}
+                    quality={82}
                   />
                 </div>
                 <div>
@@ -501,7 +501,7 @@ export default function Home() {
                 alt={leadBuild.imageAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, 48vw"
-                quality={60}
+                quality={82}
               />
               <div>
                 <span>{leadBuild.category}</span>
@@ -577,7 +577,7 @@ export default function Home() {
                     alt={mod.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 120px"
-                    quality={60}
+                    quality={82}
                   />
                 </div>
                 <div>

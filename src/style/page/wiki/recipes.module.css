@@ -109,7 +109,7 @@
 }
 
 .heroMachine > img {
-  width: min(72%, 230px);
+  width: min(72%, 96px);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 26px 24px rgb(0 0 0 / 48%));

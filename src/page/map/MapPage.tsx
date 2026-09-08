@@ -262,7 +262,7 @@ export default function MapPage() {
           alt="Mechanics exploring an industrial area in Scrap Mechanic"
           fill
           sizes="100vw"
-          quality={60}
+          quality={82}
           loading="eager"
           fetchPriority="high"
         />

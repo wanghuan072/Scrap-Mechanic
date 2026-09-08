@@ -32,7 +32,7 @@ export function SectionHero({
         alt={imageAlt}
         fill
         sizes="100vw"
-        quality={60}
+        quality={82}
         loading="eager"
         fetchPriority="high"
       />

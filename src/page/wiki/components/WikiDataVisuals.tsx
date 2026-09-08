@@ -33,6 +33,7 @@ export function AssetDossier({
       </span>
       <div className={styles.itemVisual}>
         <Image
+          className={pixelated ? styles.pixelatedAsset : undefined}
           src={image}
           alt={imageAlt}
           width={200}

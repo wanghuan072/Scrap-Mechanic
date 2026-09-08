@@ -149,6 +149,8 @@ export function CraftingPlanner({
         <label className={styles.stationFilter}>
           <span>Filter by crafting station</span>
           <select
+            name="crafting-station-filter"
+            autoComplete="off"
             value={stationFilter}
             onChange={(event) => changeStationFilter(event.currentTarget.value)}
           >
@@ -166,6 +168,7 @@ export function CraftingPlanner({
           <input
             id="planner-item-search"
             type="search"
+            name="crafting-item-search"
             value={query}
             autoComplete="off"
             onChange={(event) => setQuery(event.currentTarget.value)}
@@ -203,6 +206,8 @@ export function CraftingPlanner({
           <label className={styles.recipeOption}>
             <span>Recipe option</span>
             <select
+              name="crafting-recipe-option"
+              autoComplete="off"
               value={recipe?.id ?? ""}
               onChange={(event) => setSelectedRecipeId(event.currentTarget.value)}
             >
@@ -220,6 +225,9 @@ export function CraftingPlanner({
           <span>How many do you need?</span>
           <input
             type="number"
+            name="crafting-quantity"
+            inputMode="numeric"
+            autoComplete="off"
             min="1"
             max="9999"
             step="1"

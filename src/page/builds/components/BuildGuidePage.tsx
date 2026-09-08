@@ -119,7 +119,7 @@ export function BuildGuidePage({
           alt=""
           fill
           sizes="100vw"
-          quality={60}
+          quality={82}
           loading="eager"
           fetchPriority="high"
         />

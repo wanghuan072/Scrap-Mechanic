@@ -84,7 +84,7 @@ export default function GuidesPage() {
                   alt={featured.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, 58vw"
-                  quality={60}
+                  quality={82}
                   loading="eager"
                   fetchPriority="high"
                 />

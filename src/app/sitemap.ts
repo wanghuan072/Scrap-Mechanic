@@ -11,15 +11,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const legacyContentDate = "2026-07-30";
   const legacyWikiEntryDate = "2026-07-31";
   const fixedRoutes = [
-    { path: "", lastModified: "2026-09-05", priority: 1 },
-    { path: "/guides", lastModified: "2026-09-05", priority: 0.9 },
-    { path: "/wiki", lastModified: "2026-07-30", priority: 0.9 },
+    { path: "", lastModified: "2026-09-08", priority: 1 },
+    { path: "/guides", lastModified: "2026-09-08", priority: 0.9 },
+    { path: "/wiki", lastModified: "2026-09-08", priority: 0.9 },
     { path: "/wiki/quests", lastModified: "2026-07-31", priority: 0.8 },
     { path: "/wiki/recipes", lastModified: "2026-07-30", priority: 0.8 },
     { path: "/wiki/trades", lastModified: "2026-07-30", priority: 0.8 },
-    { path: "/builds", lastModified: "2026-07-30", priority: 0.9 },
-    { path: "/mods", lastModified: "2026-07-30", priority: 0.8 },
-    { path: "/updates", lastModified: "2026-07-30", priority: 0.8 },
+    { path: "/builds", lastModified: "2026-09-08", priority: 0.9 },
+    { path: "/mods", lastModified: "2026-09-08", priority: 0.8 },
+    { path: "/updates", lastModified: "2026-09-08", priority: 0.8 },
     { path: "/tools", lastModified: "2026-09-05", priority: 0.9 },
     { path: "/about", lastModified: "2026-08-03", priority: 0.3 },
     { path: "/contact", lastModified: "2026-08-03", priority: 0.3 },
@@ -67,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     );
     const lastModified =
       categoryEntries
-        .map((entry) => toIsoDate(entry.lastTested))
+        .map((entry) => entry.updated ?? toIsoDate(entry.lastTested))
         .sort()
         .at(-1) ?? legacyContentDate;
     return {

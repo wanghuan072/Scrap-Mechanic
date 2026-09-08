@@ -145,7 +145,7 @@
   border: 1px solid #6b542d;
   background:
     linear-gradient(155deg, rgb(67 44 13 / 42%), rgb(8 22 28 / 96%) 62%),
-    url("/images/scrap-mechanic/trailer-1-0.jpg") center / cover;
+    url("/images/scrap-mechanic/screenshot-06.jpg") center / cover;
   clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
 }
 

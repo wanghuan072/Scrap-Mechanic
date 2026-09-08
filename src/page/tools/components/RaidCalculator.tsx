@@ -111,7 +111,9 @@ export function RaidCalculator() {
                   <input
                     id={`raid-crop-${crop.slug}`}
                     type="number"
+                    name={`raid-crop-${crop.slug}`}
                     inputMode="numeric"
+                    autoComplete="off"
                     min="0"
                     max="9999"
                     step="1"
@@ -164,6 +166,8 @@ export function RaidCalculator() {
           <label>
             <span>Players</span>
             <select
+              name="raid-players"
+              autoComplete="off"
               value={players}
               onChange={(event) =>
                 setPlayers(normalizeWholeNumber(Number(event.target.value), 1, 4))
