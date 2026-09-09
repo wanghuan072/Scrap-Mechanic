@@ -186,7 +186,7 @@ export default function Home() {
       <link
         rel="preload"
         as="image"
-        href="/images/scrap-mechanic/home-hero-mobile.webp"
+        href="/images/scrap-mechanic/home-hero-mobile-v2.webp"
         media="(max-width: 768px)"
         fetchPriority="high"
       />
@@ -214,7 +214,7 @@ export default function Home() {
         <picture className={styles.heroPicture}>
           <source
             media="(max-width: 768px)"
-            srcSet="/images/scrap-mechanic/home-hero-mobile.webp"
+            srcSet="/images/scrap-mechanic/home-hero-mobile-v2.webp"
           />
           <img
             className={styles.heroImage}
