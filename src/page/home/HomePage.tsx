@@ -183,6 +183,20 @@ export default function Home() {
 
   return (
     <main className={styles.home}>
+      <link
+        rel="preload"
+        as="image"
+        href="/images/scrap-mechanic/home-hero-mobile.webp"
+        media="(max-width: 768px)"
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/images/scrap-mechanic/home-hero-desktop.webp"
+        media="(min-width: 769px)"
+        fetchPriority="high"
+      />
       <PageJsonLd seo={pageTdk.home} path="/" />
       <JsonLd
         data={{
@@ -197,16 +211,20 @@ export default function Home() {
       />
 
       <section className={styles.hero}>
-        <Image
-          className={styles.heroImage}
-          src="/images/scrap-mechanic/screenshot-03.jpg"
-          alt="A mechanic working beside an automated Scrap Mechanic farm"
-          fill
-          sizes="100vw"
-          quality={82}
-          loading="eager"
-          fetchPriority="high"
-        />
+        <picture className={styles.heroPicture}>
+          <source
+            media="(max-width: 768px)"
+            srcSet="/images/scrap-mechanic/home-hero-mobile.webp"
+          />
+          <img
+            className={styles.heroImage}
+            src="/images/scrap-mechanic/home-hero-desktop.webp"
+            alt="A mechanic working beside an automated Scrap Mechanic farm"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
         <div className={styles.heroShade} />
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroCopy}>

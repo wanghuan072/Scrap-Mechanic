@@ -95,6 +95,18 @@ a {
   display: none;
 }
 
+.gpt-ad-section[data-ad-status="idle"] {
+  min-height: 1px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.gpt-ad-section[data-ad-status="idle"] .gpt-ad-label,
+.gpt-ad-section[data-ad-status="idle"] .gpt-ad-shell {
+  display: none;
+}
+
 .gpt-ad-label {
   display: block;
   margin-bottom: 8px;

@@ -4,7 +4,6 @@ import Script from "next/script";
 import { RouteFooterAd } from "@/components/ads/RouteFooterAd";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
-import { GPT_SCRIPT_URL, GPT_UNITS } from "@/config/gpt";
 import { JsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
 import { pageTdk } from "@/seo/tdk";
@@ -15,13 +14,13 @@ const GA_MEASUREMENT_ID = "G-NRMF3E7FTM";
 const barlow = Barlow({
   variable: "--font-barlow",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
 });
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
   subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
+  weight: ["700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -76,76 +75,11 @@ export default function RootLayout({
         <RouteFooterAd />
         <SiteFooter />
         <Script
-          id="google-publisher-tag"
-          src={GPT_SCRIPT_URL}
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
-        <Script id="google-publisher-tag-config" strategy="beforeInteractive">
-          {`
-            window.googletag = window.googletag || { cmd: [] };
-            window.googletag.cmd.push(function () {
-              if (window.__scrapMechanicGptInitialized) return;
-              window.__scrapMechanicGptInitialized = true;
-
-              var bottomAnchorSlot = googletag.defineOutOfPageSlot(
-                '${GPT_UNITS.anchor}',
-                googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
-              );
-              var leftSideRailSlot = googletag.defineOutOfPageSlot(
-                '${GPT_UNITS.anchor}',
-                googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
-              );
-              var rightSideRailSlot = googletag.defineOutOfPageSlot(
-                '${GPT_UNITS.anchor}',
-                googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
-              );
-              var interstitialSlot = googletag.defineOutOfPageSlot(
-                '${GPT_UNITS.interstitial}',
-                googletag.enums.OutOfPageFormat.INTERSTITIAL
-              );
-
-              if (bottomAnchorSlot) bottomAnchorSlot.addService(googletag.pubads());
-              if (leftSideRailSlot) leftSideRailSlot.addService(googletag.pubads());
-              if (rightSideRailSlot) rightSideRailSlot.addService(googletag.pubads());
-              if (interstitialSlot) interstitialSlot.addService(googletag.pubads());
-
-              googletag.setConfig({
-                centering: true,
-                disableInitialLoad: true,
-                singleRequest: true
-              });
-              googletag.enableServices();
-
-              var outOfPageSlots = [];
-              if (bottomAnchorSlot) {
-                googletag.display(bottomAnchorSlot);
-                outOfPageSlots.push(bottomAnchorSlot);
-              }
-              if (leftSideRailSlot) {
-                googletag.display(leftSideRailSlot);
-                outOfPageSlots.push(leftSideRailSlot);
-              }
-              if (rightSideRailSlot) {
-                googletag.display(rightSideRailSlot);
-                outOfPageSlots.push(rightSideRailSlot);
-              }
-              if (interstitialSlot) {
-                googletag.display(interstitialSlot);
-                outOfPageSlots.push(interstitialSlot);
-              }
-              if (outOfPageSlots.length) {
-                googletag.pubads().refresh(outOfPageSlots);
-              }
-            });
-          `}
-        </Script>
-        <Script
           id="google-analytics-library"
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
