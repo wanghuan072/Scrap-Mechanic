@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
 import { getTool } from "@/lib/content/catalog";
@@ -153,7 +153,7 @@ export default function WheelAngleCalculatorPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-wheel-angle-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-wheel-angle-1" unit="banner1" />
 
       <section className={styles.referenceSection}>
         <div className="container">
@@ -236,7 +236,7 @@ export default function WheelAngleCalculatorPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-wheel-angle-2" unit="banner2" />
+      <AdPlaceholder slotId="div-ad-placeholder-wheel-angle-2" unit="banner2" />
 
       <section className={styles.supportSection}>
         <div className={`container ${styles.supportGrid}`}>

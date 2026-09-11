@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -244,7 +244,7 @@ export default function ModsPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-mods-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-mods-1" unit="banner1" />
 
       <section className={styles.classics}>
         <div className="container">
@@ -367,7 +367,7 @@ export default function ModsPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-mods-2" unit="banner2" />
+      <AdPlaceholder slotId="div-ad-placeholder-mods-2" unit="banner2" />
 
       <section className={styles.safety}>
         <div className={`container ${styles.safetyGrid}`}>

@@ -79,10 +79,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.gpt-ad-section {
+.ad-placeholder-section {
   width: 100%;
   overflow: hidden;
-  padding: clamp(24px, 4vw, 48px) max(10px, env(safe-area-inset-left));
+  padding: clamp(16px, 2.5vw, 28px) max(10px, env(safe-area-inset-left));
   border-block: 1px solid rgb(73 97 106 / 28%);
   background:
     linear-gradient(90deg, rgb(25 180 209 / 4%) 1px, transparent 1px),
@@ -91,23 +91,7 @@ a {
   text-align: center;
 }
 
-.gpt-ad-section[data-ad-status="empty"] {
-  display: none;
-}
-
-.gpt-ad-section[data-ad-status="idle"] {
-  min-height: 1px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
-.gpt-ad-section[data-ad-status="idle"] .gpt-ad-label,
-.gpt-ad-section[data-ad-status="idle"] .gpt-ad-shell {
-  display: none;
-}
-
-.gpt-ad-label {
+.ad-placeholder-label {
   display: block;
   margin-bottom: 8px;
   color: #70858a;
@@ -118,29 +102,35 @@ a {
   text-transform: uppercase;
 }
 
-.gpt-ad-shell,
-.gpt-ad-slot {
+.ad-placeholder-shell,
+.ad-placeholder-slot {
   display: flex;
   width: 100%;
   min-width: 300px;
-  min-height: 250px;
+  min-height: clamp(72px, 9vw, 112px);
   align-items: center;
   justify-content: center;
 }
 
-.gpt-ad-shell {
+.ad-placeholder-shell {
   max-width: 1200px;
   margin-inline: auto;
   overflow: hidden;
 }
 
-.gpt-ad-slot iframe {
-  max-width: 100%;
+.ad-placeholder-slot {
+  border: 1px dashed rgb(73 97 106 / 62%);
+  color: #70858a;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 560px) {
-  .gpt-ad-section {
-    padding-block: 24px;
+  .ad-placeholder-section {
+    padding-block: 16px;
   }
 }
 

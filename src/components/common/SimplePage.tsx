@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 
 export function SimplePage({
   eyebrow,
@@ -26,7 +26,7 @@ export function SimplePage({
           <p>{intro}</p>
         </div>
       </section>
-      <GptAd slotId="div-gpt-ad-simple-page-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-simple-page-1" unit="banner1" />
       <article className="container simple-page">{children}</article>
     </main>
   );

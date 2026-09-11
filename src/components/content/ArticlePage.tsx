@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import type { ArticleEntry } from "@/types/content";
 import { getWikiEntryBySlug, guides } from "@/lib/content/catalog";
@@ -139,8 +139,8 @@ export function ArticlePage({
         }
       />
 
-      <GptAd
-        slotId={`div-gpt-ad-${basePath.replace(/^\//, "")}-${entry.slug}-1`}
+      <AdPlaceholder
+        slotId={`div-ad-placeholder-${basePath.replace(/^\//, "")}-${entry.slug}-1`}
         unit="banner1"
       />
 

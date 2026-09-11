@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
@@ -465,8 +465,8 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
           entry.gameVersion === site.currentVersion ? "confirmed" : "review"
         }
       />
-      <GptAd
-        slotId={`div-gpt-ad-wiki-entry-${entry.category}-${entry.slug}-1`}
+      <AdPlaceholder
+        slotId={`div-ad-placeholder-wiki-entry-${entry.category}-${entry.slug}-1`}
         unit="banner1"
       />
       <section className="article-body-section">

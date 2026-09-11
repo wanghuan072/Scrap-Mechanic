@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { BotFieldGuide } from "@/page/wiki/components/BotFieldGuide";
 import { SchematicUnlockDirectory } from "@/page/wiki/components/SchematicUnlockDirectory";
@@ -231,7 +231,7 @@ export default async function WikiCategoryPage({
           </div>
         </section>
 
-        <GptAd slotId="div-gpt-ad-wiki-schematics-1" unit="banner1" />
+        <AdPlaceholder slotId="div-ad-placeholder-wiki-schematics-1" unit="banner1" />
 
         <section className={styles.schematicDirectorySection}>
           <div className="container">
@@ -242,7 +242,7 @@ export default async function WikiCategoryPage({
           </div>
         </section>
 
-        <GptAd slotId="div-gpt-ad-wiki-schematics-2" unit="banner2" />
+        <AdPlaceholder slotId="div-ad-placeholder-wiki-schematics-2" unit="banner2" />
 
         <section className={styles.schematicHelp}>
           <div className={`container ${styles.schematicHelpInner}`}>
@@ -331,7 +331,7 @@ export default async function WikiCategoryPage({
         </div>
       </section>
 
-      <GptAd slotId={`div-gpt-ad-wiki-${slug}-1`} unit="banner1" />
+      <AdPlaceholder slotId={`div-ad-placeholder-wiki-${slug}-1`} unit="banner1" />
 
       <section className={styles.directory}>
         <div className={`container ${styles.directoryGrid}`}>

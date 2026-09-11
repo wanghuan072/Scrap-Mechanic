@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
 import { locations } from "@/lib/data/locations";
@@ -445,7 +445,7 @@ export default function MapPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-map-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-map-1" unit="banner1" />
 
       <section className={styles.generatedSection} id="map-tools">
         <div className={`container ${styles.generatedGrid}`}>
@@ -603,7 +603,7 @@ export default function MapPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-map-2" unit="banner2" />
+      <AdPlaceholder slotId="div-ad-placeholder-map-2" unit="banner2" />
 
       <section className={styles.planningSection}>
         <div className={`container ${styles.planningInner}`}>

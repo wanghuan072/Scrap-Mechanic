@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
 import { JsonLd } from "@/seo/JsonLd";
@@ -397,8 +397,8 @@ export function BuildGuidePage({
         </div>
       </section>
 
-      <GptAd
-        slotId={`div-gpt-ad-build-${entry.slug}-1`}
+      <AdPlaceholder
+        slotId={`div-ad-placeholder-build-${entry.slug}-1`}
         unit="banner1"
       />
 
@@ -538,8 +538,8 @@ export function BuildGuidePage({
         </div>
       </section>
 
-      <GptAd
-        slotId={`div-gpt-ad-build-${entry.slug}-2`}
+      <AdPlaceholder
+        slotId={`div-ad-placeholder-build-${entry.slug}-2`}
         unit="banner2"
       />
 

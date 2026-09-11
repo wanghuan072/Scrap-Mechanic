@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import {
@@ -275,7 +275,7 @@ export default function Home() {
         tone="confirmed"
       />
 
-      <GptAd slotId="div-gpt-ad-home-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-home-1" unit="banner1" />
 
       <div className={`container ${styles.dashboard}`}>
         <section className={styles.panel}>
@@ -354,7 +354,7 @@ export default function Home() {
           </div>
         </section>
 
-        <GptAd slotId="div-gpt-ad-home-2" unit="banner2" />
+        <AdPlaceholder slotId="div-ad-placeholder-home-2" unit="banner2" />
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
@@ -502,7 +502,7 @@ export default function Home() {
           </div>
         </section>
 
-        <GptAd slotId="div-gpt-ad-home-3" unit="banner3" />
+        <AdPlaceholder slotId="div-ad-placeholder-home-3" unit="banner3" />
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
@@ -613,7 +613,7 @@ export default function Home() {
           </div>
         </section>
 
-        <GptAd slotId="div-gpt-ad-home-4" unit="banner1" />
+        <AdPlaceholder slotId="div-ad-placeholder-home-4" unit="banner1" />
 
         <section className={`${styles.panel} ${styles.faqPanel}`}>
           <div className={styles.sectionLabel}>

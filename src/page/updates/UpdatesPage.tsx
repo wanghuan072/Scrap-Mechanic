@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -266,7 +266,7 @@ export default function UpdatesPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-updates-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-updates-1" unit="banner1" />
 
       <section className={styles.comparison} id="comparison">
         <div className="container">
@@ -430,7 +430,7 @@ export default function UpdatesPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-updates-2" unit="banner2" />
+      <AdPlaceholder slotId="div-ad-placeholder-updates-2" unit="banner2" />
 
       <section className={styles.patches} id="patches">
         <div className="container">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import { recipeCollection } from "@/lib/game/player-data";
@@ -367,7 +367,7 @@ export default function ToolsPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-tools-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-tools-1" unit="banner1" />
 
       <section className={styles.stationSection}>
         <div className={`container ${styles.stationLayout}`}>
@@ -474,7 +474,7 @@ export default function ToolsPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-tools-2" unit="banner2" />
+      <AdPlaceholder slotId="div-ad-placeholder-tools-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className="container">

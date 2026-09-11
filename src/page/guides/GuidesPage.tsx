@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { SectionHero } from "@/components/common/SectionHero";
 import { site } from "@/config/site";
 import { PageJsonLd } from "@/seo/JsonLd";
@@ -136,7 +136,7 @@ export default function GuidesPage() {
         </div>
       </section>
 
-      <GptAd slotId="div-gpt-ad-guides-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-guides-1" unit="banner1" />
 
       <section className={styles.lanes}>
         <div className="container">

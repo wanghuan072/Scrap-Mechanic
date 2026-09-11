@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { GptAd } from "@/components/ads/GptAd";
+import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { searchContent, wikiCategories } from "@/lib/content/catalog";
 import { createMetadata } from "@/seo/metadata";
@@ -42,7 +42,7 @@ export default async function SearchPage({
           </p>
         </div>
       </section>
-      <GptAd slotId="div-gpt-ad-search-1" unit="banner1" />
+      <AdPlaceholder slotId="div-ad-placeholder-search-1" unit="banner1" />
       <section className="page-section">
         <div className="container">
           <div className="search-panel">
