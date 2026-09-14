@@ -9,6 +9,7 @@ import { site } from "@/config/site";
 import { pageTdk } from "@/seo/tdk";
 import "@/style/globals.css";
 
+// Google Analytics 4 衡量 ID，用于网站流量统计。
 const GA_MEASUREMENT_ID = "G-NRMF3E7FTM";
 
 const barlow = Barlow({
@@ -74,6 +75,18 @@ export default function RootLayout({
         {children}
         <RouteFooterAd />
         <SiteFooter />
+        {/*
+          Google AdSense 加载器，发布商 ID：ca-pub-3939531187802459。
+          各页面目前仍保留静态广告占位符，待后续添加具体 AdSense 广告单元。
+        */}
+        <Script
+          id="google-adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3939531187802459"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        {/* Google Analytics 4：在浏览器空闲时加载，避免影响页面首屏内容。 */}
         <Script
           id="google-analytics-library"
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
