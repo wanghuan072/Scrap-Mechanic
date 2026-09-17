@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools", lastModified: "2026-09-05", priority: 0.9 },
     { path: "/about", lastModified: "2026-08-03", priority: 0.3 },
     { path: "/contact", lastModified: "2026-08-03", priority: 0.3 },
-    { path: "/privacy-policy", lastModified: "2026-09-02", priority: 0.3 },
+    { path: "/privacy-policy", lastModified: "2026-09-17", priority: 0.3 },
     { path: "/terms-of-service", lastModified: "2026-08-03", priority: 0.3 },
     { path: "/copyright", lastModified: "2026-08-03", priority: 0.3 },
     { path: "/map", lastModified: "2026-08-14", priority: 0.7 },

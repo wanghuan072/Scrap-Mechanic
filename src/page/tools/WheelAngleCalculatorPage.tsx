@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
 import { getTool } from "@/lib/content/catalog";
@@ -153,8 +152,6 @@ export default function WheelAngleCalculatorPage() {
         </div>
       </section>
 
-      <AdPlaceholder slotId="div-ad-placeholder-wheel-angle-1" unit="banner1" />
-
       <section className={styles.referenceSection}>
         <div className="container">
           <header className={styles.referenceHeading}>
@@ -235,8 +232,6 @@ export default function WheelAngleCalculatorPage() {
           </div>
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-wheel-angle-2" unit="banner2" />
 
       <section className={styles.supportSection}>
         <div className={`container ${styles.supportGrid}`}>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { SectionHero } from "@/components/common/SectionHero";
 import { site } from "@/config/site";
 import { PageJsonLd } from "@/seo/JsonLd";
@@ -135,8 +134,6 @@ export default function GuidesPage() {
           </div>
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-guides-1" unit="banner1" />
 
       <section className={styles.lanes}>
         <div className="container">

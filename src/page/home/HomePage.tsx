@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import {
@@ -275,8 +274,6 @@ export default function Home() {
         tone="confirmed"
       />
 
-      <AdPlaceholder slotId="div-ad-placeholder-home-1" unit="banner1" />
-
       <div className={`container ${styles.dashboard}`}>
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
@@ -353,8 +350,6 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
-        <AdPlaceholder slotId="div-ad-placeholder-home-2" unit="banner2" />
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
@@ -502,8 +497,6 @@ export default function Home() {
           </div>
         </section>
 
-        <AdPlaceholder slotId="div-ad-placeholder-home-3" unit="banner3" />
-
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
             <div className={styles.sectionIntro}>
@@ -612,8 +605,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        <AdPlaceholder slotId="div-ad-placeholder-home-4" unit="banner1" />
 
         <section className={`${styles.panel} ${styles.faqPanel}`}>
           <div className={styles.sectionLabel}>

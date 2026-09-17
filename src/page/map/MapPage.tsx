@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
 import { locations } from "@/lib/data/locations";
@@ -445,8 +444,6 @@ export default function MapPage() {
         </div>
       </section>
 
-      <AdPlaceholder slotId="div-ad-placeholder-map-1" unit="banner1" />
-
       <section className={styles.generatedSection} id="map-tools">
         <div className={`container ${styles.generatedGrid}`}>
           <div className={styles.sectionHeading}>
@@ -602,8 +599,6 @@ export default function MapPage() {
           })}
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-map-2" unit="banner2" />
 
       <section className={styles.planningSection}>
         <div className={`container ${styles.planningInner}`}>

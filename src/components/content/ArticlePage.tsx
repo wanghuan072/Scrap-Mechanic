@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import type { ArticleEntry } from "@/types/content";
 import { getWikiEntryBySlug, guides } from "@/lib/content/catalog";
@@ -137,11 +136,6 @@ export function ArticlePage({
         tone={
           entry.gameVersion === site.currentVersion ? "confirmed" : "review"
         }
-      />
-
-      <AdPlaceholder
-        slotId={`div-ad-placeholder-${basePath.replace(/^\//, "")}-${entry.slug}-1`}
-        unit="banner1"
       />
 
       <section className="article-body-section">

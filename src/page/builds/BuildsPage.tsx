@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { buildFailureChecks } from "@/lib/data/builds";
@@ -435,8 +434,6 @@ export default function BuildsPage() {
         </div>
       </section>
 
-      <AdPlaceholder slotId="div-ad-placeholder-builds-1" unit="banner1" />
-
       <section className={styles.botPressureSection}>
         <div className="container">
           <header className={styles.heading}>
@@ -599,8 +596,6 @@ export default function BuildsPage() {
           </div>
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-builds-2" unit="banner2" />
 
       <section className={styles.diagnosticsSection}>
         <div className={`container ${styles.diagnosticsGrid}`}>

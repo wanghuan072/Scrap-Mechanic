@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RecipeDirectory } from "@/page/wiki/components/RecipeDirectory";
@@ -202,8 +201,6 @@ export default function RecipesPage() {
         </div>
       </section>
 
-      <AdPlaceholder slotId="div-ad-placeholder-recipes-1" unit="banner1" />
-
       <section className={styles.playerNotes}>
         <div className={`container ${styles.notesGrid}`}>
           <article>
@@ -239,8 +236,6 @@ export default function RecipesPage() {
           </article>
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-recipes-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqLayout}`}>

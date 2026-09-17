@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { CraftingPlanner } from "@/page/tools/components/CraftingPlanner";
@@ -119,8 +118,6 @@ export default function CraftingPlannerPage() {
         </div>
       </section>
 
-      <AdPlaceholder slotId="div-ad-placeholder-crafting-planner-1" unit="banner1" />
-
       <section className={styles.workflowSection}>
         <div className={`container ${styles.workflowGrid}`}>
           <header>
@@ -179,8 +176,6 @@ export default function CraftingPlannerPage() {
           </article>
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-crafting-planner-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqGrid}`}>

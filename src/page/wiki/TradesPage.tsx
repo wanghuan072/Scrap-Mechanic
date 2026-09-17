@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { TradeDirectory } from "@/page/wiki/components/TradeDirectory";
@@ -189,8 +188,6 @@ export default function TradesPage() {
         </div>
       </section>
 
-      <AdPlaceholder slotId="div-ad-placeholder-trades-1" unit="banner1" />
-
       <section className={styles.directorySection}>
         <div className="container">
           <Suspense fallback={<div className="empty-state">Preparing trader filters…</div>}>
@@ -202,8 +199,6 @@ export default function TradesPage() {
           </Suspense>
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-trades-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqGrid}`}>

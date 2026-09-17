@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
 import Script from "next/script";
-import { RouteFooterAd } from "@/components/ads/RouteFooterAd";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { JsonLd } from "@/seo/JsonLd";
@@ -73,7 +72,6 @@ export default function RootLayout({
         />
         <SiteHeader />
         {children}
-        <RouteFooterAd />
         <SiteFooter />
         {/*
           Google AdSense 加载器，发布商 ID：ca-pub-3939531187802459。

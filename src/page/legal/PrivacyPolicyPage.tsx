@@ -99,13 +99,31 @@ export default function PrivacyPolicyPage() {
           </a>{" "}
           for information about Google&apos;s processing and privacy controls.
         </p>
+        <h2>Google AdSense and consent choices</h2>
+        <p>
+          The site includes the Google AdSense loader for publisher
+          ca-pub-3939531187802459. No display-ad unit is currently rendered on the
+          site. If display advertising is enabled in the future, Google and its
+          advertising partners may use cookies or similar identifiers to measure ad
+          delivery, limit repeated ads, prevent fraud, and, where permitted, provide
+          more relevant advertising.
+        </p>
+        <p>
+          Before personalised advertising is enabled for visitors in the European
+          Economic Area, the United Kingdom, or Switzerland, the site will present the
+          consent choices required by a Google-certified consent management platform.
+          Visitors will be able to make or change their available consent choices from
+          that message. Advertising features for those regions will not be treated as
+          enabled merely because this policy is published.
+        </p>
         <h2>Cookies and similar technologies</h2>
         <p>
           The site does not currently set account, shopping-cart, comment, or saved-tool
-          cookies of its own. Google Analytics may use cookies or similar browser
-          technologies when its script loads. Browser settings, privacy extensions, and
-          network-level controls may allow you to limit or delete these identifiers, but
-          blocking them can change how third-party analytics operates.
+          cookies of its own. Google Analytics, and Google AdSense if display units are
+          enabled, may use cookies or similar browser technologies. Browser settings,
+          privacy extensions, and network-level controls may allow you to limit or
+          delete these identifiers, but blocking them can change how third-party
+          services operate.
         </p>
         <h2>External services and links</h2>
         <p>

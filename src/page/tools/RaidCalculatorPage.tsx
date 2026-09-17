@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RaidCalculator } from "@/page/tools/components/RaidCalculator";
@@ -133,8 +132,6 @@ export default function RaidCalculatorPage() {
         </div>
       </section>
 
-      <AdPlaceholder slotId="div-ad-placeholder-raid-calculator-1" unit="banner1" />
-
       <section className={styles.rulesSection}>
         <div className="container">
           <header className={styles.sectionHeading}>
@@ -228,8 +225,6 @@ export default function RaidCalculatorPage() {
           </article>
         </div>
       </section>
-
-      <AdPlaceholder slotId="div-ad-placeholder-raid-calculator-2" unit="banner2" />
 
       <section className={styles.faqSection}>
         <div className={`container ${styles.faqLayout}`}>
