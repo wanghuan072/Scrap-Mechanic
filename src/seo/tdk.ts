@@ -63,13 +63,14 @@ export const pageTdk: Record<string, SeoData> = {
   map: {
     title: "Scrap Mechanic Map - Interactive World Map and Locations",
     description:
-      "Explore the interactive Scrap Mechanic map with 18 region views, searchable locations, terrain and coordinate layers, player markers, and route planning.",
+      "Explore the Scrap Mechanic Survival map, search locations, plan routes, add local markers, or privately open a supported save to view its actual surface.",
     keywords: [
       "Scrap Mechanic map",
       "Scrap Mechanic interactive map",
       "Scrap Mechanic locations",
       "Scrap Mechanic Grow Lab map",
-      "Scrap Mechanic underground map",
+      "Scrap Mechanic personal map",
+      "Scrap Mechanic save map",
       "Scrap Mechanic 1.0 map",
     ],
   },

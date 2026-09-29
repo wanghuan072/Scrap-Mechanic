@@ -1,0 +1,25 @@
+{
+  "contentHash": "cf44ed1ca5fad012445bfd299ac1963de71027ab3927ab3741c8fa0043ecabee",
+  "files": [
+    {
+      "bytes": 2746,
+      "contentHash": "22890e5bb95d642c54792b1ae6b7d1706b04dee18e44d93a5d88c5abf7f4e067",
+      "name": "locations.json"
+    },
+    {
+      "bytes": 2841760,
+      "contentHash": "7db1518719e84ea934666f55a9e82449f8427083ba01a8742bc54f0067a67945",
+      "name": "reference-world.json"
+    },
+    {
+      "bytes": 570812,
+      "contentHash": "1b13fb20421dbbdf2db53298354481b41af1471cc14e1685d8ea2ac6c912a7b0",
+      "name": "tile-catalog.json"
+    }
+  ],
+  "gameVersion": "1.0.1.869",
+  "generatedFrom": [
+    "html/tools/game-data/build-data.ts"
+  ],
+  "schemaVersion": 1
+}

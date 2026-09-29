@@ -23,10 +23,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools", lastModified: "2026-09-05", priority: 0.9 },
     { path: "/about", lastModified: "2026-08-03", priority: 0.3 },
     { path: "/contact", lastModified: "2026-08-03", priority: 0.3 },
-    { path: "/privacy-policy", lastModified: "2026-09-17", priority: 0.3 },
-    { path: "/terms-of-service", lastModified: "2026-08-03", priority: 0.3 },
-    { path: "/copyright", lastModified: "2026-08-03", priority: 0.3 },
-    { path: "/map", lastModified: "2026-08-14", priority: 0.7 },
+    { path: "/privacy-policy", lastModified: "2026-09-29", priority: 0.3 },
+    { path: "/terms-of-service", lastModified: "2026-09-29", priority: 0.3 },
+    { path: "/copyright", lastModified: "2026-09-29", priority: 0.3 },
+    { path: "/map", lastModified: "2026-09-29", priority: 0.7 },
   ];
   const toIsoDate = (value: string) => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;

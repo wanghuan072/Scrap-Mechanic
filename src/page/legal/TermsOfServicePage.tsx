@@ -69,10 +69,13 @@ export default function TermsOfServicePage() {
         <h2>Calculators and browser tools</h2>
         <p>
           Planning tools estimate outcomes from the values you enter and the rules
-          implemented on the relevant page. They do not access, upload, or modify game
-          files. Results can be affected by incorrect inputs, rounding, version changes,
-          or assumptions described alongside the tool. You remain responsible for
-          checking the displayed result against your current game state.
+          implemented on the relevant page. Calculators do not access game files. The
+          interactive map can read a supported local Survival save that you explicitly
+          select, but it processes that file in the browser and does not upload, edit, or
+          write back to it. Results can be affected by unsupported save structures,
+          incorrect inputs, rounding, version changes, or assumptions described alongside
+          the tool. You remain responsible for checking the displayed result against your
+          current game state.
         </p>
         <h2>Worlds, saves, and modifications</h2>
         <p>

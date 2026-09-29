@@ -31,9 +31,9 @@ export default function PrivacyPolicyPage() {
         </p>
         <p>
           The site is an informational fan guide. It does not provide player accounts,
-          paid memberships, checkout, public comments, direct messages, or save-file
-          uploads. This limits the personal information that visitors can intentionally
-          submit through the website.
+          paid memberships, checkout, public comments, direct messages, or server-side
+          save-file uploads. The interactive map can read a save file selected on your
+          device, but its bytes and decoded records stay in the current browser process.
         </p>
         <h2>Information you send by email</h2>
         <p>
@@ -62,11 +62,19 @@ export default function PrivacyPolicyPage() {
         </p>
         <p>
           Calculator inputs, including crafting, raid, and wheel measurements, are
-          processed in the current browser page to display a result. The tools do not
-          upload a Scrap Mechanic save, inspect
-          local game files, or create a server-side player profile. Inputs reset when the
-          page state is discarded unless your browser independently restores a previous
-          session.
+          processed in the current browser page to display a result. The interactive map
+          can inspect a supported Scrap Mechanic Survival save only after you select that
+          file. Save bytes, the file name, decoded terrain, player creations, and progress
+          records are not sent to the site server, placed in the page URL, or saved to
+          browser storage. Leaving Personal Map mode or discarding the page clears that
+          in-memory map state.
+        </p>
+        <p>
+          Player-created map markers are separate from save data. Marker names, notes,
+          types, and positions are stored in this browser&apos;s local storage so they can
+          remain available on a later visit. They are isolated by map scope, are not
+          written back to the selected save, and can be removed from the map interface
+          or by clearing this site&apos;s browser storage.
         </p>
         <h2>Hosting and security logs</h2>
         <p>

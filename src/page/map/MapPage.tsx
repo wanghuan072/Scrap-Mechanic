@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
+import { NativeMapClient } from "@/features/native-map/NativeMapClient";
 import { locations } from "@/lib/data/locations";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import { createMetadata } from "@/seo/metadata";
@@ -28,7 +29,7 @@ const locationGroups = [
     eyebrow: "Story, labs, and bosses",
     title: "Prepare before following story markers",
     description:
-      "Switch between Story Areas, Grow Labs, Underground, and Boss Areas before leaving the surface. Each region view isolates a progression space so you can plan the approach and return route.",
+      "Use surface story markers and the personal-map progress panel to connect Grow Labs, quest state, Scannerbot activity, and other verified save records with the route you can travel.",
   },
   {
     key: "exploration",
@@ -53,40 +54,40 @@ const kindLabels = {
   "dynamic-hazard": "Dynamic hazard",
 };
 
-const interactiveMapUrl = "https://scrap-mechanic-map.vercel.app/";
-const mapReviewDateIso = "2026-08-14";
-const mapReviewDate = "August 14, 2026";
+const mapReviewDateIso = "2026-09-29";
+const mapReviewDate = "September 29, 2026";
 const mapStats = {
-  regionViews: 18,
-  locationEntries: 376,
+  modes: 2,
+  surfaceGrid: "128 × 96",
   markerTypes: 5,
+  saveVersion: "v28",
 } as const;
 
 const mapFaqs = [
   {
     question: "How do I open the Scrap Mechanic map?",
     answer:
-      "Use the Open interactive map button near the top of this page or scroll to the embedded viewer. This browser-based map viewer is not an in-game map button or a map mod; choose a region, then pan, zoom, search, and enable the layers you need.",
+      "Use the Open interactive map button near the top of this page or scroll to the native viewer. The map runs directly on this page; pan, zoom, search, choose layers, or select a local Survival save for a personal surface map.",
   },
   {
     question: "Does every Scrap Mechanic Survival world use the same map?",
     answer:
-      "The viewer separates fixed and story references from a Generated Locations index. Treat the displayed map as a planning reference, then confirm generated roads, ruins, resources, and route relationships in your own Survival world.",
+      "No. Reference mode provides a complete planning surface, while Personal Map mode reads the actual terrain grid from a supported local Survival save so generated roads, ruins, resources, and route relationships match that save.",
   },
   {
     question: "Can I use coordinates from another player's world?",
     answer:
-      "The viewer displays an X and Y readout and can overlay a Coordinate Grid. Coordinates are most reliable inside the same map reference; confirm the destination in your own world before committing cargo or rare equipment.",
+      "The viewer displays an X and Y readout and can overlay a Coordinate Grid, but generated layouts differ. Load your own supported save when a coordinate must match your world before committing cargo or rare equipment.",
   },
   {
     question: "What happened to the Scrap Mechanic Chapter 2 map?",
     answer:
-      "The content many players previously called Chapter 2 was released as Scrap Mechanic 1.0 and Drilling Thunder. Use the viewer's current region list and compare Terrain, Location Names, and Generated Locations instead of relying on an older cropped map.",
+      "The content many players previously called Chapter 2 was released as Scrap Mechanic 1.0 and Drilling Thunder. This viewer focuses on the Survival surface and its generated layout rather than presenting older chapter labels as separate maps.",
   },
   {
     question: "Is this a Scrap Mechanic seed map generator or save editor?",
     answer:
-      "No. This is a reference map viewer: it does not generate a world from a seed, upload or parse a save, edit terrain, or install a map mod. Use its regions, coordinates, layers, and player markers to plan a route, then confirm generated locations in your own Survival world.",
+      "No. It can parse a supported Survival v28 .db file locally in your browser, but it does not upload the file, regenerate the world from only its seed, edit the save, change terrain, or install a mod.",
   },
   {
     question: "Are tornadoes fixed map locations?",
@@ -94,50 +95,50 @@ const mapFaqs = [
       "No. Treat tornadoes as dynamic weather hazards rather than permanent landmarks. If one blocks a route, divert early or postpone a loaded delivery instead of relying on a fixed marker.",
   },
   {
-    question: "How do I open the underground map in Scrap Mechanic 1.0?",
+    question: "Does the viewer include underground and interior maps?",
     answer:
-      "Open the region selector inside the map viewer, expand Underground, then choose the Mining Hub, Underground Station 1 or 2, Drilling Area 1 or 2, or the Underground Guidance Area. Switch back to Surface World when you need to plan the road approach.",
+      "No. The current viewer renders the Survival surface. A personal save can show verified underground-depth and Grow Lab records in its progress panel, but it does not render separate underground, interior, or boss-area floor plans.",
   },
 ];
 
 const mapRegions = [
   {
-    label: "Surface",
-    count: "2 views",
-    locations: "Surface World · Scrapyard",
-    text: "Use for the main terrain, roads, generated locations, and surface route planning.",
+    label: "Reference Map",
+    count: "Always available",
+    locations: "Verified 128 × 96 surface",
+    text: "Open a complete planning surface without selecting a local save.",
   },
   {
-    label: "Story Areas",
-    count: "1 view",
-    locations: "Excavation Island",
-    text: "Switch away from the surface when a progression objective moves into its own map space.",
+    label: "Personal Map",
+    count: "Local v28 save",
+    locations: "Actual generated terrain",
+    text: "Replace the reference terrain with the layout decoded from your supported save.",
   },
   {
-    label: "Grow Labs",
-    count: "7 views",
-    locations: "Grow Lab 1–7",
-    text: "Inspect each lab as an individual region instead of searching for it on the surface layer.",
+    label: "Player Content",
+    count: "Independent layer",
+    locations: "Builds · Vehicles",
+    text: "Show supported player creations without changing the verified terrain artwork.",
   },
   {
-    label: "Underground",
-    count: "6 views",
-    locations: "Mining · Stations · Drilling · Guidance",
-    text: "Plan mining and underground progression with dedicated station and drilling-area views.",
+    label: "Save Progress",
+    count: "Verified records",
+    locations: "Quests · Labs · Logs · Scannerbot",
+    text: "Read supported progress records without inventing an overall completion percentage.",
   },
   {
-    label: "Boss Areas",
-    count: "2 views",
-    locations: "Final Boss Hall · Trashbot Boss Area",
-    text: "Open the encounter space before carrying valuable equipment into a boss route.",
+    label: "Local Markers",
+    count: "5 marker types",
+    locations: "Resource · Danger · Base · Vehicle · Note",
+    text: "Keep private route notes in this browser, isolated by map scope.",
   },
 ];
 
 const mapTools = [
   {
     number: "01",
-    label: "Choose a region",
-    text: `Start with one of ${mapStats.regionViews} region views so surface, lab, underground, and boss geometry never compete for attention.`,
+    label: "Choose a map mode",
+    text: "Use the verified reference surface for general planning or select a supported local save when the route must match your generated world.",
   },
   {
     number: "02",
@@ -170,7 +171,7 @@ const routeSteps = [
   {
     number: "03",
     title: "Match the vehicle to the trip",
-    text: "Use Vehicle and Resource markers to compare the surface approach with the selected lab, underground, or boss view before choosing a build.",
+    text: "Use Vehicle and Resource markers to compare terrain, road width, storage stops, and the return route before choosing a build.",
   },
   {
     number: "04",
@@ -231,12 +232,19 @@ export default function MapPage() {
           mainEntity: {
             "@type": "WebApplication",
             name: "Scrap Mechanic Interactive Map",
-            url: interactiveMapUrl,
+            url: `${site.url}/map`,
             applicationCategory: "GameApplication",
             operatingSystem: "Any web browser",
             isAccessibleForFree: true,
+            softwareVersion: "1.0.1.869 map data",
+            featureList: [
+              "Reference Survival surface",
+              "Browser-local Survival save parsing",
+              "Player builds and vehicles",
+              "Verified save progress",
+              "Search, layers, coordinates, and local markers",
+            ],
           },
-          isBasedOn: interactiveMapUrl,
         }}
       />
       <JsonLd
@@ -277,8 +285,8 @@ export default function MapPage() {
               </h1>
               <p className={styles.intro}>
                 Explore Survival landmarks, progression routes, resource areas, and
-                hazards. Open the embedded viewer to search locations, switch regions,
-                combine layers, and mark a route before leaving the garage.
+                hazards. Use the native viewer to search locations, combine layers,
+                mark a route, or open a supported local save without uploading it.
               </p>
 
               <div className={styles.heroActions}>
@@ -302,12 +310,12 @@ export default function MapPage() {
               <span>Viewer coverage</span>
               <dl>
                 <div>
-                  <dt>Region views</dt>
-                  <dd>{mapStats.regionViews}</dd>
+                  <dt>Map modes</dt>
+                  <dd>{mapStats.modes}</dd>
                 </div>
                 <div>
-                  <dt>Location index</dt>
-                  <dd>{mapStats.locationEntries}</dd>
+                  <dt>Surface grid</dt>
+                  <dd>{mapStats.surfaceGrid}</dd>
                 </div>
                 <div>
                   <dt>Marker types</dt>
@@ -328,7 +336,7 @@ export default function MapPage() {
           <span>Field index</span>
           <Link href="#interactive-map">Interactive map</Link>
           <Link href="#map-tools">Map tools</Link>
-          <Link href="#map-regions">Map regions</Link>
+          <Link href="#map-regions">Map modes</Link>
           {locationGroups.map((group) => (
             <Link href={`#${group.key}`} key={group.key}>
               {group.eyebrow}
@@ -347,45 +355,34 @@ export default function MapPage() {
             </div>
             <div className={styles.mapIntroduction}>
               <p>
-                Use the Scrap Mechanic map viewer below to explore{" "}
-                {mapStats.regionViews} selectable regions from the 1.0 and Drilling
-                Thunder world, search the location index, combine terrain and
-                coordinate layers, and place route markers.
+                Use the Scrap Mechanic map viewer below to explore the verified surface,
+                search locations, combine terrain and coordinate layers, place route
+                markers, or load a supported local save as a private personal map.
               </p>
               <div className={styles.mapStatus} role="status">
                 <span className={styles.statusLight} aria-hidden="true" />
                 <div>
-                  <strong>Viewer connected</strong>
-                  <p>Interactive map and location controls available below.</p>
+                  <strong>Native viewer available</strong>
+                  <p>The map and its local-save tools run directly on this page.</p>
                 </div>
               </div>
             </div>
           </header>
 
-          <div className={styles.viewerFrame} aria-label="Embedded interactive Scrap Mechanic map">
+          <div className={styles.viewerFrame} aria-label="Native interactive Scrap Mechanic map">
             <div className={styles.viewerToolbar}>
               <span>WORLD_VIEWER</span>
-              <span className={styles.viewerMode}>Embedded interactive map</span>
+              <span className={styles.viewerMode}>Native browser map · local processing</span>
             </div>
-            <iframe
-              className={styles.interactiveMapFrame}
-              src={interactiveMapUrl}
-              title="Interactive Scrap Mechanic world map"
-              width="1200"
-              height="760"
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="fullscreen"
-              allowFullScreen
-            />
+            <NativeMapClient className={styles.interactiveMapFrame} />
             <dl className={styles.viewerStats}>
               <div>
-                <dt>Region views</dt>
-                <dd>{mapStats.regionViews} selectable</dd>
+                <dt>Map modes</dt>
+                <dd>{mapStats.modes} available</dd>
               </div>
               <div>
-                <dt>Generated index</dt>
-                <dd>{mapStats.locationEntries} entries</dd>
+                <dt>Save support</dt>
+                <dd>Survival {mapStats.saveVersion}</dd>
               </div>
               <div>
                 <dt>Player markers</dt>
@@ -403,14 +400,14 @@ export default function MapPage() {
               <span className={styles.panelLabel}>Player quick start</span>
               <h3 id="map-quick-start-title">Build a route before leaving the garage</h3>
               <p>
-                Choose the region that matches your objective, reveal only the layers
-                you need, and mark the safe return route before carrying fuel, cargo,
-                or rare equipment into the field.
+                Choose reference or personal mode, reveal only the layers you need, and
+                mark the safe return route before carrying fuel, cargo, or rare equipment
+                into the field.
               </p>
               <p className={styles.quickStartNote}>
-                Map scope: {mapStats.regionViews} region views plus search, layers,
-                markers, coordinates, and zoom. Generated roads and sites can vary, so
-                confirm the final route in your own save.
+                Map scope: one verified surface with reference and personal modes, plus
+                search, layers, markers, coordinates, and zoom. Load your own save when
+                generated roads and sites must match exactly.
               </p>
             </div>
 
@@ -421,7 +418,7 @@ export default function MapPage() {
               </div>
               <div>
                 <dt>Find a destination</dt>
-                <dd>Search the Location Browser or switch to a story region</dd>
+                <dd>Search the Location Browser or select your local Survival save</dd>
               </div>
               <div>
                 <dt>Read the route</dt>
@@ -450,9 +447,9 @@ export default function MapPage() {
             <span className={styles.eyebrow}>Map workflow</span>
             <h2>Plan Routes in a Generated World</h2>
             <p>
-              The viewer combines a fixed reference map with a large generated-location
-              index. Use its controls to narrow the reference, then verify the final
-              route against your own Survival world.
+              The viewer combines a verified reference map with generated-location data.
+              Use its controls to narrow the reference, or load your save so the terrain
+              and supported player content reflect your own Survival world.
             </p>
           </div>
 
@@ -481,18 +478,18 @@ export default function MapPage() {
       <section
         className={styles.regionSection}
         id="map-regions"
-        aria-label="Interactive map region index"
+        aria-label="Interactive map capability index"
       >
         <div className={`container ${styles.regionInner}`}>
           <div className={styles.regionLead}>
             <div>
-              <span className={styles.eyebrow}>Viewer region index</span>
-              <h2>Explore All 18 Map Regions</h2>
+              <span className={styles.eyebrow}>Viewer capability index</span>
+              <h2>Explore Five Map Capabilities</h2>
             </div>
             <p>
-              The region selector separates surface navigation from self-contained
-              story, lab, underground, and boss spaces. Pick the matching view before
-              searching for a location or adding a marker.
+              Reference and personal modes use the same surface tools while player
+              content, verified progress, and local markers remain independent layers.
+              Choose the mode that matches the route you need to plan.
             </p>
           </div>
           <div className={styles.regionGrid}>
@@ -518,9 +515,9 @@ export default function MapPage() {
             <h2>Plan by purpose, risk, and route</h2>
           </div>
           <p>
-            The viewer contains hundreds of searchable map records. This curated field
-            directory turns the most useful surface, story, generated, and hazard
-            entries into preparation notes you can use before opening a region view.
+            The viewer derives searchable records from the active surface and its
+            verified marker data. This curated field directory turns useful surface,
+            story, generated, and hazard entries into preparation notes for your route.
           </p>
         </div>
 
@@ -625,7 +622,7 @@ export default function MapPage() {
             <h2>Generated-world navigation questions</h2>
             <p>
               These answers separate reusable location knowledge from details that
-              belong only to one generated save or selected region view.
+              belong only to one generated save or personal-map state.
             </p>
           </div>
           <div className={styles.faqList}>

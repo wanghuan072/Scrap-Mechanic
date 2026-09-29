@@ -71,6 +71,17 @@ export default function CopyrightPage() {
           republishing custom tool logic, removing ownership notices, or using the site
           name and presentation in a way that suggests an official partnership.
         </p>
+        <h2>Interactive map third-party material</h2>
+        <p>
+          The interactive map includes reviewed terrain artwork and composition metadata
+          from xKoldx&apos;s sm_map_generator version 1.7.0 under the MIT License. The complete
+          license notice is retained with the published map assets. The upstream project is{" "}
+          <a className="text-link" href="https://github.com/xKoldx/sm_map_generator">
+            xKoldx/sm_map_generator
+          </a>
+          . The attribution applies to that imported material and does not change the
+          ownership of Scrap Mechanic names or game-derived artwork.
+        </p>
         <h2>Requests to reuse original material</h2>
         <p>
           A permission request should identify the exact page and material, the portion
