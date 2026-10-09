@@ -68,6 +68,9 @@ export function createMapLayerTree(
   let input: MapLayerTreeRenderInput | undefined;
   let selectedLocationTypeIds = new Set<string>();
   const collapsedGroups = new Set<string>();
+  const knownGroups = new Set<string>();
+  let mapLayersExpanded = true;
+  let locationFiltersExpanded = false;
   let pendingFocus: FocusedControl | undefined;
 
   const findControl = <T extends HTMLInputElement | HTMLButtonElement>(
@@ -241,6 +244,19 @@ export function createMapLayerTree(
   };
 
   const handleClick = (event: Event) => {
+    const sectionDisclosure = (event.target as Element).closest<HTMLButtonElement>(
+      "button[data-map-control-section]"
+    );
+    if (sectionDisclosure && !sectionDisclosure.disabled) {
+      const section = sectionDisclosure.dataset.mapControlSection!;
+      const isExpanded = sectionDisclosure.getAttribute("aria-expanded") === "true";
+      sectionDisclosure.setAttribute("aria-expanded", String(!isExpanded));
+      sectionDisclosure.lastElementChild!.textContent = isExpanded ? "+" : "−";
+      root.querySelector<HTMLElement>(`[data-map-control-body="${section}"]`)!.hidden = isExpanded;
+      if (section === "layers") mapLayersExpanded = !isExpanded;
+      if (section === "locations") locationFiltersExpanded = !isExpanded;
+      return;
+    }
     const disclosure = (event.target as Element).closest<HTMLButtonElement>(
       "button[data-location-disclosure-id]"
     );
@@ -315,8 +331,23 @@ export function createMapLayerTree(
       const fieldset = document.createElement("fieldset");
       fieldset.className = "map-layer-tree";
       const legend = document.createElement("legend");
-      legend.textContent = "Map Layers";
+      legend.className = "visually-hidden";
+      legend.textContent = "Map controls";
       fieldset.append(legend);
+
+      const layerToggle = document.createElement("button");
+      layerToggle.type = "button";
+      layerToggle.className = "control-section__toggle";
+      layerToggle.dataset.mapControlSection = "layers";
+      layerToggle.setAttribute("aria-expanded", String(mapLayersExpanded));
+      layerToggle.setAttribute("aria-controls", "map-layer-controls");
+      layerToggle.innerHTML = `<span>Map Layers</span><span aria-hidden="true">${mapLayersExpanded ? "−" : "+"}</span>`;
+      const layerBody = document.createElement("div");
+      layerBody.id = "map-layer-controls";
+      layerBody.className = "control-section__body map-layer-tree__layers";
+      layerBody.dataset.mapControlBody = "layers";
+      layerBody.hidden = !mapLayersExpanded;
+      fieldset.append(layerToggle, layerBody);
 
       for (const layer of ordinaryLayers) {
         const label = document.createElement("label");
@@ -330,16 +361,22 @@ export function createMapLayerTree(
         text.dataset.layerLabel = "";
         text.textContent = layer.name;
         label.append(checkbox, text);
-        fieldset.append(label);
+        layerBody.append(label);
       }
 
-      const locationFilterTitle = document.createElement("div");
-      locationFilterTitle.className = "map-layer-tree__section-title";
-      locationFilterTitle.dataset.locationFilterTitle = "";
-      locationFilterTitle.setAttribute("role", "heading");
-      locationFilterTitle.setAttribute("aria-level", "3");
-      locationFilterTitle.textContent = "Location Filters";
-      fieldset.append(locationFilterTitle);
+      const locationToggle = document.createElement("button");
+      locationToggle.type = "button";
+      locationToggle.className = "control-section__toggle";
+      locationToggle.dataset.mapControlSection = "locations";
+      locationToggle.setAttribute("aria-expanded", String(locationFiltersExpanded));
+      locationToggle.setAttribute("aria-controls", "location-filter-controls");
+      locationToggle.innerHTML = `<span>Location Filters</span><span aria-hidden="true">${locationFiltersExpanded ? "−" : "+"}</span>`;
+      const locationBody = document.createElement("div");
+      locationBody.id = "location-filter-controls";
+      locationBody.className = "control-section__body map-layer-tree__locations";
+      locationBody.dataset.mapControlBody = "locations";
+      locationBody.hidden = !locationFiltersExpanded;
+      fieldset.append(locationToggle, locationBody);
 
       const masterRow = document.createElement("div");
       masterRow.className = "map-layer-tree__location-master";
@@ -355,13 +392,17 @@ export function createMapLayerTree(
         : "All Locations";
       masterLabel.append(master, masterText);
       masterRow.append(masterLabel);
-      fieldset.append(masterRow);
+      locationBody.append(masterRow);
 
       const locationChildren = document.createElement("div");
       locationChildren.id = "location-name-tree-children";
       locationChildren.dataset.locationMasterChildren = "";
       for (const group of nextInput.inventory.groups) {
         if (group.types.length === 0 || group.count === 0) continue;
+        if (!knownGroups.has(group.id)) {
+          knownGroups.add(group.id);
+          collapsedGroups.add(group.id);
+        }
         const groupRow = document.createElement("div");
         groupRow.className = "map-layer-tree__group";
         const groupHeader = document.createElement("div");
@@ -407,7 +448,7 @@ export function createMapLayerTree(
         groupRow.append(groupHeader, children);
         locationChildren.append(groupRow);
       }
-      fieldset.append(locationChildren);
+      locationBody.append(locationChildren);
 
       fragment.append(fieldset);
       root.replaceChildren(fragment);

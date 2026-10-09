@@ -9,7 +9,8 @@ import {
   faTriangleExclamation,
   faWarehouse
 } from "@fortawesome/free-solid-svg-icons";
-import { cellToMapPoint, type MapPoint } from "./coordinate-system";
+import { type MapPoint } from "./coordinate-system";
+import { LocationSpatialIndex } from "./location-spatial-index";
 import type { LocationNameInstance } from "./location-name-inventory";
 
 const expandedLabelZoom = -1;
@@ -111,11 +112,15 @@ export interface PoiLabelLayer {
   destroy(): void;
 }
 
-export function createPoiLabelLayer(map: L.Map): PoiLabelLayer {
+export function createPoiLabelLayer(
+  map: L.Map,
+  onLocationSelect: (instance: LocationNameInstance) => void
+): PoiLabelLayer {
   const layer = L.layerGroup();
   const interactiveMarkers = new Set<L.Marker>();
   let visible = false;
   let instances: readonly LocationNameInstance[] = [];
+  let index = new LocationSpatialIndex(instances);
   let selectedTypeIds = new Set<string>();
   let spiderfiedKeys: readonly string[] | undefined;
 
@@ -140,22 +145,33 @@ export function createPoiLabelLayer(map: L.Map): PoiLabelLayer {
   ): void => {
     const { instance } = positioned;
     const label = escapeHtml(instance.label);
+    const publicKey = encodeURIComponent(positioned.key);
     const gameArtClass = locationIcons[instance.typeId]?.imageUrl
       ? " poi-place-marker--game-art"
       : "";
     const marker = L.marker(position, {
       icon: L.divIcon({
         className: "poi-place-label-icon",
-        html: `<span class="poi-place-marker poi-place-marker--${displayMode()}${gameArtClass}" role="img" aria-label="${label}"><span class="poi-place-glyph" aria-hidden="true">${locationIconMarkup(instance.typeId, "poi-place-art")}</span><span class="poi-place-label">${label}</span></span>`,
+        html: `<button class="poi-place-marker poi-place-marker--${displayMode()}${gameArtClass}" type="button" data-poi-location-key="${escapeHtml(publicKey)}" aria-label="View details for ${label}"><span class="poi-place-glyph" aria-hidden="true">${locationIconMarkup(instance.typeId, "poi-place-art")}</span><span class="poi-place-label" aria-hidden="true">${label}</span></button>`,
         iconSize: [32, 32],
         iconAnchor: [16, 16]
       }),
       interactive: true,
-      keyboard: true,
+      keyboard: false,
       title: instance.label,
       alt: instance.label,
       riseOnHover: true
     }).addTo(layer);
+    // 将事件绑定到真实按钮，避免 Leaflet 的事件代理吞掉键盘/指针点击。
+    const button = marker.getElement()?.querySelector<HTMLButtonElement>("button");
+    if (button) {
+      L.DomEvent.disableClickPropagation(button);
+      button.onclick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onLocationSelect(instance);
+      };
+    }
     interactiveMarkers.add(marker);
   };
 
@@ -202,23 +218,9 @@ export function createPoiLabelLayer(map: L.Map): PoiLabelLayer {
   };
 
   const selectedVisibleInstances = (): PositionedName[] => {
-    const rendered = new Set<string>();
     const viewport = map.getBounds().pad(viewportPaddingRatio);
-    const result: PositionedName[] = [];
-    for (const instance of instances) {
-      if (!selectedTypeIds.has(instance.typeId)) continue;
-      const point = cellToMapPoint(instance.position);
-      const duplicateKey = `${instance.label}\u0000${point.x}\u0000${point.y}`;
-      if (rendered.has(duplicateKey)) continue;
-      rendered.add(duplicateKey);
-      if (!viewport.contains(toLeafletPoint(point))) continue;
-      result.push({
-        key: `${instance.id}\u0000${duplicateKey}`,
-        instance,
-        point
-      });
-    }
-    return result;
+    return index.query({ west: viewport.getWest(), east: viewport.getEast(),
+      south: viewport.getSouth(), north: viewport.getNorth() }, selectedTypeIds);
   };
 
   const groupInstances = (values: readonly PositionedName[]): NameCluster[] => {
@@ -293,7 +295,10 @@ export function createPoiLabelLayer(map: L.Map): PoiLabelLayer {
 
   return {
     setLocationNames(nextInstances, nextSelectedTypeIds) {
-      instances = [...nextInstances];
+      if (instances !== nextInstances) {
+        instances = nextInstances;
+        index = new LocationSpatialIndex(instances);
+      }
       selectedTypeIds = new Set(nextSelectedTypeIds);
       spiderfiedKeys = undefined;
       render();

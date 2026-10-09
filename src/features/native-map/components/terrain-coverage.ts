@@ -10,8 +10,6 @@ export interface TerrainCoverage {
   destroy(): void;
 }
 
-const savePrompt =
-  "Select a Scrap Mechanic 1.0 Survival save to build the map from its actual terrain layout.";
 const number = new Intl.NumberFormat("en-US");
 
 function summaryMarkup(summary: TerrainCoverageSummary): string {
@@ -34,9 +32,8 @@ function summaryMarkup(summary: TerrainCoverageSummary): string {
 export function createTerrainCoverage(root: HTMLElement): TerrainCoverage {
   const setSummary = (summary?: TerrainCoverageSummary) => {
     root.dataset.personal = String(Boolean(summary));
-    root.innerHTML = summary
-      ? summaryMarkup(summary)
-      : `<p class="terrain-coverage__prompt">${savePrompt}</p>`;
+    root.hidden = !summary;
+    root.innerHTML = summary ? summaryMarkup(summary) : "";
   };
 
   setSummary();

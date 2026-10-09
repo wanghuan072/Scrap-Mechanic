@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "1.0.1.869",
+  "worldContentHash": "7db1518719e84ea934666f55a9e82449f8427083ba01a8742bc54f0067a67945",
+  "asset": {
+    "path": "reference-overview-61a4ead9b0ea2721.webp",
+    "contentHash": "61a4ead9b0ea272111d49f7afd5cf75583a25fa1d58fb2644f512e6f20090899",
+    "bytes": 77294,
+    "width": 512,
+    "height": 384
+  },
+  "diagnostics": {
+    "missingFragments": 0,
+    "missingUuids": []
+  },
+  "contentHash": "c22b5402eac8f15ff1bafedaca9c57c1e8c72ffb0841363ef0097c5ba22078d8"
+}

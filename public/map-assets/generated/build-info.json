@@ -1,5 +1,4 @@
 {
-  "contentHash": "cf44ed1ca5fad012445bfd299ac1963de71027ab3927ab3741c8fa0043ecabee",
   "files": [
     {
       "bytes": 2746,
@@ -15,11 +14,17 @@
       "bytes": 570812,
       "contentHash": "1b13fb20421dbbdf2db53298354481b41af1471cc14e1685d8ea2ac6c912a7b0",
       "name": "tile-catalog.json"
+    },
+    {
+      "name": "reference-bootstrap.json",
+      "contentHash": "4eedba2b96bfdfc116d03fd64af9f9336ea277fe9cd2d733a3f16abf45d6fe59",
+      "bytes": 286715
     }
   ],
   "gameVersion": "1.0.1.869",
   "generatedFrom": [
     "html/tools/game-data/build-data.ts"
   ],
-  "schemaVersion": 1
+  "schemaVersion": 1,
+  "contentHash": "335508c26cbe77d7b86599ca0a3cd63b4e064e99405437801fbba72ae173fe90"
 }

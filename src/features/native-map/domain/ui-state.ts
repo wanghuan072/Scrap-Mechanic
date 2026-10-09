@@ -141,6 +141,8 @@ export function serializeUiState(state: MapUiState, currentSearch = ""): string 
     "locationTypes",
     normalizeLocationTypeIds(state.locationTypeIds),
   );
+  // 明确保留“全部关闭”，避免刷新后重新启用默认地点。
+  if (state.locationTypeIds.length === 0) params.set("locationTypes", "");
   const playerMarkerTypeIds = normalizePlayerMarkerTypeIds(
     state.playerMarkerTypeIds
   );

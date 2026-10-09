@@ -64,7 +64,7 @@ export const NativeMapClient = forwardRef<NativeMapHandle, NativeMapClientProps>
           setVisible(true);
           observer.disconnect();
         },
-        { rootMargin: "320px 0px" },
+        { rootMargin: "200px 0px" },
       );
       observer.observe(boundary);
       return () => observer.disconnect();
@@ -122,8 +122,18 @@ export const NativeMapClient = forwardRef<NativeMapHandle, NativeMapClientProps>
               </>
             ) : (
               <>
+                <div className="native-map-loader" aria-hidden="true">
+                  <span className="native-map-loader__orbit" />
+                  <span className="native-map-loader__core" />
+                </div>
+                <span className="native-map-load-state__eyebrow">
+                  WORLD VIEWER / INITIALIZING
+                </span>
                 <strong>Preparing the interactive surface map</strong>
                 <span>Loading verified terrain, locations, and browser tools…</span>
+                <span className="native-map-load-state__track" aria-hidden="true">
+                  <span />
+                </span>
               </>
             )}
           </div>

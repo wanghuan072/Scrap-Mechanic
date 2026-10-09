@@ -9,6 +9,7 @@ import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import { createMetadata } from "@/seo/metadata";
 import { pageTdk } from "@/seo/tdk";
 import styles from "@/style/page/map/map.module.css";
+import { MapSectionSelect } from "./MapSectionSelect";
 
 const mapOgImage = "/images/og/scrap-mechanic-map.jpg";
 
@@ -269,7 +270,7 @@ export default function MapPage() {
           alt="Mechanics exploring an industrial area in Scrap Mechanic"
           fill
           sizes="100vw"
-          quality={82}
+          quality={60}
           loading="eager"
           fetchPriority="high"
         />
@@ -333,6 +334,13 @@ export default function MapPage() {
 
       <nav className={styles.sectionNav} aria-label="Map page sections">
         <div className={`container ${styles.sectionNavInner}`}>
+          <MapSectionSelect className={styles.sectionSelect} sections={[
+            { id: "interactive-map", label: "Interactive map" },
+            { id: "map-tools", label: "Map tools" },
+            { id: "map-regions", label: "Map modes" },
+            ...locationGroups.map((group) => ({ id: group.key, label: group.eyebrow })),
+            { id: "map-faq", label: "FAQ" },
+          ]} />
           <span>Field index</span>
           <Link href="#interactive-map">Interactive map</Link>
           <Link href="#map-tools">Map tools</Link>
@@ -445,11 +453,12 @@ export default function MapPage() {
         <div className={`container ${styles.generatedGrid}`}>
           <div className={styles.sectionHeading}>
             <span className={styles.eyebrow}>Map workflow</span>
-            <h2>Plan Routes in a Generated World</h2>
+            <h2>Scrap Mechanic Map Generator</h2>
             <p>
-              The viewer combines a verified reference map with generated-location data.
-              Use its controls to narrow the reference, or load your save so the terrain
-              and supported player content reflect your own Survival world.
+              Select a supported local Survival .db save to generate a map view of your
+              world, find landmarks, and plan routes. Your save is processed only in
+              your browser. This tool does not create a new game world or regenerate
+              terrain from a seed.
             </p>
           </div>
 

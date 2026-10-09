@@ -67,18 +67,32 @@ export function createLocationBrowser(
         placeholder="${searchLabel}" />
     </div>
     <section class="location-browser__map-layers" data-map-layer-tree></section>
-    <fieldset id="${filterId}" class="category-filters">
-      <legend>${filterHeading}</legend>
-      <div data-category-list></div>
-    </fieldset>
-    <fieldset id="${markerFilterId}" class="category-filters player-marker-type-filters">
-      <legend>${markerFilterHeading}</legend>
-      <div data-player-marker-type-list></div>
-    </fieldset>
+    <section class="control-section" data-control-section="categories">
+      <button class="control-section__toggle" type="button" aria-expanded="false"
+        aria-controls="${filterId}">
+        <span>${filterHeading}</span><span aria-hidden="true">+</span>
+      </button>
+      <fieldset id="${filterId}" class="category-filters control-section__body" hidden>
+        <legend class="visually-hidden">${filterHeading}</legend>
+        <div data-category-list></div>
+      </fieldset>
+    </section>
+    <section class="control-section" data-control-section="marker-types">
+      <button class="control-section__toggle" type="button" aria-expanded="false"
+        aria-controls="${markerFilterId}">
+        <span>${markerFilterHeading}</span><span aria-hidden="true">+</span>
+      </button>
+      <fieldset id="${markerFilterId}"
+        class="category-filters player-marker-type-filters control-section__body" hidden>
+        <legend class="visually-hidden">${markerFilterHeading}</legend>
+        <div data-player-marker-type-list></div>
+      </fieldset>
+    </section>
   `;
 
   const search = root.querySelector<HTMLInputElement>(`#${searchId}`)!;
   const categoryFieldset = root.querySelector<HTMLFieldSetElement>(`#${filterId}`)!;
+  const categorySection = categoryFieldset.closest<HTMLElement>(".control-section")!;
   const categoryList = root.querySelector<HTMLElement>("[data-category-list]")!;
   const playerMarkerTypeList = root.querySelector<HTMLElement>(
     "[data-player-marker-type-list]"
@@ -105,10 +119,23 @@ export function createLocationBrowser(
     ).map((input) => input.value).sort() as PlayerMarkerType[];
     callbacks.onPlayerMarkerTypeChange?.(selected);
   };
+  const handleDisclosureClick = (event: Event) => {
+    const button = (event.target as Element).closest<HTMLButtonElement>(
+      ".control-section__toggle"
+    );
+    if (!button || !root.contains(button) || button.dataset.mapControlSection) return;
+    const body = root.querySelector<HTMLElement>(`#${button.getAttribute("aria-controls")}`);
+    if (!body) return;
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!expanded));
+    button.lastElementChild!.textContent = expanded ? "+" : "−";
+    body.hidden = expanded;
+  };
 
   search.addEventListener("input", handleInput);
   categoryList.addEventListener("change", handleChange);
   playerMarkerTypeList.addEventListener("change", handlePlayerMarkerTypeChange);
+  root.addEventListener("click", handleDisclosureClick);
 
   const render = ({
     locations,
@@ -134,7 +161,7 @@ export function createLocationBrowser(
     for (const categoryId of state?.categoryIds ?? []) {
       categoryCatalog.add(categoryId);
     }
-    categoryFieldset.hidden = categoryCatalog.size === 0;
+    categorySection.hidden = categoryCatalog.size === 0;
     const selectedCategories = new Set(state?.categoryIds ?? []);
     const categoryFragment = document.createDocumentFragment();
     for (const category of [...categoryCatalog].sort()) {
@@ -196,6 +223,7 @@ export function createLocationBrowser(
       search.removeEventListener("input", handleInput);
       categoryList.removeEventListener("change", handleChange);
       playerMarkerTypeList.removeEventListener("change", handlePlayerMarkerTypeChange);
+      root.removeEventListener("click", handleDisclosureClick);
       root.replaceChildren();
     }
   };

@@ -1,7 +1,12 @@
 import type { CellBounds, WorldMap } from "../domain/map-model";
+import { referenceMapRepository } from "../data/reference-repository";
 import { planVendorSurface } from "./vendor-placement-planner";
 import { createVendorSurfaceRepository } from "./vendor-surface-repository";
 import type { VendorSurfaceRepository } from "./vendor-surface-types";
+import {
+  BrowserReferenceOverviewRepository,
+  type ReferenceOverviewRepository
+} from "./reference-overview-repository";
 import {
   MAX_ACTIVE_SURFACE_CHUNKS,
   MAX_SURFACE_CHUNKS,
@@ -26,6 +31,7 @@ export interface SurfaceWorkerAdapter {
 
 interface SurfaceRenderClientOptions {
   repository?: Pick<VendorSurfaceRepository, "load">;
+  overviewRepository?: ReferenceOverviewRepository;
   createWorker?: () => SurfaceWorkerAdapter;
 }
 
@@ -144,6 +150,7 @@ function chunkBounds(world: WorldMap, requested: CellBounds, paddingChunks = 1):
 
 export class SurfaceRenderClient {
   private readonly repository: Pick<VendorSurfaceRepository, "load">;
+  private readonly overviewRepository: ReferenceOverviewRepository;
   private readonly createWorker: () => SurfaceWorkerAdapter;
   private generation = 0;
   private active?: { generation: number; terminate(): void; reject(reason: unknown): void };
@@ -151,6 +158,8 @@ export class SurfaceRenderClient {
 
   constructor(options: SurfaceRenderClientOptions = {}) {
     this.repository = options.repository ?? createVendorSurfaceRepository();
+    this.overviewRepository = options.overviewRepository
+      ?? new BrowserReferenceOverviewRepository();
     this.createWorker = options.createWorker ?? (() => new BrowserSurfaceWorkerAdapter());
   }
 
@@ -161,28 +170,70 @@ export class SurfaceRenderClient {
       this.active.reject(abortError());
       this.active = undefined;
     }
-    const worker = this.createWorker();
+    let worker: SurfaceWorkerAdapter | undefined;
     let terminated = false;
     const terminate = () => {
       if (terminated) return;
       terminated = true;
-      worker.terminate();
+      worker?.terminate();
     };
     let rejectActive!: (reason: unknown) => void;
     const aborted = new Promise<never>((_, reject) => { rejectActive = reject; });
     this.active = { generation, terminate, reject: rejectActive };
 
     const work = (async () => {
-      const bundle = await this.repository.load();
-      if (terminated || this.active?.generation !== generation) throw abortError();
-      const plan = planVendorSurface(world, bundle);
-      const overviewResult = await worker.render({
-        requestId: `${generation}:overview`,
-        generation,
-        bounds: world.bounds,
-        plan,
-        pixelsPerCell: SURFACE_OVERVIEW_PIXELS_PER_CELL
-      });
+      let rendererPromise: Promise<{
+        worker: SurfaceWorkerAdapter;
+        plan: ReturnType<typeof planVendorSurface>;
+      }> | undefined;
+      const ensureRenderer = () => {
+        if (rendererPromise) return rendererPromise;
+        rendererPromise = Promise.all([
+          this.repository.load(),
+          world.isOverviewOnly ? referenceMapRepository.loadSurface() : Promise.resolve(world),
+        ]).then(([bundle, completeWorld]) => {
+          if (terminated) throw abortError();
+          worker ??= this.createWorker();
+          return { worker, plan: planVendorSurface(completeWorld, bundle) };
+        }).catch((error: unknown) => {
+          // 网络/manifest 首次加载失败后允许用户重试，不永久缓存失败的 Promise。
+          rendererPromise = undefined;
+          throw error;
+        });
+        return rendererPromise;
+      };
+
+      let overviewResult: SurfaceWorkerChunkResult;
+      if (world.source === "reference") {
+        try {
+          const staticOverview = await this.overviewRepository.load(world);
+          overviewResult = {
+            ...staticOverview.overview,
+            diagnostics: staticOverview.diagnostics
+          };
+        } catch (error) {
+          if (terminated || error instanceof DOMException && error.name === "AbortError") {
+            throw abortError();
+          }
+          const renderer = await ensureRenderer();
+          overviewResult = await renderer.worker.render({
+            requestId: `${generation}:overview:fallback`,
+            generation,
+            bounds: world.bounds,
+            plan: renderer.plan,
+            pixelsPerCell: SURFACE_OVERVIEW_PIXELS_PER_CELL
+          });
+        }
+      } else {
+        const renderer = await ensureRenderer();
+        overviewResult = await renderer.worker.render({
+          requestId: `${generation}:overview`,
+          generation,
+          bounds: world.bounds,
+          plan: renderer.plan,
+          pixelsPerCell: SURFACE_OVERVIEW_PIXELS_PER_CELL
+        });
+      }
       if (this.active?.generation !== generation) {
         overviewResult.bitmap.close();
         throw abortError();
@@ -206,29 +257,44 @@ export class SurfaceRenderClient {
         overview,
         chunks,
         diagnostics: overviewResult.diagnostics,
-        ensureChunks(bounds) {
+        ensureChunks(bounds, onChunkReady, pixelsPerCell = SURFACE_DETAIL_PIXELS_PER_CELL) {
+          if (world.isOverviewOnly) return Promise.resolve();
+          if (!Number.isInteger(pixelsPerCell) || pixelsPerCell < 1
+            || pixelsPerCell > SURFACE_DETAIL_PIXELS_PER_CELL) {
+            return Promise.reject(new Error("Surface pixel scale is invalid."));
+          }
           const version = ++ensureVersion;
           const desiredBounds = chunkBounds(world, bounds, options.paddingChunks ?? 1);
           const desiredIds = new Set(desiredBounds.map((item) => `${item.minX}:${item.minY}`));
           const task = queue.catch(() => {}).then(async () => {
             if (disposed || version !== ensureVersion) return;
+            const renderer = await ensureRenderer();
+            if (disposed || version !== ensureVersion) return;
             for (const item of desiredBounds) {
               if (disposed || version !== ensureVersion) return;
               const id = `${item.minX}:${item.minY}`;
               recency.set(id, ++clock);
-              if (chunks.has(id)) continue;
-              const result = await worker.render({
+              const previous = chunks.get(id);
+              if (previous && previous.bitmap.width >= (item.maxX - item.minX + 1) * pixelsPerCell) continue;
+              const result = await renderer.worker.render({
                 requestId: `${generation}:${id}:${clock}`,
                 generation,
                 bounds: item,
-                plan,
-                pixelsPerCell: SURFACE_DETAIL_PIXELS_PER_CELL
+                plan: renderer.plan,
+                pixelsPerCell
               });
               if (disposed || version !== ensureVersion) {
                 result.bitmap.close();
                 return;
               }
-              chunks.set(id, { id, bounds: item, bitmap: result.bitmap });
+              if (result.diagnostics.missingFragments > 0) {
+                result.bitmap.close();
+                throw new Error("Some terrain artwork could not be loaded. Retry map details.");
+              }
+              const chunk = { id, bounds: item, bitmap: result.bitmap };
+              chunks.set(id, chunk);
+              onChunkReady?.(chunk);
+              previous?.bitmap.close();
               while (chunks.size > MAX_ACTIVE_SURFACE_CHUNKS) {
                 const victim = [...chunks.keys()]
                   .filter((candidate) => !desiredIds.has(candidate))
@@ -245,9 +311,13 @@ export class SurfaceRenderClient {
           queue = task.catch(() => {});
           return task;
         },
+        cancelChunks() {
+          ensureVersion += 1;
+        },
         dispose() {
           if (disposed) return;
           disposed = true;
+          ensureVersion += 1;
           terminate();
           overview.bitmap.close();
           for (const chunk of chunks.values()) chunk.bitmap.close();

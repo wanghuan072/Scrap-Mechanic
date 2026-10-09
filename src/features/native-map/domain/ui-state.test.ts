@@ -17,7 +17,7 @@ describe("map UI URL state", () => {
       query: "lab",
     });
     expect(state).not.toHaveProperty("regionId");
-    expect(serializeUiState(state)).toBe("?z=-2&x=12&y=-8&q=lab&cat=boss%2Cquest&selected=grow-lab-1");
+    expect(serializeUiState(state)).toBe("?z=-2&x=12&y=-8&q=lab&cat=boss%2Cquest&locationTypes=&selected=grow-lab-1");
   });
 
   it("round-trips zoom levels needed to fit the complete surface map", () => {
@@ -143,5 +143,11 @@ describe("map UI URL state", () => {
 
     expect(state.playerMarkerTypeIds).toEqual([]);
     expect(serializeUiState(state)).toContain("markers=");
+  });
+
+  it("preserves an explicit empty location selection after reload", () => {
+    const encoded = serializeUiState(parseUiState("?locationTypes="));
+    expect(encoded).toContain("locationTypes=");
+    expect(parseUiState(encoded).locationTypeIds).toEqual([]);
   });
 });

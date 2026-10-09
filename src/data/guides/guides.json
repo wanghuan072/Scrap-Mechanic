@@ -8,7 +8,7 @@
     "imageAlt": "Scrap Mechanic shoreline route used for oil collection planning",
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
-    "updated": "2026-08-31",
+    "updated": "2026-10-08",
     "readingTime": "13 min",
     "quickAnswer": "If you need to know how to get oil in Scrap Mechanic, start by separating three terms: Oil is the wiki resource topic, Oil Bucket is the carried container state, and Crude Oil is the crafting input. Collect Oil Buckets directly or automate intake with a Vacuum Pump and storage, then craft 1 Oil Bucket into 5 Crude Oil at the Craftbot. Convert 5 Crude Oil into 5 Gasoline when fuel is the goal, and reserve a return-trip stack before spending the batch on engines or suspension.",
     "media": [
@@ -76,7 +76,7 @@
     ],
     "sections": [
       {
-        "heading": "How to Get Oil in Scrap Mechanic: quick answer",
+        "heading": "Start Collecting Oil in Scrap Mechanic",
         "paragraphs": [
           "The site data separates three terms that players often collapse into one search: Oil is the wiki resource topic, Oil Bucket is the carried container state, and Crude Oil is the crafting input used by fuel and industrial recipes.",
           "If a guide tells you to refine Oil in an extra station, ignore it for this build. The current repository recipe set uses Craftbot, Portable Crafter, and Workbench conversions."
@@ -214,7 +214,7 @@
     "imageAlt": "Scrap Mechanic player exploring an underwater route for water collection planning",
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
-    "updated": "2026-09-08",
+    "updated": "2026-10-08",
     "readingTime": "13 min",
     "quickAnswer": "If you need to know how to get water in Scrap Mechanic, use a filled Water Bucket for the first job and a Vacuum Pump plus Water Container for repeat work. The Crash Site bucket handles the opening fires and early crops. Later, craft a Water Container, set a submerged Vacuum Pump to In mode, connect storage, and feed a Water Cannon only after the container can fill and drain on command.",
     "media": [
@@ -293,7 +293,7 @@
     ],
     "sections": [
       {
-        "heading": "How to Get Water in Scrap Mechanic: quick answer",
+        "heading": "Start Collecting Water in Scrap Mechanic",
         "paragraphs": [
           "The early route is not complicated: pick up the Crash Site Water Bucket, fill it at the pond, and repeat the trip for each marked ship fire or crop plot.",
           "Automation begins only when you have a Water Container and a pump line that has passed a one-transfer test."
@@ -444,7 +444,7 @@
     "imageAlt": "Scrap Mechanic factory machinery used for Battery planning",
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
-    "updated": "2026-09-08",
+    "updated": "2026-10-08",
     "readingTime": "13 min",
     "quickAnswer": "If you are searching how to get battery in Scrap Mechanic, use the normal Battery item route, not the Master Battery quest route. Loot early Batteries conservatively, then craft 10 Batteries at the Craftbot from 5 Metal Block Level 1, 1 Glow, and 5 Chemicals when the recipe is available. The Battery item powers electric systems and appears in electrical crafting chains; the Master Battery is a fixed progression object and should not be planned as fuel.",
     "media": [
@@ -533,7 +533,7 @@
     ],
     "sections": [
       {
-        "heading": "How to Get Battery in Scrap Mechanic: quick answer",
+        "heading": "Choose the Right Battery for the Job",
         "paragraphs": [
           "The normal Battery item is consumable power. The Master Battery is a fixed story/progression object used by the crashed ship and Mechanic Station route.",
           "If a route tells you to recharge spent Batteries in vanilla Survival, stop and check the mod list. The current repository data has no recharge-station entry and no spent-battery mechanic."
@@ -678,7 +678,7 @@
     "imageAlt": "Scrap Mechanic workshop used for schematic and crafting planning",
     "gameVersion": "1.0.5",
     "published": "2026-08-31",
-    "updated": "2026-09-08",
+    "updated": "2026-10-08",
     "readingTime": "14 min",
     "quickAnswer": "If you need to know how to get schematics in Scrap Mechanic, collect Schematic Boxes, scan eligible blue-icon parts, complete verified quest or trader unlocks, and register the result at the Schematicbot. A Schematic Box scan consumes one box and unlocks one random eligible recipe for the save. A blue-icon part scan is exact: bring the part, scan it, then confirm the recipe at the correct crafting station.",
     "media": [
@@ -779,7 +779,7 @@
     ],
     "sections": [
       {
-        "heading": "How to Get Schematics in Scrap Mechanic: quick answer",
+        "heading": "Turn a Schematic Box into a Crafting Unlock",
         "paragraphs": [
           "Do not stop at picking up a Schematic Box. The useful state is the registered recipe after the Schematicbot scan and final unlock confirmation.",
           "The box does not produce a finished item. It opens a recipe, and the item still needs its normal station, materials, and craft time."

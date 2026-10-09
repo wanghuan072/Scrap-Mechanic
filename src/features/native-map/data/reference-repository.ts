@@ -3,6 +3,7 @@ import type { MapLocation, MapRepository, WorldMap } from "../domain/map-model";
 export interface GeneratedEnvelope { schemaVersion: number; gameVersion: string; contentHash: string }
 interface LocationsBundle extends GeneratedEnvelope { locations: MapLocation[] }
 interface ReferenceWorldBundle extends GeneratedEnvelope { world: WorldMap }
+interface ReferenceBootstrapBundle extends ReferenceWorldBundle { worldContentHash: string }
 export interface BuildInfoBundle extends GeneratedEnvelope { files: Array<{ name: string; contentHash: string; bytes: number }> }
 
 function canonicalize(value: unknown): unknown {
@@ -78,6 +79,24 @@ export class ReferenceMapRepository implements MapRepository {
 
   async loadLocations(): Promise<MapLocation[]> { return (await this.loadLocationsBundle()).locations; }
 
+  async loadInitialSurface(): Promise<WorldMap> {
+    try {
+      const expected = await this.ensureBuildInfo();
+      const [bundle, locations] = await Promise.all([
+        this.fetchBundle<ReferenceBootstrapBundle>("reference-bootstrap.json", expected),
+        this.loadLocations(),
+      ]);
+      if (bundle.worldContentHash !== expected.files.find((file) => file.name === "reference-world.json")?.contentHash
+        || bundle.world.source !== "reference" || bundle.world.isOverviewOnly !== true) {
+        throw new Error("Reference bootstrap does not match the verified world.");
+      }
+      return { ...bundle.world, sourceContentHash: bundle.worldContentHash, locations };
+    } catch {
+      // 旧部署或轻量数据损坏时继续使用完整数据，保留所有功能。
+      return this.loadSurface();
+    }
+  }
+
   async loadSurface(): Promise<WorldMap> {
     try {
       const [bundle, locations, buildInfo] = await Promise.all([
@@ -88,7 +107,12 @@ export class ReferenceMapRepository implements MapRepository {
       if (bundle.gameVersion !== buildInfo.gameVersion) {
         throw new Error("Generated reference surface has a mismatched game version.");
       }
-      return { ...bundle.world, id: "surface", locations };
+      return {
+        ...bundle.world,
+        id: "surface",
+        sourceContentHash: bundle.contentHash,
+        locations
+      };
     } catch (error) {
       const message = error instanceof Error ? error.message : "unknown data loading error";
       throw new Error(`Could not open the surface map. Rebuild map data and try again. ${message}`);

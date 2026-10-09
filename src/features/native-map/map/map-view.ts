@@ -1,5 +1,6 @@
 import * as L from "leaflet";
 import type { TerrainCoverageSummary } from "../components/terrain-coverage";
+import { createSurfaceNotice } from "../components/surface-notice";
 import { getMapLayerDefinition } from "../domain/map-layers";
 import {
   MAX_MAP_ZOOM,
@@ -39,6 +40,7 @@ export type MapViewport = Pick<MapUiState, "center" | "zoom">;
 export interface MapViewCallbacks {
   onViewportChange(viewport: MapViewport): void;
   onLocationSelect(locationId: string): void;
+  onLocationNameSelect(instance: LocationNameInventory["instances"][number]): void;
   onPlayerMarkerSelect(markerId: string): void;
   onMarkerPlacement(position: PlayerMarkerPosition): void;
 }
@@ -120,13 +122,13 @@ export function createMapView(
   const renderClient = options.surfaceRenderClient ?? new SurfaceRenderClient();
   const chunkLayer = options.surfaceChunkLayer ?? new SurfaceChunkLayer(map);
   const locationLayer = createLocationLayer(map, callbacks.onLocationSelect);
-  const poiLabelLayer = createPoiLabelLayer(map);
+  const poiLabelLayer = createPoiLabelLayer(map, callbacks.onLocationNameSelect);
   const playerMarkerLayer = createPlayerMarkerLayer(map, callbacks.onPlayerMarkerSelect);
   const playerContentLayer = options.playerContentLayer ?? createPlayerContentLayer(map);
   const coordinateGrid = element.querySelector<HTMLElement>("[data-coordinate-grid]");
   let names: LocationNameInventory = { groups: [], instances: [] };
   let selectedNameTypes: readonly string[] = [];
-  let worldBounds: L.LatLngBoundsExpression | undefined;
+  let worldBounds: L.LatLngBounds | undefined;
   let terrainVisible = true;
   let markerPlacement = false;
   let generation = 0;
@@ -148,10 +150,23 @@ export function createMapView(
     poiLabelLayer.setVisible(selectedNameTypes.length > 0);
   };
   const updateVisibleChunks = () => chunkLayer.updateVisible(visibleCellBounds(map));
+  const surfaceNotice = createSurfaceNotice(element, updateVisibleChunks);
   const fitWorld = (world: WorldMap) => {
     const bounds = cellBoundsToMapPointBounds(world.bounds);
-    worldBounds = [[bounds.min.y, bounds.min.x], [bounds.max.y, bounds.max.x]];
-    map.fitBounds(worldBounds, { animate: false });
+    worldBounds = L.latLngBounds(
+      [bounds.min.y, bounds.min.x],
+      [bounds.max.y, bounds.max.x]
+    );
+    fitWorldCover(worldBounds);
+  };
+  const fitWorldCover = (bounds: L.LatLngBounds): void => {
+    map.invalidateSize({ pan: false });
+    const coverZoom = map.getBoundsZoom(bounds, true);
+    const zoom = Math.min(
+      MAX_MAP_ZOOM,
+      Math.max(MIN_MAP_ZOOM, Number.isFinite(coverZoom) ? coverZoom : MIN_MAP_ZOOM)
+    );
+    map.setView(bounds.getCenter(), zoom, { animate: false });
   };
   const setMarkerPlacementMode = (enabled: boolean) => {
     markerPlacement = enabled;
@@ -240,7 +255,7 @@ export function createMapView(
     },
     setLocations(locations) { locationLayer.setLocations(locations); },
     setLocationNames(inventory, selectedTypeIds) {
-      names = { groups: [...inventory.groups], instances: [...inventory.instances] };
+      names = inventory;
       selectedNameTypes = [...selectedTypeIds];
       applyNames();
     },
@@ -280,13 +295,14 @@ export function createMapView(
     },
     zoomIn() { map.zoomIn(1, { animate: false }); },
     zoomOut() { map.zoomOut(1, { animate: false }); },
-    resetView() { if (worldBounds) map.fitBounds(worldBounds, { animate: false }); },
+    resetView() { if (worldBounds) fitWorldCover(worldBounds); },
     getViewport,
     destroy() {
       setMarkerPlacementMode(false);
       generation += 1;
       pending = undefined;
       renderClient.dispose();
+      surfaceNotice.destroy();
       chunkLayer.dispose();
       locationLayer.destroy();
       poiLabelLayer.destroy();

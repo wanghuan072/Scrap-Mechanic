@@ -106,18 +106,28 @@ export function createLocationLayer(
       icon: L.divIcon({
         className: "map-location-icon",
         html: markerButtonMarkup(location),
-        iconSize: [40, 40],
-        iconAnchor: [20, 20]
+        iconSize: [40, 46],
+        iconAnchor: [20, 44]
       }),
       keyboard: false,
       title: location.name
     });
-    marker.on("click", () => {
+    const handleSelection = () => {
       spiderfiedLocationIds = undefined;
       selectLocation(location.id, { focus: false });
       onLocationSelect(location.id);
-    });
+    };
+    marker.on("click", handleSelection);
     marker.addTo(renderedLayer);
+    const button = marker
+      .getElement()
+      ?.querySelector<HTMLButtonElement>("[data-map-location-id]");
+    button?.addEventListener("click", (event) => {
+      // Leaflet does not consistently forward clicks from nested native buttons.
+      // Handle the accessible button directly so every marker opens its details.
+      event.stopPropagation();
+      handleSelection();
+    });
     markers.set(location.id, { location, marker });
   };
 
@@ -373,7 +383,12 @@ function markerButtonMarkup(location: MapLocation): string {
   return `<button class="map-location-marker" type="button"
     data-map-location-id="${locationId}" aria-pressed="false"
     aria-label="${mapLocationLabel}: ${name}">
-    <span class="map-location-marker__icon" aria-hidden="true">&#8982;</span>
+    <span class="map-location-marker__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 30" focusable="false">
+        <path d="M12 1.5c-5.8 0-10.5 4.6-10.5 10.3 0 7.4 9.1 16.1 9.5 16.5.6.5 1.4.5 2 0 .4-.4 9.5-9.1 9.5-16.5C22.5 6.1 17.8 1.5 12 1.5Z" />
+        <circle cx="12" cy="11.8" r="4.1" />
+      </svg>
+    </span>
     <span class="location-card__marker" data-category="${category}"
       aria-hidden="true"></span>
     <span class="visually-hidden">${mapLocationLabel}: ${name}</span>

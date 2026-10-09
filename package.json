@@ -7,6 +7,8 @@
     "prebuild": "npm run audit:data",
     "build": "next build",
     "start": "next start",
+    "build:map-overview": "node scripts/map/build-reference-overview.mjs",
+    "build:map-bootstrap": "node scripts/map/build-reference-bootstrap.mjs",
     "lint": "eslint",
     "test": "vitest run",
     "audit:data": "node scripts/audit/data.mjs",
@@ -19,7 +21,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "leaflet": "^1.9.4",
     "lz4js": "^0.2.0",
-    "next": "16.2.12",
+    "next": "16.4.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "sql.js": "^1.13.0"
@@ -31,19 +33,20 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.12",
+    "eslint-config-next": "16.4.0",
+    "sharp": "0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   },
   "overrides": {
     "next": {
-      "postcss": "8.5.25",
-      "sharp": "0.35.3"
+      "sharp": "0.35.5"
     },
-    "brace-expansion": "5.0.9",
-    "js-yaml": "5.2.3",
+    "brace-expansion": "5.0.12",
+    "js-yaml": "5.4.3",
     "minimatch": "10.2.6",
-    "nanoid": "3.3.17"
+    "nanoid": "3.3.18",
+    "source-map-js": "1.2.2"
   }
 }

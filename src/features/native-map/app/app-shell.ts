@@ -75,6 +75,12 @@ export interface PersonalModeSummary {
   coverage?: TerrainCoverageSummary;
 }
 
+export interface MapBusyState {
+  title: string;
+  message: string;
+  progress?: number;
+}
+
 export interface AppShell {
   renderLocations(
     input: MapLocation[] | LocationBrowserRenderInput,
@@ -94,6 +100,7 @@ export interface AppShell {
   setPlayerMarkerActionsDisabled(disabled: boolean): void;
   setMarkerEditorError(message: string): void;
   setMode(mode: AppMode, fileName?: string, summary?: PersonalModeSummary): void;
+  setBusy(state?: MapBusyState): void;
   setStatus(message: string): void;
   destroy(): void;
 }
@@ -124,11 +131,13 @@ export function createAppShell(root: HTMLElement, callbacks: AppCallbacks): AppS
           <strong>${locationBrowserLabel}</strong>
           <button class="drawer-close" type="button">${closeFilters}</button>
         </div>
-        <div class="location-browser" data-location-browser></div>
         <section class="save-entry" data-save-entry></section>
-        <section class="progress-summary" data-progress-summary hidden></section>
-        <button class="mobile-exit-save-button" type="button"
-          data-mobile-exit-save hidden>${exitSaveMode}</button>
+        <div class="location-panel__tools">
+          <div class="location-browser" data-location-browser></div>
+          <section class="progress-summary" data-progress-summary hidden></section>
+          <button class="mobile-exit-save-button" type="button"
+            data-mobile-exit-save hidden>${exitSaveMode}</button>
+        </div>
       </aside>
       <section id="map" class="map-panel" role="region" aria-label="${interactiveMap}"
         tabindex="0">
@@ -148,6 +157,22 @@ export function createAppShell(root: HTMLElement, callbacks: AppCallbacks): AppS
         data-location-details tabindex="-1"></aside>
       <button class="drawer-backdrop" type="button" aria-label="${closeFilters}"
         tabindex="-1"></button>
+      <div class="map-busy-overlay" data-map-busy hidden role="status"
+        aria-live="polite" aria-atomic="true">
+        <div class="map-busy-card">
+          <div class="native-map-loader" aria-hidden="true">
+            <span class="native-map-loader__orbit"></span>
+            <span class="native-map-loader__core"></span>
+          </div>
+          <span class="map-busy-card__eyebrow">LOCAL SAVE / BROWSER PROCESSING</span>
+          <strong data-map-busy-title>Building your personal map</strong>
+          <span data-map-busy-message>Reading the local save…</span>
+          <div class="map-busy-progress" aria-hidden="true">
+            <span data-map-busy-progress></span>
+          </div>
+          <span class="map-busy-card__privacy">LOCAL MEMORY ONLY · NOTHING IS UPLOADED</span>
+        </div>
+      </div>
       <div class="status-readout" aria-live="polite" aria-atomic="true"
         data-status></div>
     </div>
@@ -187,6 +212,10 @@ export function createAppShell(root: HTMLElement, callbacks: AppCallbacks): AppS
     "[data-map-readout]"
   )!;
   const status = root.querySelector<HTMLElement>("[data-status]")!;
+  const busyOverlay = root.querySelector<HTMLElement>("[data-map-busy]")!;
+  const busyTitle = root.querySelector<HTMLElement>("[data-map-busy-title]")!;
+  const busyMessage = root.querySelector<HTMLElement>("[data-map-busy-message]")!;
+  const busyProgress = root.querySelector<HTMLElement>("[data-map-busy-progress]")!;
   const mobileViewport = window.matchMedia?.("(max-width: 759px)");
   let markerPlacementMode = false;
   let markerEditorMode: "official" | "empty" | "draft" | "view" | "edit" =
@@ -368,6 +397,25 @@ export function createAppShell(root: HTMLElement, callbacks: AppCallbacks): AppS
       );
       exitSaveButton.hidden = !isSaveMode;
       mobileExitSaveButton.hidden = !isSaveMode;
+    },
+    setBusy(nextState) {
+      const busy = Boolean(nextState);
+      shell.dataset.busy = String(busy);
+      shell.setAttribute("aria-busy", String(busy));
+      busyOverlay.hidden = !busy;
+      saveEntry.setBusy(busy);
+      exitSaveButton.disabled = busy;
+      mobileExitSaveButton.disabled = busy;
+      filterToggle.disabled = busy;
+      if (!nextState) return;
+      busyTitle.textContent = nextState.title;
+      busyMessage.textContent = nextState.message;
+      const progress = Math.min(100, Math.max(0, nextState.progress ?? 0));
+      busyProgress.style.width = `${progress}%`;
+      busyProgress.parentElement?.toggleAttribute(
+        "data-indeterminate",
+        nextState.progress === undefined
+      );
     },
     setStatus(message) {
       status.textContent = message;

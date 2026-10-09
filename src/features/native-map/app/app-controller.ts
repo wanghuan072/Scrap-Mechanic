@@ -17,6 +17,7 @@ import {
 } from "../map/map-view";
 import {
   buildLocationNameInventory,
+  type LocationNameInstance,
   type LocationNameInventory
 } from "../map/location-name-inventory";
 import { createAppShell, type AppShell } from "./app-shell";
@@ -55,6 +56,17 @@ const stageMessages: Record<SaveStage, string> = {
   compositing: "Composing the personal surface…",
   normalizing: "Validating the personal map…",
   rendering: "Preparing the first map frame…"
+};
+
+const stageProgress: Record<SaveStage, number> = {
+  reading: 8,
+  sqlite: 20,
+  decompressing: 34,
+  decoding: 50,
+  "player-content": 64,
+  normalizing: 76,
+  compositing: 88,
+  rendering: 96
 };
 
 function availableLocationTypeIds(inventory: LocationNameInventory): Set<string> {
@@ -118,19 +130,19 @@ export async function startApp(
   repository: MapRepository,
   options: StartAppOptions = {}
 ): Promise<AppController> {
+  const progressiveReference = Boolean(repository.loadInitialSurface);
+  let resourceRequest: Promise<VendorMarkerCatalog> | undefined;
+  const loadResources = () => resourceRequest ??= options.loadVendorMarkerCatalog
+    ? options.loadVendorMarkerCatalog().catch((error: unknown) => ({
+        definitions: [], diagnostics: [error instanceof Error ? error.message : "Optional resource markers could not be loaded."],
+      }))
+    : Promise.resolve({ definitions: [], diagnostics: [] });
   const [staticCatalog, vendorMarkerCatalog, referenceSurface] = await Promise.all([
     repository.loadLocations(),
-    options.loadVendorMarkerCatalog
-      ? options.loadVendorMarkerCatalog().catch((error: unknown) => ({
-          definitions: [],
-          diagnostics: [
-            error instanceof Error
-              ? error.message
-              : "Optional resource marker data could not be loaded."
-          ]
-        }))
+    !progressiveReference
+      ? loadResources()
       : Promise.resolve({ definitions: [], diagnostics: [] }),
-    repository.loadSurface()
+    repository.loadInitialSurface?.() ?? repository.loadSurface()
   ]);
   const parsedState = parseUiState(window.location.search);
   const initialParams = new URLSearchParams(window.location.search);
@@ -147,7 +159,7 @@ export async function startApp(
     ...parsedState,
     selectedLocationId: initialSelection?.id
   };
-  const markerDefinitions: readonly VendorMarkerDefinition[] =
+  let markerDefinitions: readonly VendorMarkerDefinition[] =
     vendorMarkerCatalog.definitions;
   let activeSaveProgress: SaveProgress | undefined;
   let activeLocationIdsByProgressId = new Map<string, readonly string[]>();
@@ -202,7 +214,14 @@ export async function startApp(
           [...availableLocationTypeIds(locationNameInventory)],
           locationNameInventory
         )
-      : normalizeLocationTypeIds(state.locationTypeIds, locationNameInventory)
+      : world.isOverviewOnly && initialParams.has("locationTypes")
+        ? state.locationTypeIds
+        : normalizeLocationTypeIds(
+          initialParams.has("locationTypes")
+            ? state.locationTypeIds
+            : ["fixed:mechanic-station", "generated:major", "generated:warehouse"],
+          locationNameInventory
+        )
   };
   const playerMarkerStore = options.playerMarkerStore
     ?? createBrowserPlayerMarkerStore();
@@ -219,6 +238,7 @@ export async function startApp(
   let personalWorld: typeof world | undefined;
   let activeSaveSelection: object | undefined;
   let visiblePlayerMarkers: PlayerMarker[] = [];
+  let selectedLocationName: LocationNameInstance | undefined;
   let selectedPlayerMarkerId: string | undefined;
   let playerMarkerDraft: PlayerMarkerDraft | undefined;
   let markerEditorMode: "empty" | "draft" | "view" | "edit" = "empty";
@@ -266,10 +286,23 @@ export async function startApp(
     location.id === state.selectedLocationId
     || (matchesQuery(location) && matchesCategories(location))
   );
-  const getSelectedLocation = (): MapLocation | undefined =>
-    state.selectedLocationId
+  const getSelectedLocation = (): MapLocation | undefined => {
+    if (selectedLocationName) {
+      return {
+        id: selectedLocationName.id,
+        name: selectedLocationName.label,
+        category: "poi",
+        precision: "exact",
+        position: { ...selectedLocationName.position },
+        questIds: [],
+        resourceIds: [],
+        enemyIds: []
+      };
+    }
+    return state.selectedLocationId
       ? catalog.find((location) => location.id === state.selectedLocationId)
       : undefined;
+  };
   const matchesPlayerMarkerQuery = (marker: PlayerMarker): boolean => {
     const query = state.query.trim().toLocaleLowerCase();
     return query.length === 0
@@ -435,6 +468,7 @@ export async function startApp(
     }
 
     clearPlayerMarkerWork();
+    selectedLocationName = undefined;
     saveGeneration += 1;
     activeSaveSelection = undefined;
     saveClient.cancel();
@@ -443,6 +477,15 @@ export async function startApp(
     state = { ...state, selectedLocationId: location.id };
     render(false, undefined, true);
     options.integration?.onLocationChange?.(location.id, location.category);
+  };
+  const selectLocationName = (instance: LocationNameInstance): void => {
+    clearPlayerMarkerWork();
+    selectedLocationName = instance;
+    state = { ...state, selectedLocationId: undefined };
+    map.selectLocation(undefined, { focus: false });
+    render(false, undefined, false, false);
+    renderSelectionDetails(false);
+    options.integration?.onLocationChange?.(instance.id, "poi");
   };
   const renderActiveProgress = (): void => {
     if (!activeSaveProgress) {
@@ -500,6 +543,7 @@ export async function startApp(
     }
 
     clearPlayerMarkerWork(false);
+    selectedLocationName = undefined;
     selectedPlayerMarkerId = marker.id;
     markerEditorMode = "view";
     state = { ...state, selectedLocationId: undefined };
@@ -513,6 +557,7 @@ export async function startApp(
     }
     placingPlayerMarker = true;
     playerMarkerDraft = undefined;
+    selectedLocationName = undefined;
     selectedPlayerMarkerId = undefined;
     markerEditorMode = "empty";
     state = { ...state, selectedLocationId: undefined };
@@ -638,13 +683,24 @@ export async function startApp(
     saveClient.cancel();
     map.discardPreparedWorld();
     shell.setStatus(stageMessages.reading);
+    shell.setBusy({
+      title: "Building your personal map",
+      message: stageMessages.reading,
+      progress: stageProgress.reading
+    });
     let prepared: PreparedMapWorld | undefined;
     try {
+      markerDefinitions = (await loadResources()).definitions;
       const tileCatalog = await getTileCatalog();
       if (destroyed || generation !== saveGeneration) return;
       const save = await saveClient.parseSave(file, (stage) => {
           if (!destroyed && generation === saveGeneration) {
             shell.setStatus(stageMessages[stage]);
+            shell.setBusy({
+              title: "Building your personal map",
+              message: stageMessages[stage],
+              progress: stageProgress[stage]
+            });
           }
         }, tileCatalog);
       if (destroyed || generation !== saveGeneration) {
@@ -666,6 +722,11 @@ export async function startApp(
         return;
       }
       shell.setStatus(stageMessages.compositing);
+      shell.setBusy({
+        title: "Building your personal map",
+        message: stageMessages.compositing,
+        progress: stageProgress.compositing
+      });
       prepared = await map.prepareWorld(
         candidateWorld,
         save.playerContent
@@ -719,6 +780,7 @@ export async function startApp(
       finishMarkerTransition(markerTransition);
       if (activeSaveSelection === selection) {
         activeSaveSelection = undefined;
+        shell.setBusy();
       }
     }
   };
@@ -732,6 +794,11 @@ export async function startApp(
     const exitLoadGeneration = ++loadGeneration;
     saveClient.cancel();
     map.discardPreparedWorld();
+    shell.setBusy({
+      title: "Restoring the reference map",
+      message: "Loading verified reference terrain…",
+      progress: 24
+    });
     let preparedReference: PreparedMapWorld | undefined;
     try {
       const baseWorld = await repository.loadSurface();
@@ -745,6 +812,11 @@ export async function startApp(
         return;
       }
       shell.setStatus(stageMessages.compositing);
+      shell.setBusy({
+        title: "Restoring the reference map",
+        message: stageMessages.compositing,
+        progress: 76
+      });
       preparedReference = await map.prepareWorld(baseWorld);
       if (
         destroyed
@@ -770,6 +842,7 @@ export async function startApp(
       renderActiveProgress();
       shell.setStatus("");
       render(false);
+      shell.setBusy();
     } catch (error) {
       map.discardPreparedWorld(preparedReference);
       if (
@@ -779,6 +852,7 @@ export async function startApp(
         && personalWorld === exitingPersonalWorld
       ) {
         finishMarkerTransition(markerTransition);
+        shell.setBusy();
         shell.setStatus(error instanceof Error ? error.message : "The base map could not be restored.");
       }
     }
@@ -862,6 +936,9 @@ export async function startApp(
       onLocationSelect(locationId) {
         void selectLocation(locationId);
       },
+      onLocationNameSelect(instance) {
+        selectLocationName(instance);
+      },
       onPlayerMarkerSelect(markerId) {
         selectPlayerMarker(markerId);
       },
@@ -877,8 +954,10 @@ export async function startApp(
   shell.setMode("reference");
   options.integration?.onModeChange?.("reference");
   shell.renderProgress();
+  const initialViewport = hasInitialViewport ? { center: { ...state.center }, zoom: state.zoom } : undefined;
+  if (initialViewport) map.setViewport(initialViewport);
   render(
-    true,
+    false,
     hasInitialViewport
       ? {
           center: state.center,
@@ -887,6 +966,43 @@ export async function startApp(
       : undefined,
     Boolean(state.selectedLocationId)
   );
+  try {
+    const prepared = await map.prepareWorld(world);
+    await map.commitPreparedWorld(prepared);
+    if (initialViewport) map.setViewport(initialViewport);
+    render();
+  } catch (error) {
+    map.destroy();
+    saveClient.dispose();
+    shell.destroy();
+    throw error;
+  }
+
+  if (progressiveReference) {
+    const initialSaveGeneration = saveGeneration;
+    void Promise.all([
+      repository.loadSurface(),
+      loadResources(),
+    ]).then(async ([fullWorld, resources]) => {
+      markerDefinitions = resources.definitions;
+      if (destroyed || saveGeneration !== initialSaveGeneration || personalWorld) return;
+      const complete = withDerivedLocations(fullWorld);
+      const prepared = await map.prepareWorld(complete);
+      if (destroyed || saveGeneration !== initialSaveGeneration || personalWorld) {
+        map.discardPreparedWorld(prepared);
+        return;
+      }
+      const viewport = map.getViewport();
+      await map.commitPreparedWorld(prepared);
+      map.setViewport(viewport);
+      commitWorld(complete, { locationsDerived: true });
+      render();
+    }).catch((error: unknown) => {
+      if (!destroyed && saveGeneration === initialSaveGeneration) {
+        shell.setStatus(`Additional map details could not be loaded. ${error instanceof Error ? error.message : "Try reloading the map."}`);
+      }
+    });
+  }
   if (initialPlayerMarkerLoad.warning) {
     shell.setStatus(initialPlayerMarkerLoad.warning);
   }

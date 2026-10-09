@@ -49,6 +49,8 @@ export interface WorldMap {
   id: "surface";
   source: "reference" | "save";
   gameVersion: string;
+  sourceContentHash?: string;
+  isOverviewOnly?: boolean;
   saveVersion?: number;
   seed?: number;
   bounds: CellBounds;
@@ -69,5 +71,6 @@ export interface MapUiState {
 
 export interface MapRepository {
   loadLocations(): Promise<MapLocation[]>;
+  loadInitialSurface?(): Promise<WorldMap>;
   loadSurface(): Promise<WorldMap>;
 }

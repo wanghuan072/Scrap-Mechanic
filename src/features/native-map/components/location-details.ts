@@ -21,6 +21,7 @@ export function createLocationDetails(root: HTMLElement): LocationDetails {
   return {
     render(location) {
       root.dataset.hasSelection = String(Boolean(location));
+      root.scrollTop = 0;
       if (!location) {
         const heading = document.createElement("h2");
         heading.textContent = detailsHeading;

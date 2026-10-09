@@ -2,6 +2,8 @@ import * as L from "leaflet";
 import type { CellBounds } from "../domain/map-model";
 import {
   MAX_ACTIVE_SURFACE_CHUNKS,
+  shouldRenderSurfaceDetails,
+  surfaceDetailPixelsPerCell,
   type PreparedSurfaceFrame
 } from "../surface/surface-render-protocol";
 
@@ -21,6 +23,7 @@ export class SurfaceChunkLayer {
   private container?: HTMLDivElement;
   private visible = true;
   private readonly canvases = new Map<string, HTMLCanvasElement>();
+  private readonly canvasBitmaps = new Map<string, ImageBitmap>();
 
   constructor(map?: L.Map) {
     if (map) this.attach(map);
@@ -46,6 +49,7 @@ export class SurfaceChunkLayer {
     this.map?.off("zoom viewreset moveend", this.layout, this);
     this.container?.remove();
     this.canvases.clear();
+    this.canvasBitmaps.clear();
     this.container = undefined;
     this.map = undefined;
   }
@@ -79,6 +83,7 @@ export class SurfaceChunkLayer {
     this.visibilityRequest += 1;
     for (const canvas of this.canvases.values()) canvas.remove();
     this.canvases.clear();
+    this.canvasBitmaps.clear();
     previous?.dispose();
     this.updateVisible(frame.bounds);
   }
@@ -102,6 +107,13 @@ export class SurfaceChunkLayer {
     }
     const frame = this.committed;
     const request = ++this.visibilityRequest;
+    if (!this.map || !shouldRenderSurfaceDetails(this.map.getZoom())) {
+      frame.cancelChunks();
+      this.activeIds = [];
+      this.renderActive();
+      this.map?.getContainer().dispatchEvent(new Event("surface-ready"));
+      return;
+    }
     const visible = [...frame.chunks.values()]
       .filter((chunk) => intersects(chunk.bounds, bounds));
     for (const chunk of visible) this.recency.set(chunk.id, ++this.clock);
@@ -110,11 +122,16 @@ export class SurfaceChunkLayer {
     );
     this.activeIds = visible.slice(0, MAX_ACTIVE_SURFACE_CHUNKS).map((chunk) => chunk.id);
     this.renderActive();
-    void frame.ensureChunks(bounds).then(() => {
+    void frame.ensureChunks(bounds, () => {
       if (this.committed !== frame || request !== this.visibilityRequest) return;
       this.updateVisibleFromCache(bounds);
+    }, surfaceDetailPixelsPerCell(this.map.getZoom(), window.devicePixelRatio)).then(() => {
+      if (this.committed !== frame || request !== this.visibilityRequest) return;
+      this.updateVisibleFromCache(bounds);
+      this.map?.getContainer().dispatchEvent(new Event("surface-ready"));
     }).catch((error) => {
       if (this.committed !== frame || request !== this.visibilityRequest || !this.map) return;
+      if (error instanceof DOMException && error.name === "AbortError") return;
       this.map.getContainer().dispatchEvent(new CustomEvent("surface-error", {
         detail: error instanceof Error ? error.message : String(error)
       }));
@@ -152,14 +169,17 @@ export class SurfaceChunkLayer {
       if (!active.has(id)) {
         canvas.remove();
         this.canvases.delete(id);
+        this.canvasBitmaps.delete(id);
       }
     }
     for (const id of ["overview", ...this.activeIds]) {
-      if (this.canvases.has(id)) continue;
       const chunk = id === "overview"
         ? this.committed.overview
         : this.committed.chunks.get(id);
       if (!chunk) continue;
+      if (this.canvasBitmaps.get(id) === chunk.bitmap) continue;
+      // 同一分块放大后会升级位图；必须替换画布，而不是继续展示旧低清副本。
+      this.canvases.get(id)?.remove();
       const canvas = document.createElement("canvas");
       canvas.width = chunk.bitmap.width;
       canvas.height = chunk.bitmap.height;
@@ -171,6 +191,7 @@ export class SurfaceChunkLayer {
       context?.drawImage(chunk.bitmap, 0, 0);
       this.container.append(canvas);
       this.canvases.set(id, canvas);
+      this.canvasBitmaps.set(id, chunk.bitmap);
     }
     this.container.hidden = !this.visible;
     this.layout();

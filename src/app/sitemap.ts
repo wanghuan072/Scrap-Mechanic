@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy-policy", lastModified: "2026-09-29", priority: 0.3 },
     { path: "/terms-of-service", lastModified: "2026-09-29", priority: 0.3 },
     { path: "/copyright", lastModified: "2026-09-29", priority: 0.3 },
-    { path: "/map", lastModified: "2026-09-29", priority: 0.7 },
+    { path: "/map", lastModified: "2026-10-08", priority: 0.7 },
   ];
   const toIsoDate = (value: string) => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;

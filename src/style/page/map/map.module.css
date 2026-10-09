@@ -261,6 +261,30 @@
   background: #122932;
 }
 
+.sectionSelect {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sectionNav { overflow: visible; }
+  .sectionNavInner { min-width: 0; padding-block: 5px; }
+  .sectionNavInner > span, .sectionNavInner > a { display: none; }
+  .sectionSelect {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #425d66;
+    color: #e5eeed;
+    background: #0b1d24;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .sectionSelect:focus-visible { outline: 2px solid var(--orange-bright); outline-offset: 2px; }
+}
+
 .generatedSection,
 .mapSection,
 .regionSection,
