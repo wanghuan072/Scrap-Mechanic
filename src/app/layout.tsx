@@ -10,6 +10,8 @@ import "@/style/globals.css";
 
 // Google Analytics 4 衡量 ID，用于网站流量统计。
 const GA_MEASUREMENT_ID = "G-NRMF3E7FTM";
+// Google AdSense 发布商编号，与 public/ads.txt 中的编号保持一致。
+const ADSENSE_PUBLISHER_ID = "ca-pub-3939531187802459";
 
 const barlow = Barlow({
   variable: "--font-barlow",
@@ -32,6 +34,10 @@ export const metadata: Metadata = {
   description: pageTdk.home.description,
   keywords: pageTdk.home.keywords,
   applicationName: site.shortName,
+  // 将账号验证标记输出到原始 HTML，抓取工具无需执行页面脚本即可识别。
+  other: {
+    "google-adsense-account": ADSENSE_PUBLISHER_ID,
+  },
   icons: {
     icon: [{ url: "/images/ico.ico", type: "image/x-icon" }],
     shortcut: "/images/ico.ico",
@@ -49,6 +55,15 @@ export default function RootLayout({
       className={`${barlow.variable} ${barlowCondensed.variable}`}
       data-scroll-behavior="smooth"
     >
+      <head>
+        {/* Google AdSense：在原始 HTML 中异步加载，避免依赖页面激活后动态插入。 */}
+        <script
+          id="google-adsense"
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <JsonLd
           data={{
@@ -73,17 +88,6 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
-        {/*
-          Google AdSense 加载器，发布商 ID：ca-pub-3939531187802459。
-          各页面目前仍保留静态广告占位符，待后续添加具体 AdSense 广告单元。
-        */}
-        <Script
-          id="google-adsense"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3939531187802459"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         {/* Google Analytics 4：在浏览器空闲时加载，避免影响页面首屏内容。 */}
         <Script
           id="google-analytics-library"
