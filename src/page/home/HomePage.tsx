@@ -1,7 +1,6 @@
+/* eslint-disable @next/next/no-html-link-for-pages -- 遵循项目导航规则：进入独立页面时使用完整文档导航。 */
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import {
   recipeCollection,
@@ -157,6 +156,32 @@ const faqs = [
   },
 ];
 
+
+const homeIconPaths: Record<string, string> = {
+  "raid-calculator": "M5 3h14v18H5z M8 6h8 M8 10h1 M12 10h1 M16 10h1 M8 14h1 M12 14h1 M16 14h1 M8 18h1 M12 18h1 M16 18h1",
+  "crafting-planner": "m12 3 9 5-9 5-9-5 9-5Z M3 8v9l9 5 9-5V8 M12 13v9",
+  "wheel-angle-calculator": "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z M12 3v5 M12 16v5 M3 12h5 M16 12h5",
+  items: "M7 7V4h10v3 M4 7h16v14H4z M9 11h6",
+  blocks: "m12 3 9 5-9 5-9-5 9-5Z M3 8v9l9 5 9-5V8 M12 13v9",
+  parts: "M12 4v3 M12 17v3 M4 12h3 M17 12h3 M6 6l2 2 M16 16l2 2 M6 18l2-2 M16 8l2-2 M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z",
+  tools: "m14 4-3 5 4 4 5-3a7 7 0 0 1-8 8l-6 4-4-4 6-6a7 7 0 0 1 6-8Z",
+  weapons: "M9 21V7l3-4 3 4v14 M6 17h12 M9 10h6",
+  resources: "M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z M16 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z M5 13a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z",
+  crops: "M12 22V10 M12 14C3 14 3 8 3 4c6 0 9 3 9 10Z M12 10c0-5 4-8 9-8 0 6-3 8-9 8Z",
+  garments: "m8 3-6 4 3 5 3-2v11h8V10l3 2 3-5-6-4c0 5-8 5-8 0Z",
+  "quest-rewards": "m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z",
+  bots: "M12 2v4 M5 6h14v14H5z M2 10v6 M22 10v6 M8 11h1 M15 11h1 M9 16h6",
+  schematics: "M5 4h14v16H5z M8 8h8v8H8z M9 1v3 M15 1v3 M9 20v3 M15 20v3 M1 9h4 M1 15h4 M19 9h4 M19 15h4",
+};
+
+function HomeIcon({ name }: { name: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d={homeIconPaths[name] ?? homeIconPaths.blocks} />
+    </svg>
+  );
+}
+
 export default function Home() {
   const latestUpdate = updates[0];
   const updateBullets = latestUpdate.sections.flatMap((section) => section.bullets ?? []).slice(0, 4);
@@ -237,66 +262,40 @@ export default function Home() {
               and 1.0 compatibility checks — built for the decision in front of you.
             </p>
             <div className={styles.heroActions}>
-              <Link className={`${styles.heroButton} ${styles.orangeButton}`} href="/guides/beginner-first-hours">
+              <a className={`${styles.heroButton} ${styles.orangeButton}`} href="/guides/beginner-first-hours">
                 Start guide <span aria-hidden="true">›</span>
-              </Link>
-              <Link className={`${styles.heroButton} ${styles.blueButton}`} href="/wiki">
+              </a>
+              <a className={`${styles.heroButton} ${styles.blueButton}`} href="/wiki">
                 Open wiki <span aria-hidden="true">›</span>
-              </Link>
-              <Link className={`${styles.heroButton} ${styles.greenButton}`} href="/tools">
+              </a>
+              <a className={`${styles.heroButton} ${styles.greenButton}`} href="/tools">
                 Run tools <span aria-hidden="true">›</span>
-              </Link>
+              </a>
             </div>
           </div>
           <aside className={styles.heroBrief}>
             <span>Current release</span>
             <strong>{latestUpdate.title}</strong>
             <p>{latestUpdate.quickAnswer}</p>
-            <Link href={`/updates/${latestUpdate.slug}`}>Read briefing ›</Link>
+            <a href={`/updates/${latestUpdate.slug}`}>Read briefing ›</a>
           </aside>
         </div>
       </section>
 
-      <EvidenceStatus
-        label="Scrap Mechanic version and data status"
-        status="Live release confirmed"
-        title={`Scrap Mechanic ${site.currentVersion} is live`}
-        summary="The live game version and the checked version of a dataset are shown separately. Recipes, trades, unlocks, raid tables, and individual wiki entries keep their own version labels until they are re-extracted or retested."
-        facts={[
-          { label: "Live game", value: site.currentVersion },
-          { label: "Official patch", value: site.currentVersionPublished },
-          { label: "Status checked", value: site.lastChecked },
-        ]}
-        source={{
-          label: "Official patch note",
-          href: site.currentVersionSource,
-        }}
-        tone="confirmed"
-      />
+      <section className={`container ${styles.versionStrip}`} aria-label="Scrap Mechanic version and data status">
+        <div className={styles.liveVersion}><span>Live game</span><strong>{site.currentVersion}</strong></div>
+        <dl className={styles.versionFacts}>
+          <div><dt>Official patch</dt><dd>{site.currentVersionPublished}</dd></div>
+          <div><dt>Status checked</dt><dd>{site.lastChecked}</dd></div>
+        </dl>
+        <details className={styles.versionNote}>
+          <summary>Live release confirmed · Dataset status</summary>
+          <p>The live game version and the checked version of a dataset are shown separately. Recipes, trades, unlocks, raid tables, and individual wiki entries keep their own version labels until they are re-extracted or retested.</p>
+          <a href={site.currentVersionSource} target="_blank" rel="noopener noreferrer">Official patch note ↗</a>
+        </details>
+      </section>
 
       <div className={`container ${styles.dashboard}`}>
-        <section className={styles.panel}>
-          <div className={styles.sectionLabel}>
-            <div className={styles.sectionIntro}>
-              <h2>Working tools</h2>
-              <p>Open a calculator for raid pressure, material totals, or steering geometry.</p>
-            </div>
-            <Link href="/tools">Compare all tools →</Link>
-          </div>
-          <div className={styles.toolsGrid}>
-            {availableTools.map((tool) => (
-              <Link href={`/tools/${tool.slug}`} className={styles.toolCard} key={tool.slug}>
-                <div className={styles.toolSymbol}>{tool.symbol}</div>
-                <div>
-                  <h3>{tool.name}</h3>
-                  <p>{tool.description}</p>
-                  <span>Open tool ›</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
         <section className={`${styles.panel} ${styles.briefPanel}`}>
           <div className={styles.sectionLabel}>
             <div className={styles.sectionIntro}>
@@ -306,48 +305,15 @@ export default function Home() {
           </div>
           <div className={styles.briefGrid}>
             {briefing.map((item) => (
-              <Link href={item.href} key={item.label} className={styles.briefStat}>
+              <a href={item.href} key={item.label} className={styles.briefStat}>
                 <small>{item.label}</small>
                 <b>{item.value}</b>
-              </Link>
+              </a>
             ))}
             <div className={styles.briefMeta}>
               <span>Checked {site.lastChecked}</span>
               <strong>Live game {site.currentVersion}</strong>
             </div>
-          </div>
-        </section>
-
-        <section className={`${styles.panel} ${styles.updatePanel}`}>
-          <div className={styles.updateArt}>
-            <Image
-              src={latestUpdate.image}
-              alt={latestUpdate.imageAlt}
-              fill
-              sizes="(max-width: 768px) 100vw, 280px"
-              quality={82}
-            />
-          </div>
-          <div className={styles.updateInfo}>
-            <h2 className={styles.panelKicker}>Situation report</h2>
-            <h3>{latestUpdate.title}</h3>
-            <ul>
-              {updateBullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.updateMachine}>
-            <Image
-              src="/images/scrap-mechanic/screenshot-10.jpg"
-              alt="A Scrap Mechanic drilling vehicle"
-              fill
-              sizes="(max-width: 768px) 100vw, 260px"
-              quality={82}
-            />
-            <Link href="/updates">
-              All updates <span aria-hidden="true">›</span>
-            </Link>
           </div>
         </section>
 
@@ -357,17 +323,17 @@ export default function Home() {
               <h2>Start path</h2>
               <p>Five decisions that unlock the rest of Survival.</p>
             </div>
-            <Link href="/guides/beginner-first-hours">First hours →</Link>
+            <a href="/guides/beginner-first-hours">First hours →</a>
           </div>
           <div className={styles.startGrid}>
             {startSteps.map((step) => (
-              <Link href={step.href} className={styles.startCard} key={step.number}>
+              <a href={step.href} className={styles.startCard} key={step.number}>
                 <div className={styles.tileImage}>
                   <Image
                     src={step.image}
                     alt=""
                     fill
-                    sizes="96px"
+                    sizes="(max-width: 768px) 96px, 260px"
                     quality={82}
                   />
                 </div>
@@ -376,10 +342,65 @@ export default function Home() {
                   <h3>{step.title}</h3>
                   <p>{step.copy}</p>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </section>
+
+        <div className={styles.utilityRow}>
+        <section className={`${styles.panel} ${styles.splitPanel}`}>
+          <div className={styles.sectionLabel}>
+            <div className={styles.sectionIntro}>
+              <h2>Survival map and landmarks</h2>
+              <p>
+                View the reference map or a supported local Survival save in your browser.
+                Explore landmarks, progression routes, risks, and preparation.
+              </p>
+            </div>
+            <a href="/map">Open interactive map →</a>
+          </div>
+          <div className={styles.mapBody}>
+            <a href="/map#interactive-map" className={styles.mapPreview}>
+              <Image src="/map-assets/generated/reference-overview-61a4ead9b0ea2721.webp" alt="Reference Survival surface map with roads, islands and terrain" width={512} height={384} sizes="(max-width: 768px) 90vw, 360px" />
+              <span>Open interactive map →</span>
+            </a>
+          <div className={styles.landmarkGrid}>
+            {mapPreview.map((location) => (
+              <details key={location.slug} className={styles.landmarkCard}>
+                <summary>
+                  <a href={`/map#${location.slug}`}>
+                    <small>{location.type} · {location.danger}</small>
+                    <h3 className={styles.landmarkName}>{location.name}</h3>
+                  </a>
+                </summary>
+                <p>{location.description}</p>
+              </details>
+            ))}
+          </div>
+          </div>
+        </section>
+        <section className={styles.panel}>
+          <div className={styles.sectionLabel}>
+            <div className={styles.sectionIntro}>
+              <h2>Working tools</h2>
+              <p>Open a calculator for raid pressure, material totals, or steering geometry.</p>
+            </div>
+            <a href="/tools">Compare all tools →</a>
+          </div>
+          <div className={styles.toolsGrid}>
+            {availableTools.map((tool) => (
+              <a href={`/tools/${tool.slug}`} className={styles.toolCard} key={tool.slug}>
+                <div className={styles.toolSymbol}><HomeIcon name={tool.slug} /></div>
+                <div>
+                  <h3>{tool.name}</h3>
+                  <p>{tool.description}</p>
+                  <span>Open tool ›</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+        </div>
 
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
@@ -387,34 +408,49 @@ export default function Home() {
               <h2>Field manual</h2>
               <p>Two start points, then Survival / Building / Progression manuals.</p>
             </div>
-            <Link href="/guides">All {guides.length} guides →</Link>
+            <a href="/guides">All {guides.length} guides →</a>
           </div>
           <div className={styles.manualBody}>
             <div className={styles.manualLead}>
-              <Link href={`/guides/${leadGuide.slug}`} className={styles.guideFeature}>
+              <article className={styles.guideFeature}>
+              <a href={`/guides/${leadGuide.slug}`}>
                 <div className={styles.guideFeatureImage}>
                   <Image
                     src={leadGuide.image}
                     alt={leadGuide.imageAlt}
                     fill
-                    sizes="(max-width: 768px) 100vw, 40vw"
+                    sizes="(max-width: 768px) 140px, 220px"
                     quality={82}
                   />
                 </div>
                 <div>
                   <span>New world · {leadGuide.readingTime}</span>
                   <h3>{leadGuide.title}</h3>
-                  <p>{leadGuide.quickAnswer}</p>
                   <b>Open first-hours route →</b>
                 </div>
-              </Link>
+              </a>
+              <details className={styles.guideOverview}>
+                <summary>First-hours route overview</summary>
+                <p>{leadGuide.quickAnswer}</p>
+              </details>
+              </article>
               {returnGuide ? (
-                <Link href={`/guides/${returnGuide.slug}`} className={styles.returnCard}>
+                <article className={styles.returnCard}>
+                <a href={`/guides/${returnGuide.slug}`}>
+                  <div className={styles.returnImage}>
+                    <Image src={returnGuide.image} alt={returnGuide.imageAlt} fill sizes="(max-width: 768px) 140px, 220px" quality={82} />
+                  </div>
+                  <div>
                   <span>Existing save · {returnGuide.readingTime}</span>
                   <h3>{returnGuide.title}</h3>
-                  <p>{returnGuide.quickAnswer}</p>
                   <b>Read return brief →</b>
-                </Link>
+                  </div>
+                </a>
+                <details className={styles.guideOverview}>
+                  <summary>Save and compatibility overview</summary>
+                  <p>{returnGuide.quickAnswer}</p>
+                </details>
+                </article>
               ) : null}
             </div>
             <div className={styles.laneBoard}>
@@ -430,18 +466,19 @@ export default function Home() {
                         <p>{lane.copy}</p>
                       </div>
                     </header>
-                    {entries.map((guide, index) => (
-                      <Link
+                    {entries.map((guide) => (
+                      <a
                         href={`/guides/${guide.slug}`}
                         key={guide.slug}
-                        prefetch={false}
                       >
-                        <em>{String(index + 1).padStart(2, "0")}</em>
+                        <div className={styles.laneImage}>
+                          <Image src={guide.image} alt="" fill sizes="56px" quality={82} />
+                        </div>
                         <div>
                           <small>{guide.readingTime}</small>
                           <span>{guide.title}</span>
                         </div>
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 );
@@ -456,42 +493,39 @@ export default function Home() {
               <h2>Reference desk</h2>
               <p>Task indexes first, encyclopedia categories second.</p>
             </div>
-            <Link href="/wiki">Wiki directory →</Link>
+            <a href="/wiki">Wiki directory →</a>
           </div>
           <div className={styles.referenceBody}>
             <div className={styles.taskGrid}>
               {taskRoutes.map((task) => (
-                <Link
+                <a
                   href={task.href}
                   className={styles.taskCard}
                   key={task.href}
-                  prefetch={false}
                 >
                   <small>{task.verb}</small>
                   <h3>{task.title}</h3>
                   <b>{task.metric}</b>
                   <span>{task.detail}</span>
-                </Link>
+                </a>
               ))}
             </div>
             <div className={styles.wikiDirectory}>
-              {wikiCategories.map((category, index) => (
-                <Link
+              {wikiCategories.map((category) => (
+                <a
                   href={`/wiki/${category.slug}`}
                   className={styles.wikiTile}
                   key={category.slug}
-                  prefetch={false}
                 >
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <div className={styles.wikiThumb}>
-                    <Image src={category.image} alt="" fill sizes="72px" />
+                    <HomeIcon name={category.slug} />
                   </div>
                   <div>
                     <h3>{category.name}</h3>
                     <small>{getWikiEntriesByCategory(category.slug).length} entries</small>
                   </div>
                   <b aria-hidden="true">→</b>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -503,10 +537,10 @@ export default function Home() {
               <h2>Blueprints</h2>
               <p>Job-first builds with part counts and commissioning tests.</p>
             </div>
-            <Link href="/builds">All {builds.length} files →</Link>
+            <a href="/builds">All {builds.length} files →</a>
           </div>
           <div className={styles.buildShowcase}>
-            <Link href={`/builds/${leadBuild.slug}`} className={styles.buildFeature}>
+            <a href={`/builds/${leadBuild.slug}`} className={styles.buildFeature}>
               <Image
                 src={leadBuild.image}
                 alt={leadBuild.imageAlt}
@@ -519,68 +553,69 @@ export default function Home() {
                 <h3>{leadBuild.title}</h3>
                 <p>{leadBuild.description}</p>
               </div>
-            </Link>
+            </a>
             <div className={styles.buildStack}>
-              {featuredBuilds.slice(1, 6).map((build, index) => (
-                <Link
+              {featuredBuilds.slice(1, 6).map((build) => (
+                <a
                   href={`/builds/${build.slug}`}
                   key={build.slug}
-                  prefetch={false}
                 >
-                  <span>A-{String(index + 2).padStart(2, "0")}</span>
+                  <div className={styles.buildThumb}>
+                    <Image src={build.image} alt="" fill sizes="72px" quality={82} />
+                  </div>
                   <div>
                     <small>{build.category}</small>
                     <h3>{build.title}</h3>
                   </div>
                   <b aria-hidden="true">↗</b>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
         </section>
 
-        <section className={`${styles.panel} ${styles.splitPanel}`}>
-          <div className={styles.sectionLabel}>
-            <div className={styles.sectionIntro}>
-              <h2>Survival map and landmarks</h2>
-              <p>
-                Understand generated-world locations, progression routes, risks,
-                and preparation.
-              </p>
-            </div>
-            <Link href="/map">Open location guide →</Link>
+        <div className={styles.newsRow}>
+        <section className={`${styles.panel} ${styles.updatePanel}`}>
+          <div className={styles.updateArt}>
+            <Image
+              src={latestUpdate.image}
+              alt={latestUpdate.imageAlt}
+              fill
+              sizes="(max-width: 768px) 100vw, 280px"
+              quality={82}
+            />
           </div>
-          <div className={styles.landmarkGrid}>
-            {mapPreview.map((location) => (
-              <Link
-                href={`/map#${location.slug}`}
-                key={location.slug}
-                className={styles.landmarkCard}
-                prefetch={false}
-              >
-                <small>{location.type} · {location.danger}</small>
-                <h3>{location.name}</h3>
-                <p>{location.description}</p>
-              </Link>
-            ))}
+          <div className={styles.updateInfo}>
+            <h2 className={styles.panelKicker}>Situation report</h2>
+            <h3>{latestUpdate.title}</h3>
+            <p className={styles.updateAnswer}>{latestUpdate.quickAnswer}</p>
+            <ul>
+              {updateBullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.updateMachine}>
+
+            <a href="/updates">
+              All updates <span aria-hidden="true">›</span>
+            </a>
           </div>
         </section>
-
         <section className={styles.panel}>
           <div className={styles.sectionLabel}>
             <div className={styles.sectionIntro}>
               <h2>Workshop</h2>
               <p>Post-1.0 candidates, legacy dependencies, and current status warnings.</p>
             </div>
-            <Link href="/mods">Mods board →</Link>
+            <a href="/mods">Mods board →</a>
           </div>
           <div className={styles.modsGrid}>
             {featuredMods.map((mod, index) => (
-              <Link
+              <a
                 href={`/mods#${mod.slug}`}
                 key={mod.slug}
                 className={styles.modCard}
-                prefetch={false}
               >
                 <div className={styles.modImage}>
                   <Image
@@ -595,16 +630,22 @@ export default function Home() {
                   <span>
                     {String(index + 1).padStart(2, "0")} ·{" "}
                     {mod.workshopStatus === "removed-incompatible"
-                      ? "quarantined"
-                      : mod.compatibility}
+                      ? "Removed / incompatible"
+                      : mod.compatibility === "legacy-check"
+                        ? "Legacy compatibility check"
+                        : mod.compatibility === "recent-1-0-candidate"
+                          ? "Needs current-save testing"
+                          : mod.compatibility}
                   </span>
                   <h3>{mod.title}</h3>
                   <p>{mod.bestFor}</p>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
+          <p className={styles.modNote}>Test mods on a copied save before using them in your current world.</p>
         </section>
+        </div>
 
         <section className={`${styles.panel} ${styles.faqPanel}`}>
           <div className={styles.sectionLabel}>
@@ -624,7 +665,7 @@ export default function Home() {
           <aside className={styles.helpPanel}>
             <span>Need a lookup?</span>
             <p>Search guides, builds, quests, and wiki entries in one pass.</p>
-            <Link href="/search">Search field guide ›</Link>
+            <a href="/search">Search field guide ›</a>
           </aside>
         </section>
       </div>

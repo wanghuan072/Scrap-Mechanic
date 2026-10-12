@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const legacyContentDate = "2026-07-30";
   const legacyWikiEntryDate = "2026-07-31";
   const fixedRoutes = [
-    { path: "", lastModified: "2026-09-08", priority: 1 },
+    { path: "", lastModified: "2026-10-12", priority: 1 },
     { path: "/guides", lastModified: "2026-09-08", priority: 0.9 },
     { path: "/wiki", lastModified: "2026-09-08", priority: 0.9 },
     { path: "/wiki/quests", lastModified: "2026-07-31", priority: 0.8 },
