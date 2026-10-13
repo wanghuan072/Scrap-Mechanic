@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "@/style/page/wiki/wiki-category-planner.module.css";
 
 const toolJobs = [
@@ -151,9 +150,9 @@ export function WikiCategoryPlanner({ category }: { category: string }) {
           {toolJobs.map((job) => (
             <article key={job.scene}>
               <p>{job.scene}</p>
-              <Link href={job.href}>{job.tool} →</Link>
+              <a href={job.href}>{job.tool} →</a>
               <p>{job.proof}</p>
-              <Link href={job.next}>{job.nextLabel} →</Link>
+              <a href={job.next}>{job.nextLabel} →</a>
             </article>
           ))}
         </div>
@@ -183,12 +182,12 @@ export function WikiCategoryPlanner({ category }: { category: string }) {
           </div>
           {resourceRoutes.map((route) => (
             <article key={route.resource}>
-              <Link href={route.href}>{route.resource} →</Link>
+              <a href={route.href}>{route.resource} →</a>
               <p>{route.source}</p>
               <p>{route.method}</p>
               <div>
                 <p>{route.use}</p>
-                <Link href={route.link}>{route.linkLabel} →</Link>
+                <a href={route.link}>{route.linkLabel} →</a>
               </div>
             </article>
           ))}

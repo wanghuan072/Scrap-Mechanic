@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArticlePage } from "@/components/content/ArticlePage";
 import { raidLevels } from "@/lib/data/raid-calculator";
 import {
@@ -68,7 +67,7 @@ function RaidLevelScale() {
         <span>
           <b>100,000</b> is the intensity ceiling
         </span>
-        <Link href="/tools/raid-calculator">Calculate your farm →</Link>
+        <a href="/tools/raid-calculator">Calculate your farm →</a>
       </footer>
     </section>
   );

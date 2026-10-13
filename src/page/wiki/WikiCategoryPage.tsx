@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { BotFieldGuide } from "@/page/wiki/components/BotFieldGuide";
@@ -74,10 +74,10 @@ export default async function WikiCategoryPage({
                 and {recipeUnlockCollection.counts.dedicated} on dedicated routes.
               </p>
               <div className={styles.schematicActions}>
-                <Link href="/wiki/recipes?unlock=schematicbot#recipe-directory">
+                <a href="/wiki/recipes?unlock=schematicbot#recipe-directory">
                   Browse scan recipes
-                </Link>
-                <Link href="#trader-schematic-offers">Check trader offers</Link>
+                </a>
+                <a href="#trader-schematic-offers">Check trader offers</a>
               </div>
             </div>
 
@@ -130,6 +130,7 @@ export default async function WikiCategoryPage({
             </aside>
           </div>
         </section>
+        <AffiliateAd placement="top" />
 
         <section className={styles.schematicHow}>
           <div className={`container ${styles.schematicHowInner}`}>
@@ -145,9 +146,9 @@ export default async function WikiCategoryPage({
                 <span>01</span>
                 <div>
                   <h3>
-                    <Link href="/wiki/recipes?unlock=schematicbot#recipe-directory">
+                    <a href="/wiki/recipes?unlock=schematicbot#recipe-directory">
                       Schematicbot pool · 356
-                    </Link>
+                    </a>
                   </h3>
                   <p>
                     Scan a blue-icon part for its exact recipe without losing the
@@ -160,9 +161,9 @@ export default async function WikiCategoryPage({
                 <span>02</span>
                 <div>
                   <h3>
-                    <Link href="/wiki/recipes?unlock=trader#recipe-directory">
+                    <a href="/wiki/recipes?unlock=trader#recipe-directory">
                       Trader offers · 42
-                    </Link>
+                    </a>
                   </h3>
                   <p>
                     Pay the exact Farmers Hideout or Mining Hub cost. The recipe
@@ -174,9 +175,9 @@ export default async function WikiCategoryPage({
                 <span>03</span>
                 <div>
                   <h3>
-                    <Link href="/wiki/recipes?unlock=quest#recipe-directory">
+                    <a href="/wiki/recipes?unlock=quest#recipe-directory">
                       Quests and Farmer tasks · 65
-                    </Link>
+                    </a>
                   </h3>
                   <p>
                     Forty-seven story and side-quest rewards combine with eighteen
@@ -188,9 +189,9 @@ export default async function WikiCategoryPage({
                 <span>04</span>
                 <div>
                   <h3>
-                    <Link href="/wiki/recipes?unlock=growlab#recipe-directory">
+                    <a href="/wiki/recipes?unlock=growlab#recipe-directory">
                       Growlab rewards · 7
-                    </Link>
+                    </a>
                   </h3>
                   <p>
                     Each completed Growlab advances a fixed reward sequence,
@@ -202,9 +203,9 @@ export default async function WikiCategoryPage({
                 <span>05</span>
                 <div>
                   <h3>
-                    <Link href="/wiki/recipes?unlock=treasure#recipe-directory">
+                    <a href="/wiki/recipes?unlock=treasure#recipe-directory">
                       Refined treasures · 5
-                    </Link>
+                    </a>
                   </h3>
                   <p>
                     Coralium, Nimbolium, Lemonium, Sapphire, and Crystal recipes
@@ -216,9 +217,9 @@ export default async function WikiCategoryPage({
                 <span>06</span>
                 <div>
                   <h3>
-                    <Link href="/wiki/recipes?unlock=special#recipe-directory">
+                    <a href="/wiki/recipes?unlock=special#recipe-directory">
                       Warehouse progression · 1
-                    </Link>
+                    </a>
                   </h3>
                   <p>
                     Plasma Drill Level 1 is tied to Warehouse progression and does
@@ -250,10 +251,9 @@ export default async function WikiCategoryPage({
             </header>
             <div className={styles.schematicHelpLinks}>
               {entries.map((entry) => (
-                <Link
+                <a
                   href={`/wiki/${entry.category}/${entry.slug}`}
                   key={entry.slug}
-                  prefetch={false}
                 >
                   <span className={styles.schematicHelpImage}>
                     <Image
@@ -268,7 +268,7 @@ export default async function WikiCategoryPage({
                     <small>{entry.description}</small>
                   </span>
                   <b aria-hidden="true">↗</b>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -326,6 +326,7 @@ export default async function WikiCategoryPage({
         </div>
       </section>
 
+      <AffiliateAd placement="top" />
       <section className={styles.directory}>
         <div className={`container ${styles.directoryGrid}`}>
           <aside className={styles.categoryRail}>
@@ -337,28 +338,27 @@ export default async function WikiCategoryPage({
               {wikiCategories.map((item, index) => {
                 const count = getWikiEntriesByCategory(item.slug).length;
                 return (
-                  <Link
+                  <a
                     className={item.slug === slug ? styles.active : undefined}
                     href={`/wiki/${item.slug}`}
                     key={item.slug}
                     aria-current={item.slug === slug ? "page" : undefined}
-                    prefetch={false}
                   >
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <b>{item.name}</b>
                     <small>{count}</small>
-                  </Link>
+                  </a>
                 );
               })}
-              <Link href="/wiki/quests" prefetch={false}>
+              <a href="/wiki/quests">
                 <span>{String(wikiCategories.length + 1).padStart(2, "0")}</span>
                 <b>Quests</b>
                 <small>{quests.length}</small>
-              </Link>
+              </a>
             </nav>
-            <Link className={styles.allCategories} href="/wiki">
+            <a className={styles.allCategories} href="/wiki">
               Return to Wiki directory →
-            </Link>
+            </a>
           </aside>
 
           <div className={styles.entryIndex}>
@@ -416,11 +416,10 @@ export default async function WikiCategoryPage({
                 )}
                 <div className={styles.entryList}>
                   {entries.map((entry, index) => (
-                    <Link
+                    <a
                       className={styles.entry}
                       href={`/wiki/${entry.category}/${entry.slug}`}
                       key={entry.slug}
-                      prefetch={false}
                     >
                       <span className={styles.entryNumber}>{String(index + 1).padStart(2, "0")}</span>
                       <div className={styles.entryImage}>
@@ -445,7 +444,7 @@ export default async function WikiCategoryPage({
                         </dl>
                       </div>
                       <span className={styles.entryArrow} aria-hidden="true">↗</span>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </>

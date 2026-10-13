@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { buildFailureChecks } from "@/lib/data/builds";
@@ -305,7 +305,7 @@ export default function BuildsPage() {
               </p>
               <div className={styles.heroActions}>
                 <a href="#choose-a-job">Choose a job</a>
-                <Link href="/tools/crafting-planner">Plan crafting materials</Link>
+                <a href="/tools/crafting-planner">Plan crafting materials</a>
               </div>
             </div>
             <aside className={styles.heroPanel}>
@@ -331,14 +331,13 @@ export default function BuildsPage() {
               <div className={styles.heroParts} aria-label="Common build parts">
                 {["Lift", "Connect Tool", "Bearing", "Controller Level 1"].map(
                   (name) => (
-                    <Link
+                    <a
                       href={wikiHref(name)}
                       key={name}
                       title={name}
-                      prefetch={false}
                     >
                       <ItemIcon name={name} size={54} />
-                    </Link>
+                    </a>
                   ),
                 )}
               </div>
@@ -346,6 +345,7 @@ export default function BuildsPage() {
           </div>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <section className={styles.jobSection} id="choose-a-job">
         <div className="container">
@@ -380,11 +380,10 @@ export default function BuildsPage() {
                 spec.baseline.find((item) => item.label.includes("row"))?.value ??
                 spec.baseline[0].value;
               return (
-                <Link
+                <a
                   className={styles.comparisonRow}
                   href={`/builds/${job.slug}`}
                   key={job.slug}
-                  prefetch={false}
                 >
                   <div className={styles.comparisonBuild}>
                     <span>{job.number}</span>
@@ -427,7 +426,7 @@ export default function BuildsPage() {
                   <b className={styles.comparisonArrow} aria-hidden="true">
                     ↗
                   </b>
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -457,25 +456,24 @@ export default function BuildsPage() {
             </div>
             {botBuildRoutes.map((route) => (
               <article className={styles.botPressureRow} key={route.pressure}>
-                <Link href={route.botHref} prefetch={false}>
+                <a href={route.botHref}>
                   {route.bot} ↗
-                </Link>
+                </a>
                 <p data-label="Failure pressure">{route.pressure}</p>
-                <Link
+                <a
                   data-label="Use this blueprint"
                   href={route.href}
-                  prefetch={false}
                 >
                   {route.build} ↗
-                </Link>
+                </a>
                 <p data-label="Change before testing">{route.change}</p>
               </article>
             ))}
           </div>
           <div className={styles.botPressureLinks}>
-            <Link href="/wiki/bots">Compare every bot family →</Link>
-            <Link href="/tools/raid-calculator">Calculate the next crop raid →</Link>
-            <Link href="/wiki/crops">Plan the crop and seed route →</Link>
+            <a href="/wiki/bots">Compare every bot family →</a>
+            <a href="/tools/raid-calculator">Calculate the next crop raid →</a>
+            <a href="/wiki/crops">Plan the crop and seed route →</a>
           </div>
         </div>
       </section>
@@ -489,7 +487,7 @@ export default function BuildsPage() {
               The building tools solve different workshop problems. Use them in a
               deliberate order: support, connect, test, relocate, then label.
             </p>
-            <Link href="/wiki/tools">Browse every tool →</Link>
+            <a href="/wiki/tools">Browse every tool →</a>
           </header>
           <div className={styles.toolRows}>
             {toolGuide.map((tool, index) => {
@@ -498,15 +496,14 @@ export default function BuildsPage() {
               );
               return (
                 <article className={styles.toolRow} key={tool.name}>
-                  <Link
+                  <a
                     className={styles.toolIdentity}
                     href={wikiHref(tool.name)}
-                    prefetch={false}
                   >
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <ItemIcon name={tool.name} size={72} />
                     <h3>{tool.name}</h3>
-                  </Link>
+                  </a>
                   <div>
                     <span>Use it for</span>
                     <p>{tool.scene}</p>
@@ -543,16 +540,16 @@ export default function BuildsPage() {
               const build = builds.find((entry) => entry.slug === head.build)!;
               return (
                 <article key={head.name}>
-                  <Link href={wikiHref(head.name)} prefetch={false}>
+                  <a href={wikiHref(head.name)}>
                     <ItemIcon name={head.name} size={88} />
                     <span>Part file ↗</span>
-                  </Link>
+                  </a>
                   <div>
                     <h3>{head.name}</h3>
                     <p>{head.scene}</p>
-                    <Link href={`/builds/${head.build}`} prefetch={false}>
+                    <a href={`/builds/${head.build}`}>
                       Use in {build.title} →
-                    </Link>
+                    </a>
                   </div>
                 </article>
               );
@@ -584,13 +581,13 @@ export default function BuildsPage() {
             {progressionSystems.map((system) => (
               <article key={system.need}>
                 <p>{system.need}</p>
-                <Link href={system.machineHref} prefetch={false}>
+                <a href={system.machineHref}>
                   {system.machine} ↗
-                </Link>
+                </a>
                 <p>{system.boundary}</p>
-                <Link href={system.route} prefetch={false}>
+                <a href={system.route}>
                   {system.routeLabel} →
-                </Link>
+                </a>
               </article>
             ))}
           </div>
@@ -640,7 +637,7 @@ export default function BuildsPage() {
               Wheels, and prove steering at low engine power before adding a chest
               or body panels.
             </p>
-            <Link href="/builds/starter-car">Build the starter car →</Link>
+            <a href="/builds/starter-car">Build the starter car →</a>
           </div>
         </div>
       </section>

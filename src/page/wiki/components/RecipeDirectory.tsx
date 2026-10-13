@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import type {
@@ -61,9 +60,9 @@ function ItemName({
 }) {
   const href = wikiLinks[name.toLowerCase()];
   return href ? (
-    <Link href={href} prefetch={false}>
+    <a href={href}>
       {name}
-    </Link>
+    </a>
   ) : (
     <>{name}</>
   );

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SimplePage } from "@/components/common/SimplePage";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
@@ -45,10 +44,10 @@ export default function ContactUsPage() {
         </p>
         <h2>Reporting a guide, build, or calculator issue</h2>
         <p>
-          For a <Link className="text-link" href="/guides">guide</Link> or{" "}
-          <Link className="text-link" href="/builds">build</Link>, identify the step that
+          For a <a className="text-link" href="/guides">guide</a> or{" "}
+          <a className="text-link" href="/builds">build</a>, identify the step that
           failed, the parts or materials already used, and the result you expected. For
-          a <Link className="text-link" href="/tools">calculator</Link>, include every
+          a <a className="text-link" href="/tools">calculator</a>, include every
           input value, the displayed result, and the expected result so the calculation
           can be reproduced exactly.
         </p>
@@ -69,10 +68,10 @@ export default function ContactUsPage() {
         <p>
           A rights request should identify the disputed material, exact URL, rights
           holder, basis of the request, and the sender&apos;s authority to act. Review the{" "}
-          <Link className="text-link" href="/copyright">copyright notice</Link> before
+          <a className="text-link" href="/copyright">copyright notice</a> before
           sending a formal notice. Privacy questions should describe the website
           interaction at issue and can refer to the{" "}
-          <Link className="text-link" href="/privacy-policy">privacy policy</Link>.
+          <a className="text-link" href="/privacy-policy">privacy policy</a>.
         </p>
         <p>
           Do not email passwords, payment information, authentication codes, private

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { RaidCalculator } from "@/page/tools/components/RaidCalculator";
@@ -112,6 +112,7 @@ export default function RaidCalculatorPage() {
           </aside>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <EvidenceStatus
         label="Raid calculator data status"
@@ -142,12 +143,12 @@ export default function RaidCalculatorPage() {
             <p>
               The calculator handles the numerical raid decision. The live world still
               controls spawn direction, exact positions, pathfinding, and which valid
-              weighted enemy groups are rolled. Read the <Link
+              weighted enemy groups are rolled. Read the <a
                 className={styles.inlineGuideLink}
                 href="/guides/raid-levels"
               >
                 Raid Levels guide
-              </Link> for the full threshold and bot table.
+              </a> for the full threshold and bot table.
             </p>
           </header>
           <div className={styles.timingGrid}>
@@ -171,14 +172,14 @@ export default function RaidCalculatorPage() {
             <p>
               Crop count alone is not enough. A Pineapple contributes 1,000 points,
               while a Tomato contributes 1, so two equal-sized plots can create very
-              different raids. The <Link
+              different raids. The <a
                 className={styles.inlineGuideLink}
                 href="/guides/raid-levels"
               >
                 seven raid-level bands
-              </Link> explain where each threshold begins.
+              </a> explain where each threshold begins.
             </p>
-            <Link href="/wiki/crops">Browse the crop Wiki →</Link>
+            <a href="/wiki/crops">Browse the crop Wiki →</a>
           </header>
           <div className={styles.thresholdTable}>
             <div className={styles.tableHead}>
@@ -235,7 +236,7 @@ export default function RaidCalculatorPage() {
               Use these checks after the number is correct but the live farm does
               not behave the way an older raid guide describes.
             </p>
-            <Link href="/guides/farming-basics">Build the farm defense route →</Link>
+            <a href="/guides/farming-basics">Build the farm defense route →</a>
           </header>
           <div className={styles.faqList}>
             {raidFaq.map((item, index) => (

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { siteNavigation } from "@/config/site";
@@ -15,7 +14,7 @@ export function SiteHeader() {
       <div className="header-rivet header-rivet-left" aria-hidden="true" />
       <div className="header-rivet header-rivet-right" aria-hidden="true" />
       <div className="container header-content">
-        <Link
+        <a
           className="site-logo"
           href="/"
           aria-label="Scrap Mechanic home"
@@ -34,7 +33,7 @@ export function SiteHeader() {
             <strong>SCRAP MECHANIC</strong>
             <small>FIELD GUIDE</small>
           </span>
-        </Link>
+        </a>
 
         <nav className="desktop-navigation" aria-label="Primary navigation">
           {siteNavigation.map((item) => {
@@ -45,9 +44,9 @@ export function SiteHeader() {
                   ? pathname.startsWith("/wiki")
                   : pathname.startsWith(item.href);
             return (
-              <Link className={active ? "active" : ""} href={item.href} key={item.href}>
+              <a className={active ? "active" : ""} href={item.href} key={item.href}>
                 {item.label}
-              </Link>
+              </a>
             );
           })}
         </nav>
@@ -112,7 +111,7 @@ export function SiteHeader() {
                     ? pathname.startsWith("/wiki")
                     : pathname.startsWith(item.href);
               return (
-                <Link
+                <a
                   className={active ? "active" : ""}
                   href={item.href}
                   key={item.href}
@@ -120,7 +119,7 @@ export function SiteHeader() {
                 >
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   {item.label}
-                </Link>
+                </a>
               );
             })}
           </nav>

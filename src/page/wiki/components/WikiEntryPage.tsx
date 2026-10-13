@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
@@ -425,17 +425,17 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
               <span>Checked {entry.lastTested}</span>
               <span>{category?.focus}</span>
               {hasUnlockRoute && (
-                <Link href="#where-to-get-it">How to get it ↓</Link>
+                <a href="#where-to-get-it">How to get it ↓</a>
               )}
               {(craftingOptions.length > 0 ||
                 (entry.recipes?.length ?? 0) > 0) && (
-                <Link href="#current-recipes">Current recipe ↓</Link>
+                <a href="#current-recipes">Current recipe ↓</a>
               )}
               {relatedQuests.length > 0 && (
-                <Link href="#related-quests">Related quest ↓</Link>
+                <a href="#related-quests">Related quest ↓</a>
               )}
               {hasPlayerRelations && (
-                <Link href="#workshop-uses">Crafting & trade ↓</Link>
+                <a href="#workshop-uses">Crafting & trade ↓</a>
               )}
             </div>
           </div>
@@ -450,6 +450,7 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
           />
         </div>
       </section>
+      <AffiliateAd placement="top" />
       <EvidenceStatus
         label={`${entry.name} verification status`}
         status="Entry version boundary"
@@ -506,12 +507,12 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                       />
                     </p>
                     {relatedQuests.map(({ quest, reward }) => (
-                      <Link
+                      <a
                         href={`/wiki/quests#${quest.slug}`}
                         key={quest.slug}
                       >
                         {quest.title} · {reward.type}
-                      </Link>
+                      </a>
                     ))}
                   </article>
 
@@ -531,11 +532,11 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                           {garmentSiblings.map((item, index) => (
                             <span key={item.slug}>
                               {index > 0 ? ", " : ""}
-                              <Link
+                              <a
                                 href={`/wiki/${item.category}/${item.slug}`}
                               >
                                 {item.name}
-                              </Link>
+                              </a>
                             </span>
                           ))}
                           .
@@ -642,9 +643,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                           <span>{quest.phase}</span>
                           <h3>{quest.title}</h3>
                         </div>
-                        <Link href={`/wiki/quests#${quest.slug}`}>
+                        <a href={`/wiki/quests#${quest.slug}`}>
                           Open quest →
-                        </Link>
+                        </a>
                       </header>
                       <p className={styles.questSummary}>{quest.summary}</p>
                       <dl>
@@ -694,9 +695,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                               >
                                 <span>{questReward.type}</span>
                                 {questReward.wikiHref ? (
-                                  <Link href={questReward.wikiHref}>
+                                  <a href={questReward.wikiHref}>
                                     {questReward.name}
-                                  </Link>
+                                  </a>
                                 ) : (
                                   <b>{questReward.name}</b>
                                 )}
@@ -743,21 +744,21 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                             return (
                               <tr key={item.slug}>
                                 <td>
-                                  <Link
+                                  <a
                                     href={`/wiki/${item.category}/${item.slug}`}
                                   >
                                     {item.name}
-                                  </Link>
+                                  </a>
                                 </td>
                                 <td>{garmentSlot(item.name)}</td>
                                 {family !== "Scrapper" && (
                                   <td>
                                     {questLink ? (
-                                      <Link
+                                      <a
                                         href={`/wiki/quests#${questLink.quest.slug}`}
                                       >
                                         {questLink.quest.title}
-                                      </Link>
+                                      </a>
                                     ) : (
                                       "Progression reward"
                                     )}
@@ -843,9 +844,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                           </li>
                         ))}
                       </ul>
-                      <Link href={recipeSearchHref}>
+                      <a href={recipeSearchHref}>
                         Compare every matching recipe →
-                      </Link>
+                      </a>
                     </article>
                   )}
 
@@ -887,7 +888,7 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                           recipe directory.
                         </small>
                       )}
-                      <Link href={recipeSearchHref}>Search every use →</Link>
+                      <a href={recipeSearchHref}>Search every use →</a>
                     </article>
                   )}
 
@@ -944,9 +945,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                           );
                         })}
                       </ul>
-                      <Link href={tradeSearchHref}>
+                      <a href={tradeSearchHref}>
                         Compare every matching offer →
-                      </Link>
+                      </a>
                     </article>
                   )}
                 </div>
@@ -978,7 +979,7 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                         />
                       </p>
                       {location.href && (
-                        <Link href={location.href}>Open related entry →</Link>
+                        <a href={location.href}>Open related entry →</a>
                       )}
                     </article>
                   ))}
@@ -1015,9 +1016,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                         {quest.kind === "main" ? "main-story" : "side"} quest
                         during {quest.phase.toLowerCase()}.
                       </p>
-                      <Link href={`/wiki/quests#${quest.slug}`}>
+                      <a href={`/wiki/quests#${quest.slug}`}>
                         Open quest objectives →
-                      </Link>
+                      </a>
                     </article>
                   ))}
                 </div>
@@ -1242,9 +1243,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                     <ul>
                       {section.links.map((link) => (
                         <li key={link.href}>
-                          <Link href={link.href} prefetch={false}>
+                          <a href={link.href}>
                             {link.label}
-                          </Link>
+                          </a>
                           {link.description ? ` — ${link.description}` : null}
                         </li>
                       ))}
@@ -1262,12 +1263,12 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                 </p>
                 <div>
                   {relatedQuests.map(({ quest, reward }) => (
-                    <Link href={`/wiki/quests#${quest.slug}`} key={quest.slug}>
+                    <a href={`/wiki/quests#${quest.slug}`} key={quest.slug}>
                       <span>{quest.phase}</span>
                       <h3>{quest.title}</h3>
                       <p>Reward: {reward.name}</p>
                       <b>View quest →</b>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </section>
@@ -1279,12 +1280,12 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
               <p>
                 Wiki / {entry.category} / {entry.name}
               </p>
-              <Link
+              <a
                 className="button button-secondary"
                 href={`/wiki/${entry.category}`}
               >
                 View {entry.category}
-              </Link>
+              </a>
             </div>
             {connectedPages.length > 0 && (
               <div className="sidebar-panel">
@@ -1292,9 +1293,9 @@ export function WikiEntryPage({ entry }: { entry: WikiEntry }) {
                 <ul className="sidebar-links">
                   {connectedPages.slice(0, 12).map((item) => (
                     <li key={`${item.category}-${item.slug}`}>
-                      <Link href={`/wiki/${item.category}/${item.slug}`}>
+                      <a href={`/wiki/${item.category}/${item.slug}`}>
                         {item.name} <span aria-hidden="true">→</span>
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>

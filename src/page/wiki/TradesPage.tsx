@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { Suspense } from "react";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
@@ -105,8 +105,8 @@ export default function TradesPage() {
               be crafted.
             </p>
             <div className={styles.heroLinks}>
-              <Link href="/guides/farming-basics">Plan crop value and farm defense</Link>
-              <Link href="/wiki/recipes">Browse crafting recipes</Link>
+              <a href="/guides/farming-basics">Plan crop value and farm defense</a>
+              <a href="/wiki/recipes">Browse crafting recipes</a>
             </div>
           </div>
           <aside className={styles.pricePlate}>
@@ -129,6 +129,7 @@ export default function TradesPage() {
           </aside>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <EvidenceStatus
         label="Trader directory data status"

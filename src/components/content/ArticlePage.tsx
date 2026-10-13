@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import type { ReactNode } from "react";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import type { ArticleEntry } from "@/types/content";
@@ -113,6 +113,7 @@ export function ArticlePage({
           </div>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <EvidenceStatus
         label={`${entry.title} version status`}
@@ -243,9 +244,9 @@ export function ArticlePage({
                   <ul>
                     {section.links.map((link) => (
                       <li key={link.href}>
-                        <Link href={link.href} prefetch={false}>
+                        <a href={link.href}>
                           {link.label}
-                        </Link>
+                        </a>
                         {link.description ? ` — ${link.description}` : null}
                       </li>
                     ))}
@@ -282,12 +283,11 @@ export function ArticlePage({
                 <ul className="sidebar-links">
                   {relatedWiki.map((wiki) => (
                     <li key={wiki.slug}>
-                      <Link
+                      <a
                         href={`/wiki/${wiki.category}/${wiki.slug}`}
-                        prefetch={false}
                       >
                         {wiki.name} <span aria-hidden="true">→</span>
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -299,9 +299,9 @@ export function ArticlePage({
                 <ul className="sidebar-links">
                   {relatedGuides.map((guide) => (
                     <li key={guide.slug}>
-                      <Link href={`/guides/${guide.slug}`} prefetch={false}>
+                      <a href={`/guides/${guide.slug}`}>
                         {guide.title} <span aria-hidden="true">→</span>
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -313,9 +313,9 @@ export function ArticlePage({
                 <ul className="sidebar-links">
                   {entry.relatedRoutes.map((route) => (
                     <li key={route.href}>
-                      <Link href={route.href} prefetch={false}>
+                      <a href={route.href}>
                         {route.label} <span aria-hidden="true">→</span>
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -324,9 +324,9 @@ export function ArticlePage({
             <div className="sidebar-panel sidebar-panel-accent">
               <span className="sidebar-label">NEED ANOTHER ANSWER?</span>
               <p>Search every current guide, build, quest, and wiki entry.</p>
-              <Link className="button button-secondary" href="/search">
+              <a className="button button-secondary" href="/search">
                 Search the site
-              </Link>
+              </a>
             </div>
             {entry.sourceUrl ? (
               <div className="sidebar-panel">

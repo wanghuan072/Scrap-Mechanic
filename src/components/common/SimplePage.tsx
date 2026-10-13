@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 
 export function SimplePage({
   eyebrow,
@@ -25,6 +26,7 @@ export function SimplePage({
           <p>{intro}</p>
         </div>
       </section>
+      <AffiliateAd placement="top" />
       <article className="container simple-page">{children}</article>
     </main>
   );

@@ -1,0 +1,16 @@
+/* 广告独立占位，正文隔开顶部与底部广告；不覆盖标题、地图或工具操作。 */
+.slot {
+  width: 300px;
+  margin: 10px auto;
+  text-align: center;
+  clear: both;
+}
+.slot[hidden] { display: none; }
+.banner { height: 250px; }
+.native { min-height: 250px; max-width: 100%; }
+/* 与实际广告尺寸一致，不缩放、不裁切；移动端和 PC 只请求各自的代码。 */
+@media (min-width: 769px) {
+  .banner { width: 728px; height: 90px; }
+  .native { width: 728px; }
+}
+.slot iframe { display: block; margin: auto; border: 0; }

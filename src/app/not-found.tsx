@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -10,8 +9,8 @@ export default function NotFound() {
         Search the field guide or return to the Wiki category layer.
       </p>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-        <Link className="button" href="/search">Search the site</Link>
-        <Link className="button button-secondary" href="/wiki">Browse Wiki</Link>
+        <a className="button" href="/search">Search the site</a>
+        <a className="button button-secondary" href="/wiki">Browse Wiki</a>
       </div>
     </main>
   );

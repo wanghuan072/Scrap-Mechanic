@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
 import { getTool } from "@/lib/content/catalog";
@@ -98,9 +98,9 @@ export default function WheelAngleCalculatorPage() {
             </h1>
             <p>
               Calculate separate inner and outer steering limits for a Level 5
-              <Link className={styles.inlineGuideLink} href="/wiki/parts/drivers-seat">
+              <a className={styles.inlineGuideLink} href="/wiki/parts/drivers-seat">
                 Driver&apos;s Seat
-              </Link>. Use the result to reduce low-speed tire scrub on a
+              </a>. Use the result to reduce low-speed tire scrub on a
               conventional front-steered vehicle.
             </p>
             <div className={styles.heroFacts}>
@@ -127,6 +127,7 @@ export default function WheelAngleCalculatorPage() {
           </aside>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <section className={styles.scopeBand} aria-label="Wheel angle calculation scope">
         <div className={`container ${styles.scopeBandInner}`}>
@@ -160,9 +161,9 @@ export default function WheelAngleCalculatorPage() {
               <h2>Measure, calculate, then enter both bearing limits</h2>
             </div>
             <p>
-              Use <Link className={styles.inlineGuideLink} href="/wiki/parts/bearing">
+              Use <a className={styles.inlineGuideLink} href="/wiki/parts/bearing">
                 Bearing centers
-              </Link>, not tire edges. With the default 6 × 4 setup,
+              </a>, not tire edges. With the default 6 × 4 setup,
               a 27° inner limit produces a 20.82° outer target.
             </p>
           </header>
@@ -256,13 +257,13 @@ export default function WheelAngleCalculatorPage() {
               <span>Building the chassis?</span>
               <h2>Start with a complete vehicle guide</h2>
               <p>Frame, bearings, seat, engine, load placement, and steering tests.</p>
-              <Link href="/guides/first-vehicle">Open the first vehicle guide →</Link>
+              <a href="/guides/first-vehicle">Open the first vehicle guide →</a>
             </article>
             <article>
               <span>Wheel turning the wrong way?</span>
               <h2>Review the Connect Tool</h2>
               <p>Check connection direction before increasing steering angle or speed.</p>
-              <Link href="/wiki/tools/connect-tool">Open the Connect Tool guide →</Link>
+              <a href="/wiki/tools/connect-tool">Open the Connect Tool guide →</a>
             </article>
           </aside>
         </div>

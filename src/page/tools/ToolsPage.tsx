@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import type { CSSProperties } from "react";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -156,6 +156,7 @@ export default function ToolsPage() {
           </aside>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <section className={styles.factStrip} aria-label="Tools data coverage">
         <div className={`container ${styles.factGrid}`}>
@@ -211,9 +212,9 @@ export default function ToolsPage() {
                 <h3>Scrap Mechanic Raid Calculator</h3>
                 <p>
                   Convert planted crops into total crop value,{" "}
-                  <Link className={styles.inlineGuideLink} href="/guides/raid-levels">
+                  <a className={styles.inlineGuideLink} href="/guides/raid-levels">
                     raid level
-                  </Link>
+                  </a>
                   , exact bot budget, multiplayer modifier, weighted enemy probabilities,
                   and one possible drop timeline.
                 </p>
@@ -243,13 +244,13 @@ export default function ToolsPage() {
                   <p>
                     10 Pineapples = 10,000 points, Level 6, base budget 700. Add
                     one Tomato and 10,001 becomes a{" "}
-                    <Link className={styles.inlineGuideLink} href="/guides/raid-levels">
+                    <a className={styles.inlineGuideLink} href="/guides/raid-levels">
                       Super Raid
-                    </Link>{" "}
+                    </a>{" "}
                     with a one-player budget of 1,001.
                   </p>
                 </div>
-                <Link href="/tools/raid-calculator">Open Raid Calculator →</Link>
+                <a href="/tools/raid-calculator">Open Raid Calculator →</a>
               </div>
             </article>
 
@@ -297,7 +298,7 @@ export default function ToolsPage() {
                     unavoidable extra pieces.
                   </p>
                 </div>
-                <Link href="/tools/crafting-planner">Open Crafting Planner →</Link>
+                <a href="/tools/crafting-planner">Open Crafting Planner →</a>
               </div>
             </article>
           </div>
@@ -357,9 +358,9 @@ export default function ToolsPage() {
                     outside-wheel limit for the ideal bearing-center model.
                   </p>
                 </div>
-                <Link href="/tools/wheel-angle-calculator">
+                <a href="/tools/wheel-angle-calculator">
                   Open Wheel Angle Calculator →
-                </Link>
+                </a>
               </div>
             </article>
           </div>
@@ -493,12 +494,12 @@ export default function ToolsPage() {
                     {item.guideLink ? (
                       <>
                         {item.answer.split(item.guideLink.label)[0]}
-                        <Link
+                        <a
                           className={styles.inlineGuideLink}
                           href={item.guideLink.href}
                         >
                           {item.guideLink.label}
-                        </Link>
+                        </a>
                         {item.answer.split(item.guideLink.label)[1]}
                       </>
                     ) : (

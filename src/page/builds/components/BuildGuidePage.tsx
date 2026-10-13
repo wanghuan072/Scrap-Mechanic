@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
 import { JsonLd } from "@/seo/JsonLd";
@@ -175,6 +175,7 @@ export function BuildGuidePage({
           </div>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <nav className={styles.jumpBar} aria-label="Build page sections">
         <div className="container">
@@ -221,15 +222,15 @@ export function BuildGuidePage({
               {entry.slug === "starter-car" ? (
                 <>
                   {" "}After upgrading to a Level 5 Driver&apos;s Seat, use the{" "}
-                  <Link href="/tools/wheel-angle-calculator">
+                  <a href="/tools/wheel-angle-calculator">
                     Wheel Angle Calculator
-                  </Link>{" "}
+                  </a>{" "}
                   to set separate inner and outer steering limits before the
                   full-lock test.
                 </>
               ) : null}
             </p>
-            <Link href="/tools/crafting-planner">Plan the craftable parts →</Link>
+            <a href="/tools/crafting-planner">Plan the craftable parts →</a>
           </header>
           <dl className={styles.baselineSheet}>
             {spec.baseline.map((item, index) => (
@@ -267,14 +268,13 @@ export function BuildGuidePage({
             </div>
             {spec.parts.map((part) => (
               <div className={styles.partRow} key={part.name}>
-                <Link
+                <a
                   className={styles.partIdentity}
                   href={wikiHref(part.name)}
-                  prefetch={false}
                 >
                   <ItemImage name={part.name} />
                   <strong>{part.name}</strong>
-                </Link>
+                </a>
                 <b className={styles.partQuantity}>× {part.quantity}</b>
                 <p>
                   <WikiLinkedText
@@ -323,9 +323,9 @@ export function BuildGuidePage({
                 <dd>{directMaterials.length}</dd>
               </div>
             </dl>
-            <Link href="/tools/crafting-planner">
+            <a href="/tools/crafting-planner">
               Recalculate in the Crafting Planner →
-            </Link>
+            </a>
           </header>
           <div className={styles.materialPanel}>
             <div className={styles.materialTitle}>
@@ -334,11 +334,10 @@ export function BuildGuidePage({
             </div>
             <div className={styles.materialGrid}>
               {directMaterials.map((material) => (
-                <Link
+                <a
                   href={wikiHref(material.name)}
                   className={styles.material}
                   key={material.uuid}
-                  prefetch={false}
                 >
                   {material.image ? (
                     <Image
@@ -352,7 +351,7 @@ export function BuildGuidePage({
                   )}
                   <span>{material.name}</span>
                   <strong>× {material.quantity}</strong>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -453,11 +452,10 @@ export function BuildGuidePage({
             </header>
             <div className={styles.toolList}>
               {spec.toolkit.map((tool) => (
-                <Link
+                <a
                   className={styles.toolRow}
                   href={wikiHref(tool.name)}
                   key={tool.name}
-                  prefetch={false}
                 >
                   <ItemImage name={tool.name} size={58} />
                   <div>
@@ -466,7 +464,7 @@ export function BuildGuidePage({
                     <p>{tool.use}</p>
                   </div>
                   <b aria-hidden="true">↗</b>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -561,14 +559,13 @@ export function BuildGuidePage({
               <span>Next workshop file</span>
               <h2>Compare another build</h2>
             </div>
-            <Link href="/builds">View all 11 blueprints →</Link>
+            <a href="/builds">View all 11 blueprints →</a>
           </header>
           <div className={styles.relatedGrid}>
             {finalRelated.map((build) => (
-              <Link
+              <a
                 href={`/builds/${build.slug}`}
                 key={build.slug}
-                prefetch={false}
               >
                 <Image
                   src={build.image}
@@ -581,7 +578,7 @@ export function BuildGuidePage({
                   <h3>{build.title}</h3>
                   <p>{build.description}</p>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

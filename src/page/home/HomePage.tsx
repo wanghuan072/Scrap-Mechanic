@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- 遵循项目导航规则：进入独立页面时使用完整文档导航。 */
 import type { Metadata } from "next";
 import Image from "next/image";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
 import {
   recipeCollection,
@@ -281,6 +281,7 @@ export default function Home() {
           </aside>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <section className={`container ${styles.versionStrip}`} aria-label="Scrap Mechanic version and data status">
         <div className={styles.liveVersion}><span>Live game</span><strong>{site.currentVersion}</strong></div>

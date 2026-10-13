@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SimplePage } from "@/components/common/SimplePage";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
@@ -104,9 +103,9 @@ export default function CopyrightPage() {
           Include enough detail to locate the material without sending unrelated private
           information. Knowingly inaccurate, abusive, or incomplete notices may delay
           review. General factual corrections should instead follow the process on the{" "}
-          <Link className="text-link" href="/contact">
+          <a className="text-link" href="/contact">
             contact page
-          </Link>
+          </a>
           .
         </p>
         <h2>Review process</h2>
@@ -123,9 +122,9 @@ export default function CopyrightPage() {
           of evaluating, documenting, and responding to that request. Do not include
           passwords, payment information, or unrelated sensitive data. More information
           appears in the{" "}
-          <Link className="text-link" href="/privacy-policy">
+          <a className="text-link" href="/privacy-policy">
             privacy policy
-          </Link>
+          </a>
           .
         </p>
         <h2>Independent fan-site statement</h2>

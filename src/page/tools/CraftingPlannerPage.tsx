@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { CraftingPlanner } from "@/page/tools/components/CraftingPlanner";
@@ -95,6 +95,7 @@ export default function CraftingPlannerPage() {
           </div>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <EvidenceStatus
         label="Crafting planner data status"
@@ -163,7 +164,7 @@ export default function CraftingPlannerPage() {
               Search by output, ingredient, station, or Craftbot group when you are
               comparing several possible workshop paths.
             </p>
-            <Link href="/wiki/recipes">Open all recipes →</Link>
+            <a href="/wiki/recipes">Open all recipes →</a>
           </article>
           <article>
             <span>Buying instead of building?</span>
@@ -172,7 +173,7 @@ export default function CraftingPlannerPage() {
               Hideout crate exchanges and Mining Hub Wonk prices use a separate list
               with exact quantities.
             </p>
-            <Link href="/wiki/trades">Open Trader Prices →</Link>
+            <a href="/wiki/trades">Open Trader Prices →</a>
           </article>
         </div>
       </section>

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import type {
   SchematicUnlock,
@@ -168,7 +167,7 @@ export function SchematicUnlockDirectory({
                         {primaryRecipe.ingredients.length === 1 ? "" : " types"} →{" "}
                         {primaryRecipe.output.quantity} output
                       </strong>
-                      <Link href={recipeHref}>View exact recipe →</Link>
+                      <a href={recipeHref}>View exact recipe →</a>
                     </>
                   ) : (
                     <span>Recipe record unavailable</span>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { SectionHero } from "@/components/common/SectionHero";
 import { PageJsonLd } from "@/seo/JsonLd";
 import {
@@ -159,7 +158,7 @@ export default function WikiPage() {
 
           <nav className={styles.taskList} aria-label="Player task indexes">
             {taskRoutes.map((task) => (
-              <Link href={task.href} key={task.href} prefetch={false}>
+              <a href={task.href} key={task.href}>
                 <span className={styles.taskIndex}>{task.index}</span>
                 <div className={styles.taskName}>
                   <small>{task.verb}</small>
@@ -176,7 +175,7 @@ export default function WikiPage() {
                 <span className={styles.taskArrow} aria-hidden="true">
                   ↗
                 </span>
-              </Link>
+              </a>
             ))}
           </nav>
         </div>
@@ -225,16 +224,15 @@ export default function WikiPage() {
                     <p>{group.description}</p>
                     <div className={styles.categoryLinks}>
                       {categories.map((category) => (
-                        <Link
+                        <a
                           href={`/wiki/${category.slug}`}
                           key={category.slug}
-                          prefetch={false}
                         >
                           {category.name}
                           <small>
                             {getWikiEntriesByCategory(category.slug).length}
                           </small>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>

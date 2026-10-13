@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export type BreadcrumbItem = {
   label: string;
@@ -11,7 +10,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
       <ol>
         {items.map((item, index) => (
           <li key={`${item.label}-${index}`}>
-            {item.href ? <Link href={item.href}>{item.label}</Link> : <span>{item.label}</span>}
+            {item.href ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}
           </li>
         ))}
       </ol>

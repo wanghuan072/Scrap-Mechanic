@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-13",
+  "origin": "http://localhost:3211",
+  "buildDirectory": ".next-verify",
+  "overallResult": "not_approved_for_push",
+  "productionDomainVerified": false,
+  "unitTests": { "passed": 175, "skipped": 2, "failed": 0 },
+  "typeCheck": "passed",
+  "productionBuild": "passed",
+  "eslint": { "errors": 0, "existingCollectDataWarnings": 4 },
+  "browserChecks": [
+    { "route": "/", "viewport": [1280, 720], "slots": 4, "bannerSize": [728, 90], "minimumGapPx": 928, "horizontalOverflow": false },
+    { "route": "/tools", "viewport": [1280, 720], "slots": 4, "bannerSize": [728, 90] },
+    { "route": "/", "viewport": [375, 812], "slots": 6, "bannerSize": [300, 250], "minimumGapPx": 742, "horizontalOverflow": false },
+    { "route": "/about", "viewport": [375, 812], "slots": 3, "bannerSize": [300, 250], "minimumGapPx": 1032, "horizontalOverflow": false }
+  ],
+  "nativeFinalBuildCheck": {
+    "route": "/",
+    "desktopViewport": [1280, 720],
+    "totalSlots": 4,
+    "nativeContainers": 1,
+    "nativeHttpStatus": 403,
+    "nativeScriptState": "script-error",
+    "resizeViewport": [375, 812],
+    "slotsAfterResize": 4,
+    "minimumGapAfterResizePx": 2087,
+    "horizontalOverflowAfterResize": false,
+    "note": "The six-slot fresh-mobile check above was measured before Native restoration; final Native placement was additionally checked in the four-slot desktop document and after resizing. Positions are not recreated on resize."
+  },
+  "navigationChecks": [
+    { "action": "desktop navigation: Home to Tools", "documentRequest": true, "httpStatus": 200, "adInitializedAgain": true },
+    { "action": "mobile navigation: Tools to Home", "documentRequest": true, "httpStatus": 200, "adInitializedAgain": true },
+    { "action": "footer: Home to About", "newRoute": "/about", "adSlotsInitialized": 3 }
+  ],
+  "fixes": [
+    "Each slot caches one iframe per size and switches formats on breakpoint changes without repeated automatic refreshes.",
+    "An oversized banner is not loaded into a narrow content column.",
+    "Same-origin messages from the corresponding iframe report script-loaded or script-error, not filled or impression.",
+    "Timeouts and cleanup remove timers, media and resize listeners, observers and iframe nodes.",
+    "Popunder uses the Next.js Script lifecycle with load and error status handlers.",
+    "Native is restored as the first middle placement when a middle position exists; its fixed container occurs once per document and is not stacked with a banner."
+  ],
+  "externalChecks": [
+    { "format": "Popunder", "commandLineHttpStatus": 403, "browserHttpStatus": 403, "scriptState": "script-error", "fillVerified": false },
+    { "format": "728x90", "commandLineHttpStatus": 403, "browserHttpStatus": 403, "scriptState": "script-error", "fillVerified": false },
+    { "format": "300x250", "commandLineHttpStatus": 403, "browserHttpStatus": 403, "mobileSlotsAttempted": 6, "mobileSlotsWithScriptError": 6, "verificationPhase": "banner-only pass before Native restoration", "fillVerified": false },
+    { "format": "Native", "commandLineHttpStatus": 403, "renderedPlacement": true, "browserHttpStatus": 403, "fillVerified": false }
+  ],
+  "unresolved": [
+    "The supplied third-party scripts return 403 in this test environment; the reason is not established and production-domain behavior cannot be inferred.",
+    "Multiple banner placements still share the same supplied key per format. The provider advises distinct codes for same-size banners on one page.",
+    "Pages with less than 640px of body content cannot satisfy both two fixed endpoint slots and a 640px body-content gap without adding artificial space."
+  ],
+  "providerGuidance": "https://adsterra.com/blog/how-banner-ads-make-money/",
+  "gitCommitCreated": false,
+  "gitPushed": false
+}

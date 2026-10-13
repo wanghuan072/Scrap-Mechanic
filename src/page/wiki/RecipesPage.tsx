@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { Suspense } from "react";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
@@ -113,8 +113,8 @@ export default function RecipesPage() {
               confirm the correct machine before committing a full storage chest.
             </p>
             <div className={styles.heroActions}>
-              <Link href="/tools/crafting-planner">Calculate materials</Link>
-              <Link href="/wiki/trades">Compare trader prices</Link>
+              <a href="/tools/crafting-planner">Calculate materials</a>
+              <a href="/wiki/trades">Compare trader prices</a>
             </div>
           </div>
           <aside className={styles.heroMachine}>
@@ -137,6 +137,7 @@ export default function RecipesPage() {
           </aside>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <EvidenceStatus
         label="Recipe directory data status"
@@ -210,7 +211,7 @@ export default function RecipesPage() {
               A recipe can produce more than one item. Round up to the next complete
               batch, then keep the extra pieces for repairs or the next vehicle.
             </p>
-            <Link href="/tools/crafting-planner">Open the Crafting Planner →</Link>
+            <a href="/tools/crafting-planner">Open the Crafting Planner →</a>
           </article>
           <article>
             <span>Schematicbot pool</span>
@@ -220,9 +221,9 @@ export default function RecipesPage() {
               consuming the part, or spend one Schematic Box for a random remaining
               recipe. Thirty Saw Table outputs are included in this pool.
             </p>
-            <Link href="/wiki/schematics/schematicbot">
+            <a href="/wiki/schematics/schematicbot">
               Learn the two scan routes →
-            </Link>
+            </a>
           </article>
           <article>
             <span>Dedicated progression</span>
@@ -232,7 +233,7 @@ export default function RecipesPage() {
               unlocks, 7 Growlab rewards, 5 refined treasure recipes, and the first
               Plasma Drill recipe from Warehouse progression.
             </p>
-            <Link href="/wiki/schematics">Compare every unlock route →</Link>
+            <a href="/wiki/schematics">Compare every unlock route →</a>
           </article>
         </div>
       </section>

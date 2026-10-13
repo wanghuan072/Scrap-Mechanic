@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { site } from "@/config/site";
 import { NativeMapClient } from "@/features/native-map/NativeMapClient";
@@ -291,19 +291,19 @@ export default function MapPage() {
               </p>
 
               <div className={styles.heroActions}>
-                <Link className={styles.primaryAction} href="#interactive-map">
+                <a className={styles.primaryAction} href="#interactive-map">
                   Open interactive map
-                </Link>
-                <Link className={styles.secondaryAction} href="#location-directory">
+                </a>
+                <a className={styles.secondaryAction} href="#location-directory">
                   Browse locations
-                </Link>
+                </a>
               </div>
 
               <div className={styles.reviewLine} aria-label="Map review details">
                 <span>Live game {site.currentVersion} · map review is separately dated</span>
                 <time dateTime={mapReviewDateIso}>Updated {mapReviewDate}</time>
-                <Link href="/updates/1-0-drilling-thunder">Version notes</Link>
-                <Link href="/about">Editorial policy</Link>
+                <a href="/updates/1-0-drilling-thunder">Version notes</a>
+                <a href="/about">Editorial policy</a>
               </div>
             </div>
 
@@ -331,6 +331,7 @@ export default function MapPage() {
           </div>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <nav className={styles.sectionNav} aria-label="Map page sections">
         <div className={`container ${styles.sectionNavInner}`}>
@@ -342,15 +343,15 @@ export default function MapPage() {
             { id: "map-faq", label: "FAQ" },
           ]} />
           <span>Field index</span>
-          <Link href="#interactive-map">Interactive map</Link>
-          <Link href="#map-tools">Map tools</Link>
-          <Link href="#map-regions">Map modes</Link>
+          <a href="#interactive-map">Interactive map</a>
+          <a href="#map-tools">Map tools</a>
+          <a href="#map-regions">Map modes</a>
           {locationGroups.map((group) => (
-            <Link href={`#${group.key}`} key={group.key}>
+            <a href={`#${group.key}`} key={group.key}>
               {group.eyebrow}
-            </Link>
+            </a>
           ))}
-          <Link href="#map-faq">FAQ</Link>
+          <a href="#map-faq">FAQ</a>
         </div>
       </nav>
 
@@ -532,9 +533,9 @@ export default function MapPage() {
 
         <div className={`container ${styles.locationIndex}`}>
           {locations.map((location) => (
-            <Link href={`#${location.slug}`} key={location.slug}>
+            <a href={`#${location.slug}`} key={location.slug}>
               {location.name}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -593,9 +594,9 @@ export default function MapPage() {
                       </div>
 
                       {location.relatedHref && location.relatedLabel ? (
-                        <Link className={styles.cardLink} href={location.relatedHref}>
+                        <a className={styles.cardLink} href={location.relatedHref}>
                           {location.relatedLabel} <span aria-hidden="true">→</span>
-                        </Link>
+                        </a>
                       ) : null}
                     </article>
                   ))}
@@ -653,11 +654,11 @@ export default function MapPage() {
           </div>
           <div className={styles.relatedGrid}>
             {relatedRoutes.map((route) => (
-              <Link href={route.href} key={route.href}>
+              <a href={route.href} key={route.href}>
                 <strong>{route.label}</strong>
                 <span>{route.text}</span>
                 <small>Open guide →</small>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

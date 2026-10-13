@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import type { TraderOffer, TradingVenue } from "@/lib/game/player-data";
@@ -24,9 +23,9 @@ function WikiName({
 }) {
   const href = wikiLinks[name.toLowerCase()];
   return href ? (
-    <Link href={href} prefetch={false}>
+    <a href={href}>
       {name}
-    </Link>
+    </a>
   ) : (
     <>{name}</>
   );
@@ -181,9 +180,9 @@ export function TradeDirectory({
                       {trade.output.quantity > 1 &&
                         `${trade.output.quantity.toLocaleString("en-US")}× `}
                       {trade.schematic ? (
-                        <Link href={recipeHref} prefetch={false}>
+                        <a href={recipeHref}>
                           {trade.output.name}
-                        </Link>
+                        </a>
                       ) : (
                         <WikiName name={trade.output.name} wikiLinks={wikiLinks} />
                       )}
@@ -205,13 +204,13 @@ export function TradeDirectory({
                 </ul>
                 <div className={styles.unlock}>
                   {trade.schematic ? (
-                    <Link href={recipeHref} prefetch={false}>
+                    <a href={recipeHref}>
                       View recipe
-                    </Link>
+                    </a>
                   ) : wikiHref ? (
-                    <Link href={wikiHref} prefetch={false}>
+                    <a href={wikiHref}>
                       Open Wiki
-                    </Link>
+                    </a>
                   ) : (
                     <span>Finished item</span>
                   )}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SimplePage } from "@/components/common/SimplePage";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
@@ -48,9 +47,9 @@ export default function PrivacyPolicyPage() {
           files, or sensitive personal data. A factual correction normally needs only a
           page URL, the disputed value, your game version and branch, mod status, and
           repeatable steps. The{" "}
-          <Link className="text-link" href="/contact">
+          <a className="text-link" href="/contact">
             contact page
-          </Link>{" "}
+          </a>{" "}
           explains how to prepare a useful report.
         </p>
         <h2>Search queries and browser-tool inputs</h2>
@@ -107,28 +106,24 @@ export default function PrivacyPolicyPage() {
           </a>{" "}
           for information about Google&apos;s processing and privacy controls.
         </p>
-        <h2>Google AdSense and consent choices</h2>
+        <h2>Advertising services</h2>
         <p>
-          The site includes the Google AdSense loader for publisher
-          ca-pub-3939531187802459. No display-ad unit is currently rendered on the
-          site. If display advertising is enabled in the future, Google and its
-          advertising partners may use cookies or similar identifiers to measure ad
-          delivery, limit repeated ads, prevent fraud, and, where permitted, provide
-          more relevant advertising.
+          The site loads third-party native and banner advertising through
+          profitableratecpmnetwork.com and highrevenueformat.com. It also loads a
+          popunder script, which may open a separate advertising window or tab when
+          you interact with the site. Google AdSense advertising is no longer loaded.
         </p>
         <p>
-          Before personalised advertising is enabled for visitors in the European
-          Economic Area, the United Kingdom, or Switzerland, the site will present the
-          consent choices required by a Google-certified consent management platform.
-          Visitors will be able to make or change their available consent choices from
-          that message. Advertising features for those regions will not be treated as
-          enabled merely because this policy is published.
+          Advertising providers receive browser requests and may use cookies or
+          similar identifiers. Their handling of information and the destinations
+          shown in advertisements are outside this site&apos;s control. You can use
+          browser privacy settings to restrict cookies and block pop-up windows.
         </p>
         <h2>Cookies and similar technologies</h2>
         <p>
           The site does not currently set account, shopping-cart, comment, or saved-tool
-          cookies of its own. Google Analytics, and Google AdSense if display units are
-          enabled, may use cookies or similar browser technologies. Browser settings,
+          cookies of its own. Google Analytics and advertising providers
+          may use cookies or similar browser technologies. Browser settings,
           privacy extensions, and network-level controls may allow you to limit or
           delete these identifiers, but blocking them can change how third-party
           services operate.

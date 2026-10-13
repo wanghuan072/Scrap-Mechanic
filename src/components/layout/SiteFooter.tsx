@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { site, siteNavigation } from "@/config/site";
 
 const footerGroups = [
@@ -25,7 +24,7 @@ export function SiteFooter() {
       <div className="footer-stripe" aria-hidden="true" />
       <div className="container footer-content">
         <div className="footer-brand">
-          <Link
+          <a
             className="site-logo"
             href="/"
             aria-label="Scrap Mechanic home"
@@ -43,7 +42,7 @@ export function SiteFooter() {
               <strong>SCRAP MECHANIC</strong>
               <small>FIELD GUIDE</small>
             </span>
-          </Link>
+          </a>
           <p>
             Practical 1.0 help for mechanics who want a working answer before the
             next raid, build test, or story run.
@@ -56,17 +55,16 @@ export function SiteFooter() {
             <ul>
               {group.links.map(([href, label]) => (
                 <li key={href}>
-                  <Link
+                  <a
                     href={href}
                     rel={
                       group.title === "Legal"
                         ? "noopener noreferrer nofollow"
                         : undefined
                     }
-                    prefetch={false}
                   >
                     {label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

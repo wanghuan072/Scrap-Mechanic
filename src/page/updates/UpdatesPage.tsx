@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { EvidenceStatus } from "@/components/common/EvidenceStatus";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { JsonLd, PageJsonLd } from "@/seo/JsonLd";
@@ -170,6 +170,7 @@ export default function UpdatesPage() {
           </aside>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <EvidenceStatus
         label="Official Scrap Mechanic release status"
@@ -356,10 +357,10 @@ export default function UpdatesPage() {
             ))}
           </div>
           <div className={styles.decisionLinks}>
-            <Link href="/guides/returning-to-1-0">
+            <a href="/guides/returning-to-1-0">
               Open the save and Steam branch guide →
-            </Link>
-            <Link href="/mods">Review current Workshop recommendations →</Link>
+            </a>
+            <a href="/mods">Review current Workshop recommendations →</a>
           </div>
         </div>
       </section>
@@ -473,7 +474,7 @@ export default function UpdatesPage() {
                         ))}
                     </ul>
                     <div className={styles.patchLinks}>
-                      <Link href={`/updates/${patch.slug}`}>Read complete patch briefing →</Link>
+                      <a href={`/updates/${patch.slug}`}>Read complete patch briefing →</a>
                       <a href={evidence.sourceUrl} target="_blank" rel="noreferrer">
                         Official Steam note ↗
                       </a>

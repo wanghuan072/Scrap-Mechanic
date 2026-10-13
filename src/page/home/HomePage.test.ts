@@ -44,4 +44,12 @@ describe("homepage industrial layout", () => {
     expect(html).toContain("Official patch note");
     expect(html).not.toContain("<iframe");
   });
+
+  it("puts the responsive banner after the hero without a visible ad title", () => {
+    const ad = html.indexOf('data-affiliate-placement="top"');
+    expect(ad).toBeGreaterThan(html.indexOf(">Read briefing"));
+    expect(ad).toBeLessThan(html.indexOf('aria-label="Scrap Mechanic version and data status"'));
+    expect(html.match(/data-affiliate-placement="top"/g)).toHaveLength(1);
+    expect(html).not.toContain("<small>Advertisement</small>");
+  });
 });

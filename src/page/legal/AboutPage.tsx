@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SimplePage } from "@/components/common/SimplePage";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
@@ -36,13 +35,13 @@ export default function AboutUsPage() {
         </p>
         <h2>How information is organized</h2>
         <p>
-          The <Link className="text-link" href="/guides">guides</Link> explain complete
+          The <a className="text-link" href="/guides">guides</a> explain complete
           player routes and the order in which decisions matter. The{" "}
-          <Link className="text-link" href="/wiki">wiki</Link> connects individual items,
+          <a className="text-link" href="/wiki">wiki</a> connects individual items,
           parts, blocks, bots, locations, recipes, trades, quests, and game mechanics.
-          The <Link className="text-link" href="/builds">build pages</Link> translate part
+          The <a className="text-link" href="/builds">build pages</a> translate part
           choices into working vehicle and machine plans, while the{" "}
-          <Link className="text-link" href="/tools">browser tools</Link> turn published
+          <a className="text-link" href="/tools">browser tools</a> turn published
           crafting and raid rules into repeatable calculations.
         </p>
         <p>
@@ -70,7 +69,7 @@ export default function AboutUsPage() {
           alter progression, recipes, compatibility, or expected behavior. Relevant
           pages identify a version, patch, or review marker so players can judge whether
           an instruction fits their current game. The{" "}
-          <Link className="text-link" href="/updates">updates section</Link> records the
+          <a className="text-link" href="/updates">updates section</a> records the
           release context used by the rest of the guide.
         </p>
         <p>
@@ -89,7 +88,7 @@ export default function AboutUsPage() {
         </p>
         <p>
           Send corrections to the address on the{" "}
-          <Link className="text-link" href="/contact">contact page</Link>. The goal is to
+          <a className="text-link" href="/contact">contact page</a>. The goal is to
           make material fixes clearly and consistently, without inventing certainty when
           a mechanic is version-dependent or cannot be reproduced.
         </p>
@@ -108,7 +107,7 @@ export default function AboutUsPage() {
           Mechanic names, imagery, and other protected game assets remain the property
           of Axolot Games and their respective rights holders. Ownership and reuse rules
           are explained in the{" "}
-          <Link className="text-link" href="/copyright">copyright notice</Link>.
+          <a className="text-link" href="/copyright">copyright notice</a>.
         </p>
       </SimplePage>
     </>

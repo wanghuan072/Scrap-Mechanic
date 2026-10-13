@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { SectionHero } from "@/components/common/SectionHero";
 import { site } from "@/config/site";
 import { PageJsonLd } from "@/seo/JsonLd";
@@ -74,7 +73,7 @@ export default function GuidesPage() {
           </div>
           <div className={styles.manualGrid}>
             <article className={styles.coverStory}>
-              <Link
+              <a
                 className={styles.coverImage}
                 href={`/guides/${featured.slug}`}
               >
@@ -88,16 +87,16 @@ export default function GuidesPage() {
                   fetchPriority="high"
                 />
                 <span>Start here / {featured.readingTime}</span>
-              </Link>
+              </a>
               <div className={styles.coverCopy}>
                 <span>
                   {featured.category} · Version {featured.gameVersion}
                 </span>
                 <h3>{featured.title}</h3>
                 <p>{featured.quickAnswer}</p>
-                <Link href={`/guides/${featured.slug}`}>
+                <a href={`/guides/${featured.slug}`}>
                   Open the first-hours route →
-                </Link>
+                </a>
               </div>
             </article>
 
@@ -109,9 +108,9 @@ export default function GuidesPage() {
                 schematic state, multiplayer ownership, and the current patch
                 timeline before changing a save.
               </p>
-              <Link href="/guides/returning-to-1-0">
+              <a href="/guides/returning-to-1-0">
                 Read the 1.0 return brief →
-              </Link>
+              </a>
               <dl>
                 <div>
                   <dt>Old Creative worlds</dt>
@@ -162,11 +161,10 @@ export default function GuidesPage() {
                 </header>
                 <div className={styles.laneEntries}>
                   {entries.map((guide, index) => (
-                    <Link
+                    <a
                       className={styles.guideRow}
                       href={`/guides/${guide.slug}`}
                       key={guide.slug}
-                      prefetch={false}
                     >
                       <span>{String(index + 1).padStart(2, "0")}</span>
                       <div className={styles.guideThumb}>
@@ -180,7 +178,7 @@ export default function GuidesPage() {
                         <p>{guide.description}</p>
                       </div>
                       <b aria-hidden="true">↗</b>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </section>

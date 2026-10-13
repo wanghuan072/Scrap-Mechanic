@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SimplePage } from "@/components/common/SimplePage";
 import { PageJsonLd } from "@/seo/JsonLd";
 import { site } from "@/config/site";
@@ -24,9 +23,9 @@ export default function TermsOfServicePage() {
           By accessing or using scrapmechanic.org, you agree to these terms. If you do
           not agree, do not use the site. These terms apply to public pages, search,
           calculators, navigation, and communications sent to the site address. The{" "}
-          <Link className="text-link" href="/privacy-policy">
+          <a className="text-link" href="/privacy-policy">
             privacy policy
-          </Link>{" "}
+          </a>{" "}
           explains how information may be processed during those interactions.
         </p>
         <p>
@@ -98,9 +97,9 @@ export default function TermsOfServicePage() {
           and planning materials remain protected by applicable law. Scrap Mechanic,
           associated trademarks, and game assets belong to Axolot Games and their
           respective rights holders. The{" "}
-          <Link className="text-link" href="/copyright">
+          <a className="text-link" href="/copyright">
             copyright notice
-          </Link>{" "}
+          </a>{" "}
           explains the distinction and the process for sending a rights request.
         </p>
         <h2>Availability and disclaimers</h2>

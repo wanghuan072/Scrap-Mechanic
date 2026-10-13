@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 import Image from "next/image";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { WikiLinkedText } from "@/page/wiki/components/WikiLinkedText";
 import { PageJsonLd } from "@/seo/JsonLd";
@@ -135,11 +135,11 @@ function QuestRewards({ quest }: { quest: QuestEntry }) {
               key={`${reward.type}-${reward.name}`}
             >
               {reward.wikiHref ? (
-                <Link href={reward.wikiHref} prefetch={false}>
+                <a href={reward.wikiHref}>
                   <span>{reward.type}</span>
                   <b>{reward.name}</b>
                   <small aria-hidden="true">Wiki →</small>
-                </Link>
+                </a>
               ) : (
                 <div>
                   <span>{reward.type}</span>
@@ -219,6 +219,7 @@ export default function QuestsPage() {
           </div>
         </div>
       </section>
+      <AffiliateAd placement="top" />
 
       <section className={styles.mainSection} id="main-quests">
         <div className="container">
@@ -413,17 +414,17 @@ export default function QuestsPage() {
               <article key={row.problem}>
                 <div>
                   <strong>{row.problem}</strong>
-                  <Link href={row.href} prefetch={false}>
+                  <a href={row.href}>
                     {row.objective} →
-                  </Link>
+                  </a>
                 </div>
                 <p>{row.check}</p>
                 <div>
                   <p>{row.recovery}</p>
                   {row.linkHref && (
-                    <Link href={row.linkHref} prefetch={false}>
+                    <a href={row.linkHref}>
                       {row.linkLabel} →
-                    </Link>
+                    </a>
                   )}
                 </div>
               </article>
@@ -439,9 +440,9 @@ export default function QuestsPage() {
               changing branches or removing mods, and keep the original state
               available if the same trigger fails again.
             </p>
-            <Link href="/guides/returning-to-1-0">
+            <a href="/guides/returning-to-1-0">
               Back up a Survival world →
-            </Link>
+            </a>
           </aside>
         </div>
       </section>

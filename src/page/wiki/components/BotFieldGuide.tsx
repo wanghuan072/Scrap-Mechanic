@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   botDirectoryGroups,
   botQuestions,
@@ -15,7 +14,7 @@ function BotName({
   name: string;
   href?: string;
 }) {
-  return href ? <Link href={href}>{name}</Link> : name;
+  return href ? <a href={href}>{name}</a> : name;
 }
 
 export function BotFieldGuide() {
@@ -39,7 +38,7 @@ export function BotFieldGuide() {
         <a href="#bot-types">Bot types</a>
         <a href="#crop-bot-routes">Crops and bots</a>
         <a href="#bot-questions">Player questions</a>
-        <Link href="/tools/raid-calculator">Raid calculator</Link>
+        <a href="/tools/raid-calculator">Raid calculator</a>
       </nav>
 
       <section className={styles.intro} id="bot-types">
@@ -127,7 +126,7 @@ export function BotFieldGuide() {
                   )}
                   <strong>
                     {route.slug ? (
-                      <Link href={`/wiki/crops/${route.slug}`}>{route.crop}</Link>
+                      <a href={`/wiki/crops/${route.slug}`}>{route.crop}</a>
                     ) : (
                       route.crop
                     )}
@@ -143,13 +142,13 @@ export function BotFieldGuide() {
         </div>
 
         <div className={styles.cropActions}>
-          <Link href="/wiki/crops">Open every crop profile →</Link>
-          <Link href="/wiki/recipes?station=cookbot#recipe-directory">
+          <a href="/wiki/crops">Open every crop profile →</a>
+          <a href="/wiki/recipes?station=cookbot#recipe-directory">
             Check the three Cookbot recipes →
-          </Link>
-          <Link href="/builds/vacuum-harvester">
+          </a>
+          <a href="/builds/vacuum-harvester">
             Build a separated harvest route →
-          </Link>
+          </a>
         </div>
       </section>
 

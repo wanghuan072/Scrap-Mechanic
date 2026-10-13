@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AffiliateAd } from "@/components/common/AffiliateAd";
 
 type HeroMetric = {
   label: string;
@@ -25,6 +26,7 @@ export function SectionHero({
   tone: "orange" | "cyan" | "green";
 }) {
   return (
+    <>
     <section className={`section-hero section-hero-${tone}`}>
       <Image
         className="section-hero-image"
@@ -55,5 +57,7 @@ export function SectionHero({
         </dl>
       </div>
     </section>
+    <AffiliateAd placement="top" />
+    </>
   );
 }

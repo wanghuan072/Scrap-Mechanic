@@ -24,7 +24,8 @@ describe("sitemap last-modified dates", () => {
     expect(dates.get("/wiki/tools/connect-tool")).toBe("2026-09-02");
     expect(dates.get("/guides/raid-levels")).toBe("2026-09-08");
     expect(dates.get("/guides")).toBe("2026-09-08");
-    expect(dates.get("/")).toBe("2026-10-12");
+    expect(dates.get("/")).toBe("2026-10-13");
+    expect(dates.get("/privacy-policy")).toBe("2026-10-13");
     expect(dates.get("/tools")).toBe("2026-09-05");
     expect(dates.get("/tools/raid-calculator")).toBe("2026-09-05");
     expect(dates.get("/updates")).toBe("2026-09-08");

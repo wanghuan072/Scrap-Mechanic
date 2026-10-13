@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { allWikiEntries, getWikiEntryByName } from "@/lib/content/catalog";
 import styles from "@/style/page/wiki/wiki-linked-text.module.css";
 
@@ -77,14 +76,13 @@ export function WikiLinkedText({
       linkCount < maxLinks
     ) {
       output.push(
-        <Link
+        <a
           className={styles.link}
           href={href}
           key={`${href}-${start}-${index}`}
-          prefetch={false}
         >
           {label}
-        </Link>,
+        </a>,
       );
       linkedHrefs.add(href);
       linkCount += 1;

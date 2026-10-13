@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
 import Script from "next/script";
+import { AffiliateAd, AffiliateMiddleAds, AffiliatePopunder } from "@/components/common/AffiliateAd";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { JsonLd } from "@/seo/JsonLd";
@@ -10,8 +11,6 @@ import "@/style/globals.css";
 
 // Google Analytics 4 衡量 ID，用于网站流量统计。
 const GA_MEASUREMENT_ID = "G-NRMF3E7FTM";
-// Google AdSense 发布商编号，与 public/ads.txt 中的编号保持一致。
-const ADSENSE_PUBLISHER_ID = "ca-pub-3939531187802459";
 
 const barlow = Barlow({
   variable: "--font-barlow",
@@ -34,10 +33,6 @@ export const metadata: Metadata = {
   description: pageTdk.home.description,
   keywords: pageTdk.home.keywords,
   applicationName: site.shortName,
-  // 将账号验证标记输出到原始 HTML，抓取工具无需执行页面脚本即可识别。
-  other: {
-    "google-adsense-account": ADSENSE_PUBLISHER_ID,
-  },
   icons: {
     icon: [{ url: "/images/ico.ico", type: "image/x-icon" }],
     shortcut: "/images/ico.ico",
@@ -55,15 +50,6 @@ export default function RootLayout({
       className={`${barlow.variable} ${barlowCondensed.variable}`}
       data-scroll-behavior="smooth"
     >
-      <head>
-        {/* Google AdSense：在原始 HTML 中异步加载，避免依赖页面激活后动态插入。 */}
-        <script
-          id="google-adsense"
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`}
-          crossOrigin="anonymous"
-        />
-      </head>
       <body>
         <JsonLd
           data={{
@@ -87,7 +73,12 @@ export default function RootLayout({
         />
         <SiteHeader />
         {children}
+        {/* 最后一个 Banner 固定在所有正文之后、Footer 之前，不依赖 Native 是否填充。 */}
+        <AffiliateAd placement="bottom" />
+        <AffiliateMiddleAds />
         <SiteFooter />
+        {/* 联盟弹出式广告：每次完整文档加载仅接入一次，不自行模拟点击或刷新广告。 */}
+        <AffiliatePopunder />
         {/* Google Analytics 4：在浏览器空闲时加载，避免影响页面首屏内容。 */}
         <Script
           id="google-analytics-library"
